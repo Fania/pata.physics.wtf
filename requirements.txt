@@ -1,0 +1,16 @@
+Django==1.4
+Freesound==0.1
+PyYAML==3.10
+dj-database-url==0.2.1
+flickrapi==1.4.2
+gdata==2.0.17
+httplib2==0.7.4
+matplotlib==1.1.0
+microsofttranslator==0.4
+nltk==2.0.1rc4
+numpy==1.6.1
+poster==0.4
+psycopg2==2.4.5
+simplejson==2.6.1
+virtualenv==1.7.2
+wsgiref==0.1.2

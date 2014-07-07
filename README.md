@@ -1,26 +1,52 @@
 
 # Web Collider
 
-Fania Raczinski De Montfort University 2014
+Fania Raczinski + De Montfort University + 2014
 
 ### VIRTUALENV
 
-Activate virtualenv with ```. venv/bin/activate``` (on mac) 
-or ```venv\scripts\activate``` (on win).
-
-Deactivate virtualenv with ```deactivate```.
-
-*Venv has python 2.6.1 installed.*
+- Activate ```. venv/bin/activate``` (on mac) 
+- Activate ```venv\scripts\activate``` (on win)
+- Deactivate ```deactivate```
+- Start project ```python run.py```
 
 ### GIT
 
-Add
-```git add .```
+- Add ```git add .```
+- Commit ```git commit -m 'Message'```
+- Push ```git push```
+- Log ```git log```
+- Changes ```git status``` or ```git diff```
 
-Commit
-```git commit -m 'Message'```
+### LIBRARIES
 
-Push
+Python 2.6.1
+Flask 0.10.1
+itsdangerous 0.24
+Jinja2 2.7.3
+MarkupSafe 0.23
+Pip 1.5.6
+Werkzeug 0.9.6
+Virtualenv
 
-### GITHUB
+### REQUIREMENTS
 
+- Get requirements ```pip freeze > requirements.txt```
+- Install from reqs ```pip install -r requirements.txt```
+
+Django==1.4
+Freesound==0.1
+PyYAML==3.10
+dj-database-url==0.2.1
+flickrapi==1.4.2
+gdata==2.0.17
+httplib2==0.7.4
+matplotlib==1.1.0
+microsofttranslator==0.4
+nltk==2.0.1rc4
+numpy==1.6.1
+poster==0.4
+psycopg2==2.4.5
+simplejson==2.6.1
+virtualenv==1.7.2
+wsgiref==0.1.2
