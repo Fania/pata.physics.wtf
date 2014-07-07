@@ -1,0 +1,108 @@
+body {
+    font-family:        Verdana, Helvetica, sans-serif;
+    background-color:   #DEDCC3;
+    text-align:         left;
+    color:              #41434A;
+    font-size:          13px;
+    margin:             20px;
+}
+h1 {
+    color:              #41434A;
+    text-align:         left;
+    margin:             0px 20px 20px 0px;
+}
+/*h2 {
+    color:              #6E9489;
+    text-align:         left;
+}*/
+i {
+    font-size:          11px;
+
+}
+p {
+    color:              #877963;
+    font-size:          13px;
+}
+footer {
+    color:              #6E9489;
+    font-size:          11px;
+}
+p.footnote {
+    color:              #6E9489;
+    font-size:          11px;
+    padding-top:        20px;
+}
+a:link {
+    color:              #41434A;
+    text-decoration:    none;
+}
+a:visited {
+    color:              #41434A;
+    text-decoration:    none;
+}
+a:hover {
+    text-decoration:    underline;
+    color:              #6E9489;
+}
+a:active {
+    text-decoration:    underline;
+}
+ul {
+    list-style-type:    none;
+    text-align:         left;
+    padding:            0px;
+}
+
+div.header, div.footer {
+    clear:              left;
+}
+div.left {
+    float:              left;
+    width:              150px;
+}
+div.content {
+    margin-left:        150px;
+}
+input {
+    float:              left;
+}
+div.search_form {
+    clear:              right;
+    padding:            10px;
+    height:             25px;
+}
+div.results {
+    padding:            10px;
+}
+div.crop {
+    height:            150px;
+    width:             150px;
+    overflow:          hidden;
+    display:           inline-block;
+}
+#results {
+    background-color:   #F2F1E9;
+    display:            block;
+    padding:            5px;
+}
+
+input[type=submit] {
+    padding-left:       17px;
+    background-image:   url('/static/images/spiral.svg');
+    background-position:center;
+    background-size:    16px;
+    background-repeat:  no-repeat; 
+    background-color:   #fff;
+}
+input[type=submit]:hover {
+    background-image:   url('/static/images/spiral_blue.svg');
+}
+input[type=text] {
+    text-align:         right;
+}
+
+table.spiral, tr, td{
+    border:             0px; 
+    padding:            0px;
+    border-spacing:     0px;
+}

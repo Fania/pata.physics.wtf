@@ -1,0 +1,94 @@
+{% extends "p01base.html" %}
+
+{% block header %}
+    <base href="" />
+{% endblock %}
+
+{% block content %}
+<div class="search_form">
+    <form action="" method="get">
+        <input class="search_area" name="query" size="50"></input>
+        <input class="search_button" type="submit" value=""></input>
+        <!--<div><input type="image" src="/media/images/spiral.png" width="20" height="20"></div>-->
+    </form>
+</div>
+
+<div class="results">
+
+Trail:
+{% for item in s.queries %}
+    <strong><a href="?query={{ item }}">{{ item }}</a></strong> > 
+{% endfor %}
+
+{% if clinamen_words %}
+    <p>
+        Clinamen - {{ clinamen_words|length }} pataphysicalised reverberation{{clinamen_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+    </p>
+    <div id="results">
+        <ul>
+            {% for key in clinamen_words %}
+                {% for prekey, prevalue in pre_sens.items %}
+                    {% for postkey, postvalue in post_sens.items %}
+                        {% if prekey == key and postkey == key %}
+                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <p>
+        Clinamen - Sorry, no pataphysicalised reverberations found!
+    </p>
+{% endif %}
+
+{% if syzygy_words %}
+    <p>
+        Syzygy - {{ pre_syssens|length }} pataphysicalised reverberation{{syzygy_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+    </p>
+    <div id="results">
+        <ul>
+            {% for key in syzygy_words %}
+                {% for prekey, prevalue in pre_syssens.items %}
+                    {% for postkey, postvalue in post_syssens.items %}
+                        {% if prekey == key and postkey == key %}
+                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <p>
+        Syzygy - Sorry, no pataphysicalised reverberations found!
+    </p>
+{% endif %}
+{% if antinomy_words %}
+    <p>
+        Antinomy - {{ antisens|length }} pataphysicalised reverberation{{antinomy_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+    </p>
+    <div id="results">
+        <ul>
+            {% for key in antinomy_words %}
+                {% for prekey, prevalue in pre_antisens.items %}
+                    {% for postkey, postvalue in post_antisens.items %}
+                        {% if prekey == key and postkey == key %}
+                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% else %}
+    <p>
+        Antinomy - Sorry, no pataphysicalised reverberations found!
+    </p>
+{% endif %}
+
+
+</div>
+
+{% endblock %}
