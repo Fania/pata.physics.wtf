@@ -1,7 +1,7 @@
 {% extends "p01base.html" %}
 
 {% block header %}
-    <base href="" />
+    <!-- <base href="" /> -->
 {% endblock %}
 
 {% block content %}
@@ -9,20 +9,21 @@
     <form action="" method="get">
         <input class="search_area" name="query" size="50"></input>
         <input class="search_button" type="submit" value=""></input>
-        <!--<div><input type="image" src="/media/images/spiral.png" width="20" height="20"></div>-->
     </form>
 </div>
 
 <div class="results">
 
 Trail:
-{% for item in s.queries %}
+{# {% for item in s.queries %}
     <strong><a href="?query={{ item }}">{{ item }}</a></strong> > 
-{% endfor %}
+{% endfor %} #}
 
 {% if clinamen_words %}
     <p>
-        Clinamen - {{ clinamen_words|length }} pataphysicalised reverberation{{clinamen_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+        Clinamen - {{ clinamen_words|length }} pataphysicalised 
+        {% if clinamen_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        found for: <strong>"{{ query }}"</strong>
     </p>
     <div id="results">
         <ul>
@@ -45,7 +46,9 @@ Trail:
 
 {% if syzygy_words %}
     <p>
-        Syzygy - {{ pre_syssens|length }} pataphysicalised reverberation{{syzygy_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+        Syzygy - {{ pre_syssens|length }} pataphysicalised 
+        {% if syzygy_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        found for: <strong>"{{ query }}"</strong>
     </p>
     <div id="results">
         <ul>
@@ -67,7 +70,9 @@ Trail:
 {% endif %}
 {% if antinomy_words %}
     <p>
-        Antinomy - {{ antisens|length }} pataphysicalised reverberation{{antinomy_len|pluralize}} found for: <strong>"{{ query }}"</strong>
+        Antinomy - {{ antisens|length }} pataphysicalised 
+        {% if antinomy_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        found for: <strong>"{{ query }}"</strong>
     </p>
     <div id="results">
         <ul>

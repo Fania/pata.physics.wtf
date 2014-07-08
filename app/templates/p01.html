@@ -1,15 +1,15 @@
 {% extends "p01base.html" %}
 
 {% block header %}
-	<base href="results/" />
+	<!-- <base href="results/" /> -->
 {% endblock %}
 
 {% block content %}
+Hello p01 <a href="{{ url_for('p01results') }}">Prototype 01 - Text search</a>
 <div class="search_form">
-    <form action="../results/" method="get">
+    <form action="../p01results" method="get">
         <input class="search_area" name="query" size="50"></input>
         <input class="search_button" type="submit" value=""></input>
-        <!--<div><input type="image" src="/media/images/spiral.png" width="20" height="20"></div>-->
     </form>
 </div>
 {% endblock %}

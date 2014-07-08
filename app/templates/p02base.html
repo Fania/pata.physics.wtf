@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    {% block header %}{% endblock %}
+    <title>PataSearch!</title>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>
+        <a href="/">Pataphysical Search!</a>
+        &nbsp;&nbsp; 
+    </h1>
+</div>
+
+<div class="left">
+    <p>
+        PROTOTYPE 02
+        <br><br>
+        This is a simple prototype of a pataphysical image search tool.
+        <br><br>
+        <a href="http://www.flickr.com/" target="_blank"><img src="/static/images/flickr.png" height="30" alt=""></a>
+        <br><br>
+        <a href="http://www.microsofttranslator.com/" target="_blank"><img src="/static/images/MSTLogo300.png" height="30" alt=""></a>
+        <br><br>
+        <a href="http://www.bing.com/" target="_blank"><img src="/static/images/Bing_logo.svg" height="30" alt=""></a>
+        <br><br>
+        Search suggestions:<br>
+        '<a href="?query=clear">clear</a>'<br>
+        '<a href="?query=troll">troll</a>'<br>
+        '<a href="?query=large">large</a>'<br>
+        '<a href="?query=live">live</a>'<br>
+        '<a href="?query=solid">solid</a>'<br>
+        '<a href="?query=books">books</a>'<br>
+
+    </p>
+</div>
+
+<div class="content">
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+</div>
+
+</body>
+
+<div class="footer">
+    <footer>
+        <p class="footnote">
+            This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> 
+            and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>.<br>
+            It uses the YouTube, Flickr, Bing and Microsoft Translate API's.<br>
+            <br>
+            Fania Raczinski - De Montfort University - Tatane, 139 (Sept 2012 vulg.)<br>
+            :)
+        </p>
+    </footer>
+</div>
+
+</html>
+
