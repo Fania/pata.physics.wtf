@@ -6,7 +6,7 @@ from surfer import *
 # PROTOTYPE 01
 
 
-###################################################
+#############################################
 
 
 def results(request):
@@ -74,10 +74,10 @@ def results(request):
                     antisens[r] = find_sentence(r)
                     #print antisens[r]
 
-            return render_to_response('prototype01/results.html', locals())
-    return render_to_response('prototype01/results.html',
+            return render_to_response('p01/results.html', locals())
+    return render_to_response('p01/results.html',
                               {'error': error})
 
 
 def main(request):
-    return render_to_response('prototype01/index.html', locals())
+    return render_to_response('p01/index.html', locals())

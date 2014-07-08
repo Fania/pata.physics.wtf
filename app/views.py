@@ -2,18 +2,38 @@ from flask import render_template, url_for
 
 from app import app
 
+
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html')
+	return render_template('index.html')
+
 
 @app.route('/p01')
 def p01():
-    return render_template('p01.html')
+	return render_template('p01.html')
 
-with app.test_request_context():
-	print url_for('index')
-	print url_for('p01')
+
+
+@app.route('/p01results')
+def p01results():
+	return render_template('p01results.html')
+
+
+@app.route('/p02')
+def p02():
+	return render_template('p02.html')
+
+
+@app.route('/p03')
+def p03():
+	return render_template('p03.html')
+
+
+# with app.test_request_context():
+# 	print url_for('index')
+# 	print url_for('p01')
+
 
 # def results(request):
 
