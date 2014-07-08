@@ -3,6 +3,11 @@
 
 Fania Raczinski + De Montfort University + 2014
 
+## WIN / OSX
+
+- On Windows ```Shift-right-click``` the folder to open cmd there
+- On Mac use the 'Open-In-Terminal' script
+
 ### VIRTUALENV
 
 - Activate ```. venv/bin/activate``` (on mac) 
@@ -22,11 +27,7 @@ Fania Raczinski + De Montfort University + 2014
 
 Python 2.6.1
 Flask 0.10.1
-itsdangerous 0.24
-Jinja2 2.7.3
-MarkupSafe 0.23
 Pip 1.5.6
-Werkzeug 0.9.6
 Virtualenv
 
 ### REQUIREMENTS
