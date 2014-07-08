@@ -18,9 +18,12 @@ warnings.simplefilter('ignore')
 #############################################
 
 root_path = os.path.dirname(os.path.realpath(__file__))
+#print root_path
 #corpus_root = os.path.join(root_path, 'corpus')
-root_path = root_path[:-11]
+#root_path = root_path[:-11]
+root_path = 'G:\Code\\newpata\\'
 corpus_root = os.path.join(root_path, 'corpus')
+print corpus_root
 
 # NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
