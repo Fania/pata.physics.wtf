@@ -59,9 +59,10 @@ div.header, div.footer {
 div.left {
     float:              left;
     width:              150px;
+    margin-right:       20px; 
 }
 div.content {
-    margin-left:        150px;
+    /*margin-left:        150px;*/
 }
 input {
     float:              left;

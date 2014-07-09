@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="search_form">
-    <form action="" method="get">
+    <form action="../p01results" method="post">
         <input class="search_area" name="query" size="50"></input>
         <input class="search_button" type="submit" value=""></input>
     </form>
@@ -14,9 +14,9 @@
 
 <div class="results">
 
-Trail:
+Trail: {{ query }} 
 {# {% for item in s.queries %}
-    <strong><a href="?query={{ item }}">{{ item }}</a></strong> > 
+    {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
 {% endfor %} #}
 
 {% if clinamen_words %}
@@ -28,10 +28,10 @@ Trail:
     <div id="results">
         <ul>
             {% for key in clinamen_words %}
-                {% for prekey, prevalue in pre_sens.items %}
-                    {% for postkey, postvalue in post_sens.items %}
-                        {% if prekey == key and postkey == key %}
-                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                {% for prek, prev in pre_sens.iteritems() %}
+                    {% for postk, postv in post_sens.iteritems() %}
+                        {% if prek == key and postk == key %}
+                            <li>...{{ prev }} <strong>{{ key }}</strong> {{ postv }}...</li>
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
@@ -53,10 +53,10 @@ Trail:
     <div id="results">
         <ul>
             {% for key in syzygy_words %}
-                {% for prekey, prevalue in pre_syssens.items %}
-                    {% for postkey, postvalue in post_syssens.items %}
-                        {% if prekey == key and postkey == key %}
-                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                {% for presk, presv in pre_syssens.iteritems() %}
+                    {% for postsk, postsv in post_syssens.iteritems() %}
+                        {% if presk == key and postsk == key %}
+                            <li>...{{ presv }} <strong>{{ key }}</strong> {{ postsv }}...</li>
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
@@ -68,19 +68,22 @@ Trail:
         Syzygy - Sorry, no pataphysicalised reverberations found!
     </p>
 {% endif %}
+
 {% if antinomy_words %}
+    {{ antinomy_words }}
     <p>
         Antinomy - {{ antisens|length }} pataphysicalised 
-        {% if antinomy_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        {% if antinomy_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
         found for: <strong>"{{ query }}"</strong>
+        {{ antinomy_words|length }}
     </p>
     <div id="results">
         <ul>
             {% for key in antinomy_words %}
-                {% for prekey, prevalue in pre_antisens.items %}
-                    {% for postkey, postvalue in post_antisens.items %}
-                        {% if prekey == key and postkey == key %}
-                            <li>...{{ prevalue }} <strong><a href="?query={{ key }}">{{ key }}</a></strong> {{ postvalue }}...</li>
+                {% for preak, preav in pre_antisens.iteritems() %}
+                    {% for postak, postav in post_antisens.iteritems() %}
+                        {% if preak == key and postak == key %}
+                            <li>...{{ preav }} <strong>{{ key }}</strong> {{ postav }}...</li>
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
