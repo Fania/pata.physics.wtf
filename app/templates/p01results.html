@@ -22,7 +22,7 @@ Trail: {{ query }}
 {% if clinamen_words %}
     <p>
         Clinamen - {{ clinamen_words|length }} pataphysicalised 
-        {% if clinamen_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
         found for: <strong>"{{ query }}"</strong>
     </p>
     <div id="results">
@@ -47,7 +47,7 @@ Trail: {{ query }}
 {% if syzygy_words %}
     <p>
         Syzygy - {{ pre_syssens|length }} pataphysicalised 
-        {% if syzygy_len == 1 %}reverberation{% else %}reverberations{% endif %} 
+        {% if pre_syssens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
         found for: <strong>"{{ query }}"</strong>
     </p>
     <div id="results">
@@ -70,12 +70,10 @@ Trail: {{ query }}
 {% endif %}
 
 {% if antinomy_words %}
-    {{ antinomy_words }}
     <p>
         Antinomy - {{ antisens|length }} pataphysicalised 
-        {% if antinomy_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+        {% if antisens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
         found for: <strong>"{{ query }}"</strong>
-        {{ antinomy_words|length }}
     </p>
     <div id="results">
         <ul>

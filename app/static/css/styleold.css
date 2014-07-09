@@ -1,52 +1,43 @@
-body {
-    font-family:        Verdana, Helvetica, sans-serif;
-    background-color:   #DEDCC3;
+body, input {
+    font-family:        'Lato', sans-serif;
+    background-color:   #f3f6fa;
     text-align:         left;
-    color:              #41434A;
-    font-size:          13px;
+    color:              #7c8081;
+    font-size:          1em;
+    /*letter-spacing:     0.025em;*/
     margin:             20px;
 }
-h1 {
-    color:              #41434A;
-    text-align:         left;
-    margin:             0px 20px 20px 0px;
-}
-/*h2 {
-    color:              #6E9489;
-    text-align:         left;
-}*/
-i {
-    font-size:          11px;
 
-}
-p {
-    color:              #877963;
-    font-size:          13px;
-}
-footer {
-    color:              #6E9489;
-    font-size:          11px;
-}
-p.footnote {
-    color:              #6E9489;
-    font-size:          11px;
-    padding-top:        20px;
-}
-a:link {
-    color:              #41434A;
+a {
+    color:              #41434A; /*pinkish*/
     text-decoration:    none;
-}
-a:visited {
-    color:              #41434A;
-    text-decoration:    none;
+    /*border-bottom: dotted 1px;*/
 }
 a:hover {
     text-decoration:    underline;
     color:              #6E9489;
 }
-a:active {
-    text-decoration:    underline;
+
+h1 {
+    color:              #41434A;
+    text-align:         left;
+    margin:             0px 20px 20px 0px;
 }
+i {
+    font-size:          0.8em;
+}
+p {
+    color:              #877963;
+}
+footer {
+    color:              #6E9489;
+    font-size:          0.8em;
+}
+p.footnote {
+    color:              #6E9489;
+    padding-top:        20px;
+}
+
 ul {
     list-style-type:    none;
     text-align:         left;
@@ -69,10 +60,11 @@ input {
 }
 div.search_form {
     clear:              right;
-    padding:            10px;
+    padding:            10px 0;
     height:             25px;
 }
 div.results {
+    margin-left:        160px;
     padding:            10px;
 }
 div.crop {
@@ -82,7 +74,7 @@ div.crop {
     display:           inline-block;
 }
 #results {
-    background-color:   #F2F1E9;
+    background-color:   white;
     display:            block;
     padding:            5px;
 }

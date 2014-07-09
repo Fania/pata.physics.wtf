@@ -5,7 +5,7 @@ import codecs
 from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
 import sys
-print sys.getdefaultencoding()
+#print sys.getdefaultencoding()
 
 # Ignore weird unicode warnings from dameraulevenshtein function
 import warnings
@@ -18,18 +18,18 @@ warnings.simplefilter('ignore')
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
-print 'root_path ', root_path
+#print 'root_path ', root_path
 #corpus_root = os.path.join(root_path, 'corpus')
 #root_path = root_path[:-11]
 root_path = root_path[:-4]
 #root_path = 'G:\Code\\newpata\\'
 corpus_root = os.path.join(root_path, 'corpus')
-print 'corpus_root ', corpus_root
+#print 'corpus_root ', corpus_root
 
 # NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
 #book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
-print book_list
+#print book_list
 troll = book_list.words('faustroll.txt')
 faustroll = nltk.Text(troll)
 ############################################################
@@ -62,7 +62,7 @@ faustroll = nltk.Text(troll)
 #faustroll = text
 
 path_e = os.path.join(root_path, 'corpus/english')
-print 'path_e ', path_e
+#print 'path_e ', path_e
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 stopwords_doc.close()
