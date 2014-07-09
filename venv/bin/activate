@@ -36,10 +36,10 @@ deactivate () {
     fi
 }
 
-# unset irrelevant variables
+# unset irrelavent variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/fania/Desktop/PhD_Offline/Git_Code/newpata/venv"
+VIRTUAL_ENV="/Users/fania/git/newpata/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

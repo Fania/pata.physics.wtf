@@ -1,11 +1,9 @@
-#!/Users/fania/Desktop/PhD_Offline/Git_Code/newpata/venv/bin/python
-
-# -*- coding: utf-8 -*-
-import re
+#!/Users/fania/git/newpata/venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'pip==1.1','console_scripts','pip'
+__requires__ = 'pip==1.1'
 import sys
+from pkg_resources import load_entry_point
 
-from pip import main
-
-if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
-    sys.exit(main())
+sys.exit(
+   load_entry_point('pip==1.1', 'console_scripts', 'pip')()
+)

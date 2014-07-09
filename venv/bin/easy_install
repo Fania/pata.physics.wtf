@@ -1,11 +1,9 @@
-#!/Users/fania/Desktop/PhD_Offline/Git_Code/newpata/venv/bin/python
-
-# -*- coding: utf-8 -*-
-import re
+#!/Users/fania/git/newpata/venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==0.6c11','console_scripts','easy_install'
+__requires__ = 'setuptools==0.6c11'
 import sys
+from pkg_resources import load_entry_point
 
-from setuptools.command.easy_install import main
-
-if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
-    sys.exit(main())
+sys.exit(
+   load_entry_point('setuptools==0.6c11', 'console_scripts', 'easy_install')()
+)

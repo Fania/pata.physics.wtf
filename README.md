@@ -11,10 +11,10 @@ Fania Raczinski + De Montfort University + 2014
 ### VIRTUALENV
 
 - Activate ```. venv/bin/activate``` (on mac)
-- Activate ```venv\scripts\activate``` (on win)
-- Deactivate ```deactivate``` (on mac)
+- Activate ```wenv\scripts\activate``` (on win)
+- Deactivate ```deactivate```
 - Start project ```python run.py```
-- Stop project ```Ctrl + c``` (on mac)
+- Stop project ```Ctrl + c```
 
 ### GIT
 
@@ -26,16 +26,10 @@ Fania Raczinski + De Montfort University + 2014
 
 ### LIBRARIES
 
-<<<<<<< HEAD
-- Python 2.6.1
-- Flask 0.10.1
-- Virtualenv
-=======
 Python 2.6.1
 Flask 0.10.1
 Pip 1.5.6
 Virtualenv
->>>>>>> FETCH_HEAD
 
 ### REQUIREMENTS
 

@@ -1,4 +1,4 @@
-# This file must be used with "source bin/activate.fish" *from fish* (http://fishshell.com)
+# This file must be used with ". bin/activate.fish" *from fish* (http://fishshell.org)
 # you cannot run it directly
 
 function deactivate  -d "Exit virtualenv and return to normal shell environment"
@@ -13,13 +13,13 @@ function deactivate  -d "Exit virtualenv and return to normal shell environment"
     end
     
     if test -n "$_OLD_FISH_PROMPT_OVERRIDE"
-        # set an empty local fish_function_path, so fish_prompt doesn't automatically reload
-        set -l fish_function_path
-        # erase the virtualenv's fish_prompt function, and restore the original
         functions -e fish_prompt
-        functions -c _old_fish_prompt fish_prompt
-        functions -e _old_fish_prompt
         set -e _OLD_FISH_PROMPT_OVERRIDE
+        . ( begin
+                printf "function fish_prompt\n\t#"
+                functions _old_fish_prompt
+            end | psub )
+        functions -e _old_fish_prompt
     end
     
     set -e VIRTUAL_ENV
@@ -29,10 +29,10 @@ function deactivate  -d "Exit virtualenv and return to normal shell environment"
     end
 end
 
-# unset irrelevant variables
+# unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/fania/Desktop/PhD_Offline/Git_Code/newpata/venv"
+set -gx VIRTUAL_ENV "/Users/fania/git/newpata/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
@@ -46,15 +46,17 @@ end
 if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
     # fish uses a function instead of an env var to generate the prompt.
     
-    # copy the current fish_prompt function as the function _old_fish_prompt
-    functions -c fish_prompt _old_fish_prompt
+    # save the current fish_prompt function as the function _old_fish_prompt
+    . ( begin
+            printf "function _old_fish_prompt\n\t#"
+            functions fish_prompt
+        end | psub )
     
-    # with the original prompt function copied, we can override with our own.
+    # with the original prompt function renamed, we can override with our own.
     function fish_prompt
         # Prompt override?
         if test -n ""
-            printf "%s%s" "" (set_color normal)
-            _old_fish_prompt
+            printf "%s%s%s" "" (set_color normal) (_old_fish_prompt)
             return
         end
         # ...Otherwise, prepend env
@@ -62,11 +64,9 @@ if test -z "$VIRTUAL_ENV_DISABLE_PROMPT"
         if test $_checkbase = "__"
             # special case for Aspen magic directories
             # see http://www.zetadev.com/software/aspen/
-            printf "%s[%s]%s " (set_color -b blue white) (basename (dirname "$VIRTUAL_ENV")) (set_color normal) 
-            _old_fish_prompt
+            printf "%s[%s]%s %s" (set_color -b blue white) (basename (dirname "$VIRTUAL_ENV")) (set_color normal) (_old_fish_prompt)
         else
-            printf "%s(%s)%s" (set_color -b blue white) (basename "$VIRTUAL_ENV") (set_color normal)
-            _old_fish_prompt
+            printf "%s(%s)%s%s" (set_color -b blue white) (basename "$VIRTUAL_ENV") (set_color normal) (_old_fish_prompt)
         end
     end 
     
