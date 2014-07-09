@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="search_form">
-    <form action="" method="get">
+    <form action="../p01results" method="post">
         <input class="search_area" name="query" size="50"></input>
         <input class="search_button" type="submit" value=""></input>
     </form>
@@ -14,9 +14,9 @@
 
 <div class="results">
 
-Trail:
+Trail: {{ query }} 
 {# {% for item in s.queries %}
-    <strong><a href="?query={{ item }}">{{ item }}</a></strong> > 
+    {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
 {% endfor %} #}
 
 {% if clinamen_words %}
