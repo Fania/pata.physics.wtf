@@ -4,7 +4,7 @@
 <head>
 <title>PataSearch!</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel=stylesheet type=text/css />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 
@@ -17,14 +17,17 @@
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li><a class="fa fa-home" href="index.html"><span>Introduction</span></a></li>
-                <li><a href="" class="fa fa-bar-chart-o"><span>Search</span></a></li>
-                <li><a class="fa fa-sitemap" href="no-sidebar.html"><span>About</span></a></li>
+                <li><a class="fa fa-home" href="index.html"><span>Home</span></a></li>
+                <li><a href="" class="fa fa-book"><span>Text</span></a></li>
+                <li><a href="" class="fa fa-camera"><span>Images</span></a></li>
+                <li><a href="" class="fa fa-video-camera"><span>Video</span></a></li>
+                <li><a class="fa fa-info" href="no-sidebar.html"><span>About</span></a></li>
             </ul>
         </nav>
         <!-- Logo -->
+        <img id="spiral" src="{{ url_for('static', filename='images/spiral.svg') }}"/>
         <h1 id="logo"><a href="#">Pataphysical Search</a></h1>
-        <p>Ha Ha.</p>
+        <p>&nbsp;&nbsp; within <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> by Alfred Jarry.</p>
     </div>
 </div>
 
@@ -33,8 +36,7 @@
     <div class="inner">
         <!-- Banner -->
         <section id="banner" class="container">
-            <p>Use this space for <strong>profound thoughts</strong>.<br />
-            Or an enormous ad. Whatever.</p>
+        <p>Ha Ha</p>
         </section>
     </div>
 </div>
@@ -44,7 +46,7 @@
     <!-- Features -->
     <section id="features" class="container">
         <header>
-            <h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
+            <h2><strong>Pataphysical</strong> Search!</h2>
         </header>
     </section>
 </div>
@@ -59,30 +61,24 @@
 <!-- Content -->
 <div id="content" class="12u skel-cell-important">
 
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+
 <!-- Post -->
 <article class="is-post">
     <header>
         <h2>Behold! This is the <strong>no sidebar</strong> layout<br />
         with no sidebar at all!</h2>
     </header>
-    <h3>And yeah, that's basically it</h3>
-    <p>Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit 
-    ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris 
-    sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada 
-    in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat 
-    magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros 
-    consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id 
-    justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet 
-    mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. 
-    Curabitur leo nibh, rutrum eu malesuada in, tristique at erat.</p>
-    <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat 
-    Phasellus laoreet massa id justo mattis pharetra. Fusce suscipit ligula 
-    vel quam viverra sit amet mollis tortor congue. Sed quis mauris sit amet 
-    magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada in, 
-    tristique at erat. Curabitur leo nibh, rutrum eu malesuada  in, tristique 
-    at erat lorem ipsum dolor sit amet lorem ipsum sed consequat magna 
-    tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros consequat 
-    magna tempus</p>
+    <h3>Some details</h3>
+    <p>This is a simple prototype of a pataphysical search tool. It searches through Jarry's Faustroll book only. <strong>Please search for single words only.</strong></p>
+    <p>Search suggestions:<br>
+        '<a href="?query=clear">clear</a>'<br>
+        '<a href="?query=troll">troll</a>'<br>
+        '<a href="?query=large">large</a>'<br>
+        '<a href="?query=live">live</a>'<br>
+        '<a href="?query=solid">solid</a>'<br>
+        '<a href="?query=books">books</a>'<br></p>
 </article>
 
 </div>
@@ -99,8 +95,11 @@
     <!-- Copyright -->
     <div id="copyright" class="container">
         <ul class="links">
-            <li>&copy; Untitled. All rights reserved</li>
-            <li>Design: <a href="http://html5up.net/">HTML5 UP</a></li>
+            <li>&copy; Fania Raczinski. De Montfort University - Palotin, 139 (May 2012 vulg.)</li>
+        </ul>
+        <ul class="links">
+            <li>This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>. It uses the <a href="http://www.nltk.org/" target="_blank">NLTK</a> natural language processing library and <a href="http://wordnet.princeton.edu/" target="_blank">WordNet</a>.</li>
+            <li>:)</li>
         </ul>
     </div>
 </div>
