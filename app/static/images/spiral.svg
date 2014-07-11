@@ -72,7 +72,7 @@
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#888888"
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -110,7 +110,7 @@
      transform="translate(-4.2786224,-5.072855)">
     <path
        sodipodi:type="spiral"
-       style="fill:none;stroke:#41434a;stroke-width:14.30000061000000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:54.29999999999999700;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:none;fill-opacity:1"
+       style="fill:none;stroke:#576c93;stroke-width:14.30000061000000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:54.29999999999999700;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:none;fill-opacity:1"
        id="path2989"
        sodipodi:cx="508.57144"
        sodipodi:cy="426.64789"
