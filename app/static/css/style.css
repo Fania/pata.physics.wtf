@@ -38,17 +38,21 @@
 			border: 0;
 		}
 
-	#spiral {
-		/*background: url('images/spiral.svg');*/
-		height: 87px;
-		width: 88px;
-	}
-
 	#spiral:hover {
+	    -webkit-animation:spin 4s linear infinite;
+	    -moz-animation:spin 4s linear infinite;
+	    animation:spin 4s linear infinite;
+	}
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+	/*#spiral:hover {
 		background: url('images/spiral_blue.svg');
 		height: 87px;
 		width: 88px;
-	}
+	}*/
 
 	a
 	{
@@ -125,7 +129,7 @@
 		text-align: justify;
 	}
 	
-	p, ul, ol, dl, table, blockquote
+	p, table, blockquote
 	{
 		margin-bottom: 2em;
 	}
@@ -1068,6 +1072,7 @@
 		position: relative;
 		border-bottom: solid 2px #e5e5e5;
 		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+		padding-top: 100px;
 	}
 
 		#header h1
@@ -1103,6 +1108,12 @@
 	{
 		cursor: default;
 		padding: 10px 0;
+		position: fixed;
+		/*background: white;*/
+		/*top: 0;
+		left: 0;*/
+		z-index: 999;
+		width: 100%;
 	}
 
 		#nav > ul > li
@@ -1120,6 +1131,7 @@
 				font-weight: 400;
 				color: #777;
 				outline: 0;
+				background: white;
 			}
 
 				#nav > ul > li > a:before

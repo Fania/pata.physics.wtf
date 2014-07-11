@@ -11,19 +11,19 @@
 <body class="homepage">
 
 <!-- Header Wrapper -->
-<div id="header-wrapper">    
+<div id="header-wrapper">
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a class="fa fa-home" href="index.html"><span>Home</span></a></li>
+            <li><a href="" class="fa fa-book"><span>Text</span></a></li>
+            <li><a href="" class="fa fa-camera"><span>Images</span></a></li>
+            <li><a href="" class="fa fa-video-camera"><span>Video</span></a></li>
+            <li><a class="fa fa-info" href="no-sidebar.html"><span>About</span></a></li>
+        </ul>
+    </nav>  
     <!-- Header -->
     <div id="header" class="container">
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a class="fa fa-home" href="index.html"><span>Home</span></a></li>
-                <li><a href="" class="fa fa-book"><span>Text</span></a></li>
-                <li><a href="" class="fa fa-camera"><span>Images</span></a></li>
-                <li><a href="" class="fa fa-video-camera"><span>Video</span></a></li>
-                <li><a class="fa fa-info" href="no-sidebar.html"><span>About</span></a></li>
-            </ul>
-        </nav>
         <!-- Logo -->
         <img id="spiral" src="{{ url_for('static', filename='images/spiral.svg') }}"/>
         <h1 id="logo"><a href="#">Pataphysical Search</a></h1>
