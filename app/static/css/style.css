@@ -309,60 +309,66 @@ br.clear
 			{
 				border: 0;
 			}
-		
-/* Tables */
-
-	table
-	{
-		width: 100%;
-	}
 	
-		table.style1
-		{
-			width: 100%;
-		}
-		
-			table.style1 tbody tr
-			{
-				border-top: solid 1px #E5E5E5;
-			}
+.experiment-container-2{
+	position: relative;
+	left: 11em;
+	top: 7em;
+	height: 170px;
+}
+.golden-ratio.spiral {
+    background-color: #0A2;
+    }
+    .spiral.top {
+    border-radius: 12em 8em 0 0;
+    -moz-border-radius: 12em 8em 0 0;
+    -webkit-border-radius: 12em 8em 0 0;
+    }
+    .spiral.bottom {
+    border-radius:  0 0 12em 8em;
+    -moz-border-radius: 0 0 12em 8em;
+    -webkit-border-radius: 0 0 12em 8em;
+    }
+    .spiral.right {
+    border-radius: 8em 0 0 12em;
+    -moz-border-radius: 8em 0 0 12em;
+    -webkit-border-radius: 8em 0 0 12em;
+    }
+    .spiral.left {
+    border-radius: 0 12em 8em 0;
+    -moz-border-radius: 0 12em 8em 0;
+    -webkit-border-radius: 0 12em 8em 0;
+    }
 
-			table.style1 tbody tr:first-child
-			{
-				border-top: 0;
-			}
-		
-			table.style1 td
-			{
-				padding: 0.75em 1em 0.75em 1em;
-			}
-			
-			table.style1 th
-			{
-				text-align: left;
-				font-weight: bold;
-				padding: 0.75em 1em 0.75em 1em;
-			}
-		
-			table.style1 thead
-			{
-				background: #878787;
-				color: #fff;
-				font-weight: 400;
-				text-transform: uppercase;
-				border: 0;
-				box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
-			}
-			
-			table.style1 tfoot
-			{
-				background: #F0F0F0;
-				border-top: solid 2px #E5E5E5;
-			}
-			
-			table.style1 tbody
-			{
-			}
+.experiment-container{
+	position: relative;
+	left: 11em;
+	top: 7em;
+	height: 180px;
+}
+
+.golden-ratio{
+    font-size: 1.618033988749894848204586834em;
+    background-color: #F00;
+    opacity: .75;
+}
+.golden-ratio.horiz {
+    height: 1em;
+    width: 1.618033988749894848204586834em;
+}
+.golden-ratio.vert {
+    width: 1em;
+    height: 1.618033988749894848204586834em;
+}
+.postition-tweak.vert {
+    position:relative;
+    bottom:1em;
+}
+.postition-tweak.horiz {
+    position:relative;
+    right:1em;
+}
+
 
 /* Buttons */
 	
@@ -999,12 +1005,12 @@ br.clear
 		margin: 0;
 		padding-bottom: 0.8em;
 	}
-
-		#header h1 a
-		{
-			border: 0;
-		}
 	
+		#header h1:hover
+		{
+			color: #576c93;
+		}
+
 	#header p
 	{
 		text-transform: uppercase;

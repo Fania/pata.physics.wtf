@@ -1,11 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-Hello p02
-<!-- <div class="search_form">
-    <form action="../results/" method="get">
+<header>
+    <h2>...And what does this have to do with Image Search?</h2>
+</header>
+<p>
+    The image search uses flickr and bing apis. The results are displayed in spiral form in true pataphysical fashion. 
+</p>
+
+<div class="search_form">
+    <form action="../p02results" method="post">
         <input class="search_area" name="query" size="50"></input>
-        <input class="search_button" type="submit" value=""></input>
+        <input class="search_button" type="submit" value="Search"></input>
     </form>
-</div> -->
+</div>
+
+<h3>How to use</h3>
+<p>Video search supports searching with multiple keywords.</p>
+<p>Search suggestions:<br>
+    '<a href="?query=clear">clear</a>'
+    '<a href="?query=troll">troll</a>'
+    '<a href="?query=large">large</a>'
+    '<a href="?query=live">live</a>'
+    '<a href="?query=solid">solid</a>'
+    '<a href="?query=books">books</a>'</p>
+
 {% endblock %}
