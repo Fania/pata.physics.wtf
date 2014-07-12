@@ -40,6 +40,11 @@ h1,h2,h3,h4,h5,h6
 		border: 0;
 	}
 
+#spiral {
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
+}
+
 #spiral:hover {
     -webkit-animation:spin 4s linear infinite reverse;
     -moz-animation:spin 4s linear infinite reverse;
@@ -975,10 +980,11 @@ br.clear
 
 #header
 {
-	position: relative;
+	/*position: relative;*/
 	border-bottom: solid 2px #e5e5e5;
 	box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-	padding-top: 20px;
+	/*padding-top: 20px;*/
+	/*margin-bottom: 10px;*/
 }
 
 	#header h1
@@ -990,7 +996,8 @@ br.clear
 		line-height: 28px;
 		color: #434f7b;
 		text-shadow: 0.05em 0.075em 0 rgba(0,0,0,0.1);
-		padding: 20px 0;
+		margin: 0;
+		padding-bottom: 0.8em;
 	}
 
 		#header h1 a

@@ -6,6 +6,8 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+<script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
+<script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
 </head>
 
 <body class="homepage">
@@ -26,8 +28,7 @@
     <div id="header" class="container">
         <!-- Logo -->
         <img id="spiral" src="{{ url_for('static', filename='images/spiral.svg') }}"/>
-        <h1 id="logo"><a href="">Pataphysical Search</a></h1>
-        <p>Ha Ha</p>
+        <a href="{{ url_for('index') }}"><h1 id="msg">Pataphysical Search</h1></a>
     </div>
 </div>
 
