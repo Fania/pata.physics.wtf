@@ -1,3 +1,4 @@
+from flask import url_for
 import os
 import nltk
 #import unicodedata as ud
@@ -23,8 +24,8 @@ root_path = os.path.dirname(os.path.abspath(__file__))
 #root_path = root_path[:-11]
 root_path = root_path[:-4]
 #root_path = 'G:\Code\\newpata\\'
-corpus_root = os.path.join(root_path, 'corpus')
-#print 'corpus_root ', corpus_root
+#corpus_root = os.path.join(root_path, 'corpus')
+corpus_root = root_path + '/app/static/corpus'
 
 # NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
@@ -34,6 +35,7 @@ troll = book_list.words('faustroll.txt')
 faustroll = nltk.Text(troll)
 ############################################################
 
+############################################################
 # UNICODE TESTS
 #bloy = book_list.words('04.bloy_french.txt')
 #bloyfrench = nltk.Text(bloy)
@@ -61,7 +63,7 @@ faustroll = nltk.Text(troll)
 #faustroll_text.close()
 #faustroll = text
 
-path_e = os.path.join(root_path, 'corpus/english')
+path_e = corpus_root + '/english'
 #print 'path_e ', path_e
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
