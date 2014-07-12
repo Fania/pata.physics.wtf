@@ -19,9 +19,12 @@
             <li><a class="fa fa-book" href="{{ url_for('p01') }}" ><span>Text</span></a></li>
             <li><a class="fa fa-camera" href="{{ url_for('p02') }}" ><span>Images</span></a></li>
             <li><a class="fa fa-video-camera" href="{{ url_for('p03') }}" ><span>Video</span></a></li>
-            <li><a class="fa fa-info" href=""><span>About</span></a></li>
+            <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
         </ul>
-    </nav>  
+    </nav>
+    <!-- Header -->
+    <div id="header" class="container">
+    </div>
 </div>
 
 <!-- Banner Wrapper -->
@@ -46,39 +49,9 @@
 
 <!-- Post -->
 <article class="is-post">
-    <header>
-        <h2>WTF is <strong>Pataphysics</strong> and who is Alfred Jarry?</h2>
-    </header>
 
     {% block content %}{% endblock %}
-    {% block footer %}{% endblock %}
 
-    <h3>...And what does this have to do with Search?</h3>
-    <p>
-        PROTOTYPE 01
-        <br><br>
-        This is a simple prototype of a pataphysical search tool.
-        It searches through Jarry's Faustroll book only.
-        <br><br>
-        Please search for single words only.
-        <br><br>
-        Search suggestions:<br>
-        '<a href="?query=clear">clear</a>'<br>
-        '<a href="?query=troll">troll</a>'<br>
-        '<a href="?query=large">large</a>'<br>
-        '<a href="?query=live">live</a>'<br>
-        '<a href="?query=solid">solid</a>'<br>
-        '<a href="?query=books">books</a>'<br>
-
-    </p>
-    <p>This is a simple prototype of a pataphysical search tool. It searches through Jarry's Faustroll book only. Please search for single words only.</p>
-    <p>Search suggestions:<br>
-        '<a href="?query=clear">clear</a>'
-        '<a href="?query=troll">troll</a>'
-        '<a href="?query=large">large</a>'
-        '<a href="?query=live">live</a>'
-        '<a href="?query=solid">solid</a>'
-        '<a href="?query=books">books</a>'</p>
 </article>
 
 </div>
@@ -102,9 +75,8 @@
     <!-- Copyright -->
     <div id="copyright" class="container">
         <ul class="links">
-            <li>&copy; Fania Raczinski. De Montfort University - Palotin, 139 (May 2012 vulg.)</li>
-            <li>This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>. It uses the <a href="http://www.nltk.org/" target="_blank">NLTK</a> natural language processing library and <a href="http://wordnet.princeton.edu/" target="_blank">WordNet</a>.</li>
-            <li>:)</li>
+            <li>&copy; Fania Raczinski - Gidouille 142 (June 2014 vulg.)</li>
+            <li><img src="{{ url_for('static', filename='images/dmu.png') }}"></li>
         </ul>
     </div>
 </div>

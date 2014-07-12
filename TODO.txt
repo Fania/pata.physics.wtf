@@ -1,0 +1,4 @@
+- Addlinks to keywords in results
+- Add title argument to quotes with sources
+- Make quotes appear at random from collection of quotes
+- Limit total number of results per algorithm

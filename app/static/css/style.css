@@ -83,7 +83,7 @@ a
 
 strong, b
 {
-	font-weight: 600;
+	font-weight: 900;
 	color: #666;
 }
 
@@ -121,6 +121,8 @@ blockquote
 
 p
 {
+	font-family: 'Arvo', serif;
+	letter-spacing: 0.5px;
 	text-align: justify;
 }
 
@@ -207,23 +209,6 @@ br.clear
 
 /* Lists */
 
-	ul.style1
-	{
-		list-style: disc;
-		margin-left: 1em;
-	}
-	
-		ul.style1 li
-		{
-			padding-left: 0.5em;
-			margin: 0.75em 0 0.75em 0;
-		}
-
-		ul.style1 li:first-child
-		{
-			margin-top: 0;
-		}
-
 	ul.links
 	{
 		/*margin: 0;*/
@@ -236,85 +221,12 @@ br.clear
 			padding: 0.5em 0;
 		}
 
-	ul.actions
-	{
-		margin-top: 2.5em;
-		clear: both;
-	}
-
-	ul.divided
-	{
-	}
-
-		ul.divided li
-		{
-			border-top: solid 2px #e5e5e5;
-		}
-
-		ul.divided li:first-child
-		{
-			border-top: 0;
-			margin-top: 0;
-			padding-top: 0;
-		}
-
-	ul.icons
-	{
-	}	
-
-		ul.icons > li
-		{
-			position: relative;
-			padding: 2em 0 0 3em;
-		}
-		
-		ul.icons > li:before
-		{
-			position: absolute;
-			left: 0;
-			top: 1.5em;
-			display: block;
-			background: #878787;
-			color: #e4e4e4;
-			width: 1.65em;
-			height: 1.65em;
-			border-radius: 1.65em;
-			line-height: 1.65em;
-			text-align: center;
-			box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
-		}
-
-		ul.icons > li:first-child
-		{
-			padding-top: 0;
-		}
-		
-			ul.icons > li:first-child:before
-			{
-				top: 0;
-			}
-
-	ol.style1
-	{
-		list-style: decimal;
-		margin-left: 1em;
-	}
-	
-		ol.style1 li
-		{
-			padding-left: 0.5em;
-			margin: 0.75em 0 0.75em 0;
-		}
-
-		ol.style1 li:first-child
-		{
-			margin-top: 0;
-		}
 
 /* Forms */
 
 	form
 	{
+		padding:  1em 0;
 	}
 	
 		form label
@@ -329,7 +241,7 @@ br.clear
 			-webkit-appearance: none;
 			display: block;
 			border: 0;
-			background: #e8e8e8;
+			background-color: #e8e8e8 !important;
 			width: 100%;
 			box-shadow: inset 2px 2px 0px 0px rgba(0,0,0,0.1);
 			border-radius: 4px;
@@ -351,7 +263,7 @@ br.clear
 			form select:focus,
 			form textarea:focus
 			{
-				background: #f0f0f0;
+				background-color: #e8e8e8 !important;
 			}
 			
 			form textarea
@@ -367,6 +279,10 @@ br.clear
 			form ::-webkit-input-placeholder
 			{
 				color: #555 !important;
+				
+			}
+			form input:-webkit-autofill {
+    			-webkit-box-shadow: 0 0 0px 1000px white inset;
 			}
 
 			form :-moz-placeholder
@@ -1062,7 +978,7 @@ br.clear
 	position: relative;
 	border-bottom: solid 2px #e5e5e5;
 	box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 	#header h1
@@ -1237,6 +1153,26 @@ br.clear
 			border-top: 0;
 			box-shadow: none;
 		}
+
+.trail {
+	margin: 5px 0;
+}
+
+#results {
+	padding: 1em 0;
+}
+
+.resultset {
+	background-color: #f0f0f0;
+	margin: 0.75em 0;
+	padding: 5px;
+	font-family: 'Arvo, serif';
+}
+
+.resultset ul {
+	list-style: none;
+	margin: 0 !important;
+}
 
 /*********************************************************************************/
 /* Sidebar                                                                       */

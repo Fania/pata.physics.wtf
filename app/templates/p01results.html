@@ -1,100 +1,87 @@
 {% extends "p01base.html" %}
 
-{% block header %}
-    <!-- <base href="" /> -->
-{% endblock %}
-
 {% block content %}
 <div class="search_form">
     <form action="../p01results" method="post">
         <input class="search_area" name="query" size="50"></input>
-        <input class="search_button" type="submit" value="Seach"></input>
+        <input class="search_button" type="submit" value="Search"></input>
     </form>
 </div>
 
 <div class="results">
+    <!-- <div class="trail">
+        <i class="fa fa-caret-right"></i> {{ query }} 
+        {# {% for item in s.queries %}
+            {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
+        {% endfor %} #}
+    </div> -->
 
-Trail: {{ query }} 
-{# {% for item in s.queries %}
-    {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
-{% endfor %} #}
-
-{% if clinamen_words %}
-    <p>
-        Clinamen - {{ clinamen_words|length }} pataphysicalised 
-        {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
-        found for: <strong>"{{ query }}"</strong>
-    </p>
-    <div id="results">
-        <ul>
-            {% for key in clinamen_words %}
-                {% for prek, prev in pre_sens.iteritems() %}
-                    {% for postk, postv in post_sens.iteritems() %}
-                        {% if prek == key and postk == key %}
-                            <li>...{{ prev }} <strong>{{ key }}</strong> {{ postv }}...</li>
-                        {% endif %}
+    <div class="resultset">
+        {% if clinamen_words %}
+            Clinamen - {{ clinamen_words|length }} pataphysicalised 
+            {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            found for: <strong>"{{ query }}"</strong>
+            <div id="results">
+                <ul>
+                    {% for key in clinamen_words %}
+                        {% for prek, prev in pre_sens.iteritems() %}
+                            {% for postk, postv in post_sens.iteritems() %}
+                                {% if prek == key and postk == key %}
+                                    <li>...{{ prev }} <strong>{{ key }}</strong> {{ postv }}...</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
                     {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        </ul>
+                </ul>
+            </div>
+        {% else %}
+            Clinamen - Sorry, no pataphysicalised reverberations found!
+        {% endif %}
     </div>
-{% else %}
-    <p>
-        Clinamen - Sorry, no pataphysicalised reverberations found!
-    </p>
-{% endif %}
-
-{% if syzygy_words %}
-    <p>
-        Syzygy - {{ pre_syssens|length }} pataphysicalised 
-        {% if pre_syssens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
-        found for: <strong>"{{ query }}"</strong>
-    </p>
-    <div id="results">
-        <ul>
-            {% for key in syzygy_words %}
-                {% for presk, presv in pre_syssens.iteritems() %}
-                    {% for postsk, postsv in post_syssens.iteritems() %}
-                        {% if presk == key and postsk == key %}
-                            <li>...{{ presv }} <strong>{{ key }}</strong> {{ postsv }}...</li>
-                        {% endif %}
+    <div class="resultset">
+        {% if syzygy_words %}
+            Syzygy - {{ pre_syssens|length }} pataphysicalised 
+            {% if pre_syssens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            found for: <strong>"{{ query }}"</strong>
+            <div id="results">
+                <ul>
+                    {% for key in syzygy_words %}
+                        {% for presk, presv in pre_syssens.iteritems() %}
+                            {% for postsk, postsv in post_syssens.iteritems() %}
+                                {% if presk == key and postsk == key %}
+                                    <li>...{{ presv }} <strong>{{ key }}</strong> {{ postsv }}...</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
                     {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        </ul>
+                </ul>
+            </div>
+        {% else %}
+            Syzygy - Sorry, no pataphysicalised reverberations found!
+        {% endif %}
     </div>
-{% else %}
-    <p>
-        Syzygy - Sorry, no pataphysicalised reverberations found!
-    </p>
-{% endif %}
-
-{% if antinomy_words %}
-    <p>
-        Antinomy - {{ antisens|length }} pataphysicalised 
-        {% if antisens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
-        found for: <strong>"{{ query }}"</strong>
-    </p>
-    <div id="results">
-        <ul>
-            {% for key in antinomy_words %}
-                {% for preak, preav in pre_antisens.iteritems() %}
-                    {% for postak, postav in post_antisens.iteritems() %}
-                        {% if preak == key and postak == key %}
-                            <li>...{{ preav }} <strong>{{ key }}</strong> {{ postav }}...</li>
-                        {% endif %}
+    <div class="resultset">
+        {% if antinomy_words %}
+            Antinomy - {{ antisens|length }} pataphysicalised 
+            {% if antisens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            found for: <strong>"{{ query }}"</strong>
+            <div id="results">
+                <ul>
+                    {% for key in antinomy_words %}
+                        {% for preak, preav in pre_antisens.iteritems() %}
+                            {% for postak, postav in post_antisens.iteritems() %}
+                                {% if preak == key and postak == key %}
+                                    <li>...{{ preav }} <strong>{{ key }}</strong> {{ postav }}...</li>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
                     {% endfor %}
-                {% endfor %}
-            {% endfor %}
-        </ul>
+                </ul>
+            </div>
+        {% else %}
+            Antinomy - Sorry, no pataphysicalised reverberations found!
+        {% endif %}
     </div>
-{% else %}
-    <p>
-        Antinomy - Sorry, no pataphysicalised reverberations found!
-    </p>
-{% endif %}
-
 
 </div>
-
 {% endblock %}

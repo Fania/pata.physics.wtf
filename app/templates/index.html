@@ -19,7 +19,7 @@
             <li><a class="fa fa-book" href="{{ url_for('p01') }}" ><span>Text</span></a></li>
             <li><a class="fa fa-camera" href="{{ url_for('p02') }}" ><span>Images</span></a></li>
             <li><a class="fa fa-video-camera" href="{{ url_for('p03') }}" ><span>Video</span></a></li>
-            <li><a class="fa fa-info" href=""><span>About</span></a></li>
+            <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
         </ul>
     </nav>  
     <!-- Header -->
@@ -27,7 +27,7 @@
         <!-- Logo -->
         <img id="spiral" src="{{ url_for('static', filename='images/spiral.svg') }}"/>
         <h1 id="logo"><a href="">Pataphysical Search</a></h1>
-        <p>&nbsp;&nbsp; within <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> by Alfred Jarry.</p>
+        <p>Ha Ha</p>
     </div>
 </div>
 
@@ -54,17 +54,18 @@
 <!-- Post -->
 <article class="is-post">
     <header>
-        <h2>WTF is <strong>Pataphysics</strong> and who is Alfred Jarry?</h2>
+        <h2>Huh?</h2>
     </header>
-    <h3>...And what does this have to do with Search?</h3>
-    <p>This is a simple prototype of a pataphysical search tool. It searches through Jarry's Faustroll book only. Please search for single words only.</p>
-    <p>Search suggestions:<br>
-        '<a href="?query=clear">clear</a>'
-        '<a href="?query=troll">troll</a>'
-        '<a href="?query=large">large</a>'
-        '<a href="?query=live">live</a>'
-        '<a href="?query=solid">solid</a>'
-        '<a href="?query=books">books</a>'</p>
+    <p>
+        Imagine a search engine that does not return the results you expected, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
+    </p>
+    <p>
+        This is a simple proof-of-concept tool to demonstrate some example search results that were found using <strong>patalgorithms</strong> (pataphysical algorithms). There are many ways the clinamen could be implemented computationally. Our approach to model the clinamen was to introduce deliberate spelling errors to the query. The procedure we developed made use of, or rather, abused the Damerau-Levenshtein algorithm, which measures the difference between two words, to find matches that are similar to the query but not quite the same. This difference is calculated using insertion, deletion, substitution of a single character, or transposition of two adjacent characters. Using this method we were basically telling the program to return matches from the index that have one or two spelling mistakes in them. While we only returned matches that actually appeared in the book (i.e. they existed in the index), and by doing so eliminated the possibility of creating novel words like Jarry’s merdre, the swerve or aberration from the original query term was still very evident.
+    </p>
+    <p>
+        The function works in a purely syntactical manner, which becomes rather obvious when seeing the various results side by side with the query term. Knowing how they are produced of course makes it easy to understand them. But wouldn’t they appear totally arbitrary to user Alice for example, if she didn’t know to look for spelling errors or what a clinamen is? The problem of transparency becomes very clear here. How much information does Alice need about the search results so that she can appreciate them? Is an understanding of how the search tool works internally really necessary? It could easily go wrong and spoil the experience. It is not just the patalgorithm that matters here, but the fact that the whole index is based solely on Jarry’s book plays a role too. The vocabulary used is very distinct and influences a lot how the results feel and read. Had we used another author’s book or a collection of random books even, the results might have had a more generic feel to them.
+    </p>
+
 </article>
 
 </div>
@@ -88,9 +89,8 @@
     <!-- Copyright -->
     <div id="copyright" class="container">
         <ul class="links">
-            <li>&copy; Fania Raczinski. De Montfort University - Palotin, 139 (May 2012 vulg.)</li>
-            <li>This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>. It uses the <a href="http://www.nltk.org/" target="_blank">NLTK</a> natural language processing library and <a href="http://wordnet.princeton.edu/" target="_blank">WordNet</a>.</li>
-            <li>:)</li>
+            <li>&copy; Fania Raczinski - Gidouille 142 (June 2014 vulg.)</li>
+            <li><img src="{{ url_for('static', filename='images/dmu.png') }}"></li>
         </ul>
     </div>
 </div>

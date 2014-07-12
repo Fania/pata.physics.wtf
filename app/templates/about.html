@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>PataSearch!</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body class="homepage">
+
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a class="fa fa-home" href="{{ url_for('index') }}"><span>Home</span></a></li>
+            <li><a class="fa fa-book" href="{{ url_for('p01') }}" ><span>Text</span></a></li>
+            <li><a class="fa fa-camera" href="{{ url_for('p02') }}" ><span>Images</span></a></li>
+            <li><a class="fa fa-video-camera" href="{{ url_for('p03') }}" ><span>Video</span></a></li>
+            <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <div id="header" class="container">
+    </div>
+</div>
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="inner">
+        <!-- Banner -->
+        <section id="banner" class="container">
+        <p><i class="fa fa-quote-left"></i> to understand pataphysics is to fail to understand pataphysics <i class="fa fa-quote-right"></i></p>
+        </section>
+    </div>
+</div>
+
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+
+<!-- Main -->
+<div id="main" class="container">
+<div class="row">
+
+<!-- Content -->
+<div id="content" class="12u skel-cell-important">
+
+<!-- Post -->
+<article class="is-post">
+    <h2>WTF is <strong>Pataphysics</strong> and who is Alfred Jarry?</h2>
+    <p>
+        Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic. 
+    </p>
+
+    <h3>Definitions</h3>
+    <p>
+        Pataphysics is the science of imaginary solutions,<br>
+        Pataphysics is the science of the particular,<br>
+        Pataphysics is the science of the laws governing exceptions and contradictions,<br>
+        Pataphysics is to metaphysics as metaphysics is to physics, and<br>
+        Pataphysics describes a universe supplementary to this one.
+    </p>
+    <p>
+        Pataphysics is a science with an aesthetic sensibility (Brotchie),<br>
+        Pataphysics sets the parameters for the contemporary relationship between science and poetry (Bök),<br>
+        Pataphysics is a huge and elaborately constructed hoax (Ionesco),<br>
+        Pataphysics is the knowledge of the specific and irreducible, the opposite of physics (Daumal), and<br>
+        Pataphysics is a systematic, reasoned displacement of perception and logic (David).
+    </p>
+    <h3>(Mis-)Understanding Pataphysics</h3>
+    <p>
+        Pataphysics is perhaps best (mis)understood by looking at some of its recurring themes, such as exceptions, syzygies, anomalies, clinamen, antinomies, contradictions, equivalents and imaginaries. These concepts can influence the ways in which we may navigate and transform the conceptual space of a given problem. We will explain the clinamen here (which would fall under Boden’s transformative creativity category) and then come back to it later when we introduce one of the algorithms we developed.
+    </p>
+    <p>
+        The term clinamen was first coined by Lucretius when he needed to name the aleatory swerve of atoms in their descent described by Epicurus. Approximately two millennia later, Alfred Jarry resurrected this obscured concept as a key principle of pataphysics.  Its influences can be found in the Situationists’ détournement, the Dadaists’ ready-mades and Oulipo’s verbal games, and so on. Lucretius had already linked the indeterministic property of the clinamen to free will and the Oulipo interprets it as a chance to escape certain restrictions given that any initial constraint are still followed (just as the atoms don’t randomly start to ascend but they swerve). Experimental poet Christian Bök has called the clinamen the smallest possible aberration that can make the greatest possible difference.
+    </p>
+    <p>
+        The Oulipo, which started as a subcommittee of the French college of pataphysics, has been studying constraints as tools for creativity since 1960. While they do a lot of work in literature, other groups have emerged that consider music, art, mathematics, cooking, etc. Oulipo scholar Warren Motte has collated a convenient list of elementary linguistic and literary operations that could prove very useful in computational implementations of the clinamen, namely displacement, substitution, addition, subtraction, multiplication, division, deduction and contradiction. Applying these operations to linguistic objects such as letters, phonemes, syllables or words results in phenomena like anagrams, cryptograms, lipograms, tautograms, spoonerisms, acronyms, rhymes, etc.
+    </p>
+    <p>
+        One good example of a clinamen in action is Jarry’s merdre (the very first word in his Ubu play). He squeezed an extra ‘r’ into the French word ‘merde’ (meaning shit) and translates into something like ‘pshit’. By rendering a useful (if rude) word useless in this way, he introduced a pataphysical sense of creativity that persists: the word still exerts a fascination today.
+    </p>
+
+    <h2>Technical details and <strong>source</strong></h2>
+    <p>
+        The code is (currently NOT) available on my <a href="https://github.com/Fania" target="_blank"> Github</a>.
+    </p>
+
+    <h3>Details</h3>
+    <p>
+        This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>. It uses the <a href="http://www.nltk.org/" target="_blank">NLTK</a> natural language processing library and <a href="http://wordnet.princeton.edu/" target="_blank">WordNet</a>.
+    </p>
+
+    <h2>What's the point of this <strong>exactly?</strong></h2>
+    <p>
+        Seriously, what's this all about? Well, ... do I need a reason?
+    </p>
+
+    <h3>Why oh why?</h3>
+    <p>
+        The prototype described and shown on this site is part of my PhD project:<br>
+        <strong>‘A pataphysical methodology for applying creativity to exploratory search.’</strong>
+    </p>
+    <p>
+        My research involves studying human and computer creativity and how they are evaluated, the absurd pseudo philosophy pataphysics and its applications, and the development of creative exploratory search algorithms inspired by pataphysical concepts.
+    </p>
+    <p>
+        Part of this research has been described in a journal article in Digital Creativity in 2013, and I presented a paper at the Creativity & Cognition conference 2013 in Sydney.
+    </p>
+    <p>
+        This prototype was used in the creation of an online opera entitled The Imaginary Voyage and created in collaboration with The Opera Group, an award-winning, nationally and internationally renowned opera company. In particular, it was used to create the libretto for one of the virtual islands whose navigation provides the central storyline for the opera. This nicely demonstrates the paradox of “uselessness” as a concept, since our purposely useless search tool has been quite useful here.
+    </p>
+
+    <h3>About me</h3>
+    <p>
+        My personal webhome is <a href="http://fania.uk" target="_blank">www.fania.uk</a>.
+    </p>
+</article>
+
+</div>
+</div>
+</div>
+</div> 
+<!-- Main Wrapper End -->
+
+<!-- Banner Wrapper -->
+<div id="banner-wrapper">
+    <div class="inner">
+        <!-- Banner -->
+        <section id="banner" class="container">
+        <p><i class="fa fa-quote-left"></i> another quote <i class="fa fa-quote-right"></i></p>
+        </section>
+    </div>
+</div>
+
+<!-- Footer Wrapper -->
+<div id="footer-wrapper">
+    <!-- Copyright -->
+    <div id="copyright" class="container">
+        <ul class="links">
+            <li>&copy; Fania Raczinski - Gidouille 142 (June 2014 vulg.)</li>
+            <li><img src="{{ url_for('static', filename='images/dmu.png') }}"></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
