@@ -1,27 +1,30 @@
-from surfer import *
+from flask import render_template, url_for, request
+from app import app
 
-#############################################
-
-# PROTOTYPE 03
-
-#############################################
+from surfer03 import *
 
 
-def results(request):
-    error = False
-    if 'query' in request.GET:
-        query = (request.GET['query']).strip()
-        #query = query.strip()
-        if not query:
-            error = True
-        else:
-            # VIDEOS
-            videos_vids, translations = videos(query)
-            videos_len = len(videos_vids)
-
-            return render_to_response('prototype03/results.html', locals())
-    return render_to_response('prototype03/results.html', {'error': error})
+@app.route('/p03')
+def p03():
+    return render_template('p03.html')
 
 
-def main(request):
-    return render_to_response('prototype03/index.html', locals())
+@app.route('/p03results', methods=['GET', 'POST'])
+def p03results():
+
+    query = request.form['query']
+
+    if request.method == 'GET':
+        print 'p03results get: ', query  # data['query']
+        # return render_template('p01results.html', q)
+    else:
+        #request was a POST
+        print 'p03results post: ', query  # data['query']
+        # qx = getResults(q)
+
+        # VIDEOS
+        videos_vids, translations = videos(query)
+        videos_len = len(videos_vids)
+
+        #print data
+        return render_template('p03results.html', **locals())

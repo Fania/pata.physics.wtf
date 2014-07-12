@@ -2,7 +2,6 @@ from flask import render_template, url_for, request
 from app import app
 
 from surfer01 import *
-# import randquote
 
 
 @app.route('/p01')

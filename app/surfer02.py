@@ -1,9 +1,10 @@
+from flask import url_for
 import flickrapi
 import requests
-import unicodedata as ud
+# import unicodedata as ud
 from requests.auth import HTTPBasicAuth
 from microsofttranslator import Translator
-import prototype01.surfer as surf01
+import surfer01
 #############################################
 
 # PROTOTYPE 02 - IMAGES
@@ -25,7 +26,7 @@ key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
 def pataphysicalise(word):
 
     translator = Translator(microsoft_id, microsoft_secret)
-    syzygy_words = surf01.syzygy(word)
+    syzygy_words = surfer01.syzygy(word)
     if syzygy_words:
         syzword = syzygy_words.pop()
     else:
@@ -65,7 +66,8 @@ def images(word):
     url = base + params
     bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
     for result in bing_img.json['d']['results']:
-        phototitle = ud.normalize('NFKD', result['Title']).encode('ascii', 'ignore')
+        # phototitle = ud.normalize('NFKD', result['Title']).encode('ascii', 'ignore')
+        phototitle = result['Title']
         photothumb = result['Thumbnail']['MediaUrl']
         photolink = result['SourceUrl']
         out.append((phototitle, photothumb, photolink))

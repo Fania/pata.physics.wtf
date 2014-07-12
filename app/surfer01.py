@@ -30,7 +30,7 @@ corpus_root = root_path + '/app/static/corpus'
 # NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
 #book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
-#print book_list
+print book_list
 troll = book_list.words('faustroll.txt')
 faustroll = nltk.Text(troll)
 ############################################################
@@ -64,7 +64,7 @@ faustroll = nltk.Text(troll)
 #faustroll = text
 
 path_e = corpus_root + '/english'
-#print 'path_e ', path_e
+print 'path_e ', path_e
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 stopwords_doc.close()
@@ -78,19 +78,22 @@ froll_dict = [w for w in faustroll_dict if w.isalpha() not in sw]
 
 def syzygy(word):
     out = set()
-    wordsets = wn.synsets(word)
+    wordsets = wn.synsets(word)  # returns a list of synsets
     for w in wordsets:
         # Hyponyms share a type-of relationship with their hypernym
-        hypo = w.hyponyms()
-        for h in hypo:
-            for l in h.lemmas:
+        print 'w', w
+        hypo = w.hyponyms()  # returns a list of synsets
+        for h in hypo:  # for every synset h
+            print 'h', h
+            for l in h.lemmas():
+                print 'l', l
                 if l.name in froll_dict:
                     out.add(l.name)
                     #print 'added hypo'
         # Hyponyms share a type-of relationship with their hypernym
         hyper = w.hypernyms()
         for h in hyper:
-            for l in h.lemmas:
+            for l in h.lemmas():
                 if l.name in froll_dict:
                     out.add(l.name)
                     #print 'added hyper'
@@ -98,7 +101,7 @@ def syzygy(word):
         # 'X' is a holonym of 'Y' if Ys are members of Xs.
         holo = w.member_holonyms()
         for h in holo:
-            for l in h.lemmas:
+            for l in h.lemmas():
                 if l.name in froll_dict:
                     out.add(l.name)
                     #print 'added holo'
@@ -108,8 +111,8 @@ def syzygy(word):
 def antinomy(word):
     out = set()
     wordsets = wn.synsets(word)
-    for item in wordsets:
-        anti = item.lemmas[0].antonyms()
+    for w in wordsets:
+        anti = w.lemmas[0].antonyms()
         for a in anti:
             if a.name != word:
                 out.add(a.name)

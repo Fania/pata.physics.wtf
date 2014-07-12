@@ -1,4 +1,4 @@
-{% extends "p01base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="search_form">
@@ -45,7 +45,7 @@
             found for: <strong>"{{ query }}"</strong>
             <div id="results">
                 <ul>
-                    {% for key in syzygy_words %}
+                    {% for key in syzygy_words.iteritems() %}
                         {% for presk, presv in pre_syssens.iteritems() %}
                             {% for postsk, postsv in post_syssens.iteritems() %}
                                 {% if presk == key and postsk == key %}
