@@ -567,6 +567,31 @@ br.clear
 	clear: both;
 }
 
+form.inform {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+input.inlink {
+	font-family: 'Arvo', serif;
+	background: transparent;
+	color: #666;
+	text-decoration: none;
+	border-bottom: solid 1px #ddd;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	font-weight: 900;
+	margin: 0;
+	padding: 0;
+}
+input.inlink:hover, input.inlink:active, input.inlink:focus {
+	color: #576c93;
+	border-color: rgba(255,255,255,0);
+}
+
+
 /* Sections/Articles */
 
 	section,

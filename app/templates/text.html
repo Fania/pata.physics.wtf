@@ -20,12 +20,13 @@
 
 <h3>How to use</h3>
 <p>Text search is currently only supported for single words only.</p>
-<p>Search suggestions:<br>
-    '<a href="?query=clear">clear</a>'
-    '<a href="?query=troll">troll</a>'
-    '<a href="?query=large">large</a>'
-    '<a href="?query=live">live</a>'
-    '<a href="?query=solid">solid</a>'
-    '<a href="?query=books">books</a>'</p>
+
+<h4>Search suggestions:</h4>
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear"></input></form>'
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll"></input></form>'
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>'
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"></input></form>'
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"></input></form>'
+    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"></input></form>'
 
 {% endblock %}

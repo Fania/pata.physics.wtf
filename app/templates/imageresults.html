@@ -9,20 +9,19 @@
 </div>
 
 <div class="results">
-
     <div class="resultset">
         <p>
             <strong>Pataphysicalisation: </strong>
-            <a href="?query={{ query }}">{{ query }}</a> == 
-            <a href="?query={{ translations.0 }}">{{ translations.0 }}</a> == 
-            <a href="?query={{ translations.1 }}">{{ translations.1 }}</a> ==
-            <a href="?query={{ translations.2 }}">{{ translations.2 }}</a>
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> == 
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> == 
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}"></input></form> ==
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
             <hr>
         </p>
         {% if images_imgs %}
             Images - {{ images_imgs|length }} pataphysicalised 
             {% if images_imgs|length == 1 %}reverberation{% else %}reverberations{% endif %} 
-            found for: <strong>"{{ translations.2 }}"</strong>
+            found for: <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
 
             <div class="spouter">
                 <div class="spleft">
