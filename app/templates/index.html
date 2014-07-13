@@ -6,6 +6,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+<link rel="shortcut icon" type="image/svg+xml" href="{{ url_for('static', filename='images/spiral.svg') }}">
 <script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
 </head>
@@ -18,9 +19,9 @@
     <nav id="nav">
         <ul>
             <li><a class="fa fa-home" href="{{ url_for('index') }}"><span>Home</span></a></li>
-            <li><a class="fa fa-book" href="{{ url_for('p01') }}" ><span>Text</span></a></li>
-            <li><a class="fa fa-camera" href="{{ url_for('p02') }}" ><span>Images</span></a></li>
-            <li><a class="fa fa-video-camera" href="{{ url_for('p03') }}" ><span>Video</span></a></li>
+            <li><a class="fa fa-book" href="{{ url_for('text') }}" ><span>Text</span></a></li>
+            <li><a class="fa fa-camera" href="{{ url_for('images') }}" ><span>Images</span></a></li>
+            <li><a class="fa fa-video-camera" href="{{ url_for('videos') }}" ><span>Video</span></a></li>
             <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
         </ul>
     </nav>  

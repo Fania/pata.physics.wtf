@@ -1,6 +1,6 @@
-- Disable DEBBUG mode
+
 - Addlinks to keywords in results
 - Add title argument to quotes with sources
 - Limit total number of results per algorithm
-- fix unicode error of quotes.txt
-- fix wordnet error in syzygy and antinomy on mac
+- remove get methods if unused
+- replace inline query links '<a href="?query=clear">clear</a>'

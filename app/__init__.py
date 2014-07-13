@@ -1,11 +1,10 @@
 from flask import Flask
-import random, os
-import unicodedata, codecs
+import random, os, unicodedata, codecs
 
 
 app = Flask(__name__)
 
-from app import views, views01, views02, views03
+from app import views, textviews, imageviews, videoviews
 
 
 def getrandquote():

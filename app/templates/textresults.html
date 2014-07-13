@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="search_form">
-    <form action="../p01results" method="post">
+    <form action="../textresults" method="post">
         <input class="search_area" name="query" size="50"></input>
         <input class="search_button" type="submit" value="Search"></input>
     </form>
@@ -45,7 +45,7 @@
             found for: <strong>"{{ query }}"</strong>
             <div id="results">
                 <ul>
-                    {% for key in syzygy_words.iteritems() %}
+                    {% for key in syzygy_words %}
                         {% for presk, presv in pre_syssens.iteritems() %}
                             {% for postsk, postsv in post_syssens.iteritems() %}
                                 {% if presk == key and postsk == key %}

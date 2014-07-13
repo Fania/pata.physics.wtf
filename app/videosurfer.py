@@ -1,11 +1,10 @@
 from flask import url_for
-
+from requests.auth import HTTPBasicAuth
+from microsofttranslator import Translator
 import gdata.youtube.service as yt
 import requests
 # import unicodedata as ud
-from requests.auth import HTTPBasicAuth
-from microsofttranslator import Translator
-import surfer01
+import textsurfer
 
 #############################################
 
@@ -25,7 +24,7 @@ key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
 def pataphysicalise(word):
 
     translator = Translator(microsoft_id, microsoft_secret)
-    syzygy_words = surfer01.syzygy(word)
+    syzygy_words = textsurfer.syzygy(word)
     if syzygy_words:
         syzword = syzygy_words.pop()
     else:
@@ -38,7 +37,7 @@ def pataphysicalise(word):
     return translations
 
 
-def videos(word):
+def getvideos(word):
     out = []
 
     translations = pataphysicalise(word)

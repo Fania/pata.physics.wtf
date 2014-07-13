@@ -1,0 +1,11 @@
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+PyYAML==3.11
+Werkzeug==0.9.6
+flickrapi==1.4.4
+gdata==2.0.18
+itsdangerous==0.24
+microsofttranslator==0.6
+nltk==2.0.4
+requests==2.3.0

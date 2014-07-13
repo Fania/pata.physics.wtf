@@ -1,25 +1,24 @@
 from flask import render_template, url_for, request
 from app import app
-
-from surfer01 import *
-
-
-@app.route('/p01')
-def p01():
-    return render_template('p01.html')
+from textsurfer import *
 
 
-@app.route('/p01results', methods=['GET', 'POST'])
-def p01results():
+@app.route('/text')
+def text():
+    return render_template('text.html')
+
+
+@app.route('/textresults', methods=['GET', 'POST'])
+def textresults():
 
     query = request.form['query']
 
     if request.method == 'GET':
-        print 'p01results get: ', query  # data['query']
+        print 'textresults get: ', query  # data['query']
         # return render_template('p01results.html', q)
     else:
         #request was a POST
-        print 'p01results post: ', query  # data['query']
+        print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
        # CLINAMEN
@@ -64,4 +63,4 @@ def p01results():
                 #print antisens[r]
 
         #print data
-        return render_template('p01results.html', **locals())
+        return render_template('textresults.html', **locals())

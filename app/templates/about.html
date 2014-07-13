@@ -1,77 +1,27 @@
-<!DOCTYPE HTML>
-<html>
+{% extends "base.html" %}
 
-<head>
-<title>PataSearch!</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
-<script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
-<script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
-</head>
-
-<body class="homepage">
-
-<!-- Header Wrapper -->
-<div id="header-wrapper">
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li><a class="fa fa-home" href="{{ url_for('index') }}"><span>Home</span></a></li>
-            <li><a class="fa fa-book" href="{{ url_for('p01') }}" ><span>Text</span></a></li>
-            <li><a class="fa fa-camera" href="{{ url_for('p02') }}" ><span>Images</span></a></li>
-            <li><a class="fa fa-video-camera" href="{{ url_for('p03') }}" ><span>Video</span></a></li>
-            <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
-        </ul>
-    </nav>
-    <!-- Header -->
-    <div id="header" class="container">
-        <a href="{{ url_for('index') }}"><h1>Pataphysical Search</h1></a>
-    </div>
-</div>
-
-<!-- Banner Wrapper -->
-<div id="banner-wrapper">
-    <div class="inner">
-        <!-- Banner -->
-        <section id="banner" class="container">
-        <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-        </section>
-    </div>
-</div>
-
-<!-- Main Wrapper -->
-<div id="main-wrapper">
-
-<!-- Main -->
-<div id="main" class="container">
-<div class="row">
-
-<!-- Content -->
-<div id="content" class="12u skel-cell-important">
-
-<!-- Post -->
-<article class="is-post">
+{% block content %}
     <h2>WTF is <strong>Pataphysics</strong> and who is Alfred Jarry?</h2>
     <p>
         Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic. 
     </p>
 
     <h3>Definitions</h3>
-    <p>
-        Pataphysics is the science of imaginary solutions,<br>
-        Pataphysics is the science of the particular,<br>
-        Pataphysics is the science of the laws governing exceptions and contradictions,<br>
-        Pataphysics is to metaphysics as metaphysics is to physics, and<br>
-        Pataphysics describes a universe supplementary to this one.
-    </p>
-    <p>
-        Pataphysics is a science with an aesthetic sensibility (Brotchie),<br>
-        Pataphysics sets the parameters for the contemporary relationship between science and poetry (Bök),<br>
-        Pataphysics is a huge and elaborately constructed hoax (Ionesco),<br>
-        Pataphysics is the knowledge of the specific and irreducible, the opposite of physics (Daumal), and<br>
-        Pataphysics is a systematic, reasoned displacement of perception and logic (David).
-    </p>
+    <blockquote>
+        Pataphysics is the science of imaginary solutions<br>
+        Pataphysics is the science of the particular<br>
+        Pataphysics is the science of the laws governing exceptions and contradictions<br>
+        Pataphysics is to metaphysics as metaphysics is to physics<br>
+        Pataphysics describes a universe supplementary to this one
+    </blockquote>
+    <blockquote>
+        Pataphysics is a science with an aesthetic sensibility (Brotchie)<br>
+        Pataphysics sets the parameters for the contemporary relationship between science and poetry (Bök)<br>
+        Pataphysics is a huge and elaborately constructed hoax (Ionesco)<br>
+        Pataphysics is the knowledge of the specific and irreducible, the opposite of physics (Daumal)<br>
+        Pataphysics is a systematic, reasoned displacement of perception and logic (David)
+    </blockquote>
+
     <h3>(Mis-)Understanding Pataphysics</h3>
     <p>
         Pataphysics is perhaps best (mis)understood by looking at some of its recurring themes, such as exceptions, syzygies, anomalies, clinamen, antinomies, contradictions, equivalents and imaginaries. These concepts can influence the ways in which we may navigate and transform the conceptual space of a given problem. We will explain the clinamen here (which would fall under Boden’s transformative creativity category) and then come back to it later when we introduce one of the algorithms we developed.
@@ -90,15 +40,21 @@
     <p>
         The code is (currently NOT) available on my <a href="https://github.com/Fania" target="_blank"> Github</a>.
     </p>
-
-    <h3>Details</h3>
-    <p>
-        This prototype was written in <a href="http://www.python.org/" target="_blank">python 2.7</a> and the website using <a href="https://www.djangoproject.com/" target="_blank">django 1.4</a>. It uses the <a href="http://www.nltk.org/" target="_blank">NLTK</a> natural language processing library and <a href="http://wordnet.princeton.edu/" target="_blank">WordNet</a>.
-    </p>
+    <ul>
+        <li><a href="http://www.python.org/" target="_blank">Python 2.7.3</a></li>
+        <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank">Virtualenv 1.11.6</a></li>
+        <li><a href="https://pip.pypa.io/en/latest/index.html" target="_blank">Pip 1.5.6</a></li>
+        <li><a href="http://flask.pocoo.org/" target="_blank">Flask 0.10.1</a></li>
+        <li><a href="http://www.nltk.org/" target="_blank">NLTK 2.0.4</a></li>
+        <li><a href="https://pypi.python.org/pypi/flickrapi" target="_blank">Flickrapi 1.4.4</a></li>
+        <li><a href="https://pypi.python.org/pypi/gdata/2.0.18" target="_blank">Gdata 2.0.18</a></li>
+        <li><a href="https://pypi.python.org/pypi/microsofttranslator/0.6" target="_blank">Microsofttranslator 0.6</a></li>
+        <li>And all relevant dependencies.</li>
+    </ul>
 
     <h2>What's the point of this <strong>exactly?</strong></h2>
     <p>
-        Seriously, what's this all about? Well, ... do I need a reason?
+        <i>To understand this project is to not understand this project.</i>
     </p>
 
     <h3>Why oh why?</h3>
@@ -110,45 +66,21 @@
         My research involves studying human and computer creativity and how they are evaluated, the absurd pseudo philosophy pataphysics and its applications, and the development of creative exploratory search algorithms inspired by pataphysical concepts.
     </p>
     <p>
-        Part of this research has been described in a journal article in Digital Creativity in 2013, and I presented a paper at the Creativity & Cognition conference 2013 in Sydney.
+        Part of this research has been described in a journal <a href="http://www.tandfonline.com/doi/full/10.1080/14626268.2013.813377#.U6li4_ldV8E" target="_blank">article in Digital Creativity</a> in 2013, and I presented a paper at the <a href="http://cc13.creativityandcognition.com/" target="_blank">Creativity & Cognition conference 2013</a> in Sydney.
     </p>
     <p>
-        This prototype was used in the creation of an online opera entitled The Imaginary Voyage and created in collaboration with The Opera Group, an award-winning, nationally and internationally renowned opera company. In particular, it was used to create the libretto for one of the virtual islands whose navigation provides the central storyline for the opera. This nicely demonstrates the paradox of “uselessness” as a concept, since our purposely useless search tool has been quite useful here.
+        There is a talk about <a href="https://www.youtube.com/watch?v=UxYUZMyPE0o"target="_blank">'The Pataphysics of the Future'</a> given at the TDC at DMU in 2013 on Youtube.
+    </p>
+    <p>
+        This prototype was used in the creation of an online opera entitled <a href="http://andrewhugill.com/theimaginaryvoyage/" target="_blank">'The Imaginary Voyage'</a> and created in collaboration with The Opera Group, an award-winning, nationally and internationally renowned opera company. In particular, it was used to create the libretto for one of the virtual islands whose navigation provides the central storyline for the opera. This nicely demonstrates the paradox of “uselessness” as a concept, since our purposely useless search tool has been quite useful here.
     </p>
 
     <h3>About me</h3>
     <p>
         My personal webhome is <a href="http://fania.uk" target="_blank">www.fania.uk</a>.
     </p>
-</article>
+    <p>
+        This project is supervised by Prof. <strong>Hongji Yang</strong>, Prof. <strong>Andrew Hugill</strong> and Prof. <strong>Jim Hendler</strong>.
+    </p>
 
-</div>
-</div>
-</div>
-</div> 
-<!-- Main Wrapper End -->
-
-<!-- Banner Wrapper -->
-<div id="banner-wrapper">
-    <div class="inner">
-        <!-- Banner -->
-        <section id="banner" class="container">
-        <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-        </section>
-    </div>
-</div>
-
-<!-- Footer Wrapper -->
-<div id="footer-wrapper">
-    <!-- Copyright -->
-    <div id="copyright" class="container">
-        <ul class="links">
-            <li>&copy; Fania Raczinski - Gidouille 142 (June 2014 vulg.)</li>
-            <li><img src="{{ url_for('static', filename='images/dmu.png') }}"></li>
-        </ul>
-    </div>
-</div>
-
-</body>
-
-</html>
+{% endblock %}
