@@ -6,6 +6,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="shortcut icon" type="image/svg+xml" href="{{ url_for('static', filename='images/spiral.svg') }}">
 <script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
@@ -56,7 +57,7 @@
 <!-- Post -->
 <article class="is-post">
     <header>
-        <h2>Huh?</h2>
+        <h2><i class="fa fa-chain-broken"></i> Huh?</h2>
     </header>
     <p>
         Imagine a search engine that does not return the results you expected, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
@@ -90,10 +91,8 @@
 <div id="footer-wrapper">
     <!-- Copyright -->
     <div id="copyright" class="container">
-        <ul class="links">
-            <li>&copy; Fania Raczinski - Gidouille 142 (June 2014 vulg.)</li>
-            <li><img src="{{ url_for('static', filename='images/dmu.png') }}"></li>
-        </ul>
+        &copy; <a href="mailto:me@fania.eu?Subject=PataSearch">Fania Raczinski</a> - Gidouille 142 (June 2014 vulg.)<br>
+        <img src="{{ url_for('static', filename='images/dmu.png') }}">
     </div>
 </div>
 

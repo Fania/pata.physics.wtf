@@ -2,3 +2,9 @@
 - Add title argument to quotes with sources
 - Limit total number of results per algorithm
 - remove get methods if unused
+- make responsive
+- read through text and change
+- favicon
+- text syzygy not working on mac
+- clean css
+- add more blue colour
