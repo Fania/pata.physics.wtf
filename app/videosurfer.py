@@ -3,7 +3,7 @@ from requests.auth import HTTPBasicAuth
 from microsofttranslator import Translator
 import gdata.youtube.service as yt
 import requests
-# import unicodedata as ud
+import unicodedata as ud
 import textsurfer
 
 #############################################
@@ -41,6 +41,7 @@ def getvideos(word):
     out = []
 
     translations = pataphysicalise(word)
+    # translations = word
     patawords = translations[2]
 
     # YOUTUBE
@@ -75,5 +76,4 @@ def getvideos(word):
     #    photothumb = result['Thumbnail']['MediaUrl']
     #    photolink = result['SourceUrl']
     #    out.append((phototitle, photothumb, photolink))
-
     return out, translations

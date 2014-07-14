@@ -8,3 +8,6 @@
 - text syzygy not working on mac
 - clean css
 - add more blue colour
+- start message?
+- error pages stack trace show?
+- add more pataphysical random text to the page

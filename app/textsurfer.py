@@ -10,7 +10,7 @@ import warnings
 
 #print sys.getdefaultencoding()
 # Ignore weird unicode warnings from dameraulevenshtein function
-warnings.simplefilter('ignore')
+# warnings.simplefilter('ignore')
 
 #############################################
 
