@@ -510,6 +510,15 @@ a
 		color: #576c93;
 	}
 
+span.mirror {
+	display: inline-block !important;
+    -moz-transform: scaleX(-1) !important;
+    -o-transform: scaleX(-1) !important;
+    -webkit-transform: scaleX(-1) !important;
+    transform: scaleX(-1) !important;
+    filter: FlipH !important;
+}
+
 strong, b
 {
 	font-weight: 900;

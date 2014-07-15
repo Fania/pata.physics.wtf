@@ -4,7 +4,6 @@
 - remove get methods if unused
 - make responsive
 - read through text and change
-- favicon
 - text syzygy not working on mac
 - clean css
 - add more blue colour
