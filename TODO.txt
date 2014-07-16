@@ -10,3 +10,4 @@
 - start message?
 - error pages stack trace show?
 - add more pataphysical random text to the page
+- fix unicode errors all for all I/O
