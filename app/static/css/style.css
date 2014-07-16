@@ -492,6 +492,7 @@ a
 
 	a strong
 	{
+		color: #7989A9;
 		-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
 		-o-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
@@ -509,6 +510,19 @@ a
 	{
 		color: #576c93;
 	}
+a.iconlink{
+	color: #7989A9;
+	text-decoration: none;
+	border: 0;
+	-moz-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+	-o-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+	-ms-transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out, border-bottom-color 0.25s ease-in-out;
+}
+a.iconlink:hover{
+	color: #576c93;
+}
 
 span.mirror {
 	display: inline-block !important;
