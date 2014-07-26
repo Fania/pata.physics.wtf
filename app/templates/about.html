@@ -1,45 +1,82 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2><span class="fa-stack"><i class="fa fa-square fa-stack-1x"></i><i class="fa fa-question fa-stack-1x fa-inverse"></i></span> WTF is <strong>Pataphysics</strong> and who is Alfred Jarry?</h2>
-    <p>
-        Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic. 
-    </p>
+<div id="header-wrapper">
+<ul id="subnav">
+    <li><a href="#understanding">Pataphysics</a>
+        <ul>
+        <li><a href="#definitions">Definitions</a></li>
+        <li><a href="#clinamen">Clinamen</a></li>
+        <li><a href="#syzygy">Syzygy</a></li>
+        <li><a href="#antinomy">Antinomy</a></li>
+        <li><a href="#jarry">Jarry</a></li>
+        </ul>  
+    </li>
+    <li><a href="#technical">Technical</a>
+        <ul>
+        <li><a href="#source">Source</a></li>
+        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#issues">Issues</a></li>
+        </ul>
+    </li>
+    <li><a href="#confused">Confused</a>
+        <ul>
+        <li><a href="#why">Why</a></li>
+        </ul>
+    </li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+</div>
 
-    <h3>Definitions</h3>
+    <a id="understanding"><h2>(Mis-)Understanding <strong>Pataphysics</strong></h2></a>
+    <a id="definitions"><h4>Definitions</h4></a>
     <blockquote>
-        Pataphysics is the science of imaginary solutions<br>
-        Pataphysics is the science of the particular<br>
-        Pataphysics is the science of the laws governing exceptions and contradictions<br>
-        Pataphysics is to metaphysics as metaphysics is to physics<br>
-        Pataphysics describes a universe supplementary to this one
+        Pataphysics is the science of imaginary solutions.<br>
+        Pataphysics is the science of the particular.<br>
+        Pataphysics is the science of the laws governing exceptions and contradictions.<br>
+        Pataphysics is to metaphysics as metaphysics is to physics.<br>
+        Pataphysics describes a universe supplementary to this one.
     </blockquote>
     <blockquote>
-        Pataphysics is a science with an aesthetic sensibility (Brotchie)<br>
-        Pataphysics sets the parameters for the contemporary relationship between science and poetry (Bök)<br>
-        Pataphysics is a huge and elaborately constructed hoax (Ionesco)<br>
-        Pataphysics is the knowledge of the specific and irreducible, the opposite of physics (Daumal)<br>
-        Pataphysics is a systematic, reasoned displacement of perception and logic (David)
+        Pataphysics is a science with an aesthetic sensibility. (Brotchie)<br>
+        Pataphysics sets the parameters for the contemporary relationship between science and poetry. (Bök)<br>
+        Pataphysics is a huge and elaborately constructed hoax. (Ionesco)<br>
+        Pataphysics is the knowledge of the specific and irreducible, the opposite of physics. (Daumal)<br>
+        Pataphysics is a systematic, reasoned displacement of perception and logic. (David)
     </blockquote>
-
-    <h3><i class="fa fa-random"></i> (Mis-)Understanding Pataphysics</h3>
     <p>
-        Pataphysics is perhaps best (mis)understood by looking at some of its recurring themes, such as exceptions, syzygies, anomalies, clinamen, antinomies, contradictions, equivalents and imaginaries. These concepts can influence the ways in which we may navigate and transform the conceptual space of a given problem. We will explain the clinamen here (which would fall under Boden’s transformative creativity category) and then come back to it later when we introduce one of the algorithms we developed.
+        Pataphysics is perhaps best (mis)understood by looking at some of its recurring themes, such as <strong>exceptions, syzygies, anomalies, clinamen, antinomies, contradictions, equivalents and imaginaries</strong>.
     </p>
+    <a id="clinamen"><h4>Clinamen</h4></a>
     <p>
-        The term clinamen was first coined by Lucretius when he needed to name the aleatory swerve of atoms in their descent described by Epicurus. Approximately two millennia later, Alfred Jarry resurrected this obscured concept as a key principle of pataphysics.  Its influences can be found in the Situationists’ détournement, the Dadaists’ ready-mades and Oulipo’s verbal games, and so on. Lucretius had already linked the indeterministic property of the clinamen to free will and the Oulipo interprets it as a chance to escape certain restrictions given that any initial constraint are still followed (just as the atoms don’t randomly start to ascend but they swerve). Experimental poet Christian Bök has called the clinamen the smallest possible aberration that can make the greatest possible difference.
-    </p>
-    <p>
-        The Oulipo, which started as a subcommittee of the French college of pataphysics, has been studying constraints as tools for creativity since 1960. While they do a lot of work in literature, other groups have emerged that consider music, art, mathematics, cooking, etc. Oulipo scholar Warren Motte has collated a convenient list of elementary linguistic and literary operations that could prove very useful in computational implementations of the clinamen, namely displacement, substitution, addition, subtraction, multiplication, division, deduction and contradiction. Applying these operations to linguistic objects such as letters, phonemes, syllables or words results in phenomena like anagrams, cryptograms, lipograms, tautograms, spoonerisms, acronyms, rhymes, etc.
+        The term clinamen was first coined by Lucretius when he needed to name the aleatory swerve of atoms in their descent described by Epicurus. Approximately two millennia later, Alfred Jarry resurrected this obscured concept as a key principle of pataphysics.  Its influences can be found in the Situationists’ détournement, the Dadaists’ ready-mades and Oulipo’s verbal games, and so on. Lucretius had already linked the indeterministic property of the clinamen to free will and the Oulipo interprets it as a chance to escape certain restrictions given that any initial constraint are still followed (just as the atoms don’t randomly start to ascend but they swerve). Experimental poet Christian Bök has called the clinamen the smallest possible aberration that can make the greatest possible difference. 
     </p>
     <p>
         One good example of a clinamen in action is Jarry’s merdre (the very first word in his Ubu play). He squeezed an extra ‘r’ into the French word ‘merde’ (meaning shit) and translates into something like ‘pshit’. By rendering a useful (if rude) word useless in this way, he introduced a pataphysical sense of creativity that persists: the word still exerts a fascination today.
     </p>
+    <a id="syzygy"><h4>Syzygy</h4></a>
+    <p>
+        A syzygy both surprises and confuses. The concept originally comes from the field of astronomy where it denotes the alignment of three celestial bodies. In a pataphysical context it usually describes a conjunction of things, something unexpected and surprising. Unlike serendipity, a simple chance encounter, the syzygy has a more scientific purpose. A typical instance is the pun, which Jarry called the syzygy of words. Next to being intentionally funny, puns demonstrate a clever use (or abuse) of grammar, syntax, pronunciation and/or semantics, often taken to a quite scientific level, such that without understanding of what is said and what the intended meaning is, the humour of the pun might be lost.
+    </p>
+    <a id="antinomy"><h4>Antinomy</h4></a>
+    <p>
+        The antinomy, in a pataphysical sense, is the mutually incompatible or paradox. Mutually contradictory opposites can and do co-exist in the pataphysical universe.
+    </p>
+    <a id="jarry"><h4>Alfred Jarry</h4></a>
+    <p>
+        Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic. 
+    </p>    
+    <br>
 
-    <h2><i class="fa fa-wrench"></i> Technical details and <strong>source</strong></h2>
+    <a id="technical"><h2>Technical <strong>details</strong></h2></a>
+    <p>
+        In short, the tool reads in the text of Jarry’s book, splits it into individual words and stores them in a list together with the location of where they appear, the so-called index. Searching for a word then triggers the patalgorithms. Each algorithm pataphysicalises the original search term in its own way and looks for matches in the index. Instead of returning a list of single words, a list of partial sentences is returned to provide a little bit more context. Note that ranking is not part of the process as giving priorities to one result over another could be considered quite unpataphysical.
+    </p>
+    <a id="source"><h4>Source Code</h4></a>
     <p>
         The code is (currently NOT) available on my <a href="https://github.com/Fania" target="_blank"> Github</a>.
     </p>
+    <a id="dependencies"><h4>List of dependencies</h4></a>
     <ul>
         <li><a href="http://www.python.org/" target="_blank">Python 2.7.3</a></li>
         <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank">Virtualenv 1.11.6</a></li>
@@ -51,20 +88,19 @@
         <li><a href="https://pypi.python.org/pypi/microsofttranslator/0.6" target="_blank">Microsofttranslator 0.6</a></li>
         <li>And all relevant dependencies.</li>
     </ul>
-
-    <h2><i class="fa fa-bug"></i> Known Issues & <strong>Bugs</strong></h2>
+    <a id="issues"><h4>Known Issues & <strong>Bugs</strong></h4></a>
     <ul>
         <li>Some of the algorithms don't work when run on a mac.</li>
-        <li></li>
+        <li>There are unicode errors sometimes.</li>
     </ul>
+    <br>
 
-
-    <h2><i class="fa fa-lightbulb-o"></i> What's the point of this <strong>exactly?</strong></h2>
+    <a id="confused"><h2>Confused <strong>still?</strong></h2></a>
     <p>
         <i>To understand this project is to not understand this project.</i>
     </p>
 
-    <h3><i class="fa fa-graduation-cap"></i> Why oh why?</h3>
+    <a id="why"><h4>Why oh why...?</h4></a>
     <p>
         The prototype described and shown on this site is part of my PhD project:<br>
         <strong>‘A pataphysical methodology for applying creativity to exploratory search.’</strong>
@@ -73,21 +109,22 @@
         My research involves studying human and computer creativity and how they are evaluated, the absurd pseudo philosophy pataphysics and its applications, and the development of creative exploratory search algorithms inspired by pataphysical concepts.
     </p>
     <p>
-        <i class="fa fa-university"></i> Part of this research has been described in a journal <a href="http://www.tandfonline.com/doi/full/10.1080/14626268.2013.813377#.U6li4_ldV8E" target="_blank">article in Digital Creativity</a> in 2013, and I presented a paper at the <a href="http://cc13.creativityandcognition.com/" target="_blank">Creativity & Cognition conference 2013</a> in Sydney.
+        Part of this research has been described in a journal <a href="http://www.tandfonline.com/doi/full/10.1080/14626268.2013.813377#.U6li4_ldV8E" target="_blank">article in Digital Creativity</a> in 2013, and I presented a paper at the <a href="http://cc13.creativityandcognition.com/" target="_blank">Creativity & Cognition conference 2013</a> in Sydney.
     </p>
     <p>
-        There is a talk about <a href="https://www.youtube.com/watch?v=UxYUZMyPE0o"target="_blank">'The Pataphysics of the Future'</a> given at the TDC at DMU in 2013 on youtube.
+        There is a talk about <a href="https://www.youtube.com/watch?v=UxYUZMyPE0o"target="_blank">'The Pataphysics of the Future'</a> given at the TDC at DMU in 2013 on Youtube.
     </p>
     <p>
         This prototype was used in the creation of an online opera entitled <a href="http://andrewhugill.com/theimaginaryvoyage/" target="_blank">'The Imaginary Voyage'</a> and created in collaboration with The Opera Group, an award-winning, nationally and internationally renowned opera company. In particular, it was used to create the libretto for one of the virtual islands whose navigation provides the central storyline for the opera. This nicely demonstrates the paradox of “uselessness” as a concept, since our purposely useless search tool has been quite useful here.
     </p>
+    <br>
 
-    <h3><i class="fa fa-envelope"></i> About me & Contact</h3>
+    <a id="contact"><h2><strong>About me</strong> & Contact</h2></a>
     <p>
-        My personal webhome is <a href="http://fania.uk" target="_blank">fania.uk</a>. You can email me <a href="mailto:me@fania.eu?Subject=PataSearch">here</a>.
+        My personal website is <a href="http://fania.uk" target="_blank">fania.uk</a>. You can email me <a href="mailto:me@fania.eu?Subject=PataSearch">here</a>.
     </p>
     <p>
-        <i class="fa fa-group"></i> This project is supervised by Prof. <strong>Hongji Yang</strong>, Prof. <strong>Andrew Hugill</strong> and Prof. <strong>Jim Hendler</strong>.
+        This project is supervised by Prof. <strong>Hongji Yang</strong>, Prof. <strong>Andrew Hugill</strong> and Prof. <strong>Jim Hendler</strong>.
     </p>
-
+    <br>
 {% endblock %}

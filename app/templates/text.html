@@ -2,13 +2,10 @@
 
 {% block content %}
 <header>
-    <h2><i class="fa fa-book"></i> ...And what does this have to do with <strong>Text</strong> Search?</h2>
+    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch</h2>
 </header>
 <p>
-    For the sake of simplicity we limited the system to the text of Alfred Jarry’s <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> (and not the World Wide Web) and only the main functionality of one of its algorithms is discussed here. In short, the tool reads in the text of Jarry’s book, splits it into individual words and stores them in a list together with the location of where they appear, the so-called index. Searching for a word then triggers the patalgorithms. Each algorithm pataphysicalises the original search term in its own way and looks for matches in the index. Instead of returning a list of single words, a list of partial sentences is returned to provide a little bit more context. Note that ranking is not part of the process as giving priorities to one result over another could be considered quite unpataphysical.
-</p>
-<p>
-    I will add other sources in the future. Shakespeare, random texts, etc to come.
+    For the sake of simplicity we limited the corpus of this system to the text of Alfred Jarry’s <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> (and not the World Wide Web). I will add other sources in the future. Shakespeare, random texts, etc to come.
 </p>
 
 <div class="search_form">
@@ -18,7 +15,7 @@
     </form>
 </div>
 
-<h3><i class="fa fa-info-circle"></i> How to use</h3>
+<h3>How to use</h3>
 <p>Text search is currently only supported for single words only.</p>
 
 <h4>Search suggestions:</h4>
