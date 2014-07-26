@@ -1,3 +1,4 @@
+from __future__ import print_function
 from flask import url_for
 from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
@@ -6,6 +7,7 @@ import nltk
 import codecs
 import sys
 import warnings
+
 #import unicodedata as ud
 
 #print sys.getdefaultencoding()
@@ -64,47 +66,44 @@ faustroll = nltk.Text(troll)
 #faustroll = text
 
 path_e = corpus_root + '/english'
-#print 'path_e ', path_e
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 stopwords_doc.close()
-#sw = stopwords.words('english')
-# faustroll_dict = sorted(set([w.lower() for w in faustroll]))
 faustroll_dict = sorted(set([w for w in faustroll]))
-# froll_dict = [w.lower() for w in faustroll_dict if w.isalpha() and w.lower() not in sw]
 froll_dict = [w for w in faustroll_dict if w.isalpha() not in sw]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
+
+
+def warning(*objs):
+    print("WARNING: ", *objs, file=sys.stderr)
 
 
 def syzygy(word):
     out = set()
     wordsets = wn.synsets(word)  # returns a list of synsets
-    for w in wordsets:
+    for w in wordsets:  # w is a synset
         # Hyponyms share a type-of relationship with their hypernym
-        #print 'w', w
         hypo = w.hyponyms()  # returns a list of synsets
-        for h in hypo:  # for every synset h
-            #print 'h', h
-            for l in h.lemmas:
-                #print 'l', l
-                if l.name in froll_dict:
-                    out.add(l.name)
-                    #print 'added hypo'
+        if len(hypo) > 0:
+            for h in hypo:  # h is a synset
+                for l in h.lemmas():  # l is a lemma
+                    if str(l.name()) in froll_dict:
+                        out.add(str(l.name()))
         # Hyponyms share a type-of relationship with their hypernym
         hyper = w.hypernyms()
-        for h in hyper:
-            for l in h.lemmas:
-                if l.name in froll_dict:
-                    out.add(l.name)
-                    #print 'added hyper'
+        if len(hyper) > 0:
+            for h in hyper:
+                for l in h.lemmas():
+                    if str(l.name()) in froll_dict:
+                        out.add(str(l.name()))
         # 'X' is a holonym of 'Y' if Ys are parts of Xs, or
         # 'X' is a holonym of 'Y' if Ys are members of Xs.
         holo = w.member_holonyms()
-        for h in holo:
-            for l in h.lemmas:
-                if l.name in froll_dict:
-                    out.add(l.name)
-                    #print 'added holo'
+        if len(holo) > 0:
+            for h in holo:
+                for l in h.lemmas():
+                    if str(l.name()) in froll_dict:
+                        out.add(str(l.name()))
     return out
 
 
@@ -112,15 +111,15 @@ def antinomy(word):
     out = set()
     wordsets = wn.synsets(word)
     for w in wordsets:
-        anti = w.lemmas[0].antonyms()
-        for a in anti:
-            if a.name != word:
-                out.add(a.name)
+        anti = w.lemmas()[0].antonyms()
+        if len(anti) > 0:
+            for a in anti:
+                if str(a.name()) != word:
+                    out.add(str(a.name()))
     return out
 
 
 def find_sentence(word):
-    #print faustroll.index('Anna')
     out = []
     if faustroll.count(word) > 0:
         # indices = [i for i, x in enumerate(faustroll) if x == word]
@@ -161,8 +160,6 @@ def clinamen(word, i):
     return out
 
 
-# NLP Course - Coursera 2012
-# Dan Jurafsky and Chris Manning
 # Taken from http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
 # MIT license.
 def dameraulevenshtein(seq1, seq2):

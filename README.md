@@ -6,9 +6,16 @@ Fania Raczinski + De Montfort University + 2014
 ### HOW TO
 
 - Activate ```workon newpatav```
-- Deactivate ```deactivate```
 - Start project ```python run.py```
 - Stop project ```Ctrl + c```
+- Deactivate ```deactivate```
+
+
+### WORDNET ERRORS FIX FOR MACS
+
+for l in h.lemmas():
+str(l.name())
+w.lemmas()[0].antonyms()
 
 
 ### LIBRARIES

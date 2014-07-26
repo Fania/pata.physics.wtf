@@ -4,7 +4,7 @@
 - remove get methods if unused
 - make responsive
 - read through text and change
-- text syzygy not working on mac
+- text syzygy working on mac - CHECK if ok on PC
 - clean css
 - add more blue colour
 - start message?
