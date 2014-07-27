@@ -7,5 +7,5 @@ flickrapi==1.4.4
 gdata==2.0.18
 itsdangerous==0.24
 microsofttranslator==0.6
-nltk==2.0.4
+nltk==3.0.0b1
 requests==2.3.0

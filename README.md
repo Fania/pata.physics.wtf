@@ -18,6 +18,8 @@ str(l.name())
 w.lemmas()[0].antonyms()
 
 
+pip install -Iv https://pypi.python.org/packages/source/n/nltk/nltk-3.0.0b1.tar.gz#md5=f3f67fcda9bc76f57d91811a572c36e4
+
 ### LIBRARIES
 
 Python 2.7.3
@@ -30,6 +32,9 @@ Virtualenv
 - Get requirements ```pip freeze > requirements.txt```
 - Install from reqs ```pip install -r requirements.txt```
 
+
+WINDOWS
+
 Flask==0.10.1
 Jinja2==2.7.3
 MarkupSafe==0.23
@@ -40,3 +45,6 @@ gdata==2.0.18
 itsdangerous==0.24
 microsofttranslator==0.6
 nltk==2.0.4
+requests==2.3.0
+
+MAC
