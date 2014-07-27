@@ -633,7 +633,9 @@ a.spimg, a.spimg:hover { border: 0; }
 .is-post
 {
 	padding: 10px 0;
-	/*max-width: 700px;*/
+	max-width: 900px;
+	/*text-align: center;*/
+	margin: 0 auto;
 }
 
 .is-feature
@@ -893,8 +895,10 @@ a.spimg, a.spimg:hover { border: 0; }
     position: relative;
     left: -35px;
 }
-#subnav li:hover ul { /* Display the dropdown on hover */
+/* Display the dropdown on hover */
+#subnav li:hover ul {
     left: 0;
+    z-index: 900;
 }
 #subnav li:hover ul li a:hover {
     text-decoration: underline;
@@ -976,10 +980,6 @@ ul.bodylist {
 	list-style: none;
 	margin: 0 !important;
 }
-
-/*********************************************************************************/
-/* NO SCRIPT                                                                     */
-/*********************************************************************************/
 
 /* Box Model */
 
@@ -1122,3 +1122,24 @@ ul.bodylist {
 				margin-left: -100px;
 			}
 
+@media screen and (max-width: 600px) {
+
+#nav {
+	padding: 10px 0;
+}
+#nav li {
+	padding-right: 10px;
+}
+#nav > ul > li > a:before {
+	margin-right: 0.25em;
+}
+#nav > ul > li > a > span {
+	display: none;
+}
+#header a h1 {
+	font-size: 1.4em;
+}
+#subnav {
+    display: none;
+}
+}
