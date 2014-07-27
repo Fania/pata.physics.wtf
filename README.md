@@ -42,3 +42,8 @@ Fania Raczinski + De Montfort University + 2014
 - nltk==3.0.0b1
 - requests==2.3.0
 - wsgiref==0.1.2
+
+## HEROKU
+
+heroku toolbelt 3.9.6
+```heroku update````
