@@ -779,8 +779,7 @@ a.spimg, a.spimg:hover { border: 0; }
 /* Nav                                                                           */
 /*********************************************************************************/
 
-#nav
-{
+#nav {
 	cursor: default;
 	padding: 20px 0;
 	/*position: fixed;*/
@@ -793,83 +792,59 @@ a.spimg, a.spimg:hover { border: 0; }
 	/*padding: 0 40px;*/
 	/*border-bottom: dotted 1px #f0f0f0;*/
 }
-
-#nav ul
-{
+#nav ul {
 	/*background: white;*/
 	padding: 0;
 	margin: 0;
 }
+#nav li {
+	list-style: none;
+	display: inline-block;
+	padding-right: 20px;
+}
+#nav > ul > li > a {
+	border: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #777;
+	outline: 0;
+	background: white;
+}
+#nav > ul > li > a:before {
+	display: inline-block;
+	background: #878787;
+	color: #e4e4e4;
+	width: 1.65em;
+	height: 1.65em;
+	border-radius: 1.65em;
+	line-height: 1.65em;
+	text-align: center;
+	box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
+	margin-right: 0.75em;
+	-moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+	-o-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+	-ms-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+}
 
+#nav > ul > li > a > span {
+	-moz-transition: color 0.25s ease-in-out;
+	-webkit-transition: color 0.25s ease-in-out;
+	-o-transition: color 0.25s ease-in-out;
+	-ms-transition: color 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out;
+}
 
-	#nav li
-	{
-		list-style: none;
-		display: inline-block;
-		padding-right: 20px;
-	}
-	
-		#nav > ul > li > a
-		{
-			border: 0;
-			text-decoration: none;
-			text-transform: uppercase;
-			font-weight: 400;
-			color: #777;
-			outline: 0;
-			background: white;
-		}
+#nav > ul > li.active > a:before, #nav > ul > li:hover > a:before {
+	background: #576c93;
+	color: #fff;
+}
 
-			#nav > ul > li > a:before
-			{
-				display: inline-block;
-				background: #878787;
-				color: #e4e4e4;
-				width: 1.65em;
-				height: 1.65em;
-				border-radius: 1.65em;
-				line-height: 1.65em;
-				text-align: center;
-				box-shadow: 0.125em 0.175em 0 0 rgba(0,0,0,0.125);
-				margin-right: 0.75em;
-				-moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
-				-webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
-				-o-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
-				-ms-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
-				transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
-			}
-	
-			#nav > ul > li > a > span
-			{
-				-moz-transition: color 0.25s ease-in-out;
-				-webkit-transition: color 0.25s ease-in-out;
-				-o-transition: color 0.25s ease-in-out;
-				-ms-transition: color 0.25s ease-in-out;
-				transition: color 0.25s ease-in-out;
-			}
-
-		#nav > ul > li.active,
-		#nav > ul > li:hover
-		{
-		}
-
-			#nav > ul > li.active > a,
-			#nav > ul > li:hover > a
-			{
-			}
-
-				#nav > ul > li.active > a:before,
-				#nav > ul > li:hover > a:before
-				{
-					background: #576c93;
-					color: #fff;
-				}
-		
-				#nav > ul > li.active > a > span,
-				#nav > ul > li:hover > a > span
-				{
-					color: #576c93;
-				}
+#nav > ul > li.active > a > span, #nav > ul > li:hover > a > span {
+	color: #576c93;
+}
 
 
 /*------------------------------------*\
@@ -923,6 +898,10 @@ a.spimg, a.spimg:hover { border: 0; }
 }
 #subnav li:hover ul li a:hover {
     text-decoration: underline;
+}
+
+ul.bodylist {
+	font-family: 'Arvo', serif;
 }
 
 
