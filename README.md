@@ -10,6 +10,13 @@ Fania Raczinski + De Montfort University + 2014
 - Stop project ```Ctrl + c```
 - Deactivate ```deactivate```
 
+
+## IOCT SERVER
+- mnemosyne.ioct.dmu.ac.uk
+- username fraczinski
+- password Green+99
+
+
 ## REQUIREMENTS
 
 - Get requirements ```pip freeze > requirements.txt```
