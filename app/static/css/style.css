@@ -837,6 +837,7 @@ a.spimg, a.spimg:hover { border: 0; }
 	-o-transition: color 0.25s ease-in-out;
 	-ms-transition: color 0.25s ease-in-out;
 	transition: color 0.25s ease-in-out;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #nav > ul > li.active > a:before, #nav > ul > li:hover > a:before {
@@ -858,6 +859,7 @@ a.spimg, a.spimg:hover { border: 0; }
     float: left; /* Clear floats */
     width: 100%;
     border-bottom: 2px solid lightgray;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 #subnav li {
 	display: inline-block;
