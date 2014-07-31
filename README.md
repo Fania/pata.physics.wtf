@@ -15,6 +15,21 @@ Fania Raczinski + De Montfort University + 2014
 - mnemosyne.ioct.dmu.ac.uk
 - username fraczinski
 - password Green+99
+- config: /etc/apache2/sites/0003_146.227.57.110_80_mnemosyne.ioct.dmu.ac.uk.conf
+
+http://mnemosyne.ioct.dmu.ac.uk/fania/
+/Library/WebServer/share/pata/fania/index.html
+
+
+
+http://mnemosyne.ioct.dmu.ac.uk/
+/Library/WebServer/share/pata/
+
+start screen: ```screen```
+reconnect: ```screen -R```
+detach:	```ctrl+a d``
+list screens: ```screen -list```
+
 
 
 ## REQUIREMENTS

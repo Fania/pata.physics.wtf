@@ -1,6 +1,8 @@
 from flask import Flask
-import random, os, unicodedata, codecs
-
+import random
+import os
+import unicodedata
+import codecs
 
 app = Flask(__name__)
 

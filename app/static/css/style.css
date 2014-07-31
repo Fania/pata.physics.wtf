@@ -226,6 +226,8 @@ h1,h2,h3,h4,h5,h6
 #spiral {
 	margin-top: 0.5em;
 	margin-bottom: 1.5em;
+	width: 90px;
+	height: 90px;
 }
 
 #spiral:hover {
@@ -1143,5 +1145,8 @@ ul.bodylist {
 }
 #subnav {
     display: none;
+}
+input.search_area {
+	width: 240px;
 }
 }
