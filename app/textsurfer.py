@@ -69,8 +69,8 @@ path_e = corpus_root + '/english'
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 stopwords_doc.close()
-faustroll_dict = sorted(set([w for w in faustroll]))
-froll_dict = [w for w in faustroll_dict if w.isalpha() not in sw]
+faustroll_dict = sorted(set([w.lower() for w in faustroll]))
+froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in sw]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
 
 
@@ -105,13 +105,24 @@ for m in modals:
 print('\n')
 print('------------------------\n')
 print('faustroll_dict:')
-print(faustroll_dict)
+print(faustroll_dict[1:100])
 print('------------------------\n')
 print('froll_dict:')
-print(froll_dict)
+print(froll_dict[1:100])
 print('------------------------\n')
 print('sw:')
 print(sw)
+print('------------------------\n')
+
+
+import itertools
+fdist_most_common = fdist.most_common()
+# print(fdist_most_common)
+
+list_most_common = list(itertools.chain(*(sorted(ys) for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
+
+print(list_most_common[1:100])
+print('------------------------\n')
 
 
 
@@ -149,6 +160,36 @@ def syzygy(word):
                         out.add(str(l.name()))
     return out
 
+print('SYZYGY')
+synwords = wn.synsets('clear')
+print('synsets:')
+print(synwords)
+for w in synwords:
+    print('synset item:' + str(w.name()))
+    hypo = w.hyponyms()
+    if len(hypo) > 0:
+        for h in hypo:
+            for l in h.lemmas():
+                print('hyponym out:' + str(l.name()))
+                if str(l.name()) in froll_dict:
+                    print('hyponym in:' + str(l.name()))
+    hyper = w.hypernyms()
+    if len(hyper) > 0:
+        for h in hyper:
+            for l in h.lemmas():
+                print('hypernym out:' + str(l.name()))
+                if str(l.name()) in froll_dict:
+                    print('hypernym in:' + str(l.name()))
+    holo = w.member_holonyms()
+    print(holo)
+    if len(holo) > 0:
+        for h in holo:
+            for l in h.lemmas():
+                print('holonym out:' + str(l.name()))
+                if str(l.name()) in froll_dict:
+                    print('holonym in:' + str(l.name()))
+
+
 
 def antinomy(word):
     out = set()
@@ -160,6 +201,21 @@ def antinomy(word):
                 if str(a.name()) != word:
                     out.add(str(a.name()))
     return out
+
+
+print('ANTINOMY')
+antwords = wn.synsets('clear')
+print('synsets:')
+print(antwords)
+for w in antwords:
+    print('synset item:' + str(w.name()))
+    anti = w.lemmas()[0].antonyms()
+    if len(anti) > 0:
+        for a in anti:
+            print('antonym out:' + str(a.name()))
+            if str(a.name()) != 'clear':
+                print('antonym in:' + str(a.name()))
+
 
 
 def find_sentence(word):
@@ -264,6 +320,6 @@ def dameraulevenshtein(seq1, seq2):
 #sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 #stopwords_doc.close()
 
-#def get_concordances(word):
-#    return faustroll.concordance(word)
-#print get_concordances('skiff')
+def get_concordances(word):
+   return faustroll.concordance(word)
+print(get_concordances('skiff'))
