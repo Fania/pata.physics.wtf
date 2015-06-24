@@ -74,6 +74,49 @@ froll_dict = [w for w in faustroll_dict if w.isalpha() not in sw]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
 
 
+print('book_list:')
+print(book_list)
+print(book_list.fileids())
+print('------------------------\n')
+print('troll:')
+print(troll)
+print(book_list.sents('faustroll.txt')[1:10])
+print('------------------------\n')
+print('faustroll:')
+print(faustroll)
+print('\n')
+print('faustroll.collocations:')
+print(faustroll.collocations())
+print('\n')
+print('faustroll.concordance.Faustroll:')
+print(faustroll.concordance('Faustroll'))
+print('\n')
+print('faustroll.count.he:')
+print(faustroll.count('he'))
+print('\n')
+# print(faustroll.dispersion_plot(['I','Faustroll','He He']))
+print('faustroll.vocab:')
+print(faustroll.vocab())
+print('faustroll.fdist.Faustroll:')
+fdist = nltk.FreqDist(faustroll)
+modals = ['Faustroll', 'speak', 'year', 'skiff', 'FAUSTROLL']
+for m in modals:
+    print(m + ':',fdist[m], end=' ')
+print('\n')
+print('------------------------\n')
+print('faustroll_dict:')
+print(faustroll_dict)
+print('------------------------\n')
+print('froll_dict:')
+print(froll_dict)
+print('------------------------\n')
+print('sw:')
+print(sw)
+
+
+
+
+
 def warning(*objs):
     print("WARNING: ", *objs, file=sys.stderr)
 
