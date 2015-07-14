@@ -38,31 +38,22 @@ faustroll = nltk.Text(troll)
 ############################################################
 
 ############################################################
-# UNICODE TESTS
-# bloy = book_list.words('04.bloy_french.txt')
-# bloyfrench = nltk.Text(bloy)
-# print('bloyfrench:')
-# print(bloyfrench[0:100])
-# print('++++++++++++++++++++')
-
-# for ct in book_list:
-#     print('ID: ' ++ ct.fileids())
-#     print(book_list.words(ct)[0:10])
 
 for ct in book_list.fileids():
-    print('ID: ')
-    print(ct)
+    print('ID:', ct)
     print(' '.join(book_list.words(ct)[0:10]))
+    # num_chars = len(book_list.raw(ct))
+    # print('num_chars', num_chars)
+    # num_words = len(book_list.words(ct))
+    # print('num_words', num_words)
+    # # print(book_list.sents(ct)[0:5])
+    # # num_sents1 = len(book_list.sents(ct))
+    # # print('num_sents1', num_sents1)
+    # num_vocab = len(set(w.lower() for w in book_list.words(ct)))
+    # print('num_vocab', num_vocab)
+    # print(round(num_chars/num_words), round(num_words/num_vocab))
 
 
-# Fania's Non-NLTK way to import txt file
-# path_b = os.path.join(root_path, 'corpus/04.bloy_french.txt')
-# bloy_text = open(path_b, "r")
-# bloytext = [i.lower() for line in bloy_text.readlines() for i in line.split()]
-# print('bloytext:')
-# print(bloytext[0:100])
-# bloy_text.close()
-#
 # bloycode = [i.encode('utf-8') for i in bloytext]
 # bloy1 = bloycode
 # print('++++++++++++++++++++')
@@ -78,13 +69,49 @@ for ct in book_list.fileids():
 #faustroll_text.close()
 #faustroll = text
 
+from nltk.corpus import stopwords
+en_stop = stopwords.words('english')
+fr_stop = stopwords.words('french')
+de_stop = stopwords.words('german')
+# print(en_stop)
+# print(de_stop)
+# print(fr_stop)
+
 path_e = corpus_root + '/english'
 stopwords_doc = open(path_e, "r")
 sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 stopwords_doc.close()
+# print(sw)
 faustroll_dict = sorted(set([w.lower() for w in faustroll]))
 froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in sw]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
+
+
+word_freq1 = nltk.FreqDist(faustroll)
+print(word_freq1['Faustroll'])
+print(word_freq1.pprint())
+
+
+
+#
+# for fileid in book_list.fileids():
+#     num_chars = len(book_list.raw(fileid))
+#     num_words = len(book_list.words(fileid))
+#     num_sents1 = len(book_list.sents(fileid))
+#     num_vocab = len(set(w.lower() for w in book_list.words(fileid)))
+#     print(round(num_chars/num_words), round(num_words/num_sents1), round(num_words/num_vocab), fileid)
+    # print(round(num_chars/num_words))
+    # print(round(num_words/num_sents1))
+    # print(round(num_words/num_vocab))
+    # print(fileid)
+
+
+
+
+
+
+
+
 
 
 # print('book_list:')
