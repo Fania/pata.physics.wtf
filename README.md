@@ -1,7 +1,7 @@
 
 # Web Collider
 
-Fania Raczinski + De Montfort University + 2014
+Fania Raczinski + De Montfort University + 2015
 
 ## HOW TO
 
