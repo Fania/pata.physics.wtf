@@ -39,22 +39,35 @@ faustroll = nltk.Text(troll)
 
 ############################################################
 # UNICODE TESTS
-#bloy = book_list.words('04.bloy_french.txt')
-#bloyfrench = nltk.Text(bloy)
-#print bloyfrench[0:300]
+# bloy = book_list.words('04.bloy_french.txt')
+# bloyfrench = nltk.Text(bloy)
+# print('bloyfrench:')
+# print(bloyfrench[0:100])
+# print('++++++++++++++++++++')
+
+# for ct in book_list:
+#     print('ID: ' ++ ct.fileids())
+#     print(book_list.words(ct)[0:10])
+
+for ct in book_list.fileids():
+    print('ID: ')
+    print(ct)
+    print(' '.join(book_list.words(ct)[0:10]))
 
 
 # Fania's Non-NLTK way to import txt file
-#path_b = os.path.join(root_path, 'corpus/04.bloy_french.txt')
-#bloy_text = open(path_b, "r")
-#bloytext = [i.lower() for line in bloy_text.readlines() for i in line.split()]
-#print bloytext[0:100]
-#bloy_text.close()
+# path_b = os.path.join(root_path, 'corpus/04.bloy_french.txt')
+# bloy_text = open(path_b, "r")
+# bloytext = [i.lower() for line in bloy_text.readlines() for i in line.split()]
+# print('bloytext:')
+# print(bloytext[0:100])
+# bloy_text.close()
 #
-#bloycode = [i.encode('utf-8') for i in bloytext]
-#bloy1 = bloycode
-#print '++++++++++++++++++++'
-#print bloy1[0:100]
+# bloycode = [i.encode('utf-8') for i in bloytext]
+# bloy1 = bloycode
+# print('++++++++++++++++++++')
+# print('bloy1:')
+# print(bloy1[0:100])
 
 # UNICODE TESTS
 
@@ -74,55 +87,55 @@ froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in sw]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
 
 
-print('book_list:')
-print(book_list)
-print(book_list.fileids())
-print('------------------------\n')
-print('troll:')
-print(troll)
-print(book_list.sents('faustroll.txt')[1:10])
-print('------------------------\n')
-print('faustroll:')
-print(faustroll)
-print('\n')
-print('faustroll.collocations:')
-print(faustroll.collocations())
-print('\n')
-print('faustroll.concordance.Faustroll:')
-print(faustroll.concordance('Faustroll'))
-print('\n')
-print('faustroll.count.he:')
-print(faustroll.count('he'))
-print('\n')
-# print(faustroll.dispersion_plot(['I','Faustroll','He He']))
-print('faustroll.vocab:')
-print(faustroll.vocab())
-print('faustroll.fdist.Faustroll:')
-fdist = nltk.FreqDist(faustroll)
-modals = ['Faustroll', 'speak', 'year', 'skiff', 'FAUSTROLL']
-for m in modals:
-    print(m + ':',fdist[m], end=' ')
-print('\n')
-print('------------------------\n')
-print('faustroll_dict:')
-print(faustroll_dict[1:100])
-print('------------------------\n')
-print('froll_dict:')
-print(froll_dict[1:100])
-print('------------------------\n')
-print('sw:')
-print(sw)
-print('------------------------\n')
+# print('book_list:')
+# print(book_list)
+# print(book_list.fileids())
+# print('------------------------\n')
+# print('troll:')
+# print(troll)
+# print(book_list.sents('faustroll.txt')[1:10])
+# print('------------------------\n')
+# print('faustroll:')
+# print(faustroll)
+# print('\n')
+# print('faustroll.collocations:')
+# print(faustroll.collocations())
+# print('\n')
+# print('faustroll.concordance.Faustroll:')
+# print(faustroll.concordance('Faustroll'))
+# print('\n')
+# print('faustroll.count.he:')
+# print(faustroll.count('he'))
+# print('\n')
+# # print(faustroll.dispersion_plot(['I','Faustroll','He He']))
+# print('faustroll.vocab:')
+# print(faustroll.vocab())
+# print('faustroll.fdist.Faustroll:')
+# fdist = nltk.FreqDist(faustroll)
+# modals = ['Faustroll', 'speak', 'year', 'skiff', 'FAUSTROLL']
+# for m in modals:
+#     print(m + ':',fdist[m], end=' ')
+# print('\n')
+# print('------------------------\n')
+# print('faustroll_dict:')
+# print(faustroll_dict[1:100])
+# print('------------------------\n')
+# print('froll_dict:')
+# print(froll_dict[1:100])
+# print('------------------------\n')
+# print('sw:')
+# print(sw)
+# print('------------------------\n')
 
 
-import itertools
-fdist_most_common = fdist.most_common()
-# print(fdist_most_common)
-
-list_most_common = list(itertools.chain(*(sorted(ys) for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
-
-print(list_most_common[1:100])
-print('------------------------\n')
+# import itertools
+# fdist_most_common = fdist.most_common()
+# # print(fdist_most_common)
+#
+# list_most_common = list(itertools.chain(*(sorted(ys) for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
+#
+# print(list_most_common[1:100])
+# print('------------------------\n')
 
 
 
@@ -160,35 +173,35 @@ def syzygy(word):
                         out.add(str(l.name()))
     return out
 
-print('SYZYGY')
-synwords = wn.synsets('clear')
-print('synsets:')
-print(synwords)
-for w in synwords:
-    print('synset item:' + str(w.name()))
-    hypo = w.hyponyms()
-    if len(hypo) > 0:
-        for h in hypo:
-            for l in h.lemmas():
-                print('hyponym out:' + str(l.name()))
-                if str(l.name()) in froll_dict:
-                    print('hyponym in:' + str(l.name()))
-    hyper = w.hypernyms()
-    if len(hyper) > 0:
-        for h in hyper:
-            for l in h.lemmas():
-                print('hypernym out:' + str(l.name()))
-                if str(l.name()) in froll_dict:
-                    print('hypernym in:' + str(l.name()))
-    holo = w.member_holonyms()
-    print(holo)
-    if len(holo) > 0:
-        for h in holo:
-            for l in h.lemmas():
-                print('holonym out:' + str(l.name()))
-                if str(l.name()) in froll_dict:
-                    print('holonym in:' + str(l.name()))
-
+# print('SYZYGY')
+# synwords = wn.synsets('clear')
+# print('synsets:')
+# print(synwords)
+# for w in synwords:
+#     # print('synset item:' + str(w.name()))
+#     hypo = w.hyponyms()
+#     if len(hypo) > 0:
+#         for h in hypo:
+#             for l in h.lemmas():
+#                 # print('hyponym out:' + str(l.name()))
+#                 if str(l.name()) in froll_dict:
+#                     # print('hyponym in:' + str(l.name()))
+#     hyper = w.hypernyms()
+#     if len(hyper) > 0:
+#         for h in hyper:
+#             for l in h.lemmas():
+#                 # print('hypernym out:' + str(l.name()))
+#                 if str(l.name()) in froll_dict:
+#                     # print('hypernym in:' + str(l.name()))
+#     holo = w.member_holonyms()
+#     print(holo)
+#     if len(holo) > 0:
+#         for h in holo:
+#             for l in h.lemmas():
+#                 # print('holonym out:' + str(l.name()))
+#                 if str(l.name()) in froll_dict:
+#                     # print('holonym in:' + str(l.name()))
+#
 
 
 def antinomy(word):
@@ -203,19 +216,19 @@ def antinomy(word):
     return out
 
 
-print('ANTINOMY')
-antwords = wn.synsets('clear')
-print('synsets:')
-print(antwords)
-for w in antwords:
-    print('synset item:' + str(w.name()))
-    anti = w.lemmas()[0].antonyms()
-    if len(anti) > 0:
-        for a in anti:
-            print('antonym out:' + str(a.name()))
-            if str(a.name()) != 'clear':
-                print('antonym in:' + str(a.name()))
-
+# print('ANTINOMY')
+# antwords = wn.synsets('clear')
+# print('synsets:')
+# print(antwords)
+# for w in antwords:
+#     # print('synset item:' + str(w.name()))
+#     anti = w.lemmas()[0].antonyms()
+#     if len(anti) > 0:
+#         for a in anti:
+#             # print('antonym out:' + str(a.name()))
+#             if str(a.name()) != 'clear':
+#                 # print('antonym in:' + str(a.name()))
+#
 
 
 def find_sentence(word):
@@ -262,32 +275,6 @@ def clinamen(word, i):
 # Taken from http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
 # MIT license.
 def dameraulevenshtein(seq1, seq2):
-    """Calculate the Damerau-Levenshtein distance between sequences.
-
-    This distance is the number of additions, deletions, substitutions,
-    and transpositions needed to transform the first sequence into the
-    second. Although generally used with strings, any sequences of
-    comparable objects will work.
-
-    Transpositions are exchanges of *consecutive* characters; all other
-    operations are self-explanatory.
-
-    This implementation is O(N*M) time and O(M) space, for N and M the
-    lengths of the two sequences.
-
-    >>> dameraulevenshtein('ba', 'abc')
-    2
-    >>> dameraulevenshtein('fee', 'deed')
-    2
-
-    It works with arbitrary sequences too:
-    >>> dameraulevenshtein('abcd', ['b', 'a', 'c', 'd', 'e'])
-    2
-    """
-    # codesnippet:D0DE4716-B6E6-4161-9219-2903BF8F547F
-    # Conceptually, this is based on a len(seq1) + 1 * len(seq2) + 1 matrix.
-    # However, only the current and two previous rows are needed at once,
-    # so we only store those.
     oneago = None
     thisrow = range(1, len(seq2) + 1) + [0]
     for x in xrange(len(seq1)):
@@ -320,6 +307,6 @@ def dameraulevenshtein(seq1, seq2):
 #sw = [i for line in stopwords_doc.readlines() for i in line.split()]
 #stopwords_doc.close()
 
-def get_concordances(word):
-   return faustroll.concordance(word)
-print(get_concordances('skiff'))
+# def get_concordances(word):
+#    return faustroll.concordance(word)
+# print(get_concordances('skiff'))
