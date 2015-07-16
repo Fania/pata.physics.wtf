@@ -1,16 +1,18 @@
+
 from __future__ import print_function
-from flask import url_for
+# from flask import url_for
 from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
+from nltk.corpus import stopwords
 import os
 import nltk
-import codecs
+# import codecs
 import sys
-import warnings
+# import warnings
 
-#import unicodedata as ud
+# import unicodedata as ud
 
-#print sys.getdefaultencoding()
+# print sys.getdefaultencoding()
 # Ignore weird unicode warnings from dameraulevenshtein function
 # warnings.simplefilter('ignore')
 
@@ -21,98 +23,97 @@ import warnings
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
-#print 'root_path ', root_path
-#corpus_root = os.path.join(root_path, 'corpus')
-#root_path = root_path[:-11]
+# print 'root_path ', root_path
+# corpus_root = os.path.join(root_path, 'corpus')
+# root_path = root_path[:-11]
 root_path = root_path[:-4]
-#root_path = 'G:\Code\\newpata\\'
-#corpus_root = os.path.join(root_path, 'corpus')
+# root_path = 'G:\Code\\newpata\\'
+# corpus_root = os.path.join(root_path, 'corpus')
 corpus_root = root_path + '/app/static/corpus'
 
 # NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
-#book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
-#print book_list
-troll = book_list.words('faustroll.txt')
+# book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
+# print book_list
+troll = book_list.words('00.faustroll.txt')
 faustroll = nltk.Text(troll)
-############################################################
 
 ############################################################
+l_00 = nltk.Text(book_list.words('00.faustroll.txt'))
+l_01 = nltk.Text(book_list.words('01.poe1.txt'))
+l_01 = nltk.Text(book_list.words('01.poe2.txt'))
+l_01 = nltk.Text(book_list.words('01.poe3.txt'))
+l_01 = nltk.Text(book_list.words('01.poe4.txt'))
+l_01 = nltk.Text(book_list.words('01.poe5.txt'))
+l_02 = nltk.Text(book_list.words('02.bergerac.txt'))
+l_03 = nltk.Text(book_list.words('03.gospel.txt'))
+l_04 = nltk.Text(book_list.words('04.bloy_french.txt'))
+l_05 = nltk.Text(book_list.words('05.coleridge.txt'))
+l_06 = nltk.Text(book_list.words('06.darien_french.txt'))
+l_07 = ''
+l_08 = ''
+l_09 = ''
+l_10 = nltk.Text(book_list.words('10.arabiannights.txt'))
+l_11 = nltk.Text(book_list.words('11.grabbe_german.txt'))
+l_12 = ''
+l_13 = nltk.Text(book_list.words('13.lautreamont_french.txt'))
+l_14 = nltk.Text(book_list.words('14.maeterlinck.txt'))
+l_15 = nltk.Text(book_list.words('15.mallarme_french.txt'))
+l_16 = ''
+l_17 = nltk.Text(book_list.words('17.odyssey.txt'))
+l_18 = ''
+l_19 = nltk.Text(book_list.words('19.rabelais.txt'))
+l_20 = ''
+l_21 = ''
+l_22 = nltk.Text(book_list.words('22.rimbaud_french.txt'))
+l_23 = book_list.words('23.schwob_german.txt')
+l_24 = nltk.Text(book_list.words('24.ubu_french.txt'))
+l_25 = nltk.Text(book_list.words('25.verlaine.txt'))
+l_26 = nltk.Text(book_list.words('26.verhaeren.txt'))
+l_27 = nltk.Text(book_list.words('27.verne.txt'))
+############################################################
+en_stop = stopwords.words('english')  # print(en_stop)
+fr_stop = stopwords.words('french')  # print(fr_stop)
+de_stop = stopwords.words('german')  # print(de_stop)
+############################################################
 
-for ct in book_list.fileids():
-    print('ID:', ct)
-    print(' '.join(book_list.words(ct)[0:10]))
-    # num_chars = len(book_list.raw(ct))
-    # print('num_chars', num_chars)
-    # num_words = len(book_list.words(ct))
-    # print('num_words', num_words)
-    # # print(book_list.sents(ct)[0:5])
-    # # num_sents1 = len(book_list.sents(ct))
-    # # print('num_sents1', num_sents1)
-    # num_vocab = len(set(w.lower() for w in book_list.words(ct)))
-    # print('num_vocab', num_vocab)
-    # print(round(num_chars/num_words), round(num_words/num_vocab))
+# for ct in book_list.fileids():
+#     print('ID:', ct)
+#     print(' '.join(book_list.words(ct)[0:10]))
+#     num_chars = len(book_list.raw(ct))
+#     print('num_chars', num_chars)
+#     num_words = len(book_list.words(ct))
+#     print('num_words', num_words)
+#     # print(book_list.sents(ct)[0:5])
+#     # num_sents1 = len(book_list.sents(ct))
+#     # print('num_sents1', num_sents1)
+#     num_vocab = len(set(w.lower() for w in book_list.words(ct)))
+#     print('num_vocab', num_vocab)
+#     print(round(num_chars/num_words), round(num_words/num_vocab))
 
 
-# bloycode = [i.encode('utf-8') for i in bloytext]
-# bloy1 = bloycode
-# print('++++++++++++++++++++')
-# print('bloy1:')
-# print(bloy1[0:100])
+ll_23 = [w.lower() for w in l_23 if w.isalpha() and w.lower() not in de_stop]
+sl_23 = sorted(set(ll_23))
+l_23_dict = {}
+for w in sl_23:
+    l_23_dict[w] = ('23.schwob_german.txt', ll_23.count(w))  # fl_23[w]
+print((l_23_dict.items())[0:40])
 
-# UNICODE TESTS
 
-# Fania's Non-NLTK way to import txt file
-#path_f = os.path.join(root_path, 'corpus/faustroll.txt')
-#faustroll_text = open(path_f, "r")
-#text = [i.lower() for line in faustroll_text.readlines() for i in line.split()]
-#faustroll_text.close()
-#faustroll = text
+# def setupcorpus(nr, lang):
+#     ll = [w.lower() for w in l_23 if w.isalpha() and
+#                w.lower() not in de_stop]
+#     sl = sorted(set(ll))
+#     l_23_dict = {}
+#     for w in sl_23:
+#         l_23_dict[w] = ('23.schwob_german.txt', ll_23.count(w))  # fl_23[w]
+#     # print((l_23_dict.items())[0:40])
+#     pass
 
-from nltk.corpus import stopwords
-en_stop = stopwords.words('english')
-fr_stop = stopwords.words('french')
-de_stop = stopwords.words('german')
-# print(en_stop)
-# print(de_stop)
-# print(fr_stop)
 
-path_e = corpus_root + '/english'
-stopwords_doc = open(path_e, "r")
-sw = [i for line in stopwords_doc.readlines() for i in line.split()]
-stopwords_doc.close()
-# print(sw)
 faustroll_dict = sorted(set([w.lower() for w in faustroll]))
-froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in sw]
+froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
-
-
-word_freq1 = nltk.FreqDist(faustroll)
-print(word_freq1['Faustroll'])
-print(word_freq1.pprint())
-
-
-
-#
-# for fileid in book_list.fileids():
-#     num_chars = len(book_list.raw(fileid))
-#     num_words = len(book_list.words(fileid))
-#     num_sents1 = len(book_list.sents(fileid))
-#     num_vocab = len(set(w.lower() for w in book_list.words(fileid)))
-#     print(round(num_chars/num_words), round(num_words/num_sents1), round(num_words/num_vocab), fileid)
-    # print(round(num_chars/num_words))
-    # print(round(num_words/num_sents1))
-    # print(round(num_words/num_vocab))
-    # print(fileid)
-
-
-
-
-
-
-
-
-
 
 # print('book_list:')
 # print(book_list)
@@ -159,13 +160,11 @@ print(word_freq1.pprint())
 # fdist_most_common = fdist.most_common()
 # # print(fdist_most_common)
 #
-# list_most_common = list(itertools.chain(*(sorted(ys) for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
+# list_most_common = list(itertools.chain(*(sorted(ys)
+#    for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
 #
 # print(list_most_common[1:100])
 # print('------------------------\n')
-
-
-
 
 
 def warning(*objs):
@@ -266,7 +265,8 @@ def find_sentence(word):
         pos_b = pos - 5
         pos_a = pos + 5
         if pos_b >= 0 and pos_a <= len(faustroll):
-            out = (' '.join(faustroll[pos_b:pos]), ' '.join(faustroll[pos:pos_a]))
+            out = (' '.join(faustroll[pos_b:pos]),
+                   ' '.join(faustroll[pos:pos_a]))
     return out
 
 
@@ -292,7 +292,8 @@ def post_sentence(word):
 
 def clinamen(word, i):
     out = set()
-    items = [item for item in froll_dict if dameraulevenshtein(word, item) <= i]
+    items = [item for item in froll_dict
+             if dameraulevenshtein(word, item) <= i]
     for item in items:
         if item != word:
             out.add(item)
@@ -315,25 +316,7 @@ def dameraulevenshtein(seq1, seq2):
             subcost = oneago[y - 1] + (seq1[x] != seq2[y])
             thisrow[y] = min(delcost, addcost, subcost)
             # This block deals with transpositions
-            if (x > 0 and y > 0 and seq1[x] == seq2[y - 1]
-                    and seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
-                thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)
+            if (x > 0 and y > 0 and seq1[x] == seq2[y - 1] and
+               seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
+                    thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)
     return thisrow[len(seq2) - 1]
-
-
-############################
-# Fania's Non-NLTK way to import txt file
-#root_path = os.path.dirname(os.path.realpath(__file__))
-#path_f = os.path.join(root_path, 'corpus/faustroll.txt')
-#faustroll_text = open(path_f, "r")
-#text = [i.lower() for line in faustroll_text.readlines() for i in line.split()]
-#faustroll_text.close()
-#faustroll = text
-#path_e = os.path.join(root_path, 'corpus/english')
-#stopwords_doc = open(path_e, "r")
-#sw = [i for line in stopwords_doc.readlines() for i in line.split()]
-#stopwords_doc.close()
-
-# def get_concordances(word):
-#    return faustroll.concordance(word)
-# print(get_concordances('skiff'))
