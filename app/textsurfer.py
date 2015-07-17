@@ -4,6 +4,9 @@ from __future__ import print_function
 from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
 from nltk.corpus import stopwords
+
+from collections import defaultdict
+
 import os
 import nltk
 # import codecs
@@ -39,77 +42,93 @@ troll = book_list.words('00.faustroll.txt')
 faustroll = nltk.Text(troll)
 
 ############################################################
-l_00 = nltk.Text(book_list.words('00.faustroll.txt'))
-l_01 = nltk.Text(book_list.words('01.poe1.txt'))
-l_01 = nltk.Text(book_list.words('01.poe2.txt'))
-l_01 = nltk.Text(book_list.words('01.poe3.txt'))
-l_01 = nltk.Text(book_list.words('01.poe4.txt'))
-l_01 = nltk.Text(book_list.words('01.poe5.txt'))
-l_02 = nltk.Text(book_list.words('02.bergerac.txt'))
-l_03 = nltk.Text(book_list.words('03.gospel.txt'))
-l_04 = nltk.Text(book_list.words('04.bloy_french.txt'))
-l_05 = nltk.Text(book_list.words('05.coleridge.txt'))
-l_06 = nltk.Text(book_list.words('06.darien_french.txt'))
+l_00 = book_list.words('00.faustroll.txt')
+l_01 = book_list.words('01.poe1.txt')
+l_01 = book_list.words('01.poe2.txt')
+l_01 = book_list.words('01.poe3.txt')
+l_01 = book_list.words('01.poe4.txt')
+l_01 = book_list.words('01.poe5.txt')
+l_02 = book_list.words('02.bergerac.txt')
+l_03 = book_list.words('03.gospel.txt')
+l_04 = book_list.words('04.bloy_french.txt')
+l_05 = book_list.words('05.coleridge.txt')
+l_06 = book_list.words('06.darien_french.txt')
 l_07 = ''
 l_08 = ''
 l_09 = ''
-l_10 = nltk.Text(book_list.words('10.arabiannights.txt'))
-l_11 = nltk.Text(book_list.words('11.grabbe_german.txt'))
+l_10 = book_list.words('10.arabiannights.txt')
+l_11 = book_list.words('11.grabbe_german.txt')
 l_12 = ''
-l_13 = nltk.Text(book_list.words('13.lautreamont_french.txt'))
-l_14 = nltk.Text(book_list.words('14.maeterlinck.txt'))
-l_15 = nltk.Text(book_list.words('15.mallarme_french.txt'))
+l_13 = book_list.words('13.lautreamont_french.txt')
+l_14 = book_list.words('14.maeterlinck.txt')
+l_15 = book_list.words('15.mallarme_french.txt')
 l_16 = ''
-l_17 = nltk.Text(book_list.words('17.odyssey.txt'))
+l_17 = book_list.words('17.odyssey.txt')
 l_18 = ''
-l_19 = nltk.Text(book_list.words('19.rabelais.txt'))
+l_19 = book_list.words('19.rabelais.txt')
 l_20 = ''
 l_21 = ''
-l_22 = nltk.Text(book_list.words('22.rimbaud_french.txt'))
+l_22 = book_list.words('22.rimbaud_french.txt')
 l_23 = book_list.words('23.schwob_german.txt')
-l_24 = nltk.Text(book_list.words('24.ubu_french.txt'))
-l_25 = nltk.Text(book_list.words('25.verlaine.txt'))
-l_26 = nltk.Text(book_list.words('26.verhaeren.txt'))
-l_27 = nltk.Text(book_list.words('27.verne.txt'))
+l_24 = book_list.words('24.ubu_french.txt')
+l_25 = book_list.words('25.verlaine.txt')
+l_26 = book_list.words('26.verhaeren.txt')
+l_27 = book_list.words('27.verne.txt')
 ############################################################
 en_stop = stopwords.words('english')  # print(en_stop)
 fr_stop = stopwords.words('french')  # print(fr_stop)
 de_stop = stopwords.words('german')  # print(de_stop)
 ############################################################
 
-# for ct in book_list.fileids():
-#     print('ID:', ct)
-#     print(' '.join(book_list.words(ct)[0:10]))
-#     num_chars = len(book_list.raw(ct))
-#     print('num_chars', num_chars)
-#     num_words = len(book_list.words(ct))
-#     print('num_words', num_words)
-#     # print(book_list.sents(ct)[0:5])
-#     # num_sents1 = len(book_list.sents(ct))
-#     # print('num_sents1', num_sents1)
-#     num_vocab = len(set(w.lower() for w in book_list.words(ct)))
-#     print('num_vocab', num_vocab)
-#     print(round(num_chars/num_words), round(num_words/num_vocab))
+l_dict = defaultdict(list)
+print('l_dict before')
+print(l_dict.items())
 
 
-ll_23 = [w.lower() for w in l_23 if w.isalpha() and w.lower() not in de_stop]
-sl_23 = sorted(set(ll_23))
-l_23_dict = {}
-for w in sl_23:
-    l_23_dict[w] = ('23.schwob_german.txt', ll_23.count(w))  # fl_23[w]
-print((l_23_dict.items())[0:40])
+def setupcorpus(nr, lang):
+    ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
+    for w in sorted(set(ll)):
+        l_dict[w].append((nr.fileid[49:], ll.count(w)))
+    pass
+
+setupcorpus(l_00, en_stop), print('added 00')
+setupcorpus(l_01, en_stop), print('added 01')
+setupcorpus(l_02, en_stop), print('added 02')
+setupcorpus(l_03, en_stop), print('added 03')
+setupcorpus(l_04, fr_stop), print('added 04')
+setupcorpus(l_05, en_stop), print('added 05')
+setupcorpus(l_06, fr_stop), print('added 06')
+setupcorpus(l_07, en_stop), print('added 07')
+setupcorpus(l_08, en_stop), print('added 08')
+setupcorpus(l_09, en_stop), print('added 09')
+setupcorpus(l_10, en_stop), print('added 10')
+setupcorpus(l_11, en_stop), print('added 11')
+setupcorpus(l_12, en_stop), print('added 12')
+setupcorpus(l_13, fr_stop), print('added 13')
+setupcorpus(l_14, en_stop), print('added 14')
+setupcorpus(l_15, fr_stop), print('added 15')
+setupcorpus(l_16, en_stop), print('added 16')
+setupcorpus(l_17, en_stop), print('added 17')
+setupcorpus(l_18, en_stop), print('added 18')
+setupcorpus(l_19, en_stop), print('added 19')
+setupcorpus(l_20, en_stop), print('added 20')
+setupcorpus(l_21, en_stop), print('added 21')
+setupcorpus(l_22, fr_stop), print('added 22')
+setupcorpus(l_23, de_stop), print('added 23')
+setupcorpus(l_24, fr_stop), print('added 24')
+setupcorpus(l_25, en_stop), print('added 25')
+setupcorpus(l_26, en_stop), print('added 26')
+setupcorpus(l_27, en_stop), print('added 27')
+print('l_dict after')
+# print((l_dict.items())[0:100])
 
 
-# def setupcorpus(nr, lang):
-#     ll = [w.lower() for w in l_23 if w.isalpha() and
-#                w.lower() not in de_stop]
-#     sl = sorted(set(ll))
-#     l_23_dict = {}
-#     for w in sl_23:
-#         l_23_dict[w] = ('23.schwob_german.txt', ll_23.count(w))  # fl_23[w]
-#     # print((l_23_dict.items())[0:40])
-#     pass
+def sear(t):
+    return l_dict.get(t)
 
+print(sear('fingers'))
+
+# ---------------------------------------------
 
 faustroll_dict = sorted(set([w.lower() for w in faustroll]))
 froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
