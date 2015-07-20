@@ -10,7 +10,7 @@
 
 <div class="results">
     <!-- <div class="trail">
-        <i class="fa fa-caret-right"></i> {{ query }} 
+        <i class="fa fa-caret-right"></i> {{ query }}
         {# {% for item in s.queries %}
             {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
         {% endfor %} #}
@@ -18,8 +18,8 @@
 
     <div class="resultset">
         {% if clinamen_words %}
-            Clinamen - {{ clinamen_words|length }} pataphysicalised 
-            {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            Clinamen - {{ clinamen_words|length }} pataphysicalised
+            {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %}
             found for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
@@ -38,10 +38,10 @@
             Clinamen - Sorry, no pataphysicalised reverberations found!
         {% endif %}
     </div>
-    <div class="resultset">
+    <!-- <div class="resultset">
         {% if syzygy_words %}
-            Syzygy - {{ pre_syssens|length }} pataphysicalised 
-            {% if pre_syssens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            Syzygy - {{ pre_syssens|length }} pataphysicalised
+            {% if pre_syssens|length == 1 %}reverberation{% else %}reverberations{% endif %}
             found for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
@@ -62,8 +62,8 @@
     </div>
     <div class="resultset">
         {% if antinomy_words %}
-            Antinomy - {{ antisens|length }} pataphysicalised 
-            {% if antisens|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            Antinomy - {{ antisens|length }} pataphysicalised
+            {% if antisens|length == 1 %}reverberation{% else %}reverberations{% endif %}
             found for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
@@ -81,7 +81,7 @@
         {% else %}
             Antinomy - Sorry, no pataphysicalised reverberations found!
         {% endif %}
-    </div>
+    </div> -->
 
 </div>
 {% endblock %}

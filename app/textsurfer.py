@@ -120,14 +120,8 @@ setupcorpus(l_24, fr_stop), print('added 24')
 setupcorpus(l_25, en_stop), print('added 25')
 setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
-print('l_dict after')
+# print('l_dict after')
 # print((l_dict.items())[0:100])
-
-
-def sear(t):
-    return l_dict.get(t)
-
-print(sear('fingers'))
 
 # ---------------------------------------------
 
@@ -173,17 +167,6 @@ froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
 # print('------------------------\n')
 # print('sw:')
 # print(sw)
-# print('------------------------\n')
-
-
-# import itertools
-# fdist_most_common = fdist.most_common()
-# # print(fdist_most_common)
-#
-# list_most_common = list(itertools.chain(*(sorted(ys)
-#    for k, ys in itertools.groupby(fdist_most_common, key=lambda t: t[1]))))
-#
-# print(list_most_common[1:100])
 # print('------------------------\n')
 
 
@@ -277,37 +260,84 @@ def antinomy(word):
 #
 
 
-def find_sentence(word):
+# def find_sentence(word):
+#     out = []
+#     if faustroll.count(word) > 0:
+#         # indices = [i for i, x in enumerate(faustroll) if x == word]
+#         pos = faustroll.index(word)
+#         pos_b = pos - 5
+#         pos_a = pos + 5
+#         if pos_b >= 0 and pos_a <= len(faustroll):
+#             out = (' '.join(faustroll[pos_b:pos]),
+#                    ' '.join(faustroll[pos:pos_a]))
+#     return out
+
+
+def fsent(w, f):
     out = []
-    if faustroll.count(word) > 0:
-        # indices = [i for i, x in enumerate(faustroll) if x == word]
-        pos = faustroll.index(word)
-        pos_b = pos - 5
-        pos_a = pos + 5
-        if pos_b >= 0 and pos_a <= len(faustroll):
-            out = (' '.join(faustroll[pos_b:pos]),
-                   ' '.join(faustroll[pos:pos_a]))
+    ff = eval(f)
+    pos = 0
+    if ff.count(w) > 0:
+        pos = ff.index(w)
+    else:
+        pos = ff.index(w.capitalize())
+    pos_b = pos - 5
+    pos_a = pos + 5
+    if pos_b >= 0 and pos_a <= len(ff):
+        out = ' '.join(ff[pos_b:pos_a])
+    # print('sentences')
+    # print(out)
     return out
+# print(fsent('clear', 'l_00'))
+
+# def pre_sentence(word):
+#     out = []
+#     if faustroll.count(word) > 0:
+#         pos = faustroll.index(word)
+#         pos_b = pos - 5
+#         if pos_b >= 0:
+#             out = ' '.join(faustroll[pos_b:pos])
+#     return out
 
 
-def pre_sentence(word):
+def pre_sent(w, f):
     out = []
-    if faustroll.count(word) > 0:
-        pos = faustroll.index(word)
-        pos_b = pos - 5
-        if pos_b >= 0:
-            out = ' '.join(faustroll[pos_b:pos])
+    ff = eval(f)
+    pos = 0
+    if ff.count(w) > 0:
+        pos = ff.index(w)
+    else:
+        pos = ff.index(w.capitalize())
+    pos_b = pos - 5
+    if pos_b >= 0:
+        out = ' '.join(ff[pos_b:pos])
     return out
+# print(pre_sent('clear', 'l_00'))
 
 
-def post_sentence(word):
+# def post_sentence(word):
+#     out = []
+#     if faustroll.count(word) > 0:
+#         pos = faustroll.index(word) + 1
+#         pos_a = pos + 5
+#         if pos_a <= len(faustroll):
+#             out = ' '.join(faustroll[pos:pos_a])
+#     return out
+
+
+def post_sent(w, f):
     out = []
-    if faustroll.count(word) > 0:
-        pos = faustroll.index(word) + 1
-        pos_a = pos + 5
-        if pos_a <= len(faustroll):
-            out = ' '.join(faustroll[pos:pos_a])
+    ff = eval(f)
+    pos = 0
+    if ff.count(w) > 0:
+        pos = ff.index(w)
+    else:
+        pos = ff.index(w.capitalize())
+    pos_a = pos + 5
+    if pos_a <= len(ff):
+        out = ' '.join(ff[pos:pos_a])
     return out
+# print(post_sent('clear', 'l_00'))
 
 
 def clinamen(word, i):
@@ -340,3 +370,17 @@ def dameraulevenshtein(seq1, seq2):
                seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
                     thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)
     return thisrow[len(seq2) - 1]
+
+
+def sear(t):
+    temp = l_dict.get(t)
+    # print(temp)
+    temp1 = []
+    for f in temp:
+        x = ''.join(['l_', str(f[0:2])])
+        # print('fsent:', f)
+        # print(fsent(t, x))
+        temp1.append(x)
+    return temp1
+
+# print(sear('fingers'))
