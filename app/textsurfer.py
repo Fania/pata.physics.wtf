@@ -88,7 +88,8 @@ print(l_dict.items())
 def setupcorpus(nr, lang):
     ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
     for w in sorted(set(ll)):
-        l_dict[w].append((nr.fileid[49:], ll.count(w)))
+        # l_dict[w].append((nr.fileid[49:], ll.count(w)))
+        l_dict[w].append(nr.fileid[49:])
     pass
 
 setupcorpus(l_00, en_stop), print('added 00')
