@@ -54,11 +54,11 @@ l_04 = book_list.words('04.bloy_french.txt')
 l_05 = book_list.words('05.coleridge.txt')
 l_06 = book_list.words('06.darien_french.txt')
 l_07 = ''
-l_08 = ''
-l_09 = ''
+l_08 = book_list.words('08.elskamp_french.txt')
+l_09 = book_list.words('09.florian_french.txt')
 l_10 = book_list.words('10.arabiannights.txt')
 l_11 = book_list.words('11.grabbe_german.txt')
-l_12 = ''
+l_12 = book_list.words('12.kahn_french.txt')
 l_13 = book_list.words('13.lautreamont_french.txt')
 l_14 = book_list.words('14.maeterlinck.txt')
 l_15 = book_list.words('15.mallarme_french.txt')
@@ -100,11 +100,11 @@ setupcorpus(l_04, fr_stop), print('added 04')
 setupcorpus(l_05, en_stop), print('added 05')
 setupcorpus(l_06, fr_stop), print('added 06')
 setupcorpus(l_07, en_stop), print('added 07')
-setupcorpus(l_08, en_stop), print('added 08')
-setupcorpus(l_09, en_stop), print('added 09')
+setupcorpus(l_08, fr_stop), print('added 08')
+setupcorpus(l_09, fr_stop), print('added 09')
 setupcorpus(l_10, en_stop), print('added 10')
 setupcorpus(l_11, en_stop), print('added 11')
-setupcorpus(l_12, en_stop), print('added 12')
+setupcorpus(l_12, fr_stop), print('added 12')
 setupcorpus(l_13, fr_stop), print('added 13')
 setupcorpus(l_14, en_stop), print('added 14')
 setupcorpus(l_15, fr_stop), print('added 15')
@@ -260,20 +260,25 @@ def antinomy(word):
 #
 
 
-# def find_sentence(word):
+# def fullsent(w, f):
 #     out = []
-#     if faustroll.count(word) > 0:
-#         # indices = [i for i, x in enumerate(faustroll) if x == word]
-#         pos = faustroll.index(word)
-#         pos_b = pos - 5
-#         pos_a = pos + 5
-#         if pos_b >= 0 and pos_a <= len(faustroll):
-#             out = (' '.join(faustroll[pos_b:pos]),
-#                    ' '.join(faustroll[pos:pos_a]))
+#     ff = eval(f)
+#     pos = 0
+#     if ff.count(w) > 0:
+#         pos = ff.index(w)
+#     else:
+#         pos = ff.index(w.capitalize())
+#     pos_b = pos - 5
+#     pos_a = pos + 5
+#     if pos_b >= 0 and pos_a <= len(ff):
+#         out = ' '.join(ff[pos_b:pos_a])
+#     # print('sentences')
+#     # print(out)
 #     return out
+# print(fullsent('clear', 'l_00'))
 
 
-def fsent(w, f):
+def pp_sent(w, f):
     out = []
     ff = eval(f)
     pos = 0
@@ -282,62 +287,13 @@ def fsent(w, f):
     else:
         pos = ff.index(w.capitalize())
     pos_b = pos - 5
-    pos_a = pos + 5
+    pos_a = (pos + 1) + 5
     if pos_b >= 0 and pos_a <= len(ff):
-        out = ' '.join(ff[pos_b:pos_a])
-    # print('sentences')
-    # print(out)
+        pre = ' '.join(ff[pos_b:pos])
+        post = ' '.join(ff[pos+1:pos_a])
+        out = (pre, post)
     return out
-# print(fsent('clear', 'l_00'))
-
-# def pre_sentence(word):
-#     out = []
-#     if faustroll.count(word) > 0:
-#         pos = faustroll.index(word)
-#         pos_b = pos - 5
-#         if pos_b >= 0:
-#             out = ' '.join(faustroll[pos_b:pos])
-#     return out
-
-
-def pre_sent(w, f):
-    out = []
-    ff = eval(f)
-    pos = 0
-    if ff.count(w) > 0:
-        pos = ff.index(w)
-    else:
-        pos = ff.index(w.capitalize())
-    pos_b = pos - 5
-    if pos_b >= 0:
-        out = ' '.join(ff[pos_b:pos])
-    return out
-# print(pre_sent('clear', 'l_00'))
-
-
-# def post_sentence(word):
-#     out = []
-#     if faustroll.count(word) > 0:
-#         pos = faustroll.index(word) + 1
-#         pos_a = pos + 5
-#         if pos_a <= len(faustroll):
-#             out = ' '.join(faustroll[pos:pos_a])
-#     return out
-
-
-def post_sent(w, f):
-    out = []
-    ff = eval(f)
-    pos = 0
-    if ff.count(w) > 0:
-        pos = ff.index(w)
-    else:
-        pos = ff.index(w.capitalize())
-    pos_a = pos + 5
-    if pos_a <= len(ff):
-        out = ' '.join(ff[pos:pos_a])
-    return out
-# print(post_sent('clear', 'l_00'))
+# print(pp_sent('clear', 'l_00'))
 
 
 def clinamen(word, i):
@@ -378,8 +334,8 @@ def sear(t):
     temp1 = []
     for f in temp:
         x = ''.join(['l_', str(f[0:2])])
-        # print('fsent:', f)
-        # print(fsent(t, x))
+        # print('fullsent:', f)
+        # print(fullsent(t, x))
         temp1.append(x)
     return temp1
 

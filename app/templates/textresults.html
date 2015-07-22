@@ -24,16 +24,12 @@
             <div id="results">
                 <ul>
                     {% for key in clinamen_words %}
-                        {% for prek, prev in pre_sens.iteritems() %}
-                            {% for postk, postv in post_sens.iteritems() %}
-                              {% for prv in prev %}
-                                {% for pov in postv %}
-                                  {% if prek == key and postk == key %}
-                                      <li>...{{ prv }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ pov }}...</li>
-                                  {% endif %}
-                                {% endfor %}
+                        {% for prek, prev in pp_sens.iteritems() %}
+                            {% if prek == key %}
+                              {% for p in prev %}
+                                <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
                               {% endfor %}
-                            {% endfor %}
+                            {% endif %}
                         {% endfor %}
                     {% endfor %}
                 </ul>

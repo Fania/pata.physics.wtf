@@ -22,38 +22,25 @@ def textresults():
         # qx = getResults(q)
 
         # CLINAMEN
-        sens = defaultdict(list)
-        pre_sens = defaultdict(list)
-        post_sens = defaultdict(list)
+        pp_sens = defaultdict(list)
         clinamen_words = clinamen(query, 2)
         clinamen_len = len(clinamen_words)
         print('clinamen_words', clinamen_words)
-        print('pre', len(pre_sens))
-        print('post', post_sens)
-        print('sens', sens)
+        print('pre', len(pp_sens), pp_sens)
         for r in clinamen_words:
             files = sear(r)
             print(r, 'files: ', files)
             for e in files:
                 # print('inside files loop', r, e)
-                # print(len(pre_sent(r, e)))
-                if len(pre_sent(r, e)) > 0:
-                    # print(pre_sent(r, e))
-                    pre_sens[r].append(pre_sent(r, e))
+                # print(len(pp_sent(r, e)))
+                if len(pp_sent(r, e)) > 0:
+                    # print(pp_sent(r, e))
+                    pp_sens[r].append(pp_sent(r, e))
                 # else:
                     # print('fail pre')
-                if len(post_sent(r, e)) > 0:
-                    # print(post_sent(r, e))
-                    post_sens[r].append(post_sent(r, e))
-                # else:
-                    # print('fail post')
-                if len(fsent(r, e)) > 0:
-                    # print(fsent(r, e))
-                    sens[r].append(fsent(r, e))
-                # else:
-                    # print('fail full')
                 # print('end of loop')
-        print(sens)
+        print('pp_sens', pp_sens)
+
         # SYZYGY
         # syssens = dict([])
         # pre_syssens = dict([])
