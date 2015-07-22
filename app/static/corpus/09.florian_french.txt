@@ -1,0 +1,687 @@
+Théâtre de Florian
+
+AVANT-PROPOS
+
+En donnant au public le recueil de mes comédies, je me garderai bien de le faire précéder de réflexions sur la comédie. Ce serait d'abord risquer d'ennuyer, péril qu'on ne peut assez craindre ; ensuite je serais sûr de me nuire, car de deux choses l'une : ou je prouverais que je suis un ignorant, et personne ne gagnerait à cette découverte ; ou je me montrerais fort instruit, et l'on m'en trouverait plus coupable d'avoir fait des pièces si imparfaites, en sachant si bien comment on les fait bonnes. Je ne veux donc parler ici que du genre que j'ai adopté, dire les motifs de cette adoption, et relever les fautes que je n'ai pas évitées.
+
+Pour pouvoir définir ce genre, il faut dire un mot des autres ; il faut répéter, ce que l'on sait déjà, que la comédie de caractère est sans contredit le plus beau, le plus utile, le plus difficile de tous les drames. Quel travail que celui d'étudier jusqu'aux plus petits traits de l'homme qu'on veut peindre, de fouiller dans les replis de son cœur, d'y surprendre ses sentiments les plus cachés, et d'imaginer ensuite des situations où, dans l'espace de deux heures, tous ces traits, tous ces sentiments soient développés, en amusant, en intéressant toujours deux mille personnes rassemblées au hasard, et très-indifférentes à l'affaire dont il s'agit ! Un tel ouvrage, quand il est parfait, me semble le chef-d'œuvre de l'esprit humain.
+
+Mais ce chef-d'œuvre, en tous les temps si difficile, l'est peut-être aujourd'hui plus que jamais. Quand il naitrait un second Molière, merveille que la nature ne produit plus vraisemblablement, pourrait-il se flatter d'égaler le premier ? trouverait-il des sujets tels que le Misanthrope, le Tartufe, l'Avare ? Je ne le crois pas. Les caractères qui restent à traiter une semblent petits auprès de ces grands modèles. Je juge du moins qu'ils doivent être peu saillants, par la peine qu'on a de leur trouver même un nom.
+
+On pourrait donc penser qu'il ne reste guère à peindre que des demi-caractères ; encore les modèles en sont-ils rares. C'est dans le monde qu'il faut les chercher; et j'ai cru remarquer que dans le monde on se ressemble un peu. Le grand précepte, II faut être comme les autres, qui fait la base de nos éducations, met une assez grande conformité dans les mœurs, dans les actions, dans le langage de ceux qui composent la société. Chaque âge, chaque état a ses idées, son ton, ses manières convenues : on les prend sans s'en apercevoir ; on les garde par paresse, souvent par respect humain ; et les formules, les devoirs d'usage, l'obligation de parler lorsqu'on ne voudrait rien dire, l'habitude de traiter comme des amis ceux dont on ne se soucie guère, enfin la monotonie de la politesse, si l'on peut s'exprimer ainsi, éteignent le naturel, et font disparaitre les nuances des caractères. Tout n'en est peut-être que mieux ; et il faut bien que cela soit, puisqu'on a l'air si heureux dans le monde. Je ne prétends point m'ériger en censeur ; je veux dire seulement que j'ai trouvé un peu de ressemblance entre ce monde bruyant et le bal de l'Opéra. C'est assurément un lieu enchanteur : on y fait infiniment d'esprit. on y voit de très-jolis masques; mais un peintre serait peut- être embarrassé d'y trouver une physionomie.
+
+D'après ces réflexions, bonnes ou mauvaises, et auxquelles je n'attache aucune prétention, j'aurais renoncé à la comédie de caractère, quand bien même j'en aurais eu le talent : car le talent ne suffit pas ; c'est du sujet que dépend le sort d'une pièce. Si cela n'était pas vrai, nos grands hommes n'auraient fait que des chefs-d'œuvre.Peut-être aussi, et je le croirais bien, mon impuissance m'a-t-elle rendu ces raisons meilleures. J'en conviendrai volontiers à chaque bonne comédie de caractère que l'on nous donnera ; mais, en attendant, je croirai qu'à moins de se sentir un talent très-supérieur, on fera mieux de traiter la comédie de sentiment ou la comédie d'intrigue.
+
+Ces deux genres me semblent inépuisables. Avec de l'esprit et de la sensibilité, on trouvera soin eut des intérêts nouveaux, des situations piquantes. Les vices, les travers sont bornés ; mais les passions, et heureusement les vertus, nous offrent un champ immense.
+
+J'entends par la comédie de sentiment celle que la Chaussée fera vivre à jamais, malgré les épigrammes de ses critiques ; celle qui met sous les yeux du spectateur des personnages vertueux et persécutés, une situation attachante où la passion combat le devoir, où l'honneur triomphe de l'intérêt; celle enfin qui sait nous instruire sans nous ennuyer, nous attendrir sans nous attrister, et qui fait couler ces douces larmes, le premier besoin d'une âme sensible.
+
+La comédie d'intrigue, qui porte sur la même base que la comédie de sentiment, l'intérêt, emploie des moyens tout différents. Un vieillard amoureux, un rival ridicule; des valets adroits, des dangers sans cesse renaissants, des ressources toujours imprévues, des méprises enfin, moyen le plus sûr de tous au théâtre : voilà par quels ressorts elle attache, égaye le spectateur, l'amuse assez pour l'intéresser, et le fait rire des malheurs qui peuvent lui arriver le lendemain.
+
+La réunion des deux genres dont je viens de parler ferait sans doute un bon ouvrage : malheureusement cette réunion est extrêmement difficile. Presque toujours le comique nuit à l'intérêt, et l'intérêt exclut le comique. J'ai cru pourtant qu'il n'était pas impossible de les allier. J'ai pensé que le sentiment et la plaisanterie pouvaient tellement être unis, qu'ils- fussent quelquefois confondus, que le spectateur s'égayât et s'attendrit en même temps, qu'il fût également ému par l'intérêt de l'action et réjoui par le comique de l'acteur, en un mot, que le même personnage fit pleurer et rire à la fois. Pour cela j'avais besoin d'Arlequin [1].
+
+Ce caractère est le seul peut-être qui rassemble l'esprit et la naïveté, la finesse et la balourdise. Arlequin, toujours simple et bon, toujours facile à tromper, croit ce qu'on lui dit, fait ce que l'on veut, et vient se mettre de moitié dans les pièges qu'on veut lui tendre : rien ne l'étonné, tout l'embarrasse ; il n'a point de raison, il n'a que de la sensibilité ; il se fâche, s'apaise, s'afflige, se console dans le même instant : sa joie et sa douleur sont également plaisantes. Ce n'est pourtant rien moins qu'un bouffon ; ce n'est pas non plus un personnage sérieux : c'est un grand enfant ; il en a les grâces, la douceur, l'ingénuité ; et les enfants sont si aimables, si attrayants, que j'ai cru mon succès certain, si je pouvais donner à cet enfant toute la raison, tout l'esprit, toute la délicatesse d'un homme.
+
+Delisle et Marivaux en avaient déjà tiré un grand parti. Le premier a fait de son Arlequin un philosophe de la nature, misanthrope gai, cynique décent, qui voit les objets comme ils sont, les montre comme il les voit, s'exprime avec énergie, et fait rire en raisonnant juste.
+
+Marivaux, ce grand anatomiste du cœur humain, qui, pour avoir voulu tout dire, n'a pas toujours dit ce qu'il fallait, Marivaux a fait des Arlequins moins naturels, moins philosophes que ceux de Delisle, mais plus délicats, plus aimables, et qui, à force d'esprit, rencontrent quelquefois la naïveté.
+
+Je n'ai voulu copier ni Marivaux ni Delisle. Cela ne m'aurait pas été facile : l'un avait plus de finesse, l'autre plus de profondeur que moi. J'ai voulu peindre un Arlequin bon, doux, ingénu, simple sans être bête, parlant purement, et exprimant avec naïveté les sentiments d'un cœur très-tendre. Une fois ce caractère établi, non d'après les auteurs qui s'en étaient servis avant moi, mais d'après mes idées particulières, j'ai cherché des intrigues qui pussent m'aider à le développer. J'étais presque sûr que mon héros était intéressant ; son masque et son habit le rendaient comique ; il ne fallait plus que trouver des situations attachantes, et je devais faire rire et pleurer. Il reste à savoir si j'y suis parvenu.
+
+Lorsque j'osai risquer pour la première fois au théâtre l'Arlequin que je m'étais créé, il y avait plus de vingt ans que la comédie italienne avait abandonné les pièces de Marivaux et de Delisle, pour des canevas italiens que les acteurs remplissaient à leur gré. J'essayai de rappeler un genre oublié. Je fis représenter par des acteurs italiens une pièce toute française : les Deux Billets. Elle réussit, quoiqu'elle ne fût pas jouée par le célèbre Carlin, acteur à jamais recommandable par ses grâces, par son naturel, et à qui peut-être il n'a manqué que de la mémoire pour être le premier des acteurs comiques.
+
+D'après ce succès qui m'encouragea, d'après une chute qui m'éclaira [2], je voulus donner à mes comédies un hut de morale et d'utilité. Cette idée n'avait rieri de neuf, car toutes les bonnes comédies sont ou doivent être morales. Mais, avec le personnage que j'avais choisi, je ne pouvais pas développer de grands sujets, ni prétendre à corriger les hommes en attaquant de grands vices : j'essayai du moins de les exciter à la vertu, en leur rappelant combien elle donne de vrais plaisirs. Je voulus surtout présenter le tableau de ces vertus familières, de ces vertus de tous les jours, les plus utiles peut- être, les plus nécessaires au bonheur : car ce ne sont pas, ce me semble, les grands préceptes de la morale et de la philosophie que l'on trouve à mettre en pratique le plus souvent. On est rarement dans le cas de sacrifier à son devoir, à la patrie, à l'honneur, à son repos, sa fortune et sa vie; mais on est obligé à tous les instants d'être un bon fils, un bon époux, un bon père.
+
+Voilà les modèles que je résolus de tracer. J'avais déjà peint le désintéressement du véritable amour; je tentai de peindre le bonheur de deux époux bien unis, et de prouver qu'il ne faut jamais soupçonner un cœur que l'on connait vertueux. Je voulus ensuite esquisser le tableau d'un père qui adore sa fille, et qui voit sa tendresse récompensée par une confiance entière ; celui d'une mère sage qui se sacrifie elle- même pour rendre sa fille au bonheur ; enfin celui d'un fils vertueux et sensible qui immole sa passion à sa mère.
+
+Tels sont les sujets des Deux billets, du Bon ménage, du Bon père, de la Bonne mère, et du Bon fils. Les trois premières pièces forment, pour ainsi dire, le roman de mon Arlequin mis en action dans les trois états de la vie les plus intéressants : ceux d'amant, d'époux et de père. En lui conservant toujours son caractère original, je l'ai fait parler différemment dans ces trois comédies, parce que ses affections et son âge sont différents.
+
+Dans les Deux billets, Arlequin est très-jeune et amoureux. Il a plus d'esprit que dans les deux autres pièces, par la raison qu'il est amoureux, et que l'amour, qui ôte souvent l'esprit à ceux qui en ont, en donne infiniment à ceux qui, comme Arlequin, ne savent jamais qu'ils ont de l'esprit. Quant à sa façon d'aimer, elle est peinte dans la pièce. Le succès qu'elle a eu ne m'a point aveuglé sur le défaut du dénoûment. Le billet de loterie devrait rentrer dans les mains de sou vrai maitre par un moyen plus ingénieux que celui dont se sert Argentine : je le sais , et j'avoue en toute humilité que je n'ai pu en trouver un autre.
+
+Dans le Bon ménage, Arlequin est marié depuis longtemps iI adore sa femme ; mais cet amour, le meilleur de tous, fondé sur l'estime et la confiance, doit être aussi tendre et moins galant que celui des Deux billets. Aussi ai-je fait mes efforts pour exprimer cette nuance , pour rendre le dialogue plus simple et plus naturel. Arlequin joue avec ses enfants, et cause avec sa femme ; l'esprit n'a rien à faire là. Deux époux bien unis, bien sûrs l'un de l'autre, ne font pas des madrigaux ; ils sont mutuellement, et sans avoir besoin de s'en avertir, l'objet constant de toutes leurs actions, de toutes leurs pensées : mais ils ne parlent point d'amour, cela va sans dire : ils s'aiment, puisqu'ils existent.
+
+Quelques personnes ont trouvé mauvais qu'Arlequin pardonnât à sa femme avant qu'elle eût prouvé son innocence. Si c'est un défaut, on doit d'autant plus me le reprocher, que c'est pour ce défaut-là que j'ai fait la pièce.
+
+Le Ron père est écrit d'un style plus élevé que celui des deux autres comédies; j'ai peut-être à m'en justifier. Arlequin est devenu riche ; il vit à Paris dans la bonne compagnie : un homme de condition veut épouser sa fille ; il est impossible qu'il n'ait pas pris un peu du ton de ceux qui l'entourent. Il n'a plus son habit, il n'a que son masque : j'ai lâché de ne lui conserver de son ancien langage qu'en proportion de ce qui lui restait d'Arlequin.
+
+Le grand défaut de ce petit ouvrage, c'est qu'Arlequin ne fasse point d'action principale qui caractérise précisément le bon père. Il pourrait s'appeler tout aussi bien l'honnête homme, et le dénoûment justifierait mieux ce dernier titre. J'en conviens ; et j'ai réparé, autant qu'il était en moi, cette faute eu multipliant les détails de tendresse paternelle, en représentant un père toujours occupé de sa fille , ne parlant que de sa fille, ne pouvant être heureux que du bonheur de sa fille. Je n'ose pas ajouter qu'un grand sacrifice, un beau trait d'amour paternel est peut-être moins difficile, et caractérise moins un bon père que cette habitude continuelle de sollicitude et de tendresse.
+
+Le rôle d'Arlequin dans la Bonne mère est bien moins considérable que ceux dont je viens de parler. J'ai craint qu'il n'attirât trop l'attention, qui doit se porter sur la bonne mère.
+
+J'ai été un peu gêné dans les détails de tendresse que j'ai donnés à cette bonne mère , parce que j'avais déjà fait le bon père, et que la ressemblance des deux caractères en devait mettre nécessairement dans l'expression de leurs sentiments. Aussi ai-je bien senti que Mathurine n'a pas , dans ses scènes avec Licette, autant d'amour, de douceur, d'épanchements tendres, que le bon père avec Nisida. Cette imperfection est peut-être rachetée par la belle action de Mathurine, de sorte qu'elle ne fait qu'agir, et le bon père ne fait que parler. Chacun des deux ouvrages a son défaut, que l'on verra bien sans que je le dise ; mais j'aime mieax le dire le premier.
+
+Dans le Bon fils, il n'y a point d'Arlequin ; parce que la situation du bon fils, obligé de choisir entre sa mère et sa maitresse, forcé de sacrifier l'une à l'autre, semble exclure de son rôle toute espèce de comique. Non-seulement il ne faut pas que le bon fils rie, mais il ne faut pas qu'il fasse rire un moment. L'intérêt est, ce me semble, trop vif, trop important, pour admettre le moindre comique. Dès lors il est nécessaire de bannir toute idée d'Arlequin, qui, dans quelque situation qu'on le place, doit toujours au moins faire sourire.
+
+J'avoue que le grand défaut du Son fils est ce manque de comique : j'ai tâché d'y suppléer par le rôle de Thibaut. J'avoue encore que je me suis consolé d'avoir fait, sans Arlequin, une comédie en trois actes, où j'ai présenté un modèle de la première vertu que l'on met en usage dans le monde. J'y ai trouvé le plaisir de rassurer quelques personnes, qui, me voyant toujours faire des pièces avec un Arlequin, craignaient (par amitié pour moi) que je ne pusse jamais faire autre chose. Un intérêt si tendre méritait bien que je prisse la peine de leur offrir une comédie sans Arlequin. J'aurais eu d'autant plus mauvaise grâce à me refuser à cette complaisance, que le Bon fils est de tous mes ouvrages celui qui m'a le moins coûté.
+
+Afin de compléter ce petit cours de morale, j'ai voulu faire une pièce pour des enfants. J'ai pris mon sujet dans M. Gessner ; et le nom de cet aimable auteur m'a rendu ce sujet plus cher que si je l'avais inventé. J'ai eu grand soin de faire imprimer à la tête de ma pastorale la charmante idylle qui me l'a fournie. J'ai été fier de mêler dans mes ouvrages un ouvrage du chantre d'Abel. Il m'a semblé que cette idylle porterait bonheur à mon recueil, et qu'une simple fleur du jardin de M. Gessner suffirait pour parfumer tout mon bouquet.
+
+J'ai encore un autre espoir. Je me suis flatté que dans ces familles bien unies, que j'ai toujours en vue lorsque je travaille, les enfants de la maison joueraient Mgrtilet Chloé à la fête de leur mère, à la convalescence de leur père. Cette idée m'a réjoui, parce que j'aime les enfants et les fêtes de famille. Je suis sûr d'avance que le jeu de ces aimables acteurs, la circonstance, l'émotion d'un cœur paternel, effaceront tous les défauts de mon petit ouvrage ; et la certitude qu'il fera couler des larmes a suffi pour m'attacher à cette bagatelle, qui ne vaut pas la peine d'être examinée.
+
+La ressemblance parfaite de deux Arlequins m'avait toujours semblé un joli sujet de comédie. L'ancienne pièce des Deux Arlequins, de le Noble, m'encourageait à la faire ; mais les Ménechmes m'effrayaient. Je pris le parti de réduire ma comédie à un acte, pour éviter toutes les situations qui se trouvent dans les Ménechmes. J'observai scrupuleusement de couper toutes les scènes qui pouvaient ressembler à celles de Regnard ; et cela n'a pas empêché de dire que j'avais copié les Ménechmes.
+
+Ce n'est pas là le défaut de cette petite comédie, qui pèche plutôt par le manque d'intrigue. Comme ce reproche est grave, je ne veux point en trop parler. D'ailleurs, de toutes mes pièces, celle des Jumeaux de Bergame a le plus réussi ; et je n'ai garde d'appeler du jugement du public.
+
+C'est à ce court recueil que je borne ma carrière dramatique : je la trouve trop difficile pour mon faible talent. J'ai fait de mon mieux : je n'ai pas trop bien fait ; c'est une raison de plus pour me reposer. Je me suis hasardé sur une mer orageuse avec une petite nacelle ; c'est une imprudence. Heureusement ma nacelle, après deux ou trois coups de vent, est rentrée saine et sauve dans le port ; j'en remercie le ciel, et je n'ai rien de mieux à faire que d'offrir mon petit bateau en actions de grâces au dieu qui m'a sauvé : ce dieu est le public ; ce recueil est ma nacelle.
+
+
+
+
+LES DEUX BILLETS
+
+PERSONNAGES
+Arlequin, amant d'Argentine.
+
+Argentine.
+
+Scapin, rival d'Arlequin.
+
+
+
+Comédie en un acte par Jean-Pierre Claris de Florian
+Représentée pour la première fois par les comédiens italiens en février 1779.
+
+
+La scène est à Paris, dans une place publique, où l'on voit la maison où demeure Argentine.
+
+
+
+
+Scène première
+Arlequin.
+Arlequin, seul, un billet à la main
+Voici la première fois que je suis bien aise de savoir lire. Quel bonheur ! elle m'aime. J'en suis sûr à présent ; elle l'a dit, elle l'a écrit, et Argentine ne peut pas mentir : elle a la bouche trop jolie et la main trop blanche pour tromper. Relisons encore son billet. (Il lit.) « Sois tranquille, mon bon ami ; ton rival ne doit te donner aucune inquiétude. Je t'aime. » Je t'aime ! Je n'ose pas baiser ce mot-là, de peur de l'effacer. (Il continue de lire.) « Mon cœur est à toi pour toujours : tu auras ma main quand tu voudras. » Quand je voudrai ! Je ne fais que le vouloir depuis que je la connais. Ma chère lettre ! ma bonne lettre ! (Il la baise.) Allons, plus d'inquiétude. Ce coquin de Scapin m'offusquait. Il fait semblant d'aimer Argentine ; et souvent ces amoureux menteurs ont de l'avantage sur les amoureux qui parlent vrai. Heureusement Argentine n'est pas de cet avis-là. Allons la remercier, et prendre jour pour notre mariage. Ah ! comme il sera beau ce jour-là ! (Il va et vient.) Il y a pourtant quelque chose qui me chagrine : Argentine a du bien ; je n'ai rien, moi : je voudrais être riche, ou qu'elle fut pauvre. Quand il y a, comme cela, de l'argent d'un côté, et qu'il n'y a que de l'amour de l'autre, je ne sais pas, mais cela ne va jamais si bien que lorsque tout est égal, et qu'il y a amour contre amour. J'ai beau faire, je ne peux pas devenir riche : tous les mois je mets mes gages à la loterie ; mes numéros restent toujours au fond du sac. J'en ai encore pris trois pour ce tirage-ci ; les voilà (Il tire un billet de loterie.) : 7, 19, 48. J'ai mis six francs sur ce terne-là : s'il sort, ma fortune est faite, et je l'offre à ma chère Argentine : s'il ne sort pas, au premier tirage, je prendrai tous les numéros, nous verrons s'il en sortira un. En attendant, allons trouver Argentine... Mais voici Scapin ; cachons ma lettre, et attendons qu'il soit parti. (Arlequin met ses deux billets dans la même poche.)
+
+Scène deuxième
+Scapin, Arlequin.
+Scapin
+Bonjour, Arlequin.
+
+Arlequin
+Serviteur, Monsieur.
+
+Scapin
+Comment, monsieur ! Tu me parles toujours comme si tu étais fâché. Je ne te ressemble pas, moi ; et...
+
+Arlequin
+Oh ! je sais fort bien que nous ne nous ressemblons guère.
+
+Scapin
+Mais tu n'y penses pas, mon ami : parce que nous aimons tous deux la même personne, faut-il que nous nous détestions ? Une femme ne vaut pas la peine que deux honnêtes gens se brouillent.
+
+Arlequin
+D'abord, pour que deux honnêtes gens puissent se brouiller, il faut qu'ils soient tous deux honnêtes gens ; et...
+
+Scapin
+Ah ! monsieur Arlequin...
+
+Arlequin
+Monsieur Arlequin ne vous aime pas : je vous le dis franchement. Tout mon bonheur dépend d'Argentine ; je ne sais rien, je ne veux rien, je ne peux rien que l'aimer : et vous, vous voudriez épouser son argent, vous faites semblant de désirer sa personne. Vous lui plairez peut-être plutôt que moi ; car un homme qui n'est point amoureux a toute sa tête pour plaire, au lieu que moi je n'ai rien. Tout cela me tracasse ; je voudrais vous savoir loin d'ici.
+
+Scapin
+Mon cher Arlequin, il faut pourtant s'accoutumer aux rivaux  : tu es beau garçon sans doute : mais il y a des gens courageux que cela n'effraye pas. Il faudrait bien prendre ton parti si Argentine ne rendait pas justice à ton mérite.
+
+Arlequin
+Je le prendrai, soyez tranquille. Bonsoir.
+
+Scapin
+Où vas-tu donc ?
+
+Arlequin
+Je vais voir tirer la loterie.
+
+Scapin
+Elle est tirée il y a plus d'une demi-heure. J'ai la liste dans ma poche : voici les numéros : 7, 20, 48, 12, 19.
+
+Arlequin
+Que dis-tu ? Attends. (Il tire son billet de loterie.) 7 en est-il ?
+
+Scapin
+Oui.
+
+Arlequin
+19 aussi ?
+
+Scapin
+Oui.
+
+Arlequin
+Et 48 aussi ?
+
+Scapin
+48 aussi.
+
+Arlequin
+Ah ! tu badines.
+
+Scapin
+Non, ma foi ; regarde toi-même.
+
+Arlequin
+Ma fortune est faite, mon terne est venu. Que d'argent je vais avoir ! C'est bon, mon mariage sera tout d'amour.
+
+Scapin
+Comment ! (Il regarde le billet d'Arlequin.) Il a, ma foi, raison. Ce drôle-là est bien heureux.
+
+Arlequin
+Il y avait longtemps que je guettais ce terne-là ; je suis sûr que j'ai passé près de lui plus de trente fois : à la fin je l'ai attrapé. (Il remet son billet dans la même poche.)
+
+Scapin, à part
+Si je pouvais accrocher ce billet-là !
+
+Arlequin
+Adieu ; je vais me faire payer, car je dois placer tout de suite cet argent, non pas sur ma tête, mais sous les plus jolis petits pieds du monde.
+
+Scapin
+Attends donc, tu ne sais seulement pas où il faut aller pour te faire payer.
+
+Arlequin
+Non.
+
+Scapin
+Ecoute : je vais t'indiquer où demeure celui qui paye. (Pendant tout le reste de la scène, Scapin cherche à voler le billet d'Arlequin, et celui-ci le dérange toujours.) Tu sais bien où est le Luxembourg ?
+
+Arlequin
+Oui.
+
+Scapin
+Eh bien, c'est là qu'on paye.
+
+Arlequin
+Au Luxembourg ?
+
+Scapin
+Oui... C'est-à-dire... non... Avant d'y entrer, à droite, tu verras une porte cochère... Tiens... voilà le Luxembourg ; là, à droite, il y a une porte cochère... jaune.
+
+Arlequin
+Une porte jaune ?
+
+Scapin, vite
+Oui, tu la reconnaîtras tout de suite. Tu frapperas, l'on t'ouvrira ; tu entres, tu vois un escalier à gauche, tu montes ; tu trouves au premier une petite porte grise, une sonnette avec un pied de biche ; tu sonnes : vient un domestique. Je demande à parler à monsieur le directeur. Donnez-vous la peine d'entrer. On te mène à son bureau, tu lui montres ton billet. Vite de l'argent à monsieur, trente sacs de mille francs. Les voilà, monsieur. Voulez-vous bien vous donner la peine de regarder si le compte y est ? On peut se tromper : voyez, voyez... (Arlequin se baisse, et regarde par terre ; Scapin vole le billet.) On te prend ton billet, et tout est fini.
+
+Arlequin
+Oh ! c'est clair. Vis-à-vis, porte jaune, porte grise, pied de biche, domestique, l'escalier, trente sacs de mille francs, voyez si le compte y est... C'est clair. J'y cours tout de suite. Pardi ! sans toi j'aurais été bien embarrassé : je te remercie.
+
+Scapin
+Il n'y a pas de quoi. Bonsoir, mon ami ; n'oublie pas la porte jaune.
+
+Arlequin
+Oh ! je la trouverai bien. (Il sort.)
+
+Scène troisième
+Scapin.
+Scapin, seul
+Si nous n'avions pas le soin d'y mettre ordre, il n'y aurait que ces imbéciles-là d'heureux. On a bien raison de dire que la fortune n'est que pour les bêtes : j'ai mis cent fois à la loterie, jamais n'ai pu attraper un lot ; voici le premier. De quel bureau est-il ? (Il déplie le billet.) Ah ciel ! je me suis trompé : il faut être bien malheureux ! Comment ! je ne peux gagner à la loterie, même en volant les billets qui ont gagné ! Celui-ci n'est plus qu'une lettre. (Il lit.) « Sois tranquille, mon bon ami ; ton rival ne doit te donner aucune inquiétude. Je t'aime : mon coeur est à toi pour toujours : tu auras ma main quand tu voudras. » Voilà qui est clair : ce billet est d'Argentine. Ah ! il aura sa main quand il voudra ! Cela n'est pas sûr : je vais tirer parti de ma gaucherie ; et puisque j'ai manqué le billet de loterie, je ferai valoir celui-ci. (Il frappe à la porte d'Argentine.) Mademoiselle Argentine...
+
+Scène quatrième
+Argentine, Scapin.
+Argentine
+Ah ! C'est vous, monsieur Scapin !
+
+Scapin
+Oui, mademoiselle ; toujours le même...
+
+Argentine
+Tant pis pour vous.
+
+Scapin
+Toujours malheureux, et ne vous adorant pas moins.
+
+Argentine
+Vous êtes bien bon, car je ne vous en aime pas davantage.
+
+Scapin
+Je ne le sais que trop, mademoiselle ; et j'en suis d'autant plus affligé, que ce sort-là n'est pas commun à tous vos amants. Il en est un que votre coeur a choisi, à qui vous écrivez des lettres bien tendres.
+
+Argentine
+Comment ? Que voulez-vous dire ? Monsieur Scapin, vous avez grand tort de sortir de votre personnage ordinaire ; il vaut encore mieux être ennuyeux qu'impertinent.
+
+Scapin
+Pardon, mademoiselle ; je voulais vous parler d'une certaine lettre qui court le monde, et que les méchants prétendent que vous avez écrite à M. Arlequin. Je l'ai cette lettre ; je vous la rapportais : mais je me garderai bien de rien dire, puisque ce serait manquer au respect que je vous dois.
+
+Argentine
+Vous me le rapportez ! Ah ! mon cher Scapin, expliquez-vous, je vous supplie : s'il est vrai que vous m'aimez, vous jugez bien...
+
+Scapin
+Sûrement, je vous aime ; et j'espère qu'aujourd'hui vous reconnaîtrez vos injustices à mon égard. Vous connaissez mademoiselle Violette, qui demeure ici près ? M. Arlequin en est amoureux ; et pour lui donner une preuve certaine de son attachement, il lui a sacrifié un billet qu'il a dit être de vous. Le voici.
+
+Argentine
+Ah ciel !
+
+Scapin
+Mademoiselle Violette, qui ne vous aime pas, parce qu'elle n'est pas aussi jolie que vous, n'a rien eu de plus pressé que de confier ce billet à tous ses amis. Ce matin, en traversant le Palais-Royal, j'ai entendu des éclats de rire, et j'ai vu du monde attroupé : c'étaient M. Mezzetin, M. Trivelin, M. Pascariel, qui se passaient votre billet. L'un faisait une épigramme, l'autre disait un bon mot. J'avoue que je n'ai pas été maître de ma colère ; vous me le pardonnerez bien. Je m'en suis pris à tous les trois, surtout à Trivelin, qui était le possesseur du billet ; je l'ai menacé, il a eu peur, il me l'a rendu. Je vous le rapportais ; et, pour prix de mon zèle, vous savez la manière dont vous m'avez reçu.
+
+Argentine
+Je n'ose vous faire des excuses ni vous remercier ; j'ai trop à rougir de ce que je vous dois, et de ce que j'ai fait pour un autre.
+
+Scapin
+Mademoiselle, le bonheur de ma vie aurait été de devoir votre cœur à vous-même, et non pas au désir de vous venger ; mais je suis trop amoureux pour être si délicat ; et je serai encore le plus heureux des hommes si la perfidie d'Arlequin...
+
+Argentine
+Ah ! ne me parlez pas de lui ; son nom seul me met en fureur. Si vous saviez jusqu'à quel point il a poussé la fausseté...! Non, il n'est pas possible de l'imaginer. Et moi, qui croyais si bien le connaître...! Jamais je ne me le pardonnerai, et je m'en souviendrai toujours pour le haïr davantage.
+
+Scapin
+Contenez-vous, car je l'entends.
+
+Argentine
+Je ne veux pas le voir.
+
+Scapin
+Au contraire, restez pour le bien humilier et le punir comme il le mérite.
+
+Argentine
+Jamais je n'y parviendrai.
+
+Scène cinquième
+Arlequin, Argentine, Scapin.
+Arlequin, sans voir Argentine
+Le diable t'emporte avec ta porte jaune ! J'ai frappé à toutes les portes jaunes et à toutes les portes à droite, jamais je n'ai pu trouver un directeur. Viens me conduire toi-même... (Il aperçoit Argentine.) Ah, vous voilà ! Que j'en suis bien aise ! Je suis déjà venu vous chercher ; en m'en allant je vous cherchais encore ; partout je vous cherche toujours. J'ai tant de choses à vous dire ! Mais quand je vous vois, je ne m'en souviens plus ; quand je suis loin de vous, elles reviennent si vite que cela m'étouffe. Je crois que je n'aurai qu'un moyen de m'en souvenir : c'est de vous regarder les yeux fermés ; car autrement il m'est impossible de penser à autre chose qu'à vous voir. (Argentine ne répond rien. Arlequin, après un long silence, se retourne vers Scapin.) Va-t'en, toi ; tu me gênes.
+
+Argentine
+Non, il peut rester, il ne me gênera pas.
+
+Scapin
+Après la manière dont mademoiselle s'est expliquée sur ton compte, après les assurances par écrit qu'elle t'a données sur sa tendresse, il me semble que rien ne doit te gêner.
+
+Arlequin, bas, à Argentine
+Vous lui avez donc tout conté ? Hé !... vous lui avez tout dit ?... (Scapin rit.) Il a l'air de se douter de quelque chose. Monsieur Scapin, expliquons-nous, je vous prie : vous aimez mademoiselle Argentine, n'est-il pas vrai ?
+
+Scapin
+Sans doute, je l'aime ; elle le sait bien.
+
+Arlequin
+Eh bien ! moi, je l'aime aussi ; et je n'aime pas qu'on l'aime. Ainsi, puisque nous voilà devant elle, elle va nous dire quel est celui de nous deux qui lui a le plus plu, à condition que l'autre se retirera sans bruit, et ne traversera plus l'heureux qu'elle aura choisi. Y consentez-vous, monsieur Scapin ?
+
+Scapin
+Touchez là, monsieur Arlequin. Souvenez-vous de ce que vous dites : mademoiselle va choisir, et celui qu'elle refusera n'aura plus la moindre prétention.
+
+Arlequin
+De tout mon cœur. (Il rit.) Oh ! qu'il est bête !
+
+Scapin
+Allons, mademoiselle, vous venez d'entendre nos conventions ; c'est à vous à nous juger.
+
+Arlequin
+Oui, c'est à vous à nous juger. (À part.) Oh ! la bestiasse.
+
+Argentine, à part
+Je serai malheureuse ; mais je veux me venger.
+
+Scapin
+Eh bien, mademoiselle ?
+
+Argentine
+Eh bien ! je vais m'expliquer. Mon choix est fait depuis longtemps : je l'ai même écrit à celui que j'ai choisi : celui de vous deux qui a un billet de moi n'a qu'à me le montrer, je lui donne ma main.
+
+Arlequin
+C'est clair, cela. (Scapin fouille dans sa poche.) Oui ; cherche, cherche, tu le trouveras... Le voici, ce billet (Il tire le billet de loterie.), le voici. Ainsi, monsieur Scapin, adieu, on n'aura plus l'honneur de vous revoir.
+
+Argentine, vivement
+Voyons... C'est un billet de loterie.
+
+Arlequin
+Ah ! oui. Vous ne savez pas, le bonheur m'a écrasé aujourd'hui ; j'ai gagné... Mais où ai-je donc mis mon autre billet ? Celui-là n'est pas le meilleur. L'aurais-je perdu ?
+
+Scapin
+C'est peut-être moi qui l'ai trouvé. Tenez, mademoiselle, voilà un billet que je crois de vous.
+
+Argentine, lisant
+« Sois tranquille, mon bon ami... »
+
+Arlequin
+Ah ! c'est le mien qu'on m'a volé.
+
+Argentine
+Qu'on t'a volé ? Tu crois donc m'abuser jusqu'au dernier moment ? Non, traître, je te connais. Va chez Violette, va lui porter mes lettres, lui dire que tu me sacrifies à elle, et reviens ensuite me jurer que tu m'adores ; ose y revenir, me parler, me regarder seulement. Traître, scélérat, tu m'as trompée ; mais tu ne m'abuseras plus, et ma vengeance ne s'en tiendra pas là. Et vous, Scapin, gardez ce billet ; j'ai promis ma main à celui qui en serait possesseur, je tiendrai ma parole, vous pouvez y compter. (Elle sort.)
+
+Scène sixième
+Arlequin, Scapin.
+(Ils se regardent sans rien dire)
+
+Arlequin
+Que veut dire tout ceci ? D'où vient que je n'ai pas mon billet, que tu l'as, toi ; et qu'à propos de rien Argentine me traite comme cela ?
+
+Scapin
+Je n'en sais rien, mon ami. Argentine m'a donné elle-même ce billet, en me disant que c'était moi qu'elle voulait épouser.
+
+Arlequin
+Mais ce billet est à moi ; je le reconnais bien : il est presque tout effacé, tant nous nous étions embrassés. Comment Argentine a-t-elle pu l'avoir ? Elle m'a fait entendre que j'aimais Violette, moi qui n'ai jamais rien aimé dans le monde qu'Argentine. Suis-je assez malheureux ! Ah ! je le disais bien ce matin, que j'étais trop heureux ; cela ne pouvait pas durer. Tu vas donc l'épouser, toi ?
+
+Scapin
+Mais oui, puisqu'elle le veut.
+
+Arlequin
+Tiens, je te conseille de t'en aller, car je pourrais fort bien te rosser de manière à retarder ton mariage. Tout ceci n'est peut-être qu'une friponnerie de ta part : je l'avais dans ma poche, ce billet ; et tu me l'auras volé.
+
+Scapin
+Ah ! mon ami, comme tu me connais mal ! Tu avais dans la même poche un billet de loterie qui vaut dix mille écus ; assurément, si j'avais pu te voler, tu sens bien que je l'aurais pris de préférence.
+
+Arlequin
+Plût à Dieu qu'on me l'eût pris, et qu'on m'eût laissé ma lettre ! Que deviendrai-je à présent ! Elle ne m'aime plus, elle va en épouser un autre. (Il pleure.) Ah ! ah ! je vais être tout seul dans le monde. Allons, il faut tâcher de mourir avant que le mariage soit fait. (Il pleure.)
+
+Scapin
+Tu me fais pitié, mon ami ; et mon attachement pour toi l'emporte sur mon amour. Écoute : Argentine a promis d'épouser celui qui lui rapporterait son billet : je l'ai ce billet ; je te le donnerai, si tu veux me donner celui de la loterie.
+
+Arlequin
+Donne, donne vite ; tiens, le voilà. De ma vie je n'ai fait une si bonne affaire.
+
+Scapin
+Ni moi non plus. (Ils changent de billet.)
+
+Arlequin, s'adressant à celui d'Argentine
+Ah ! vous voilà donc, monsieur ! Et pourquoi m'avez-vous quitté ? Petit ingrat, petit étourdi, parlez : irez-vous encore courir le monde ? Irez-vous encore vous mettre prisonnier chez les Arabes, afin que je paye votre rançon ? Ne vous en avisez plus, car je n'ai plus rien. Allons je veux bien vous pardonner vos fredaines ; embrassons-nous (Il le baise.), et que tout soit fini.
+
+Scapin
+Ah ça, le billet est à moi ?
+
+Arlequin
+Eh ! sans doute : c'est dit, cela. Je t'ai donné un billet au porteur, tu m'as donné un billet au porteur ; je souhaite seulement que le mien soit payé aussi aisément que le tien. Mais j'ai peur que ce drôle-là ne décampe encore ; je vais le reporter à sa maîtresse. Va-t-en, je t'en prie, car je voudrais lui parler seul.
+
+Scapin
+Oh ! cela est juste. Adieu, mon ami ; en vérité, je suis charmé de t'avoir fait plaisir. Voilà comme je suis, moi, j'ai le cœur tendre ; jamais je n'ai pu résister à des larmes.
+
+Arlequin
+Va, va te faire payer ; ton cœur est à cette porte jaune où l'on donne de l'argent.
+
+Scapin, à part
+Cachons-nous au coin de la rue, pour voir comment il sera reçu.
+
+Scène septième
+Argentine, Arlequin, Scapin (caché).
+Arlequin, frappe
+Qui est là ?
+
+Argentine, à la fenêtre
+Comment ! c'est vous ? Vous osez encore regarder ma maison ! Vous espérez peut-être y entrer ! Vous croyez...
+
+Arlequin
+Non, je ne demande pas d'entrer : vous êtes trop en colère ; je ne veux vous dire que quatre mots : donnez-vous la peine de descendre, et...
+
+Argentine
+Je ne veux rien entendre : laissez-moi en repos, et délivrez-moi de votre odieux visage. (Elle ferme la fenêtre.)
+
+Scapin, à part
+Bon ; je vais me faire payer, et je reviens trouver Argentine : j'espère bien l'épouser, et avoir les dix mille écus.
+
+Scène huitième
+Arlequin.
+Arlequin, seul
+Je suis bien malheureux ! je ne pourrai seulement pas lui montrer mon billet ! Si je perds ce moment-ci, tout est perdu ; car ce coquin de Scapin va revenir, et il sera toujours ici. Allons, du courage ; je sens que j'étouffe, que je crève de chagrin : mais il faut remettre ma mort à ce soir. Voyons encore... (Il frappe.) Qui est là ?
+
+Scène neuvième
+Argentine à la fenêtre, Arlequin.
+Argentine
+Encore vous !
+
+Arlequin
+Ne vous fâchez pas : je ne demande plus de causer avec vous puisque vous ne le voulez pas ; mais je vous prie seulement de reprendre votre billet.
+
+Argentine
+Mon billet ! Comment ! c'est vous qui l'avez ? Mais ce malheureux billet court le monde ! Attendez, je descends.
+
+Arlequin
+Ah ! je commence à reprendre un peu d'espoir. Je n'ai rien à me reprocher : je l'aime, je l'ai toujours aimée, elle m'a aimé : quand on consent à écouter quelqu'un qu'on a aimé et qui nous aime, c'est qu'on a envie de le croire... La voilà.
+
+Argentine
+Souvenez-vous que je ne veux point d'explication sur le passé. Dites-moi seulement comment il se fait que vous ayez mon billet.
+
+Arlequin
+Tenez, le voilà : il est bien à moi, il fait toute mon espérance et tout mon bonheur : mais, comme le bonheur ne vaut rien quand on est heureux sans votre permission, je vous le rendrai si vous ne consentez pas que je le garde.
+
+Argentine
+Non, assurément, je n'y consentirai pas. (Elle prend le billet.) Vous en avez usé d'une manière si indigne ! aller sacrifier mon billet à une autre femme !
+
+Arlequin
+Une autre femme ? Ah ! mon cœur m'est témoin qu'il n'y a pour moi qu'une femme dans le monde ; et quand je prends mon cœur à témoin, c'est tout comme si je vous prenais vous-même.
+
+Argentine
+Mais enfin, hier je vous l'ai envoyé ce billet, et aujourd'hui Scapin me l'a rapporté.
+
+Arlequin
+Scapin vous l'a rapporté?... Voyez le coquin ! il m'a dit que c'était vous qui le lui aviez donné. Je suis sûr à présent qu'il me l'a volé.
+
+Argentine, à part
+Scapin en est bien capable. Ah ! que je voudrais qu'il dît vrai !
+
+Arlequin
+Mais songez donc qu'il y a deux ans que je vous aime ; que vous m'avez toujours vu le même. Croyez-vous que j'aurais pu me déguiser si longtemps ? Ma bonne amie... (Argentine le regarde sévèrement.) Mademoiselle, pardonnez-moi d'avoir été volé.
+
+Argentine
+Mais comment se fait-il que vous avez ce billet ? Qui vous l'a donné ?
+
+Arlequin
+La loterie.
+
+Argentine
+La loterie !... Est-ce que l'on a mis mon billet à la loterie ? Scapin l'avait tout à l'heure ; il vous l'a donc rendu ?
+
+Arlequin
+Non pas rendu, mais vendu.
+
+Argentine
+Expliquez-vous.
+
+Arlequin
+Tenez, il faut tout vous dire : j'avais gagné ce matin un terne de six francs à la loterie...
+
+Argentine
+Un terne de six francs ! cela fait une somme prodigieuse.
+
+Arlequin
+Oui, ils disent que cela fait beaucoup d'argent. Heureusement, je n'étais pas encore payé. Scapin, voyant que je me désolais, m'a proposé de troquer mon billet de loterie contre votre billet.
+
+Argentine, vivement
+Et tu l'as fait ?
+
+Arlequin
+J'aurais encore donné du retour, s'il m'en avait demandé.
+
+Argentine, l'embrassant
+Mon cher ami, va, tu es innocent : je t'aimerai toute ma vie ; ce dernier trait m'a fait sentir ce que tu vaux.
+
+Arlequin
+Comment diable ! vous estimez donc bien les gens qui font de bons marchés ?
+
+Argentine
+Je te demande pardon de ne pas t'avoir connu : garde mon billet. Je te répète, je te jure que je t'aime, que je n'aimerai jamais que toi ; et dès ce soir nous serons époux.
+
+Arlequin
+Vous me raimez ! Ah ! quelle joie ! (Il lui baise la main.) Tiens, ma bonne amie, ne me le répète plus ; il m'arriverait encore quelque malheur. Laisse-moi te regarder, je le verrai bien sans que tu me le dises.
+
+Argentine
+Va, ton bonheur est certain, du moins tant que mon cœur te suffira.
+
+Arlequin
+Ah ! comme il y a longtemps que tu n'as pas parlé comme cela ! Écoute, fais-moi le plaisir de me dire comment il y a là. (Il lui montre la lettre.)
+
+Argentine, lisant
+« Je t'aime. »
+
+Arlequin, lazzi
+Hé, comment dis-tu ?
+
+Argentine
+« Je t'aime. »
+
+Arlequin
+Voyons que je lise aussi, moi. Je je (Il épelle.) ta ta, i m e, aime, t'aime, je t'aime, je t'aime... Ce mot-là est trop court, je voudrais qu'il tînt tout l'alphabet.
+
+Argentine
+Je te le dirai toute ma vie. Mais laisse-moi m'occuper de te faire rendre le billet qu'il t'a volé.
+
+Arlequin
+Quoi ? quel billet ?
+
+Argentine
+Ton billet de loterie.
+
+Arlequin
+Oh ! non, ma bonne amie, le marché est fait ; tiens, n'en parlons plus : il voudrait peut-être revenir là-dessus, et ravoir celui-ci. Non, non, tout est fini : tu m'aimes... ma fortune est faite.
+
+Argentine
+Si... j'entends Scapin. Cache-toi dans notre maison, et n'en sors que lorsque je t'appellerai.
+
+Arlequin, entrant dans la maison
+Appelle-moi donc bien vite.
+
+Argentine
+Oui, oui, laisse-moi faire.
+
+Arlequin, revenant
+M'as-tu appelé ?
+
+Argentine
+Eh ! non, mon ami ; cache-toi donc, le voici : le fripon tient encore le billet.
+
+Scapin, à part, le billet à la main
+Ces diables de directeurs vous renvoient toujours au lendemain... (Il aperçoit Argentine et met le billet dans sa poche.) Ah ! j'allais chez vous, ma belle Argentine.
+
+Argentine
+Je suis aussi bien aise de vous rencontrer. Vous ne savez pas ce qui s'est passé pendant votre absence ?
+
+
+
+Scène dixième
+Scapin, Argentine.
+Scapin
+Non : qu'est-il arrivé ?
+
+Argentine
+Ce malheureux Arlequin a eu l'insolence de se présenter chez moi ; je l'ai reçu de manière à lui ôter l'envie de revenir.
+
+Scapin, riant
+J'ai vu tout cela, mademoiselle : j'étais au coin de la rue lorsque vous avez fermé votre fenêtre sans vouloir l'entendre. Mais parlons de quelque chose qui m'intéresse davantage : vous savez bien la promesse que vous m'avez faite tantôt.
+
+Argentine, à part
+Bon. (Haut.) Oui, je vous tiendrai parole ; mais je suis bien aise de m'expliquer auparavant avec vous. Je prends un époux pour être aimée ; ainsi, mon cher Scapin, si vos sentiments pour moi sont bien sincères, j'espère que vous ferez mon bonheur. Grâce aux bontés de ma jeune maîtresse, mademoiselle Rosalba, je suis riche, et je n'exige pas que mon époux le soit ; je veux lui donner mon cœur et tout mon bien, et je ne lui demande que son amour. Dites-moi donc bien franchement si vous m'aimez, et si vous m'aimez uniquement.
+
+Scapin
+Ah ! mademoiselle, je voudrais savoir tous les serments possibles, pour vous jurer que toute ma vie...
+
+Argentine
+Écoutez. Je suis méfiante : en venant ici, vous aviez un papier à la main, que vous avez caché avec soin ; je suis sûre que c'est une lettre de femme.
+
+Scapin
+Une lettre de femme ! moi ? Je peux vous répondre...
+
+Argentine
+Je veux que vous me la donniez, je l'exige ; autrement il faut renoncer à moi. Mademoiselle Violette a bien trouvé un amant qui lui sacrifiait mes billets ; je veux être aussi heureuse que mademoiselle Violette.
+
+Scapin
+Il me sera difficile de vous satisfaire ; car, dans tout le cours de ma vie, jamais femme ne m'a écrit.
+
+Argentine
+Ceci est un détour pour ne pas me montrer le papier que vous teniez à la main ; et votre refus me confirme ce que je pensais.
+
+Scapin
+Assurément je voudrais que vous missiez mon amour à des épreuves plus difficiles. Vous allez être bien étonnée quand vous verrez que ce n'est qu'un billet de loterie. (Argentine s'en saisit.)
+
+Argentine
+Je le tiens donc, et j'ai trompé le plus fourbe des hommes ! Arlequin ! Arlequin !...
+
+
+
+Scène onzième
+Arlequin, Argentine, Scapin
+Arlequin
+Quoi ? qu'y a-t-il ? Vous a-t-il volé quelque chose ?
+
+Argentine
+Non, mon ami ; j'ai au contraire rattrapé ton billet. Le voilà : tu es à présent le plus riche de nous deux, et c'est moi dont tu fais la fortune. Et vous, monsieur Scapin, qui me croyiez votre dupe, et qui êtes la mienne, je vous exhorte à faire toujours d'aussi bons marchés que celui que vous aviez fait. Mais il faut apprendre à mieux conserver le fruit de votre habileté. Adieu : nous allons nous marier, et jouir de nos richesses.
+
+Arlequin
+Ce pauvre diable ! il me fait pitié. Écoute, Scapin, madame a besoin d'un laquais ; si tu veux, nous te donnerons la préférence.
+
+Argentine
+Ah ! pour cela non : il n'est pas assez fidèle. Adieu, monsieur Scapin. M. Pandolfe, le père de ma maîtresse, retourne à Bergame dans peu de jours ; Arlequin et moi nous l'y suivrons. Si vous avez quelque commission à nous donner pour ce pays-là, nous nous en chargerons volontiers : mais si vous voulez réussir dans celui-ci, souvenez-vous bien qu'il ne faut jamais brouiller deux amants, parce qu'ils se raccommodent toujours aux dépens de celui qui les a brouillés. (Ils sortent.)
+
+
+
+Scène douzième
+Scapin
+Scapin, seul
+Ce qui me console, c'est que je n'ai rien risqué du mien ; et je pouvais beaucoup gagner.
+
+FIN DES DEUX BILLETS
+
+
+
+
+
+JEANNOT ET COLIN
+
+
+(1764)
+
+
+
+
+
+
+Plusieurs personnes dignes de foi ont vu Jeannot et Colin à l’école dans la ville d’Issoire, en Auvergne, ville fameuse dans tout l’univers par son collège et par ses chaudrons. Jeannot était fils d’un marchand de mulets très-renommé ; Colin devait le jour à un brave laboureur des environs, qui cultivait la terre avec quatre mulets, et qui, après avoir payé la taille, le taillon, les aides et gabelles, le sou pour livre, la capitation et les vingtièmes, ne se trouvait pas puissamment riche au bout de l’année.
+
+Jeannot et Colin étaient fort jolis pour des Auvergnats ; ils s’aimaient beaucoup, et ils avaient ensemble de petites privautés, de petites familiarités, dont on se ressouvient toujours avec agrément quand on se rencontre ensuite dans le monde.
+
+Le temps de leurs études était sur le point de finir, quand un tailleur apporta à Jeannot un habit de velours à trois couleurs, avec une veste de Lyon de fort bon goût ; le tout était accompagné d’une lettre à monsieur de La Jeannotière. Colin admira l’habit, et ne fut point jaloux ; mais Jeannot prit un air de supériorité qui affligea Colin. Dès ce moment Jeannot n’étudia plus, se regarda au miroir, et méprisa tout le monde. Quelque temps après un valet de chambre arrive en poste, et apporte une seconde lettre à M. le marquis de La Jeannotière : c’était un ordre de monsieur son père de faire venir monsieur son fils à Paris. Jeannot monta en chaise en tendant la main à Colin avec un sourire de protection assez noble. Colin sentit son néant, et pleura. Jeannot partit dans toute la pompe de sa gloire.
+
+Les lecteurs qui aiment à s’instruire doivent savoir que M. Jeannot, le père, avait acquis assez rapidement des biens immenses dans les affaires. Vous demandez comment on fait ces grandes fortunes ? C’est parce qu’on est heureux. M. Jeannot était bien fait, sa femme aussi, et elle avait encore de la fraîcheur. Ils allèrent à Paris pour un procès qui les ruinait, lorsque la fortune, qui élève et qui abaisse les hommes à son gré, les présenta à la femme d’un entrepreneur des hôpitaux des armées, homme d’un grand talent, et qui pouvait se vanter d’avoir tué plus de soldats en un an que le canon n’en fait périr en dix. Jeannot plut à madame ; la femme de Jeannot plut à monsieur. Jeannot fut bientôt de part dans l’entreprise ; il entra dans d’autres affaires. Dès qu’on est dans le fil de l’eau, il n’y a qu’à se laisser aller ; on fait sans peine une fortune immense. Les gredins, qui du rivage vous regardent voguer à pleines voiles, ouvrent des yeux étonnés ; ils ne savent comment vous avez pu parvenir ; ils vous envient au hasard, et font contre vous des brochures que vous ne lisez point. C’est ce qui arriva à Jeannot le père, qui fut bientôt M. de La Jeannotière, et qui, ayant acheté un marquisat au bout de six mois, retira de l’école monsieur le marquis son fils, pour le mettre à Paris dans le beau monde.
+
+Colin, toujours tendre, écrivit une lettre de compliments à son ancien camarade, et lui fit ces lignes pour le congratuler. Le petit marquis ne lui fit point de réponse : Colin en fut malade de douleur.
+
+Le père et la mère donnèrent d’abord un gouverneur au jeune marquis : ce gouverneur, qui était un homme du bel air, et qui ne savait rien, ne put rien enseigner à son pupille. Monsieur voulait que son fils apprît le latin, madame ne le voulait pas. Ils prirent pour arbitre un auteur qui était célèbre alors par des ouvrages agréables. Il fut prié à dîner. Le maître de la maison commença par lui dire d’abord : « Monsieur, comme vous savez le latin, et que vous êtes un homme de la cour…
+
+— Moi, monsieur, du latin ! je n’en sais pas un mot, répondit le bel esprit, et bien m’en a pris ; il est clair qu’on parle beaucoup mieux sa langue quand on ne partage pas son application entre elle et les langues étrangères. Voyez toutes nos dames, elles ont l’esprit plus agréable que les hommes ; leurs lettres sont écrites avec cent fois plus de grâce ; elles n’ont sur nous cette supériorité que parce qu’elles ne savent pas le latin.
+
+— Eh bien ! n’avais-je pas raison ? dit madame. Je veux que mon fils soit un homme d’esprit, qu’il réussisse dans le monde ; et vous voyez bien que, s’il savait le latin, il serait perdu. Joue-t-on, s’il vous plaît, la comédie et l’opéra en latin ? Plaide-t-on en latin quand on a un procès ? Fait-on l’amour en latin ? » Monsieur, ébloui de ces raisons, passa condamnation, et il fut conclu que le jeune marquis ne perdrait point son temps à connaître Cicéron, Horace, et Virgile. Mais qu’apprendra-t-il donc ? car encore faut-il qu’il sache quelque chose ; ne pourrait-on pas lui montrer un peu de géographie ? « À quoi cela lui servira-t-il ? répondit le gouverneur. Quand monsieur le marquis ira dans ses terres, les postillons ne sauront-ils pas les chemins ? Ils ne l’égareront certainement pas. On n’a pas besoin d’un quart de cercle pour voyager, et on va très-commodément de Paris en Auvergne, sans qu’il soit besoin de savoir sous quelle latitude on se trouve.
+
+— Vous avez raison, répliqua le père ; mais j’ai entendu parler d’une belle science qu’on appelle, je crois, l’astronomie.
+
+— Quelle pitié ! repartit le gouverneur ; se conduit-on par les astres dans ce monde ? et faudra-t-il que monsieur le marquis se tue à calculer une éclipse, quand il la trouve à point nommé dans l’almanach, qui lui enseigne de plus les fêtes mobiles, l’âge de la lune, et celui de toutes les princesses de l’Europe ? »
+
+Madame fut entièrement de l’avis du gouverneur. Le petit marquis était au comble de la joie ; le père était très-indécis. « Que faudra-t-il donc apprendre à mon fils ? disait-il.
+
+— À être aimable, répondit l’ami que l’on consultait ; et s’il sait les moyens de plaire, il saura tout : c’est un art qu’il apprendra chez madame sa mère, sans que ni l’un ni l’autre se donnent la moindre peine. »
+
+Madame, à ce discours, embrassa le gracieux ignorant, et lui dit : « On voit bien, monsieur, que vous êtes l’homme du monde le plus savant ; mon fils vous devra toute son éducation : je m’imagine pourtant qu’il ne serait pas mal qu’il sût un peu d’histoire.
+
+— Hélas ! madame, à quoi cela est-il bon ? répondit-il ; il n’y a certainement d’agréable et d’utile que l’histoire du jour. Toutes les histoires anciennes, comme le disait un de nos beaux esprits[1], ne sont que des fables convenues ; et pour les modernes, c’est un chaos qu’on ne peut débrouiller. Qu’importe à monsieur votre fils que Charlemagne ait institué les douze pairs de France, et que son successeur ait été bègue[2] ?
+
+— Rien n’est mieux dit ! s’écria le gouverneur : on étouffe l’esprit des enfants sous un amas de connaissances inutiles ; mais de toutes les sciences la plus absurde, à mon avis, et celle qui est la plus capable d’étouffer toute espèce de génie : c’est la géométrie. Cette science ridicule a pour objet des surfaces, des lignes, et des points, qui n’existent pas dans la nature. On fait passer en esprit cent mille lignes courbes entre un cercle et une ligne droite qui le touche, quoique dans la réalité on n’y puisse pas passer un fétu. La géométrie, en vérité, n’est qu’une mauvaise plaisanterie. »
+
+Monsieur et madame n’entendaient pas trop ce que le gouverneur voulait dire ; mais ils furent entièrement de son avis.
+
+« Un seigneur comme monsieur le marquis, continua-t-il, ne doit pas se dessécher le cerveau dans ces vaines études. Si un jour il a besoin d’un géomètre sublime pour lever le plan de ses terres, il les fera arpenter pour son argent. S’il veut débrouiller l’antiquité de sa noblesse, qui remonte aux temps les plus reculés, il enverra chercher un bénédictin. Il en est de même de tous les arts. Un jeune seigneur heureusement né n’est ni peintre, ni musicien, ni architecte, ni sculpteur ; mais il fait fleurir tous ces arts en les encourageant par sa magnificence. Il vaut sans doute mieux les protéger que de les exercer ; il suffit que monsieur le marquis ait du goût ; c’est aux artistes à travailler pour lui ; et c’est en quoi on a très-grande raison de dire que les gens de qualité (j’entends ceux qui sont très-riches) savent tout sans avoir rien appris, parce qu’en effet ils savent à la longue juger de toutes les choses qu’ils commandent et qu’ils payent ».
+
+L’aimable ignorant prit alors la parole, et dit : « Vous avez très-bien remarqué, madame, que la grande fin de l’homme est de réussir dans la société. De bonne foi, est-ce par les sciences qu’on obtient ce succès ? S’est-on jamais avisé dans la bonne compagnie de parler de géométrie ? Demande-t-on jamais à un honnête homme quel astre se lève aujourd’hui avec le soleil ? S’informe-t-on à souper si Clodion le Chevelu passa le Rhin ?
+
+— Non, sans doute, s’écria la marquise de La Jeannotière, que ses charmes avaient initiée quelquefois dans le beau monde ; et monsieur mon fils ne doit point éteindre son génie par l’étude de tous ces fatras, mais enfin que lui apprendra-t-on ? Car il est bon qu’un jeune seigneur puisse briller dans l’occasion, comme dit monsieur mon mari. Je me souviens d’avoir ouï dire à un abbé que la plus agréable des sciences était une chose dont j’ai oublié le nom, mais qui commence par un B.
+
+— Par un B, madame ? ne serait-ce point la botanique ?
+
+— Non, ce n’était point de botanique qu’il me parlait ; elle commençait, vous dis-je, par un B, et finissait par un on.
+
+— Ah ! j’entends, madame ; c’est le blason : c’est, à la vérité, une science fort profonde ; mais elle n’est plus à la mode depuis qu’on a perdu l’habitude de faire peindre ses armes aux portières de son carrosse ; c’était la chose du monde la plus utile dans un État bien policé. D’ailleurs, cette étude serait infinie : il n’y a point aujourd’hui de barbier qui n’ait ses armoiries ; et vous savez que tout ce qui devient commun est peu fêté. » Enfin, après avoir examiné le fort et le faible des sciences, il fut décidé que monsieur le marquis apprendrait à danser[3].
+
+La nature, qui fait tout, lui avait donné un talent qui se développa bientôt avec un succès prodigieux : c’était de chanter agréablement des vaudevilles. Les grâces de la jeunesse, jointes à ce don supérieur, le firent regarder comme le jeune homme de la plus grande espérance. Il fut aimé des femmes ; et ayant la tête toute pleine de chansons, il en fit pour ses maîtresses. Il pillait Bacchus et l’Amour dans un vaudeville, la nuit et le jour dans un autre, les charmes et les alarmes dans un troisième ; mais, comme il y avait toujours dans ses vers quelques pieds de plus ou de moins qu’il ne fallait, il les faisait corriger moyennant vingt louis d’or par chanson ; et il fut mis dans l’Année littéraire au rang des La Fare, des Chaulieu, des Hamilton, des Sarrasin et des Voiture.
+
+Madame la marquise crut alors être la mère d’un bel esprit, et donna à souper aux beaux esprits de Paris. La tête du jeune homme fut bientôt renversée ; il acquit l’art de parler sans s’entendre, et se perfectionna dans l’habitude de n’être propre à rien. Quand son père le vit si éloquent, il regretta vivement de ne lui avoir pas fait apprendre le latin, car il lui aurait acheté une grande charge dans la robe. La mère, qui avait des sentiments plus nobles, se chargea de solliciter un régiment pour son fils ; et en attendant il fit l’amour. L’amour est quelquefois plus cher qu’un régiment. Il dépensa beaucoup, pendant que ses parents s’épuisaient encore davantage à vivre en grands seigneurs.
+
+Une jeune veuve de qualité, leur voisine, qui n’avait qu’une fortune médiocre, voulut bien se résoudre à mettre en sûreté les grands biens de M. et de Mme de La Jeannotière, en se les appropriant, et en épousant le jeune marquis. Elle l’attira chez elle, se laissa aimer, lui fit entrevoir qu’il ne lui était pas indifférent, le conduisit par degrés, l’enchanta, le subjugua sans peine. Elle lui donnait tantôt des éloges, tantôt des conseils ; elle devint la meilleure amie du père et de la mère. Une vieille voisine proposa le mariage ; les parents, éblouis de la splendeur de cette alliance, acceptèrent avec joie la proposition : ils donnèrent leur fils unique à leur amie intime. Le jeune marquis allait épouser une femme qu’il adorait et dont il était aimé ; les amis de la maison les félicitaient ; on allait rédiger les articles, en travaillant aux habits de noce et à l’épithalame.
+
+Il était, un matin, aux genoux de la charmante épouse que l’amour, l’estime, et l’amitié, allaient lui donner ; ils goûtaient, dans une conversation tendre et animée, les prémices de leur bonheur ; ils s’arrangeaient pour mener une vie délicieuse, lorsqu’un valet de chambre de madame la mère arrive tout effaré. « Voici bien d’autres nouvelles, dit-il ; des huissiers déménagent la maison de monsieur et de madame ; tout est saisi par des créanciers ; on parle de prise de corps, et je vais faire mes diligences pour être payé de mes gages. — Voyons un peu, dit le marquis, ce que c’est que ça[4], ce que c’est que cette aventure-là. — Oui, dit la veuve, allez punir ces coquins-là, allez vite. » Il y court, il arrive à la maison ; son père était déjà emprisonné : tous les domestiques avaient fui chacun de leur côté, en emportant tout ce qu’ils avaient pu. Sa mère était seule, sans secours, sans consolation, noyée dans les larmes ; il ne lui restait rien que le souvenir de sa fortune, de sa beauté, de ses fautes, et de ses folles dépenses.
+
+Après que le fils eut longtemps pleuré avec la mère, il lui dit enfin : « Ne nous désespérons pas ; cette jeune veuve m’aime éperdument ; elle est plus généreuse encore que riche, je réponds d’elle ; je vole à elle, et je vais vous l’amener. » Il retourne donc chez sa maîtresse, il la trouve tête à tête avec un jeune officier fort aimable. « Quoi ! c’est vous, monsieur de La Jeannotière ; que venez-vous faire ici ? abandonne-t-on ainsi sa mère ? Allez chez cette pauvre femme, et dites-lui que je lui veux toujours du bien : j’ai besoin d’une femme de chambre, et je lui donnerai la préférence. — Mon garçon, tu me parais assez bien tourné, lui dit l’officier ; si tu veux entrer dans ma compagnie je te donnerai un bon engagement. »
+
+Le marquis stupéfait, la rage dans le cœur, alla chercher son ancien gouverneur, déposa ses douleurs dans son sein, et lui demanda des conseils. Celui-ci lui proposa de se faire, comme lui, gouverneur d’enfants. « Hélas ! je ne sais rien, vous ne m’avez rien appris, et vous êtes la première cause de mon malheur » ; et il sanglotait en lui parlant ainsi. « Faites des romans, lui dit un bel esprit qui était là ; c’est une excellente ressource à Paris. »
+
+Le jeune homme, plus désespéré que jamais, courut chez le confesseur de sa mère : c’était un théatin très-accrédité, qui ne dirigeait que les femmes de la première considération ; dès qu’il le vit, il se précipita vers lui. « Eh ! mon Dieu ! monsieur le marquis, où est votre carrosse ? comment se porte la respectable madame la marquise votre mère ? » Le pauvre malheureux lui conta le désastre de sa famille. À mesure qu’il s’expliquait, le théatin prenait un mine plus grave, plus indifférente, plus imposante : « Mon fils, voilà où Dieu vous voulait ; les richesses ne servent qu’à corrompre le cœur ; Dieu a donc fait la grâce à votre mère de la réduire à la mendicité ? — Oui monsieur. — Tant mieux, elle est sûre de son salut. — Mais, mon père, en attendant, n’y aurait-il pas moyen d’obtenir quelque secours dans ce monde ? — Adieu, mon fils ; il y a une dame de la cour qui m’attend. »
+
+Le marquis fut prêt à s’évanouir ; il fut traité à peu près de même par tous ses amis, et apprit mieux à connaître le monde dans une journée que dans tout le reste de sa vie.
+
+Comme il était plongé dans l’accablement du désespoir, il vit avancer une chaise roulante, à l’antique, espèce de tombereau couvert, accompagné de rideaux de cuir, suivi de quatre charrettes énormes toutes chargées. Il y avait dans la chaise un jeune homme grossièrement vêtu ; c’était un visage rond et frais qui respirait la douceur et la gaieté. Sa petite femme brune, et assez grossièrement agréable, était cahotée à côté de lui. La voiture n’allait pas comme le char d’un petit-maître : le voyageur eut tout le temps de contempler le marquis immobile, abîmé dans sa douleur. « Eh ! mon Dieu ! s’écria-t-il, je crois que c’est là Jeannot. » À ce nom, le marquis lève les yeux, la voiture s’arrête : « C’est Jeannot lui-même, c’est Jeannot. » Le petit homme rebondi ne fait qu’un saut, et court embrasser son ancien camarade. Jeannot reconnut Colin ; la honte et les pleurs couvrirent son visage. « Tu m’as abandonné, dit Colin ; mais tu as beau être grand seigneur, je t’aimerai toujours. » Jeannot, confus et attendri, lui conta, en sanglotant, une partie de son histoire. « Viens dans l’hôtellerie où je loge me conter le reste, lui dit Colin ; embrasse ma petite femme, et allons dîner ensemble. »
+
+Ils vont tous trois à pied, suivis du bagage. « Qu’est-ce donc que tout cet attirail ? vous appartient-il ? — Oui, tout est à moi et à ma femme. Nous arrivons du pays ; je suis à la tête d’une bonne manufacture de fer étamé et de cuivre. J’ai épousé la fille d’un riche négociant en ustensiles nécessaires aux grands et aux petits ; nous travaillons beaucoup ; Dieu nous bénit ; nous n’avons point changé d’état ; nous sommes heureux, nous aiderons notre ami Jeannot. Ne sois plus marquis ; toutes les grandeurs de ce monde ne valent pas un bon ami. Tu reviendras avec moi au pays, je t’apprendrai le métier, il n’est pas bien difficile ; je te mettrai de part, et nous vivrons gaiement dans le coin de terre où nous sommes nés. »
+
+Jeannot, éperdu, se sentait partagé entre la douleur et la joie, la tendresse et la honte ; et il se disait tout bas : « Tous mes amis du bel air m’ont trahi, et Colin, que j’ai méprisé, vient seul à mon secours. Quelle instruction ! » La bonté d’âme de Colin développa dans le cœur de Jeannot le germe du bon naturel, que le monde n’avait pas encore étouffé. Il sentit qu’il ne pouvait abandonner son père et sa mère. « Nous aurons soin de ta mère, dit Colin ; et quant à ton bonhomme de père, qui est en prison, j’attends un peu les affaires ; ses créanciers, voyant qu’il n’a plus rien, s’accommoderont pour peu de chose ; je me charge de tout. » Colin fit tant qu’il tira le père de prison. Jeannot retourna dans sa patrie avec ses parents, qui reprirent leur première profession. Il épousa une sœur de Colin, laquelle, étant de même humeur que le frère, le rendit très-heureux. Et Jeannot le père, et Jeannotte la mère, et Jeannot le fils, virent que le bonheur n’est pas dans la vanité.
+
+FIN DE JEANNOT ET COLIN.
