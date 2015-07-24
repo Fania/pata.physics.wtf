@@ -28,13 +28,17 @@ def textresults():
         clinamen_len = len(clinamen_words)
         # print('clinamen_words', clinamen_words)
         for r in clinamen_words:
-            files = sear(r)
+            files = set(sear(r))
             # print(r, 'files: ', files)
             for e in files:
                 flen.append(e)
-                if len(pp_sent(r, e)) > 0:
-                    pp_sens[r].append(pp_sent(r, e))
+                print('pp_sent(r, e)', r, e, pp_sent(r, e))
+                print(len(pp_sent(r, e)))
+                # if len(pp_sent(r, e)) > 0:
+                pp_sens[r].append(pp_sent(r, e))
         tflen = set(flen)
+        print('tflen', tflen)
+        print('pp_sens', pp_sens)
 
         # SYZYGY
         # syssens = dict([])

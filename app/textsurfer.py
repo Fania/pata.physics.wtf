@@ -355,7 +355,7 @@ def pp_sent(w, f):
     ff = eval(f)
     # pos = 0
     pos = l_dict[w][0][1]
-    print('pos', pos)
+    # print('pos', pos)
     pos_b = pos - 5
     pos_a = (pos + 1) + 5
     if pos_b >= 0 and pos_a <= len(ff):
@@ -400,13 +400,12 @@ def dameraulevenshtein(seq1, seq2):
 
 def sear(t):
     temp = l_dict.get(t)
-    # print(temp)
+    # print('sear temp', temp)
     temp1 = []
     for f in temp:
-        x = ''.join(['l_', str(f[0:2])])
-        # print('fullsent:', f)
-        # print(fullsent(t, x))
+        x = ''.join(['l_', str((f[0])[0:2])])
         temp1.append(x)
     return temp1
 
-# print(sear('fingers'))
+print('sear("fingers")', sear('fingers'))
+print('sear("clear")', sear('clear'))
