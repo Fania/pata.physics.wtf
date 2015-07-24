@@ -399,7 +399,7 @@ def dameraulevenshtein(seq1, seq2):
 
 
 def sear(t):
-    temp = l_dict.get(t)
+    temp = l_dict.get(t.lower())
     # print('sear temp', temp)
     temp1 = []
     for f in temp:
@@ -407,5 +407,5 @@ def sear(t):
         temp1.append(x)
     return temp1
 
-print('sear("fingers")', sear('fingers'))
-print('sear("clear")', sear('clear'))
+# print('sear("fingers")', sear('fingers'))
+# print('sear("clear")', sear('clear'))
