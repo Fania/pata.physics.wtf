@@ -26,24 +26,15 @@ def textresults():
         pp_sens = defaultdict(list)
         clinamen_words = clinamen(query, 2)
         clinamen_len = len(clinamen_words)
-        print('clinamen_words', clinamen_words)
-        # print('pre', len(pp_sens), pp_sens)
+        # print('clinamen_words', clinamen_words)
         for r in clinamen_words:
             files = sear(r)
-            print(r, 'files: ', files)
+            # print(r, 'files: ', files)
             for e in files:
                 flen.append(e)
-                # print('inside files loop', r, e)
-                # print(len(pp_sent(r, e)))
                 if len(pp_sent(r, e)) > 0:
-                    # print(pp_sent(r, e))
                     pp_sens[r].append(pp_sent(r, e))
-                # else:
-                    # print('fail pre')
-                # print('end of loop')
-        # print('pp_sens', pp_sens)
         tflen = set(flen)
-        print('FINAL tflen:', tflen)
 
         # SYZYGY
         # syssens = dict([])

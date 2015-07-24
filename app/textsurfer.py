@@ -35,7 +35,7 @@ root_path = root_path[:-4]
 corpus_root = root_path + '/app/static/corpus'
 
 # NLTK way to import txt into a list #######################
-book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')
+book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')  # root, fileid
 # book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
 # print book_list
 troll = book_list.words('00.faustroll.txt')
@@ -81,16 +81,46 @@ de_stop = stopwords.words('german')  # print(de_stop)
 ############################################################
 
 l_dict = defaultdict(list)
-print('l_dict before')
-print(l_dict.items())
+# print('l_dict before')
+# print(l_dict.items())
 
 
 def setupcorpus(nr, lang):
     ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
     for w in sorted(set(ll)):
-        # l_dict[w].append((nr.fileid[49:], ll.count(w)))
-        l_dict[w].append(nr.fileid[49:])
+        # l_dict[w].append((nr.fileid[49:], ll.count(w)))  # SLOW
+        l_dict[w].append([nr.fileid[49:], 0])
+        # if w in nr:
+        #     l_dict[w].append([nr.fileid[49:], nr.index(w)])
+        # else:
+        #     if w.capitalize() in nr:
+        #         l_dict[w].append([nr.fileid[49:], nr.index(w.capitalize())])
     pass
+
+corpus_list = [l_00, l_01, l_02, l_03, l_04, l_05, l_06, l_07, l_08,
+               l_09, l_10, l_11, l_12, l_13, l_14, l_15, l_16, l_17,
+               l_18, l_19, l_20, l_21, l_22, l_23, l_24, l_25, l_26,
+               l_27]
+
+# l_dict structure:
+# {word1: [[fileA, 0], [fileB, 0], ...],
+#  word2: [[fileC, 0], [fileK, 0], ...],
+#  ...
+# }
+
+
+def completecorpus():
+    # for cnt, k in enumerate(l_dict.keys()):  # word1
+    for k in l_dict.keys():  # word1
+        # print(cnt, '/', len(l_dict), k)
+        for f in l_dict[k]:  # (fileK, 0)
+            x = 'l_' + (f[0])[0:2]
+            if k in eval(x):
+                f[1] = eval(x).index(k)
+            else:
+                if k.capitalize() in eval(x):
+                    f[1] = eval(x).index(k.capitalize())
+
 
 setupcorpus(l_00, en_stop), print('added 00')
 setupcorpus(l_01, en_stop), print('added 01')
@@ -120,8 +150,14 @@ setupcorpus(l_24, fr_stop), print('added 24')
 setupcorpus(l_25, en_stop), print('added 25')
 setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
-# print('l_dict after')
-# print((l_dict.items())[0:100])
+print('l_dict after')
+print((l_dict.items())[0:20])
+
+print('completing corpus:')
+completecorpus()
+
+print('complete l_dict')
+print((l_dict.items())[0:20])
 
 # ---------------------------------------------
 
@@ -282,10 +318,11 @@ def pp_sent(w, f):
     out = []
     ff = eval(f)
     pos = 0
-    if ff.count(w) > 0:
-        pos = ff.index(w)
-    else:
-        pos = ff.index(w.capitalize())
+    pos = l_dict[w][1]
+    # if ff.count(w) > 0:
+    #     pos = ff.index(w)
+    # else:
+    #     pos = ff.index(w.capitalize())
     pos_b = pos - 5
     pos_a = (pos + 1) + 5
     if pos_b >= 0 and pos_a <= len(ff):
