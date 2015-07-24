@@ -5,6 +5,7 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
 from nltk.corpus import stopwords
 
+# from operator import indexOf
 from collections import defaultdict
 
 import os
@@ -44,10 +45,10 @@ faustroll = nltk.Text(troll)
 ############################################################
 l_00 = book_list.words('00.faustroll.txt')
 l_01 = book_list.words('01.poe1.txt')
-l_01 = book_list.words('01.poe2.txt')
-l_01 = book_list.words('01.poe3.txt')
-l_01 = book_list.words('01.poe4.txt')
-l_01 = book_list.words('01.poe5.txt')
+# l_01 = book_list.words('01.poe2.txt')
+# l_01 = book_list.words('01.poe3.txt')
+# l_01 = book_list.words('01.poe4.txt')
+# l_01 = book_list.words('01.poe5.txt')
 l_02 = book_list.words('02.bergerac.txt')
 l_03 = book_list.words('03.gospel.txt')
 l_04 = book_list.words('04.bloy_french.txt')
@@ -86,21 +87,54 @@ l_dict = defaultdict(list)
 
 
 def setupcorpus(nr, lang):
-    ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
-    for w in sorted(set(ll)):
-        # l_dict[w].append((nr.fileid[49:], ll.count(w)))  # SLOW
-        l_dict[w].append([nr.fileid[49:], 0])
-        # if w in nr:
-        #     l_dict[w].append([nr.fileid[49:], nr.index(w)])
-        # else:
-        #     if w.capitalize() in nr:
-        #         l_dict[w].append([nr.fileid[49:], nr.index(w.capitalize())])
-    pass
+    # ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
+    for x, w in enumerate(nr):
+        # print(w)
+        # x = indexOf(nr, w)
+        if w.isalpha() and (w.lower() not in lang):
+            l_dict[w.lower()].append([nr.fileid[49:], x])
+            # l_dict[w.lower()].append([nr.fileid[49:], nr.index(w)])
 
-corpus_list = [l_00, l_01, l_02, l_03, l_04, l_05, l_06, l_07, l_08,
-               l_09, l_10, l_11, l_12, l_13, l_14, l_15, l_16, l_17,
-               l_18, l_19, l_20, l_21, l_22, l_23, l_24, l_25, l_26,
-               l_27]
+
+# def testindex(nr, w):
+#     print('testing', w, nr)
+#     if w in nr:
+#         print(nr.index(w))
+#     else:
+#         print('error')
+#
+#
+# testindex(l_01, 'fawn')
+# testindex(l_01, 'Fawn')
+# testindex(l_01, 'FAWN')
+# testindex(l_17, 'fawn')
+# testindex(l_17, 'Fawn')
+# testindex(l_17, 'FAWN')
+# testindex(l_19, 'fawn')
+# testindex(l_19, 'Fawn')
+# testindex(l_19, 'FAWN')
+# print(l_dict['fawn'])
+
+# print('54140', l_01.index('fawn'))
+# print('54140', l_01.index('Fawn'))
+# print('111976', l_17.index('fawn'))
+# print('111976', l_17.index('Fawn'))
+
+
+# for w in sorted(set(ll)):
+#     # l_dict[w].append((nr.fileid[49:], ll.count(w)))  # SLOW
+#     # l_dict[w].append([nr.fileid[49:], 0])
+#     if w in nr:
+#         l_dict[w].append([nr.fileid[49:], nr.index(w)])
+#     else:
+#         # if w.capitalize() in nr:
+#         l_dict[w].append([nr.fileid[49:], nr.index(w.capitalize())])
+# pass
+
+# corpus_list = [l_00, l_01, l_02, l_03, l_04, l_05, l_06, l_07, l_08,
+#                l_09, l_10, l_11, l_12, l_13, l_14, l_15, l_16, l_17,
+#                l_18, l_19, l_20, l_21, l_22, l_23, l_24, l_25, l_26,
+#                l_27]
 
 # l_dict structure:
 # {word1: [[fileA, 0], [fileB, 0], ...],
@@ -109,17 +143,17 @@ corpus_list = [l_00, l_01, l_02, l_03, l_04, l_05, l_06, l_07, l_08,
 # }
 
 
-def completecorpus():
-    # for cnt, k in enumerate(l_dict.keys()):  # word1
-    for k in l_dict.keys():  # word1
-        # print(cnt, '/', len(l_dict), k)
-        for f in l_dict[k]:  # (fileK, 0)
-            x = 'l_' + (f[0])[0:2]
-            if k in eval(x):
-                f[1] = eval(x).index(k)
-            else:
-                if k.capitalize() in eval(x):
-                    f[1] = eval(x).index(k.capitalize())
+# def completecorpus():
+#     # for cnt, k in enumerate(l_dict.keys()):  # word1
+#     for k in l_dict.keys():  # word1
+#         # print(cnt, '/', len(l_dict), k)
+#         for f in l_dict[k]:  # (fileK, 0)
+#             x = 'l_' + (f[0])[0:2]
+#             if k in eval(x):
+#                 f[1] = eval(x).index(k)
+#             else:
+#                 if k.capitalize() in eval(x):
+#                     f[1] = eval(x).index(k.capitalize())
 
 
 setupcorpus(l_00, en_stop), print('added 00')
@@ -151,18 +185,20 @@ setupcorpus(l_25, en_stop), print('added 25')
 setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
 print('l_dict after')
-print((l_dict.items())[0:20])
+# print((l_dict.items())[0:20])
+# print(l_dict['fawn'])
 
-print('completing corpus:')
-completecorpus()
 
-print('complete l_dict')
-print((l_dict.items())[0:20])
+# print('completing corpus:')
+# completecorpus()
+
+# print('complete l_dict')
+# print((l_dict.items())[0:20])
 
 # ---------------------------------------------
-
-faustroll_dict = sorted(set([w.lower() for w in faustroll]))
-froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
+#
+# faustroll_dict = sorted(set([w.lower() for w in faustroll]))
+# froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
 # ud.normalize('NFKD', w).encode('ascii', 'ignore')
 
 # print('book_list:')
@@ -210,33 +246,33 @@ def warning(*objs):
     print("WARNING: ", *objs, file=sys.stderr)
 
 
-def syzygy(word):
-    out = set()
-    wordsets = wn.synsets(word)  # returns a list of synsets
-    for w in wordsets:  # w is a synset
-        # Hyponyms share a type-of relationship with their hypernym
-        hypo = w.hyponyms()  # returns a list of synsets
-        if len(hypo) > 0:
-            for h in hypo:  # h is a synset
-                for l in h.lemmas():  # l is a lemma
-                    if str(l.name()) in froll_dict:
-                        out.add(str(l.name()))
-        # Hyponyms share a type-of relationship with their hypernym
-        hyper = w.hypernyms()
-        if len(hyper) > 0:
-            for h in hyper:
-                for l in h.lemmas():
-                    if str(l.name()) in froll_dict:
-                        out.add(str(l.name()))
-        # 'X' is a holonym of 'Y' if Ys are parts of Xs, or
-        # 'X' is a holonym of 'Y' if Ys are members of Xs.
-        holo = w.member_holonyms()
-        if len(holo) > 0:
-            for h in holo:
-                for l in h.lemmas():
-                    if str(l.name()) in froll_dict:
-                        out.add(str(l.name()))
-    return out
+# def syzygy(word):
+#     out = set()
+#     wordsets = wn.synsets(word)  # returns a list of synsets
+#     for w in wordsets:  # w is a synset
+#         # Hyponyms share a type-of relationship with their hypernym
+#         hypo = w.hyponyms()  # returns a list of synsets
+#         if len(hypo) > 0:
+#             for h in hypo:  # h is a synset
+#                 for l in h.lemmas():  # l is a lemma
+#                     if str(l.name()) in froll_dict:
+#                         out.add(str(l.name()))
+#         # Hyponyms share a type-of relationship with their hypernym
+#         hyper = w.hypernyms()
+#         if len(hyper) > 0:
+#             for h in hyper:
+#                 for l in h.lemmas():
+#                     if str(l.name()) in froll_dict:
+#                         out.add(str(l.name()))
+#         # 'X' is a holonym of 'Y' if Ys are parts of Xs, or
+#         # 'X' is a holonym of 'Y' if Ys are members of Xs.
+#         holo = w.member_holonyms()
+#         if len(holo) > 0:
+#             for h in holo:
+#                 for l in h.lemmas():
+#                     if str(l.name()) in froll_dict:
+#                         out.add(str(l.name()))
+#     return out
 
 # print('SYZYGY')
 # synwords = wn.synsets('clear')
@@ -269,16 +305,16 @@ def syzygy(word):
 #
 
 
-def antinomy(word):
-    out = set()
-    wordsets = wn.synsets(word)
-    for w in wordsets:
-        anti = w.lemmas()[0].antonyms()
-        if len(anti) > 0:
-            for a in anti:
-                if str(a.name()) != word:
-                    out.add(str(a.name()))
-    return out
+# def antinomy(word):
+#     out = set()
+#     wordsets = wn.synsets(word)
+#     for w in wordsets:
+#         anti = w.lemmas()[0].antonyms()
+#         if len(anti) > 0:
+#             for a in anti:
+#                 if str(a.name()) != word:
+#                     out.add(str(a.name()))
+#     return out
 
 
 # print('ANTINOMY')
@@ -317,12 +353,9 @@ def antinomy(word):
 def pp_sent(w, f):
     out = []
     ff = eval(f)
-    pos = 0
-    pos = l_dict[w][1]
-    # if ff.count(w) > 0:
-    #     pos = ff.index(w)
-    # else:
-    #     pos = ff.index(w.capitalize())
+    # pos = 0
+    pos = l_dict[w][0][1]
+    print('pos', pos)
     pos_b = pos - 5
     pos_a = (pos + 1) + 5
     if pos_b >= 0 and pos_a <= len(ff):
@@ -330,12 +363,12 @@ def pp_sent(w, f):
         post = ' '.join(ff[pos+1:pos_a])
         out = (pre, post)
     return out
-# print(pp_sent('clear', 'l_00'))
+print(pp_sent('clear', 'l_00'))
 
 
 def clinamen(word, i):
     out = set()
-    items = [item for item in froll_dict
+    items = [item for item in l_00
              if dameraulevenshtein(word, item) <= i]
     for item in items:
         if item != word:
