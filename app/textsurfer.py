@@ -1,24 +1,14 @@
 
 from __future__ import print_function
-# from flask import url_for
+
 from nltk.corpus import wordnet as wn
 from nltk.corpus import PlaintextCorpusReader
 from nltk.corpus import stopwords
 
-# from operator import indexOf
 from collections import defaultdict
 
 import os
-import nltk
-# import codecs
 import sys
-# import warnings
-
-# import unicodedata as ud
-
-# print sys.getdefaultencoding()
-# Ignore weird unicode warnings from dameraulevenshtein function
-# warnings.simplefilter('ignore')
 
 #############################################
 
@@ -27,28 +17,13 @@ import sys
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
-# print 'root_path ', root_path
-# corpus_root = os.path.join(root_path, 'corpus')
-# root_path = root_path[:-11]
 root_path = root_path[:-4]
-# root_path = 'G:\Code\\newpata\\'
-# corpus_root = os.path.join(root_path, 'corpus')
 corpus_root = root_path + '/app/static/corpus'
-
-# NLTK way to import txt into a list #######################
 book_list = PlaintextCorpusReader(corpus_root, '.*\.txt')  # root, fileid
-# book_list = PlaintextCorpusReader(corpus_root, '[A-z]*\.txt')
-# print book_list
-troll = book_list.words('00.faustroll.txt')
-faustroll = nltk.Text(troll)
 
 ############################################################
 l_00 = book_list.words('00.faustroll.txt')
 l_01 = book_list.words('01.poe1.txt')
-# l_01 = book_list.words('01.poe2.txt')
-# l_01 = book_list.words('01.poe3.txt')
-# l_01 = book_list.words('01.poe4.txt')
-# l_01 = book_list.words('01.poe5.txt')
 l_02 = book_list.words('02.bergerac.txt')
 l_03 = book_list.words('03.gospel.txt')
 l_04 = book_list.words('04.bloy_french.txt')
@@ -75,66 +50,13 @@ l_24 = book_list.words('24.ubu_french.txt')
 l_25 = book_list.words('25.verlaine.txt')
 l_26 = book_list.words('26.verhaeren.txt')
 l_27 = book_list.words('27.verne.txt')
-############################################################
-en_stop = stopwords.words('english')  # print(en_stop)
-fr_stop = stopwords.words('french')  # print(fr_stop)
-de_stop = stopwords.words('german')  # print(de_stop)
+############################################
+en_stop = stopwords.words('english')
+fr_stop = stopwords.words('french')
+de_stop = stopwords.words('german')
 ############################################################
 
 l_dict = defaultdict(list)
-# print('l_dict before')
-# print(l_dict.items())
-
-
-def setupcorpus(nr, lang):
-    # ll = [w.lower() for w in nr if w.isalpha() and w.lower() not in lang]
-    for x, w in enumerate(nr):
-        # print(w)
-        # x = indexOf(nr, w)
-        if w.isalpha() and (w.lower() not in lang):
-            l_dict[w.lower()].append([nr.fileid[49:], x])
-            # l_dict[w.lower()].append([nr.fileid[49:], nr.index(w)])
-
-
-# def testindex(nr, w):
-#     print('testing', w, nr)
-#     if w in nr:
-#         print(nr.index(w))
-#     else:
-#         print('error')
-#
-#
-# testindex(l_01, 'fawn')
-# testindex(l_01, 'Fawn')
-# testindex(l_01, 'FAWN')
-# testindex(l_17, 'fawn')
-# testindex(l_17, 'Fawn')
-# testindex(l_17, 'FAWN')
-# testindex(l_19, 'fawn')
-# testindex(l_19, 'Fawn')
-# testindex(l_19, 'FAWN')
-# print(l_dict['fawn'])
-
-# print('54140', l_01.index('fawn'))
-# print('54140', l_01.index('Fawn'))
-# print('111976', l_17.index('fawn'))
-# print('111976', l_17.index('Fawn'))
-
-
-# for w in sorted(set(ll)):
-#     # l_dict[w].append((nr.fileid[49:], ll.count(w)))  # SLOW
-#     # l_dict[w].append([nr.fileid[49:], 0])
-#     if w in nr:
-#         l_dict[w].append([nr.fileid[49:], nr.index(w)])
-#     else:
-#         # if w.capitalize() in nr:
-#         l_dict[w].append([nr.fileid[49:], nr.index(w.capitalize())])
-# pass
-
-# corpus_list = [l_00, l_01, l_02, l_03, l_04, l_05, l_06, l_07, l_08,
-#                l_09, l_10, l_11, l_12, l_13, l_14, l_15, l_16, l_17,
-#                l_18, l_19, l_20, l_21, l_22, l_23, l_24, l_25, l_26,
-#                l_27]
 
 # l_dict structure:
 # {word1: [[fileA, 0], [fileB, 0], ...],
@@ -143,18 +65,10 @@ def setupcorpus(nr, lang):
 # }
 
 
-# def completecorpus():
-#     # for cnt, k in enumerate(l_dict.keys()):  # word1
-#     for k in l_dict.keys():  # word1
-#         # print(cnt, '/', len(l_dict), k)
-#         for f in l_dict[k]:  # (fileK, 0)
-#             x = 'l_' + (f[0])[0:2]
-#             if k in eval(x):
-#                 f[1] = eval(x).index(k)
-#             else:
-#                 if k.capitalize() in eval(x):
-#                     f[1] = eval(x).index(k.capitalize())
-
+def setupcorpus(nr, lang):
+    for x, w in enumerate(nr):
+        if w.isalpha() and (w.lower() not in lang):
+            l_dict[w.lower()].append([nr.fileid[49:], x])
 
 setupcorpus(l_00, en_stop), print('added 00')
 setupcorpus(l_01, en_stop), print('added 01')
@@ -184,62 +98,6 @@ setupcorpus(l_24, fr_stop), print('added 24')
 setupcorpus(l_25, en_stop), print('added 25')
 setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
-print('l_dict after')
-# print((l_dict.items())[0:20])
-# print(l_dict['fawn'])
-
-
-# print('completing corpus:')
-# completecorpus()
-
-# print('complete l_dict')
-# print((l_dict.items())[0:20])
-
-# ---------------------------------------------
-#
-# faustroll_dict = sorted(set([w.lower() for w in faustroll]))
-# froll_dict = [w for w in faustroll_dict if w.isalpha() and w not in en_stop]
-# ud.normalize('NFKD', w).encode('ascii', 'ignore')
-
-# print('book_list:')
-# print(book_list)
-# print(book_list.fileids())
-# print('------------------------\n')
-# print('troll:')
-# print(troll)
-# print(book_list.sents('faustroll.txt')[1:10])
-# print('------------------------\n')
-# print('faustroll:')
-# print(faustroll)
-# print('\n')
-# print('faustroll.collocations:')
-# print(faustroll.collocations())
-# print('\n')
-# print('faustroll.concordance.Faustroll:')
-# print(faustroll.concordance('Faustroll'))
-# print('\n')
-# print('faustroll.count.he:')
-# print(faustroll.count('he'))
-# print('\n')
-# # print(faustroll.dispersion_plot(['I','Faustroll','He He']))
-# print('faustroll.vocab:')
-# print(faustroll.vocab())
-# print('faustroll.fdist.Faustroll:')
-# fdist = nltk.FreqDist(faustroll)
-# modals = ['Faustroll', 'speak', 'year', 'skiff', 'FAUSTROLL']
-# for m in modals:
-#     print(m + ':',fdist[m], end=' ')
-# print('\n')
-# print('------------------------\n')
-# print('faustroll_dict:')
-# print(faustroll_dict[1:100])
-# print('------------------------\n')
-# print('froll_dict:')
-# print(froll_dict[1:100])
-# print('------------------------\n')
-# print('sw:')
-# print(sw)
-# print('------------------------\n')
 
 
 def warning(*objs):
@@ -332,30 +190,10 @@ def warning(*objs):
 #
 
 
-# def fullsent(w, f):
-#     out = []
-#     ff = eval(f)
-#     pos = 0
-#     if ff.count(w) > 0:
-#         pos = ff.index(w)
-#     else:
-#         pos = ff.index(w.capitalize())
-#     pos_b = pos - 5
-#     pos_a = pos + 5
-#     if pos_b >= 0 and pos_a <= len(ff):
-#         out = ' '.join(ff[pos_b:pos_a])
-#     # print('sentences')
-#     # print(out)
-#     return out
-# print(fullsent('clear', 'l_00'))
-
-
 def pp_sent(w, f):
     out = []
     ff = eval(f)
-    # pos = 0
     pos = l_dict[w][0][1]
-    # print('pos', pos)
     pos_b = pos - 5
     pos_a = (pos + 1) + 5
     if pos_b >= 0 and pos_a <= len(ff):
@@ -363,7 +201,7 @@ def pp_sent(w, f):
         post = ' '.join(ff[pos+1:pos_a])
         out = (pre, post)
     return out
-print(pp_sent('clear', 'l_00'))
+# print(pp_sent('clear', 'l_00'))
 
 
 def clinamen(word, i):

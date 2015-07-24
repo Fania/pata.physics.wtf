@@ -19,7 +19,7 @@
     <div class="resultset">
         {% if clinamen_words %}
             Clinamen - {{ clinamen_words|length }} pataphysicalised
-            {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ tflen|length }} sources for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+            {% if clinamen_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ tflen|length }} origins for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
                     {% for key in clinamen_words %}
