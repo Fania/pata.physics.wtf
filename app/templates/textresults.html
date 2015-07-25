@@ -19,7 +19,7 @@
     <div class="resultset">
         {% if clin_words %}
             Clinamen - {{ clin_words|length }} pataphysicalised
-            {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_words|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+            {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
                     {% for key in clin_words %}
@@ -42,7 +42,7 @@
       {% if sys_words %}
           Syzygy - {{ sys_sens|length }} pataphysicalised
           {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-          found in {{ sys_files|length }} {% if sys_words|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+          found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
           <div id="results">
               <ul>
                 {% for key in sys_words %}
@@ -65,7 +65,7 @@
         {% if anti_words %}
             Antinomy - {{ anti_sens|length }} pataphysicalised
             {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-            found in {{ anti_files|length }} {% if anti_words|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+            found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
             <div id="results">
                 <ul>
                   {% for key in anti_words %}
