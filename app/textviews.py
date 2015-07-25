@@ -21,14 +21,17 @@ def textresults():
         print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
-        # CLINAMEN
-        clin_sens, clin_words, clin_files = clinamen(query, 2)
+        clin_sens, clin_words, clin_files, clin_tot = clinamen(query, 2)
+        sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
+        anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
 
-        # SYZYGY
-        sys_sens, sys_words, sys_files = syzygy(query)
-
-        # ANTINOMY
-        anti_sens, anti_words, anti_files = antinomy(query)
+        # print('clin_words', clin_words)
+        # print('clin_files', clin_files)
+        # all_sens = clin_sens | sys_sens | anti_sens
+        all_words = clin_words | sys_words | anti_words
+        # print('all_words', all_words)
+        all_files = clin_files | sys_files | anti_files
+        all_tot = clin_tot + sys_tot + anti_tot
 
         # print data
         return render_template('textresults.html', **locals())

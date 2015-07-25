@@ -15,6 +15,13 @@
             {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
         {% endfor %} #}
     </div> -->
+    <div class="resultset">
+        Total number of results: {{ all_tot }}
+        <br>
+        Total number of reverberations: {{ all_words|length }}
+        <br>
+        Total number of sources: {{ all_files|length }}
+    </div>
 
     <div class="resultset">
         {% if clin_words %}
