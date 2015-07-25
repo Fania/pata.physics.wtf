@@ -163,16 +163,16 @@ def warning(*objs):
 #
 
 
-# def antinomy(word):
-#     out = set()
-#     wordsets = wn.synsets(word)
-#     for w in wordsets:
-#         anti = w.lemmas()[0].antonyms()
-#         if len(anti) > 0:
-#             for a in anti:
-#                 if str(a.name()) != word:
-#                     out.add(str(a.name()))
-#     return out
+def antinomy(word):
+    out = set()
+    wordsets = wn.synsets(word)
+    for w in wordsets:
+        anti = w.lemmas()[0].antonyms()
+        if len(anti) > 0:
+            for a in anti:
+                if str(a.name()) != word:
+                    out.add(str(a.name()))
+    return out
 
 
 # print('ANTINOMY')
@@ -214,22 +214,31 @@ def clinamen(word, i):
     return out
 
 
-# Taken from http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
+def clinamen_sents(ws):
+    flen = set()
+    out = defaultdict(list)
+    for r in ws:
+        files = set(sear(r))
+        # print(r, 'files: ', files)
+        for e in files:
+            flen.add(e)
+            # print('pp_sent(r, e)', r, e, pp_sent(r.lower(), e))
+            out[r].append(pp_sent(r.lower(), e))
+    return out, flen
+
+
+# http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
 # MIT license.
 def dameraulevenshtein(seq1, seq2):
     oneago = None
     thisrow = range(1, len(seq2) + 1) + [0]
     for x in xrange(len(seq1)):
-        # Python lists wrap around for negative indices, so put the
-        # leftmost column at the *end* of the list. This matches with
-        # the zero-indexed strings and saves extra calculation.
         twoago, oneago, thisrow = oneago, thisrow, [0] * len(seq2) + [x + 1]
         for y in xrange(len(seq2)):
             delcost = oneago[y] + 1
             addcost = thisrow[y - 1] + 1
             subcost = oneago[y - 1] + (seq1[x] != seq2[y])
             thisrow[y] = min(delcost, addcost, subcost)
-            # This block deals with transpositions
             if (x > 0 and y > 0 and seq1[x] == seq2[y - 1] and
                seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
                     thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)

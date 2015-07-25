@@ -22,19 +22,9 @@ def textresults():
         # qx = getResults(q)
 
         # CLINAMEN
-        flen = []
-        pp_sens = defaultdict(list)
         clinamen_words = clinamen(query, 2)
         clinamen_len = len(clinamen_words)
-        # print('clinamen_words', clinamen_words)
-        for r in clinamen_words:
-            files = set(sear(r))
-            # print(r, 'files: ', files)
-            for e in files:
-                flen.append(e)
-                # print('pp_sent(r, e)', r, e, pp_sent(r.lower(), e))
-                pp_sens[r].append(pp_sent(r.lower(), e))
-        tflen = set(flen)
+        pp_sens, tflen = clinamen_sents(clinamen_words)
         # print('pp_sens', pp_sens)
 
         # SYZYGY

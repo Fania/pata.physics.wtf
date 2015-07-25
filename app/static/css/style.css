@@ -266,7 +266,7 @@ a
 		color: #576c93;
 		border-bottom-color: rgba(255,255,255,0);
 	}
-	
+
 	a:hover strong
 	{
 		color: #576c93;
@@ -385,7 +385,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 	{
 		margin-bottom: 3em;
 	}
-	
+
 	section > :last-child,
 	article > :last-child
 	{
@@ -410,12 +410,12 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 		-ms-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 	}
-	
+
 		a.image:hover
 		{
 			opacity: 0.9;
 		}
-	
+
 		.image img
 		{
 			display: block;
@@ -428,7 +428,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 			width: 100%;
 			margin: 0 0 3.5em 0;
 		}
-		
+
 		.image-left
 		{
 			float: left;
@@ -436,7 +436,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 			position: relative;
 			top: 0.5em;
 		}
-		
+
 		.image-centered
 		{
 			display: block;
@@ -471,12 +471,12 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 	{
 		padding:  1em 0;
 	}
-	
+
 		form label
 		{
 			display: block;
 		}
-	
+
 		form input.text,
 		form select,
 		form textarea
@@ -508,7 +508,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 			{
 				background-color: #e8e8e8 !important;
 			}
-			
+
 			form textarea
 			{
 				min-height: 11em;
@@ -522,7 +522,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 			form ::-webkit-input-placeholder
 			{
 				color: #555 !important;
-				
+
 			}
 			form input:-webkit-autofill {
     			-webkit-box-shadow: 0 0 0px 1000px white inset;
@@ -574,7 +574,7 @@ div.spltrbltrbright img { position: absolute; }
 a.spimg, a.spimg:hover { border: 0; }
 
 /* Buttons */
-	
+
 	.button
 	{
 		position: relative;
@@ -607,12 +607,12 @@ a.spimg, a.spimg:hover { border: 0; }
 		{
 			background: #576c93;
 		}
-		
+
 		.button:active
 		{
 			background: #576c93;
 		}
-	
+
 		.button-alt
 		{
 			background: #576c93;
@@ -622,7 +622,7 @@ a.spimg, a.spimg:hover { border: 0; }
 			{
 				background: #576c93;
 			}
-			
+
 			.button-alt:active
 			{
 				background: #576c93;
@@ -765,7 +765,7 @@ a.spimg, a.spimg:hover { border: 0; }
 		margin: 0;
 		padding-bottom: 0.8em;
 	}
-	
+
 		#header h1:hover
 		{
 			color: #576c93;
@@ -895,7 +895,7 @@ a.spimg, a.spimg:hover { border: 0; }
     background: white;
 }
 #subnav ul li {
-    padding-top: 1px; 
+    padding-top: 1px;
     position: relative;
     left: -35px;
 }
@@ -971,6 +971,7 @@ ul.bodylist {
 
 #results {
 	padding: 1em 0;
+  text-align: center;
 }
 
 .resultset {
