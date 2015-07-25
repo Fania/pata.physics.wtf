@@ -22,38 +22,13 @@ def textresults():
         # qx = getResults(q)
 
         # CLINAMEN
-        clinamen_words = clinamen(query, 2)
-        clinamen_len = len(clinamen_words)
-        pp_sens, tflen = clinamen_sents(clinamen_words)
-        # print('pp_sens', pp_sens)
+        clin_sens, clin_words, clin_files = clinamen(query, 2)
 
         # SYZYGY
-        # syssens = dict([])
-        # pre_syssens = dict([])
-        # post_syssens = dict([])
-        # syzygy_words = syzygy(query)
-        # syzygy_len = len(syzygy_words)
-        # for r in syzygy_words:
-        #     if len(pre_sentence(r)) > 0:
-        #         pre_syssens[r] = pre_sentence(r)
-        #     if len(post_sentence(r)) > 0:
-        #         post_syssens[r] = post_sentence(r)
-        #     if len(find_sentence(r)) > 0:
-        #         syssens[r] = find_sentence(r)
+        # sys_sens, sys_words, sys_files = syzygy(query)
+
         # ANTINOMY
-        # antisens = dict([])
-        # pre_antisens = dict([])
-        # post_antisens = dict([])
-        # antinomy_words = antinomy(query)
-        # antinomy_len = len(antinomy_words)
-        # for r in antinomy_words:
-        #     if len(pre_sentence(r)) > 0:
-        #         pre_antisens[r] = pre_sentence(r)
-        #     if len(post_sentence(r)) > 0:
-        #         post_antisens[r] = post_sentence(r)
-        #     if len(find_sentence(r)) > 0:
-        #         antisens[r] = find_sentence(r)
-        #         print antisens[r]
+        # anti_sens, anti_words, anti_files = antinomy(query)
 
         # print data
         return render_template('textresults.html', **locals())

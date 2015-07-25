@@ -8,7 +8,6 @@ from nltk.corpus import stopwords
 from collections import defaultdict
 
 import os
-import sys
 
 #############################################
 
@@ -100,94 +99,79 @@ setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
 
 
-def warning(*objs):
-    print("WARNING: ", *objs, file=sys.stderr)
+def clinamen(w, i):
+    sources = set()
+    out = defaultdict(list)
+    words = set([item for item in l_00
+                if dameraulevenshtein(w, item) <= i])
+    for r in words:
+        files = set(sear(r))
+        for e in files:
+            sources.add(e)
+            out[r].append(pp_sent(r.lower(), e))
+    return out, words, sources
 
 
-# def syzygy(word):
-#     out = set()
-#     wordsets = wn.synsets(word)  # returns a list of synsets
-#     for w in wordsets:  # w is a synset
-#         # Hyponyms share a type-of relationship with their hypernym
-#         hypo = w.hyponyms()  # returns a list of synsets
-#         if len(hypo) > 0:
-#             for h in hypo:  # h is a synset
-#                 for l in h.lemmas():  # l is a lemma
-#                     if str(l.name()) in froll_dict:
-#                         out.add(str(l.name()))
-#         # Hyponyms share a type-of relationship with their hypernym
-#         hyper = w.hypernyms()
-#         if len(hyper) > 0:
-#             for h in hyper:
-#                 for l in h.lemmas():
-#                     if str(l.name()) in froll_dict:
-#                         out.add(str(l.name()))
-#         # 'X' is a holonym of 'Y' if Ys are parts of Xs, or
-#         # 'X' is a holonym of 'Y' if Ys are members of Xs.
-#         holo = w.member_holonyms()
-#         if len(holo) > 0:
-#             for h in holo:
-#                 for l in h.lemmas():
-#                     if str(l.name()) in froll_dict:
-#                         out.add(str(l.name()))
-#     return out
-
-# print('SYZYGY')
-# synwords = wn.synsets('clear')
-# print('synsets:')
-# print(synwords)
-# for w in synwords:
-#     # print('synset item:' + str(w.name()))
-#     hypo = w.hyponyms()
-#     if len(hypo) > 0:
-#         for h in hypo:
-#             for l in h.lemmas():
-#                 # print('hyponym out:' + str(l.name()))
-#                 if str(l.name()) in froll_dict:
-#                     # print('hyponym in:' + str(l.name()))
-#     hyper = w.hypernyms()
-#     if len(hyper) > 0:
-#         for h in hyper:
-#             for l in h.lemmas():
-#                 # print('hypernym out:' + str(l.name()))
-#                 if str(l.name()) in froll_dict:
-#                     # print('hypernym in:' + str(l.name()))
-#     holo = w.member_holonyms()
-#     print(holo)
-#     if len(holo) > 0:
-#         for h in holo:
-#             for l in h.lemmas():
-#                 # print('holonym out:' + str(l.name()))
-#                 if str(l.name()) in froll_dict:
-#                     # print('holonym in:' + str(l.name()))
-#
+def syzygy(w):
+    out = defaultdict(list)
+    words = set()
+    sources = set()
+    wordsets = wn.synsets(w)  # returns a list of synsets
+    for ws in wordsets:  # ws is a synset
+        hypo = ws.hyponyms()  # returns a list of synsets
+        if len(hypo) > 0:
+            for h in hypo:  # h is a synset
+                for l in h.lemmas():  # l is a lemma
+                    # if str(l.name()) in froll_dict:
+                    words.add(str(l.name()))
+        hyper = ws.hypernyms()
+        if len(hyper) > 0:
+            for h in hyper:
+                for l in h.lemmas():
+                    # if str(l.name()) in froll_dict:
+                    words.add(str(l.name()))
+        holo = ws.member_holonyms()
+        if len(holo) > 0:
+            for h in holo:
+                for l in h.lemmas():
+                    # if str(l.name()) in froll_dict:
+                    words.add(str(l.name()))
+    for r in words:
+        files = set(sear(r))
+        for e in files:
+            sources.add(e)
+            out[r].append(pp_sent(r.lower(), e))
+    return out, words, sources
 
 
-def antinomy(word):
-    out = set()
-    wordsets = wn.synsets(word)
+def antinomy(w):
+    out = defaultdict(list)
+    words = set()
+    sources = set()
+    wordsets = wn.synsets(w)
     for w in wordsets:
         anti = w.lemmas()[0].antonyms()
         if len(anti) > 0:
             for a in anti:
-                if str(a.name()) != word:
-                    out.add(str(a.name()))
-    return out
+                if str(a.name()) != w:
+                    words.add(str(a.name()))
+    for r in words:
+        files = set(sear(r))
+        for e in files:
+            sources.add(e)
+            out[r].append(pp_sent(r.lower(), e))
+    return out, words, sources
 
 
-# print('ANTINOMY')
-# antwords = wn.synsets('clear')
-# print('synsets:')
-# print(antwords)
-# for w in antwords:
-#     # print('synset item:' + str(w.name()))
-#     anti = w.lemmas()[0].antonyms()
-#     if len(anti) > 0:
-#         for a in anti:
-#             # print('antonym out:' + str(a.name()))
-#             if str(a.name()) != 'clear':
-#                 # print('antonym in:' + str(a.name()))
-#
+def sear(t):
+    temp = []
+    if l_dict.get(t.lower()):
+        temp = l_dict.get(t.lower())
+    temp1 = []
+    for f in temp:
+        x = ''.join(['l_', str((f[0])[0:2])])
+        temp1.append(x)
+    return temp1
 
 
 def pp_sent(w, f):
@@ -202,29 +186,6 @@ def pp_sent(w, f):
         out = (pre, post)
     return out
 # print(pp_sent('clear', 'l_00'))
-
-
-def clinamen(word, i):
-    out = set()
-    items = [item for item in l_00
-             if dameraulevenshtein(word, item) <= i]
-    for item in items:
-        if item != word:
-            out.add(item)
-    return out
-
-
-def clinamen_sents(ws):
-    flen = set()
-    out = defaultdict(list)
-    for r in ws:
-        files = set(sear(r))
-        # print(r, 'files: ', files)
-        for e in files:
-            flen.add(e)
-            # print('pp_sent(r, e)', r, e, pp_sent(r.lower(), e))
-            out[r].append(pp_sent(r.lower(), e))
-    return out, flen
 
 
 # http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
@@ -243,16 +204,3 @@ def dameraulevenshtein(seq1, seq2):
                seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
                     thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)
     return thisrow[len(seq2) - 1]
-
-
-def sear(t):
-    temp = l_dict.get(t.lower())
-    # print('sear temp', temp)
-    temp1 = []
-    for f in temp:
-        x = ''.join(['l_', str((f[0])[0:2])])
-        temp1.append(x)
-    return temp1
-
-# print('sear("fingers")', sear('fingers'))
-# print('sear("clear")', sear('clear'))
