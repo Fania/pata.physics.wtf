@@ -149,8 +149,8 @@ def antinomy(w):
     words = set()
     sources = set()
     wordsets = wn.synsets(w)
-    for w in wordsets:
-        anti = w.lemmas()[0].antonyms()
+    for ws in wordsets:
+        anti = ws.lemmas()[0].antonyms()
         if len(anti) > 0:
             for a in anti:
                 if str(a.name()) != w:
