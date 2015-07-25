@@ -108,7 +108,9 @@ def clinamen(w, i):
         files = set(sear(r))
         for e in files:
             sources.add(e)
-            out[r].append(pp_sent(r.lower(), e))
+            sent = pp_sent(r.lower(), e)
+            if sent != []:
+                out[r].append(sent)
     return out, words, sources
 
 
@@ -140,7 +142,9 @@ def syzygy(w):
         files = set(sear(r))
         for e in files:
             sources.add(e)
-            out[r].append(pp_sent(r.lower(), e))
+            sent = pp_sent(r.lower(), e)
+            if sent != []:
+                out[r].append(sent)
     return out, words, sources
 
 
@@ -159,7 +163,9 @@ def antinomy(w):
         files = set(sear(r))
         for e in files:
             sources.add(e)
-            out[r].append(pp_sent(r.lower(), e))
+            sent = pp_sent(r.lower(), e)
+            if sent != []:
+                out[r].append(sent)
     return out, words, sources
 
 
@@ -183,6 +189,7 @@ def pp_sent(w, f):
     if pos_b >= 0 and pos_a <= len(ff):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
+        # if pre != [] and post != []:
         out = (pre, post)
     return out
 # print(pp_sent('clear', 'l_00'))

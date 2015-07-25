@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from textsurfer import *
+from textsurfer import clinamen, syzygy, antinomy
 
 
 @app.route('/text')
