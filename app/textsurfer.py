@@ -100,6 +100,7 @@ setupcorpus(l_27, en_stop), print('added 27')
 
 
 def clinamen(w, i):
+    total = 0
     sources = set()
     out = defaultdict(list)
     words = set([item for item in l_00
@@ -110,11 +111,13 @@ def clinamen(w, i):
             sources.add(e)
             sent = pp_sent(r.lower(), e)
             if sent != []:
+                total += 1
                 out[r].append(sent)
-    return out, words, sources
+    return out, words, sources, total
 
 
 def syzygy(w):
+    total = 0
     out = defaultdict(list)
     words = set()
     sources = set()
@@ -144,11 +147,13 @@ def syzygy(w):
             sources.add(e)
             sent = pp_sent(r.lower(), e)
             if sent != []:
+                total += 1
                 out[r].append(sent)
-    return out, words, sources
+    return out, words, sources, total
 
 
 def antinomy(w):
+    total = 0
     out = defaultdict(list)
     words = set()
     sources = set()
@@ -165,8 +170,9 @@ def antinomy(w):
             sources.add(e)
             sent = pp_sent(r.lower(), e)
             if sent != []:
+                total += 1
                 out[r].append(sent)
-    return out, words, sources
+    return out, words, sources, total
 
 
 def sear(t):

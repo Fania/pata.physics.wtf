@@ -9,3 +9,8 @@
 - assign a function to each error button
 - go over known bugs again before uploading
 - for image search: add single word examples like 'tree'
+
+
+
+http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
+http://www.bevrowe.info/Queneau/QueneauRandom_v4.html
