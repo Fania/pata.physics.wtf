@@ -22,10 +22,10 @@ def textresults():
         # qx = getResults(q)
 
         # CLINAMEN
-        # clin_sens, clin_words, clin_files = clinamen(query, 2)
+        clin_sens, clin_words, clin_files = clinamen(query, 2)
 
         # SYZYGY
-        # sys_sens, sys_words, sys_files = syzygy(query)
+        sys_sens, sys_words, sys_files = syzygy(query)
 
         # ANTINOMY
         anti_sens, anti_words, anti_files = antinomy(query)
