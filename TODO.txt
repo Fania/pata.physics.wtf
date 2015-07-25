@@ -10,7 +10,6 @@
 - go over known bugs again before uploading
 - for image search: add single word examples like 'tree'
 
-- hover title showing source
 - mendes, english and spanish? stopwords?
 
 

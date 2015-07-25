@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{# http://jinja.pocoo.org/docs/dev/templates/ #}
+
 {% block content %}
 <div class="search_form">
     <form action="../textresults" method="post">
@@ -23,7 +25,21 @@
         Total number of sources: {{ all_files|length }}
     </div>
 
+    <!-- {word1: [(title, (pre, word, post)), ...], -->
+
     <div class="resultset">
+        {% if clin_words %}
+            <div id="results">
+                <ul>
+                  <li title="{{ clin_sens[0][0][0] }}">... {{ clin_sens[0][0][1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ clin_sens[0][0][1][1] }}"></input></form> {{ clin_sens[0][0][1][2] }} ...</li>
+                </ul>
+            </div>
+        {% else %}
+            Clinamen - Sorry, no pataphysicalised reverberations found!
+        {% endif %}
+    </div>
+
+    <!-- <div class="resultset">
         {% if clin_words %}
             Clinamen - {{ clin_words|length }} pataphysicalised
             {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
@@ -33,7 +49,7 @@
                         {% for prek, prev in clin_sens.iteritems() %}
                             {% if prek == key %}
                               {% for p1, p2 in prev %}
-                                <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
+                                <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}...</li>
                               {% endfor %}
                             {% endif %}
                         {% endfor %}
@@ -43,9 +59,9 @@
         {% else %}
             Clinamen - Sorry, no pataphysicalised reverberations found!
         {% endif %}
-    </div>
+    </div> -->
 
-    <div class="resultset">
+    <!-- <div class="resultset">
       {% if sys_words %}
           Syzygy - {{ sys_sens|length }} pataphysicalised
           {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
@@ -89,7 +105,7 @@
         {% else %}
             Antinomy - Sorry, no pataphysicalised reverberations found!
         {% endif %}
-    </div>
+    </div> -->
 
 </div>
 {% endblock %}

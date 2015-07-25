@@ -232,7 +232,7 @@ def pp_sent(w, f):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
         # if pre != [] and post != []:
-        out = (pre, post)
+        out = (pre, w, post)
     return out
 
 

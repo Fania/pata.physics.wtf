@@ -21,6 +21,12 @@ def textresults():
         print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
+        # clin_sens structure:
+        # {word1: [(title, (pre, word, post)), ...],
+        #  word2: [(title, (pre, word, post)), ...],
+        #  ...
+        # }
+
         clin_sens, clin_words, clin_files, clin_tot = clinamen(query, 2)
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
