@@ -32,8 +32,8 @@
                     {% for key in clin_words %}
                         {% for prek, prev in clin_sens.iteritems() %}
                             {% if prek == key %}
-                              {% for p in prev %}
-                                <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
+                              {% for p1, p2 in prev %}
+                                <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
                               {% endfor %}
                             {% endif %}
                         {% endfor %}
@@ -55,8 +55,8 @@
                 {% for key in sys_words %}
                     {% for prek, prev in sys_sens.iteritems() %}
                         {% if prek == key %}
-                          {% for p in prev %}
-                            <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
+                          {% for p1, p2 in prev %}
+                            <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
                           {% endfor %}
                         {% endif %}
                     {% endfor %}
@@ -78,8 +78,8 @@
                   {% for key in anti_words %}
                       {% for prek, prev in anti_sens.iteritems() %}
                           {% if prek == key %}
-                            {% for p in prev %}
-                              <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
+                            {% for p1, p2 in prev %}
+                              <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
                             {% endfor %}
                           {% endif %}
                       {% endfor %}

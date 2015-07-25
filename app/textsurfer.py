@@ -28,7 +28,7 @@ l_03 = book_list.words('03.gospel.txt')
 l_04 = book_list.words('04.bloy_french.txt')
 l_05 = book_list.words('05.coleridge.txt')
 l_06 = book_list.words('06.darien_french.txt')
-l_07 = ''
+l_07 = book_list.words('07.desbordes_french.txt')
 l_08 = book_list.words('08.elskamp_french.txt')
 l_09 = book_list.words('09.florian_french.txt')
 l_10 = book_list.words('10.arabiannights.txt')
@@ -37,7 +37,7 @@ l_12 = book_list.words('12.kahn_french.txt')
 l_13 = book_list.words('13.lautreamont_french.txt')
 l_14 = book_list.words('14.maeterlinck.txt')
 l_15 = book_list.words('15.mallarme_french.txt')
-l_16 = ''
+l_16 = book_list.words('16.mendes.txt')
 l_17 = book_list.words('17.odyssey.txt')
 l_18 = ''
 l_19 = book_list.words('19.rabelais.txt')
@@ -112,7 +112,7 @@ def clinamen(w, i):
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append(sent)
+                out[r].append((get_title(e), sent))
     return out, words, sources, total
 
 
@@ -148,7 +148,7 @@ def syzygy(w):
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append(sent)
+                out[r].append((get_title(e), sent))
     return out, words, sources, total
 
 
@@ -171,8 +171,44 @@ def antinomy(w):
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append(sent)
+                out[r].append((get_title(e), sent))
     return out, words, sources, total
+
+
+def get_title(file):
+    return {
+        'l_00': 'Alfred Jarry: Exploits and Opinions of Dr. Faustroll, '
+                'Pataphysician',
+        'l_01': 'Edgar Allen Poe: Collected Works',
+        'l_02': 'Cyrano de Bergerac: A Voyage to the Moon',
+        'l_03': 'Saint Luke: The Gospel',
+        'l_04': 'Leon Bloy: Le Desespere',
+        'l_05': 'Samuel Taylor Coleridge: The Rime of the Ancient Mariner',
+        'l_06': 'Georges Darien: Le Voleur',
+        'l_07': 'Marceline Desbordes-Valmore: Le Livre des Meres et '
+                'des Enfants',
+        'l_08': 'Max Elskamp: Enluminures',
+        'l_09': 'Jean-Pierre Claris de Florian: Les Deux Billets',
+        'l_10': 'One Thousand and One Nights',
+        'l_11': 'Christian Dietrich Grabbe: Scherz, Satire, Ironie und '
+                'tiefere Bedeutung',
+        'l_12': "Gustave Kahn: Le Conte de l'Or et Du Silence,",
+        'l_13': 'Le Comte de Lautreamont: Les Chants de Maldoror',
+        'l_14': 'Maurice Maeterlinck: Aglavaine and Selysette ',
+        'l_15': 'Stephane Mallarme: Verse and Prose',
+        'l_16': 'Mendes: The Mirror and la Divina Aventure',
+        'l_17': 'Homer: The Odyssey',
+        'l_18': 'Josephin Peladan: Babylon',
+        'l_19': 'Francois Rabelais: Gargantua and Pantagruel',
+        'l_20': "Jean de Chilra: L'Heure Sexuelle",
+        'l_21': 'Henri de Regnier: La Canne de Jaspe',
+        'l_22': 'Arthur Rimbaud: Poesies Completes',
+        'l_23': 'Marcel Schwob: Der Kinderkreuzzug',
+        'l_24': 'Alfred Jarry: Ubu Roi',
+        'l_25': 'Paul Verlaine: Poems',
+        'l_26': 'Emile Verhaeren: Poems',
+        'l_27': 'Jules Verne: A Journey to the Centre of the Earth'
+    }.get(file, 'Unknown')  # 'Unknown' is default if file not found
 
 
 def sear(t):
@@ -198,7 +234,6 @@ def pp_sent(w, f):
         # if pre != [] and post != []:
         out = (pre, post)
     return out
-# print(pp_sent('clear', 'l_00'))
 
 
 # http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
