@@ -11,96 +11,86 @@
 </div>
 
 <div class="results">
-    <!-- clin_sens = {word1: [(title, (pre, word, post)), ...], -->
+  <!-- <div class="trail">
+      <i class="fa fa-caret-right"></i> {{ query }}
+      {# {% for item in s.queries %}
+          {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
+      {% endfor %} #}
+  </div> -->
 
-    <div class="resultset">
-        {% if clin_words %}
-            <div id="results">
-              <div id="wn">
-                  <div id="lyr1">
-                      {% for key in clin_words %}
-                          {% for prek, prev in clin_sens.iteritems() %}
-                              {% if prek == key %}
-                                {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
-                              {% endif %}
-                          {% endfor %}
-                      {% endfor %}
-                  </div>
-              </div>
-              <div id="scrollLinks"></div>
-            </div>
-        {% else %}
-            Clinamen - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div>
+  <div class="resultset">
+    <span>Results: {{ all_tot }}</span>
+    <span>Reverberations: {{ all_words|length }}</span>
+    <span>Sources: {{ all_files|length }}</span>
+  </div>
 
-    <!-- <div class="resultset">
-        {% if clin_words %}
-            Clinamen - {{ clin_words|length }} pataphysicalised
-            {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-            <div id="results">
-                <ul>
-                    {% for key in clin_words %}
-                        {% for prek, prev in clin_sens.iteritems() %}
-                            {% if prek == key %}
-                              {% for p1, p2 in prev %}
-                                <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}...</li>
-                              {% endfor %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endfor %}
-                </ul>
-            </div>
-        {% else %}
-            Clinamen - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div> -->
+  <!-- clin_sens = {word1: [(title, (pre, word, post)), ...], -->
 
-    <!-- <div class="resultset">
-      {% if sys_words %}
-          Syzygy - {{ sys_sens|length }} pataphysicalised
-          {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-          found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-          <div id="results">
-              <ul>
-                {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                        {% if prek == key %}
-                          {% for p1, p2 in prev %}
-                            <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
-                          {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-              </ul>
+  <div class="resultset">
+    {% if clin_words %}
+      Clinamen - {{ clin_words|length }} pataphysicalised {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+      <div id="results">
+        <div id="wn1">
+          <div id="lyr1">
+            {% for key in clin_words %}
+              {% for prek, prev in clin_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
           </div>
-      {% else %}
-            Syzygy - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div>
+        </div>
+        <div id="scrollLinks1"></div>
+      </div>
+    {% else %}
+      Clinamen - Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div>
 
-    <div class="resultset">
-        {% if anti_words %}
-            Antinomy - {{ anti_sens|length }} pataphysicalised
-            {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-            found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-            <div id="results">
-                <ul>
-                  {% for key in anti_words %}
-                      {% for prek, prev in anti_sens.iteritems() %}
-                          {% if prek == key %}
-                            {% for p1, p2 in prev %}
-                              <li title="{{ p1 }}">...{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[1] }}...</li>
-                            {% endfor %}
-                          {% endif %}
-                      {% endfor %}
-                  {% endfor %}
-                </ul>
-            </div>
-        {% else %}
-            Antinomy - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div> -->
+  <div class="resultset">
+    {% if sys_words %}
+      Syzygy - {{ sys_sens|length }} pataphysicalised {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+      <div id="results">
+        <div id="wn2">
+          <div id="lyr2">
+            {% for key in sys_words %}
+              {% for prek, prev in sys_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks2"></div>
+      </div>
+    {% else %}
+        Syzygy - Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div>
+
+  <div class="resultset">
+    {% if anti_words %}
+      Antinomy - {{ anti_sens|length }} pataphysicalised {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
+      <div id="results">
+        <div id="wn3">
+          <div id="lyr3">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks3"></div>
+      </div>
+    {% else %}
+        Antinomy - Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div>
 
 </div>
 {% endblock %}

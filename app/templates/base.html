@@ -15,11 +15,14 @@
 <script type="text/javascript">
 if ( DYN_WEB.Scroll_Div.isSupported() ) {
     DYN_WEB.Event.add( window, 'load', function() {
-		// arguments: id of scroll area div, id of content div
-		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
-		// args: id, axis ('v' or 'h')
-		// distance per click, duration of glide
-		wndo.addGlideControls('scrollLinks', 'h', 600, 300);
+		// wndo args(id of scroll area div, id of content div)
+    // addGlideControls args(id, axis('v'|'h'), distance, duration)
+    var wndo1 = new DYN_WEB.Scroll_Div('wn1', 'lyr1');
+		wndo1.addGlideControls('scrollLinks1', 'h', 600, 300);
+    var wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
+    wndo2.addGlideControls('scrollLinks2', 'h', 600, 300);
+    var wndo3 = new DYN_WEB.Scroll_Div('wn3', 'lyr3');
+    wndo3.addGlideControls('scrollLinks3', 'h', 600, 300);
 	});
 }
 </script>

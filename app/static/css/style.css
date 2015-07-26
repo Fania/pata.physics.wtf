@@ -1154,49 +1154,75 @@ ul.bodylist {
 
 
 
-div#wn	{
+div#wn1,
+div#wn2,
+div#wn3	{
 	position:relative; /* scroll area div must be positioned */
   height:2.5em;
 	overflow:hidden; /* required! */
   background: #aaa;
   /*text-align: center;*/
 }
-div#wn,
+div#wn1,
+div#wn2,
+div#wn3,
 div#lyr1 span,
+div#lyr2 span,
+div#lyr3 span,
 div#scrollLinks {
   width: 600px;
 }
-div#lyr1 {
+div#lyr1,
+div#lyr2,
+div#lyr3 {
   white-space:nowrap; /* content will wrap without this */
   background: red;
   height: 2.5em;
 }
 
-div#lyr1 span {
+div#lyr1 span,
+div#lyr2 span,
+div#lyr3 span {
   text-align: center;
   display: inline-block;
   line-height: 2.5em;
   background: #ffc;
 }
 
-div#scrollLinks,
-div#scrollLinks .left,
-div#scrollLinks .right {
+div#scrollLinks1,
+div#scrollLinks1 .left,
+div#scrollLinks1 .right,
+div#scrollLinks2,
+div#scrollLinks2 .left,
+div#scrollLinks2 .right,
+div#scrollLinks3,
+div#scrollLinks3 .left,
+div#scrollLinks3 .right {
   height: 1em;
 }
-div#scrollLinks {
+div#scrollLinks1,
+div#scrollLinks2,
+div#scrollLinks3 {
   position: relative;
   background-color: #bbb;
 }
-div#scrollLinks .left,
-div#scrollLinks .right {
+div#scrollLinks1 .left,
+div#scrollLinks1 .right,
+div#scrollLinks2 .left,
+div#scrollLinks2 .right,
+div#scrollLinks3 .left,
+div#scrollLinks3 .right {
   background-color: #eee;
   width: 20px;
   position: absolute;
 }
-div#scrollLinks .right {
+div#scrollLinks1 .right,
+div#scrollLinks2 .right,
+div#scrollLinks3 .right {
   right: 10px;
 }
-div#scrollLinks .left {
+div#scrollLinks1 .left,
+div#scrollLinks2 .left,
+div#scrollLinks3 .left {
   left: 10px;
 }
