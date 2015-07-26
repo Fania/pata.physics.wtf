@@ -1153,76 +1153,61 @@ ul.bodylist {
 
 
 
-
-div#wn1,
-div#wn2,
-div#wn3	{
+/*Scroll Glide Bar Stuff*/
+div.wn {
 	position:relative; /* scroll area div must be positioned */
-  height:2.5em;
+  height:1.2em;
 	overflow:hidden; /* required! */
-  background: #aaa;
-  /*text-align: center;*/
+  margin-left: 30px;
 }
-div#wn1,
-div#wn2,
-div#wn3,
-div#lyr1 span,
-div#lyr2 span,
-div#lyr3 span,
-div#scrollLinks {
+
+div.wn,
+div.lyr span {
   width: 600px;
 }
-div#lyr1,
-div#lyr2,
-div#lyr3 {
+div.lyr {
   white-space:nowrap; /* content will wrap without this */
-  background: red;
-  height: 2.5em;
+  height: 1.2em;
 }
 
-div#lyr1 span,
-div#lyr2 span,
-div#lyr3 span {
+div.lyr span {
   text-align: center;
   display: inline-block;
-  line-height: 2.5em;
-  background: #ffc;
+  line-height: 1.2em;
 }
 
-div#scrollLinks1,
-div#scrollLinks1 .left,
-div#scrollLinks1 .right,
-div#scrollLinks2,
-div#scrollLinks2 .left,
-div#scrollLinks2 .right,
-div#scrollLinks3,
-div#scrollLinks3 .left,
-div#scrollLinks3 .right {
-  height: 1em;
+div.scrollLinks,
+div.scrollLinks .left,
+div.scrollLinks .right {
+  height: 0.2em;
 }
-div#scrollLinks1,
-div#scrollLinks2,
-div#scrollLinks3 {
+div.scrollLinks {
+  width: 660px;
   position: relative;
-  background-color: #bbb;
 }
-div#scrollLinks1 .left,
-div#scrollLinks1 .right,
-div#scrollLinks2 .left,
-div#scrollLinks2 .right,
-div#scrollLinks3 .left,
-div#scrollLinks3 .right {
-  background-color: #eee;
+div.scrollLinks .left,
+div.scrollLinks .right {
   width: 20px;
   position: absolute;
+  top: -1.2em;
 }
-div#scrollLinks1 .right,
-div#scrollLinks2 .right,
-div#scrollLinks3 .right {
+div.scrollLinks .right {
   right: 10px;
 }
-div#scrollLinks1 .left,
-div#scrollLinks2 .left,
-div#scrollLinks3 .left {
+div.scrollLinks .right:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f054";
+  color: #7989A9;
+}
+div.scrollLinks .left {
   left: 10px;
+}
+div.scrollLinks .left:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f053";
+  color: #7989A9;
 }

@@ -15,3 +15,4 @@
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
 http://www.bevrowe.info/Queneau/QueneauRandom_v4.html
+{# http://jinja.pocoo.org/docs/dev/templates/ #}
