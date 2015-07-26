@@ -1128,26 +1128,63 @@ ul.bodylist {
 			}
 
 @media screen and (max-width: 600px) {
+  #nav {
+  	padding: 10px 0;
+  }
+  #nav li {
+  	padding-right: 10px;
+  }
+  #nav > ul > li > a:before {
+  	margin-right: 0.25em;
+  }
+  #nav > ul > li > a > span {
+  	display: none;
+  }
+  #header a h1 {
+  	font-size: 1.4em;
+  }
+  #subnav {
+      display: none;
+  }
+  input.search_area {
+  	width: 240px;
+  }
+}
 
-#nav {
-	padding: 10px 0;
-}
-#nav li {
-	padding-right: 10px;
-}
-#nav > ul > li > a:before {
-	margin-right: 0.25em;
-}
-#nav > ul > li > a > span {
-	display: none;
-}
-#header a h1 {
-	font-size: 1.4em;
-}
-#subnav {
-    display: none;
-}
-input.search_area {
-	width: 240px;
-}
-}
+
+div#wn	{
+	position:relative; /* scroll area div must be positioned */
+	width:166px; height:166px; /* width and height required. adjust to suit  */
+	overflow:hidden; /* required! */
+  background: red;
+	}
+
+div#lyr1 {
+    white-space:nowrap; /* content will wrap without this */
+    }
+
+div#lyr1 img {
+    padding: 0 8px; /* optional gap between images */
+    }
+
+div#scrollLinks {
+    position:relative;
+    width:166px;
+    z-index: 1000;
+    height: 1em;
+    background-color: blue;
+    }
+div#scrollLinks .left {
+    /*background-image:url('images/aro-lft.gif');*/
+    background-color: green;
+    background-repeat:no-repeat;
+    width:19px; height:9px;
+    position:absolute; left:30px;
+    }
+div#scrollLinks .right {
+    /*background-image:url('images/aro-rt.gif');*/
+    background-color: green;
+    background-repeat:no-repeat;
+    width:19px; height:9px;
+    position:absolute; right:30px;
+    }

@@ -11,6 +11,18 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
+<script type='text/javascript' src='{{ url_for('static', filename='css/dw_glidescroll.js') }}'></script>
+<script type="text/javascript">
+if ( DYN_WEB.Scroll_Div.isSupported() ) {
+    DYN_WEB.Event.add( window, 'load', function() {
+		// arguments: id of scroll area div, id of content div
+		var wndo = new DYN_WEB.Scroll_Div('wn', 'lyr1');
+		// args: id, axis ('v' or 'h')
+		// distance per click, duration of glide
+		wndo.addGlideControls('scrollLinks', 'h', 166, 300);
+	});
+}
+</script>
 </head>
 
 <body class="homepage">
