@@ -1152,39 +1152,50 @@ ul.bodylist {
 }
 
 
+
+
 div#wn	{
 	position:relative; /* scroll area div must be positioned */
-	width:166px; height:166px; /* width and height required. adjust to suit  */
+  height:2.5em;
 	overflow:hidden; /* required! */
-  background: red;
-	}
-
-div#lyr1 {
-    white-space:nowrap; /* content will wrap without this */
-    }
-
-div#lyr1 img {
-    padding: 0 8px; /* optional gap between images */
-    }
-
+  background: #aaa;
+}
+div#wn,
+div#lyr1 span,
 div#scrollLinks {
-    position:relative;
-    width:166px;
-    z-index: 1000;
-    height: 1em;
-    background-color: blue;
-    }
-div#scrollLinks .left {
-    /*background-image:url('images/aro-lft.gif');*/
-    background-color: green;
-    background-repeat:no-repeat;
-    width:19px; height:9px;
-    position:absolute; left:30px;
-    }
+  width: 200px;
+}
+div#lyr1 {
+  white-space:nowrap; /* content will wrap without this */
+  background: red;
+  height: 2.5em;
+}
+
+div#lyr1 span {
+  text-align: center;
+  display: inline-block;
+  line-height: 2.5em;
+  background: #ffc;
+}
+
+div#scrollLinks,
+div#scrollLinks .left,
 div#scrollLinks .right {
-    /*background-image:url('images/aro-rt.gif');*/
-    background-color: green;
-    background-repeat:no-repeat;
-    width:19px; height:9px;
-    position:absolute; right:30px;
-    }
+  height: 1em;
+}
+div#scrollLinks {
+  position: relative;
+  background-color: #bbb;
+}
+div#scrollLinks .left,
+div#scrollLinks .right {
+  background-color: #eee;
+  width: 20px;
+  position: absolute;
+}
+div#scrollLinks .right {
+  right: 10px;
+}
+div#scrollLinks .left {
+  left: 10px;
+}

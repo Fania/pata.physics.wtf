@@ -17,24 +17,12 @@
         {% if clin_words %}
             <div id="results">
 
-              <div id="wn"> <!-- scroll area div. lyr1 is layer in scroll area (content div) -->
+              <div id="wn"> <!-- scroll area -->
                   <div id="lyr1">
-                    <img src="../static/images/demo/sunset.gif" width="150" height="150" alt=""/>
-                    <img src="../static/images/demo/cave-art.gif" width="150" height="150" alt=""/>
-                    <img src="../static/images/demo/swans.gif" width="150" height="150" alt=""/>
-                    <img src="/images/demo/design1.gif" width="150" height="150" alt=""/>
-                    <img src="/images/demo/mandala2.gif" width="150" height="150" alt=""/>
-                    <img src="/images/demo/turtle.gif" width="150" height="150" alt=""/>
-                    <img src="/images/demo/mandala1.gif" width="150" height="150" alt=""/>
-                  </div> <!-- end content div (lyr1) -->
-              </div>  <!-- end wn div -->
+                      {% for c in clin_words %}<span>{{ c }}</span>{% endfor %}
+                  </div>
+              </div>
               <div id="scrollLinks"></div>
-
-              <!-- <ul style="width: 8em; height: 1.25em; overflow: hidden; padding: 0; margin: 0;">
-                {% for c in clin_words %}
-                <li style="display: inline-block; text-align: center; width: 8em; background: #fcc; padding: 0; margin: 0;">{{ c }}</li>
-                {% endfor %}
-              </ul> -->
 
             </div>
         {% else %}
