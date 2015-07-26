@@ -26,7 +26,10 @@
   <div class="resultset">
     {% if clin_words %}
       Clinamen - {{ clin_words|length }} pataphysicalised {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %}.
-      <div id="results">
+
+      <!-- Stanza 1 -->
+      <div class="results">
+
         <div id="wn1" class="wn">
           <div id="lyr1" class="lyr">
             {% for key in clin_words %}
@@ -39,6 +42,7 @@
           </div>
         </div>
         <div id="scrollLinks1" class="scrollLinks"></div>
+
         <div id="wn2" class="wn">
           <div id="lyr2" class="lyr">
             {% for key in sys_words %}
@@ -51,6 +55,7 @@
           </div>
         </div>
         <div id="scrollLinks2" class="scrollLinks"></div>
+
         <div id="wn3" class="wn">
           <div id="lyr3" class="lyr">
             {% for key in anti_words %}
@@ -63,6 +68,161 @@
           </div>
         </div>
         <div id="scrollLinks3" class="scrollLinks"></div>
+
+        <div id="wn4" class="wn">
+          <div id="lyr4" class="lyr">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks4" class="scrollLinks"></div>
+      </div>
+
+      <!-- Stanza 2 -->
+      <div class="results">
+
+        <div id="wn5" class="wn">
+          <div id="lyr5" class="lyr">
+            {% for key in clin_words %}
+              {% for prek, prev in clin_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks5" class="scrollLinks"></div>
+
+        <div id="wn6" class="wn">
+          <div id="lyr6" class="lyr">
+            {% for key in sys_words %}
+              {% for prek, prev in sys_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks6" class="scrollLinks"></div>
+
+        <div id="wn7" class="wn">
+          <div id="lyr7" class="lyr">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks7" class="scrollLinks"></div>
+
+        <div id="wn8" class="wn">
+          <div id="lyr8" class="lyr">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks8" class="scrollLinks"></div>
+      </div>
+
+      <!-- Stanza 3 -->
+      <div class="results">
+
+        <div id="wn9" class="wn">
+          <div id="lyr9" class="lyr">
+            {% for key in clin_words %}
+              {% for prek, prev in clin_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks9" class="scrollLinks"></div>
+
+        <div id="wn10" class="wn">
+          <div id="lyr10" class="lyr">
+            {% for key in sys_words %}
+              {% for prek, prev in sys_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks10" class="scrollLinks"></div>
+
+        <div id="wn11" class="wn">
+          <div id="lyr11" class="lyr">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks11" class="scrollLinks"></div>
+      </div>
+
+      <!-- Stanza 4 -->
+      <div class="results">
+
+        <div id="wn12" class="wn">
+          <div id="lyr12" class="lyr">
+            {% for key in clin_words %}
+              {% for prek, prev in clin_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks12" class="scrollLinks"></div>
+
+        <div id="wn13" class="wn">
+          <div id="lyr13" class="lyr">
+            {% for key in sys_words %}
+              {% for prek, prev in sys_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks13" class="scrollLinks"></div>
+
+        <div id="wn14" class="wn">
+          <div id="lyr14" class="lyr">
+            {% for key in anti_words %}
+              {% for prek, prev in anti_sens.iteritems() %}
+                {% if prek == key %}
+                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        <div id="scrollLinks14" class="scrollLinks"></div>
       </div>
     {% else %}
       Clinamen - Sorry, no pataphysicalised reverberations found!
@@ -72,7 +232,7 @@
   <!-- <div class="resultset">
     {% if sys_words %}
       Syzygy - {{ sys_sens|length }} pataphysicalised {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %}.
-      <div id="results">
+      <div class="results">
         <div id="wn2" class="wn">
           <div id="lyr2" class="lyr">
             {% for key in sys_words %}
@@ -94,7 +254,7 @@
   <div class="resultset">
     {% if anti_words %}
       Antinomy - {{ anti_sens|length }} pataphysicalised {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %}.
-      <div id="results">
+      <div class="results">
         <div id="wn3" class="wn">
           <div id="lyr3" class="lyr">
             {% for key in anti_words %}

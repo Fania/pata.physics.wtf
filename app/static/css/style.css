@@ -969,9 +969,12 @@ ul.bodylist {
 	margin: 5px 0;
 }
 
-#results {
-	padding: 1em 0;
+.results {
+	padding-top: 1em;
   text-align: center;
+}
+.results:last-child {
+	margin-bottom: 1em;
 }
 
 .resultset {
@@ -979,6 +982,7 @@ ul.bodylist {
 	margin: 0.75em 0;
 	padding: 5px;
 	font-family: 'Arvo, serif';
+  text-align: left;
 }
 
 .resultset ul {
@@ -1199,7 +1203,7 @@ div.scrollLinks .right:before {
   font-style: normal;
   font-weight: normal;
   content: "\f054";
-  color: #7989A9;
+  color: #C0C0C0;
 }
 div.scrollLinks .left {
   left: 10px;
@@ -1209,5 +1213,5 @@ div.scrollLinks .left:before {
   font-style: normal;
   font-weight: normal;
   content: "\f053";
-  color: #7989A9;
+  color: #C0C0C0;
 }
