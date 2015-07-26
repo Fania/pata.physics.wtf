@@ -1159,11 +1159,12 @@ div#wn	{
   height:2.5em;
 	overflow:hidden; /* required! */
   background: #aaa;
+  /*text-align: center;*/
 }
 div#wn,
 div#lyr1 span,
 div#scrollLinks {
-  width: 200px;
+  width: 600px;
 }
 div#lyr1 {
   white-space:nowrap; /* content will wrap without this */
