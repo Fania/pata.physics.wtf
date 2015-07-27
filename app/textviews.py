@@ -22,8 +22,8 @@ def textresults():
         # qx = getResults(q)
 
         # clin_sens structure:
-        # {word1: [(title, (pre, word, post)), ...],
-        #  word2: [(title, (pre, word, post)), ...],
+        # {word1: [(title, (pre, word, post), algorithm), ...],
+        #  word2: [(title, (pre, word, post), algorithm), ...],
         #  ...
         # }
 

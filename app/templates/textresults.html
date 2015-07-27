@@ -21,7 +21,31 @@
     <span title="Results - Reverberations - Origins"> : {{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
   </div>
 
-  <!-- clin_sens = {word1: [(title, (pre, word, post)), ...], -->
+  <!-- all_sens = {word: [(title, (pre, word, post), algorithm), ...], -->
+
+  <!-- SOURCES -->
+  <!-- <div class="resultset">
+    {% if all_files %}
+      <div class="results">
+        {% for file in all_files %}
+          <span>{{ file }}:</span>
+          <ul>
+            {% for key, value in all_sens.iteritems() %}
+              {% for t, s, a  in value %}
+                {% if file == t %}
+                  <li>...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+    {% else %}
+      Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div> -->
+
+
 
   <!-- POETRY -->
   <div class="resultset">
@@ -37,7 +61,7 @@
             {% for key in clin_words %}
               {% for prek, prev in clin_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -50,7 +74,7 @@
             {% for key in sys_words %}
               {% for prek, prev in sys_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -63,7 +87,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -76,7 +100,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -93,7 +117,7 @@
             {% for key in clin_words %}
               {% for prek, prev in clin_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -106,7 +130,7 @@
             {% for key in sys_words %}
               {% for prek, prev in sys_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -119,7 +143,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -132,7 +156,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -149,7 +173,7 @@
             {% for key in clin_words %}
               {% for prek, prev in clin_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -162,7 +186,7 @@
             {% for key in sys_words %}
               {% for prek, prev in sys_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -175,7 +199,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -192,7 +216,7 @@
             {% for key in clin_words %}
               {% for prek, prev in clin_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -205,7 +229,7 @@
             {% for key in sys_words %}
               {% for prek, prev in sys_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -218,7 +242,7 @@
             {% for key in anti_words %}
               {% for prek, prev in anti_sens.iteritems() %}
                 {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
+                  {% for t, s, a in prev %}<span title="{{ t }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
                 {% endif %}
               {% endfor %}
             {% endfor %}
@@ -236,18 +260,17 @@
     {% if clin_words %}
       Clinamen - {{ clin_sens|length }} pataphysicalised {% if clin_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %}.
       <div class="results">
-        <div id="wn2" class="wn">
-          <div id="lyr2" class="lyr">
-            {% for key in clin_words %}
-              {% for prek, prev in clin_sens.iteritems() %}
-                {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
-                {% endif %}
-              {% endfor %}
+        <ul>
+          {% for key in clin_words %}
+            {% for prek, prev in clin_sens.iteritems() %}
+              {% if prek == key %}
+                {% for t, s, a in prev %}
+                  <li>...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
+                {% endfor %}
+              {% endif %}
             {% endfor %}
-          </div>
-        </div>
-        <div id="scrollLinks2" class="scrollLinks"></div>
+          {% endfor %}
+        </ul>
       </div>
     {% else %}
         Clinamen - Sorry, no pataphysicalised reverberations found!
@@ -256,18 +279,17 @@
     {% if sys_words %}
       Syzygy - {{ sys_sens|length }} pataphysicalised {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %}.
       <div class="results">
-        <div id="wn2" class="wn">
-          <div id="lyr2" class="lyr">
-            {% for key in sys_words %}
-              {% for prek, prev in sys_sens.iteritems() %}
-                {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
-                {% endif %}
-              {% endfor %}
+        <ul>
+          {% for key in sys_words %}
+            {% for prek, prev in sys_sens.iteritems() %}
+              {% if prek == key %}
+                {% for t, s, a in prev %}
+                  <li>...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
+                {% endfor %}
+              {% endif %}
             {% endfor %}
-          </div>
-        </div>
-        <div id="scrollLinks2" class="scrollLinks"></div>
+          {% endfor %}
+        </ul>
       </div>
     {% else %}
         Syzygy - Sorry, no pataphysicalised reverberations found!
@@ -277,16 +299,16 @@
       Antinomy - {{ anti_sens|length }} pataphysicalised {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %}.
       <div class="results">
         <ul>
-            {% for key in anti_words %}
-              {% for prek, prev in anti_sens.iteritems() %}
-                {% if prek == key %}
-                  {% for p1, p2 in prev %}<span title="{{ p1 }}">{{ p2[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p2[2] }}</span>{% endfor %}
-                {% endif %}
-              {% endfor %}
+          {% for key in anti_words %}
+            {% for prek, prev in anti_sens.iteritems() %}
+              {% if prek == key %}
+                {% for t, s, a in prev %}
+                  <li>...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
+                {% endfor %}
+              {% endif %}
             {% endfor %}
-          </div>
-        </div>
-        <div id="scrollLinks3" class="scrollLinks"></div>
+          {% endfor %}
+        </ul>
       </div>
     {% else %}
         Antinomy - Sorry, no pataphysicalised reverberations found!

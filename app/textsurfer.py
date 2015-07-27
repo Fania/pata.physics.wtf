@@ -108,11 +108,12 @@ def clinamen(w, i):
     for r in words:
         files = set(sear(r))
         for e in files:
-            sources.add(e)
+            f = get_title(e)
+            sources.add(f)
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append((get_title(e), sent))
+                out[r].append((f, sent, 'Clinamen'))
     return out, words, sources, total
 
 
@@ -144,11 +145,12 @@ def syzygy(w):
     for r in words:
         files = set(sear(r))
         for e in files:
-            sources.add(e)
+            f = get_title(e)
+            sources.add(f)
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append((get_title(e), sent))
+                out[r].append((f, sent, 'Syzygy'))
     return out, words, sources, total
 
 
@@ -167,11 +169,12 @@ def antinomy(w):
     for r in words:
         files = set(sear(r))
         for e in files:
-            sources.add(e)
+            f = get_title(e)
+            sources.add(f)
             sent = pp_sent(r.lower(), e)
             if sent != []:
                 total += 1
-                out[r].append((get_title(e), sent))
+                out[r].append((f, sent, 'Antinomy'))
     return out, words, sources, total
 
 
