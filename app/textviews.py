@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
 from textsurfer import clinamen, syzygy, antinomy
+from math import factorial
 
 
 @app.route('/text')
@@ -39,6 +40,8 @@ def textresults():
         all_words = clin_words | sys_words | anti_words
         all_files = clin_files | sys_files | anti_files
         all_tot = clin_tot + sys_tot + anti_tot
+
+        all_poems = factorial(all_tot)
 
         # print data
         return render_template('textresults.html', **locals())

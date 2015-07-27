@@ -1221,3 +1221,69 @@ div.scrollLinks .left:before {
   font-weight: bold;
   margin-bottom: 1em;
 }
+
+
+
+
+#container {
+  margin: 0 auto;
+  width: 900px;
+  background: #eee;
+}
+/* --------- tab buttons -------------- */
+.tabs {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.tabs a:link,
+.tabs a:visited {
+  display: inline-block;
+/*	width: 12em;*/
+  margin-left: 2px;
+  color: #333;
+  opacity: 0.75;
+  -webkit-transition: all 0.5s;
+     -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+       -o-transition: all 0.5s;
+          transition: all 0.5s;
+  padding: 4px 16px;
+  text-decoration: none;
+  border: 1px solid #666;
+}
+.tabs a:hover {
+  opacity: 0.85;
+  color: #000;
+}
+.tabs a.active {
+  color: #333;
+  opacity: 1;
+  background: #fff;
+}
+.tabs a.active:hover {
+  text-decoration: none;
+}
+
+/* --------- tab content -------------- */
+.tab_container {
+	width: 800px;
+	background: #ccc;
+	margin: 0 auto;
+}
+.tab_content {
+	text-align: center;
+}
+
+/* --------- individual tabs -------------- */
+#tab1 {
+	background-color: #cdc;
+}
+#tab2 {
+	background-color: #dcc;
+}
+#tab3 {
+	background-color: #ccd;
+}
