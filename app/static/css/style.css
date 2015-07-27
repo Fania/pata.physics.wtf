@@ -1215,3 +1215,9 @@ div.scrollLinks .left:before {
   content: "\f053";
   color: #C0C0C0;
 }
+
+.lefty {
+  text-align: left !important;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
