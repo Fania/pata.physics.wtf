@@ -33,6 +33,9 @@ def textresults():
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
 
+        all_sens = clin_sens.copy()
+        all_sens.update(sys_sens), all_sens.update(anti_sens)
+
         all_words = clin_words | sys_words | anti_words
         all_files = clin_files | sys_files | anti_files
         all_tot = clin_tot + sys_tot + anti_tot
