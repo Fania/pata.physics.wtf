@@ -971,7 +971,8 @@ ul.bodylist {
 
 .results {
 	padding-top: 1em;
-  text-align: center;
+  /*text-align: center;*/
+  margin: 0 auto;
 }
 .results:last-child {
 	margin-bottom: 1em;
@@ -982,7 +983,7 @@ ul.bodylist {
 	margin: 0.75em 0;
 	padding: 5px;
 	font-family: 'Arvo, serif';
-  text-align: left;
+  /*text-align: center;*/
 }
 
 .resultset ul {
@@ -1218,50 +1219,54 @@ div.scrollLinks .left:before {
 
 .lefty {
   text-align: left !important;
-  font-weight: bold;
+  font-weight: 200;
   margin-bottom: 1em;
+  padding: 5px;
+  word-wrap: break-word;
 }
 
 
+/*TABS*/
 
-
-#container {
-  margin: 0 auto;
-  width: 900px;
-  background: #eee;
-}
 /* --------- tab buttons -------------- */
 .tabs {
   position: relative;
   width: 100%;
-  padding: 0;
+  /*padding: 0;*/
+  /*padding: 20px 0;*/
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .tabs a:link,
 .tabs a:visited {
   display: inline-block;
-/*	width: 12em;*/
-  margin-left: 2px;
-  color: #333;
-  opacity: 0.75;
-  -webkit-transition: all 0.5s;
-     -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-       -o-transition: all 0.5s;
-          transition: all 0.5s;
+  /*margin-left: 12px;*/
+  color: #777;
+  transition: all 0.5s;
   padding: 4px 16px;
   text-decoration: none;
-  border: 1px solid #666;
+  /*border: 1px solid #666;*/
+  border-top: solid 2px #fff;
+
+  text-transform: uppercase;
+  font-weight: 400;
 }
 .tabs a:hover {
-  opacity: 0.85;
-  color: #000;
+  /*opacity: 0.85;*/
+  /*color: #576c93;*/
+  color: #576c93;
+  text-decoration: none;
+  border-top: solid 2px #ddd;
 }
 .tabs a.active {
-  color: #333;
-  opacity: 1;
-  background: #fff;
+  /*background: #576c93;*/
+  /*opacity: 1;*/
+  color: #576c93;
+  text-decoration: none;
+  border-top: solid 2px #ddd;
+  border-bottom: none;
+  /*color: #fff;*/
 }
 .tabs a.active:hover {
   text-decoration: none;
@@ -1269,21 +1274,21 @@ div.scrollLinks .left:before {
 
 /* --------- tab content -------------- */
 .tab_container {
-	width: 800px;
-	background: #ccc;
-	margin: 0 auto;
+	/*width: 800px;*/
+	/*background: #ccc;*/
+	/*margin: 0 auto;*/
 }
 .tab_content {
-	text-align: center;
+	/*text-align: center;*/
 }
 
 /* --------- individual tabs -------------- */
 #tab1 {
-	background-color: #cdc;
+	/*background-color: #cdc;*/
 }
 #tab2 {
-	background-color: #dcc;
+	/*background-color: #dcc;*/
 }
 #tab3 {
-	background-color: #ccd;
+	/*background-color: #ccd;*/
 }

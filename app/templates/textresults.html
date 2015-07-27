@@ -17,7 +17,7 @@
   </div> -->
 
   <nav class="tabs">
-    <a class="active" href="#tab1">Poems</a>
+    <a class="active" href="#tab1">Poetry</a>
     <a href="#tab2">Sources</a>
     <a href="#tab3">Algorithms</a>
   </nav>
@@ -29,17 +29,18 @@
 
   <div class="tab_container">
 
+      <!-- POETRY -->
       <div id="tab1" class="tab_content">
-        <h2>Tab 1</h2>
-        <p>Tab one stuff</p>
-        <!-- POETRY -->
+        <h2>Poetry</h2>
+        <div class="lefty">
+          Displayed in sonnet style. Hover for source and algorithm.
+          <br><br>
+          <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes">
+            {{ all_poems }} possible poems.
+          </a>
+        </div>
         <div class="resultset">
           {% if clin_words %}
-            <div class="lefty">
-              <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes">
-                {{ all_poems }} Poems
-              </a>
-            </div>
 
             <!-- Stanza 1 -->
             <div class="results">
@@ -247,7 +248,9 @@
       <!-- SOURCES -->
       <div id="tab2" class="tab_content">
         <h2>Sources</h2>
-        <p>Sorted by source. Hover for algorithm.</p>
+        <div class="lefty">
+          Sorted by source. Hover for algorithm.
+        </div>
         <div class="resultset">
           {% if all_files %}
             <div class="results">
@@ -271,10 +274,12 @@
         </div>
       </div><!-- end tab sources -->
 
+      <!-- ALGORITHMS -->
       <div id="tab3" class="tab_content">
-        <h2>Tab 3</h2>
-        <p>Tab three stuff</p>
-        <!-- ALGORITHMS -->
+        <h2>Algorithms</h2>
+        <div class="lefty">
+          Sorted by algorithm. Hover for source.
+        </div>
         <div class="resultset">
           <div class="results">
             {% for algo in ['Clinamen', 'Syzygy', 'Antinomy'] %}
@@ -314,7 +319,6 @@
                   {% endfor %}
                 {% endfor %}
               </ul>
-              <br><br>
             {% endfor %}
           </div>
         </div>
