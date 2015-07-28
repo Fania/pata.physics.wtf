@@ -469,7 +469,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 
 	form
 	{
-		padding:  1em 0;
+		/*padding:  1em 0;*/
 	}
 
 		form label
@@ -981,7 +981,7 @@ ul.bodylist {
 .resultset {
 	background-color: #f0f0f0;
 	margin: 0.75em 0;
-	padding: 5px;
+	padding: 5px 5px 5px 12.75%; /*hack left padding to move results to centre*/
 	font-family: 'Arvo, serif';
   /*text-align: center;*/
 }
@@ -1171,7 +1171,7 @@ div.lyr span {
   width: 600px;
 }
 div.lyr {
-  white-space:nowrap; /* content will wrap without this */
+  white-space: nowrap; /* content will wrap without this */
   height: 1.2em;
 }
 
@@ -1225,6 +1225,13 @@ div.scrollLinks .left:before {
   word-wrap: break-word;
 }
 
+.submenu {
+  padding: 1em 0;
+}
+
+.search_form {
+  float: left;
+}
 
 /*TABS*/
 
@@ -1232,41 +1239,32 @@ div.scrollLinks .left:before {
 .tabs {
   position: relative;
   width: 100%;
-  /*padding: 0;*/
-  /*padding: 20px 0;*/
-  text-align: center;
+  text-align: right;
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #777;
+
 }
 
 .tabs a:link,
 .tabs a:visited {
   display: inline-block;
-  /*margin-left: 12px;*/
-  color: #777;
   transition: all 0.5s;
-  padding: 4px 16px;
+  padding: 2px 6px 3px;
   text-decoration: none;
-  /*border: 1px solid #666;*/
-  border-top: solid 2px #fff;
-
-  text-transform: uppercase;
-  font-weight: 400;
+  /*text-transform: uppercase;*/
+  -webkit-appearance: button;
 }
 .tabs a:hover {
-  /*opacity: 0.85;*/
-  /*color: #576c93;*/
   color: #576c93;
   text-decoration: none;
-  border-top: solid 2px #ddd;
 }
 .tabs a.active {
-  /*background: #576c93;*/
-  /*opacity: 1;*/
   color: #576c93;
   text-decoration: none;
-  border-top: solid 2px #ddd;
-  border-bottom: none;
-  /*color: #fff;*/
+  font-weight: 400;
+  /*border-top: solid 2px #ddd;*/
+  /*border-bottom: none;*/
 }
 .tabs a.active:hover {
   text-decoration: none;

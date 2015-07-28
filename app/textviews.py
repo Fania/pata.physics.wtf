@@ -22,7 +22,7 @@ def textresults():
         print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
-        # clin_sens structure:
+        # all_sens structure:
         # {word1: [(title, (pre, word, post), algorithm), ...],
         #  word2: [(title, (pre, word, post), algorithm), ...],
         #  ...
