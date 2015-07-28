@@ -23,10 +23,7 @@ def textresults():
         # qx = getResults(q)
 
         # all_sens structure:
-        # {word1: [(title, (pre, word, post), algorithm), ...],
-        #  word2: [(title, (pre, word, post), algorithm), ...],
-        #  ...
-        # }
+        # [(title, (pre, word, post), algorithm), ...]
 
         # clin_words = ['hello', 'world', 'fania', 'loves', 'dave']
 
@@ -34,14 +31,13 @@ def textresults():
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
 
-        all_sens = clin_sens.copy()
-        all_sens.update(sys_sens), all_sens.update(anti_sens)
-
-        all_words = clin_words | sys_words | anti_words
-        all_files = clin_files | sys_files | anti_files
+        all_sens = list(clin_sens | sys_sens | anti_sens)
         all_tot = clin_tot + sys_tot + anti_tot
 
-        all_poems = factorial(all_tot)
+        all_files = set([f[0] for f in all_sens])
+        all_words = set([f[1][1] for f in all_sens])
+
+        # all_poems = factorial(all_tot)
 
         # print data
         return render_template('textresults.html', **locals())

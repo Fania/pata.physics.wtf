@@ -991,6 +991,13 @@ ul.bodylist {
 	margin: 0 !important;
 }
 
+.stats {
+  clear: both;
+	background-color: #f0f0f0;
+	margin: 2em 0;
+	padding: 5px;
+}
+
 /* Box Model */
 
 *, *:before, *:after {
@@ -1238,7 +1245,8 @@ div.scrollLinks .left:before {
 /* --------- tab buttons -------------- */
 .tabs {
   position: relative;
-  width: 100%;
+  /*width: 40%;*/
+  float: right;
   text-align: right;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;

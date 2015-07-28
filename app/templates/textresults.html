@@ -21,9 +21,9 @@
       {% endfor %} #}
   </div> -->
 
-  <div class="resultset">
+  <div class="stats">
     <span><form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
-    <span title="Results - Reverberations - Origins"> : {{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
+    <span title="all_sens =? Results - Reverberations - Origins"> : 'all_sens' {{ all_sens|length }} =? 'all_tot' {{ all_tot }} - 'all_words' {{ all_words|length }} - 'all_files' {{ all_files|length }}</span>
   </div>
 
   <div class="tab_container">
@@ -37,17 +37,15 @@
         </div>
         <div class="resultset">
 
+            <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
+
             <!-- Stanza 1 -->
             <div class="results">
 
               <div id="wn1" class="wn">
                 <div id="lyr1" class="lyr">
-                  {% for key in clin_words %}
-                    {% for prek, prev in all_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -55,12 +53,8 @@
 
               <div id="wn2" class="wn">
                 <div id="lyr2" class="lyr">
-                  {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -68,12 +62,8 @@
 
               <div id="wn3" class="wn">
                 <div id="lyr3" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -81,29 +71,21 @@
 
               <div id="wn4" class="wn">
                 <div id="lyr4" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
               <div id="scrollLinks4" class="scrollLinks"></div>
-            </div>
+            </div><!-- end Stanza 1 -->
 
             <!-- Stanza 2 -->
             <div class="results">
 
               <div id="wn5" class="wn">
                 <div id="lyr5" class="lyr">
-                  {% for key in clin_words %}
-                    {% for prek, prev in clin_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -111,12 +93,8 @@
 
               <div id="wn6" class="wn">
                 <div id="lyr6" class="lyr">
-                  {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -124,12 +102,8 @@
 
               <div id="wn7" class="wn">
                 <div id="lyr7" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -137,29 +111,21 @@
 
               <div id="wn8" class="wn">
                 <div id="lyr8" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
               <div id="scrollLinks8" class="scrollLinks"></div>
-            </div>
+            </div><!-- end Stanza 2 -->
 
             <!-- Stanza 3 -->
             <div class="results">
 
               <div id="wn9" class="wn">
                 <div id="lyr9" class="lyr">
-                  {% for key in clin_words %}
-                    {% for prek, prev in clin_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -167,12 +133,8 @@
 
               <div id="wn10" class="wn">
                 <div id="lyr10" class="lyr">
-                  {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -180,29 +142,21 @@
 
               <div id="wn11" class="wn">
                 <div id="lyr11" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
               <div id="scrollLinks11" class="scrollLinks"></div>
-            </div>
+            </div><!-- end Stanza 3 -->
 
             <!-- Stanza 4 -->
             <div class="results">
 
               <div id="wn12" class="wn">
                 <div id="lyr12" class="lyr">
-                  {% for key in clin_words %}
-                    {% for prek, prev in clin_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -210,12 +164,8 @@
 
               <div id="wn13" class="wn">
                 <div id="lyr13" class="lyr">
-                  {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
@@ -223,19 +173,18 @@
 
               <div id="wn14" class="wn">
                 <div id="lyr14" class="lyr">
-                  {% for key in anti_words %}
-                    {% for prek, prev in anti_sens.iteritems() %}
-                      {% if prek == key %}
-                        {% for t, s, a in prev %}<span title="{{ t }}, {{ a }}">{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}</span>{% endfor %}
-                      {% endif %}
-                    {% endfor %}
+                  {% for sens in all_sens %}
+                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                   {% endfor %}
                 </div>
               </div>
               <div id="scrollLinks14" class="scrollLinks"></div>
-            </div>
+            </div><!-- end Stanza 4 -->
+
         </div>
       </div><!-- end tab poems -->
+
+      <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
 
       <!-- SOURCES -->
       <div id="tab2" class="tab_content">
@@ -244,27 +193,23 @@
           Sorted by source. Hover for algorithm.
         </div>
         <div class="resultset">
-          {% if all_files %}
-            <div class="results">
-              {% for file in all_files %}
-                <div class="lefty">{{ file }}</div>
-                <ul>
-                  {% for key, value in all_sens.iteritems() %}
-                    {% for t, s, a  in value %}
-                      {% if file == t %}
-                        <li title="{{ a }}">...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
-                      {% endif %}
-                    {% endfor %}
-                  {% endfor %}
-                </ul>
-                <br>
-              {% endfor %}
-            </div>
-          {% else %}
-            Sorry, no pataphysicalised reverberations found!
-          {% endif %}
+          <div class="results">
+            {% for file in all_files %}
+              <div class="lefty">{{ file }}</div>
+              <ul>
+                {% for sens in all_sens %}
+                  {% if file == sens[0] %}
+                    <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <br>
+            {% endfor %}
+          </div>
         </div>
       </div><!-- end tab sources -->
+
+      <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
 
       <!-- ALGORITHMS -->
       <div id="tab3" class="tab_content">
@@ -303,22 +248,19 @@
                 </div>
               {% endif %}
               <ul>
-                {% for key, value in all_sens.iteritems() %}
-                  {% for t, s, a  in value %}
-                    {% if a == algo %}
-                      <li title="{{ t }}">...{{ s[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ s[2] }}...</li>
-                    {% endif %}
-                  {% endfor %}
+                {% for sens in all_sens %}
+                  {% if sens[2] == algo %}
+                    <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+                  {% endif %}
                 {% endfor %}
               </ul>
+              <br><br>
             {% endfor %}
           </div>
         </div>
       </div><!-- end tab algorithms -->
 
-    </div><!-- end tab_container -->
-
-  <!-- all_sens = {word: [(title, (pre, word, post), algorithm), ...], -->
+  </div><!-- end tab_container -->
 
 </div>
 {% endblock %}

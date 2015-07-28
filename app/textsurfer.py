@@ -102,7 +102,7 @@ setupcorpus(l_27, en_stop), print('added 27')
 def clinamen(w, i):
     total = 0
     sources = set()
-    out = defaultdict(list)
+    out = set()
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
     for r in words:
@@ -111,15 +111,16 @@ def clinamen(w, i):
             f = get_title(e)
             sources.add(f)
             sent = pp_sent(r.lower(), e)
-            if sent != []:
+            o = (f, sent, 'Clinamen')
+            if sent != [] and o not in out:
                 total += 1
-                out[r].append((f, sent, 'Clinamen'))
+                out.add(o)
     return out, words, sources, total
 
 
 def syzygy(w):
     total = 0
-    out = defaultdict(list)
+    out = set()
     words = set()
     sources = set()
     wordsets = wn.synsets(w)  # returns a list of synsets
@@ -148,15 +149,16 @@ def syzygy(w):
             f = get_title(e)
             sources.add(f)
             sent = pp_sent(r.lower(), e)
-            if sent != []:
+            o = (f, sent, 'Syzygy')
+            if sent != [] and o not in out:
                 total += 1
-                out[r].append((f, sent, 'Syzygy'))
+                out.add(o)
     return out, words, sources, total
 
 
 def antinomy(w):
     total = 0
-    out = defaultdict(list)
+    out = set()
     words = set()
     sources = set()
     wordsets = wn.synsets(w)
@@ -172,9 +174,10 @@ def antinomy(w):
             f = get_title(e)
             sources.add(f)
             sent = pp_sent(r.lower(), e)
-            if sent != []:
+            o = (f, sent, 'Antinomy')
+            if sent != [] and o not in out:
                 total += 1
-                out[r].append((f, sent, 'Antinomy'))
+                out.add(o)
     return out, words, sources, total
 
 
