@@ -1223,6 +1223,16 @@ div.scrollLinks .left:before {
   content: "\f053";
   color: #C0C0C0;
 }
+#poems:nth-of-type(4) {
+  padding-bottom: 1em;
+}
+#poems:nth-of-type(8) {
+  padding-bottom: 1em;
+}
+#poems:nth-of-type(11) {
+  padding-bottom: 1em;
+}
+
 
 .lefty {
   text-align: left !important;

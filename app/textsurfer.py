@@ -258,3 +258,23 @@ def dameraulevenshtein(seq1, seq2):
                seq1[x - 1] == seq2[y] and seq1[x] != seq2[y]):
                     thisrow[y] = min(thisrow[y], twoago[y - 2] + 1)
     return thisrow[len(seq2) - 1]
+
+
+def calc_all(sens):
+    all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8, all_9, \
+        all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
+
+    part = 0
+    if len(sens) / 14 >= 14:
+        part = len(sens) / 14
+
+    b = 0
+    out = []
+    for i in range(1, 15):
+        n = b + part
+        v = eval('all_' + str(i))
+        v = sens[b:n]
+        b += part
+        out.append(v)
+
+    return out

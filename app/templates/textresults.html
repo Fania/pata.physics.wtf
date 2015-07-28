@@ -42,145 +42,23 @@
             <!-- Stanza 1 -->
             <div class="results">
 
-              <div id="wn1" class="wn">
-                <div id="lyr1" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
+              {% for n in range(1,15) %}
+                {% set wid = ['wn', n|string]|join %}
+                {% set lid = ['lyr', n|string]|join %}
+                {% set sid = ['scrollLinks', n|string]|join %}
+                {% set aid = lol[n-1] %}
+        <div id="poems">
+                <div id="{{wid}}" class="wn">
+                  <div id="{{lid}}" class="lyr">
+                    {% for sens in aid %}
+                      <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
+                    {% endfor %}
+                  </div>
                 </div>
-              </div>
-              <div id="scrollLinks1" class="scrollLinks"></div>
-
-              <div id="wn2" class="wn">
-                <div id="lyr2" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks2" class="scrollLinks"></div>
-
-              <div id="wn3" class="wn">
-                <div id="lyr3" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks3" class="scrollLinks"></div>
-
-              <div id="wn4" class="wn">
-                <div id="lyr4" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks4" class="scrollLinks"></div>
-            </div><!-- end Stanza 1 -->
-
-            <!-- Stanza 2 -->
-            <div class="results">
-
-              <div id="wn5" class="wn">
-                <div id="lyr5" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks5" class="scrollLinks"></div>
-
-              <div id="wn6" class="wn">
-                <div id="lyr6" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks6" class="scrollLinks"></div>
-
-              <div id="wn7" class="wn">
-                <div id="lyr7" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks7" class="scrollLinks"></div>
-
-              <div id="wn8" class="wn">
-                <div id="lyr8" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks8" class="scrollLinks"></div>
-            </div><!-- end Stanza 2 -->
-
-            <!-- Stanza 3 -->
-            <div class="results">
-
-              <div id="wn9" class="wn">
-                <div id="lyr9" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks9" class="scrollLinks"></div>
-
-              <div id="wn10" class="wn">
-                <div id="lyr10" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks10" class="scrollLinks"></div>
-
-              <div id="wn11" class="wn">
-                <div id="lyr11" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks11" class="scrollLinks"></div>
-            </div><!-- end Stanza 3 -->
-
-            <!-- Stanza 4 -->
-            <div class="results">
-
-              <div id="wn12" class="wn">
-                <div id="lyr12" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks12" class="scrollLinks"></div>
-
-              <div id="wn13" class="wn">
-                <div id="lyr13" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks13" class="scrollLinks"></div>
-
-              <div id="wn14" class="wn">
-                <div id="lyr14" class="lyr">
-                  {% for sens in all_sens %}
-                    <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-                  {% endfor %}
-                </div>
-              </div>
-              <div id="scrollLinks14" class="scrollLinks"></div>
-            </div><!-- end Stanza 4 -->
-
+                <div id="{{sid}}" class="scrollLinks"></div>
+        </div>
+              {% endfor %}
+            </div>
         </div>
       </div><!-- end tab poems -->
 
