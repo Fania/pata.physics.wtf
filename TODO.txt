@@ -1,6 +1,6 @@
 
 - [ ] Add title argument to quotes with sources
-- [ ] Limit total number of results per algorithm
+- [x] Limit total number of results per algorithm
 - [ ] remove get methods if unused
 - [ ] clean css
 - [ ] error pages stack trace show?
@@ -15,6 +15,7 @@
 - [ ] full sentences?
 - [ ] puntuation
 - [ ] phone responsiveness
+- [ ] add refs/links to sources tab
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
