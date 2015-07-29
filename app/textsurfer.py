@@ -235,26 +235,22 @@ def pp_sent(w, f):
     ff = eval(f)
     pos_b, pos_a = pos, pos
     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
-
     for l in l_dict[w]:
         x = l[0]
         if x[0:2] == f[2:]:
             pos = l[1]
-
     for i in range(1, 10):
         if ff[pos - i] in punct:
             pos_b = pos - (i - 1)
             break
         else:
             pos_b = pos - 5
-
     for j in range(1, 10):
         if ff[pos + j] in punct:
             pos_a = pos + j
             break
         else:
             pos_a = pos + 5
-
     if pos_b >= 0 and pos_a <= len(ff):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
@@ -283,20 +279,16 @@ def dameraulevenshtein(seq1, seq2):
 def calc_all(sens):
     all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8, all_9, \
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
-
     out, b, part, mx = [], 0, 0, 15
-
     if len(sens) / 14 >= 1:
         part = len(sens) / 14
     else:
         part = 1
         mx = len(sens) + 1
-
     for i in range(1, mx):
         n = b + part
         v = eval('all_' + str(i))
         v = sens[b:n]
         b += part
         out.append(v)
-
     return out, part, (mx - 1)
