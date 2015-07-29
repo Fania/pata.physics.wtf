@@ -37,11 +37,7 @@ def textresults():
         all_files = set([f[0] for f in all_sens])
         all_words = set([f[1][1] for f in all_sens])
 
-        # POETRY STUFF
         lol = calc_all(all_sens)
-
-        # lall = [all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8,
-        #        all_9, all_10, all_11, all_12, all_13, all_14]
 
         # all_poems = factorial(all_tot)
 

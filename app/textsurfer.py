@@ -265,12 +265,17 @@ def calc_all(sens):
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
 
     part = 0
-    if len(sens) / 14 >= 14:
-        part = len(sens) / 14
-
+    mx = 15
     b = 0
     out = []
-    for i in range(1, 15):
+
+    if len(sens) / 14 >= 1:
+        part = len(sens) / 14
+    else:
+        part = 1
+        mx = len(sens) + 1
+
+    for i in range(1, mx):
         n = b + part
         v = eval('all_' + str(i))
         v = sens[b:n]
