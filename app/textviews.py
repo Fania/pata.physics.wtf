@@ -37,9 +37,9 @@ def textresults():
         all_files = set([f[0] for f in all_sens])
         all_words = set([f[1][1] for f in all_sens])
 
-        lol = calc_all(all_sens)
+        lol, part, mx = calc_all(all_sens)
 
-        # all_poems = factorial(all_tot)
+        all_poems = part ** mx  # no of options ^ no of lines
 
         # print data
         return render_template('textresults.html', **locals())

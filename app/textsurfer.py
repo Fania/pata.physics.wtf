@@ -282,4 +282,4 @@ def calc_all(sens):
         b += part
         out.append(v)
 
-    return out
+    return out, part, (mx - 1)

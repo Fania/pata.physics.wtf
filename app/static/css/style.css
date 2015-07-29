@@ -1270,6 +1270,7 @@ div.scrollLinks .left:before {
   transition: all 0.5s;
   padding: 2px 6px 3px;
   text-decoration: none;
+  color: #777;
   /*text-transform: uppercase;*/
   -webkit-appearance: button;
 }
@@ -1307,4 +1308,41 @@ div.scrollLinks .left:before {
 }
 #tab3 {
 	/*background-color: #ccd;*/
+}
+
+
+.tabx {
+  position: relative;
+  /*width: 40%;*/
+  float: right;
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #777;
+
+}
+
+.tabx a:link,
+.tabx a:visited {
+  display: inline-block;
+  transition: all 0.5s;
+  padding: 2px 6px 3px;
+  text-decoration: none;
+  color: #777;
+  /*text-transform: uppercase;*/
+  -webkit-appearance: button;
+}
+.tabx a:hover {
+  color: #576c93;
+  text-decoration: none;
+}
+.tabx a.active {
+  color: #576c93;
+  text-decoration: none;
+  font-weight: 400;
+  /*border-top: solid 2px #ddd;*/
+  /*border-bottom: none;*/
+}
+.tabx a.active:hover {
+  text-decoration: none;
 }

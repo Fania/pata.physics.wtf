@@ -34,7 +34,7 @@
       <div id="tab1" class="tab_content">
         <h2 title="Number of possible poems: {{ all_poems }}!">Poetry *</h2>
         <div class="lefty">
-          Displayed in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes">
+          Displayed in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes" target="_blank">
           Raymond Queneau</a> style. Hover for source and algorithm.
         </div>
         <div class="resultset">
@@ -74,7 +74,7 @@
               <ul>
                 {% for sens in all_sens %}
                   {% if file == sens[0] %}
-                    <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+                    <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
                   {% endif %}
                 {% endfor %}
               </ul>
@@ -91,34 +91,42 @@
         <h2>Algorithms</h2>
         <div class="lefty">
           Sorted by algorithm. Hover for source.
+          <nav class="tabx">
+          <a href="#clinamen">Clinamen</a>
+          <a href="#syzygy">Syzygy</a>
+          <a href="#antinomy">Antinomy</a>
+        </nav>
         </div>
         <div class="resultset">
           <div class="results">
             {% for algo in ['Clinamen', 'Syzygy', 'Antinomy'] %}
               {% if algo == 'Clinamen' %}
-                <div class="lefty">
+                <div id="clinamen" class="lefty">
                   {% if clin_sens|length > 0 %}
-                    Clinamen - {{ clin_sens|length }} pataphysicalised {% if clin_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %}.
+                    Clinamen - {{ clin_sens|length }} results for {{ clin_words|length }} pataphysicalised {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %}. <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% else %}
                     Clinamen - Sorry, no pataphysicalised reverberations found!
+                    <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% endif %}
                 </div>
               {% endif %}
               {% if algo == 'Syzygy' %}
-                <div class="lefty">
+                <div id="syzygy" class="lefty">
                   {% if sys_sens|length > 0 %}
-                    Syzygy - {{ sys_sens|length }} pataphysicalised {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %}.
+                    Syzygy - {{ sys_sens|length }} results for {{ sys_words|length }} pataphysicalised {% if sys_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %}. <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% else %}
                     Syzygy - Sorry, no pataphysicalised reverberations found!
+                    <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% endif %}
                 </div>
               {% endif %}
               {% if algo == 'Antinomy' %}
-                <div class="lefty">
+                <div id="antinomy" class="lefty">
                   {% if anti_sens|length > 0 %}
-                    Antinomy - {{ anti_sens|length }} pataphysicalised {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %}.
+                    Antinomy - {{ anti_sens|length }} results for {{ anti_words|length }} pataphysicalised {% if anti_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %}. <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% else %}
                     Antinomy - Sorry, no pataphysicalised reverberations found!
+                    <a href="#"><i class="fa fa-chevron-up"></i></a>
                   {% endif %}
                 </div>
               {% endif %}
