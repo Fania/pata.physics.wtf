@@ -16,6 +16,7 @@
 - [ ] puntuation
 - [ ] phone responsiveness
 - [ ] add refs/links to sources tab
+- [ ] find way to break out of loop in pp_sent function...(
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

@@ -58,8 +58,8 @@ de_stop = stopwords.words('german')
 l_dict = defaultdict(list)
 
 # l_dict structure:
-# {word1: [[fileA, 0], [fileB, 0], ...],
-#  word2: [[fileC, 0], [fileK, 0], ...],
+# {word1: [[fileA, pos], [fileB, pos], ...],
+#  word2: [[fileC, pos], [fileK, pos], ...],
 #  ...
 # }
 
@@ -227,19 +227,62 @@ def sear(t):
         temp1.append(x)
     return temp1
 
+# l_dict structure:
+# {word1: [[fileA, pos], [fileB, pos], ...],
+#  word2: [[fileC, pos], [fileK, pos], ...],
+#  ...
+# }
+
 
 def pp_sent(w, f):
     out = []
     ff = eval(f)
-    pos = l_dict[w][0][1]
-    pos_b = pos - 5
-    pos_a = (pos + 1) + 5
+    pos = 0
+
+    for l in l_dict[w]:
+        x = l[0]
+        if x[0:2] == f[2:]:
+            pos = l[1]
+
+    pos_b = pos
+    pos_a = pos
+
+    punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
+
+    for i in range(1, 10):
+        if ff[pos - i] in punct:
+            pos_b = pos - (i - 1)
+            break
+        else:
+            pos_b = pos - 5
+
+    for j in range(1, 10):
+        if ff[pos + j] in punct:
+            pos_a = pos + j
+            break
+        else:
+            pos_a = pos + 5
+
     if pos_b >= 0 and pos_a <= len(ff):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
-        # if pre != [] and post != []:
         out = (pre, w, post)
+        # print(out)
     return out
+
+
+# def pp_sent(w, f):
+#     out = []
+#     ff = eval(f)
+#     pos = l_dict[w][0][1]
+#     pos_b = pos - 5
+#     pos_a = (pos + 1) + 5
+#     if pos_b >= 0 and pos_a <= len(ff):
+#         pre = ' '.join(ff[pos_b:pos])
+#         post = ' '.join(ff[pos+1:pos_a])
+#         # if pre != [] and post != []:
+#         out = (pre, w, post)
+#     return out
 
 
 # http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
