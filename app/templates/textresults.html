@@ -70,7 +70,7 @@
         <div class="resultset">
           <div class="results">
             {% for file in all_files %}
-              <div class="lefty">{{ file }}</div>
+              <div class="lefty">{{ file }} <a href="#"><i class="fa fa-chevron-up"></i></a></div>
               <ul>
                 {% for sens in all_sens %}
                   {% if file == sens[0] %}
