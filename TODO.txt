@@ -16,7 +16,9 @@
 - [ ] puntuation
 - [ ] phone responsiveness
 - [ ] add refs/links to sources tab
-- [ ] find way to break out of loop in pp_sent function...(
+- [ ] find way to break out of loop in pp_sent function...
+- [ ] capture / screenshot / email poem button
+- [ ] randomise poems button
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
