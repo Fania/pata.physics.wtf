@@ -1,95 +1,144 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="search_form">
-    <form action="../textresults" method="post">
+<div class="submenu">
+    <form class="search_form" action="../textresults" method="post">
         <input class="search_area" name="query" autofocus="autofocus" size="50"></input>
         <input class="search_button" type="submit" value="Search"></input>
     </form>
+    <nav class="tabs">
+      <a class="active" href="#tab1">Poetry</a>
+      <a href="#tab2">Sources</a>
+      <a href="#tab3">Algorithms</a>
+    </nav>
 </div>
 
-<div class="results">
-    <!-- <div class="trail">
-        <i class="fa fa-caret-right"></i> {{ query }}
-        {# {% for item in s.queries %}
-            {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
-        {% endfor %} #}
-    </div> -->
-    <div class="resultset">
-        Total number of results: {{ all_tot }}
-        <br>
-        Total number of reverberations: {{ all_words|length }}
-        <br>
-        Total number of sources: {{ all_files|length }}
-    </div>
+<div>
+  <!-- <div class="trail">
+      <i class="fa fa-caret-right"></i> {{ query }}
+      {# {% for item in s.queries %}
+          {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
+      {% endfor %} #}
+  </div> -->
 
-    <div class="resultset">
-        {% if clin_words %}
-            Clinamen - {{ clin_words|length }} pataphysicalised
-            {% if clin_words|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-            <div id="results">
-                <ul>
-                    {% for key in clin_words %}
-                        {% for prek, prev in clin_sens.iteritems() %}
-                            {% if prek == key %}
-                              {% for p in prev %}
-                                <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
-                              {% endfor %}
-                            {% endif %}
-                        {% endfor %}
+  <div class="stats">
+    <span><form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
+    <span title="all_sens =? Results - Reverberations - Origins"> : 'all_sens' {{ all_sens|length }} =? 'all_tot' {{ all_tot }} - 'all_words' {{ all_words|length }} - 'all_files' {{ all_files|length }}</span>
+  </div>
+
+  <div class="tab_container">
+
+      <!-- POETRY -->
+      <div id="tab1" class="tab_content">
+        <h2 title="Number of possible poems: {{ all_poems }}!">Poetry *</h2>
+        <div class="lefty">
+          Displayed in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes">
+          Raymond Queneau</a> style. Hover for source and algorithm.
+        </div>
+        <div class="resultset">
+
+            <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
+
+            <!-- Stanza 1 -->
+            <div class="results">
+
+              {% for n in range(1,15) %}
+                {% set wid = ['wn', n|string]|join %}
+                {% set lid = ['lyr', n|string]|join %}
+                {% set sid = ['scrollLinks', n|string]|join %}
+                {% set aid = lol[n-1] %}
+        <div id="poems">
+                <div id="{{wid}}" class="wn">
+                  <div id="{{lid}}" class="lyr">
+                    {% for sens in aid %}
+                      <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
                     {% endfor %}
-                </ul>
+                  </div>
+                </div>
+                <div id="{{sid}}" class="scrollLinks"></div>
+        </div>
+              {% endfor %}
             </div>
-        {% else %}
-            Clinamen - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div>
+        </div>
+      </div><!-- end tab poems -->
 
-    <div class="resultset">
-      {% if sys_words %}
-          Syzygy - {{ sys_sens|length }} pataphysicalised
-          {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-          found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-          <div id="results">
+      <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
+
+      <!-- SOURCES -->
+      <div id="tab2" class="tab_content">
+        <h2>Sources</h2>
+        <div class="lefty">
+          Sorted by source. Hover for algorithm.
+        </div>
+        <div class="resultset">
+          <div class="results">
+            {% for file in all_files %}
+              <div class="lefty">{{ file }}</div>
               <ul>
-                {% for key in sys_words %}
-                    {% for prek, prev in sys_sens.iteritems() %}
-                        {% if prek == key %}
-                          {% for p in prev %}
-                            <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
-                          {% endfor %}
-                        {% endif %}
-                    {% endfor %}
+                {% for sens in all_sens %}
+                  {% if file == sens[0] %}
+                    <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+                  {% endif %}
                 {% endfor %}
               </ul>
+              <br>
+            {% endfor %}
           </div>
-      {% else %}
-            Syzygy - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div>
+        </div>
+      </div><!-- end tab sources -->
 
-    <div class="resultset">
-        {% if anti_words %}
-            Antinomy - {{ anti_sens|length }} pataphysicalised
-            {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %}
-            found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %} for: <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form>
-            <div id="results">
-                <ul>
-                  {% for key in anti_words %}
-                      {% for prek, prev in anti_sens.iteritems() %}
-                          {% if prek == key %}
-                            {% for p in prev %}
-                              <li>...{{ p[0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ key }}"></input></form> {{ p[1] }}...</li>
-                            {% endfor %}
-                          {% endif %}
-                      {% endfor %}
-                  {% endfor %}
-                </ul>
-            </div>
-        {% else %}
-            Antinomy - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div>
+      <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
+
+      <!-- ALGORITHMS -->
+      <div id="tab3" class="tab_content">
+        <h2>Algorithms</h2>
+        <div class="lefty">
+          Sorted by algorithm. Hover for source.
+        </div>
+        <div class="resultset">
+          <div class="results">
+            {% for algo in ['Clinamen', 'Syzygy', 'Antinomy'] %}
+              {% if algo == 'Clinamen' %}
+                <div class="lefty">
+                  {% if clin_sens|length > 0 %}
+                    Clinamen - {{ clin_sens|length }} pataphysicalised {% if clin_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ clin_files|length }} {% if clin_files|length == 1 %}origin{% else %}origins{% endif %}.
+                  {% else %}
+                    Clinamen - Sorry, no pataphysicalised reverberations found!
+                  {% endif %}
+                </div>
+              {% endif %}
+              {% if algo == 'Syzygy' %}
+                <div class="lefty">
+                  {% if sys_sens|length > 0 %}
+                    Syzygy - {{ sys_sens|length }} pataphysicalised {% if sys_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ sys_files|length }} {% if sys_files|length == 1 %}origin{% else %}origins{% endif %}.
+                  {% else %}
+                    Syzygy - Sorry, no pataphysicalised reverberations found!
+                  {% endif %}
+                </div>
+              {% endif %}
+              {% if algo == 'Antinomy' %}
+                <div class="lefty">
+                  {% if anti_sens|length > 0 %}
+                    Antinomy - {{ anti_sens|length }} pataphysicalised {% if anti_sens|length == 1 %}reverberation{% else %}reverberations{% endif %} found in {{ anti_files|length }} {% if anti_files|length == 1 %}origin{% else %}origins{% endif %}.
+                  {% else %}
+                    Antinomy - Sorry, no pataphysicalised reverberations found!
+                  {% endif %}
+                </div>
+              {% endif %}
+              <ul>
+                {% for sens in all_sens %}
+                  {% if sens[2] == algo %}
+                    <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <br><br>
+            {% endfor %}
+          </div>
+        </div>
+      </div><!-- end tab algorithms -->
+
+  </div><!-- end tab_container -->
 
 </div>
 {% endblock %}

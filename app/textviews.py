@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
-from textsurfer import clinamen, syzygy, antinomy
+from textsurfer import clinamen, syzygy, antinomy, calc_all
+from math import factorial
 
 
 @app.route('/text')
@@ -21,17 +22,28 @@ def textresults():
         print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
+        # all_sens structure:
+        # [(title, (pre, word, post), algorithm), ...]
+
+        # clin_words = ['hello', 'world', 'fania', 'loves', 'dave']
+
         clin_sens, clin_words, clin_files, clin_tot = clinamen(query, 2)
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
 
-        # print('clin_words', clin_words)
-        # print('clin_files', clin_files)
-        # all_sens = clin_sens | sys_sens | anti_sens
-        all_words = clin_words | sys_words | anti_words
-        # print('all_words', all_words)
-        all_files = clin_files | sys_files | anti_files
+        all_sens = list(clin_sens | sys_sens | anti_sens)
         all_tot = clin_tot + sys_tot + anti_tot
+
+        all_files = set([f[0] for f in all_sens])
+        all_words = set([f[1][1] for f in all_sens])
+
+        # POETRY STUFF
+        lol = calc_all(all_sens)
+
+        # lall = [all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8,
+        #        all_9, all_10, all_11, all_12, all_13, all_14]
+
+        # all_poems = factorial(all_tot)
 
         # print data
         return render_template('textresults.html', **locals())

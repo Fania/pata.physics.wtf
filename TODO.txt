@@ -1,16 +1,22 @@
 
-- Add title argument to quotes with sources
-- Limit total number of results per algorithm
-- remove get methods if unused
-- clean css
-- error pages stack trace show?
-- add more pataphysical random text to the page
-- fix unicode errors all for all I/O
-- assign a function to each error button
-- go over known bugs again before uploading
-- for image search: add single word examples like 'tree'
-
+- [ ] Add title argument to quotes with sources
+- [ ] Limit total number of results per algorithm
+- [ ] remove get methods if unused
+- [ ] clean css
+- [ ] error pages stack trace show?
+- [ ] add more pataphysical random text to the page
+- [ ] fix unicode errors all for all I/O
+- [ ] assign a function to each error button
+- [ ] go over known bugs again before uploading
+- [ ] for image search: add single word examples like 'tree'
+- [ ] mendes, english and spanish? stopwords?
+- [ ] loop scroll links?
+- [ ] hide scroll links on first or last item
+- [ ] full sentences?
+- [ ] puntuation
+- [ ] phone responsiveness
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
 http://www.bevrowe.info/Queneau/QueneauRandom_v4.html
+{# http://jinja.pocoo.org/docs/dev/templates/ #}

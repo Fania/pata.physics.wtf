@@ -469,7 +469,7 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 
 	form
 	{
-		padding:  1em 0;
+		/*padding:  1em 0;*/
 	}
 
 		form label
@@ -969,21 +969,33 @@ ul.bodylist {
 	margin: 5px 0;
 }
 
-#results {
-	padding: 1em 0;
-  text-align: center;
+.results {
+	padding-top: 1em;
+  /*text-align: center;*/
+  margin: 0 auto;
+}
+.results:last-child {
+	margin-bottom: 1em;
 }
 
 .resultset {
 	background-color: #f0f0f0;
 	margin: 0.75em 0;
-	padding: 5px;
+	padding: 5px 5px 5px 12.75%; /*hack left padding to move results to centre*/
 	font-family: 'Arvo, serif';
+  /*text-align: center;*/
 }
 
 .resultset ul {
 	list-style: none;
 	margin: 0 !important;
+}
+
+.stats {
+  clear: both;
+	background-color: #f0f0f0;
+	margin: 2em 0;
+	padding: 5px;
 }
 
 /* Box Model */
@@ -1128,26 +1140,171 @@ ul.bodylist {
 			}
 
 @media screen and (max-width: 600px) {
+  #nav {
+  	padding: 10px 0;
+  }
+  #nav li {
+  	padding-right: 10px;
+  }
+  #nav > ul > li > a:before {
+  	margin-right: 0.25em;
+  }
+  #nav > ul > li > a > span {
+  	display: none;
+  }
+  #header a h1 {
+  	font-size: 1.4em;
+  }
+  #subnav {
+      display: none;
+  }
+  input.search_area {
+  	width: 240px;
+  }
+}
 
-#nav {
-	padding: 10px 0;
+
+
+/*Scroll Glide Bar Stuff*/
+div.wn {
+	position:relative; /* scroll area div must be positioned */
+  height:1.2em;
+	overflow:hidden; /* required! */
+  margin-left: 30px;
 }
-#nav li {
-	padding-right: 10px;
+
+div.wn,
+div.lyr span {
+  width: 600px;
 }
-#nav > ul > li > a:before {
-	margin-right: 0.25em;
+div.lyr {
+  white-space: nowrap; /* content will wrap without this */
+  height: 1.2em;
 }
-#nav > ul > li > a > span {
-	display: none;
+
+div.lyr span {
+  text-align: center;
+  display: inline-block;
+  line-height: 1.2em;
 }
-#header a h1 {
-	font-size: 1.4em;
+
+div.scrollLinks,
+div.scrollLinks .left,
+div.scrollLinks .right {
+  height: 0.2em;
 }
-#subnav {
-    display: none;
+div.scrollLinks {
+  width: 660px;
+  position: relative;
 }
-input.search_area {
-	width: 240px;
+div.scrollLinks .left,
+div.scrollLinks .right {
+  width: 20px;
+  position: absolute;
+  top: -1.2em;
 }
+div.scrollLinks .right {
+  right: 10px;
+}
+div.scrollLinks .right:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f054";
+  color: #C0C0C0;
+}
+div.scrollLinks .left {
+  left: 10px;
+}
+div.scrollLinks .left:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f053";
+  color: #C0C0C0;
+}
+#poems:nth-of-type(4) {
+  padding-bottom: 1em;
+}
+#poems:nth-of-type(8) {
+  padding-bottom: 1em;
+}
+#poems:nth-of-type(11) {
+  padding-bottom: 1em;
+}
+
+
+.lefty {
+  text-align: left !important;
+  font-weight: 200;
+  margin-bottom: 1em;
+  padding: 5px;
+  word-wrap: break-word;
+}
+
+.submenu {
+  padding: 1em 0;
+}
+
+.search_form {
+  float: left;
+}
+
+/*TABS*/
+
+/* --------- tab buttons -------------- */
+.tabs {
+  position: relative;
+  /*width: 40%;*/
+  float: right;
+  text-align: right;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #777;
+
+}
+
+.tabs a:link,
+.tabs a:visited {
+  display: inline-block;
+  transition: all 0.5s;
+  padding: 2px 6px 3px;
+  text-decoration: none;
+  /*text-transform: uppercase;*/
+  -webkit-appearance: button;
+}
+.tabs a:hover {
+  color: #576c93;
+  text-decoration: none;
+}
+.tabs a.active {
+  color: #576c93;
+  text-decoration: none;
+  font-weight: 400;
+  /*border-top: solid 2px #ddd;*/
+  /*border-bottom: none;*/
+}
+.tabs a.active:hover {
+  text-decoration: none;
+}
+
+/* --------- tab content -------------- */
+.tab_container {
+	/*width: 800px;*/
+	/*background: #ccc;*/
+	/*margin: 0 auto;*/
+}
+.tab_content {
+	/*text-align: center;*/
+}
+
+/* --------- individual tabs -------------- */
+#tab1 {
+	/*background-color: #cdc;*/
+}
+#tab2 {
+	/*background-color: #dcc;*/
+}
+#tab3 {
+	/*background-color: #ccd;*/
 }
