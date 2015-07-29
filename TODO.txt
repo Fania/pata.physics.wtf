@@ -12,11 +12,11 @@
 - [ ] mendes, english and spanish? stopwords?
 - [ ] loop scroll links?
 - [ ] hide scroll links on first or last item
-- [ ] full sentences?
-- [ ] puntuation
+- [x] full sentences?
+- [x] puntuation
 - [ ] phone responsiveness
 - [ ] add refs/links to sources tab
-- [ ] find way to break out of loop in pp_sent function...
+- [x] find way to break out of loop in pp_sent function...
 - [ ] capture / screenshot / email poem button
 - [ ] randomise poems button
 

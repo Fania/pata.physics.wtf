@@ -101,8 +101,7 @@ setupcorpus(l_27, en_stop), print('added 27')
 
 def clinamen(w, i):
     total = 0
-    sources = set()
-    out = set()
+    out, sources = set(), set()
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
     for r in words:
@@ -118,31 +117,30 @@ def clinamen(w, i):
     return out, words, sources, total
 
 
+def get_nym(nym, wset):
+    out = []
+    hhh = wset.hyponyms()
+    if nym == 'hypo':
+        hhh = wset.hyponyms()
+    if nym == 'hyper':
+        hhh = wset.hypernyms()
+    if nym == 'holo':
+        hhh = wset.member_holonyms()
+    if len(hhh) > 0:
+        for h in hhh:
+            for l in h.lemmas():
+                out.append(str(l.name()))
+    return out
+
+
 def syzygy(w):
     total = 0
-    out = set()
-    words = set()
-    sources = set()
-    wordsets = wn.synsets(w)  # returns a list of synsets
-    for ws in wordsets:  # ws is a synset
-        hypo = ws.hyponyms()  # returns a list of synsets
-        if len(hypo) > 0:
-            for h in hypo:  # h is a synset
-                for l in h.lemmas():  # l is a lemma
-                    # if str(l.name()) in froll_dict:
-                    words.add(str(l.name()))
-        hyper = ws.hypernyms()
-        if len(hyper) > 0:
-            for h in hyper:
-                for l in h.lemmas():
-                    # if str(l.name()) in froll_dict:
-                    words.add(str(l.name()))
-        holo = ws.member_holonyms()
-        if len(holo) > 0:
-            for h in holo:
-                for l in h.lemmas():
-                    # if str(l.name()) in froll_dict:
-                    words.add(str(l.name()))
+    out, words, sources = (set() for i in range(3))
+    wordsets = wn.synsets(w)
+    for ws in wordsets:
+        words.update(get_nym('hypo', ws))
+        words.update(get_nym('hyper', ws))
+        words.update(get_nym('holo', ws))
     for r in words:
         files = set(sear(r))
         for e in files:
@@ -158,9 +156,7 @@ def syzygy(w):
 
 def antinomy(w):
     total = 0
-    out = set()
-    words = set()
-    sources = set()
+    out, words, sources = (set() for i in range(3))
     wordsets = wn.synsets(w)
     for ws in wordsets:
         anti = ws.lemmas()[0].antonyms()
@@ -235,19 +231,15 @@ def sear(t):
 
 
 def pp_sent(w, f):
-    out = []
+    out, pos = [], 0
     ff = eval(f)
-    pos = 0
+    pos_b, pos_a = pos, pos
+    punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
 
     for l in l_dict[w]:
         x = l[0]
         if x[0:2] == f[2:]:
             pos = l[1]
-
-    pos_b = pos
-    pos_a = pos
-
-    punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
 
     for i in range(1, 10):
         if ff[pos - i] in punct:
@@ -267,22 +259,7 @@ def pp_sent(w, f):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
         out = (pre, w, post)
-        # print(out)
     return out
-
-
-# def pp_sent(w, f):
-#     out = []
-#     ff = eval(f)
-#     pos = l_dict[w][0][1]
-#     pos_b = pos - 5
-#     pos_a = (pos + 1) + 5
-#     if pos_b >= 0 and pos_a <= len(ff):
-#         pre = ' '.join(ff[pos_b:pos])
-#         post = ' '.join(ff[pos+1:pos_a])
-#         # if pre != [] and post != []:
-#         out = (pre, w, post)
-#     return out
 
 
 # http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
@@ -307,10 +284,7 @@ def calc_all(sens):
     all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8, all_9, \
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
 
-    part = 0
-    mx = 15
-    b = 0
-    out = []
+    out, b, part, mx = [], 0, 0, 15
 
     if len(sens) / 14 >= 1:
         part = len(sens) / 14

@@ -1,7 +1,6 @@
 from flask import render_template, request
 from app import app
 from textsurfer import clinamen, syzygy, antinomy, calc_all
-from math import factorial
 
 
 @app.route('/text')
