@@ -2,7 +2,7 @@
 
 {% block content %}
 <div id="header-wrapper">
-<ul id="subnav">
+<!-- <ul id="subnav">
     <li><a href="#understanding">Pataphysics</a>
         <ul>
         <li><a href="#definitions">Definitions</a></li>
@@ -10,7 +10,7 @@
         <li><a href="#syzygy">Syzygy</a></li>
         <li><a href="#antinomy">Antinomy</a></li>
         <li><a href="#jarry">Jarry</a></li>
-        </ul>  
+        </ul>
     </li>
     <li><a href="#technical">Technical</a>
         <ul>
@@ -25,7 +25,14 @@
         </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
-</ul>
+</ul> -->
+
+<nav class="tabx">
+    <a href="#understanding">Pataphysics</a>
+    <a href="#technical">Technical</a>
+    <a href="#confused">Background</a>
+    <a href="#contact">Contact</a>
+</nav>
 </div>
 
     <a id="understanding"><h2>(Mis-)Understanding <strong>Pataphysics</strong></h2></a>
@@ -49,7 +56,7 @@
     </p>
     <a id="clinamen"><h4>Clinamen</h4></a>
     <p>
-        The term clinamen was first coined by Lucretius when he needed to name the <strong>aleatory swerve of atoms</strong> in their descent described by Epicurus. Approximately two millennia later, Alfred Jarry resurrected this obscured concept as a key principle of pataphysics.  Its influences can be found in the Situationists’ détournement, the Dadaists’ ready-mades and Oulipo’s verbal games, and so on. Lucretius had already linked the <strong>indeterministic</strong> property of the clinamen to free will and the Oulipo interprets it as a chance to escape certain restrictions given that any initial constraint are still followed (just as the atoms don’t randomly start to ascend but they swerve). Experimental poet Christian Bök has called the clinamen the <strong>smallest possible aberration that can make the greatest possible difference</strong>. 
+        The term clinamen was first coined by Lucretius when he needed to name the <strong>aleatory swerve of atoms</strong> in their descent described by Epicurus. Approximately two millennia later, Alfred Jarry resurrected this obscured concept as a key principle of pataphysics.  Its influences can be found in the Situationists’ détournement, the Dadaists’ ready-mades and Oulipo’s verbal games, and so on. Lucretius had already linked the <strong>indeterministic</strong> property of the clinamen to free will and the Oulipo interprets it as a chance to escape certain restrictions given that any initial constraint are still followed (just as the atoms don’t randomly start to ascend but they swerve). Experimental poet Christian Bök has called the clinamen the <strong>smallest possible aberration that can make the greatest possible difference</strong>.
     </p>
     <p>
         One good example of a clinamen in action is Jarry’s merdre (the very first word in his Ubu play). He squeezed an extra ‘r’ into the French word ‘merde’ (meaning shit) and translates into something like ‘pshit’. By rendering a useful (if rude) word useless in this way, he introduced a pataphysical sense of creativity that persists: the word still exerts a fascination today.
@@ -64,13 +71,17 @@
     </p>
     <a id="jarry"><h4>Alfred Jarry</h4></a>
     <p>
-        Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic. 
-    </p>    
+        Alfred Jarry (1873-1907) is without doubt the prime exponent of pataphysics. The word pataphysics was invented by him and some of his schoolmates in France in the 1880s and Jarry elaborated on that initial idea, both in his celebrated Ubu plays and in his novels and speculative writings. He has been described as a poet, dramatist, novelist, journalist, artist, eccentric, alcoholic and sometimes even a lunatic.
+    </p>
     <br>
 
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
     <a id="technical"><h2>Technical <strong>details</strong></h2></a>
     <p>
         In short, the tool reads in the text of Jarry’s book, splits it into individual words and stores them in a list together with the location of where they appear, the so-called index. Searching for a word then triggers the <strong>patalgorithms</strong>. Each algorithm pataphysicalises the original search term in its own way and looks for matches in the index. Instead of returning a list of single words, a list of partial sentences is returned to provide a little bit more context. Note that ranking is not part of the process as giving priorities to one result over another could be considered quite unpataphysical.
+    </p>
+    <p>
+        Results are presented in one of three ways. The default is the <strong>poem</strong> view. It displays 14 lines of text, each of which can be changed to another iff more results are available. The other two options show the results either sorted by their <strong>source</strong> or by the <strong>algorithm</strong> by which they were generated.
     </p>
     <a id="source"><h4>Source Code</h4></a>
     <p>
@@ -78,14 +89,15 @@
     </p>
     <a id="dependencies"><h4>List of dependencies</h4></a>
     <ul class="bodylist">
-        <li><a href="http://www.python.org/" target="_blank">Python 2.7.3</a></li>
-        <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank">Virtualenv 1.11.6</a></li>
-        <li><a href="https://pip.pypa.io/en/latest/index.html" target="_blank">Pip 1.5.6</a></li>
-        <li><a href="http://flask.pocoo.org/" target="_blank">Flask 0.10.1</a></li>
-        <li><a href="http://www.nltk.org/" target="_blank">NLTK 3.0.0b1</a></li>
-        <li><a href="https://pypi.python.org/pypi/flickrapi" target="_blank">FlickrAPI 1.4.4</a></li>
-        <li><a href="https://pypi.python.org/pypi/gdata/2.0.18" target="_blank">GData 2.0.18</a></li>
-        <li><a href="https://pypi.python.org/pypi/microsofttranslator/0.6" target="_blank">MicrosoftTranslator 0.6</a></li>
+        <li><a href="http://www.python.org/" target="_blank">Python</a></li>
+        <li><a href="http://virtualenv.readthedocs.org/en/latest/index.html" target="_blank">Virtualenv</a></li>
+        <li><a href="https://pip.pypa.io/en/latest/index.html" target="_blank">Pip</a></li>
+        <li><a href="http://flask.pocoo.org/" target="_blank">Flask</a></li>
+        <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja</a></li>
+        <li><a href="http://www.nltk.org/" target="_blank">NLTK</a></li>
+        <li><a href="https://pypi.python.org/pypi/flickrapi" target="_blank">FlickrAPI</a></li>
+        <li><a href="https://pypi.python.org/pypi/gdata/2.0.18" target="_blank">GData</a></li>
+        <li><a href="https://pypi.python.org/pypi/microsofttranslator/0.6" target="_blank">MicrosoftTranslator</a></li>
         <li>And all relevant sub-dependencies.</li>
     </ul>
     <a id="issues"><h4>Known Issues & Bugs</h4></a>
@@ -94,6 +106,7 @@
     </ul>
     <br>
 
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
     <a id="confused"><h2>Confused <strong>still?</strong></h2></a>
     <p>
         <strong><i>To understand this project is to not understand this project.</i></strong>
@@ -118,12 +131,13 @@
     </p>
     <br>
 
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
     <a id="contact"><h2><strong>About me</strong> & Contact</h2></a>
     <p>
         My personal website is <a href="http://fania.uk" target="_blank">fania.uk</a>. You can email me <a href="mailto:me@fania.eu?Subject=PataSearch">here</a>.
     </p>
     <p>
-        This project is supervised by Prof. <strong>Hongji Yang</strong>, Prof. <strong>Andrew Hugill</strong> and Prof. <strong>Jim Hendler</strong>.
+        This project is supervised by Prof. <strong>Hongji Yang</strong>, Prof. <strong>Andrew Hugill</strong>, Dr. <strong>Sophie Smith</strong> and Prof. <strong>Jim Hendler</strong>.
     </p>
     <br>
 {% endblock %}
