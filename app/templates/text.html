@@ -1,20 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header>
-    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch</h2>
+
+{% include "header.html" %}
+
+<article class="w3-text-theme">
+
+<header class="w3-container w3-theme-l4">
+    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch
+      <i class="fa fa-hand-spock-o fa-5x"></i>
+    </h2>
 </header>
+
+<div class="w3-container">
 <p>
     For the sake of simplicity we limited the corpus of this system to the text of Alfred Jarry’s <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> (and not the World Wide Web). I will add other sources in the future. Shakespeare, random texts, etc to come.
 </p>
-
-<div class="search_form">
-    <form action="../textresults" method="post">
-        <input class="search_area" name="query" autofocus="autofocus" size="50"></input>
-        <input class="search_button" type="submit" value="Search"> <i class="fa fa-search"></i></input>
-    </form>
 </div>
 
+<form class="w3-container" action="../textresults" method="post">
+  <div class="w3-group">
+    <input class="w3-input" name="query" autofocus="autofocus"
+    style="width:50%" type="text" required>
+    <label class="w3-label">Search</label>
+  </div>
+  <button type="button submit" class="w3-btn w3-theme-l2">
+    <i class="fa fa-search"></i></button>
+</form>
+
+
+<div class="w3-container">
 <h3>How to use</h3>
 <p>Text search is currently only supported for single words only.</p>
 
@@ -25,5 +40,8 @@
     '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"></input></form>'
     '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"></input></form>'
     '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"></input></form>'
+</div>
+
+</article>
 
 {% endblock %}

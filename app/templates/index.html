@@ -1,85 +1,29 @@
-<!DOCTYPE HTML>
-<html>
+{% extends "base.html" %}
 
-<head>
-<title>PataSearch</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+{% block content %}
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/w3.css') }}" />
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/w3-theme-blue-grey.css') }}" />
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+{% include "indexheader.html" %}
 
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-<script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
-<script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
+<article class="w3-text-theme">
 
-<style>
-
-</style>
-
-</head>
-
-<body>
-
-<div id="main">
-
-<div class="w3-topnav w3-theme-l2 w3-center w3-padding w-card-4">
-  <a href="{{ url_for('index') }}">
-    <i class="fa fa-home"> Home</i></a>
-  <a href="{{ url_for('text') }}" >
-    <i class="fa fa-book"> Text</i></a>
-  <a href="{{ url_for('images') }}">
-    <i class="fa fa-camera"> Images</i></a>
-  <a href="{{ url_for('videos') }}">
-    <i class="fa fa-video-camera"> Video</i></a>
-  <a href="{{ url_for('about') }}">
-    <i class="fa fa-info"> About</i></a>
+<header class="w3-container w3-theme-l4">
+  <h2><i class="fa fa-bullhorn"></i> Welc<span class="mirror">r</span>ome!</h2>
+</header>
+<div class="w3-container">
+  <p>
+      Imagine a search engine that does not return the results you expect, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
+  </p>
+  <p>
+      This is a simple proof-of-concept tool to demonstrate the <strong>patalgorithms</strong> (pataphysical algorithms) we developed.
+  </p>
 </div>
 
-<header class="w3-container w3-theme-l5 w3-center">
-  <img class="spiral" src="{{ url_for('static', filename='images/spiral.png') }}"/>
-  <a href="{{ url_for('index') }}"><h1>Pataphysical Search</h1></a>
-</header>
+<div class="w3-container w3-center">
+<div class="w3-card-4 w3-border" style="float:left;">
+  <img class="trio" src="{{ url_for('static', filename='images/trio.jpg') }}" alt="DocteurFaustroll_RevueBlanche_JaneAvril" style="width:100%">
+</div>
+</div>
 
-<section class="w3-card-2 w3-center w3-theme-d3 w3-padding">
-  <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-</section>
-
-
-<article class="w3-container w3-row w3-text-theme">
-  <div class="w3-half">
-    <h2>
-        <i class="fa fa-bullhorn"></i> Welc<span class="mirror">r</span>ome!
-    </h2>
-    <p>
-        Imagine a search engine that does not return the results you expect, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
-    </p>
-    <p>
-        This is a simple proof-of-concept tool to demonstrate the <strong>patalgorithms</strong> (pataphysical algorithms) we developed.
-    </p>
-  </div>
-  <div class="w3-image w3-half w3-padding">
-    <img class="w3-card-4" src="{{ url_for('static', filename='images/RevueBlanche.jpg') }}" alt="RevueBlanche" style="width:100%">
-  </div>
 </article>
 
-
-<section class="w3-card-2 w3-center w3-theme-d3 w3-padding">
-  <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-</section>
-
-</div> <!-- main -->
-
-<footer class="w3-container w3-theme-l5 w3-text-white-opacity w3-center">
-  <p>
-    <i class="fa fa-copyright"></i>
-    <a href="mailto:me@fania.eu?Subject=PataSearch">Fania Raczinski</a> - Gidouille 142 (June 2014 vulg.)<br>
-    <img src="{{ url_for('static', filename='images/dmu.png') }}">
-  </p>
-</footer>
-
-</body>
-
-</html>
+{% endblock %}

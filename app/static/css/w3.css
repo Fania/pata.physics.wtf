@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 20px 0;
   font-weight: 600; /*FANIA*/
 	text-transform: uppercase; /*FANIA*/
+  font-family: 'Arvo', serif; /*FANIA*/
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit
@@ -173,6 +174,9 @@ h5 {
 }
 h6 {
   font-size: 16px
+}
+strong {
+  font-weight: 900;
 }
 hr {
   height: 0;
@@ -372,23 +376,25 @@ ul.w3-ul li:last-child {
   color: inherit
 }
 .w3-topnav {
-  padding: 0
+  padding: 0;
 }
 .w3-topnav a {
   padding: 0 8px;
-  border-bottom: 3px solid transparent
+  /*font-size: 20px; FANIA*/
+  text-transform: uppercase; /*FANIA*/
+  /*border-bottom: 3px solid transparent FANIA*/
 }
 .w3-topnav a:first-child {
   padding: 0 8px 0 0
 }
 .w3-topnav a:hover {
-  border-bottom: 3px solid #fff
+  /*border-bottom: 3px solid #fff FANIA*/
 }
 .w3-topnav i {
-  font-size: 20px;
-  line-height: 0;
-  position: relative;
-  bottom: -4px
+  /*font-size: 20px; FANIA*/
+  /*line-height: 0; FANIA*/
+  /*position: relative; FANIA*/
+  /*bottom: -4px FANIA*/
 }
 .w3-topnav.w3-large i {
   font-size: 24px
@@ -490,16 +496,21 @@ ul.w3-ul li:last-child {
   margin-bottom: 30px
 }
 .w3-input, .w3-textarea {
-  padding: 10px;
+  /*padding: 10px; FANIA*/
+  padding: 5px;
   display: block;
-  border: none;
-  border-bottom: 1px solid #808080
+  /*border: none;FANIA*/
+  /*border-bottom: 1px solid #808080; FANIA */
+  border: 1px solid #808080;
 }
 .w3-label {
   position: absolute;
-  top: 0;
-  left: 0;
-  color: #009688;
+  /*top: 0;*/
+  top: 5px; /*FANIA*/
+  /*left: 0; FANIA*/
+  left: 5px; /*FANIA*/
+  /*color: #009688; FANIA*/
+  color: #607d8b;/*FANIA*/
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all
@@ -744,8 +755,11 @@ ul.w3-ul li:last-child {
 }
 @media screen and (max-width:601px) {
   .w3-topnav a {
-    display: block
+    /*display: block; FANIA*/
   }
+  #navtext { /*FANIA*/
+    display: none; /*FANIA*/
+  } /*FANIA*/
   .w3-topnav a:first-child {
     padding: 0 8px
   }
@@ -1279,11 +1293,32 @@ ul.w3-ul li:last-child {
 
 /*FANIA STYLES*/
 
+a {
+  text-decoration: none;
+  color: #546588;
+}
+
+a:hover {
+  color: #37474f;
+}
+
+.trio {
+  border: solid 5px black;
+}
+
+.banner {
+  font-family: Consolas, "courier new";
+  padding: 8px;
+}
+
+.fa-inverse {
+color: #cfd8dc !important;
+}
+
 .spiral {
-	/*margin-top: 0.5em;*/
-	/*margin-bottom: 1.5em;*/
 	width: 90px;
 	height: 90px;
+  margin-top: 1em;
 }
 
 .spiral:hover {
@@ -1295,9 +1330,29 @@ ul.w3-ul li:last-child {
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-#grad {
-  background: -webkit-linear-gradient(left, #263238, #90a4ae, #263238); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #263238, #90a4ae, #263238); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #263238, #90a4ae, #263238); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #263238, #90a4ae, #263238); /* Standard syntax */
+.mirror {
+	display: inline-block !important;
+  -moz-transform: scaleX(-1) !important;
+  -o-transform: scaleX(-1) !important;
+  -webkit-transform: scaleX(-1) !important;
+  transform: scaleX(-1) !important;
+  filter: FlipH !important;
 }
+
+/*
+#grad {
+  background: -webkit-linear-gradient(left, #263238, #90a4ae, #263238);
+  background: -o-linear-gradient(right, #263238, #90a4ae, #263238);
+  background: -moz-linear-gradient(right, #263238, #90a4ae, #263238);
+  background: linear-gradient(to right, #263238, #90a4ae, #263238);
+}
+*/
+
+/* code for fixed topnav */
+/*.w3-topnav {width:100%;position:fixed;z-index:1;}*/
+/*.w3-topnav a:hover{color: #546588;}*/
+/* static topnav for screens below 601px width */
+/*@media only screen and (max-width: 601px) {*/
+  /*.w3-topnav {position:static;}*/
+  /*.spiral {margin-top: 1em;}*/
+/*}*/
