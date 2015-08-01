@@ -12,15 +12,15 @@
     <div class="resultset">
         <p>
             <strong>Pataphysicalisation: </strong>
-            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> == 
-            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> == 
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> ==
+            <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> ==
             <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}"></input></form> ==
             <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
             <hr>
         </p>
         {% if images_imgs %}
-            Images - {{ images_imgs|length }} pataphysicalised 
-            {% if images_imgs|length == 1 %}reverberation{% else %}reverberations{% endif %} 
+            Images - {{ images_imgs|length }} pataphysicalised
+            {% if images_imgs|length == 1 %}reverberation{% else %}reverberations{% endif %}
             found for: <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
 
             <div class="spouter">

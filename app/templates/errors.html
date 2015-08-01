@@ -1,26 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 id="msg"><strong>Merdre</strong> !</h2>
-    <p>
-        <i class="fa fa-bug fa-rotate-90"></i> Well, phsit. <i class="fa fa-bug fa-rotate-270"></i><br>
-        &#x202e;Something has clearly gone wrong!
-    </p>
-    <p>
-        <strong>Oooops :)</strong>
-    </p>
-    <p>
-    <form>
-		<input type="button" value="Abort">
-		<input type="button" value="Retry">
-		<input type="button" value="Ignore">
-		<input type="button" value="Fail">
-	</form>
-	</p>
 
-    <a href="http://xkcd.com/1024/" target="_blank" class="iconlink"><i class="fa fa-bug fa-5x"></i></a>
-    
+{% include "header.html" %}
+
+
+<article class="w3-text-theme">
+
+<header class="w3-container w3-theme-l4">
+  <h2 id="msg"><strong>Merdre</strong> !</h2>
+</header>
+
+<div class="w3-container w3-row">
+  <div class="w3-third">
+    <p>
+      <i class="fa fa-bug fa-rotate-90"></i> Well, phsit. <i class="fa fa-bug fa-rotate-270"></i><br>
+      &#x202e;Something has clearly gone wrong!
+    </p>
+    <p>
+      <strong>Oooops :)</strong>
+    </p>
+  </div>
+  <div class="w3-third">
+    <p>
+      <form class="w3-padding-top w3-padding-bottom">
+        <input type="button" value="Abort">
+        <input type="button" value="Retry">
+        <input type="button" value="Ignore">
+        <input type="button" value="Fail">
+      </form>
+    </p>
+  </div>
+  <div class="w3-third">
+    <p>
+      <a href="http://xkcd.com/1024/" target="_blank" class="iconlink"><i class="fa fa-bug fa-5x"></i></a>
+    </p>
+  </div>
+</div>
+
+
+
+<br>
+
+</article>
+
 {% endblock %}
-
-<!-- &#x202e; Unicode RIGHT-TO-LEFT OVERRIDE -->
-<!-- &#x202d; Unicode LEFT-TO-RIGHT OVERRIDE -->
