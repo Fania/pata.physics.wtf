@@ -70,9 +70,7 @@
     <div id="poems">
       <div id="{{wid}}" class="wn">
         <div id="{{lid}}" class="lyr">
-          {% for sens in aid %}
-            <span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>
-          {% endfor %}
+          {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>{% endfor %}
         </div>
       </div>
       <div id="{{sid}}" class="scrollLinks"></div>

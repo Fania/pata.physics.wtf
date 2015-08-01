@@ -763,6 +763,9 @@ ul.w3-ul li:last-child {
   .w3-topnav a {
     /*display: block; FANIA*/
   }
+  #patahide {
+    display: none;
+  }
   #navtext { /*FANIA*/
     display: none; /*FANIA*/
   } /*FANIA*/
@@ -1401,12 +1404,11 @@ a.spimg, a.spimg:hover { border: 0; }
 div.wn {
 	position: relative; /* scroll area div must be positioned */
 	overflow: hidden; /* required! */
-  margin-left: 30px;
   height: 1.5em;
 }
 div.wn,
 div.lyr span {
-  width: 600px;
+  width: 635px;
 }
 div.lyr {
   white-space: nowrap; /* content will wrap without this */
@@ -1423,13 +1425,11 @@ div.scrollLinks .right {
   height: 0.2em;
 }
 div.scrollLinks {
-  width: 660px;
+  width: 635px;
   position: relative;
-  background: red;
 }
 div.scrollLinks .left,
 div.scrollLinks .right {
-  width: 20px;
   position: absolute;
   top: -1.5em;
 }
