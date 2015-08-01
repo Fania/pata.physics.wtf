@@ -743,41 +743,6 @@ ul.w3-ul li:last-child {
 .w3-rest {
   overflow: hidden
 }
-@media (max-width:601px) {
-  .w3-modal-dialog .w3-modal-content {
-    margin: 50px 10px 10px 10px;
-    width: auto !important
-  }
-}
-@media (max-width:768px) {
-  .w3-modal-dialog .w3-modal-content {
-    width: 500px
-  }
-}
-@media (min-width:992px) {
-  .w3-modal-dialog .w3-modal-content {
-    width: 900px
-  }
-}
-@media screen and (max-width:601px) {
-  .w3-topnav a {
-    /*display: block; FANIA*/
-  }
-  #patahide {
-    display: none;
-  }
-  #navtext { /*FANIA*/
-    display: none; /*FANIA*/
-  } /*FANIA*/
-  .w3-topnav a:first-child {
-    padding: 0 8px
-  }
-}
-@media screen and (max-width:600px) {
-  .w3-topnav {
-    text-align: center
-  }
-}
 
 /* UTILITIES */
 
@@ -952,9 +917,11 @@ ul.w3-ul li:last-child {
   font-family: Consolas, "courier new";
   font-size: 16px;
   width: auto;
-  background-color: #fff;
+  /*background-color: #fff; FANIA*/
+  background-color: #eceff1; /*FANIA*/
   padding: 8px 12px;
-  border-left: 4px solid #009688;
+  /*border-left: 4px solid #009688; FANIA*/
+  border-left: 4px solid #607d8b; /*FANIA*/
   word-wrap: break-word
 }
 
@@ -1312,16 +1279,32 @@ ul.w3-ul li:last-child {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #546588;
+  /*546588*/
+}
+
+.inform input.inlink {
+  text-decoration: underline;
 }
 
 a:hover {
   color: #37474f;
+  /*37474f*/
 }
 
-.trio {
-  border: solid 5px black;
+header a:link, header a:visited {
+  text-decoration: none;
+}
+
+
+
+.headlong {
+  display: block;
+}
+
+.headshort {
+  display: none;
 }
 
 .banner {
@@ -1483,4 +1466,52 @@ input.inlink {
 }
 input.inlink:hover, input.inlink:active, input.inlink:focus {
 	color: #576c93;
+}
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+@media (max-width:601px) {
+  .w3-modal-dialog .w3-modal-content {
+    margin: 50px 10px 10px 10px;
+    width: auto !important
+  }
+}
+@media (max-width:768px) {
+  .w3-modal-dialog .w3-modal-content {
+    width: 500px
+  }
+}
+@media (min-width:992px) {
+  .w3-modal-dialog .w3-modal-content {
+    width: 900px
+  }
+}
+@media screen and (max-width:601px) {
+  .w3-topnav a {
+    /*display: block; FANIA*/
+  }
+  #patahide {
+    display: none;
+  }
+  .headlong {
+    display: none;
+  }
+  .headshort {
+    display: block;
+  }
+  #navtext { /*FANIA*/
+    display: none; /*FANIA*/
+  } /*FANIA*/
+  .w3-topnav a:first-child {
+    padding: 0 8px
+  }
+}
+@media screen and (max-width:600px) {
+  .w3-topnav {
+    text-align: center
+  }
 }
