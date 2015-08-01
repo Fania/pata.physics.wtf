@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 
 from nltk.corpus import wordnet as wn
@@ -8,11 +7,6 @@ from nltk.corpus import stopwords
 from collections import defaultdict
 
 import os
-
-#############################################
-
-# PROTOTYPE 01 - TEXT - SETUP
-
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -70,33 +64,33 @@ def setupcorpus(nr, lang):
             l_dict[w.lower()].append([nr.fileid[49:], x])
 
 setupcorpus(l_00, en_stop), print('added 00')
-setupcorpus(l_01, en_stop), print('added 01')
-setupcorpus(l_02, en_stop), print('added 02')
-setupcorpus(l_03, en_stop), print('added 03')
-setupcorpus(l_04, fr_stop), print('added 04')
-setupcorpus(l_05, en_stop), print('added 05')
-setupcorpus(l_06, fr_stop), print('added 06')
-setupcorpus(l_07, en_stop), print('added 07')
-setupcorpus(l_08, fr_stop), print('added 08')
-setupcorpus(l_09, fr_stop), print('added 09')
-setupcorpus(l_10, en_stop), print('added 10')
-setupcorpus(l_11, en_stop), print('added 11')
-setupcorpus(l_12, fr_stop), print('added 12')
-setupcorpus(l_13, fr_stop), print('added 13')
-setupcorpus(l_14, en_stop), print('added 14')
-setupcorpus(l_15, fr_stop), print('added 15')
-setupcorpus(l_16, en_stop), print('added 16')
-setupcorpus(l_17, en_stop), print('added 17')
-setupcorpus(l_18, en_stop), print('added 18')
-setupcorpus(l_19, en_stop), print('added 19')
-setupcorpus(l_20, en_stop), print('added 20')
-setupcorpus(l_21, en_stop), print('added 21')
-setupcorpus(l_22, fr_stop), print('added 22')
-setupcorpus(l_23, de_stop), print('added 23')
-setupcorpus(l_24, fr_stop), print('added 24')
-setupcorpus(l_25, en_stop), print('added 25')
-setupcorpus(l_26, en_stop), print('added 26')
-setupcorpus(l_27, en_stop), print('added 27')
+# setupcorpus(l_01, en_stop), print('added 01')
+# setupcorpus(l_02, en_stop), print('added 02')
+# setupcorpus(l_03, en_stop), print('added 03')
+# setupcorpus(l_04, fr_stop), print('added 04')
+# setupcorpus(l_05, en_stop), print('added 05')
+# setupcorpus(l_06, fr_stop), print('added 06')
+# setupcorpus(l_07, en_stop), print('added 07')
+# setupcorpus(l_08, fr_stop), print('added 08')
+# setupcorpus(l_09, fr_stop), print('added 09')
+# setupcorpus(l_10, en_stop), print('added 10')
+# setupcorpus(l_11, en_stop), print('added 11')
+# setupcorpus(l_12, fr_stop), print('added 12')
+# setupcorpus(l_13, fr_stop), print('added 13')
+# setupcorpus(l_14, en_stop), print('added 14')
+# setupcorpus(l_15, fr_stop), print('added 15')
+# setupcorpus(l_16, en_stop), print('added 16')
+# setupcorpus(l_17, en_stop), print('added 17')
+# setupcorpus(l_18, en_stop), print('added 18')
+# setupcorpus(l_19, en_stop), print('added 19')
+# setupcorpus(l_20, en_stop), print('added 20')
+# setupcorpus(l_21, en_stop), print('added 21')
+# setupcorpus(l_22, fr_stop), print('added 22')
+# setupcorpus(l_23, de_stop), print('added 23')
+# setupcorpus(l_24, fr_stop), print('added 24')
+# setupcorpus(l_25, en_stop), print('added 25')
+# setupcorpus(l_26, en_stop), print('added 26')
+# setupcorpus(l_27, en_stop), print('added 27')
 
 
 def clinamen(w, i):
