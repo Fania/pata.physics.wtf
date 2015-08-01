@@ -8,7 +8,6 @@
 
 <header class="w3-container w3-theme-l4">
     <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch
-      <i class="fa fa-hand-spock-o fa-5x"></i>
     </h2>
 </header>
 
@@ -18,22 +17,13 @@
 </p>
 </div>
 
-
-<form class="search_form" action="../textresults" method="post">
-    <input class="search_area" name="query" autofocus="autofocus" size="50"></input>
-    <input class="search_button" type="submit" value="Search"></input>
-</form>
-
-<form action="../textresults" method="post">
-  <div class="w3-group" style="">
-    <input class="w3-input" name="query" autofocus="autofocus"
-      style="" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2">
+<form class="w3-container" action="../textresults" method="post">
+  <div class="w3-group">
+    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
+    <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
       <i class="fa fa-search"></i></button>
   </div>
 </form>
-
-
 
 <header class="w3-container w3-theme-l5">
   <h3>How to use</h3>
@@ -42,12 +32,12 @@
   <p>Text search is currently only supported for single words only.</p>
 
   <h4>Search suggestions:</h4>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="clear"></input></form>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="troll"></input></form>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="large"></input></form>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="live"></input></form>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="solid"></input></form>
-    <form action="../textresults" method="post"><input type="submit" name="query" value="books"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"></input></form>
 </div>
 
 <br>

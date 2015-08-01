@@ -493,15 +493,21 @@ ul.w3-ul li:last-child {
 .w3-group {
   position: relative;
   margin-top: 30px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  line-height: 1em; /*FANIA*/
+  /*display: inline-block; FANIA*/
 }
 .w3-input, .w3-textarea {
   /*padding: 10px; FANIA*/
-  padding: 5px;
+  /*padding: 5px; FANIA*/
+  padding: 0; /*FANIA*/
+  line-height: 1.5em; /*FANIA*/
   display: block;
+  float: left; /*FANIA*/
+  width: 50%; /*FANIA*/
   /*border: none;FANIA*/
   /*border-bottom: 1px solid #808080; FANIA */
-  border: 1px solid #808080;
+  /*border: 1px solid #808080; FANIA*/
 }
 .w3-label {
   position: absolute;
@@ -1293,6 +1299,15 @@ ul.w3-ul li:last-child {
 
 /*FANIA STYLES*/
 
+.fa {
+  color: #455a64;
+}
+
+.fanbtn {
+  margin-left: 2px;
+  padding: 5.5px 10px;
+}
+
 a {
   text-decoration: none;
   color: #546588;
@@ -1384,25 +1399,22 @@ a.spimg, a.spimg:hover { border: 0; }
 
 /*Scroll Glide Bar Stuff*/
 div.wn {
-	position:relative; /* scroll area div must be positioned */
-  height:1.2em;
-	overflow:hidden; /* required! */
+	position: relative; /* scroll area div must be positioned */
+	overflow: hidden; /* required! */
   margin-left: 30px;
+  height: 1.5em;
 }
-
 div.wn,
 div.lyr span {
   width: 600px;
 }
 div.lyr {
   white-space: nowrap; /* content will wrap without this */
-  height: 1.2em;
 }
 
 div.lyr span {
   text-align: center;
   display: inline-block;
-  line-height: 1.2em;
 }
 
 div.scrollLinks,
@@ -1413,15 +1425,16 @@ div.scrollLinks .right {
 div.scrollLinks {
   width: 660px;
   position: relative;
+  background: red;
 }
 div.scrollLinks .left,
 div.scrollLinks .right {
   width: 20px;
   position: absolute;
-  top: -1.2em;
+  top: -1.5em;
 }
 div.scrollLinks .right {
-  right: 10px;
+  right: 0;
 }
 div.scrollLinks .right:before {
   font-family: FontAwesome;
@@ -1431,7 +1444,7 @@ div.scrollLinks .right:before {
   color: #C0C0C0;
 }
 div.scrollLinks .left {
-  left: 10px;
+  left: 0;
 }
 div.scrollLinks .left:before {
   font-family: FontAwesome;
