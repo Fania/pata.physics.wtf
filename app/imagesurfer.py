@@ -6,14 +6,14 @@ import textsurfer
 import random
 #############################################
 
-# MICROSOFT TRANSLATE
+# MICROSOFT TRANSLATE API
 microsoft_id = 'patalator'
 microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
 
-# FLICKR
+# FLICKR API
 api_key = '9a9ab31b6a0003ab43b64088230eb120'
 
-# BING IMAGE SEARCH
+# BING IMAGE SEARCH API
 # username fania@web.de pw = key
 key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
 
