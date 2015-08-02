@@ -41,7 +41,7 @@ def transent(sent):
 
 
 def getimages(query):
-    print('inside getImages query', query)
+    # print('inside getImages query', query)
     out = []
     words = query.split()
 
