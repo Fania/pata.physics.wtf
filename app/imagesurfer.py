@@ -14,8 +14,15 @@ microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
 api_key = '9a9ab31b6a0003ab43b64088230eb120'
 
 # BING IMAGE SEARCH
-base = 'https://api.datamarket.azure.com/Bing/Search/v1'
+# username fania@web.de pw = key
+# base = 'https://api.datamarket.azure.com/Bing/Search/v1'
+# base = 'https://api.datamarket.azure.com/Bing/Search/Image'
+base = "https://api.datamarket.azure.com/Bing/Search/"
 key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
+
+# client_id = 'patabing'
+# bing_secret = 'vk5JPZoEocvr2KDBARyVJ5aqksQw9MuXSR+KKgFhCvw='
+# ?accountkey = 'lqPvhGh8ITTSnBfnvlZHqY81oyaXAlFvm/cIeeMyMMQ='
 
 
 def pataphysicalise(words):
@@ -76,8 +83,8 @@ def getimages(query):
     #     out.append((phototitle, photothumb, photolink))
 
     # BING IMAGES
-    p1 = "Image?Query='%s'$format=json&ImageFilters=" % patawords
-    p2 = "'Size:Small+Aspect:Square'&$top=5&Query='%s'"
+    # p1 = "Image?Query='%s'$format=json&ImageFilters=" % patawords
+    # p2 = "'Size:Small+Aspect:Square'&$top=5&Query='%s'"
 
     # https://api.datamarket.azure.com/Bing/Search/v1/
     # Image?Query=%27clear%20consciousness%27&
@@ -88,26 +95,39 @@ def getimages(query):
     # &Version=2.2&Market=en-GB&Query=testign&
     # Sources=image&Web.Count= 1
 
-    # http://api.bing.net/json.aspx?
-    # AppId= YOUR_APPID &
-    # Version=2.2&Market=en-GB&
-    # Query=testign&
-    # Sources=web+spell&Web.Count=1&JsonType=raw
+    # u1 = "http://api.bing.net/json.aspx?"
+    # u2 = "AppId= YOUR_APPID &" % key
+    # u3 = "Version=2.2&Market=en-GB&"
+    # u4 = "Query='%s'" % patawords
+    # u5 = "&Sources=web+spell&Web.Count=1&JsonType=raw"
 
-    params = ''.join([p1, p2])
-    # &ImageFilters='Size:Small+Aspect:Square'
-    url = base + params
+    u1 = base
+    u2 = "Image?$format=json&Query='%s'" % patawords
+    # u2 = "&ImageFilters='Size:Small+Aspect:Square'&$top=5&Query="
+    # u3 = patawords
+
+    u = ''.join([u1, u2])
+
+    print('u', u)
+
+
+    url = u
     print('url', url)
     bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
     print('bing_img', bing_img)
+    # for result in bing_img.json['d']['results']:
     for result in bing_img.json['d']['results']:
         # phototitle = ud.normalize('NFKD', result['Title']) \
         #                   # .encode('ascii', 'ignore')
-        # phototitle = result['Title']
-        photothumb = result['Thumbnail']['MediaUrl']
+        phototitle = result['Title']
+        print(phototitle)
+        # photothumb = result['Thumbnail']['MediaUrl']
+        photoimg = result['MediaUrl']
+        print(photoimg)
         photolink = result['SourceUrl']
-        print('results', (photothumb, photolink))
-        out.append((photothumb, photolink))
+        print(photolink)
+        print('results', (phototitle, photoimg, photolink))
+        out.append((phototitle, photoimg, photolink))
 
     print('out', out)
     return out, translations
