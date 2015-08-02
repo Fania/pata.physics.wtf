@@ -15,14 +15,7 @@ api_key = '9a9ab31b6a0003ab43b64088230eb120'
 
 # BING IMAGE SEARCH
 # username fania@web.de pw = key
-# base = 'https://api.datamarket.azure.com/Bing/Search/v1'
-# base = 'https://api.datamarket.azure.com/Bing/Search/Image'
-base = "https://api.datamarket.azure.com/Bing/Search/"
 key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
-
-# client_id = 'patabing'
-# bing_secret = 'vk5JPZoEocvr2KDBARyVJ5aqksQw9MuXSR+KKgFhCvw='
-# ?accountkey = 'lqPvhGh8ITTSnBfnvlZHqY81oyaXAlFvm/cIeeMyMMQ='
 
 
 def pataphysicalise(words):
@@ -54,7 +47,7 @@ def getimages(query):
 
     translations = pataphysicalise(words)
     patawords = translations[2]
-    print('patawords', patawords)
+    # print('patawords', patawords)
 
     # # FLICKR
     # flickr = flickrapi.FlickrAPI(api_key)
@@ -65,10 +58,6 @@ def getimages(query):
     # photos = flickr.photos_search(text=patawords, per_page='10',
     #                               safe_search='1')
     #
-    # if photos:
-    #     print('photos', photos)
-    # else:
-    #     print('error')
     # # owners = set()
     # for photo in photos[0]:
     #     photoid = photo.attrib['id']
@@ -83,51 +72,14 @@ def getimages(query):
     #     out.append((phototitle, photothumb, photolink))
 
     # BING IMAGES
-    # p1 = "Image?Query='%s'$format=json&ImageFilters=" % patawords
-    # p2 = "'Size:Small+Aspect:Square'&$top=5&Query='%s'"
-
-    # https://api.datamarket.azure.com/Bing/Search/v1/
-    # Image?Query=%27clear%20consciousness%27&
-    # ImageFilters=%27Size%3ASmall%2BAspect%3ASquare%27
-
-    # http://api.bing.net/json.aspx?
-    # AppId='KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
-    # &Version=2.2&Market=en-GB&Query=testign&
-    # Sources=image&Web.Count= 1
-
-    # u1 = "http://api.bing.net/json.aspx?"
-    # u2 = "AppId= YOUR_APPID &" % key
-    # u3 = "Version=2.2&Market=en-GB&"
-    # u4 = "Query='%s'" % patawords
-    # u5 = "&Sources=web+spell&Web.Count=1&JsonType=raw"
-
-    u1 = base
-    u2 = "Image?$format=json&Query='%s'" % patawords
-    # u2 = "&ImageFilters='Size:Small+Aspect:Square'&$top=5&Query="
-    # u3 = patawords
-
-    u = ''.join([u1, u2])
-
-    print('u', u)
-
-
-    url = u
-    print('url', url)
+    base = "https://api.datamarket.azure.com/Bing/Search/"
+    params = "Image?$format=json&Query='%s'" % patawords
+    url = ''.join([base, params])
     bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
-    print('bing_img', bing_img)
-    # for result in bing_img.json['d']['results']:
-    for result in bing_img.json['d']['results']:
-        # phototitle = ud.normalize('NFKD', result['Title']) \
-        #                   # .encode('ascii', 'ignore')
+    for result in bing_img.json()['d']['results']:
         phototitle = result['Title']
-        print(phototitle)
-        # photothumb = result['Thumbnail']['MediaUrl']
         photoimg = result['MediaUrl']
-        print(photoimg)
         photolink = result['SourceUrl']
-        print(photolink)
-        print('results', (phototitle, photoimg, photolink))
         out.append((phototitle, photoimg, photolink))
 
-    print('out', out)
     return out, translations
