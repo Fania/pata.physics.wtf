@@ -26,9 +26,9 @@
 
 <div class="w3-container w3-theme-l5 w3-padding-top w3-padding-bottom">
 
-{% if videos_vids %}
-  Videos - {{ videos_vids|length }} pataphysicalised
-  {% if videos_vids|length == 1 %}reverberation{% else %}reverberations{% endif %} found for: <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
+{% if videos_len == 10 %}
+  Videos - {{ videos_len }} pataphysicalised
+  {% if videos_len == 1 %}reverberation{% else %}reverberations{% endif %} found for: <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
 
 <div class="spouter">
   <div class="spleft">
@@ -79,11 +79,28 @@
   </div>
 </div>
 
-{% else %}
-  Videos - Sorry, no pataphysicalised reverberations found!
 {% endif %}
 
-</div>
+{% if videos_len < 10 and videos_len > 0 %}
+
+  Videos - {{ videos_len }} pataphysicalised
+  {% if videos_len == 1 %}reverberation{% else %}reverberations{% endif %} found for: <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
+
+  <div class="w3-row w3-padding">
+  {% for v in videos_vids %}
+  <div class="w3-col s12 m4 l4 w3-center">
+    <iframe src="https://www.youtube.com/embed/{{ v.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+  </div>
+  {% endfor %}
+  </div>
+
+{% endif %}
+
+{% if videos_len == 0 %}
+
+  Videos - Sorry, no pataphysicalised reverberations found!
+
+{% endif %}
 
 </div>
 

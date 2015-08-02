@@ -41,13 +41,24 @@ def transent(sent):
 
 
 def getimages(query):
-    # print('inside getImages query', query)
     out = []
     words = query.split()
 
     translations = pataphysicalise(words)
     patawords = translations[2]
-    # print('patawords', patawords)
+
+    # BING IMAGES
+    base = "https://api.datamarket.azure.com/Bing/Search/"
+    params = "Image?$format=json&Query='%s'" % patawords
+    url = ''.join([base, params])
+    bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
+    for result in bing_img.json()['d']['results']:
+        phototitle = result['Title']
+        photoimg = result['MediaUrl']
+        photolink = result['SourceUrl']
+        out.append((phototitle, photoimg, photolink))
+
+    return out, translations
 
     # # FLICKR
     # flickr = flickrapi.FlickrAPI(api_key)
@@ -70,16 +81,3 @@ def getimages(query):
     #     # if photoowner not in owners and len(owners) < 10:
     #     #     owners.add(photoowner)
     #     out.append((phototitle, photothumb, photolink))
-
-    # BING IMAGES
-    base = "https://api.datamarket.azure.com/Bing/Search/"
-    params = "Image?$format=json&Query='%s'" % patawords
-    url = ''.join([base, params])
-    bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
-    for result in bing_img.json()['d']['results']:
-        phototitle = result['Title']
-        photoimg = result['MediaUrl']
-        photolink = result['SourceUrl']
-        out.append((phototitle, photoimg, photolink))
-
-    return out, translations
