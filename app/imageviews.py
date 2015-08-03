@@ -1,6 +1,6 @@
-from flask import render_template, url_for, request
+from flask import render_template, request
 from app import app
-from imagesurfer import *
+from imagesurfer import getimages
 
 
 @app.route('/images')
@@ -16,7 +16,7 @@ def imageresults():
     if request.method == 'GET':
         print 'imageresults get: ', query
     else:
-        #request was a POST
+        # request was a POST
         print 'imageresults post: ', query
 
         images_imgs, translations = getimages(query)

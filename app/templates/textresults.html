@@ -38,7 +38,7 @@
   </div> -->
 
 <div class="w3-container w3-padding">
-  <span>Searched for: &nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
+  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
   <span title="Results - Reverberations - Origins">&nbsp;&nbsp;= &nbsp;&nbsp;{{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
 </div>
 
@@ -51,8 +51,8 @@
 <div id="tab1" class="tab_content">
 
   <header class="w3-container w3-theme-l4">
-      <h2 title="Number of possible poems: {{ all_poems }} !">
-        Poetry *</h2>
+    <h2 title="Number of possible poems: {{ all_poems }} !">
+      Poetry *</h2>
   </header>
   <div class="w3-container">
     <p>
@@ -61,7 +61,7 @@
     </p>
   </div>
 
-  <div class="w3-container w3-theme-l5 w3-padding-top w3-padding-bottom">
+  <div class="w3-container w3-theme-l5 poetry">
   {% for n in range(1,  lol|length + 1 ) %}
     {% set wid = ['wn', n|string]|join %}
     {% set lid = ['lyr', n|string]|join %}

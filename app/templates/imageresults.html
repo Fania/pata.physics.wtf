@@ -15,78 +15,116 @@
     </div>
   </form>
   <hr>
-  <strong>Pataphysicalisation: </strong>
-  <br><br>
+  <nav class="tabs w3-topnav w3-center w3-margin">
+    <a class="active" href="#tab1">Spiral</a>
+    <a href="#tab2">List</a>
+  </nav>
+  <hr>
+</div>
+
+<div class="w3-container w3-padding">
+  <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
-  <hr>
 </div>
 
-<div class="w3-container w3-theme-l5 w3-padding-top w3-padding-bottom">
+<!-- TABS -->
+<div class="w3-container tab_container w3-padding-0">
 
-<!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
-
-{% if images_imgs %}
-  Images - {{ images_imgs|length }} pataphysicalised
-  {% if images_imgs|length == 1 %}reverberation{% else %}reverberations{% endif %}
-  found for: <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
-
-  <div class="spouter">
-    <div class="spleft">
-      <div class="spltop">
-        <div class="spltleft">
-          <a class="spimg" href="{{ images_imgs.3.2 }}" target="_blank" ><img src="{{ images_imgs.3.1 }}" title="{{ images_imgs.3.0 }}" height="210" width="210"/></a>
-        </div>
-        <div class="spltright">
-          <div class="spltrtop">
-            <a class="spimg" href="{{ images_imgs.8.2 }}" target="_blank" ><img src="{{ images_imgs.8.1 }}" title="{{ images_imgs.8.0 }}" height="130" width="130"/></a>
-          </div>
-          <div class="spltrbottom">
-            <div class="spltrbleft">
-              <div class="spltrbltop">
-                <div class="spltrbltleft">
-                  <a class="spimg" href="{{ images_imgs.0.2 }}" target="_blank" ><img src="{{ images_imgs.0.1 }}" title="{{ images_imgs.0.0 }}" height="30" width="30"/></a>
+<!-- SPIRAL -->
+<div id="tab1" class="tab_content">
+  <header class="w3-container w3-theme-l4">
+    <h2>Spiral</h2>
+  </header>
+  <div class="w3-container">
+    <p>
+      The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for link.
+    </p>
+  </div>
+  <div class="w3-container w3-theme-l5">
+    {% if images_imgs %}
+      <div class="spouter">
+        <div class="spleft">
+          <div class="spltop">
+            <div class="spltleft">
+              <a class="spimg" href="{{ images_imgs.3.2 }}" target="_blank" ><img src="{{ images_imgs.3.1 }}" title="{{ images_imgs.3.0 }}" height="210" width="210"/></a>
+            </div>
+            <div class="spltright">
+              <div class="spltrtop">
+                <a class="spimg" href="{{ images_imgs.8.2 }}" target="_blank" ><img src="{{ images_imgs.8.1 }}" title="{{ images_imgs.8.0 }}" height="130" width="130"/></a>
+              </div>
+              <div class="spltrbottom">
+                <div class="spltrbleft">
+                  <div class="spltrbltop">
+                    <div class="spltrbltleft">
+                      <a class="spimg" href="{{ images_imgs.0.2 }}" target="_blank" ><img src="{{ images_imgs.0.1 }}" title="{{ images_imgs.0.0 }}" height="30" width="30"/></a>
+                    </div>
+                    <div class="spltrbltright">
+                      <div class="spltrbltrtop">
+                        <a class="spimg" href="{{ images_imgs.1.2 }}" target="_blank" ><img src="{{ images_imgs.1.1 }}" title="{{ images_imgs.1.0 }}" height="20" width="20"/></a>
+                      </div>
+                      <div class="spltrbltrbottom">
+                        <div class="spltrbltrbleft">
+                          <a class="spimg" href="{{ images_imgs.5.2 }}" target="_blank" ><img src="{{ images_imgs.5.1 }}" title="{{ images_imgs.5.0 }}" height="10" width="10"/></a>
+                        </div>
+                        <div class="spltrbltrbright">
+                          <a class="spimg" href="{{ images_imgs.6.2 }}" target="_blank" ><img src="{{ images_imgs.6.1 }}" title="{{ images_imgs.6.0 }}" height="10" width="10"/></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spltrblbottom">
+                    <a class="spimg" href="{{ images_imgs.7.2 }}" target="_blank" ><img src="{{ images_imgs.7.1 }}" title="{{ images_imgs.7.0 }}" height="50" width="50"/></a>
+                  </div>
                 </div>
-                <div class="spltrbltright">
-                  <div class="spltrbltrtop">
-                    <a class="spimg" href="{{ images_imgs.1.2 }}" target="_blank" ><img src="{{ images_imgs.1.1 }}" title="{{ images_imgs.1.0 }}" height="20" width="20"/></a>
-                  </div>
-                  <div class="spltrbltrbottom">
-                    <div class="spltrbltrbleft">
-                      <a class="spimg" href="{{ images_imgs.5.2 }}" target="_blank" ><img src="{{ images_imgs.5.1 }}" title="{{ images_imgs.5.0 }}" height="10" width="10"/></a>
-                    </div>
-                    <div class="spltrbltrbright">
-                      <a class="spimg" href="{{ images_imgs.6.2 }}" target="_blank" ><img src="{{ images_imgs.6.1 }}" title="{{ images_imgs.6.0 }}" height="10" width="10"/></a>
-                    </div>
-                  </div>
+                <div class="spltrbright">
+                  <a class="spimg" href="{{ images_imgs.2.2 }}" target="_blank" ><img src="{{ images_imgs.2.1 }}" title="{{ images_imgs.2.0 }}" height="80" width="80"/></a>
                 </div>
               </div>
-              <div class="spltrblbottom">
-                <a class="spimg" href="{{ images_imgs.7.2 }}" target="_blank" ><img src="{{ images_imgs.7.1 }}" title="{{ images_imgs.7.0 }}" height="50" width="50"/></a>
-              </div>
-            </div>
-            <div class="spltrbright">
-              <a class="spimg" href="{{ images_imgs.2.2 }}" target="_blank" ><img src="{{ images_imgs.2.1 }}" title="{{ images_imgs.2.0 }}" height="80" width="80"/></a>
             </div>
           </div>
+          <div class="splbottom">
+            <a class="spimg" href="{{ images_imgs.9.2 }}" target="_blank" ><img src="{{ images_imgs.9.1 }}" title="{{ images_imgs.9.0 }}" height="340" width="340"/></a>
+          </div>
+        </div>
+        <div class="spright">
+          <a class="spimg" href="{{ images_imgs.4.2 }}" target="_blank" ><img src="{{ images_imgs.4.1 }}" title="{{ images_imgs.4.0 }}" height="550" width="550"/></a>
         </div>
       </div>
-      <div class="splbottom">
-        <a class="spimg" href="{{ images_imgs.9.2 }}" target="_blank" ><img src="{{ images_imgs.9.1 }}" title="{{ images_imgs.9.0 }}" height="340" width="340"/></a>
-      </div>
-    </div>
-    <div class="spright">
-      <a class="spimg" href="{{ images_imgs.4.2 }}" target="_blank" ><img src="{{ images_imgs.4.1 }}" title="{{ images_imgs.4.0 }}" height="550" width="550"/></a>
-    </div>
+    {% else %}
+      Images - Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div>
+</div> <!-- end spiral -->
+
+<!-- LIST -->
+<div id="tab2" class="tab_content">
+  <header class="w3-container w3-theme-l4">
+    <h2>List</h2>
+  </header>
+  <div class="w3-container">
+    <p>
+      Images - {{ images_len }} pataphysicalised
+      {% if images_len == 1 %}reverberation{% else %}reverberations{% endif %} found.
+    </p>
   </div>
 
-{% else %}
-  Images - Sorry, no pataphysicalised reverberations found!
-{% endif %}
+  <div class="w3-container w3-theme-l5 poetry">
+    <!-- title, img, link -->
+    <ul class="w3-ul w3-padding">
+    {% for img in images_imgs %}
+      <li>
+        <a href="{{ img[2] }}"><img src="{{ img[1] }}" height="300" width="300"></a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
 
-</div>
+</div> <!-- end list -->
+
+</div> <!-- end tabs -->
 
 </article>
 
