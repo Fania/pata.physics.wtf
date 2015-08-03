@@ -40,7 +40,7 @@
   </header>
   <div class="w3-container">
     <p>
-      The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for link.
+      The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for source.
     </p>
   </div>
   <div class="w3-container w3-theme-l5">
@@ -106,20 +106,21 @@
   </header>
   <div class="w3-container">
     <p>
-      Images - {{ images_len }} pataphysicalised
-      {% if images_len == 1 %}reverberation{% else %}reverberations{% endif %} found.
+      Images - Hover for title, click for source.
     </p>
   </div>
 
   <div class="w3-container w3-theme-l5 poetry">
     <!-- title, img, link -->
-    <ul class="w3-ul w3-padding">
-    {% for img in images_imgs %}
-      <li>
-        <a href="{{ img[2] }}"><img src="{{ img[1] }}" height="300" width="300"></a>
-      </li>
-    {% endfor %}
-    </ul>
+    <div class="w3-row">
+      {% for img in images_imgs %}
+        <div class="w3-col s12 m6 l3 w3-padding">
+          <a href="{{ img[2] }}">
+            <img src="{{ img[1] }}" style="width:100%">
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
 </div> <!-- end list -->
