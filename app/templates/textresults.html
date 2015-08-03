@@ -93,12 +93,12 @@
     </p>
   </div>
 
-  <div class="w3-container w3-theme-l5 w3-padding-top w3-padding-bottom">
+  <div class="w3-container w3-theme-l5 w3-padding">
     {% for file in all_files %}
       <div class="w3-padding-top w3-padding-bottom">
         <strong>{{ file }}</strong> <a href="#"><i class="fa fa-chevron-up"></i></a>
       </div>
-      <ul class="w3-ul">
+      <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if file == sens[0] %}
             <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
