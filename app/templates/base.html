@@ -8,10 +8,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/w3.css') }}" />
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/w3-theme-blue-grey.css') }}" />
+<!-- <link rel="stylesheet" href="w3.css"> -->
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/fania.css') }}" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,635,900" rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 <script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
@@ -57,38 +58,29 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 
 <body>
 
-<div id="main">
+<div>
 
 <nav class="w3-topnav w3-theme-l2 w3-center w3-padding w-card-4">
   <a href="{{ url_for('index') }}">
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-    </span><span id="navtext"> Home</span>
+    <i class="spicon"></i>
+    <!-- <i class="fa fa-home fa-inverse"></i> -->
+    <span class="navtext"> Home</span>
   </a>
   <a href="{{ url_for('text') }}" >
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-book fa-stack-1x fa-inverse"></i>
-    </span><span id="navtext"> Text</span>
+    <i class="fa fa-book fa-inverse"></i>
+    <span class="navtext"> Text</span>
   </a>
   <a href="{{ url_for('images') }}">
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-camera fa-stack-1x fa-inverse"></i>
-    </span><span id="navtext"> Images</span>
+    <i class="fa fa-camera fa-inverse"></i>
+    <span class="navtext"> Images</span>
   </a>
   <a href="{{ url_for('videos') }}">
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-video-camera fa-stack-1x fa-inverse"></i>
-    </span><span id="navtext"> Video</span>
+    <i class="fa fa-video-camera fa-inverse"></i>
+    <span class="navtext"> Video</span>
   </a>
   <a href="{{ url_for('about') }}">
-    <span class="fa-stack">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-info fa-stack-1x fa-inverse"></i>
-    </span><span id="navtext"> About</span>
+    <i class="fa fa-info fa-inverse"></i>
+    <span class="navtext"> About</span>
   </a>
 </nav>
 

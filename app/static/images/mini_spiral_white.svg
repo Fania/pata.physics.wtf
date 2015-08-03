@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="120"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="mini_spiral_white.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="StopS"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="StopS"
+       style="overflow:visible">
+      <path
+         id="path4482"
+         d="M 0.0,5.65 L 0.0,-5.65"
+         style="fill:none;fill-opacity:0.75000000;fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.2)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       inkscape:stockid="InfiniteLineEnd"
+       id="InfiniteLineEnd"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <g
+         id="g4542">
+        <circle
+           id="circle4544"
+           r="0.80000001"
+           cy="0"
+           cx="3"
+           sodipodi:cx="3"
+           sodipodi:cy="0"
+           sodipodi:rx="0.80000001"
+           sodipodi:ry="0.80000001" />
+        <circle
+           id="circle4546"
+           r="0.80000001"
+           cy="0"
+           cx="6.5"
+           sodipodi:cx="6.5"
+           sodipodi:cy="0"
+           sodipodi:rx="0.80000001"
+           sodipodi:ry="0.80000001" />
+        <circle
+           id="circle4548"
+           r="0.80000001"
+           cy="0"
+           cx="10"
+           sodipodi:cx="10"
+           sodipodi:cy="0"
+           sodipodi:rx="0.80000001"
+           sodipodi:ry="0.80000001" />
+      </g>
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#888888"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.7392865"
+     inkscape:cx="43.428507"
+     inkscape:cy="43.993964"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="678"
+     inkscape:window-height="636"
+     inkscape:window-x="523"
+     inkscape:window-y="154"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4.2786224,-5.072855)">
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;stroke:#cfd8dc;stroke-width:14.30000061000000000;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:54.29999999999999700;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;marker-end:none;fill-opacity:1"
+       id="path2989"
+       sodipodi:cx="508.57144"
+       sodipodi:cy="426.64789"
+       sodipodi:expansion="1"
+       sodipodi:revolution="2.9985261"
+       sodipodi:radius="80.823051"
+       sodipodi:argument="-16.266563"
+       sodipodi:t0="0"
+       d="m 508.57144,426.64789 c -3.43806,2.14879 -4.59275,-3.5743 -3.57144,-5.71429 2.7677,-5.79923 10.8237,-4.9751 15.00002,-1.42859 7.47045,6.34388 5.83566,17.9636 -0.71427,24.28574 -9.61227,9.27801 -25.20917,6.74617 -33.57146,-2.85711 -11.14562,-12.79967 -7.67943,-32.49344 4.99997,-42.8572 15.95572,-13.04172 39.79642,-8.62475 52.14291,7.14283 14.95327,19.09664 9.57712,47.10999 -9.28567,61.42864 -22.22915,16.87403 -54.43019,10.53392 -70.71437,-11.42853 -18.80072,-25.3565 -11.49367,-61.7548 13.57138,-80.00009 28.4805,-20.73146 69.08251,-12.45549 89.28582,15.71423 22.66506,31.60216 13.4188,76.41248 -17.85708,98.57154 -34.48454,24.43241 -83.15369,14.54436 -107.42395,-19.38811"
+       transform="matrix(0.56912448,0,0,0.57261998,-242.05446,-199.0795)" />
+  </g>
+</svg>
