@@ -1,4 +1,3 @@
-
 from __future__ import print_function
 
 from nltk.corpus import wordnet as wn
@@ -8,11 +7,6 @@ from nltk.corpus import stopwords
 from collections import defaultdict
 
 import os
-
-#############################################
-
-# PROTOTYPE 01 - TEXT - SETUP
-
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))

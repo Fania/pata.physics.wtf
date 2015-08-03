@@ -1,97 +1,54 @@
-<!DOCTYPE HTML>
-<html>
+{% extends "base.html" %}
 
-<head>
-<title>PataSearch</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel=stylesheet type=text/css />
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}" />
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-<script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
-<script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
-</head>
+{% block content %}
 
-<body class="homepage">
+<header class="w3-container w3-theme-l5 w3-center">
+  <img class="spiral" src="{{ url_for('static', filename='images/spiral.png') }}"/>
+  <a href="{{ url_for('index') }}">
+    <span class="headlong">
+      <h1 id="msg">Pataphysical Search</h1>
+    </span>
+    <span class="headshort">
+      <h1>PataSearch</h1>
+    </span>
+  </a>
+</header>
 
-<!-- Header Wrapper -->
-<div id="header-wrapper">
-    <!-- Nav -->
-    <nav id="nav">
-        <ul>
-            <li><a class="fa fa-home" href="{{ url_for('index') }}"><span>Home</span></a></li>
-            <li><a class="fa fa-book" href="{{ url_for('text') }}" ><span>Text</span></a></li>
-            <li><a class="fa fa-camera" href="{{ url_for('images') }}" ><span>Images</span></a></li>
-            <li><a class="fa fa-video-camera" href="{{ url_for('videos') }}" ><span>Video</span></a></li>
-            <li><a class="fa fa-info" href="{{ url_for('about') }}"><span>About</span></a></li>
-        </ul>
-    </nav>  
-    <!-- Header -->
-    <div id="header" class="container">
-        <!-- Logo -->
-        <img id="spiral" src="{{ url_for('static', filename='images/spiral.png') }}"/>
-        <a href="{{ url_for('index') }}"><h1 id="msg">Pataphysical Search</h1></a>
-    </div>
+<section class="w3-card-2 w3-center w3-theme-d3 banner">
+  <i class="fa fa-quote-left"></i> {{ getrandquote() }}
+    <i class="fa fa-quote-right"></i>
+</section>
+
+<article class="w3-text-theme">
+
+<header class="w3-container w3-theme-l4">
+  <h2><i class="fa fa-bullhorn"></i> Welc<span class="mirror">r</span>ome!</h2>
+</header>
+<!-- <div class="w3-container">
+  <p>
+
+  </p>
+  <p>
+    Imagine a search engine that does not return the results you expect, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
+  </p>
+</div> -->
+
+<br>
+
+<div class="w3-row">
+<div class="w3-container w3-third">
+  <img class="w3-card-4" src="{{ url_for('static', filename='images/DocteurFaustroll.jpg') }}" alt="Docteur Faustroll" style="width:100%">
+</div>
+<div class="w3-container w3-third">
+  <img class="w3-card-4" src="{{ url_for('static', filename='images/RevueBlanche.jpg') }}" alt="Revue Blanche" style="width:100%">
+</div>
+<div class="w3-container w3-third">
+  <img class="w3-card-4" src="{{ url_for('static', filename='images/JaneAvril.png') }}" alt="Jane Avril" style="width:100%">
+</div>
 </div>
 
-<!-- Banner Wrapper -->
-<div id="banner-wrapper">
-    <div class="inner">
-        <!-- Banner -->
-        <section id="banner" class="container">
-        <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-        </section>
-    </div>
-</div>
+<br>
 
-<!-- Main Wrapper -->
-<div id="main-wrapper">
-
-<!-- Main -->
-<div id="main" class="container">
-<div class="row">
-
-<!-- Content -->
-<div id="content" class="12u skel-cell-important">
-
-<!-- Post -->
-<article class="is-post">
-    <header>
-        <h2><i class="fa fa-bullhorn"></i> Welc<span class="mirror">r</span>ome!</h2>
-    </header>
-    <p>
-        Imagine a search engine that does not return the results you expect, but constantly surprises you and leads you down unpredictably creative avenues. This kind of inspiration is sometimes more desirable than concrete answers and exploratory browsing, with its flexible criteria for satisfying information needs, can provide just that. Instead of relying on arbitrary relevance indicators a more creative approach to filtering and ranking results can improve an exploratory search experience even further. Seemingly useless results can turn out to be the most interesting.
-    </p>
-    <p>
-        This is a simple proof-of-concept tool to demonstrate the <strong>patalgorithms</strong> (pataphysical algorithms) we developed.
-    </p>
 </article>
 
-</div>
-</div>
-</div>
-</div> 
-<!-- Main Wrapper End -->
-
-<!-- Banner Wrapper -->
-<div id="banner-wrapper">
-    <div class="inner">
-        <!-- Banner -->
-        <section id="banner" class="container">
-        <p><i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i></p>
-        </section>
-    </div>
-</div>
-
-<!-- Footer Wrapper -->
-<div id="footer-wrapper">
-    <!-- Copyright -->
-    <div id="copyright" class="container">
-        &copy; <a href="mailto:me@fania.eu?Subject=PataSearch">Fania Raczinski</a> - Gidouille 142 (June 2014 vulg.)<br>
-        <img src="{{ url_for('static', filename='images/dmu.png') }}">
-    </div>
-</div>
-
-</body>
-
-</html>
+{% endblock %}

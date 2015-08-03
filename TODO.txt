@@ -20,6 +20,8 @@
 - [ ] capture / screenshot / email poem button
 - [ ] randomise poems button
 - [ ] update wording of website
+- [ ] check if image search works on more than two words?
+- [ ] check image search errors...
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
