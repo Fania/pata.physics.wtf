@@ -10,7 +10,7 @@
   <form action="../imageresults" method="post">
     <div class="w3-group">
       <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-      <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
         <i class="fa fa-search"></i></button>
     </div>
   </form>
@@ -24,10 +24,10 @@
 
 <div class="w3-container w3-padding">
   <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input></form>
 </div>
 
 <!-- TABS -->

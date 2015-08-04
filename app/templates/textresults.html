@@ -16,7 +16,7 @@
   <form action="../textresults" method="post">
     <div class="w3-group">
       <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-      <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
         <i class="fa fa-search"></i></button>
     </div>
   </form>
@@ -38,7 +38,7 @@
   </div> -->
 
 <div class="w3-container w3-padding">
-  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
+  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form></span>
   <span title="Results - Reverberations - Origins">&nbsp;&nbsp;= &nbsp;&nbsp;{{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
 </div>
 
@@ -70,7 +70,7 @@
     <div id="poems">
       <div id="{{wid}}" class="wn">
         <div id="{{lid}}" class="lyr">
-          {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+          {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}</span>{% endfor %}
         </div>
       </div>
       <div id="{{sid}}" class="scrollLinks"></div>
@@ -101,7 +101,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if file == sens[0] %}
-            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -176,7 +176,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if sens[2] == algo %}
-            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>

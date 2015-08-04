@@ -54,11 +54,12 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 	});
 }
 </script>
-<script>
-	$(window).load(function() {
-		$(".loading").fadeOut("slow");;
-	});
-</script>
+<script type="text/javascript">// <![CDATA[
+  function loading(){
+    $(".loading").show();
+  }
+// ]]></script>
+
 </head>
 
 <body>
