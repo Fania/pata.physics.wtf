@@ -16,7 +16,7 @@
 <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 <script type='text/javascript' src='{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/scramble.js') }}'></script>
-<script type="text/javascript" src='{{ url_for('static', filename='css/tab_handler.js') }}'></script>
+<script type='text/javascript' src='{{ url_for('static', filename='css/tab_handler.js') }}'></script>
 <script type='text/javascript' src='{{ url_for('static', filename='css/dw_glidescroll.js') }}'></script>
 <script type="text/javascript">
 if ( DYN_WEB.Scroll_Div.isSupported() ) {
@@ -54,9 +54,16 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 	});
 }
 </script>
+<script>
+	$(window).load(function() {
+		$(".loading").fadeOut("slow");;
+	});
+</script>
 </head>
 
 <body>
+
+<div class="loading"></div>
 
 <div>
 
