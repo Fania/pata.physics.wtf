@@ -59,25 +59,32 @@
       Displayed in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes" target="_blank">
       Raymond Queneau</a> style. Hover for source and algorithm.
     </p>
+    <p>
+      <a id="share" class="share" href="#" onclick="return getContent(this)">
+        Share Poem here!
+      </a>
+    <ul class="">
+      <li>Clicks1: <a id="clicks1">1</a></li>
+      <li>Clicks2: <a id="clicks2">1</a></li>
+      <li>Clicks3: <a id="clicks3">1</a></li>
+      <li>Clicks4: <a id="clicks4">1</a></li>
+      <li>Clicks5: <a id="clicks5">1</a></li>
+      <li>Clicks6: <a id="clicks6">1</a></li>
+      <li>Clicks7: <a id="clicks7">1</a></li>
+      <li>Clicks8: <a id="clicks8">1</a></li>
+      <li>Clicks9: <a id="clicks9">1</a></li>
+      <li>Clicks10: <a id="clicks10">1</a></li>
+      <li>Clicks11: <a id="clicks11">1</a></li>
+      <li>Clicks12: <a id="clicks12">1</a></li>
+      <li>Clicks13: <a id="clicks13">1</a></li>
+      <li>Clicks14: <a id="clicks14">1</a></li>
+    </ul>
+    <div class="" id="partsize">{{ part }}</div>
+    <div class="" id="alert">blank</div>
+    </p>
   </div>
 
   <div class="w3-container w3-theme-l5 poetry">
-  <!-- Email (subject, body) -->
-  CHANGE STYLE OF SHARE EMAIL BUTTON<br>
-  <a href="mailto:pata@physics.wtf?Subject=<SUBJECT>&body=<BODY>" class="share-btn email">
-    <i class="fa fa-envelope"></i>
-  </a>
-  <hr>
-  <div id="wrapper">
-    <blockquote id="quote" value="">
-      CONTENT TO BE SENT IN THE EMAIL'S BODY
-    </blockquote>
-    <a id="share" class="share" href="#" onclick="return getContent(this)">
-      Share Quote
-    </a>
-  </div>
-  <hr>
-  <br><br>
   {% for n in range(1,  lol|length + 1 ) %}
     {% set wid = ['wn', n|string]|join %}
     {% set lid = ['lyr', n|string]|join %}
