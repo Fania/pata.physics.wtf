@@ -54,17 +54,93 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 	});
 }
 </script>
+
+<!-- LOAD ICON -->
 <script type="text/javascript">// <![CDATA[
   function loading(){
     $(".loading").show();
   }
 // ]]></script>
 
+<!-- FACEBOOK -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- TWITTER -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- EMAIL SHARE -->
+<script>
+function Mailto_url(){
+	var encode_mailto_component = function(str){
+		try{ return encodeURIComponent(str); }
+		catch(e){ return escape(str); }
+	}
+	var AddressList = function(){
+		var list = [];
+		this.length = 0;
+		this.add = function(address){
+			if(address) {
+				list.push(address);
+				this.length = list.length;
+			}
+		};
+		this.get = function(){
+			return list.join(';');
+		};
+	};
+	var subject = '',
+		body = '',
+		mainList = new AddressList(),
+		ccList = new AddressList(),
+		bccList = new AddressList();
+	this.setSubject = function(str){ subject = encode_mailto_component(str); }
+	this.setBody = function(str){ body = encode_mailto_component(str); }
+	this.addMain = function(x) { mainList.add(x); }
+	this.addCC = function(x) { ccList.add(x); }
+	this.addBCC = function(x) { bccList.add(x); }
+	this.getURL = function(allow_empty_mainList){
+		var out = ['mailto:'];
+		var extras = [];
+		if(mainList.length === 0 && !allow_empty_mainList){
+			throw('Mailto_url: no main addressees');
+		}
+		else{
+			out.push(mainList.get());
+		}
+		if(subject) { extras.push('subject=' + subject); }
+		if(ccList.length) { extras.push('cc=' + ccList.get()); }
+		if(bccList.length) { extras.push('bcc=' + bccList.get()); }
+		if(body) { extras.push('body=' + body); }
+		if(extras.length) { out.push('?' + extras.join('&')); }
+		return out.join('');
+	}
+}
+function getContent(link) {
+	var quote = document.getElementById('quote');
+	if(quote && quote.innerHTML){
+		var mailTo = new Mailto_url();
+    mailTo.addMain('pata@physics.wtf');
+    mailTo.addBCC('pata@physics.wtf');
+		mailTo.setSubject("Here's a great quote I just saw");
+		mailTo.setBody(quote.innerHTML);
+		link.href = mailTo.getURL(true);
+		return true;
+	}
+	return false;
+}
+</script>
 </head>
 
 <body>
 
 <div class="loading"></div>
+<div id="fb-root"></div>
 
 <div>
 
@@ -106,8 +182,11 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
     <i class="fa fa-copyright"></i>
     <a href="mailto:pata@physics.wtf?Subject=PataSearch">Fania Raczinski</a> - Tatane 142 (August 2015 vulg.) -
     <i class="fa fa-hand-spock-o"></i>
-    <br>
+  </p>
+  <p>
+    <div class="fb-share-button" data-href="http://pata.physics.wtf" data-layout="button_count"></div>
     <img src="{{ url_for('static', filename='images/dmu.png') }}">
+    <a href="https://twitter.com/share" class="twitter-div twitter-share-button" data-url="http://pata.physics.wtf" data-hashtags="pataphysics" data-dnt="true">Tweet</a>
   </p>
 </footer>
 
