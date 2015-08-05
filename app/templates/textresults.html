@@ -245,27 +245,33 @@
 
 <script>
   var cnt = 0;
+  // var n = {{ all_sens|length }}
+  // var r = Math.floor(Math.random() * n);
+
   function shufflePoem() {
 
     cnt += 1;
-    // document.getElementById('random_poem').innerHTML = '';
 
-    // var oldcon = document.getElementById('random_poem').innerHTML;
+    // var newcon = "{% for n in range(0, 14) %}{% set rid = ['subpoem', n|string]|join %}{% set rsens = all_sens|random %}<div id='{{ rid }}'><span title='{{ rsens[0] }}, {{ rsens[2] }}'>{{ rsens[1][0] }} <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='{{ rsens[1][1] }}' onclick='loading();'></input></form> {{ rsens[1][2] }}</span><br></div>{% endfor %}";
 
-    var newcon = "{% for n in range(0, 14) %}{% set rid = ['subpoem', n|string]|join %}{% set rsens = all_sens|random %}<div id='{{ rid }}'><span title='{{ rsens[0] }}, {{ rsens[2] }}'>{{ rsens[1][0] }} <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='{{ rsens[1][1] }}' onclick='loading();'></input></form> {{ rsens[1][2] }}</span><br></div>{% endfor %}";
+    // var newcon1 = cnt + newcon;
 
-    var newcon1 = cnt + newcon;
+    var test = {{ all_sens|tojson }};
+    var n = {{ all_sens|length }}
 
-    var test = cnt +' '+ {{ all_sens|tojson }};
+    var rlist = []
+    for (var i = 0; i < 14; i++) {
+      var r = Math.floor(Math.random() * n);
+      rlist[i] = test[r][1].join(' ');
+    }
+
+    var output = rlist.join('<br>');
 
 
-    // $(".random_poem").html(newcon1);
-    // var test = document.getElementsByClassName('random_poem')[0].innerHTML;
 
-    // $(".random_poem").replaceWith(newcon1);
-    document.getElementById('random_poem').innerHTML = newcon1;
+    document.getElementById('random_poem').innerHTML = output;
 
-    console.log(cnt);
+    // console.log(cnt);
     return false;
   }
 
