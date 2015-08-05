@@ -112,14 +112,14 @@
 
   <div class="w3-container w3-theme-l5 subtab_content" id="r_tab">
     <p class="w3-center">
-      <a id="shuffle" href="#" onclick="return shufflePoem(this)">
-        Click here to randomize this poem!
+      <a id="shuffle" href="#" onclick="return shufflePoem()">
+        Click here to randomise poem!
       </a>
       <a href="#" onclick="return getRandContent(this)">
         Click here to email this poem!
       </a>
     </p>
-    <div id="random_poem" class="poetry w3-center">
+    <div id="random_poem" class="poetry random_poem w3-center">
       {% for n in range(0, 14) %}
         {% set rid = ['subpoem', n|string]|join %}
         {% set rsens = all_sens|random %}
@@ -243,17 +243,34 @@
 
 </article>
 
-<script defer>
-  function shufflePoem(link) {
+<script>
+  var cnt = 0;
+  function shufflePoem() {
 
-    document.getElementById('random_poem').innerHTML = '';
+    cnt += 1;
+    // document.getElementById('random_poem').innerHTML = '';
+
+    // var oldcon = document.getElementById('random_poem').innerHTML;
 
     var newcon = "{% for n in range(0, 14) %}{% set rid = ['subpoem', n|string]|join %}{% set rsens = all_sens|random %}<div id='{{ rid }}'><span title='{{ rsens[0] }}, {{ rsens[2] }}'>{{ rsens[1][0] }} <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='{{ rsens[1][1] }}' onclick='loading();'></input></form> {{ rsens[1][2] }}</span><br></div>{% endfor %}";
 
-    document.getElementById('random_poem').innerHTML = newcon;
+    var newcon1 = cnt + newcon;
 
+    var test = cnt +' '+ {{ all_sens|tojson }};
+
+
+    // $(".random_poem").html(newcon1);
+    // var test = document.getElementsByClassName('random_poem')[0].innerHTML;
+
+    // $(".random_poem").replaceWith(newcon1);
+    document.getElementById('random_poem').innerHTML = newcon1;
+
+    console.log(cnt);
     return false;
   }
+
 </script>
+
+
 
 {% endblock %}
