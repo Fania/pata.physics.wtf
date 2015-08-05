@@ -319,6 +319,7 @@ DYN_WEB.Scroll_Div = (function() {
     scrollToId: function(id, dur) {
       var el = Ut.$(id);
       var lyr = Ut.$(this.lyrId);
+      document.getElementById('alert').innerHTML = el;
       if (Ut.contained(el, lyr)) {
         var pos = Ut.getLayerOffsets(el, lyr);
         this.initScrollToVals(pos.x, pos.y, dur);
@@ -360,6 +361,13 @@ DYN_WEB.Scroll_Div = (function() {
       var clickcount = 1;
       var part = document.getElementById('partsize').innerHTML;
       var clicktext = 'clicks'+id.slice(11);
+
+
+      Ev.add(start_el, 'click', function(e) {
+        self.scrollToId(id, dur);
+
+      });
+
 // END FANIA
 
       Ev.add(start_el, 'click', function(e) {
@@ -370,7 +378,7 @@ DYN_WEB.Scroll_Div = (function() {
           clickcount -= 1;
         }
         document.getElementById(clicktext).innerHTML = clickcount;
-        document.getElementById('alert').innerHTML = id;
+        // document.getElementById('alert').innerHTML = id;
 // END FANIA
 
         if (e && e.preventDefault) {
@@ -386,7 +394,7 @@ DYN_WEB.Scroll_Div = (function() {
           clickcount += 1;
         }
         document.getElementById(clicktext).innerHTML = clickcount;
-        document.getElementById('alert').innerHTML = id;
+        // document.getElementById('alert').innerHTML = id;
 // END FANIA
 
         if (e && e.preventDefault) {
