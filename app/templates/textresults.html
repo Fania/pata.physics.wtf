@@ -243,4 +243,17 @@
 
 </article>
 
+<script defer>
+  function shufflePoem(link) {
+
+    document.getElementById('random_poem').innerHTML = '';
+
+    var newcon = "{% for n in range(0, 14) %}{% set rid = ['subpoem', n|string]|join %}{% set rsens = all_sens|random %}<div id='{{ rid }}'><span title='{{ rsens[0] }}, {{ rsens[2] }}'>{{ rsens[1][0] }} <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='{{ rsens[1][1] }}' onclick='loading();'></input></form> {{ rsens[1][2] }}</span><br></div>{% endfor %}";
+
+    document.getElementById('random_poem').innerHTML = newcon;
+
+    return false;
+  }
+</script>
+
 {% endblock %}
