@@ -188,9 +188,9 @@ def get_title(file):
         'l_10': 'One Thousand and One Nights',
         'l_11': 'Christian Dietrich Grabbe: Scherz, Satire, Ironie und '
                 'tiefere Bedeutung',
-        'l_12': "Gustave Kahn: Le Conte de l'Or et Du Silence,",
+        'l_12': "Gustave Kahn: Le Conte de l'Or et Du Silence",
         'l_13': 'Le Comte de Lautreamont: Les Chants de Maldoror',
-        'l_14': 'Maurice Maeterlinck: Aglavaine and Selysette ',
+        'l_14': 'Maurice Maeterlinck: Aglavaine and Selysette',
         'l_15': 'Stephane Mallarme: Verse and Prose',
         'l_16': 'Mendes: The Mirror and la Divina Aventure',
         'l_17': 'Homer: The Odyssey',

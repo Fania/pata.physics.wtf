@@ -1,5 +1,5 @@
 // SCROLL BUTTONS
-if ( DYN_WEB.Scroll_Div.isSupported() ) {
+if (DYN_WEB.Scroll_Div.isSupported() ) {
     DYN_WEB.Event.add( window, 'load', function() {
 		// wndo args(id of scroll area div, id of content div)
     // addGlideControls args(id, axis('v'|'h'), distance, duration)
@@ -35,8 +35,8 @@ if ( DYN_WEB.Scroll_Div.isSupported() ) {
 }
 
 // LOADING ICON
-function loading(){
-  $(".loading").show();
+function loading() {
+  $('.loading').show();
 }
 
 // FACEBOOK
@@ -44,7 +44,7 @@ function loading(){
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4";
+  js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -56,7 +56,7 @@ function Mailto_url(){
 	var encode_mailto_component = function(str){
 		try{ return encodeURIComponent(str); }
 		catch(e){ return escape(str); }
-	}
+	};
 	var AddressList = function(){
 		var list = [];
 		this.length = 0;
@@ -75,11 +75,11 @@ function Mailto_url(){
 		mainList = new AddressList(),
 		ccList = new AddressList(),
 		bccList = new AddressList();
-	this.setSubject = function(str){ subject = encode_mailto_component(str); }
-	this.setBody = function(str){ body = encode_mailto_component(str); }
-	this.addMain = function(x) { mainList.add(x); }
-	this.addCC = function(x) { ccList.add(x); }
-	this.addBCC = function(x) { bccList.add(x); }
+	this.setSubject = function(str){ subject = encode_mailto_component(str); };
+	this.setBody = function(str){ body = encode_mailto_component(str); };
+	this.addMain = function(x) { mainList.add(x); };
+	this.addCC = function(x) { ccList.add(x); };
+	this.addBCC = function(x) { bccList.add(x); };
 	this.getURL = function(allow_empty_mainList){
 		var out = ['mailto:'];
 		var extras = [];
@@ -95,12 +95,12 @@ function Mailto_url(){
 		if(body) { extras.push('body=' + body); }
 		if(extras.length) { out.push('?' + extras.join('&')); }
 		return out.join('');
-	}
+	};
 }
 function getContent(link) {
 
   var query = document.getElementById('querydiv').innerHTML;
-  
+
   var lineitem1 = document.getElementById('clicks1').innerHTML;
   var lineitem2 = document.getElementById('clicks2').innerHTML;
   var lineitem3 = document.getElementById('clicks3').innerHTML;
@@ -157,10 +157,9 @@ function getContent(link) {
     var poems3 = poems2.replace(re3, '');
     var poems4 = poems3.replace(re4, '');
 
-    var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\n\nKeyword: ";
-    var post = "\r\n------------------------------------------------------------\r\n\n"
+    var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+    var post = "\r\n------------------------------------------------------------\r\n\n";
     var poemail = pre + query + post + poems4;
-
 
     var mailTo = new Mailto_url();
 		mailTo.setSubject("Patahpysical Poetry");
@@ -173,44 +172,86 @@ function getContent(link) {
 function getRandContent(link) {
 
   var query = document.getElementById('querydiv').innerHTML;
+  var count = document.getElementById('clickcount').innerHTML;
 
-  var line0 = document.getElementById('subpoem0').children[0].innerHTML;
-  var line1 = document.getElementById('subpoem1').children[0].innerHTML;
-  var line2 = document.getElementById('subpoem2').children[0].innerHTML;
-  var line3 = document.getElementById('subpoem3').children[0].innerHTML;
-  var line4 = document.getElementById('subpoem4').children[0].innerHTML;
-  var line5 = document.getElementById('subpoem5').children[0].innerHTML;
-  var line6 = document.getElementById('subpoem6').children[0].innerHTML;
-  var line7 = document.getElementById('subpoem7').children[0].innerHTML;
-  var line8 = document.getElementById('subpoem8').children[0].innerHTML;
-  var line9 = document.getElementById('subpoem9').children[0].innerHTML;
-  var line10 = document.getElementById('subpoem10').children[0].innerHTML;
-  var line11 = document.getElementById('subpoem11').children[0].innerHTML;
-  var line12 = document.getElementById('subpoem12').children[0].innerHTML;
-  var line13 = document.getElementById('subpoem13').children[0].innerHTML;
+  if (count == 0) {
+    var line0 = document.getElementById('subpoem0').children[0].innerHTML;
+    var line1 = document.getElementById('subpoem1').children[0].innerHTML;
+    var line2 = document.getElementById('subpoem2').children[0].innerHTML;
+    var line3 = document.getElementById('subpoem3').children[0].innerHTML;
+    var line4 = document.getElementById('subpoem4').children[0].innerHTML;
+    var line5 = document.getElementById('subpoem5').children[0].innerHTML;
+    var line6 = document.getElementById('subpoem6').children[0].innerHTML;
+    var line7 = document.getElementById('subpoem7').children[0].innerHTML;
+    var line8 = document.getElementById('subpoem8').children[0].innerHTML;
+    var line9 = document.getElementById('subpoem9').children[0].innerHTML;
+    var line10 = document.getElementById('subpoem10').children[0].innerHTML;
+    var line11 = document.getElementById('subpoem11').children[0].innerHTML;
+    var line12 = document.getElementById('subpoem12').children[0].innerHTML;
+    var line13 = document.getElementById('subpoem13').children[0].innerHTML;
 
-  if(line0 && line1 && line2 && line3 && line4 && line5 && line6 && line7 && line8 && line9 && line10 && line11 && line12 && line13){
+    if(line0 && line1 && line2 && line3 && line4 && line5 && line6 && line7 && line8 && line9 && line10 && line11 && line12 && line13){
 
-    poems = line0 +'\r\n'+ line1 +'\r\n'+ line2 +'\r\n'+ line3 +'\r\n\n'+ line4 +'\r\n'+ line5 +'\r\n'+ line6 +'\r\n'+ line7 +'\r\n\n'+ line8 +'\r\n'+ line9 +'\r\n'+ line10 +'\r\n\n'+ line11 +'\r\n'+ line12 +'\r\n'+ line13;
+      poems = line0 +'\r\n'+ line1 +'\r\n'+ line2 +'\r\n'+ line3 +'\r\n\n'+ line4 +'\r\n'+ line5 +'\r\n'+ line6 +'\r\n'+ line7 +'\r\n\n'+ line8 +'\r\n'+ line9 +'\r\n'+ line10 +'\r\n\n'+ line11 +'\r\n'+ line12 +'\r\n'+ line13;
 
-    var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
-    var re2 = new RegExp('\" onclick=\"loading', "g");
-    var re3 = new RegExp(';"></form>', "g");
-    var re4 = /\(\)/g;
-    var poems1 = poems.replace(re1, '');
-    var poems2 = poems1.replace(re2, '');
-    var poems3 = poems2.replace(re3, '');
-    var poems4 = poems3.replace(re4, '');
+      var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+      var re2 = new RegExp('\" onclick=\"loading', "g");
+      var re3 = new RegExp(';"></form>', "g");
+      var re4 = /\(\)/g;
+      var poems1 = poems.replace(re1, '');
+      var poems2 = poems1.replace(re2, '');
+      var poems3 = poems2.replace(re3, '');
+      var poems4 = poems3.replace(re4, '');
 
-    var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\n\nKeyword: ";
-    var post = "\r\n------------------------------------------------------------\r\n\n"
-    var poemail = pre + query + post + poems4;
+      var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+      var post = "\r\n------------------------------------------------------------\r\n\n";
+      var poemail = pre + query + post + poems4;
 
-    var mailTo = new Mailto_url();
-		mailTo.setSubject("Patahpysical Poetry");
-		mailTo.setBody(poemail);
-		link.href = mailTo.getURL(true);
-		return true;
-	}
+      var mailTo = new Mailto_url();
+  		mailTo.setSubject("Patahpysical Poetry");
+  		mailTo.setBody(poemail);
+  		link.href = mailTo.getURL(true);
+  		return true;
+  	}
+    return true;
+  // count == 0
+  } else {
+      var inner = document.getElementById('random_poem').innerHTML;
+
+
+
+
+      var re1 = new RegExp("<form class=\"inform\" action=\"../textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+      var re2 = new RegExp("\" onclick=\"loading", "g");
+      var re3 = /\(\)/g;
+      var re4 = new RegExp(";\"></form>", "g");
+      var re5 = new RegExp("<br>", "g");
+      var re6 = /<span title=\"((\w)+(\,)?(\-)?(\')?(\.)?(\s)*)+(\:\s)?((\w)+(\,)?(\-)?(\')?(\.)?(\s)*)+\">/g;
+      var re7 = new RegExp("</span>", "g");
+      var poems1 = inner.replace(re1, '');
+      var poems2 = poems1.replace(re2, '');
+      var poems3 = poems2.replace(re3, '');
+      var poems4 = poems3.replace(re4, '');
+      var poems5 = poems4.replace(re5, '');
+      var poems6 = poems5.replace(re6, '');
+      var poems7 = poems6.replace(re7, '\n');
+
+      var sp = poems7.split(/\n/);
+      sp[3] = sp[3] + '\n';
+      sp[7] = sp[7] + '\n';
+      sp[10] = sp[10] + '\n';
+      var comp = sp.join('\n');
+
+      var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+      var post = "\r\n------------------------------------------------------------\r\n\n";
+      var poemail = pre + query + post + comp;
+
+      var mailTo1 = new Mailto_url();
+  		mailTo1.setSubject("Patahpysical Poetry");
+  		mailTo1.setBody(poemail);
+  		link.href = mailTo1.getURL(true);
+  		return true;
+  } // count > 0
+
 	return false;
 }

@@ -84,6 +84,7 @@
     </ul>
     <div class="w3-hide" id="partsize">{{ part }}</div>
     <div class="w3-hide" id="querydiv">{{ query }}</div>
+    <div class="" id="clickcount">0</div>
   </div>
 
   <div class="w3-container w3-theme-l5 subtab_content" id="q_tab">
@@ -245,38 +246,36 @@
 
 <script>
   var cnt = 0;
-  // var n = {{ all_sens|length }}
-  // var r = Math.floor(Math.random() * n);
-
   function shufflePoem() {
-
     cnt += 1;
-
-    // var newcon = "{% for n in range(0, 14) %}{% set rid = ['subpoem', n|string]|join %}{% set rsens = all_sens|random %}<div id='{{ rid }}'><span title='{{ rsens[0] }}, {{ rsens[2] }}'>{{ rsens[1][0] }} <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='{{ rsens[1][1] }}' onclick='loading();'></input></form> {{ rsens[1][2] }}</span><br></div>{% endfor %}";
-
-    // var newcon1 = cnt + newcon;
-
-    var test = {{ all_sens|tojson }};
-    var n = {{ all_sens|length }}
-
-    var rlist = []
+    var sentences = {{ all_sens|tojson }};
+    // [[file, [s1,s2,s3], algo],...]
+    var n = {{ all_sens|length }};
+    var rlist = [];
     for (var i = 0; i < 14; i++) {
       var r = Math.floor(Math.random() * n);
-      rlist[i] = test[r][1].join(' ');
+      // rlist[i] = sentences[r][1].join(' ');
+      var t = sentences[r][0];
+      var al = sentences[r][2];
+      var b = sentences[r][1][0];
+      var m = sentences[r][1][1];
+      var a = sentences[r][1][2];
+      var str1 = "<span title='" + t +', '+ al;
+      var str2 = "'>" + b + " <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='";
+      var str3 = m + "' onclick='loading();'></input></form> " + a;
+      var str4 = "</span>";
+      var fullsent = str1 + str2 + str3 + str4;
+      rlist[i] = fullsent;
     }
-
+    rlist[3] = rlist[3].concat('<br>');
+    rlist[7] = rlist[7].concat('<br>');
+    rlist[10] = rlist[10].concat('<br>');
     var output = rlist.join('<br>');
 
-
-
+    document.getElementById('clickcount').innerHTML = cnt;
     document.getElementById('random_poem').innerHTML = output;
-
-    // console.log(cnt);
     return false;
   }
-
 </script>
-
-
 
 {% endblock %}
