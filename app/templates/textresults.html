@@ -254,7 +254,6 @@
     var rlist = [];
     for (var i = 0; i < 14; i++) {
       var r = Math.floor(Math.random() * n);
-      // rlist[i] = sentences[r][1].join(' ');
       var t = sentences[r][0];
       var al = sentences[r][2];
       var b = sentences[r][1][0];
@@ -271,7 +270,6 @@
     rlist[7] = rlist[7].concat('<br>');
     rlist[10] = rlist[10].concat('<br>');
     var output = rlist.join('<br>');
-
     document.getElementById('clickcount').innerHTML = cnt;
     document.getElementById('random_poem').innerHTML = output;
     return false;
