@@ -1,5 +1,14 @@
 #!flask/bin/python
-from app import app
 
-# app.run(debug=True)
-app.run(port=5001, debug=True)
+# from flask import Flask
+# application = Flask(__name__)
+
+from app import application
+
+# @application.route('/')
+# def hello_world():
+#     return 'Hello World!'
+
+if __name__ == '__main__':
+    application.debug = True
+    application.run()

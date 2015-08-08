@@ -1,14 +1,14 @@
 from flask import render_template, request
-from app import app
+from app import application
 from textsurfer import clinamen, syzygy, antinomy, calc_all
 
 
-@app.route('/text')
+@application.route('/text')
 def text():
     return render_template('text.html')
 
 
-@app.route('/textresults', methods=['GET', 'POST'])
+@application.route('/textresults', methods=['GET', 'POST'])
 def textresults():
 
     query = request.form['query']
