@@ -221,6 +221,15 @@ div.scrollLinks .left:before {
 #poems:nth-of-type(11) {
   padding-bottom: 1em;
 }
+#subpoem3 {
+  padding-bottom: 1em;
+}
+#subpoem7 {
+  padding-bottom: 1em;
+}
+#subpoem10 {
+  padding-bottom: 1em;
+}
 
 form.inform {
 	margin: 0;
@@ -270,11 +279,53 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
   }
 }
 
+/*LOAD ICON*/
+.loading {
+  position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+  display: none;
+	background: url(../images/loadspiral.gif) center no-repeat rgba(255, 255, 255, 0.5);
+}
 
+.fb-share-button {
+    position: relative;
+    top: -15px;
+    margin-right: 10px;
+}
+.twitter-div {
+    position: relative !important;
+    width: 100px;
+    margin-left: 10px;
+    top: -10px;
+}
 
+.share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em;
+    width: 4em;
+    box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+    outline: none;
+    text-align: center;
+}
+.share-btn:hover {
+  color: #eeeeee;
+}
+.share-btn:active {
+  position: relative;
+  top: 2px;
+  box-shadow: none;
+  color: #e2e2e2;
+  outline: none;
+}
+/*.share-btn.email { background: #444444; }*/
 
-
-
+/*Blue = #546588*/
 .w3-theme {color:#fff !important;background-color:#607d8b !important}
 .w3-theme-light {color:#455a64 !important;background-color:#eceff1 !important}
 .w3-theme-dark {color:#fff !important;background-color:#263238 !important}

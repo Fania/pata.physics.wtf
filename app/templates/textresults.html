@@ -16,15 +16,15 @@
   <form action="../textresults" method="post">
     <div class="w3-group">
       <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-      <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
         <i class="fa fa-search"></i></button>
     </div>
   </form>
   <hr>
   <nav class="tabs w3-topnav w3-center w3-margin">
-    <a class="active" href="#tab1">Poetry</a>
-    <a href="#tab2">Sources</a>
-    <a href="#tab3">Algorithms</a>
+    <a class="active" href="#poetry_tab">Poetry</a>
+    <a href="#sources_tab">Sources</a>
+    <a href="#algo_tab">Algorithms</a>
   </nav>
   <hr>
 </div>
@@ -38,7 +38,7 @@
   </div> -->
 
 <div class="w3-container w3-padding">
-  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form></span>
+  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form></span>
   <span title="Results - Reverberations - Origins">&nbsp;&nbsp;= &nbsp;&nbsp;{{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
 </div>
 
@@ -48,7 +48,7 @@
 <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
 
 <!-- POETRY -->
-<div id="tab1" class="tab_content">
+<div id="poetry_tab" class="tab_content subtab_container">
 
   <header class="w3-container w3-theme-l4">
     <h2 title="Number of possible poems: {{ all_poems }} !">
@@ -56,26 +56,79 @@
   </header>
   <div class="w3-container">
     <p>
-      Displayed in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes" target="_blank">
-      Raymond Queneau</a> style. Hover for source and algorithm.
+      Displayed either in <a href="http://www.growndodo.com/wordplay/oulipo/10%5e14sonnets.html" title="Inspired by Raymond Queneau's Cent Mille Milliards de poèmes" target="_blank">
+      Raymond Queneau</a> style or randomised. Hover for source and algorithm.
     </p>
+    <div class="w3-hide" id="alert">blank</div>
+    <hr>
+    <nav class="subtabs w3-topnav w3-center w3-margin">
+      <a class="active" href="#q_tab">Queneau</a>
+      <a href="#r_tab">Random</a>
+    </nav>
+    <hr>
+    <ul class="w3-hide">
+      <li>Clicks1: <a id="clicks1">1</a></li>
+      <li>Clicks2: <a id="clicks2">1</a></li>
+      <li>Clicks3: <a id="clicks3">1</a></li>
+      <li>Clicks4: <a id="clicks4">1</a></li>
+      <li>Clicks5: <a id="clicks5">1</a></li>
+      <li>Clicks6: <a id="clicks6">1</a></li>
+      <li>Clicks7: <a id="clicks7">1</a></li>
+      <li>Clicks8: <a id="clicks8">1</a></li>
+      <li>Clicks9: <a id="clicks9">1</a></li>
+      <li>Clicks10: <a id="clicks10">1</a></li>
+      <li>Clicks11: <a id="clicks11">1</a></li>
+      <li>Clicks12: <a id="clicks12">1</a></li>
+      <li>Clicks13: <a id="clicks13">1</a></li>
+      <li>Clicks14: <a id="clicks14">1</a></li>
+    </ul>
+    <div class="w3-hide" id="partsize">{{ part }}</div>
+    <div class="w3-hide" id="querydiv">{{ query }}</div>
+    <div class="" id="clickcount">0</div>
   </div>
 
-  <div class="w3-container w3-theme-l5 poetry">
-  {% for n in range(1,  lol|length + 1 ) %}
-    {% set wid = ['wn', n|string]|join %}
-    {% set lid = ['lyr', n|string]|join %}
-    {% set sid = ['scrollLinks', n|string]|join %}
-    {% set aid = lol[n-1] %}
-    <div id="poems">
-      <div id="{{wid}}" class="wn">
-        <div id="{{lid}}" class="lyr">
-          {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+  <div class="w3-container w3-theme-l5 subtab_content" id="q_tab">
+    <p class="w3-center">
+      <a href="#" onclick="return getContent(this)">
+        Click here to email this poem!
+      </a>
+    </p>
+    <div class="poetry">
+      {% for n in range(1, lol|length + 1) %}
+        {% set wid = ['wn', n|string]|join %}
+        {% set lid = ['lyr', n|string]|join %}
+        {% set sid = ['scrollLinks', n|string]|join %}
+        {% set aid = lol[n-1] %}
+        <div id="poems">
+          <div id="{{wid}}" class="wn">
+            <div id="{{lid}}" class="lyr">
+              {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+            </div>
+          </div>
+          <div id="{{sid}}" class="scrollLinks"></div>
         </div>
-      </div>
-      <div id="{{sid}}" class="scrollLinks"></div>
+      {% endfor %}
     </div>
-  {% endfor %}
+  </div>
+
+  <div class="w3-container w3-theme-l5 subtab_content" id="r_tab">
+    <p class="w3-center">
+      <a id="shuffle" href="#" onclick="return shufflePoem()">
+        Click here to randomise poem!
+      </a>
+      <a href="#" onclick="return getRandContent(this)">
+        Click here to email this poem!
+      </a>
+    </p>
+    <div id="random_poem" class="poetry random_poem w3-center">
+      {% for n in range(0, 14) %}
+        {% set rid = ['subpoem', n|string]|join %}
+        {% set rsens = all_sens|random %}
+        <div id="{{ rid }}">
+          <span title="{{ rsens[0] }}, {{ rsens[2] }}">{{ rsens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ rsens[1][1] }}" onclick="loading();"></input></form> {{ rsens[1][2] }}</span><br>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 
 </div><!-- end tab poems -->
@@ -83,7 +136,7 @@
 <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
 
 <!-- SOURCES -->
-<div id="tab2" class="tab_content">
+<div id="sources_tab" class="tab_content">
   <header class="w3-container w3-theme-l4">
       <h2>Sources</h2>
   </header>
@@ -101,7 +154,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if file == sens[0] %}
-            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -113,7 +166,7 @@
       <!-- all_sens = [(title, (pre, word, post), algorithm), ...] -->
 
 <!-- ALGORITHMS -->
-<div id="tab3" class="tab_content">
+<div id="algo_tab" class="tab_content">
 
   <header class="w3-container w3-theme-l4">
     <h2>Algorithms</h2>
@@ -176,7 +229,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if sens[2] == algo %}
-            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -190,5 +243,37 @@
 <!-- end main container -->
 
 </article>
+
+<script>
+  var cnt = 0;
+  function shufflePoem() {
+    cnt += 1;
+    var sentences = {{ all_sens|tojson }};
+    // [[file, [s1,s2,s3], algo],...]
+    var n = {{ all_sens|length }};
+    var rlist = [];
+    for (var i = 0; i < 14; i++) {
+      var r = Math.floor(Math.random() * n);
+      var t = sentences[r][0];
+      var al = sentences[r][2];
+      var b = sentences[r][1][0];
+      var m = sentences[r][1][1];
+      var a = sentences[r][1][2];
+      var str1 = "<span title='" + t +', '+ al;
+      var str2 = "'>" + b + " <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='";
+      var str3 = m + "' onclick='loading();'></input></form> " + a;
+      var str4 = "</span>";
+      var fullsent = str1 + str2 + str3 + str4;
+      rlist[i] = fullsent;
+    }
+    rlist[3] = rlist[3].concat('<br>');
+    rlist[7] = rlist[7].concat('<br>');
+    rlist[10] = rlist[10].concat('<br>');
+    var output = rlist.join('<br>');
+    document.getElementById('clickcount').innerHTML = cnt;
+    document.getElementById('random_poem').innerHTML = output;
+    return false;
+  }
+</script>
 
 {% endblock %}

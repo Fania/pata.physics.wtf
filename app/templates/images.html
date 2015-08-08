@@ -13,14 +13,14 @@
 
 <div class="w3-container">
   <p>
-    The image search uses Flickr and Bing APIs. 
+    The image search uses the Bing Search API. Results can be displayed in golden spiral form or in list form.
   </p>
 </div>
 
 <form class="w3-container" action="../imageresults" method="post">
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
       <i class="fa fa-search"></i></button>
   </div>
 </form>
@@ -32,12 +32,12 @@
   <p>Image search supports multiple keywords.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="living large"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="off the books"></input></form>
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input></form>
 </div>
 
 <br>

@@ -13,14 +13,14 @@
 
 <div class="w3-container">
   <p>
-    Video search works in the same way that image search does and results are also presented in golden spiral form. It uses Bing video and Youtube APIs.
+    Video search works in the same way that image search does.. It uses the Youtube API.
   </p>
 </div>
 
 <form class="w3-container" action="../videoresults" method="post">
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
       <i class="fa fa-search"></i></button>
   </div>
 </form>
@@ -32,12 +32,12 @@
   <p>Video search supports multiple keywords.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="living large"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="off the books"></input></form>
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input></form>,
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input></form>,
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input></form>,
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input></form>,
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input></form>,
+    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input></form>
 </div>
 
 <br>

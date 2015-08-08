@@ -20,7 +20,7 @@
 <form class="w3-container" action="../textresults" method="post">
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn">
+    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
       <i class="fa fa-search"></i></button>
   </div>
 </form>
@@ -32,12 +32,12 @@
   <p>Text search is currently supported for single search terms only.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"></input></form>, 
-    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"></input></form>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"onclick="loading();"></input></form>
 </div>
 
 <br>
