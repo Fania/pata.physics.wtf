@@ -11,9 +11,11 @@ Fania Raczinski + De Montfort University + 2015
 - Deactivate ```deactivate```
 
 
-## ONE.COM
-- ```ssh physics.wtf@ssh.physics.wtf```
-- pw Quiv2Web1poiV1
+## IMPORTANT
+```python run.py``` starts the local dev SERVER
+```gunicorn wsgi:app```  starts gunicorn server
+wsgi is the wsgi script in the main folder.
+app is the name of the folder that contains the __init__.py and all the views.
 
 
 ## IOCT SERVER
