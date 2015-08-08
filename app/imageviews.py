@@ -1,14 +1,14 @@
 from flask import render_template, request
-from app import application
+from app import app
 from imagesurfer import getimages
 
 
-@application.route('/images')
+@app.route('/images')
 def images():
     return render_template('images.html')
 
 
-@application.route('/imageresults', methods=['GET', 'POST'])
+@app.route('/imageresults', methods=['GET', 'POST'])
 def imageresults():
 
     query = request.form['query']

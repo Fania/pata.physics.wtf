@@ -11,6 +11,11 @@ Fania Raczinski + De Montfort University + 2015
 - Deactivate ```deactivate```
 
 
+## ONE.COM
+- ```ssh physics.wtf@ssh.physics.wtf```
+- pw Quiv2Web1poiV1
+
+
 ## IOCT SERVER
 - ```ssh fraczinski@mnemosyne.ioct.dmu.ac.uk```
 - mnemosyne.ioct.dmu.ac.uk

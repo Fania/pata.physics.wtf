@@ -1,14 +1,14 @@
 from flask import render_template, url_for, request
-from app import application
+from app import app
 from videosurfer import *
 
 
-@application.route('/videos')
+@app.route('/videos')
 def videos():
     return render_template('videos.html')
 
 
-@application.route('/videoresults', methods=['GET', 'POST'])
+@app.route('/videoresults', methods=['GET', 'POST'])
 def videoresults():
 
     query = request.form['query']
