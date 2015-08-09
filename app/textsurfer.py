@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from collections import defaultdict
 
 import os
+import re
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -61,7 +62,8 @@ l_dict = defaultdict(list)
 def setupcorpus(nr, lang):
     for x, w in enumerate(nr):
         if w.isalpha() and (w.lower() not in lang):
-            l_dict[w.lower()].append([nr.fileid[49:], x])
+            y = (re.search(r"((\d\d).(\w)+.txt)", nr.fileid)).group()
+            l_dict[w.lower()].append([y, x])
 
 setupcorpus(l_00, en_stop), print('added 00')
 setupcorpus(l_01, en_stop), print('added 01')
@@ -173,21 +175,18 @@ def antinomy(w):
 
 def get_title(file):
     return {
-        'l_00': 'Alfred Jarry: Exploits and Opinions of Dr. Faustroll, '
-                'Pataphysician',
+        'l_00': 'Alfred Jarry: Exploits and Opinions of Dr. Faustroll, Pataphysician',
         'l_01': 'Edgar Allen Poe: Collected Works',
         'l_02': 'Cyrano de Bergerac: A Voyage to the Moon',
         'l_03': 'Saint Luke: The Gospel',
         'l_04': 'Leon Bloy: Le Desespere',
         'l_05': 'Samuel Taylor Coleridge: The Rime of the Ancient Mariner',
         'l_06': 'Georges Darien: Le Voleur',
-        'l_07': 'Marceline Desbordes-Valmore: Le Livre des Meres et '
-                'des Enfants',
+        'l_07': 'Marceline Desbordes-Valmore: Le Livre des Meres et des Enfants',
         'l_08': 'Max Elskamp: Enluminures',
         'l_09': 'Jean-Pierre Claris de Florian: Les Deux Billets',
         'l_10': 'One Thousand and One Nights',
-        'l_11': 'Christian Dietrich Grabbe: Scherz, Satire, Ironie und '
-                'tiefere Bedeutung',
+        'l_11': 'Christian Dietrich Grabbe: Scherz, Satire, Ironie und tiefere Bedeutung',
         'l_12': "Gustave Kahn: Le Conte de l'Or et Du Silence",
         'l_13': 'Le Comte de Lautreamont: Les Chants de Maldoror',
         'l_14': 'Maurice Maeterlinck: Aglavaine and Selysette',

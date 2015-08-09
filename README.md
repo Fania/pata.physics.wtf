@@ -16,6 +16,7 @@ Fania Raczinski + De Montfort University + 2015
 ```gunicorn wsgi:app```  starts gunicorn server
 wsgi is the wsgi script in the main folder.
 app is the name of the folder that contains the __init__.py and all the views.
+```gunicorn -c guni.py wsgi:app```
 
 
 ## IOCT SERVER
