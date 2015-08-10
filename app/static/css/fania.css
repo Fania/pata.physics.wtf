@@ -12,8 +12,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  content: "\f0e0";
-  color: #C0C0C0;
+  content: "\f003";
+  color: #fff;
+}
+.randbutton:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f074";
+  color: #fff;
 }
 .w3-ul li {
   padding: 0;
