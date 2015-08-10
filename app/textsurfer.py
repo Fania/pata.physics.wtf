@@ -100,6 +100,7 @@ def clinamen(w, i):
     out, sources = set(), set()
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
+    # print(words)
     for r in words:
         files = set(sear(r))
         for e in files:
