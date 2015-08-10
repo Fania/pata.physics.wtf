@@ -84,16 +84,17 @@
     </ul>
     <div class="w3-hide" id="partsize">{{ part }}</div>
     <div class="w3-hide" id="querydiv">{{ query }}</div>
-    <div class="" id="clickcount">0</div>
+    <div class="w3-hide" id="clickcount">0</div>
+    <div class="w3-hide" id="lollength">{{ lol|length }}</div>
   </div>
 
-  <div class="w3-container w3-theme-l5 subtab_content" id="q_tab">
+  <div class="subtab_content" id="q_tab">
     <p class="w3-center">
-      <a href="#" onclick="return getContent(this)">
-        Click here to email this poem!
+      <a class="emailbutton" href="#" onclick="return getContent(this)">
+        Email this poem!
       </a>
     </p>
-    <div class="poetry">
+    <div class="poetry w3-container w3-theme-l5">
       {% for n in range(1, lol|length + 1) %}
         {% set wid = ['wn', n|string]|join %}
         {% set lid = ['lyr', n|string]|join %}
@@ -113,10 +114,10 @@
 
   <div class="w3-container w3-theme-l5 subtab_content" id="r_tab">
     <p class="w3-center">
-      <a id="shuffle" href="#" onclick="return shufflePoem()">
+      <a id="shuffle" class="emailbutton" href="#" onclick="return shufflePoem()">
         Click here to randomise poem!
       </a>
-      <a href="#" onclick="return getRandContent(this)">
+      <a href="#" class="emailbutton" onclick="return getRandContent(this)">
         Click here to email this poem!
       </a>
     </p>

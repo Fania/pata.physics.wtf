@@ -8,7 +8,14 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase;
   font-family: 'Arvo', serif;
 }
-ul.w3-ul li {
+.emailbutton:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  content: "\f0e0";
+  color: #C0C0C0;
+}
+.w3-ul li {
   padding: 0;
   border: 0;
 }
@@ -33,7 +40,8 @@ ul.w3-ul li {
   bottom: 0;
 }
 
-.tabs a:hover {
+.tabs a:hover,
+.subtabs a:hover {
   background: #eceff1;
 }
 
@@ -282,8 +290,8 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
 /*LOAD ICON*/
 .loading {
   position: fixed;
-	left: 0px;
-	top: 0px;
+	left: 0;
+	top: 0;
 	width: 100%;
 	height: 100%;
 	z-index: 9999;
