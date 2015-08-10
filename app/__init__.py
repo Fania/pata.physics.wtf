@@ -1,12 +1,9 @@
 from flask import Flask
 import random
 import os
-# import unicodedata
 import codecs
 
 app = Flask(__name__)
-
-app.config.from_pyfile('config.py')
 
 from app import views, textviews, imageviews, videoviews
 
