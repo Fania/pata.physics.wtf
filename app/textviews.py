@@ -29,9 +29,7 @@ def textresults():
         clin_sens, clin_words, clin_files, clin_tot = clinamen(query, 2)
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
-        print(clin_sens)
-        print(sys_sens)
-        print(anti_sens)
+
         all_sens = list(clin_sens | sys_sens | anti_sens)
         all_tot = clin_tot + sys_tot + anti_tot
 

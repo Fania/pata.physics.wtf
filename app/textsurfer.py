@@ -50,11 +50,11 @@ fr_stop = stopwords.words('french')
 de_stop = stopwords.words('german')
 ############################################################
 
-l_dict = defaultdict(list)
+l_dict = defaultdict(lambda: defaultdict(list))
 
 # l_dict structure:
-# {word1: [[fileA, pos], [fileB, pos], ...],
-#  word2: [[fileC, pos], [fileK, pos], ...],
+# {word1: {fileA: [pos1, pos2, ...], fileB: [pos], ...},
+#  word2: {fileC: [pos1, pos2], fileK: [pos], ...},
 #  ...
 # }
 
@@ -62,8 +62,8 @@ l_dict = defaultdict(list)
 def setupcorpus(f, lang):
     for x, w in enumerate(f):
         if w.isalpha() and (w.lower() not in lang):
-            y = (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group()
-            l_dict[w.lower()].append([y, x])
+            y = 'l_' + (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group(2)
+            l_dict[w.lower()][y].append(x)
 
 setupcorpus(l_00, en_stop), print('added 00')
 setupcorpus(l_01, en_stop), print('added 01')
@@ -94,43 +94,23 @@ setupcorpus(l_25, en_stop), print('added 25')
 setupcorpus(l_26, en_stop), print('added 26')
 setupcorpus(l_27, en_stop), print('added 27')
 
+# print(l_dict)
 
-def clinamen(w, i):
+
+def get_results(words, algo):
     total = 0
     out, sources = set(), set()
-    words = set([item for item in l_00
-                if dameraulevenshtein(w, item) <= i])
-    # print('clin: ', words)
     for r in words:
-        # print('getting files')
-        files = set(sear(r))
-        # print('finished getting files')
-        # print('word, files', r, files)
-        for e in files:
-            # print('getting title')
+        files = l_dict[r]
+        for e, p in files.items():
             f = get_title(e)
-            # print('finished getting title')
-            # print('title', f)
             sources.add(f)
-            # print('r', r)
-            # print('r lower', r.lower())
-            print('getting sentence')
-            sent = pp_sent(r.lower(), e)
-            print('finished getting sentence')
-            # print('sent', sent)
-            o = (f, sent, 'Clinamen')
-            # print('o', o)
-            # print('sent != []', sent != [])
-            # print('o not in out', o not in out)
+            sent = pp_sent(r.lower(), e, p)
+            o = (f, sent, algo)
             if sent != [] and o not in out:
                 total += 1
-                # print('o', o)
-                # print('adding to out')
                 out.add(o)
-                # print('finished adding to out')
-                # print('clinamen', out)
-    print('finished')
-    return out, words, sources, total
+    return out, sources, total
 
 
 def get_nym(nym, wset):
@@ -149,30 +129,26 @@ def get_nym(nym, wset):
     return out
 
 
+def clinamen(w, i):
+    words = set([item for item in l_00
+                if dameraulevenshtein(w, item) <= i])
+    out, sources, total = get_results(words, 'Clinamen')
+    return out, words, sources, total
+
+
 def syzygy(w):
-    total = 0
-    out, words, sources = (set() for i in range(3))
+    words = set()
     wordsets = wn.synsets(w)
     for ws in wordsets:
         words.update(get_nym('hypo', ws))
         words.update(get_nym('hyper', ws))
         words.update(get_nym('holo', ws))
-    for r in words:
-        files = set(sear(r))
-        for e in files:
-            f = get_title(e)
-            sources.add(f)
-            sent = pp_sent(r.lower(), e)
-            o = (f, sent, 'Syzygy')
-            if sent != [] and o not in out:
-                total += 1
-                out.add(o)
+    out, sources, total = get_results(words, 'Syzygy')
     return out, words, sources, total
 
 
 def antinomy(w):
-    total = 0
-    out, words, sources = (set() for i in range(3))
+    words = set()
     wordsets = wn.synsets(w)
     for ws in wordsets:
         anti = ws.lemmas()[0].antonyms()
@@ -180,16 +156,7 @@ def antinomy(w):
             for a in anti:
                 if str(a.name()) != w:
                     words.add(str(a.name()))
-    for r in words:
-        files = set(sear(r))
-        for e in files:
-            f = get_title(e)
-            sources.add(f)
-            sent = pp_sent(r.lower(), e)
-            o = (f, sent, 'Antinomy')
-            if sent != [] and o not in out:
-                total += 1
-                out.add(o)
+    out, sources, total = get_results(words, 'Antinomy')
     return out, words, sources, total
 
 
@@ -226,45 +193,11 @@ def get_title(file):
     }.get(file, 'Unknown')  # 'Unknown' is default if file not found
 
 
-def sear(t):
-    temp = []
-    if l_dict.get(t.lower()):
-        temp = l_dict.get(t.lower())
-    temp1 = []
-    for f in temp:
-        x = ''.join(['l_', str((f[0])[0:2])])
-        temp1.append(x)
-    return temp1
-
-# l_dict structure:
-# {word1: [[fileA, pos], [fileB, pos], ...],
-#  word2: [[fileC, pos], [fileK, pos], ...],
-#  ...
-# }
-
-
-def pp_sent(w, f):  # gets w as lower case
-    print('begin ppsent')
-    out, pos = [], 0
+def pp_sent(w, f, p):  # gets w as lower case
+    out, pos = [], p[0]
     ff = eval(f)
     pos_b, pos_a = pos, pos
     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
-    print('getting tmp')
-    print('l_dict[w]', l_dict[w])
-    print('l_dict[w][0]', l_dict[w][0])
-    tmp = l_dict[w][f]
-    print('tmp l_dict[w][f]', tmp)
-    print('starting loops')
-    # USE FIRST OCCURANCE ONLY ??
-    for l in l_dict[w]:  # l[0] = file, l[1] = pos
-        # print('in first loop')
-        x = l[0]
-        # print('get first occurance, x', x)
-        # print('x[0:2], f[2:]', x[0:2], f[2:])
-        # x[0:2] == file number
-        # f[2:] == file number of file passed into function
-        if x[0:2] == f[2:]:
-            pos = l[1]
     for i in range(1, 10):
         if ff[pos - i] in punct:
             pos_b = pos - (i - 1)
