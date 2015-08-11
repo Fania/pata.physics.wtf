@@ -59,10 +59,10 @@ l_dict = defaultdict(list)
 # }
 
 
-def setupcorpus(nr, lang):
-    for x, w in enumerate(nr):
+def setupcorpus(f, lang):
+    for x, w in enumerate(f):
         if w.isalpha() and (w.lower() not in lang):
-            y = (re.search(r"((\d\d).(\w)+.txt)", nr.fileid)).group()
+            y = (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group()
             l_dict[w.lower()].append([y, x])
 
 setupcorpus(l_00, en_stop), print('added 00')
@@ -100,17 +100,36 @@ def clinamen(w, i):
     out, sources = set(), set()
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
-    # print(words)
+    # print('clin: ', words)
     for r in words:
+        # print('getting files')
         files = set(sear(r))
+        # print('finished getting files')
+        # print('word, files', r, files)
         for e in files:
+            # print('getting title')
             f = get_title(e)
+            # print('finished getting title')
+            # print('title', f)
             sources.add(f)
+            # print('r', r)
+            # print('r lower', r.lower())
+            print('getting sentence')
             sent = pp_sent(r.lower(), e)
+            print('finished getting sentence')
+            # print('sent', sent)
             o = (f, sent, 'Clinamen')
+            # print('o', o)
+            # print('sent != []', sent != [])
+            # print('o not in out', o not in out)
             if sent != [] and o not in out:
                 total += 1
+                # print('o', o)
+                # print('adding to out')
                 out.add(o)
+                # print('finished adding to out')
+                # print('clinamen', out)
+    print('finished')
     return out, words, sources, total
 
 
@@ -224,13 +243,26 @@ def sear(t):
 # }
 
 
-def pp_sent(w, f):
+def pp_sent(w, f):  # gets w as lower case
+    print('begin ppsent')
     out, pos = [], 0
     ff = eval(f)
     pos_b, pos_a = pos, pos
     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
-    for l in l_dict[w]:
+    print('getting tmp')
+    print('l_dict[w]', l_dict[w])
+    print('l_dict[w][0]', l_dict[w][0])
+    tmp = l_dict[w][f]
+    print('tmp l_dict[w][f]', tmp)
+    print('starting loops')
+    # USE FIRST OCCURANCE ONLY ??
+    for l in l_dict[w]:  # l[0] = file, l[1] = pos
+        # print('in first loop')
         x = l[0]
+        # print('get first occurance, x', x)
+        # print('x[0:2], f[2:]', x[0:2], f[2:])
+        # x[0:2] == file number
+        # f[2:] == file number of file passed into function
         if x[0:2] == f[2:]:
             pos = l[1]
     for i in range(1, 10):
@@ -238,13 +270,19 @@ def pp_sent(w, f):
             pos_b = pos - (i - 1)
             break
         else:
-            pos_b = pos - 5
+            if ff[pos - 5]:
+                pos_b = pos - 5
+            else:
+                pos_b = pos
     for j in range(1, 10):
         if ff[pos + j] in punct:
             pos_a = pos + j
             break
         else:
-            pos_a = pos + 5
+            if ff[pos + 5]:
+                pos_a = pos + 5
+            else:
+                pos_a = pos
     if pos_b >= 0 and pos_a <= len(ff):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
