@@ -2,7 +2,7 @@ from microsofttranslator import Translator
 # import flickrapi
 import requests  # BING IMG
 from requests.auth import HTTPBasicAuth  # BING IMG
-import textsurfer
+from textsurfer import syzygy
 import random
 #############################################
 
@@ -11,7 +11,7 @@ microsoft_id = 'patalator'
 microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
 
 # FLICKR API
-api_key = '9a9ab31b6a0003ab43b64088230eb120'
+# api_key = '9a9ab31b6a0003ab43b64088230eb120'
 
 # BING IMAGE SEARCH API
 # username fania@web.de pw = key
@@ -21,11 +21,12 @@ key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
 def pataphysicalise(words):
     sys_ws = []
     for word in words:
-        _, w, _, _ = textsurfer.syzygy(word)
-        sys_ws.append(w)
+        _, w, _, _ = syzygy(word)
+        sys_ws.append(list(w))
     sres = []
     for s in sys_ws:
-        sres.append((random.sample(s, 1))[0])
+        if len(s) > 0:
+            sres.append(random.choice(s))
     t = ' '.join(sres)
     translations = transent(t)
     return translations

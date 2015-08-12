@@ -14,11 +14,11 @@
 - [ ] hide scroll links on first or last item
 - [x] full sentences?
 - [x] puntuation
-- [ ] phone responsiveness
+- [x] phone responsiveness
 - [ ] add refs/links to sources tab
 - [x] find way to break out of loop in pp_sent function...
-- [ ] capture / screenshot / email poem button
-- [ ] randomise poems button
+- [x] capture / screenshot / email poem button
+- [x] randomise poems button
 - [ ] update wording of website
 - [ ] check if image search works on more than two words?
 - [ ] check image search errors...

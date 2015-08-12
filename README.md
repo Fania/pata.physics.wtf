@@ -6,17 +6,17 @@ Fania Raczinski + De Montfort University + 2015
 ## HOW TO AT HOME
 
 - Activate ```workon newpatav```
-- Start project ```python run.py```
+- Start dev project ```python dev.py```
 - Stop project ```Ctrl + c```
 - Deactivate ```deactivate```
 
 
 ## IMPORTANT
-```python run.py``` starts the local dev SERVER
-```gunicorn wsgi:app```  starts gunicorn server
-wsgi is the wsgi script in the main folder.
+```python dev.py``` starts the local dev SERVER
+```gunicorn live:app```  starts gunicorn server
+live is the wsgi script in the main folder.
 app is the name of the folder that contains the __init__.py and all the views.
-```gunicorn -c guni.py wsgi:app```
+```gunicorn -c guni.py live:app```
 
 
 ## IOCT SERVER
@@ -45,7 +45,7 @@ kill screen: ```exit```
 3. cd root /Library/WebServer/share/pata/pata3
 4. ```screen```
 5. ```. venv/bin/activate```
-6. ```python run.py```
+6. ```python dev.py```
 7. ```ctrl+a d```
 8. ```exit```
 
