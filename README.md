@@ -60,3 +60,5 @@ kill screen: ```exit```
 /usr/local/Cellar/python/2.7.10_2/bin/python2
 
 virtualenv -p /usr/bin/python2.6 <path/to/new/virtualenv/>
+
+http://www.bing.com/developers/s/APIBasics.html
