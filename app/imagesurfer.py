@@ -1,7 +1,11 @@
 from microsofttranslator import Translator
 import flickrapi as fapi
 import json
+# from getty import Session
 import requests  # BING IMG
+# import urllib
+# import urllib2
+# import urllib
 from requests.auth import HTTPBasicAuth  # BING IMG
 from textsurfer import syzygy
 import itertools
@@ -133,7 +137,33 @@ def get_Google(words):
 
 
 def get_Getty(words):
-    # getty_key = '992thepbk9a25nu7sefeqncz'
-    # getty_secret = 'FqWekE4BfRhB3A2VtufzUgbTVRknXqqhxaVGp7FdQ9T8E'
+    getty_key = '5kt5jxty5vvb8zxev3yzd4dz'
+    # getty_secret = 'CvwGwqvuKBWQn8bqctcQ5TCaujd8Ux3VPJsGgZ2zkPqkV'
     print('getty')
-    return [], ('', '', '')
+    out = []
+    trans = ''
+    base = "https://api.gettyimages.com/v3/search/images/creative?"
+    params = "exclude_nudity=true&license_models=royaltyfree&phrase='"
+    after = "'"
+    headers = {'Api-Key': getty_key}
+    for x in words:
+        y = ' '.join(x)
+        z = transent(y)
+        print('pataword', z[2])
+        rurl = ''.join([base, params, z[2], after])
+        r = requests.get(rurl, headers=headers)
+        rj = r.json()
+        if rj['result_count'] >= 10:
+            trans = z
+            print('sucess')
+            for result in rj['images']:
+                ptitle = result['title']
+                print(ptitle)
+                pimg = result['display_sizes'][0]['uri']
+                print(pimg)
+                plink = pimg
+                out.append((ptitle, pimg, plink))
+            break
+        else:
+            out = []
+    return out, trans

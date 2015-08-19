@@ -246,3 +246,20 @@ function getRandContent(link) {
 
 	return false;
 }
+
+// GETTY
+var apiKey = '5kt5jxty5vvb8zxev3yzd4dz';
+
+var appendApiKeyHeader = function( xhr ) {
+  xhr.setRequestHeader('Api-Key', apiKey)
+}
+
+function GetSearchResults(words) {
+  var searchRequest = { "phrase": words }
+  $.ajax({
+    type: "GET",
+    beforeSend: appendApiKeyHeader,
+    url: "https://api.gettyimages.com/v3/search/creative",
+    data: searchRequest})
+    .success(function (data, textStatus, jqXHR) { /* use search results */ })
+    .fail(function (data, err) { /* handle errors */ });

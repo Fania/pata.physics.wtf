@@ -13,7 +13,6 @@ def imageresults():
 
     query = request.form['query']
 
-    print(request.form['img_choice'])
     if request.form['img_choice']:
         choice = request.form['img_choice']
     else:
