@@ -248,20 +248,20 @@
 </article>
 
 <script>
-  var cnt = 0;
+  var cnt = 0; // counter
   function shufflePoem() {
     cnt += 1;
-    var sentences = {{ all_sens|tojson }};
+    var sentences = {{ all_sens|tojson }}; // jinja
     // [[file, [s1,s2,s3], algo],...]
-    var n = {{ all_sens|length }};
+    var n = {{ all_sens|length }}; // jinja
     var rlist = [];
     for (var i = 0; i < 14; i++) {
       var r = Math.floor(Math.random() * n);
-      var t = sentences[r][0];
-      var al = sentences[r][2];
-      var b = sentences[r][1][0];
-      var m = sentences[r][1][1];
-      var a = sentences[r][1][2];
+      var t = sentences[r][0]; // title
+      var al = sentences[r][2]; // algorithm
+      var b = sentences[r][1][0]; // before
+      var m = sentences[r][1][1]; // middle / keyword
+      var a = sentences[r][1][2]; // after
       var str1 = "<span title='" + t +', '+ al;
       var str2 = "'>" + b + " <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='";
       var str3 = m + "' onclick='loading();'></input></form> " + a;

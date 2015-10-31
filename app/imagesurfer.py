@@ -43,7 +43,10 @@ def pataphysicalise(words):
         if len(w) > 0:
             sys_ws.append(list(w))
     out = itertools.product(*sys_ws)
+    # print(words, sys_ws, list(out))
     return list(out)
+
+# print(pataphysicalise('fluffy cats'))
 
 
 def transent(sent):

@@ -22,6 +22,20 @@
 - [ ] update wording of website
 - [ ] check if image search works on more than two words?
 - [ ] check image search errors...
+- [ ] AUDIO ??
+- [ ] Image reverse search?
+- [ ] Preprare images predownloaded
+- [ ] Write word net routines
+- [ ] N+7 to quotes
+- [ ] Fix links refs to sources
+- [ ] Reading out poems
+- [ ] Fix unicode issues
+- [ ] Image vid search suggenstions that work
+- [ ] Spiral percentages
+- [ ] Update pip reqs to minimum
+- [ ] Like poems and display them on page
+- [ ] Reenable facebook twitter analystics
+- [ ] 
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
