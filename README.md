@@ -62,3 +62,14 @@ kill screen: ```exit```
 virtualenv -p /usr/bin/python2.6 <path/to/new/virtualenv/>
 
 http://www.bing.com/developers/s/APIBasics.html
+
+## OLD PROTOTYPES
+
+to check which python installation is used:
+```python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"```
+
+You can find out all the versions of python if you type python and then press TAB.
+
+change path to local venv python if needed...
+~/projectpath/venv/bin/python
+!/usr/bin/python in manage.py
