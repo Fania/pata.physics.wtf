@@ -73,3 +73,9 @@ You can find out all the versions of python if you type python and then press TA
 change path to local venv python if needed...
 ~/projectpath/venv/bin/python
 !/usr/bin/python in manage.py
+
+
+# TODO: Add to Solutions Log
+- how to install nltk Data
+- what to install when installing from scratch
+- remove facebook and tweet buttons
