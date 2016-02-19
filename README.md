@@ -76,6 +76,9 @@ change path to local venv python if needed...
 
 
 # TODO: Add to Solutions Log
-- how to install nltk Data
-- what to install when installing from scratch
-- remove facebook and tweet buttons
+
+# INSTALLING FROM SCRATCH
+- install python 2.7.X
+- install pip and virtualenv
+- create venv and activate it
+- install requirements
