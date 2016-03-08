@@ -13,7 +13,10 @@ import re
 root_path = os.path.dirname(os.path.abspath(__file__))
 root_path = root_path[:-4]
 corpus_root = root_path + '/app/static/corpus'
-library = PlaintextCorpusReader(corpus_root, '.*\.txt')  # root, fileid
+faust_root = corpus_root + '/faustroll'
+shake_root = corpus_root + '/shakespeare'
+library = PlaintextCorpusReader(faust_root, '.*\.txt')  # root, fileid
+slibrary = PlaintextCorpusReader(shake_root, '.*\.txt')  # root, fileid
 
 ############################################################
 l_00 = library.words('00.faustroll.txt')
