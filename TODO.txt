@@ -35,7 +35,12 @@
 - [ ] Update pip reqs to minimum
 - [ ] Like poems and display them on page
 - [ ] Reenable facebook twitter analystics
-- [ ] 
+- [ ] Style radio buttons
+- [ ] Add info text about shakespeare in search areas and about section
+- [ ] update search input box in results pages
+- [ ] fix links (search suggestions)
+- [ ] check if image and video use corpus
+- [ ] shakespeare query failing??
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

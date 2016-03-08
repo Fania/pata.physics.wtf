@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .w3-group {
+  position:relative;
   line-height: 1em;
   display: inherit;
   margin-top: 10px;
@@ -80,6 +81,14 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all
 }
+
+.w3-input:focus ~ .w3-label {
+top:-20px;font-size:14px;color:#888}
+
+input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
+input[type=radio].w3-radio:checked+.w3-validate{color:#455a64}
+input[type=radio].w3-radio+.w3-validate{padding-right:1em; padding-left:4px;}
+
 .w3-code {
   background-color: #eceff1;
   border-left: 4px solid #607d8b;

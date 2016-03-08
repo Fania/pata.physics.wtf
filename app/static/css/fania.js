@@ -263,3 +263,4 @@ function GetSearchResults(words) {
     data: searchRequest})
     .success(function (data, textStatus, jqXHR) { /* use search results */ })
     .fail(function (data, err) { /* handle errors */ });
+}

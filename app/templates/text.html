@@ -19,12 +19,12 @@
 
 
 <form class="w3-container" action="../textresults" method="post">
-  <p>
-  <input class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
-  <input class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
-  <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
+  <p class="w3-center">
+    <input class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
+    <input class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
   </p>
   <div class="w3-group">
+    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
     <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
       <i class="fa fa-search"></i></button>
   </div>

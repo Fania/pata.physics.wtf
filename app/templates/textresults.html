@@ -13,13 +13,24 @@
 </header> -->
 
 <div class="w3-container w3-padding">
-  <form action="../textresults" method="post">
+  <form class="w3-container" action="../textresults" method="post">
+    <p class="w3-center">
+      <input class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
+      <input class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
+    </p>
     <div class="w3-group">
       <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
       <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
         <i class="fa fa-search"></i></button>
     </div>
   </form>
+  <!-- <form action="../textresults" method="post">
+    <div class="w3-group">
+      <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
+        <i class="fa fa-search"></i></button>
+    </div>
+  </form> -->
   <hr>
   <nav class="tabs w3-topnav w3-center w3-margin">
     <a class="active" href="#poetry_tab">Poetry</a>

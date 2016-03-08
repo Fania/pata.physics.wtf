@@ -290,7 +290,7 @@ def get_title(file):
         's_10': 'William Shakespeare, 1599: The Life of Kind Henry the Fifth',
         's_11': 'William Shakespeare, 1592: The First Part of Henry the Sixth',
         's_12': 'William Shakespeare, 1592: The Second Part of Henry the Sixth',
-        's_13': 'William Shakespeare, 1592: The Thurd Part of Henry the Sixth',
+        's_13': 'William Shakespeare, 1592: The Third Part of Henry the Sixth',
         's_14': 'William Shakespeare, 1611: King Henry the Eigth',
         's_15': 'William Shakespeare, 1597: King John',
         's_16': 'William Shakespeare, 1599: The Tragedy of Julius Caesar',
