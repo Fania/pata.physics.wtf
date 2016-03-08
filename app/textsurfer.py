@@ -57,7 +57,39 @@ s_01 = slibrary.words('01.alls_well.txt')
 s_02 = slibrary.words('02.antony_cleopatra.txt')
 s_03 = slibrary.words('03.as_you_like_it.txt')
 s_04 = slibrary.words('04.comedy_of_errors.txt')
-
+s_05 = slibrary.words('05.coriolanus.txt')
+s_06 = slibrary.words('06.cymbeline.txt')
+s_07 = slibrary.words('07.hamlet.txt')
+s_08 = slibrary.words('08.king_henry_IV_1.txt')
+s_09 = slibrary.words('09.king_henry_IV_2.txt')
+s_10 = slibrary.words('10.king_henry_V.txt')
+s_11 = slibrary.words('11.king_henry_VI_1.txt')
+s_12 = slibrary.words('12.king_henry_VI_2.txt')
+s_13 = slibrary.words('13.king_henry_VI_3.txt')
+s_14 = slibrary.words('14.king_henry_VIII.txt')
+s_15 = slibrary.words('15.king_john.txt')
+s_16 = slibrary.words('16.julius_caesar.txt')
+s_17 = slibrary.words('17.king_lear.txt')
+s_18 = slibrary.words('18.loves_labours_lost.txt')
+s_19 = slibrary.words('19.macbeth.txt')
+s_20 = slibrary.words('20.measure_for_measure.txt')
+s_21 = slibrary.words('21.merchant_of_venice.txt')
+s_22 = slibrary.words('22.merry_wives_of_windsor.txt')
+s_23 = slibrary.words('23.midsummer_nights_dream.txt')
+s_24 = slibrary.words('24.much_ado_about_nothing.txt')
+s_25 = slibrary.words('25.othello.txt')
+s_26 = slibrary.words('26.king_richard_II.txt')
+s_27 = slibrary.words('27.king_richard_III.txt')
+s_28 = slibrary.words('28.romeo_and_juliet.txt')
+s_29 = slibrary.words('29.taming_of_the_shrew.txt')
+s_30 = slibrary.words('30.tempest.txt')
+s_31 = slibrary.words('31.timon_of_athens.txt')
+s_32 = slibrary.words('32.titus_andronicus.txt')
+s_33 = slibrary.words('33.troilus_and_cressida.txt')
+s_34 = slibrary.words('34.twelfth_night.txt')
+s_35 = slibrary.words('35.two_gentlemen_of_verona.txt')
+s_36 = slibrary.words('36.winters_tale.txt')
+s_37 = slibrary.words('37.lovers_complaint.txt')
 
 
 
@@ -72,54 +104,91 @@ s_dict = defaultdict(lambda: defaultdict(list))
 # }
 
 
-def setupcorpus(f, lang, dic):
-    # x = counter, w = word in file f
-
+def setupcorpus(f, lang, dic, d):
+    # x = counter, w = word in file f, dic = index dictionary
     for x, w in enumerate(f):
         if w.isalpha() and (w.lower() not in lang):
-            y = 'l_' + (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group(2)
+            y = d + '_' + (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group(2)
             dic[w.lower()][y].append(x)
 
 
-setupcorpus(l_00, en_stop, l_dict), print('added 00')
-setupcorpus(l_01, en_stop, l_dict), print('added 01')
-setupcorpus(l_02, en_stop, l_dict), print('added 02')
-setupcorpus(l_03, en_stop, l_dict), print('added 03')
-setupcorpus(l_04, fr_stop, l_dict), print('added 04')
-setupcorpus(l_05, en_stop, l_dict), print('added 05')
-setupcorpus(l_06, fr_stop, l_dict), print('added 06')
-setupcorpus(l_07, en_stop, l_dict), print('added 07')
-setupcorpus(l_08, fr_stop, l_dict), print('added 08')
-setupcorpus(l_09, fr_stop, l_dict), print('added 09')
-setupcorpus(l_10, en_stop, l_dict), print('added 10')
-setupcorpus(l_11, en_stop, l_dict), print('added 11')
-setupcorpus(l_12, fr_stop, l_dict), print('added 12')
-setupcorpus(l_13, fr_stop, l_dict), print('added 13')
-setupcorpus(l_14, en_stop, l_dict), print('added 14')
-setupcorpus(l_15, fr_stop, l_dict), print('added 15')
-setupcorpus(l_16, en_stop, l_dict), print('added 16')
-setupcorpus(l_17, en_stop, l_dict), print('added 17')
-setupcorpus(l_18, en_stop, l_dict), print('added 18')
-setupcorpus(l_19, en_stop, l_dict), print('added 19')
-setupcorpus(l_20, en_stop, l_dict), print('added 20')
-setupcorpus(l_21, en_stop, l_dict), print('added 21')
-setupcorpus(l_22, fr_stop, l_dict), print('added 22')
-setupcorpus(l_23, de_stop, l_dict), print('added 23')
-setupcorpus(l_24, fr_stop, l_dict), print('added 24')
-setupcorpus(l_25, en_stop, l_dict), print('added 25')
-setupcorpus(l_26, en_stop, l_dict), print('added 26')
-setupcorpus(l_27, en_stop, l_dict), print('added 27')
+setupcorpus(l_00, en_stop, l_dict, 'l'), print('added 00 - FT')
+setupcorpus(l_01, en_stop, l_dict, 'l'), print('added 01 - FT')
+setupcorpus(l_02, en_stop, l_dict, 'l'), print('added 02 - FT')
+setupcorpus(l_03, en_stop, l_dict, 'l'), print('added 03 - FT')
+setupcorpus(l_04, fr_stop, l_dict, 'l'), print('added 04 - FT')
+setupcorpus(l_05, en_stop, l_dict, 'l'), print('added 05 - FT')
+setupcorpus(l_06, fr_stop, l_dict, 'l'), print('added 06 - FT')
+setupcorpus(l_07, en_stop, l_dict, 'l'), print('added 07 - FT')
+setupcorpus(l_08, fr_stop, l_dict, 'l'), print('added 08 - FT')
+setupcorpus(l_09, fr_stop, l_dict, 'l'), print('added 09 - FT')
+setupcorpus(l_10, en_stop, l_dict, 'l'), print('added 10 - FT')
+setupcorpus(l_11, en_stop, l_dict, 'l'), print('added 11 - FT')
+setupcorpus(l_12, fr_stop, l_dict, 'l'), print('added 12 - FT')
+setupcorpus(l_13, fr_stop, l_dict, 'l'), print('added 13 - FT')
+setupcorpus(l_14, en_stop, l_dict, 'l'), print('added 14 - FT')
+setupcorpus(l_15, fr_stop, l_dict, 'l'), print('added 15 - FT')
+setupcorpus(l_16, en_stop, l_dict, 'l'), print('added 16 - FT')
+setupcorpus(l_17, en_stop, l_dict, 'l'), print('added 17 - FT')
+setupcorpus(l_18, en_stop, l_dict, 'l'), print('added 18 - FT')
+setupcorpus(l_19, en_stop, l_dict, 'l'), print('added 19 - FT')
+setupcorpus(l_20, en_stop, l_dict, 'l'), print('added 20 - FT')
+setupcorpus(l_21, en_stop, l_dict, 'l'), print('added 21 - FT')
+setupcorpus(l_22, fr_stop, l_dict, 'l'), print('added 22 - FT')
+setupcorpus(l_23, de_stop, l_dict, 'l'), print('added 23 - FT')
+setupcorpus(l_24, fr_stop, l_dict, 'l'), print('added 24 - FT')
+setupcorpus(l_25, en_stop, l_dict, 'l'), print('added 25 - FT')
+setupcorpus(l_26, en_stop, l_dict, 'l'), print('added 26 - FT')
+setupcorpus(l_27, en_stop, l_dict, 'l'), print('added 27 - FT')
 
-setupcorpus(s_00, en_stop, s_dict), print('added 00 - SH')
+setupcorpus(s_00, en_stop, s_dict, 's'), print('added 00 - SH')
+setupcorpus(s_01, en_stop, s_dict, 's'), print('added 01 - SH')
+setupcorpus(s_02, en_stop, s_dict, 's'), print('added 02 - SH')
+setupcorpus(s_03, en_stop, s_dict, 's'), print('added 03 - SH')
+setupcorpus(s_04, en_stop, s_dict, 's'), print('added 04 - SH')
+setupcorpus(s_05, en_stop, s_dict, 's'), print('added 05 - SH')
+setupcorpus(s_06, en_stop, s_dict, 's'), print('added 06 - SH')
+setupcorpus(s_07, en_stop, s_dict, 's'), print('added 07 - SH')
+setupcorpus(s_08, en_stop, s_dict, 's'), print('added 08 - SH')
+setupcorpus(s_09, en_stop, s_dict, 's'), print('added 09 - SH')
+setupcorpus(s_10, en_stop, s_dict, 's'), print('added 10 - SH')
+setupcorpus(s_11, en_stop, s_dict, 's'), print('added 11 - SH')
+setupcorpus(s_12, en_stop, s_dict, 's'), print('added 12 - SH')
+setupcorpus(s_13, en_stop, s_dict, 's'), print('added 13 - SH')
+setupcorpus(s_14, en_stop, s_dict, 's'), print('added 14 - SH')
+setupcorpus(s_15, en_stop, s_dict, 's'), print('added 15 - SH')
+setupcorpus(s_16, en_stop, s_dict, 's'), print('added 16 - SH')
+setupcorpus(s_17, en_stop, s_dict, 's'), print('added 17 - SH')
+setupcorpus(s_18, en_stop, s_dict, 's'), print('added 18 - SH')
+setupcorpus(s_19, en_stop, s_dict, 's'), print('added 19 - SH')
+setupcorpus(s_20, en_stop, s_dict, 's'), print('added 20 - SH')
+setupcorpus(s_21, en_stop, s_dict, 's'), print('added 21 - SH')
+setupcorpus(s_22, en_stop, s_dict, 's'), print('added 22 - SH')
+setupcorpus(s_23, en_stop, s_dict, 's'), print('added 23 - SH')
+setupcorpus(s_24, en_stop, s_dict, 's'), print('added 24 - SH')
+setupcorpus(s_25, en_stop, s_dict, 's'), print('added 25 - SH')
+setupcorpus(s_26, en_stop, s_dict, 's'), print('added 26 - SH')
+setupcorpus(s_27, en_stop, s_dict, 's'), print('added 27 - SH')
+setupcorpus(s_28, en_stop, s_dict, 's'), print('added 28 - SH')
+setupcorpus(s_29, en_stop, s_dict, 's'), print('added 29 - SH')
+setupcorpus(s_30, en_stop, s_dict, 's'), print('added 30 - SH')
+setupcorpus(s_31, en_stop, s_dict, 's'), print('added 31 - SH')
+setupcorpus(s_32, en_stop, s_dict, 's'), print('added 32 - SH')
+setupcorpus(s_33, en_stop, s_dict, 's'), print('added 33 - SH')
+setupcorpus(s_34, en_stop, s_dict, 's'), print('added 34 - SH')
+setupcorpus(s_35, en_stop, s_dict, 's'), print('added 35 - SH')
+setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
+setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
-print(s_dict)
+# print(s_dict)
 
 
-def get_results(words, algo):
+def get_results(words, algo, dic):
     total = 0
     out, sources = set(), set()
     for r in words:
-        files = l_dict[r]
+        if dic == 'faustroll': files = l_dict[r]
+        else: files = s_dict[r]
         for e, p in files.items():
             f = get_title(e)
             sources.add(f)
@@ -147,25 +216,25 @@ def get_nym(nym, wset):
     return out
 
 
-def clinamen(w, i):
+def clinamen(w, c, i):
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
-    out, sources, total = get_results(words, 'Clinamen')
+    out, sources, total = get_results(words, 'Clinamen', c)
     return out, words, sources, total
 
 
-def syzygy(w):
+def syzygy(w, c):
     words = set()
     wordsets = wn.synsets(w)
     for ws in wordsets:
         words.update(get_nym('hypo', ws))
         words.update(get_nym('hyper', ws))
         words.update(get_nym('holo', ws))
-    out, sources, total = get_results(words, 'Syzygy')
+    out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
 
 
-def antinomy(w):
+def antinomy(w, c):
     words = set()
     wordsets = wn.synsets(w)
     for ws in wordsets:
@@ -174,7 +243,7 @@ def antinomy(w):
             for a in anti:
                 if str(a.name()) != w:
                     words.add(str(a.name()))
-    out, sources, total = get_results(words, 'Antinomy')
+    out, sources, total = get_results(words, 'Antinomy', c)
     return out, words, sources, total
 
 
@@ -207,7 +276,45 @@ def get_title(file):
         'l_24': 'Alfred Jarry: Ubu Roi',
         'l_25': 'Paul Verlaine: Poems',
         'l_26': 'Emile Verhaeren: Poems',
-        'l_27': 'Jules Verne: A Journey to the Centre of the Earth'
+        'l_27': 'Jules Verne: A Journey to the Centre of the Earth',
+        's_00': 'William Shakespeare, 1609: The Sonnets',
+        's_01': 'William Shakespeare, 1603: Alls Well That Ends Well',
+        's_02': 'William Shakespeare, 1607: The Tragedy of Antony and Cleopatra',
+        's_03': 'William Shakespeare, 1601: As You Like It',
+        's_04': 'William Shakespeare, 1593: The Comedy of Errors',
+        's_05': 'William Shakespeare, 1608: The Tragedy of Coriolanus',
+        's_06': 'William Shakespeare, 1609: Cymbeline',
+        's_07': 'William Shakespeare, 1604: The Tragedy of Hamlet, Prince of Denmark',
+        's_08': 'William Shakespeare, 1598: The First Part of King Henry the Fourth',
+        's_09': 'William Shakespeare, 1598: The Second Part of King Henry the Fourth',
+        's_10': 'William Shakespeare, 1599: The Life of Kind Henry the Fifth',
+        's_11': 'William Shakespeare, 1592: The First Part of Henry the Sixth',
+        's_12': 'William Shakespeare, 1592: The Second Part of Henry the Sixth',
+        's_13': 'William Shakespeare, 1592: The Thurd Part of Henry the Sixth',
+        's_14': 'William Shakespeare, 1611: King Henry the Eigth',
+        's_15': 'William Shakespeare, 1597: King John',
+        's_16': 'William Shakespeare, 1599: The Tragedy of Julius Caesar',
+        's_17': 'William Shakespeare, 1606: The Tragedy of King Lear',
+        's_18': "William Shakespeare, 1595: Love's Labour's Lost",
+        's_19': 'William Shakespeare, 1606: The Tragedy of Macbeth',
+        's_20': 'William Shakespeare, 1605: Measure for Measure',
+        's_21': 'William Shakespeare, 1597: The Merchant of Venice',
+        's_22': 'William Shakespeare, 1601: The Merry Wives of Windsor',
+        's_23': "William Shakespeare, 1596: A Midsummer Night's Dream",
+        's_24': 'William Shakespeare, 1599: Much Ado About Nothing',
+        's_25': 'William Shakespeare, 1605: The Tragedy of Othello, Moor of Venice',
+        's_26': 'William Shakespeare, 1596: King Richard the Second',
+        's_27': 'William Shakespeare, 1593: Kind Richard III',
+        's_28': 'William Shakespeare, 1595: The Tragedy of Romeo and Juliet',
+        's_29': 'William Shakespeare, 1594: The Taming of the Shrew',
+        's_30': 'William Shakespeare, 1612: The Tempest',
+        's_31': 'William Shakespeare, 1608: The Life of Timon of Athens',
+        's_32': 'William Shakespeare, 1594: The Tragedy of Titus Andronicus',
+        's_33': 'William Shakespeare, 1602: The History of Troilus and Cressida',
+        's_34': 'William Shakespeare, 1602: Twelfth Night or What You Will',
+        's_35': 'William Shakespeare, 1595: The Two Gentlemen of Verona',
+        's_36': "William Shakespeare, 1611: The Winter's Tale",
+        's_37': "William Shakespeare, 1609: A Lover's Complaint"
     }.get(file, 'Unknown')  # 'Unknown' is default if file not found
 
 
