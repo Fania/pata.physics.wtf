@@ -52,8 +52,18 @@ en_stop = stopwords.words('english')
 fr_stop = stopwords.words('french')
 de_stop = stopwords.words('german')
 ############################################################
+s_00 = slibrary.words('00.sonnets.txt')
+s_01 = slibrary.words('01.alls_well.txt')
+s_02 = slibrary.words('02.antony_cleopatra.txt')
+s_03 = slibrary.words('03.as_you_like_it.txt')
+s_04 = slibrary.words('04.comedy_of_errors.txt')
+
+
+
 
 l_dict = defaultdict(lambda: defaultdict(list))
+s_dict = defaultdict(lambda: defaultdict(list))
+
 
 # l_dict structure:
 # {word1: {fileA: [pos1, pos2, ...], fileB: [pos], ...},
@@ -62,43 +72,47 @@ l_dict = defaultdict(lambda: defaultdict(list))
 # }
 
 
-def setupcorpus(f, lang):
+def setupcorpus(f, lang, dic):
     # x = counter, w = word in file f
+
     for x, w in enumerate(f):
         if w.isalpha() and (w.lower() not in lang):
             y = 'l_' + (re.search(r"((\d\d).(\w)+.txt)", f.fileid)).group(2)
-            l_dict[w.lower()][y].append(x)
+            dic[w.lower()][y].append(x)
 
-setupcorpus(l_00, en_stop), print('added 00')
-setupcorpus(l_01, en_stop), print('added 01')
-setupcorpus(l_02, en_stop), print('added 02')
-setupcorpus(l_03, en_stop), print('added 03')
-setupcorpus(l_04, fr_stop), print('added 04')
-setupcorpus(l_05, en_stop), print('added 05')
-setupcorpus(l_06, fr_stop), print('added 06')
-setupcorpus(l_07, en_stop), print('added 07')
-setupcorpus(l_08, fr_stop), print('added 08')
-setupcorpus(l_09, fr_stop), print('added 09')
-setupcorpus(l_10, en_stop), print('added 10')
-setupcorpus(l_11, en_stop), print('added 11')
-setupcorpus(l_12, fr_stop), print('added 12')
-setupcorpus(l_13, fr_stop), print('added 13')
-setupcorpus(l_14, en_stop), print('added 14')
-setupcorpus(l_15, fr_stop), print('added 15')
-setupcorpus(l_16, en_stop), print('added 16')
-setupcorpus(l_17, en_stop), print('added 17')
-setupcorpus(l_18, en_stop), print('added 18')
-setupcorpus(l_19, en_stop), print('added 19')
-setupcorpus(l_20, en_stop), print('added 20')
-setupcorpus(l_21, en_stop), print('added 21')
-setupcorpus(l_22, fr_stop), print('added 22')
-setupcorpus(l_23, de_stop), print('added 23')
-setupcorpus(l_24, fr_stop), print('added 24')
-setupcorpus(l_25, en_stop), print('added 25')
-setupcorpus(l_26, en_stop), print('added 26')
-setupcorpus(l_27, en_stop), print('added 27')
 
-# print(l_dict)
+setupcorpus(l_00, en_stop, l_dict), print('added 00')
+setupcorpus(l_01, en_stop, l_dict), print('added 01')
+setupcorpus(l_02, en_stop, l_dict), print('added 02')
+setupcorpus(l_03, en_stop, l_dict), print('added 03')
+setupcorpus(l_04, fr_stop, l_dict), print('added 04')
+setupcorpus(l_05, en_stop, l_dict), print('added 05')
+setupcorpus(l_06, fr_stop, l_dict), print('added 06')
+setupcorpus(l_07, en_stop, l_dict), print('added 07')
+setupcorpus(l_08, fr_stop, l_dict), print('added 08')
+setupcorpus(l_09, fr_stop, l_dict), print('added 09')
+setupcorpus(l_10, en_stop, l_dict), print('added 10')
+setupcorpus(l_11, en_stop, l_dict), print('added 11')
+setupcorpus(l_12, fr_stop, l_dict), print('added 12')
+setupcorpus(l_13, fr_stop, l_dict), print('added 13')
+setupcorpus(l_14, en_stop, l_dict), print('added 14')
+setupcorpus(l_15, fr_stop, l_dict), print('added 15')
+setupcorpus(l_16, en_stop, l_dict), print('added 16')
+setupcorpus(l_17, en_stop, l_dict), print('added 17')
+setupcorpus(l_18, en_stop, l_dict), print('added 18')
+setupcorpus(l_19, en_stop, l_dict), print('added 19')
+setupcorpus(l_20, en_stop, l_dict), print('added 20')
+setupcorpus(l_21, en_stop, l_dict), print('added 21')
+setupcorpus(l_22, fr_stop, l_dict), print('added 22')
+setupcorpus(l_23, de_stop, l_dict), print('added 23')
+setupcorpus(l_24, fr_stop, l_dict), print('added 24')
+setupcorpus(l_25, en_stop, l_dict), print('added 25')
+setupcorpus(l_26, en_stop, l_dict), print('added 26')
+setupcorpus(l_27, en_stop, l_dict), print('added 27')
+
+setupcorpus(s_00, en_stop, s_dict), print('added 00 - SH')
+
+print(s_dict)
 
 
 def get_results(words, algo):
