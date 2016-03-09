@@ -49,7 +49,7 @@
   </div> -->
 
 <div class="w3-container w3-padding">
-  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form></span>
+  <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form></span>
   <span title="Results - Reverberations - Origins">&nbsp;&nbsp;= &nbsp;&nbsp;{{ all_tot }} - {{ all_words|length }} - {{ all_files|length }}</span>
 </div>
 
@@ -106,20 +106,24 @@
       </a>
     </p>
     <div class="poetry w3-container w3-theme-l5">
-      {% for n in range(1, lol|length + 1) %}
-        {% set wid = ['wn', n|string]|join %}
-        {% set lid = ['lyr', n|string]|join %}
-        {% set sid = ['scrollLinks', n|string]|join %}
-        {% set aid = lol[n-1] %}
-        <div id="poems">
-          <div id="{{wid}}" class="wn">
-            <div id="{{lid}}" class="lyr">
-              {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+      {% if (lol|length) != 0 %}
+        {% for n in range(1, lol|length + 1) %}
+          {% set wid = ['wn', n|string]|join %}
+          {% set lid = ['lyr', n|string]|join %}
+          {% set sid = ['scrollLinks', n|string]|join %}
+          {% set aid = lol[n-1] %}
+          <div id="poems">
+            <div id="{{wid}}" class="wn">
+              <div id="{{lid}}" class="lyr">
+                {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+              </div>
             </div>
+            <div id="{{sid}}" class="scrollLinks"></div>
           </div>
-          <div id="{{sid}}" class="scrollLinks"></div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      {% else %}
+        Not enough results found.
+      {% endif %}
     </div>
   </div>
 
@@ -134,13 +138,17 @@
     </p>
     <div class="w3-container w3-theme-l5">
       <div id="random_poem" class="poetry random_poem w3-center">
-        {% for n in range(0, 14) %}
-          {% set rid = ['subpoem', n|string]|join %}
-          {% set rsens = all_sens|random %}
-          <div id="{{ rid }}">
-            <span title="{{ rsens[0] }}, {{ rsens[2] }}">{{ rsens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ rsens[1][1] }}" onclick="loading();"></input></form> {{ rsens[1][2] }}</span><br>
-          </div>
-        {% endfor %}
+        {% if all_sens|length > 13 %}
+          {% for n in range(0, 14) %}
+            {% set rid = ['subpoem', n|string]|join %}
+            {% set rsens = all_sens|random %}
+            <div id="{{ rid }}">
+              <span title="{{ rsens[0] }}, {{ rsens[2] }}">{{ rsens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ rsens[1][1] }}" onclick="loading();"></input></form> {{ rsens[1][2] }}</span><br>
+            </div>
+          {% endfor %}
+        {% else %}
+          Not enough results found.
+        {% endif %}
       </div>
     </div>
   </div>
@@ -168,7 +176,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if file == sens[0] %}
-            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[2] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -243,7 +251,7 @@
       <ul class="w3-ul w3-padding">
         {% for sens in all_sens %}
           {% if sens[2] == algo %}
-            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
+            <li title="{{ sens[0] }}">...{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}...</li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -265,6 +273,7 @@
     var sentences = {{ all_sens|tojson }}; // jinja
     // [[file, [s1,s2,s3], algo],...]
     var n = {{ all_sens|length }}; // jinja
+    var corp = '{{ corpus }}'; // jinja
     var rlist = [];
     for (var i = 0; i < 14; i++) {
       var r = Math.floor(Math.random() * n);
@@ -274,10 +283,11 @@
       var m = sentences[r][1][1]; // middle / keyword
       var a = sentences[r][1][2]; // after
       var str1 = "<span title='" + t +', '+ al;
-      var str2 = "'>" + b + " <form class='inform' action='../textresults' method='post'><input class='inlink' type='submit' name='query' value='";
+      var str2 = "'>" + b + " <form class='inform' action='../textresults' method='post'><input class='w3-hide' type='radio' name='corpus' value='"
+      var str2B = "'><input class='inlink' type='submit' name='query' value='";
       var str3 = m + "' onclick='loading();'></input></form> " + a;
       var str4 = "</span>";
-      var fullsent = str1 + str2 + str3 + str4;
+      var fullsent = str1 + str2 + corp + str2B + str3 + str4;
       rlist[i] = fullsent;
     }
     rlist[3] = rlist[3].concat('<br>');

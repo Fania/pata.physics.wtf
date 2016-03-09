@@ -45,7 +45,7 @@ kill screen: ```exit```
 3. cd root /Library/WebServer/share/pata/pata3
 4. ```screen```
 5. ```. venv/bin/activate```
-6. ```python dev.py```
+6. ```python dev.py``` python run.py
 7. ```ctrl+a d```
 8. ```exit```
 

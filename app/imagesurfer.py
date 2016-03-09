@@ -39,7 +39,7 @@ import itertools
 def pataphysicalise(words):
     sys_ws = []
     for word in words:
-        _, w, _, _ = syzygy(word)
+        _, w, _, _ = syzygy(word, 'faustroll')
         if len(w) > 0:
             sys_ws.append(list(w))
     out = itertools.product(*sys_ws)
@@ -63,13 +63,13 @@ def transent(sent):
 def getimages(query, choice):
     words = query.split()
     tmp = pataphysicalise(words)
-    if choice == 'Bing':
+    if choice == 'bing':
         return get_Bing(tmp)
-    if choice == 'Flickr':
+    if choice == 'flickr':
         return get_Flickr(tmp)
-    if choice == 'Google':
+    if choice == 'google':
         return get_Google(tmp)
-    if choice == 'Getty':
+    if choice == 'getty':
         return get_Getty(tmp)
 
 

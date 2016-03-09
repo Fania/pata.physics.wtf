@@ -40,7 +40,10 @@
 - [ ] update search input box in results pages
 - [ ] fix links (search suggestions)
 - [ ] check if image and video use corpus
-- [ ] shakespeare query failing??
+- [X] shakespeare query failing?? add checks for less than 14 results in random poems
+- [ ] if something is written in input textbox the search default text overwrites it
+- [ ] javascript poem links not working SH
+- [X] queneau poems not working at all SH
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
