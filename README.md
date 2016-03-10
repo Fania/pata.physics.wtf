@@ -5,10 +5,14 @@ Fania Raczinski + De Montfort University + 2015
 
 ## HOW TO AT HOME
 
-- Activate ```workon newpatav```
+- Activate venv ```workon newpatav``` (if virtualenvwrapper is installed)
+- Win activate: ```venv\scripts\activate```
+- unix activate: ```. venv/bin/activate```
 - Start dev project ```python dev.py```
+- Start live project ```python live.py``` (if avalailable)
 - Stop project ```Ctrl + c```
 - Deactivate ```deactivate```
+
 
 
 ## IMPORTANT
@@ -19,6 +23,22 @@ app is the name of the folder that contains the __init__.py and all the views.
 ```gunicorn -c guni.py live:app```
 
 
+TO RUN IOCT SERVER 2016:
+- screen
+- . venv/bin/activate
+- gunicorn -c guni.py wsgi:app
+
+CHECK ERROR LOGS
+
+any changes to the server IP port stuff:
+restart apache using: ```apachectl graceful``` or ```apachectl restart```
+
+if probs check ```apachectl configtest```
+FIX ERRORS
+RESTART APACHE
+
+
+
 ## IOCT SERVER
 - ```ssh fraczinski@mnemosyne.ioct.dmu.ac.uk```
 - mnemosyne.ioct.dmu.ac.uk
@@ -27,7 +47,7 @@ app is the name of the folder that contains the __init__.py and all the views.
 - config: /etc/apache2/sites/pata.conf
 
 http://mnemosyne.ioct.dmu.ac.uk/
-/Library/WebServer/share/pata/pata3
+- start server from: /Library/WebServer/share/pata/pata3
 
 
 ## SCREEN

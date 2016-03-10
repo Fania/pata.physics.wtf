@@ -44,6 +44,8 @@
 - [ ] if something is written in input textbox the search default text overwrites it
 - [ ] javascript poem links not working SH
 - [X] queneau poems not working at all SH
+- [ ] EMAIL HARDCODED SHIT
+- [ ] restart pata.fania.eu
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

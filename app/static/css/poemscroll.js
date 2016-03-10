@@ -176,7 +176,6 @@ DYN_WEB.Util = (function(Ut) {
 
 DYN_WEB.Scroll_Div = (function() {
   var Ut = DYN_WEB.Util;
-
   function SDiv(wnId, lyrId) {
     this.id = wnId;
     SDiv.col[this.id] = this;
@@ -195,8 +194,9 @@ DYN_WEB.Scroll_Div = (function() {
         lyr = Ut.$(this.lyrId);
         lyr.style.visibility = "hidden";
       }
+      // console.log(Ut.$("lyr1"));
       this.lyr = lyr = Ut.$(lyrId);
-      this.lyr.style.position = 'absolute';
+      this.lyr.style.position = "absolute";
       this.lyrId = lyrId;
       this.y = 0;
       this.x = 0;

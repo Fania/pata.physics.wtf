@@ -32,6 +32,8 @@ if (DYN_WEB.Scroll_Div.isSupported() ) {
     var wndo14 = new DYN_WEB.Scroll_Div('wn14', 'lyr14');
     wndo14.addGlideControls('scrollLinks14', 'h', 635, 300);
 	});
+}else{
+  alert("no DYN_WEB");
 }
 
 // LOADING ICON
@@ -40,16 +42,16 @@ function loading() {
 }
 
 // FACEBOOK
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-// TWITTER
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+// (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4';
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
+//
+// // TWITTER
+// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 // POEM EMAIL
 function Mailto_url(){
@@ -99,8 +101,9 @@ function Mailto_url(){
 }
 
 function getContent(link) {
-
+  console.log(link);
   var query = document.getElementById('querydiv').innerHTML;
+  var corpus = document.getElementById('corpusdiv').innerHTML;
   var lollength = document.getElementById('lollength').innerHTML;
 
   var lineitem1 = document.getElementById('clicks1').innerHTML;
@@ -121,7 +124,11 @@ function getContent(link) {
   var linearray = [];
   var poemsarray = [];
 
-  var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+// <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}"><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form>
+
+// DEAL WITH THIS SHITTER EMAIL FUCK
+
+  var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"{{corpus}}\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
   var re2 = new RegExp('\" onclick=\"loading', "g");
   var re3 = new RegExp(';"></form>', "g");
   var re4 = /\(\)/g;
