@@ -194,7 +194,6 @@ DYN_WEB.Scroll_Div = (function() {
         lyr = Ut.$(this.lyrId);
         lyr.style.visibility = "hidden";
       }
-      // console.log(Ut.$("lyr1"));
       this.lyr = lyr = Ut.$(lyrId);
       this.lyr.style.position = "absolute";
       this.lyrId = lyrId;

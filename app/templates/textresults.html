@@ -139,17 +139,13 @@
     </p>
     <div class="w3-container w3-theme-l5">
       <div id="random_poem" class="poetry random_poem w3-center">
-        {% if all_sens|length > 13 %}
-          {% for n in range(0, 14) %}
-            {% set rid = ['subpoem', n|string]|join %}
-            {% set rsens = all_sens|random %}
-            <div id="{{ rid }}">
-              <span title="{{ rsens[0] }}, {{ rsens[2] }}">{{ rsens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}" checked><input class="inlink" type="submit" name="query" value="{{ rsens[1][1] }}" onclick="loading();"></input></form> {{ rsens[1][2] }}</span><br>
-            </div>
-          {% endfor %}
-        {% else %}
-          Not enough results found.
-        {% endif %}
+        {% for n in range(0, 14) %}
+          {% set rid = ['subpoem', n|string]|join %}
+          {% set rsens = all_sens|random %}
+          <div id="{{ rid }}">
+            <span title="{{ rsens[0] }}, {{ rsens[2] }}">{{ rsens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}" checked><input class="inlink" type="submit" name="query" value="{{ rsens[1][1] }}" onclick="loading();"></input></form> {{ rsens[1][2] }}</span><br>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
