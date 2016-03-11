@@ -42,7 +42,10 @@ def pataphysicalise(words):
         _, w, _, _ = syzygy(word, 'faustroll')
         if len(w) > 0:
             sys_ws.append(list(w))
+            print('created sys_ws')
+    print('start itertools')
     out = itertools.product(*sys_ws)
+    print('end itertools')
     # print(words, sys_ws, list(out))
     return list(out)
 
@@ -99,6 +102,7 @@ def get_Bing(words):
 
 
 def get_Flickr(words):
+    print('started flickr function')
     out = []
     trans = ('', '', '')
     flickr_key = u'9a9ab31b6a0003ab43b64088230eb120'
@@ -108,12 +112,14 @@ def get_Flickr(words):
     # params1 = "&api_key=9a9ab31b6a0003ab43b64088230eb120&text="
     # params2 = "&safe_search=1&format=json&nojsoncallback=1"
     for x in words:
+        print('begin loop')
         y = ' '.join(x)
         z = transent(y)
         trans = z
         flickr = fapi.FlickrAPI(flickr_key, flickr_secret, format='json')
         fotos = flickr.photos.search(text=z[2], per_page='10', safe_search=1)
         parsed = json.loads(fotos.decode('utf-8'))
+        print(parsed)
         if parsed['photos']['total'] >= 10:
             for p in parsed['photos']['photo']:
                 pid = p['id']
@@ -130,7 +136,9 @@ def get_Flickr(words):
                 # plink1 = "https://farm%s.staticflickr.com/" % pfarm
                 # plink2 = "%s/" % pserver
                 out.append((ptitle, pthumb, plink))
+                print('added result')
             break
+    print('end flickr function')
     return out, trans
 
 

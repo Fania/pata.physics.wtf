@@ -56,6 +56,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #eceff1;
 }
 
+.tabs a.active,
+.subtabs a.active {
+  background: ghostwhite;
+}
+
 .w3-group {
   position:relative;
   line-height: 1em;

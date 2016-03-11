@@ -163,7 +163,7 @@ function getContent(link) {
   var poemail = pre + query + mid + corpus + post + poems;
 
   var mailTo = new Mailto_url();
-	mailTo.setSubject("Patahpysical Poetry");
+	mailTo.setSubject("Pataphysical Poetry");
 	mailTo.setBody(poemail);
 	link.href = mailTo.getURL(true);
 
@@ -259,7 +259,7 @@ function getRandContent(link) {
       var poemail = pre + query + mid + corpus + post + comp;
 
       var mailTo1 = new Mailto_url();
-  		mailTo1.setSubject("Patahpysical Poetry");
+  		mailTo1.setSubject("Pataphysical Poetry");
   		mailTo1.setBody(poemail);
   		link.href = mailTo1.getURL(true);
   		return true;

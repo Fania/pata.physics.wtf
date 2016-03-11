@@ -17,6 +17,28 @@
   </p>
 </div>
 
+<input type="text" value="" placeholder="enter one word or more" onchange="javascript: what(this.value)"><a><span class="getinfo">?</span><span class="info">"cat dog" = images with a single "cat+dog" tag,<br>"cat, dog" = images tagged "cat" <em>and</em> "dog"</span></a>
+
+<div id="images"></div>
+
+    <script type="text/javascript">
+    function what(thething){
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        {
+            tags: thething,
+            tagmode: "all", // "all" = multiple comma-separated tags - needs initial input then will accept blank ("any" shows images with no tags if no initial input)
+            format: "json"
+        },
+        function(data) {
+            $("#images").empty();
+            $.each(data.items, function(i,item){
+                $("<img/>").attr("src", item.media.m).attr("height", 160).appendTo("#images").wrap('<a href="' + item.link + '"></a>');
+                if ( i == 4 ) return false;
+            });
+            $("<a>").attr("href", "http://www.flickr.com/help/general/#147").text("About Flickr image permissions").appendTo("#images").wrap('<p>').attr("class", "permission");
+        });
+    };
+    </script>
 
 <form class="w3-container" action="../imageresults" method="post">
   <p class="w3-center">
