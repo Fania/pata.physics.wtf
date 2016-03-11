@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: 0.2s ease all
 }
 
-.w3-input:focus ~ .w3-label {
+.w3-input:focus ~ .w3-label,.w3-input:valid ~ .w3-label,.w3-textarea:focus ~ .w3-label,.w3-textarea:valid ~ .w3-label{
 top:-20px;font-size:14px;color:#888}
 
 input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
