@@ -36,10 +36,10 @@
 - [ ] Like poems and display them on page
 - [ ] Reenable facebook twitter analystics
 - [X] Style radio buttons
-- [ ] Add info text about shakespeare in search areas and about section
+- [X] Add info text about shakespeare in search areas and about section
 - [X] update search input box in results pages
 - [X] fix links (search suggestions)
-- [ ] check if image and video use corpus
+- [X] check if image and video use corpus
 - [X] shakespeare query failing?? add checks for less than 14 results in random poems
 - [X] if something is written in input textbox the search default text overwrites it
 - [X] javascript poem links not working SH

@@ -1,3 +1,42 @@
+
+//FLICKR
+function flickrsearch(query){
+  console.log(query.query);
+    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+    {
+        tags: query.query,
+        tagmode: "all", // "all" = multiple comma-separated tags - needs initial input then will accept blank ("any" shows images with no tags if no initial input)
+        format: "json"
+    },
+    function(data) {
+        var imglist = []
+        $.each(data.items, function(i,item){
+            imglist.push([item.title, item.media.m, item.link]);
+            if ( i === 9 ) return false;
+        });
+        $("#a0").attr("href", imglist[0][2]);
+        $("#img0").attr("src", imglist[0][1]).attr("title", imglist[0][0]);
+        $("#a1").attr("href", imglist[1][2]);
+        $("#img1").attr("src", imglist[1][1]).attr("title", imglist[1][0]);
+        $("#a2").attr("href", imglist[2][2]);
+        $("#img2").attr("src", imglist[2][1]).attr("title", imglist[2][0]);
+        $("#a3").attr("href", imglist[3][2]);
+        $("#img3").attr("src", imglist[3][1]).attr("title", imglist[3][0]);
+        $("#a4").attr("href", imglist[4][2]);
+        $("#img4").attr("src", imglist[4][1]).attr("title", imglist[4][0]);
+        $("#a5").attr("href", imglist[5][2]);
+        $("#img5").attr("src", imglist[5][1]).attr("title", imglist[5][0]);
+        $("#a6").attr("href", imglist[6][2]);
+        $("#img6").attr("src", imglist[6][1]).attr("title", imglist[6][0]);
+        $("#a7").attr("href", imglist[7][2]);
+        $("#img7").attr("src", imglist[7][1]).attr("title", imglist[7][0]);
+        $("#a8").attr("href", imglist[8][2]);
+        $("#img8").attr("src", imglist[8][1]).attr("title", imglist[8][0]);
+        $("#a9").attr("href", imglist[9][2]);
+        $("#img9").attr("src", imglist[9][1]).attr("title", imglist[9][0]);
+    });
+};
+
 // SCROLL BUTTONS
 if (DYN_WEB.Scroll_Div.isSupported() ) {
     DYN_WEB.Event.add( window, 'load', function() {
