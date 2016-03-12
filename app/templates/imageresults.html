@@ -45,6 +45,7 @@
   flickrsearch(q)
 })();
 </script>
+<!-- <div class="" id="img_num"></div> -->
 
 <!-- GETTY JAVASCRIPT -->
   <!-- <div id="output"></div>
@@ -64,55 +65,11 @@
       The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for source.
     </p>
   </div>
-  <div class="w3-container w3-theme-l5">
-      <div class="spouter">
-        <div class="spleft">
-          <div class="spltop">
-            <div class="spltleft">
-              <a id="a3" class="spimg" href="" ><img id="img3" src="" title="" height="210" width="210"/></a>
-            </div>
-            <div class="spltright">
-              <div class="spltrtop">
-                <a id="a8" class="spimg" href="" ><img id="img8" src="" title="" height="130" width="130"/></a>
-              </div>
-              <div class="spltrbottom">
-                <div class="spltrbleft">
-                  <div class="spltrbltop">
-                    <div class="spltrbltleft">
-                      <a id="a0" class="spimg" href="" ><img id="img0" src="" title="" height="30" width="30"/></a>
-                    </div>
-                    <div class="spltrbltright">
-                      <div class="spltrbltrtop">
-                        <a id="a1" class="spimg" href="" ><img id="img1" src="" title="" height="20" width="20"/></a>
-                      </div>
-                      <div class="spltrbltrbottom">
-                        <div class="spltrbltrbleft">
-                          <a id="a5" class="spimg" href="" ><img id="img5" src="" title="" height="10" width="10"/></a>
-                        </div>
-                        <div class="spltrbltrbright">
-                          <a id="a6" class="spimg" href="" ><img id="img6" src="" title="" height="10" width="10"/></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="spltrblbottom">
-                    <a id="a7" class="spimg" href="" ><img id="img7" src="" title="" height="50" width="50"/></a>
-                  </div>
-                </div>
-                <div class="spltrbright">
-                  <a id="a2" class="spimg" href="" ><img id="img2" src="" title="" height="80" width="80"/></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="splbottom">
-            <a id="a9" class="spimg" href="" ><img id="img9" src="" title="" height="340" width="340"/></a>
-          </div>
-        </div>
-        <div class="spright">
-          <a id="a4" class="spimg" href="" ><img id="img4" src="" title="" height="550" width="550"/></a>
-        </div>
-      </div>
+  <div class="w3-container w3-theme-l5" id="img_spiral_div">
+    <!-- JAVASCRIPT PUTS SPIRAL HERE -->
+  </div>
+  <div class="w3-container w3-theme-l5 poetry">
+    <div class="img_empty"></div>
   </div>
 </div> <!-- end spiral -->
 
@@ -130,15 +87,43 @@
   <div class="w3-container w3-theme-l5 poetry">
     <!-- title, img, link -->
     <div class="w3-row">
-      {% for img in images_imgs %}
+      <!-- {% for img in images_imgs %}
         <div class="w3-col s12 m6 l3 w3-padding">
           <a href="{{ img[2] }}">
             <img src="{{ img[1] }}" style="width:100%">
           </a>
         </div>
-      {% endfor %}
+      {% endfor %} -->
     </div>
+    <div class="img_empty"></div>
   </div>
+
+
+  <!-- <div class="poetry w3-container w3-theme-l5">
+    {% if (lol|length) != 0 %}
+      {% for n in range(1, lol|length + 1) %}
+        {% set wid = ['wn', n|string]|join %}
+        {% set lid = ['lyr', n|string]|join %}
+        {% set sid = ['scrollLinks', n|string]|join %}
+        {% set aid = lol[n-1] %}
+        <div id="poems">
+          <div id="{{wid}}" class="wn">
+            <div id="{{lid}}" class="lyr">
+              {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}" checked><input class="inlink" type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading();"></input></form> {{ sens[1][2] }}</span>{% endfor %}
+            </div>
+          </div>
+          <div id="{{sid}}" class="scrollLinks"></div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="w3-center">Not enough results found.</div>
+    {% endif %}
+  </div> -->
+
+
+
+
+
 
 </div> <!-- end list -->
 

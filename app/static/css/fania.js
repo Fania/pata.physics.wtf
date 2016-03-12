@@ -1,7 +1,14 @@
 
 //FLICKR
+
+// <script>(function(){
+//   var q = $('#davequery').data();
+//   flickrsearch(q)
+// })();
+// </script>
+
 function flickrsearch(query){
-  console.log(query.query);
+  // console.log(query.query);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
     {
         tags: query.query,
@@ -14,26 +21,84 @@ function flickrsearch(query){
             imglist.push([item.title, item.media.m, item.link]);
             if ( i === 9 ) return false;
         });
-        $("#a0").attr("href", imglist[0][2]);
-        $("#img0").attr("src", imglist[0][1]).attr("title", imglist[0][0]);
-        $("#a1").attr("href", imglist[1][2]);
-        $("#img1").attr("src", imglist[1][1]).attr("title", imglist[1][0]);
-        $("#a2").attr("href", imglist[2][2]);
-        $("#img2").attr("src", imglist[2][1]).attr("title", imglist[2][0]);
-        $("#a3").attr("href", imglist[3][2]);
-        $("#img3").attr("src", imglist[3][1]).attr("title", imglist[3][0]);
-        $("#a4").attr("href", imglist[4][2]);
-        $("#img4").attr("src", imglist[4][1]).attr("title", imglist[4][0]);
-        $("#a5").attr("href", imglist[5][2]);
-        $("#img5").attr("src", imglist[5][1]).attr("title", imglist[5][0]);
-        $("#a6").attr("href", imglist[6][2]);
-        $("#img6").attr("src", imglist[6][1]).attr("title", imglist[6][0]);
-        $("#a7").attr("href", imglist[7][2]);
-        $("#img7").attr("src", imglist[7][1]).attr("title", imglist[7][0]);
-        $("#a8").attr("href", imglist[8][2]);
-        $("#img8").attr("src", imglist[8][1]).attr("title", imglist[8][0]);
-        $("#a9").attr("href", imglist[9][2]);
-        $("#img9").attr("src", imglist[9][1]).attr("title", imglist[9][0]);
+        // console.log(imglist.length);
+        // $('#img_num').innerHTML = '<p>' + imglist.length + '</p>';
+        // document.getElementById('img_num').innerHTML = 'hello';
+        if (imglist.length === 10){
+          document.getElementById('img_spiral_div').innerHTML = ' \
+          <div class="spouter"> \
+            <div class="spleft"> \
+              <div class="spltop"> \
+                <div class="spltleft"> \
+                  <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+'" height="210" width="210"/></a> \
+                </div> \
+                <div class="spltright"> \
+                  <div class="spltrtop"> \
+                    <a id="a8" class="spimg" href="'+imglist[8][2]+'" ><img id="img8" src="'+imglist[8][1]+'" title="'+imglist[8][0]+'" height="130" width="130"/></a> \
+                  </div> \
+                  <div class="spltrbottom"> \
+                    <div class="spltrbleft"> \
+                      <div class="spltrbltop"> \
+                        <div class="spltrbltleft"> \
+                          <a id="a0" class="spimg" href="'+imglist[0][2]+'" ><img id="img0" src="'+imglist[0][1]+'" title="'+imglist[0][0]+'" height="30" width="30"/></a> \
+                        </div> \
+                        <div class="spltrbltright"> \
+                          <div class="spltrbltrtop"> \
+                            <a id="a1" class="spimg" href="'+imglist[1][2]+'" ><img id="img1" src="'+imglist[1][1]+'" title="'+imglist[1][0]+'" height="20" width="20"/></a> \
+                          </div> \
+                          <div class="spltrbltrbottom"> \
+                            <div class="spltrbltrbleft"> \
+                              <a id="a5" class="spimg" href="'+imglist[5][2]+'" ><img id="img5" src="'+imglist[5][1]+'" title="'+imglist[5][0]+'" height="10" width="10"/></a> \
+                            </div> \
+                            <div class="spltrbltrbright"> \
+                              <a id="a6" class="spimg" href="'+imglist[6][2]+'" ><img id="img6" src="'+imglist[6][1]+'" title="'+imglist[6][0]+'" height="10" width="10"/></a> \
+                            </div> \
+                          </div> \
+                        </div> \
+                      </div> \
+                      <div class="spltrblbottom"> \
+                        <a id="a7" class="spimg" href="'+imglist[7][2]+'" ><img id="img7" src="'+imglist[7][1]+'" title="'+imglist[7][0]+'" height="50" width="50"/></a> \
+                      </div> \
+                    </div> \
+                    <div class="spltrbright"> \
+                      <a id="a2" class="spimg" href="'+imglist[2][2]+'" ><img id="img2" src="'+imglist[2][1]+'" title="'+imglist[2][0]+'" height="80" width="80"/></a> \
+                    </div> \
+                  </div> \
+                </div> \
+              </div> \
+              <div class="splbottom"> \
+                <a id="a9" class="spimg" href="'+imglist[9][2]+'" ><img id="img9" src="'+imglist[9][1]+'" title="'+imglist[9][0]+'" height="340" width="340"/></a> \
+              </div> \
+            </div> \
+            <div class="spright"> \
+              <a id="a4" class="spimg" href="'+imglist[4][2]+'" ><img id="img4" src="'+imglist[4][1]+'" title="'+imglist[4][0]+'" height="550" width="550"/></a> \
+            </div> \
+          </div> \
+          ';
+          // $("#a0").attr("href", imglist[0][2]);
+          // $("#img0").attr("src", imglist[0][1]).attr("title", imglist[0][0]);
+          // $("#a1").attr("href", imglist[1][2]);
+          // $("#img1").attr("src", imglist[1][1]).attr("title", imglist[1][0]);
+          // $("#a2").attr("href", imglist[2][2]);
+          // $("#img2").attr("src", imglist[2][1]).attr("title", imglist[2][0]);
+          // $("#a3").attr("href", imglist[3][2]);
+          // $("#img3").attr("src", imglist[3][1]).attr("title", imglist[3][0]);
+          // $("#a4").attr("href", imglist[4][2]);
+          // $("#img4").attr("src", imglist[4][1]).attr("title", imglist[4][0]);
+          // $("#a5").attr("href", imglist[5][2]);
+          // $("#img5").attr("src", imglist[5][1]).attr("title", imglist[5][0]);
+          // $("#a6").attr("href", imglist[6][2]);
+          // $("#img6").attr("src", imglist[6][1]).attr("title", imglist[6][0]);
+          // $("#a7").attr("href", imglist[7][2]);
+          // $("#img7").attr("src", imglist[7][1]).attr("title", imglist[7][0]);
+          // $("#a8").attr("href", imglist[8][2]);
+          // $("#img8").attr("src", imglist[8][1]).attr("title", imglist[8][0]);
+          // $("#a9").attr("href", imglist[9][2]);
+          // $("#img9").attr("src", imglist[9][1]).attr("title", imglist[9][0]);
+        }
+        else{
+          $('.img_empty').wrap("<div>Not enough results found.</div>");
+        }
     });
 };
 
