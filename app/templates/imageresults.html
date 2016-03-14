@@ -65,11 +65,9 @@
       The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for source.
     </p>
   </div>
-  <div class="w3-container w3-theme-l5" id="img_spiral_div">
-    <!-- JAVASCRIPT PUTS SPIRAL HERE -->
-  </div>
   <div class="w3-container w3-theme-l5 poetry">
-    <div class="img_empty"></div>
+    <div class="img_empty" id="img_spiral_div"></div>
+      <!-- Javascript puts spiral code here -->
   </div>
 </div> <!-- end spiral -->
 
@@ -86,7 +84,7 @@
 
   <div class="w3-container w3-theme-l5 poetry">
     <!-- title, img, link -->
-    <div class="w3-row">
+    <div class="w3-row" id="img_list_div">
       <!-- {% for img in images_imgs %}
         <div class="w3-col s12 m6 l3 w3-padding">
           <a href="{{ img[2] }}">

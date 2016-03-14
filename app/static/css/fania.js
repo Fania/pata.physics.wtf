@@ -25,7 +25,7 @@ function flickrsearch(query){
         // $('#img_num').innerHTML = '<p>' + imglist.length + '</p>';
         // document.getElementById('img_num').innerHTML = 'hello';
         if (imglist.length === 10){
-          document.getElementById('img_spiral_div').innerHTML = ' \
+          var spiral_code = ' \
           <div class="spouter"> \
             <div class="spleft"> \
               <div class="spltop"> \
@@ -75,26 +75,21 @@ function flickrsearch(query){
             </div> \
           </div> \
           ';
-          // $("#a0").attr("href", imglist[0][2]);
-          // $("#img0").attr("src", imglist[0][1]).attr("title", imglist[0][0]);
-          // $("#a1").attr("href", imglist[1][2]);
-          // $("#img1").attr("src", imglist[1][1]).attr("title", imglist[1][0]);
-          // $("#a2").attr("href", imglist[2][2]);
-          // $("#img2").attr("src", imglist[2][1]).attr("title", imglist[2][0]);
-          // $("#a3").attr("href", imglist[3][2]);
-          // $("#img3").attr("src", imglist[3][1]).attr("title", imglist[3][0]);
-          // $("#a4").attr("href", imglist[4][2]);
-          // $("#img4").attr("src", imglist[4][1]).attr("title", imglist[4][0]);
-          // $("#a5").attr("href", imglist[5][2]);
-          // $("#img5").attr("src", imglist[5][1]).attr("title", imglist[5][0]);
-          // $("#a6").attr("href", imglist[6][2]);
-          // $("#img6").attr("src", imglist[6][1]).attr("title", imglist[6][0]);
-          // $("#a7").attr("href", imglist[7][2]);
-          // $("#img7").attr("src", imglist[7][1]).attr("title", imglist[7][0]);
-          // $("#a8").attr("href", imglist[8][2]);
-          // $("#img8").attr("src", imglist[8][1]).attr("title", imglist[8][0]);
-          // $("#a9").attr("href", imglist[9][2]);
-          // $("#img9").attr("src", imglist[9][1]).attr("title", imglist[9][0]);
+          var list_code = [];
+          for (i in imglist) {
+            var img = ' \
+              <div class="w3-col s12 m6 l3 w3-padding"> \
+                <a href="'+imglist[i][2]+'"> \
+                  <img src="'+imglist[i][1]+'" \
+                  title="'+imglist[i][0]+'" style="width:100%"> \
+                </a> \
+              </div> \
+            ';
+            list_code.push(img);
+          }
+          // console.log(spiral_code);
+          $('#img_spiral_div').html(spiral_code);
+          $('#img_list_div').html(list_code);
         }
         else{
           $('.img_empty').wrap("<div>Not enough results found.</div>");
