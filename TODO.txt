@@ -47,6 +47,8 @@
 - [X] EMAIL HARDCODED SHIT
 - [ ] restart pata.fania.eu
 - [ ] WEB SEARCH?
+- [ ] flickr javascript is running always, not just for the flickr function?
+- [ ] re-enable corpora in textsurfer!!!!!
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

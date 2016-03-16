@@ -1,29 +1,26 @@
 
-//FLICKR
+// GETTY
+function gettysearch(query){
 
-// <script>(function(){
-//   var q = $('#davequery').data();
-//   flickrsearch(q)
-// })();
-// </script>
+  var appendApiKeyHeader = function( xhr ) {
+    xhr.setRequestHeader('Api-Key', '992thepbk9a25nu7sefeqncz')
+  }
+  var searchRequest = {
+    "phrase": query,
+    "page_size": 10,
+  }
 
-function flickrsearch(query){
-  // console.log(query.query);
-    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-    {
-        tags: query.query,
-        tagmode: "all", // "all" = multiple comma-separated tags - needs initial input then will accept blank ("any" shows images with no tags if no initial input)
-        format: "json"
-    },
-    function(data) {
+  function GetSearchResults(callback) {
+    $.ajax({
+      type: "GET",
+      beforeSend: appendApiKeyHeader,
+      url: "https://api.gettyimages.com/v3/search/images/creative",
+      data: searchRequest})
+      .success(function (data, textStatus, jqXHR) {
         var imglist = []
-        $.each(data.items, function(i,item){
-            imglist.push([item.title, item.media.m, item.link]);
-            if ( i === 9 ) return false;
+        $.each(data.images, function(i,item){
+          imglist.push([item.title, item.display_sizes[0].uri, item.referral_destination.uri]);
         });
-        // console.log(imglist.length);
-        // $('#img_num').innerHTML = '<p>' + imglist.length + '</p>';
-        // document.getElementById('img_num').innerHTML = 'hello';
         if (imglist.length === 10){
           var spiral_code = ' \
           <div class="spouter"> \
@@ -87,15 +84,26 @@ function flickrsearch(query){
             ';
             list_code.push(img);
           }
-          // console.log(spiral_code);
           $('#img_spiral_div').html(spiral_code);
           $('#img_list_div').html(list_code);
         }
         else{
           $('.img_empty').wrap("<div>Not enough results found.</div>");
         }
-    });
-};
+      }) // end of success
+      .fail(function (data, err) {
+        console.log('error');
+      }); // end of fail
+  }
+  GetSearchResults();
+}; // end of gettysearch
+
+
+/*
+// FLICKR
+
+*/
+
 
 // SCROLL BUTTONS
 if (DYN_WEB.Scroll_Div.isSupported() ) {
