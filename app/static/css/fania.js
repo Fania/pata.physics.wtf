@@ -19,7 +19,7 @@ function gettysearch(query){
       .success(function (data, textStatus, jqXHR) {
         var imglist = []
         $.each(data.images, function(i,item){
-          imglist.push([item.title, item.display_sizes[0].uri, item.referral_destination.uri]);
+          imglist.push([item.title, item.display_sizes[0].uri, ""]);
         });
         if (imglist.length === 10){
           var spiral_code = ' \
@@ -92,7 +92,7 @@ function gettysearch(query){
         }
       }) // end of success
       .fail(function (data, err) {
-        console.log('error');
+        console.log('API error');
       }); // end of fail
   }
   GetSearchResults();
