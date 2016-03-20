@@ -38,10 +38,10 @@
 </div>
 
 <!-- JAVASCRIPT -->
-<meta id="davequery" data-query="{{ query }}">
+<meta id="iquery" data-query="{{ query }}">
 <meta id="ichoice" data-choice="{{ choice }}">
 <script>(function(){
-  var q = $('#davequery').data();
+  var q = $('#iquery').data();
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
   function checkradio(){
@@ -52,6 +52,9 @@
   }
   if (c.choice === 'getty'){
     gettysearch(q.query);
+  }
+  if (c.choice === 'bing'){
+    bingsearch(q.query);
   }
   checkradio();
 })();

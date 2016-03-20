@@ -49,6 +49,7 @@
 - [ ] WEB SEARCH?
 - [X] flickr javascript is running always, not just for the flickr function?
 - [ ] re-enable corpora in textsurfer!!!!!
+- [ ] flickr not using api-key?
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

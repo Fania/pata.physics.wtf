@@ -22,7 +22,7 @@ import itertools
 
 # BING IMAGE SEARCH API
 # username fania@web.de pw = key
-# bing_key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
+# bing_key = 'UC5GBf1nozBOxJImxv9HS9Qb1aNzXuWDCPDy5D/4NlY='
 
 # GETTY API
 # GET  https://api.gettyimages.com/v3/search/
@@ -79,7 +79,7 @@ def getimages(query, choice):
 def get_Bing(words):
     out = []
     trans = ''
-    bing_key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
+    bing_key = 'UC5GBf1nozBOxJImxv9HS9Qb1aNzXuWDCPDy5D/4NlY='
     base = "https://api.datamarket.azure.com/Bing/Search/"
     params = "Image?$format=json&Query='"
     after = "'"
