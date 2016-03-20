@@ -183,6 +183,10 @@ function gettysearch(query){
 }; // end of gettysearch
 
 
+//
+// function
+
+
 // SCROLL BUTTONS
 if (DYN_WEB.Scroll_Div.isSupported() ) {
     DYN_WEB.Event.add( window, 'load', function() {

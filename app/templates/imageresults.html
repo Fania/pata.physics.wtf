@@ -8,10 +8,10 @@
 
 <form class="w3-container" action="../imageresults" method="post">
   <p class="w3-center">
-    <input class="w3-radio" type="radio" name="img_choice" value="flickr" checked><label class="w3-validate">Flickr</label>
-    <input class="w3-radio" type="radio" name="img_choice" value="getty"><label class="w3-validate">Getty</label>
-    <input class="w3-radio" type="radio" name="img_choice" value="bing"><label class="w3-validate">Bing</label>
-    <input class="w3-radio" type="radio" name="img_choice" value="google"><label class="w3-validate">Google</label>
+    <input id="flickr" class="w3-radio" type="radio" name="img_choice" value="flickr" checked><label class="w3-validate">Flickr</label>
+    <input id="getty" class="w3-radio" type="radio" name="img_choice" value="getty"><label class="w3-validate">Getty</label>
+    <input id="bing" class="w3-radio" type="radio" name="img_choice" value="bing"><label class="w3-validate">Bing</label>
+    <input id="google" class="w3-radio" type="radio" name="img_choice" value="google"><label class="w3-validate">Google</label>
   </p>
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
@@ -37,28 +37,25 @@
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>
 </div>
 
-
-<!-- FLICKR JAVASCRIPT -->
+<!-- JAVASCRIPT -->
 <meta id="davequery" data-query="{{ query }}">
 <meta id="ichoice" data-choice="{{ choice }}">
 <script>(function(){
   var q = $('#davequery').data();
   var c = $('#ichoice').data();
-  // console.log(c.choice);
+  var ch = document.getElementById(c.choice);
+  function checkradio(){
+    ch.checked = true;
+  }
   if (c.choice === 'flickr'){
     flickrsearch(q.query);
   }
   if (c.choice === 'getty'){
     gettysearch(q.query);
   }
+  checkradio();
 })();
 </script>
-<!-- <div class="" id="img_num"></div> -->
-
-<!-- GETTY JAVASCRIPT -->
-  <!-- <div id="output"></div>
-  <script>GetSearchResults("Hello Kitty")</script> -->
-
 
 <!-- TABS -->
 <div class="w3-container tab_container w3-padding-0">
@@ -104,10 +101,5 @@
 </div> <!-- end tabs -->
 
 </article>
-
-<script>
-  var img_choice = "{{ choice }}";
-  $(img_choice).checked = true;
-</script>
 
 {% endblock %}

@@ -5,7 +5,7 @@
 - [ ] clean css
 - [ ] error pages stack trace show?
 - [ ] add more pataphysical random text to the page
-- [ ] fix unicode errors all for all I/O
+- [X] fix unicode errors all for all I/O
 - [ ] assign a function to each error button
 - [ ] go over known bugs again before uploading
 - [ ] for image search: add single word examples like 'tree'
@@ -47,7 +47,7 @@
 - [X] EMAIL HARDCODED SHIT
 - [ ] restart pata.fania.eu
 - [ ] WEB SEARCH?
-- [ ] flickr javascript is running always, not just for the flickr function?
+- [X] flickr javascript is running always, not just for the flickr function?
 - [ ] re-enable corpora in textsurfer!!!!!
 
 
