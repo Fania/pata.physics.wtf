@@ -183,34 +183,19 @@ function gettysearch(query){
 }; // end of gettysearch
 
 // BING
-// https://api.datamarket.azure.com/Bing/Search/Image?Query=%27kittens%27&$top=10&$format=json
-// enter key in password field but leave user empty
-
 function bingsearch(query){
-  // var key = ":UC5GBf1nozBOxJImxv9HS9Qb1aNzXuWDCPDy5D/4NlY=";
-  // base64 encoded:
-  // OlVDNUdCZjFub3pCT3hKSW14djlIUzlRYjFhTnpYdVdEQ1BEeTVELzRObFk9
-  // var enkey = btoa(key);
-  // console.log(enkey);
-  // console.log('OlVDNUdCZjFub3pCT3hKSW14djlIUzlRYjFhTnpYdVdEQ1BEeTVELzRObFk9');
   var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
   var myurl2 = "Query=" + "'" + query + "'" + "&$top=10&$format=json";
   var furl = myurl1 + myurl2;
-  // console.log(furl);
   function GetSearchResults() {
-    // console.log('inside GetSearchResults function');
     $.ajax({
       method: "post",
       url: furl,
       headers: {'Authorization': 'Basic OlVDNUdCZjFub3pCT3hKSW14djlIUzlRYjFhTnpYdVdEQ1BEeTVELzRObFk9'},
       success: function (data) {
-        // console.log('success');
         var imglist = []
         $.each(data.d.results, function(i,item){
-          // console.log('imglist inside start');
           imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
-          // console.log('imglist after inside');
-          // console.log(imglist);
         });
         if (imglist.length === 10){
           var spiral_code = ' \
@@ -283,7 +268,6 @@ function bingsearch(query){
         } // end else
       }, // end of success
       failure: function (err) {
-        // console.log(data);
         console.log('API error');
       } // end of fail
     });
@@ -291,49 +275,47 @@ function bingsearch(query){
   GetSearchResults();
 }; // end of bingsearch
 
-///////////////////////////////////////////////////////////////////
-
-
-
 /////////////////////////////////////////////////////////////////////
 
 // SCROLL BUTTONS
-if (DYN_WEB.Scroll_Div.isSupported() ) {
-    DYN_WEB.Event.add( window, 'load', function() {
-		// wndo args(id of scroll area div, id of content div)
-    // addGlideControls args(id, axis('v'|'h'), distance, duration)
-    var wndo1 = new DYN_WEB.Scroll_Div('wn1', 'lyr1');
-		wndo1.addGlideControls('scrollLinks1', 'h', 635, 300);
-    var wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
-    wndo2.addGlideControls('scrollLinks2', 'h', 635, 300);
-    var wndo3 = new DYN_WEB.Scroll_Div('wn3', 'lyr3');
-    wndo3.addGlideControls('scrollLinks3', 'h', 635, 300);
-    var wndo4 = new DYN_WEB.Scroll_Div('wn4', 'lyr4');
-    wndo4.addGlideControls('scrollLinks4', 'h', 635, 300);
-    var wndo5 = new DYN_WEB.Scroll_Div('wn5', 'lyr5');
-    wndo5.addGlideControls('scrollLinks5', 'h', 635, 300);
-    var wndo6 = new DYN_WEB.Scroll_Div('wn6', 'lyr6');
-    wndo6.addGlideControls('scrollLinks6', 'h', 635, 300);
-    var wndo7 = new DYN_WEB.Scroll_Div('wn7', 'lyr7');
-    wndo7.addGlideControls('scrollLinks7', 'h', 635, 300);
-    var wndo8 = new DYN_WEB.Scroll_Div('wn8', 'lyr8');
-    wndo8.addGlideControls('scrollLinks8', 'h', 635, 300);
-    var wndo9 = new DYN_WEB.Scroll_Div('wn9', 'lyr9');
-    wndo9.addGlideControls('scrollLinks9', 'h', 635, 300);
-    var wndo10 = new DYN_WEB.Scroll_Div('wn10', 'lyr10');
-    wndo10.addGlideControls('scrollLinks10', 'h', 635, 300);
-    var wndo11 = new DYN_WEB.Scroll_Div('wn11', 'lyr11');
-    wndo11.addGlideControls('scrollLinks11', 'h', 635, 300);
-    var wndo12 = new DYN_WEB.Scroll_Div('wn12', 'lyr12');
-    wndo12.addGlideControls('scrollLinks12', 'h', 635, 300);
-    var wndo13 = new DYN_WEB.Scroll_Div('wn13', 'lyr13');
-    wndo13.addGlideControls('scrollLinks13', 'h', 635, 300);
-    var wndo14 = new DYN_WEB.Scroll_Div('wn14', 'lyr14');
-    wndo14.addGlideControls('scrollLinks14', 'h', 635, 300);
-	});
-}else{
-  alert("no DYN_WEB");
-}
+if(window.location.pathname === '/textresults') {
+  if (DYN_WEB.Scroll_Div.isSupported() ) {
+      DYN_WEB.Event.add( window, 'load', function() {
+  		// wndo args(id of scroll area div, id of content div)
+      // addGlideControls args(id, axis('v'|'h'), distance, duration)
+      var wndo1 = new DYN_WEB.Scroll_Div('wn1', 'lyr1');
+  		wndo1.addGlideControls('scrollLinks1', 'h', 635, 300);
+      var wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
+      wndo2.addGlideControls('scrollLinks2', 'h', 635, 300);
+      var wndo3 = new DYN_WEB.Scroll_Div('wn3', 'lyr3');
+      wndo3.addGlideControls('scrollLinks3', 'h', 635, 300);
+      var wndo4 = new DYN_WEB.Scroll_Div('wn4', 'lyr4');
+      wndo4.addGlideControls('scrollLinks4', 'h', 635, 300);
+      var wndo5 = new DYN_WEB.Scroll_Div('wn5', 'lyr5');
+      wndo5.addGlideControls('scrollLinks5', 'h', 635, 300);
+      var wndo6 = new DYN_WEB.Scroll_Div('wn6', 'lyr6');
+      wndo6.addGlideControls('scrollLinks6', 'h', 635, 300);
+      var wndo7 = new DYN_WEB.Scroll_Div('wn7', 'lyr7');
+      wndo7.addGlideControls('scrollLinks7', 'h', 635, 300);
+      var wndo8 = new DYN_WEB.Scroll_Div('wn8', 'lyr8');
+      wndo8.addGlideControls('scrollLinks8', 'h', 635, 300);
+      var wndo9 = new DYN_WEB.Scroll_Div('wn9', 'lyr9');
+      wndo9.addGlideControls('scrollLinks9', 'h', 635, 300);
+      var wndo10 = new DYN_WEB.Scroll_Div('wn10', 'lyr10');
+      wndo10.addGlideControls('scrollLinks10', 'h', 635, 300);
+      var wndo11 = new DYN_WEB.Scroll_Div('wn11', 'lyr11');
+      wndo11.addGlideControls('scrollLinks11', 'h', 635, 300);
+      var wndo12 = new DYN_WEB.Scroll_Div('wn12', 'lyr12');
+      wndo12.addGlideControls('scrollLinks12', 'h', 635, 300);
+      var wndo13 = new DYN_WEB.Scroll_Div('wn13', 'lyr13');
+      wndo13.addGlideControls('scrollLinks13', 'h', 635, 300);
+      var wndo14 = new DYN_WEB.Scroll_Div('wn14', 'lyr14');
+      wndo14.addGlideControls('scrollLinks14', 'h', 635, 300);
+  	});
+  }else{
+    alert("no DYN_WEB");
+  }
+} // end scrolldiv poems
 
 // LOADING ICON
 function loading() {

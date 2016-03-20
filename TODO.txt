@@ -50,6 +50,9 @@
 - [X] flickr javascript is running always, not just for the flickr function?
 - [ ] re-enable corpora in textsurfer!!!!!
 - [ ] flickr not using api-key?
+- [ ] Instagram
+- [ ] currently only using translations for image search
+- [ ] check lemma names in syzygy function?
 
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
