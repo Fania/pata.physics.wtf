@@ -3,6 +3,9 @@
 
 Fania Raczinski + De Montfort University + 2014
 
+![](screenshot.png)
+
+
 ## HOW TO
 
 - Activate ```workon newpatav```
