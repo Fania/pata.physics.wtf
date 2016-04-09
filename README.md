@@ -3,7 +3,7 @@
 
 Fania Raczinski + De Montfort University + 2014
 
-![](screenshot.png)
+![screenshot](https://raw.githubusercontent.com/fania/pata.physics.wtf/master/screenshot.png)
 
 
 ## HOW TO
