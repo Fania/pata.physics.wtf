@@ -3,6 +3,17 @@
 
 Fania Raczinski + De Montfort University + 2015
 
+
+## OVH VPS SETUP
+Test for errors:
+
+```nginx -t```
+
+```service nginx reload```
+
+
+
+
 ## HOW TO AT HOME
 
 - Activate venv ```workon newpatav``` (if virtualenvwrapper is installed)

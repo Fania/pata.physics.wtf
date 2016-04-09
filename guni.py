@@ -143,7 +143,7 @@ tmp_upload_dir = None
 #       A string of "debug", "info", "warning", "error", "critical"
 #
 
-debug = False
+debug = True
 errorlog = 'logs/errors.log'
 loglevel = 'info'
 lolfile = 'logs/debug.log'
