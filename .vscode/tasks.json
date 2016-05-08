@@ -1,0 +1,45 @@
+{
+    // See http://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+	// pdflatex --file-line-error -shell-escape main
+    "version": "0.1.0",
+    "command": "cmd",
+    "isShellCommand": true,
+    // "showOutput": "silent",
+    // "args": [
+    //     "/c"
+    // ],
+    "tasks": [
+        {
+            "taskName": "venv",
+            "suppressTaskName": true,
+			"args": ["C:\\Users\\Fania\\Documents\\GitHub\\pata.physics.wtf\\venv\\Scripts\\activate"],
+            // "args": ["venv\\Scripts\\activate"],
+            "showOutput": "always",
+			"isBuildCommand": true,
+            "problemMatcher": "$msCompile"
+            // "problemMatcher": {
+            //     "fileLocation": ["relative", "${workspaceRoot}"],
+            //     "pattern": {
+            //         "regexp": "^(.*)+s$",
+            //         "message": 1
+            //     }
+            // }
+        },
+        {
+            "taskName": "run",
+            "suppressTaskName": true,
+            // "args" : ["gunicorn", "-c", "guni.py", "live:app"],
+            "args" : ["C:\\python27\\python.exe", "live.py"],
+            "showOutput": "always",
+            "problemMatcher": "$msCompile"
+            // "problemMatcher": {
+            //     "fileLocation": ["relative", "${workspaceRoot}"],
+            //     "pattern": {
+            //         "regexp": "^(.*)+s$",
+            //         "message": 1
+            //     }
+            // }
+        }
+    ]
+}

@@ -2,6 +2,25 @@
 
 Debian Jessie
 
+## How to run pata
+
+pata files are in (as root user) "/home/pata"
+config file in "/etc/nginx/sites-available/"
+OVH IP "92.222.73.21"
+
+1. putty or ssh into ovh server
+2. ```screen```
+3. ```cd home/pata```
+4. ```. venv/bin/activate```
+5. ```gunicorn -c guni.py live:app```
+
+
+
+
+
+
+===
+
 [Guide 1](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04) (Skip Upstart part)
 [Guide 2](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04)
 

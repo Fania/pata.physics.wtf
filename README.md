@@ -4,6 +4,11 @@
 Fania Raczinski + De Montfort University + 2015
 
 
+![screenshot](https://raw.githubusercontent.com/fania/pata.physics.wtf/master/screenshot.png)
+
+
+## HOW TO
+
 ## OVH VPS SETUP
 Test for errors:
 
