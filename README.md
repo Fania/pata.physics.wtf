@@ -19,6 +19,8 @@ Test for errors:
 
 
 
+git log --graph --full-history --all --date=format:"%a %d %b %Y" --pretty=format:"%h%x20%x20%ad%x09%d%x20%s" > prettyprint.txt
+
 ## HOW TO AT HOME
 
 - Activate venv ```workon newpatav``` (if virtualenvwrapper is installed)
