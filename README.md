@@ -2,12 +2,37 @@
 
 Fania Raczinski + De Montfort University + 2015
 
+
 ![screenshot](https://raw.githubusercontent.com/fania/pata.physics.wtf/master/screenshot.png)
+
+## OVH VPS SETUP
+
+IP: 92.222.73.21
+
+Test for errors:
+
+```nginx -t```
+```service nginx reload```
+
+Run on Ubuntu:
+
+```screen```
+```. venv/bin/activate```
+```gunicorn -c guni.py live:app```
+```ctrl+a+d```
+
+
+---
+
+git log --graph --full-history --all --date=format:"%a %d %b %Y" --pretty=format:"%h%x20%x20%ad%x09%d%x20%s" > prettyprint.txt
 
 ## HOW TO AT HOME
 
-- Activate ```workon newpatav```
-- Start project ```python run.py```
+- Activate venv ```workon newpatav``` (if virtualenvwrapper is installed)
+- Win activate: ```venv\scripts\activate```
+- unix activate: ```. venv/bin/activate```
+- Start dev project ```python dev.py```
+- Start live project ```python live.py``` (if avalailable)
 - Stop project ```Ctrl + c```
 - Deactivate ```deactivate```
 

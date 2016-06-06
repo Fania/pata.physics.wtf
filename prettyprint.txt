@@ -1,0 +1,217 @@
+*   10f61f9  Sun 08 May 2016	 (HEAD -> api, origin/api) Merge remote-tracking branch 'refs/remotes/origin/master' into api
+|\  
+| * aa58f79  Sat 09 Apr 2016	 (origin/master, origin/HEAD, master) screenshot
+| * bea5474  Sat 09 Apr 2016	 added screenshot
+| * 7072f33  Sat 09 Apr 2016	 (tag: v2.0) gitignore
+* | 0e53ee6  Sat 09 Apr 2016	 Working on new server stuff
+* | a082595  Tue 05 Apr 2016	 Update to Todo file
+* | 6fbbd49  Sun 20 Mar 2016	 pataphysicalisation work in progress
+* | 80412e1  Sun 20 Mar 2016	 Flickr, Getty and Bing working!
+* | 00fd2c5  Sun 20 Mar 2016	 radio buttons update properly
+* | 7e03f4b  Wed 16 Mar 2016	 Flickr OK Getty OK
+* | df847d9  Wed 16 Mar 2016	 Revert "Test revert commit"
+* | 630bf1a  Wed 16 Mar 2016	 Test revert commit
+* | 62dfc0b  Wed 16 Mar 2016	 Getty OK, Flickr NO
+* | 17cff52  Wed 16 Mar 2016	 Getty working
+* | fde271f  Wed 16 Mar 2016	 FUCK THIS SHIT
+* | 9095fa1  Mon 14 Mar 2016	 Flickr API working (spiral + list)
+* | adb55cf  Sat 12 Mar 2016	 img spiral works
+* | e64e995  Sat 12 Mar 2016	 work in progress
+* | fa0e818  Fri 11 Mar 2016	 (origin/ImgVid, ImgVid) Pre branch img vid
+* | 83032fd  Fri 11 Mar 2016	 Fixed textfield search default text problem
+* | e6609fe  Thu 10 Mar 2016	 Emails fixed
+* | 9fecc8e  Thu 10 Mar 2016	 Fixed javascript error problem
+* | 1ce1893  Wed 09 Mar 2016	 Work in progress
+* | 2999784  Tue 08 Mar 2016	 Radio button styles
+* | 844817d  Tue 08 Mar 2016	 Shakespeare working
+* | f6f4e38  Tue 08 Mar 2016	 Changed setupcorpus function (unfinished)
+* | 3cfb7e2  Tue 08 Mar 2016	 Started shakespeare stuff
+* | 5e93e11  Fri 19 Feb 2016	 Added a few cheats
+* | 5daf3b7  Wed 17 Feb 2016	 surface updates
+* | e1f7c12  Tue 22 Dec 2015	 added quotes and shakespeare
+* | 44e6211  Sat 31 Oct 2015	 Stuff for thesis
+* | 9b1ec61  Wed 19 Aug 2015	 Getty works sort of
+* | 71437f6  Tue 18 Aug 2015	 Flickr and Bing work, radio buttons work
+* | 6c552aa  Wed 12 Aug 2015	 Fixed image problem but not video.
+| | * 1cbb63d  Tue 11 Aug 2015	 (origin/thesis) Update textsurfer.py
+| |/  
+|/|   
+* | 0ebff0d  Tue 11 Aug 2015	 Analytics enabled again
+* | 703f977  Tue 11 Aug 2015	 Problems solved.
+* | 74a1fae  Tue 11 Aug 2015	 About to change l_dict to dict of dict
+* | 0935b23  Mon 10 Aug 2015	 BUG FUCKER
+* | 4f7d91e  Mon 10 Aug 2015	 Turn debug off
+* | 58f0c2b  Mon 10 Aug 2015	 Button styling done
+* | 59add58  Mon 10 Aug 2015	 Email problem solved
+* |   f1b2d40  Sun 09 Aug 2015	 Merge branch 'Deploy' into thesis
+|\ \  
+| * | 435cb2d  Sun 09 Aug 2015	 Deployment works, added analytics
+| * | 8a63dc7  Sat 08 Aug 2015	 gunicorn runs locally fine.
+| * | 2861407  Sat 08 Aug 2015	 Revert 5f2c957..4026965
+| * | 4026965  Sat 08 Aug 2015	 Tests
+* | |   8f2eeab  Sat 08 Aug 2015	 Merge branch 'w3' into thesis
+|\ \ \  
+| |/ /  
+| * | 5f2c957  Sat 08 Aug 2015	 Stuff
+| * | 873153c  Fri 07 Aug 2015	 Tiny cleanup
+| * | 05d5760  Thu 06 Aug 2015	 Random Poems and Emailing works
+| * | 657126c  Wed 05 Aug 2015	 Random poems work - without links though
+| * | 3d31ea9  Wed 05 Aug 2015	 Randomise still only works once, count ok
+| * | 5f1d45b  Wed 05 Aug 2015	 Randomise poem works ONCE
+| * | c583341  Wed 05 Aug 2015	 Poem subtabs, email poems done
+| * | f1b3878  Wed 05 Aug 2015	 Hiding divs
+| * | a6939c4  Tue 04 Aug 2015	 huh?
+| * | e6b411d  Tue 04 Aug 2015	 Poem emails WORK Fuck YEAH!
+| * | 4b6b170  Tue 04 Aug 2015	 Test email
+| * | 24e356c  Tue 04 Aug 2015	 Better load icon
+| * | e6ae736  Tue 04 Aug 2015	 loading icon version 1
+| * | 51b43e2  Tue 04 Aug 2015	 Added 4th pictures
+| * | f2d8a83  Mon 03 Aug 2015	 Minor fixes
+* | |   1ddb03d  Mon 03 Aug 2015	 Merge branch 'w3' into thesis
+|\ \ \  
+| |/ /  
+| * | ca4eab3  Mon 03 Aug 2015	 Pretty good state.
+| * | 9370334  Mon 03 Aug 2015	 working on list display of images
+| * | e1f1ead  Mon 03 Aug 2015	 Stylesheets sorted and cleaned files
+* | |   9732d5b  Mon 03 Aug 2015	 Merge branch 'w3' into thesis
+|\ \ \  
+| |/ /  
+| * | f0a4c40  Sun 02 Aug 2015	 Minor errors left
+| * | 4c94b11  Sun 02 Aug 2015	 Styles ok. still some errors in vids?
+| * | 5ab4bb3  Sun 02 Aug 2015	 Videoresults work
+| * | d575762  Sun 02 Aug 2015	 Videos works and styled
+| * | 906be06  Sun 02 Aug 2015	 Starting videos
+| * | 0d29479  Sun 02 Aug 2015	 Images working with occasional error (unicode?)
+| * | 8e9f7bf  Sun 02 Aug 2015	 Http response 200
+| * | 09706d8  Sat 01 Aug 2015	 Stuff
+| * | 57ff730  Sat 01 Aug 2015	 Bing or Flickr not working yet
+| * | c85b61d  Sat 01 Aug 2015	 Prep for image results done
+| * | 052b55d  Sat 01 Aug 2015	 Starting image results
+| * | 4f08696  Sat 01 Aug 2015	 So far so good.
+| * | 1ff8370  Sat 01 Aug 2015	 good version
+| * | 50f8f00  Sat 01 Aug 2015	 About to play with poem width
+| * | ea3de12  Fri 31 Jul 2015	 Styling in progress
+| * | f69e4c9  Fri 31 Jul 2015	 Work in progresss
+| * | 3c8ae12  Fri 31 Jul 2015	 Work in progress
+| * | 616a1b3  Fri 31 Jul 2015	 style start
+|/ /  
+* | fafd254  Thu 30 Jul 2015	 Todos
+* |   0fc8807  Wed 29 Jul 2015	 Merge branch 'text' into thesis
+|\ \  
+| * | 95c2071  Wed 29 Jul 2015	 Minor spacing
+| * | 3a9fd4b  Wed 29 Jul 2015	 Rewritten syzygy function
+| * | 12afae9  Wed 29 Jul 2015	 todo update
+| * | f52186f  Wed 29 Jul 2015	 pp_sent changed based on punctuation marks
+* | |   5d69975  Wed 29 Jul 2015	 Merge branch 'text' into thesis
+|\ \ \  
+| |/ /  
+| * | a01f935  Wed 29 Jul 2015	 Todo
+| * | 489ccf5  Wed 29 Jul 2015	 Up arrows
+| * | 6b2736f  Wed 29 Jul 2015	 Title fixes, links etc
+| * | f3b874b  Wed 29 Jul 2015	 poems display for less than 14 works
+* | |   a58abe2  Wed 29 Jul 2015	 Merge branch 'poetry' into thesis
+|\ \ \  
+| |/ /  
+| * | 1654fa5  Tue 28 Jul 2015	 split poem into stanzas from correct files
+| * | 0562be7  Tue 28 Jul 2015	 Fixed counts and search clicking
+| * | 15940da  Tue 28 Jul 2015	 centre poems work
+| * | f9338f1  Mon 27 Jul 2015	 Style fixes
+| * | ed81657  Mon 27 Jul 2015	 Tabs done. Need style.
+| * | 28939a6  Mon 27 Jul 2015	 3 Forms working with titles
+| * | fe57ba8  Mon 27 Jul 2015	 Change in data structure all_sens
+| * | 653c6e6  Mon 27 Jul 2015	 Temp commit
+| * | 8fb6423  Sun 26 Jul 2015	 Poem design ok
+| * | 6c4f4fc  Sun 26 Jul 2015	 triplet poem working
+| * | 0ad1e63  Sun 26 Jul 2015	 3 scroll results working omg
+| * | 262c60a  Sun 26 Jul 2015	 sentence scroll clin_sens working
+| * | d900391  Sun 26 Jul 2015	 scroll text works on single list
+| * | 19b8570  Sun 26 Jul 2015	 working scroll img demo
+| * | 74cc973  Sat 25 Jul 2015	 Work in progress
+| * | 624bbc2  Sat 25 Jul 2015	 Added more files, hover title works
+* | |   8e9257f  Sat 25 Jul 2015	 Merge branch 'poetry' into thesis
+|\ \ \  
+| |/ /  
+| * | f1a627b  Sat 25 Jul 2015	 Counts done
+|/ /  
+* | 811f38a  Sat 25 Jul 2015	 Fixed origins error
+* | 112ab28  Sat 25 Jul 2015	 Got rid of empty results
+* | 95f1bc7  Sat 25 Jul 2015	 All three algorithms work
+* | eae3139  Sat 25 Jul 2015	 antinomy working
+* | 9de06b4  Sat 25 Jul 2015	 Dave and sex works again
+* | ce63862  Sat 25 Jul 2015	 Restructure of clinamen
+* | a4c3bd8  Fri 24 Jul 2015	 Cleaned up files.
+* | 4067361  Fri 24 Jul 2015	 Working mostly
+* | 9778834  Fri 24 Jul 2015	 impression works but not clear?
+* | d19a52a  Fri 24 Jul 2015	 pp_sent works but not website
+* | 1c5d945  Fri 24 Jul 2015	 complete corpus working but slow
+* | 7ac8697  Wed 22 Jul 2015	 Count works properly.
+* | 9b318e1  Wed 22 Jul 2015	 Works.
+* | 22d5e9d  Wed 22 Jul 2015	 Added to library
+* | ae77a28  Mon 20 Jul 2015	 templates loop not quite right
+* | b8ba9b7  Mon 20 Jul 2015	 Almost working. template needs fix
+* | 47b2766  Mon 20 Jul 2015	 Cleaned corpus files
+* | 71e7153  Fri 17 Jul 2015	 Library added and simple search works
+* | 95aed8a  Thu 16 Jul 2015	 Library setup Schwob
+* | a260bec  Tue 14 Jul 2015	 Do some stuff to library
+* | 9ead88b  Tue 14 Jul 2015	 Print first 10 words of each book
+* | 47a5ae3  Tue 14 Jul 2015	 Start for library
+* | c99b5ff  Wed 24 Jun 2015	 Added more printouts
+* | daf6a5d  Wed 24 Jun 2015	 Added printouts
+|/  
+* fa3ffc7  Fri 22 May 2015	 (tag: v3.0) Updated Readme for IOCT server
+* 2d51804  Sat 21 Mar 2015	 added algorithms summary
+* 81c1b12  Thu 31 Jul 2014	 pata.fania.eu
+* 7545e3e  Mon 28 Jul 2014	 Slight style change
+* b5191a7  Sun 27 Jul 2014	 Readme
+* 2b3be93  Sun 27 Jul 2014	 readme change
+* 97847d9  Sun 27 Jul 2014	 Minimally responsive now.
+* 8e1b77a  Sun 27 Jul 2014	 Updated nltk to 3.0.0b1
+* ce9b9b6  Sun 27 Jul 2014	 Added macreqs
+* 34c883a  Sun 27 Jul 2014	 About edit and WINREQS
+* 7a9432b  Sat 26 Jul 2014	 Submenu for About
+* 76ba522  Sat 26 Jul 2014	 Added autofocus for search boxes
+* c1c0f83  Sat 26 Jul 2014	 Fixed mac word net error
+* 6efe43c  Wed 16 Jul 2014	 stuff
+* 554b354  Wed 16 Jul 2014	 Changed error bug link style
+* 6aabd7b  Wed 16 Jul 2014	 Fixed typos in quotes, changed errors
+* e7f40f3  Wed 16 Jul 2014	 Added more quotes
+* 84561d7  Tue 15 Jul 2014	 Favicon, errors
+* 593b0c0  Mon 14 Jul 2014	 Quotes
+* 2915771  Sun 13 Jul 2014	 Added Icons. Style changes.
+* 7eb40d0  Sun 13 Jul 2014	 Inline links now working.
+* 9077ed2  Sun 13 Jul 2014	 So far so good. Working nicely.
+* 13112b7  Sat 12 Jul 2014	 Style for p02 and p03. Golden spiral test.
+* c911264  Sat 12 Jul 2014	 Fixed unicode problem, changes file structure.
+* 8df543b  Sat 12 Jul 2014	 Updated TODO
+* eeb9f59  Sat 12 Jul 2014	 Updated TODO
+* b1c6d68  Sat 12 Jul 2014	 Added quotes, scramble logo, jquery
+* 20bac1c  Sat 12 Jul 2014	 Removed pip build folder
+* f36a498  Sat 12 Jul 2014	 Random quotes working but word net seems bugged
+* 54d09e2  Sat 12 Jul 2014	 More style, content and structure
+* 462010b  Sat 12 Jul 2014	 p01 changes to style
+* 646c38d  Fri 11 Jul 2014	 Style
+* bf5f8bf  Fri 11 Jul 2014	 Rotating spiral :)
+* 08eff76  Thu 10 Jul 2014	 More style
+* bb3f1e5  Thu 10 Jul 2014	 Changed style and venv
+* 4190994  Wed 09 Jul 2014	 P01 working. Added style.
+* d427ff1  Wed 09 Jul 2014	 Deleted files
+*   6251eae  Wed 09 Jul 2014	 Merge branch 'master' of https://github.com/Fania/newpata
+|\  
+| * fb54978  Wed 09 Jul 2014	 proto01 sort of working
+| * 6547cc5  Wed 09 Jul 2014	 get and post working ok
+* | c9eb78b  Wed 09 Jul 2014	 Reinstalled venv
+|/  
+*   81a3eec  Tue 08 Jul 2014	 Merge branch 'master' of https://github.com/Fania/newpata
+|\  
+| * bf40b91  Tue 08 Jul 2014	 pip installed nltk, some fixes
+| * 3ced858  Tue 08 Jul 2014	 Changed files around. Multiple pages now working.
+| * 34da770  Tue 08 Jul 2014	 Added wenv for windows
+* | 5801f70  Tue 08 Jul 2014	 Few updates
+|/  
+* 809ac8c  Mon 07 Jul 2014	 Cleanup and readme changes
+* 3f06260  Mon 07 Jul 2014	 Edited readme again
+* c721b33  Mon 07 Jul 2014	 Edited readme
+* ffbdb4b  Mon 07 Jul 2014	 Edited readme
+* 8870b3d  Mon 07 Jul 2014	 Added gitignore file
+* ba1a9c2  Mon 07 Jul 2014	 Second commit
+* 244c4b3  Mon 07 Jul 2014	 First commit

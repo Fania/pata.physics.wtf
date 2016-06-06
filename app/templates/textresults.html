@@ -6,17 +6,11 @@
 
 <article class="w3-text-theme">
 
-<!-- <header class="w3-container w3-theme-l4">
-    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch
-      <i class="fa fa-hand-spock-o fa-5x"></i>
-    </h2>
-</header> -->
-
 <div class="w3-container w3-padding">
   <form class="w3-container" action="../textresults" method="post">
     <p class="w3-center">
-      <input class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
-      <input class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
+      <input id="faustroll" class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
+      <input id="shakespeare" class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
     </p>
     <div class="w3-group">
       <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
@@ -24,13 +18,6 @@
         <i class="fa fa-search"></i></button>
     </div>
   </form>
-  <!-- <form action="../textresults" method="post">
-    <div class="w3-group">
-      <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
-        <i class="fa fa-search"></i></button>
-    </div>
-  </form> -->
   <hr>
   <nav class="tabs w3-topnav w3-center w3-margin">
     <a class="active" href="#poetry_tab">Poetry</a>
@@ -40,13 +27,18 @@
   <hr>
 </div>
 
-<!-- <div class="w3-container"> -->
-  <!-- <div class="trail">
-      <i class="fa fa-caret-right"></i> {{ query }}
-      {# {% for item in s.queries %}
-          {{ query }} <strong><a href="?query={{ item }}">{{ item }}</a></strong>
-      {% endfor %} #}
-  </div> -->
+<!-- JAVASCRIPT -->
+<meta id="icorpus" data-corpus="{{ corpus }}">
+<script>
+(function(){
+  var c = $('#icorpus').data();
+  var ch = document.getElementById(c.corpus);
+  function checkradio(){
+    ch.checked = true;
+  }
+  checkradio();
+})();
+</script>
 
 <div class="w3-container w3-padding">
   <span><strong>Searched for:</strong>&nbsp;&nbsp; <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="{{ corpus }}" checked><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form></span>
@@ -299,6 +291,9 @@
     document.getElementById('random_poem').innerHTML = output;
     return false;
   }
+
+  var corpus = "{{ corpus }}";
+  document.getElementById(corpus).checked = true;
 </script>
 
 {% endblock %}

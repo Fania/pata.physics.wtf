@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from imagesurfer import getimages
+from imagesurfer import getimages, transent, pataphysicalise
 
 
 @app.route('/images')
@@ -11,20 +11,34 @@ def images():
 @app.route('/imageresults', methods=['GET', 'POST'])
 def imageresults():
 
-    query = request.form['query']
+    oldquery = request.form['query']
+    print('oldquery ', oldquery)
+    choice = request.form['img_choice']
+    print('choice ', choice)
 
-    if request.form['img_choice']:
-        choice = request.form['img_choice']
-    else:
-        choice = 'Bing'
+    trans = transent(oldquery)
+    print('trans ', trans)
+
+    pata = pataphysicalise(trans[2])
+    print('pata ', pata)
+
+    query = pata[0][0]
+    print('query ', query)
 
     if request.method == 'GET':
-        print 'imageresults get: ', query
+        print 'imageresults get: ', query, choice
     else:
-        # request was a POST
-        print 'imageresults post: ', query
+        print 'imageresults post: ', query, choice
 
-        images_imgs, translations = getimages(query, choice)
+        # images_imgs, translations = getimages(query, choice)
+        # images_len = len(images_imgs)
+
+        # Javascript Img works but only with translations
+        images_imgs, translations = [], trans
         images_len = len(images_imgs)
+
+        # Javascript with full pataphysicalisation
+        # images_imgs, translations = [], trans
+        # images_len = len(images_imgs)
 
         return render_template('imageresults.html', **locals())
