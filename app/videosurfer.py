@@ -1,79 +1,31 @@
-from flask import url_for
-from requests.auth import HTTPBasicAuth
-from microsofttranslator import Translator
-import gdata.youtube.service as yt
 import requests
-import unicodedata as ud
-import textsurfer
-
+from imagesurfer import pataphysicalise
 #############################################
 
-# PROTOTYPE 03 - VIDEO
-
-#############################################
-
-# MICROSOFT TRANSLATE
-microsoft_id = 'patalator'
-microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
-
-# BING VIDEO SEARCH
-base = 'https://api.datamarket.azure.com/Bing/Search/'
-key = 'KxnH3+uL1TGRJkGlQ5gg7Dwri6GfV121ezf27TRbvUY='
+# YOUTUBE SEARCH API
+yt_key = 'AIzaSyDPZlMpFVZUBfhD4ycjfUZzCR_mVDP59jY'
 
 
-def pataphysicalise(word):
-
-    translator = Translator(microsoft_id, microsoft_secret)
-    syzygy_words = textsurfer.syzygy(word)
-    if syzygy_words:
-        syzword = syzygy_words.pop()
-    else:
-        syzword = word
-    # Pataphysicalisation !!
-    french = translator.translate(syzword, "fr")
-    japanese = translator.translate(french, "ja")
-    patawords = translator.translate(japanese, "en")
-    translations = (french, japanese, patawords)
-    return translations
-
-
-def getvideos(word):
+def getvideos(query):
     out = []
+    words = query.split()
 
-    translations = pataphysicalise(word)
-    # translations = word
+    translations = pataphysicalise(words)
     patawords = translations[2]
 
-    # YOUTUBE
-    client = yt.YouTubeService()
-    query = yt.YouTubeVideoQuery()
-    query.vq = patawords
-    query.max_results = 10
-    query.start_index = 1
-    query.racy = 'exclude'
-    query.orderby = 'relevance'
-    query.safeSearch = 'strict'
-    query.format = '5'
+    b0 = "https://www.googleapis.com/youtube/v3/search?"
+    b1 = "&order=viewCount&part=snippet&"
+    b2 = "q=%s" % patawords
+    b3 = "&type=video&key=%s" % yt_key
+    b4 = "&maxResults=10&safeSearch=strict"
+    yturl = ''.join([b0, b1, b2, b3, b4])
 
-    feed = client.YouTubeQuery(query)
+    vids = requests.get(yturl)
 
-    for entry in feed.entry:
-        title = entry.media.title.text
-        tags = entry.media.keywords.text
-        author = entry.author
-        url = entry.GetSwfUrl()
-        thumb = entry.media.thumbnail[0].url
-        out.append((title, thumb, url))
+    for i in vids.json()['items']:
+        vidtitle = i['snippet']['title']
+        vidthumb = i['snippet']['thumbnails']['default']['url']
+        vidid = i['id']['videoId']
+        out.append((vidtitle, vidthumb, vidid))
 
-    # CHECK CODE BELOW!!!!
-    ## BING VIDEOS
-    #params = "Video?$format=json&VideoFilters='Aspect:Square'&$top=5&Query='%s'" % #patawords
-    ## &ImageFilters='Size:Small+Aspect:Square'
-    #url = base + params
-    #bing_img = requests.get(url, auth=HTTPBasicAuth(None, key))
-    #for result in bing_img.json['d']['results']:
-    #    phototitle = ud.normalize('NFKD', result['Title']).encode('ascii', 'ignore')
-    #    photothumb = result['Thumbnail']['MediaUrl']
-    #    photolink = result['SourceUrl']
-    #    out.append((phototitle, photothumb, photolink))
     return out, translations

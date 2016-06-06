@@ -1,80 +1,147 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="search_form">
-    <form action="../videoresults" method="post">
-        <input class="search_area" name="query" autofocus="autofocus" size="50"></input>
-        <input class="search_button" type="submit" value="Search"></input>
-    </form>
+
+{% include "header.html" %}
+
+<article class="w3-text-theme">
+
+<div class="w3-container w3-padding">
+  <form action="../videoresults" method="post">
+    <div class="w3-group">
+      <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
+        <i class="fa fa-search"></i></button>
+    </div>
+  </form>
+  <hr>
+  <nav class="tabs w3-topnav w3-center w3-margin">
+    <a class="active" href="#tab1">Spiral</a>
+    <a href="#tab2">List</a>
+  </nav>
+  <hr>
 </div>
 
-<div class="results">
-    <div class="resultset">
-        <p>
-            <strong>Pataphysicalisation: </strong>
-            <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}"></input></form> == 
-            <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}"></input></form> == 
-            <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}"></input></form> ==
-            <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
-            <hr>
-        </p>
-        {% if videos_vids %}
-            Videos - {{ videos_vids|length }} pataphysicalised 
-            {% if videos_vids|length == 1 %}reverberation{% else %}reverberations{% endif %} found for: <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}"></input></form>
+<div class="w3-container w3-padding">
+  <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
+  <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ query }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}" onclick="loading();"></input></form> ==
+  <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input></form>
+</div>
 
-            <div class="spouter">
-                <div class="spleft">
-                    <div class="spltop">
-                        <div class="spltleft">
-                            <iframe type="text/html" width="210" height="210" src="{{ videos_vids.3.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
-                        </div>
-                        <div class="spltright">
-                            <div class="spltrtop">
-                                <iframe type="text/html" width="130" height="130" src="{{ videos_vids.8.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
-                            </div>
-                            <div class="spltrbottom">
-                                <div class="spltrbleft">
-                                    <div class="spltrbltop">
-                                        <div class="spltrbltleft">
-                                            <a class="spimg" href="{{ videos_vids.0.2 }}" target="_blank" ><img  src="{{ videos_vids.0.1 }}" title="{{ videos_vids.0.0 }}" height="30" width="30"/></a>
-                                        </div>
-                                        <div class="spltrbltright">
-                                            <div class="spltrbltrtop">
-                                                <a class="spimg" href="{{ videos_vids.1.2 }}" target="_blank" ><img  src="{{ videos_vids.1.1 }}" title="{{ videos_vids.1.0 }}" height="20" width="20"/></a>
-                                            </div>
-                                            <div class="spltrbltrbottom">
-                                                <div class="spltrbltrbleft">
-                                                    <a class="spimg" href="{{ videos_vids.5.2 }}" target="_blank" ><img  src="{{ videos_vids.5.1 }}" title="{{ videos_vids.5.0 }}" height="10" width="10"/></a>
-                                                </div>
-                                                <div class="spltrbltrbright">
-                                                    <a class="spimg" href="{{ videos_vids.6.2 }}" target="_blank" ><img  src="{{ videos_vids.6.1 }}" title="{{ videos_vids.6.0 }}" height="10" width="10"/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="spltrblbottom">
-                                        <a class="spimg" href="{{ videos_vids.7.2 }}" target="_blank" ><img  src="{{ videos_vids.7.1 }}" title="{{ videos_vids.7.0 }}" height="50" width="50"/></a>
-                                    </div>
-                                </div>
-                                <div class="spltrbright">
-                                    <a class="spimg" href="{{ videos_vids.2.2 }}" target="_blank" ><img  src="{{ videos_vids.2.1 }}" title="{{ videos_vids.2.0 }}" height="80" width="80"/></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="splbottom">
-                        <iframe type="text/html" width="340" height="340" src="{{ videos_vids.9.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
-                    </div>
-                </div>
-                <div class="spright">
-                    <iframe type="text/html" width="550" height="550" src="{{ videos_vids.4.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
-                </div>
+<!-- TABS -->
+<div class="w3-container tab_container w3-padding-0">
+
+<!-- SPIRAL -->
+<div id="tab1" class="tab_content">
+  <header class="w3-container w3-theme-l4">
+    <h2>Spiral</h2>
+  </header>
+  <div class="w3-container">
+    <p>
+      The results are displayed in golden spiral form in pataphysical fashion. Hover for title on smaller images, click for source.
+    </p>
+  </div>
+  <div class="w3-container w3-theme-l5">
+    {% if videos_len == 10 %}
+      <div class="spouter">
+        <div class="spleft">
+          <div class="spltop">
+            <div class="spltleft">
+              <iframe width="210" height="210" src="https://www.youtube.com/embed/{{ videos_vids.3.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
             </div>
+            <div class="spltright">
+              <div class="spltrtop">
+                <iframe width="130" height="130" src="https://www.youtube.com/embed/{{ videos_vids.8.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+              </div>
+              <div class="spltrbottom">
+                <div class="spltrbleft">
+                  <div class="spltrbltop">
+                    <div class="spltrbltleft">
+                      <a class="spimg" href="https://youtu.be/{{ videos_vids.0.2 }}" target="_blank" ><img src="{{ videos_vids.0.1 }}" title="{{ videos_vids.0.0 }}" height="30" width="30"/></a>
+                    </div>
+                    <div class="spltrbltright">
+                      <div class="spltrbltrtop">
+                        <a class="spimg" href="https://youtu.be/{{ videos_vids.1.2 }}" target="_blank" ><img src="{{ videos_vids.1.1 }}" title="{{ videos_vids.1.0 }}" height="20" width="20"/></a>
+                      </div>
+                      <div class="spltrbltrbottom">
+                        <div class="spltrbltrbleft">
+                          <a class="spimg" href="https://youtu.be/{{ videos_vids.5.2 }}" target="_blank" ><img src="{{ videos_vids.5.1 }}" title="{{ videos_vids.5.0 }}" height="10" width="10"/></a>
+                        </div>
+                        <div class="spltrbltrbright">
+                          <a class="spimg" href="https://youtu.be/{{ videos_vids.6.2 }}" target="_blank" ><img src="{{ videos_vids.6.1 }}" title="{{ videos_vids.6.0 }}" height="10" width="10"/></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spltrblbottom">
+                    <a class="spimg" href="https://youtu.be/{{ videos_vids.7.2 }}" target="_blank" ><img src="{{ videos_vids.7.1 }}" title="{{ videos_vids.7.0 }}" height="50" width="50"/></a>
+                  </div>
+                </div>
+                <div class="spltrbright">
+                  <a class="spimg" href="https://youtu.be/{{ videos_vids.2.2 }}" target="_blank" ><img  src="{{ videos_vids.2.1 }}" title="{{ videos_vids.2.0 }}" height="80" width="80"/></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="splbottom">
+            <iframe width="340" height="340" src="https://www.youtube.com/embed/{{ videos_vids.9.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+          </div>
+        </div>
+        <div class="spright">
+          <iframe width="550" height="550" src="https://www.youtube.com/embed/{{ videos_vids.4.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+        </div>
+      </div>
+    {% endif %}
+    {% if videos_len < 10 and videos_len > 0 %}
+      <br>
+      Videos - {{ videos_len }} pataphysicalised
+      {% if videos_len == 1 %}reverberation{% else %}reverberations{% endif %} found for: <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input></form>
+      <div class="w3-row">
+        {% for v in videos_vids %}
+          <div class="w3-col s12 m6 l3 w3-padding">
+            <iframe src="https://www.youtube.com/embed/{{ v.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if videos_len == 0 %}
+      <br>
+      Videos - Sorry, no pataphysicalised reverberations found!
+      <br><br>
+    {% endif %}
+  </div>
+</div> <!-- end spiral -->
 
-        {% else %}
-            Videos - Sorry, no pataphysicalised reverberations found!
-        {% endif %}
-    </div> <!-- resultset -->
-</div> <!-- results -->
+<!-- LIST -->
+<div id="tab2" class="tab_content">
+  <header class="w3-container w3-theme-l4">
+    <h2>List</h2>
+  </header>
+  <div class="w3-container">
+    <p>
+      Click to play.
+    </p>
+  </div>
+  <div class="w3-container w3-theme-l5 poetry">
+    {% if videos_len > 0 %}
+      <div class="w3-row">
+        {% for vid in videos_vids %}
+          <div class="w3-col s12 m6 l3 w3-padding">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/{{ vid.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if videos_len == 0 %}
+      Videos - Sorry, no pataphysicalised reverberations found!
+    {% endif %}
+  </div>
+</div> <!-- end list -->
+
+</div> <!-- end tabs -->
+
+</article>
 
 {% endblock %}

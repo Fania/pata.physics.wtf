@@ -1,6 +1,6 @@
-from flask import render_template, url_for, request
+from flask import render_template, request
 from app import app
-from textsurfer import *
+from textsurfer import clinamen, syzygy, antinomy, calc_all
 
 
 @app.route('/text')
@@ -17,50 +17,30 @@ def textresults():
         print 'textresults get: ', query  # data['query']
         # return render_template('p01results.html', q)
     else:
-        #request was a POST
+        # request was a POST
         print 'textresults post: ', query  # data['query']
         # qx = getResults(q)
 
-       # CLINAMEN
-        sens = dict([])
-        pre_sens = dict([])
-        post_sens = dict([])
-        clinamen_words = clinamen(query, 2)
-        clinamen_len = len(clinamen_words)
-        for r in clinamen_words:
-            if len(pre_sentence(r)) > 0:
-                pre_sens[r] = pre_sentence(r)
-            if len(post_sentence(r)) > 0:
-                post_sens[r] = post_sentence(r)
-            if len(find_sentence(r)) > 0:
-                sens[r] = find_sentence(r)
-        # SYZYGY
-        syssens = dict([])
-        pre_syssens = dict([])
-        post_syssens = dict([])
-        syzygy_words = syzygy(query)
-        syzygy_len = len(syzygy_words)
-        for r in syzygy_words:
-            if len(pre_sentence(r)) > 0:
-                pre_syssens[r] = pre_sentence(r)
-            if len(post_sentence(r)) > 0:
-                post_syssens[r] = post_sentence(r)
-            if len(find_sentence(r)) > 0:
-                syssens[r] = find_sentence(r)
-        # ANTINOMY
-        antisens = dict([])
-        pre_antisens = dict([])
-        post_antisens = dict([])
-        antinomy_words = antinomy(query)
-        antinomy_len = len(antinomy_words)
-        for r in antinomy_words:
-            if len(pre_sentence(r)) > 0:
-                pre_antisens[r] = pre_sentence(r)
-            if len(post_sentence(r)) > 0:
-                post_antisens[r] = post_sentence(r)
-            if len(find_sentence(r)) > 0:
-                antisens[r] = find_sentence(r)
-                #print antisens[r]
+        # all_sens structure:
+        # [(title, (pre, word, post), algorithm), ...]
 
-        #print data
+        # clin_words = ['hello', 'world', 'fania', 'loves', 'dave']
+
+        clin_sens, clin_words, clin_files, clin_tot = clinamen(query, 2)
+        sys_sens, sys_words, sys_files, sys_tot = syzygy(query)
+        anti_sens, anti_words, anti_files, anti_tot = antinomy(query)
+
+        all_sens = list(clin_sens | sys_sens | anti_sens)
+        all_tot = clin_tot + sys_tot + anti_tot
+
+        all_files = set([f[0] for f in all_sens])
+        all_words = set([f[1][1] for f in all_sens])
+
+        lol, part, mx = calc_all(all_sens)
+
+        all_poems = part ** mx  # no of options ^ no of lines
+
+        # print(all_sens)
+
+        # print data
         return render_template('textresults.html', **locals())

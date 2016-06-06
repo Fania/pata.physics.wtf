@@ -1,29 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header>
-    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch</h2>
-</header>
-<p>
-    For the sake of simplicity we limited the corpus of this system to the text of Alfred Jarry’s <a href="http://www.amazon.co.uk/Exploits-Opinions-Faustroll-Alfred-Jarry/dp/1878972073/ref=sr_1_1?ie=UTF8&qid=1336661693&sr=8-1" target="_blank">"Exploits and Opinions of Dr. Faustroll, Pataphysician"</a> (and not the World Wide Web). I will add other sources in the future. Shakespeare, random texts, etc to come.
-</p>
 
-<div class="search_form">
-    <form action="../textresults" method="post">
-        <input class="search_area" name="query" autofocus="autofocus" size="50"></input>
-        <input class="search_button" type="submit" value="Search"> <i class="fa fa-search"></i></input>
-    </form>
+{% include "header.html" %}
+
+<article class="w3-text-theme">
+
+<header class="w3-container w3-theme-l4">
+    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch
+    </h2>
+</header>
+
+<div class="w3-container">
+<p>
+  This text search tool has uses three patalgorithms and three options for displaying the results it produces. The search operates on a corpus of 28 plaintext files, with a special role for text zero: <strong>Faustroll</strong> as explained over <a href="{{ url_for('about') }}#technical">here</a>.
+</p>
 </div>
 
-<h3>How to use</h3>
-<p>Text search is currently only supported for single words only.</p>
+<form class="w3-container" action="../textresults" method="post">
+  <div class="w3-group">
+    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
+    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
+      <i class="fa fa-search"></i></button>
+  </div>
+</form>
 
-<h4>Search suggestions:</h4>
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear"></input></form>'
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll"></input></form>'
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"></input></form>'
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"></input></form>'
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"></input></form>'
-    '<form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"></input></form>'
+<header class="w3-container w3-theme-l5">
+  <h3>How to use</h3>
+</header>
+<div class="w3-container">
+  <p>Text search is currently supported for single search terms only.</p>
+
+  <h4>Search suggestions:</h4>
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="clear" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="troll" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="large"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="live"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="solid"onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post"><input class="inlink" type="submit" name="query" value="books"onclick="loading();"></input></form>
+</div>
+
+<br>
+
+</article>
 
 {% endblock %}

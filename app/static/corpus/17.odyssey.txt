@@ -1,4 +1,3 @@
-
 THE ODYSSEY OF HOMER
 
 BOOK I
@@ -7,23 +6,7 @@ ARGUMENT.
 
 MINERVA'S DESCENT TO ITHACA.
 
-The poem opens within forty eight days of the arrival of Ulysses
-in his dominions. He had now remained seven years in the Island of
-Calypso, when the gods assembled in council, proposed the method
-of his departure from thence and his return to his native country.
-For this purpose it is concluded to send Mercury to Calypso, and
-Pallas immediately descends to Ithaca. She holds a conference with
-Telemachus, in the shape of Mantes, king of Taphians; in which she
-advises him to take a journey in quest of his father Ulysses, to
-Pylos and Sparta, where Nestor and Menelaus yet reigned; then,
-after having visibly displayed her divinity, disappears. The
-suitors of Penelope make great entertainments, and riot in her
-palace till night. Phemius sings to them the return of the
-Grecians, till Penelope puts a stop to the song. Some words arise
-between the suitors and Telemachus, who summons the council to
-meet the day following.
-
-
+The poem opens within forty eight days of the arrival of Ulysses in his dominions. He had now remained seven years in the Island of Calypso, when the gods assembled in council, proposed the method of his departure from thence and his return to his native country. For this purpose it is concluded to send Mercury to Calypso, and Pallas immediately descends to Ithaca. She holds a conference with Telemachus, in the shape of Mantes, king of Taphians; in which she advises him to take a journey in quest of his father Ulysses, to Pylos and Sparta, where Nestor and Menelaus yet reigned; then, after having visibly displayed her divinity, disappears. The suitors of Penelope make great entertainments, and riot in her palace till night. Phemius sings to them the return of the Grecians, till Penelope puts a stop to the song. Some words arise between the suitors and Telemachus, who summons the council to meet the day following.
 
 The man for wisdom's various arts renown'd,
 Long exercised in woes, O Muse! resound;
@@ -620,22 +603,7 @@ ARGUMENT.
 
 THE COUNCIL OF ITHACA.
 
-Telemachus in the assembly of the lords of Ithaca complains of the
-injustice done him by the suitors, and insists upon their
-departure from his palace; appealing to the princes, and exciting
-the people to declare against them. The suitors endeavour to
-justify their stay, at least till he shall send the queen to the
-court of Icarius her father; which he refuses. There appears a
-prodigy of two eagles in the sky, which an augur expounds to the
-ruin of the suitors. Telemachus the demands a vessel to carry him
-to Pylos and Sparta, there to inquire of his father's fortunes.
-Pallas, in the shape of Mentor (an ancient friend of Ulysses),
-helps him to a ship, assists him in preparing necessaries for the
-voyage, and embarks with him that night; which concludes the
-second day from the opening of the poem. The scene continues in
-the palace of Ulysses, in Ithaca.
-
-
+Telemachus in the assembly of the lords of Ithaca complains of the injustice done him by the suitors, and insists upon their departure from his palace; appealing to the princes, and exciting the people to declare against them. The suitors endeavour to justify their stay, at least till he shall send the queen to the court of Icarius her father; which he refuses. There appears a prodigy of two eagles in the sky, which an augur expounds to the ruin of the suitors. Telemachus the demands a vessel to carry him to Pylos and Sparta, there to inquire of his father's fortunes. Pallas, in the shape of Mentor (an ancient friend of Ulysses), helps him to a ship, assists him in preparing necessaries for the voyage, and embarks with him that night; which concludes the second day from the opening of the poem. The scene continues in the palace of Ulysses, in Ithaca.
 
 Now reddening from the dawn, the morning ray
 Glow'd in the front of heaven, and gave the day
@@ -1161,18 +1129,7 @@ ARGUMENT
 
 THE INTERVIEW OF TELEMACHUS AND NESTOR.
 
-Telemachus, guided by Pallas in the shape of Mentor, arrives in
-the morning at Pylos, where Nestor and his sons are sacrificing on
-the sea-shore to Neptune. Telemachus declares the occasion of his
-coming: and Nestor relates what passed in their return from Troy,
-how their fleets were separated, and he never since heard of
-Ulysses. They discourse concerning the death of Agamemnon, the
-revenge of Orestes, and the injuries of the suitors. Nestor
-advises him to go to Sparta, and inquire further of Menelaus. The
-sacrifice ending with the night, Minerva vanishes from them in the
-form of an eagle: Telemachus is lodged in the palace. The next
-morning they sacrifice a bullock to Minerva; and Telemachus
-proceeds on his journey to Sparta, attended by Pisistratus.
+Telemachus, guided by Pallas in the shape of Mentor, arrives in the morning at Pylos, where Nestor and his sons are sacrificing on the sea-shore to Neptune. Telemachus declares the occasion of his coming: and Nestor relates what passed in their return from Troy, how their fleets were separated, and he never since heard of Ulysses. They discourse concerning the death of Agamemnon, the revenge of Orestes, and the injuries of the suitors. Nestor advises him to go to Sparta, and inquire further of Menelaus. The sacrifice ending with the night, Minerva vanishes from them in the form of an eagle: Telemachus is lodged in the palace. The next morning they sacrifice a bullock to Minerva; and Telemachus proceeds on his journey to Sparta, attended by Pisistratus.
 
 The scene lies on the sea-shore of Pylos.
 
@@ -1837,19 +1794,9 @@ ARGUMENT.
 
 THE CONFERENCE WITH MENELAUS.
 
-Telemachus with Pisistratus arriving at Sparta, is hospitably
-received by Menelaus to whom he relates the cause of his coming,
-and learns from him many particulars of what befell the Greeks
-since the destruction of Troy. He dwells more at large upon the
-prophecies of Proteus to him in his return; from which he
-acquaints Telemachus that Ulysses is detained in the island of
-Calypso.
+Telemachus with Pisistratus arriving at Sparta, is hospitably received by Menelaus to whom he relates the cause of his coming, and learns from him many particulars of what befell the Greeks since the destruction of Troy. He dwells more at large upon the prophecies of Proteus to him in his return; from which he acquaints Telemachus that Ulysses is detained in the island of Calypso.
 
-In the meantime the suitors consult to destroy Telemachus on the
-voyage home. Penelope is apprised of this; but comforted in a
-dream by Pallas, in the shape of her sister Iphthima.
-
-
+In the meantime the suitors consult to destroy Telemachus on the voyage home. Penelope is apprised of this; but comforted in a dream by Pallas, in the shape of her sister Iphthima.
 
 And now proud Sparta with their wheels resounds,
 Sparta whose walls a range of hills surrounds;
@@ -3038,16 +2985,7 @@ ARGUMENT
 
 THE DEPARTURE OF ULYSSES FROM CALYPSO
 
-Pallas in a council of the gods complains of the detention of
-Ulysses in the Island of Calypso: whereupon Mercury is sent to
-command his removal. The seat of Calypso described. She consents
-with much difficulty; and Ulysses builds a vessel with his own
-hands, in which he embarks. Neptune overtakes him with a terrible
-tempest, in which he is shipwrecked, and in the last danger of
-death; till Lencothea, a sea-goddess, assists him, and, after
-innumerable perils, he gets ashore on Phaeacia.
-
-
+Pallas in a council of the gods complains of the detention of Ulysses in the Island of Calypso: whereupon Mercury is sent to command his removal. The seat of Calypso described. She consents with much difficulty; and Ulysses builds a vessel with his own hands, in which he embarks. Neptune overtakes him with a terrible tempest, in which he is shipwrecked, and in the last danger of death; till Lencothea, a sea-goddess, assists him, and, after innumerable perils, he gets ashore on Phaeacia.
 
 The saffron morn, with early blushes spread,
 Now rose refulgent from Tithonus' bed;
@@ -3726,16 +3664,7 @@ BOOK VI.
 
 ARGUMENT.
 
-Pallas appearing in a dream in to Nausicaa (the daughter of
-Alcinous, king of Phaeacia, commands her to descend to the river,
-and wash the robes of state, in preparation for her nuptials.
-Nausicaa goes with her handmaidens to the river; where, while the
-garments are spread on the bank, they divert themselves in sports.
-Their voices awaken Ulysses, who, addressing himself to the
-princess, is by her relieved and clothed, and receives directions
-in what manner to apply to the king and queen of the island.
-
-
+Pallas appearing in a dream in to Nausicaa (the daughter of Alcinous, king of Phaeacia, commands her to descend to the river, and wash the robes of state, in preparation for her nuptials. Nausicaa goes with her handmaidens to the river; where, while the garments are spread on the bank, they divert themselves in sports. Their voices awaken Ulysses, who, addressing himself to the princess, is by her relieved and clothed, and receives directions in what manner to apply to the king and queen of the island.
 
 While thus the weary wanderer sunk to rest,
 And peaceful slumbers calmed his anxious breast,
@@ -4164,16 +4093,7 @@ ARGUMENT.
 
 The court of Alcinous.
 
-The princess Nausicaa returns to the city and Ulysses soon after
-follows thither. He is met by Pallas in the form of a young
-virgin, who guides him to the palace, and directs him in what
-manner to address the queen Arete. She then involves him in a mist
-which causes him to pass invisible. The palace and gardens of
-Alcinous described. Ulysses falling at the feet of the queen, the
-mist disperses, the Phaecians admire, and receive him with
-respect. The queen inquiring by what means he had the garments he
-then wore, be relates to her and Alcinous his departure from
-Calypso, and his arrival in their dominions.
+The princess Nausicaa returns to the city and Ulysses soon after follows thither. He is met by Pallas in the form of a young virgin, who guides him to the palace, and directs him in what manner to address the queen Arete. She then involves him in a mist which causes him to pass invisible. The palace and gardens of Alcinous described. Ulysses falling at the feet of the queen, the mist disperses, the Phaecians admire, and receive him with respect. The queen inquiring by what means he had the garments he then wore, be relates to her and Alcinous his departure from Calypso, and his arrival in their dominions.
 
 The same day continues, and the book ends with the night.
 
@@ -4650,19 +4570,7 @@ BOOK VIII.
 
 ARGUMENT.
 
-Alcinous calls a council, in which it is resolved to transport
-Ulysses into his country. After which splendid entertainments are
-made, where the celebrated musician and poet, Demodocus, plays and
-sings to the guests. They next proceed to the games, the race, the
-wrestling, discus, &c., where Ulysses casts a prodigious length,
-to the admiration of all the spectators. They return again to the
-banquet and Demodocus sings the loves of Mars and Venus. Ulysses,
-after a compliment to the poet, desires him to sing the
-introduction of the wooden horse into Troy, which subject
-provoking his tears, Alcinous inquires of his guest his name,
-parentage, and fortunes.
-
-
+Alcinous calls a council, in which it is resolved to transport Ulysses into his country. After which splendid entertainments are made, where the celebrated musician and poet, Demodocus, plays and sings to the guests. They next proceed to the games, the race, the wrestling, discus, &c., where Ulysses casts a prodigious length, to the admiration of all the spectators. They return again to the banquet and Demodocus sings the loves of Mars and Venus. Ulysses, after a compliment to the poet, desires him to sing the introduction of the wooden horse into Troy, which subject provoking his tears, Alcinous inquires of his guest his name, parentage, and fortunes.
 
 Now fair Aurora lifts her golden ray,
 And all the ruddy orient flames with day:
@@ -5362,16 +5270,7 @@ BOOK IX.
 
 THE ADVENTURES OF THE CICONS, LOTOPHAGI AND CYCLOPS
 
-Ulysses begins the relation of his adventures: how, after the
-destruction of Troy, he with his companions made an incursion on
-the Cicons, by whom they were repulsed; and, meeting with a storm,
-were driven to the coast of the Lotophagi. From there they sailed
-to the land of the Cyclops, whose manners and situation are
-particularly characterised. The giant Polyphemus and his cave
-described; the usage Ulysses and his companions met with there;
-and, lastly, the method and artifice by which he escaped.
-
-
+Ulysses begins the relation of his adventures: how, after the destruction of Troy, he with his companions made an incursion on the Cicons, by whom they were repulsed; and, meeting with a storm, were driven to the coast of the Lotophagi. From there they sailed to the land of the Cyclops, whose manners and situation are particularly characterised. The giant Polyphemus and his cave described; the usage Ulysses and his companions met with there; and, lastly, the method and artifice by which he escaped.
 
 Then thus Ulysses: "Thou whom first in sway,
 As first in virtue, these thy realms obey;
@@ -6071,19 +5970,7 @@ ARGUMENT.
 
 ADVENTURES WITH AEOLUS, THE LAESTRYGONS, AND CIRCE.
 
-Ulysses arrives at the island of AEolus, who gives him prosperous
-winds, and incloses the adverse ones in a bag, which his
-companions untying, they are driven back again and rejected.
-Then they sail to the Laestrygons, where they lose eleven ships,
-and, with only one remaining, proceed to the island of Circe.
-Eurylochus is sent first with some companions, all which, except
-Eurylochus, are transformed into swine. Ulysses then undertakes
-the adventure, and, by the help of Mercury, who gives him the herb
-Moly, overcomes the enchantress, and procures the restoration of
-his men. After a year's stay with her, he prepares, at her
-instigation, for his voyage to the infernal shades.
-
-
+Ulysses arrives at the island of AEolus, who gives him prosperous winds, and incloses the adverse ones in a bag, which his companions untying, they are driven back again and rejected. Then they sail to the Laestrygons, where they lose eleven ships, and, with only one remaining, proceed to the island of Circe. Eurylochus is sent first with some companions, all which, except Eurylochus, are transformed into swine. Ulysses then undertakes the adventure, and, by the help of Mercury, who gives him the herb Moly, overcomes the enchantress, and procures the restoration of his men. After a year's stay with her, he prepares, at her instigation, for his voyage to the infernal shades.
 
 "AT length we reach'd AEolias's sea-girt shore,
 Where great Hippotades the sceptre bore,
@@ -6831,20 +6718,7 @@ ARGUMENT.
 
 THE DESCENT INTO HELL.
 
-Ulysses continues his narration. How he arrived at the land of the
-Cimmerians, and what ceremonies he performed to invoke the dead.
-The manner of his descent, and the apparition of the shades: his
-conversation with Elpenor, and with Tiresias, who informs him in a
-prophetic manner of his fortunes to come. He meets his mother
-Anticles, from whom he learns the state of his family. He sees the
-shades of the ancient heroines, afterwards of the heroes, and
-converses in particular with Agamemnon and Achilles. Ajax keeps at
-a sullen distance, and disdains to answer him. He then beholds
-Tityus, Tantalus, Sisyphus, Hercules; till he is deterred from
-further curiosity by the apparition of horrid spectres, and the
-cries of the wicked in torments.
-
-
+Ulysses continues his narration. How he arrived at the land of the Cimmerians, and what ceremonies he performed to invoke the dead. The manner of his descent, and the apparition of the shades: his conversation with Elpenor, and with Tiresias, who informs him in a prophetic manner of his fortunes to come. He meets his mother Anticles, from whom he learns the state of his family. He sees the shades of the ancient heroines, afterwards of the heroes, and converses in particular with Agamemnon and Achilles. Ajax keeps at a sullen distance, and disdains to answer him. He then beholds Tityus, Tantalus, Sisyphus, Hercules; till he is deterred from further curiosity by the apparition of horrid spectres, and the cries of the wicked in torments.
 
 "Now to the shores we bend, a mournful train,
 Climb the tall bark, and launch into the main;
@@ -7725,16 +7599,7 @@ ARGUMENT.
 
 THE SIRENE, SCYLLA, AND CHARYBDIS.
 
-He relates how, after his return from the shades, he was sent by
-Circe on his voyage, by the coast of the Sirens, and by the strait
-of Scylla and Charybdis: the manner in which he escaped those
-dangers: how, being cast on the island Trinacria, his companions
-destroyed the oxen of the Sun: the vengeance that followed; how
-all perished by shipwreck except himself, who, swimming on the
-mast of the ship, arrived on the island of Calypso. With which his
-narration concludes.
-
-
+He relates how, after his return from the shades, he was sent by Circe on his voyage, by the coast of the Sirens, and by the strait of Scylla and Charybdis: the manner in which he escaped those dangers: how, being cast on the island Trinacria, his companions destroyed the oxen of the Sun: the vengeance that followed; how all perished by shipwreck except himself, who, swimming on the mast of the ship, arrived on the island of Calypso. With which his narration concludes.
 
 "Thus o'er the rolling surge the vessel flies,
 Till from the waves the AEaean hills arise.
@@ -8326,21 +8191,7 @@ ARGUMENT.
 
 THE ARRIVAL OF ULYSSES IN ITHACA.
 
-Ulysses takes his leave of Alcinous and Arete, and embarks in the
-evening. Next morning the ship arrives at Ithaca; where the
-sailors, as Ulysses is yet sleeping, lay him on the shore with all
-his treasures. On their return, Neptune changes their ship into a
-rock. In the meantime Ulysses, awaking, knows not his native
-Ithaca, by reason of a mist which Pallas had cast around him. He
-breaks into loud lamentations; till the goddess appearing to him
-in the form of a shepherd, discovers the country to him, and
-points out the particular places. He then tells a feigned story of
-his adventures, upon which she manifests herself, and they consult
-together of the measures to be taken to destroy the suitors. To
-conceal his return, and disguise his person the more effectually,
-she changes him into the figure of an old beggar.
-
-
+Ulysses takes his leave of Alcinous and Arete, and embarks in the evening. Next morning the ship arrives at Ithaca; where the sailors, as Ulysses is yet sleeping, lay him on the shore with all his treasures. On their return, Neptune changes their ship into a rock. In the meantime Ulysses, awaking, knows not his native Ithaca, by reason of a mist which Pallas had cast around him. He breaks into loud lamentations; till the goddess appearing to him in the form of a shepherd, discovers the country to him, and points out the particular places. He then tells a feigned story of his adventures, upon which she manifests herself, and they consult together of the measures to be taken to destroy the suitors. To conceal his return, and disguise his person the more effectually, she changes him into the figure of an old beggar.
 
 He ceased; but left so pleasing on their ear
 His voice, that listening still they seem'd to hear.
@@ -8899,13 +8750,7 @@ ARGUMENT.
 
 THE CONVERSATION WITH EUMAEUS.
 
-Ulysses arrives in disguise at the house of Eumaeus, where he is
-received, entertained, and lodged with the utmost hospitality. The
-several discourses of that faithful old servant, with the feigned
-story told by Ulysses to conceal himself, and other conversations
-on various subjects, take up this entire book.
-
-
+Ulysses arrives in disguise at the house of Eumaeus, where he is received, entertained, and lodged with the utmost hospitality. The several discourses of that faithful old servant, with the feigned story told by Ulysses to conceal himself, and other conversations on various subjects, take up this entire book.
 
 But he, deep-musing, o'er the mountains stray'd
 Through mazy thickets of the woodland shade,
@@ -9544,16 +9389,7 @@ ARGUMENT.
 
 THE RETURN OF TELEMACHUS.
 
-The goddess Minerva commands Telemachus in a vision to return to
-Ithaca. Pisistratus and he take leave of Menelaus, and arrive at
-Pylos, where they part: and Telemachus sets sail, after having
-received on board Theoclymenus the soothsayer. The scene then
-changes to the cottage of Eumaeus, who entertains Ulysses with a
-recital of his adventures. In the meantime Telemachus arrives on
-the coast, and sending the vessel to the town, proceeds by himself
-to the lodge of Eumaeus.
-
-
+The goddess Minerva commands Telemachus in a vision to return to Ithaca. Pisistratus and he take leave of Menelaus, and arrive at Pylos, where they part: and Telemachus sets sail, after having received on board Theoclymenus the soothsayer. The scene then changes to the cottage of Eumaeus, who entertains Ulysses with a recital of his adventures. In the meantime Telemachus arrives on the coast, and sending the vessel to the town, proceeds by himself to the lodge of Eumaeus.
 
 Now had Minerva reach'd those ample plains,
 Famed for the dance, where Menelaus reigns:
@@ -10207,13 +10043,7 @@ ARGUMENT.
 
 THE DISCOVERY OF ULYSSES TO TELEMACHUS.
 
-Telemachus arriving at the lodge of Eumaeus, sends him to carry
-Penelope the news of his return. Minerva appearing to Ulysses,
-commands him to discover himself to his son. The princes, who had
-lain in ambush to intercept Telemachus in his way, their project
-being defeated, return to Ithaca.
-
-
+Telemachus arriving at the lodge of Eumaeus, sends him to carry Penelope the news of his return. Minerva appearing to Ulysses, commands him to discover himself to his son. The princes, who had lain in ambush to intercept Telemachus in his way, their project being defeated, return to Ithaca.
 
 Soon as the morning blush'd along the plains,
 Ulysses, and the monarch of the swains,
@@ -10767,14 +10597,7 @@ BOOK XVII.
 
 ARGUMENT.
 
-Telemachus returning to the city, relates to Penelope the sum of
-his travels. Ulysses is conducted by Eumaeus to the palace, where
-his old dog Argus acknowledges his master, after an absence of
-twenty years, and dies with joy. Eumaeus returns into the country,
-and Ulysses remains among the suitors, whose behaviour is
-described.
-
-
+Telemachus returning to the city, relates to Penelope the sum of his travels. Ulysses is conducted by Eumaeus to the palace, where his old dog Argus acknowledges his master, after an absence of twenty years, and dies with joy. Eumaeus returns into the country, and Ulysses remains among the suitors, whose behaviour is described.
 
 Soon as Aurora, daughter of the dawn,
 Sprinkled with roseate light the dewy lawn,
@@ -11529,12 +11352,7 @@ ARGUMENT.
 
 THE FIGHT OF ULYSSES AND IRUS.
 
-The beggar Irus insults Ulysses; the suitors promote the quarrel,
-in which Irus is worsted, and miserably handled. Penelope
-descends, and receives the presents of the suitors. The dialogue
-of Ulysses with Eurymachus.
-
-
+The beggar Irus insults Ulysses; the suitors promote the quarrel, in which Irus is worsted, and miserably handled. Penelope descends, and receives the presents of the suitors. The dialogue of Ulysses with Eurymachus.
 
 While fix'd in thought the pensive hero sate,
 A mendicant approach'd the royal gate;
@@ -12066,18 +11884,7 @@ ARGUMENT.
 
 THE DISCOVERY OF ULYSSES TO EURYCLEA.
 
-Ulysses and his son remove the weapons out of the armoury.
-Ulysses, in conversation with Penelope, gives a fictitious account
-of his adventures; then assures her he had formerly entertained
-her husband in Crete; and describes exactly his person and dress;
-affirms to have heard of him in Phaeacia and Thesprotia, and that
-his return is certain, and within a month. He then goes to bathe,
-and is attended by Euryclea, who discovers him to be Ulysses by
-the scar upon his leg, which he formerly received in hunting the
-wild boar on Parnassus. The poet inserts a digression relating
-that accident, with all its particulars.
-
-
+Ulysses and his son remove the weapons out of the armoury. Ulysses, in conversation with Penelope, gives a fictitious account of his adventures; then assures her he had formerly entertained her husband in Crete; and describes exactly his person and dress; affirms to have heard of him in Phaeacia and Thesprotia, and that his return is certain, and within a month. He then goes to bathe, and is attended by Euryclea, who discovers him to be Ulysses by the scar upon his leg, which he formerly received in hunting the wild boar on Parnassus. The poet inserts a digression relating that accident, with all its particulars.
 
 Consulting secret with the blue-eyed maid,
 Still in the dome divine Ulysses stay'd:
@@ -12834,17 +12641,7 @@ BOOK XX.
 
 ARGUMENT.
 
-While Ulysses lies in the vestibule of the palace, he is witness
-to the disorders of the women. Minerva comforts him, and casts him
-asleep. At his waking he desires a favourable sign from Jupiter,
-which is granted. The feast of Apollo is celebrated by the people,
-and the suitors banquet in the palace. Telemachus exerts his
-authority amongst them; notwithstanding which, Ulysses is insulted
-by Caesippus, and the rest continue in their excesses. Strange
-prodigies are seen by Theoclymenus, the augur, who explains them
-to the destruction of the wooers.
-
-
+While Ulysses lies in the vestibule of the palace, he is witness to the disorders of the women. Minerva comforts him, and casts him asleep. At his waking he desires a favourable sign from Jupiter, which is granted. The feast of Apollo is celebrated by the people, and the suitors banquet in the palace. Telemachus exerts his authority amongst them; notwithstanding which, Ulysses is insulted by Caesippus, and the rest continue in their excesses. Strange prodigies are seen by Theoclymenus, the augur, who explains them to the destruction of the wooers.
 
 An ample hide devine Ulysses spread.
 And form'd of fleecy skins his humble bed
@@ -13366,19 +13163,7 @@ ARGUMENT.
 
 THE BENDING OF ULYSSES' BOW.
 
-Penelope, to put an end to the solicitation of the suitors,
-proposes to marry the person who shall first bend the bow of
-Ulysses, and shoot through the ringlets. After their attempts have
-proved ineffectual, Ulysses, taking Eumaeus and Philaetius apart,
-discovers himself to them; then returning, desires leave to try
-his strength at the bow, which, though refused with indignation by
-the suitors, Penelope and Telemachus cause it to be delivered to
-his hands. He bends it immediately, and shoots through all the
-rings. Jupiter at the same instant thunders from heaven; Ulysses
-accepts the omen, and gives a sign to Telemachus, who stands ready
-armed at his side.
-
-
+Penelope, to put an end to the solicitation of the suitors, proposes to marry the person who shall first bend the bow of Ulysses, and shoot through the ringlets. After their attempts have proved ineffectual, Ulysses, taking Eumaeus and Philaetius apart, discovers himself to them; then returning, desires leave to try his strength at the bow, which, though refused with indignation by the suitors, Penelope and Telemachus cause it to be delivered to his hands. He bends it immediately, and shoots through all the rings. Jupiter at the same instant thunders from heaven; Ulysses accepts the omen, and gives a sign to Telemachus, who stands ready armed at his side.
 
 And Pallas now, to raise the rivals' fires,
 With her own art Penelope inspires
@@ -13905,16 +13690,7 @@ ARGUMENT.
 
 THE DEATH OF THE SUITORS.
 
-Ulysses begins the slaughter of the suitors by the death of
-Antinous. He declares himself, and lets fly his arrows at the
-rest. Telemachus assists and brings arms for his father, himself,
-Eumaeus, and Philaetius. Melanthius does the same for the wooers.
-Minerva encourages Ulysses in the shape of Mentor. The suitors are
-all slain, only Medon and Phemius are spared. Melanthius and the
-unfaithful servants are executed. The rest acknowledge their
-master with all demonstrations of joy.
-
-
+Ulysses begins the slaughter of the suitors by the death of Antinous. He declares himself, and lets fly his arrows at the rest. Telemachus assists and brings arms for his father, himself, Eumaeus, and Philaetius. Melanthius does the same for the wooers. Minerva encourages Ulysses in the shape of Mentor. The suitors are all slain, only Medon and Phemius are spared. Melanthius and the unfaithful servants are executed. The rest acknowledge their master with all demonstrations of joy.
 
 Then fierce the hero o'er the threshold strode;
 Stripp'd of his rags, he blazed out like a god.
@@ -14511,19 +14287,7 @@ BOOK XXIII.
 
 ARGUMENT.
 
-Euryclea awakens Penelope with the news of Ulysses' return, and
-the death of the suitors. Penelope scarcely credits her; but
-supposes some god has punished them, and descends from her
-department in doubt. At the first interview of Ulysses and
-Penelope, she is quite unsatisfied. Minerva restores him to the
-beauty of his youth; but the queen continues incredulous, till by
-some circumstances she is convinced, and falls into all the
-transports of passion and tenderness. They recount to each other
-all that has passed during their long separation. The next morning
-Ulysses, arming himself and his friends, goes from the city to
-visit his father.
-
-
+Euryclea awakens Penelope with the news of Ulysses' return, andthe death of the suitors. Penelope scarcely credits her; but supposes some god has punished them, and descends from her department in doubt. At the first interview of Ulysses and Penelope, she is quite unsatisfied. Minerva restores him to the beauty of his youth; but the queen continues incredulous, till by some circumstances she is convinced, and falls into all the transports of passion and tenderness. They recount to each other all that has passed during their long separation. The next morning Ulysses, arming himself and his friends, goes from the city to visit his father.
 
 Then to the queen, as in repose she lay,
 The nurse with eager rapture speeds her way:
@@ -14956,18 +14720,7 @@ BOOK XXIV.
 
 ARGUMENT.
 
-The souls of the suitors are conducted by Mercury to the infernal
-shades. Ulysses in the country goes to the retirement of his
-father, Laertes; he finds him busied in his garden all alone; the
-manner of his discovery to him is beautifully described. They
-return together to his lodge, and the king is acknowledged by
-Dolius and the servants. The Ithacensians, led by Eupithes, the
-father of Antinous, rise against Ulysses, who gives them battle in
-which Eupithes is killed by Laertes: and the goddess Pallas makes
-a lasting peace between Ulysses and his subjects, which concludes
-the Odyssey.
-
-
+The souls of the suitors are conducted by Mercury to the infernal shades. Ulysses in the country goes to the retirement of his father, Laertes; he finds him busied in his garden all alone; the manner of his discovery to him is beautifully described. They return together to his lodge, and the king is acknowledged by Dolius and the servants. The Ithacensians, led by Eupithes, the father of Antinous, rise against Ulysses, who gives them battle in which Eupithes is killed by Laertes: and the goddess Pallas makes a lasting peace between Ulysses and his subjects, which concludes the Odyssey.
 
 Cylenius now to Pluto's dreary reign
 Conveys the dead, a lamentable train!
