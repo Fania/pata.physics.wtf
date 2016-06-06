@@ -13,17 +13,74 @@
 
 <div class="w3-container">
   <p>
-    The image search uses the Bing Search API. Results can be displayed in golden spiral form or in list form.
+    The image search uses the Search API of your choice. Results can be displayed in golden spiral form or in list form.
   </p>
 </div>
 
+<input type="text" value="" placeholder="enter one word or more" onchange="javascript: what(this.value)"><a><span class="getinfo">?</span><span class="info">"cat dog" = images with a single "cat+dog" tag,<br>"cat, dog" = images tagged "cat" <em>and</em> "dog"</span></a>
+
+<div id="images"></div>
+
+    <script type="text/javascript">
+    function what(thething){
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+        {
+            tags: thething,
+            tagmode: "all", // "all" = multiple comma-separated tags - needs initial input then will accept blank ("any" shows images with no tags if no initial input)
+            format: "json"
+        },
+        function(data) {
+            $("#images").empty();
+            $.each(data.items, function(i,item){
+                $("<img/>").attr("src", item.media.m).attr("height", 160).appendTo("#images").wrap('<a href="' + item.link + '"></a>');
+                if ( i == 4 ) return false;
+            });
+            $("<a>").attr("href", "http://www.flickr.com/help/general/#147").text("About Flickr image permissions").appendTo("#images").wrap('<p>').attr("class", "permission");
+        });
+    };
+    </script>
+
 <form class="w3-container" action="../imageresults" method="post">
+  <p class="w3-center">
+    <input class="w3-radio" type="radio" name="img_choice" value="flickr" checked><label class="w3-validate">Flickr</label>
+    <input class="w3-radio" type="radio" name="img_choice" value="getty"><label class="w3-validate">Getty</label>
+    <input class="w3-radio" type="radio" name="img_choice" value="bing"><label class="w3-validate">Bing</label>
+    <input class="w3-radio" type="radio" name="img_choice" value="google"><label class="w3-validate">Google</label>
+  </p>
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
     <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
       <i class="fa fa-search"></i></button>
   </div>
 </form>
+
+<!-- <div class="w3-row">
+  <form action="../imageresults" method="post">
+    <div class="w3-container w3-col l6 m12 w3-group">
+      <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label w3-padding-left">Search</label>
+      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
+        <i class="fa fa-search"></i></button>
+    </div>
+    <div class="w3-container w3-col l6 m12 w3-group">
+      <label class="w3-checkbox w3-margin-0 w3-margin-right">
+        <input type="radio" name="img_choice" value="Flickr">
+        <div class="w3-checkmark"></div> Flickr
+      </label>
+      <label class="w3-checkbox w3-margin-0 w3-margin-right">
+        <input type="radio" name="img_choice" value="Getty">
+        <div class="w3-checkmark"></div> Getty
+      </label>
+      <label class="w3-checkbox w3-margin-0 w3-margin-right">
+        <input type="radio" name="img_choice" value="Bing">
+        <div class="w3-checkmark"></div> Bing
+      </label>
+      <label class="w3-checkbox w3-margin-0">
+        <input type="radio" name="img_choice" value="Google">
+        <div class="w3-checkmark"></div> Google
+      </label>
+    </div>
+  </form>
+</div> -->
 
 <header class="w3-container w3-theme-l5">
   <h3>How to use</h3>
@@ -32,12 +89,12 @@
   <p>Image search supports multiple keywords.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input></form>,
-    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input></form>
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Flickr"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Bing"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Bing"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Flickr"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Bing"></input></form>,
+    <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="Flickr"></input></form>
 </div>
 
 <br>

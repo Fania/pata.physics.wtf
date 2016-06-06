@@ -47,21 +47,34 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 
+.inline {
+  display: inline;
+}
+
 .tabs a:hover,
 .subtabs a:hover {
   background: #eceff1;
 }
 
+.tabs a.active,
+.subtabs a.active {
+  background: ghostwhite;
+}
+
 .w3-group {
+  position:relative;
   line-height: 1em;
   display: inherit;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .w3-input, .w3-textarea {
   padding: 0;
   padding-left: 5px;
   line-height: 1.6em;
   float: left;
-  width: 50%;
+  /*width: 50%;*/
+  width: 90%;
   border: solid 1px #90a4ae;
 }
 .w3-label {
@@ -73,6 +86,14 @@ h1, h2, h3, h4, h5, h6 {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all
 }
+
+.w3-input:focus ~ .w3-label,.w3-input:valid ~ .w3-label,.w3-textarea:focus ~ .w3-label,.w3-textarea:valid ~ .w3-label{
+top:-20px;font-size:14px;color:#888}
+
+input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
+input[type=radio].w3-radio:checked+.w3-validate{color:#455a64}
+input[type=radio].w3-radio+.w3-validate{padding-right:1em; padding-left:4px;}
+
 .w3-code {
   background-color: #eceff1;
   border-left: 4px solid #607d8b;
@@ -116,12 +137,6 @@ a:hover {
 }
 header a:link, header a:visited {
   text-decoration: none;
-}
-.headlong {
-  display: block;
-}
-.headshort {
-  display: none;
 }
 .banner {
   font-family: Consolas, "courier new";
@@ -275,15 +290,6 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
   .w3-topnav a {
     display: inline-block;
   }
-  .patahide {
-    display: none;
-  }
-  .headlong {
-    display: none;
-  }
-  .headshort {
-    display: block;
-  }
   .navtext {
     display: none;
   }
@@ -339,6 +345,10 @@ input.inlink:hover, input.inlink:active, input.inlink:focus {
   outline: none;
 }
 /*.share-btn.email { background: #444444; }*/
+
+.w3-checkbox input[type=checkbox]:checked + .w3-checkmark:before {background:#546588}
+.w3-checkbox input[type=radio]:checked + .w3-checkmark:after {opacity:1;background-color:#546588}
+.w3-checkmark:before {content:'';position:absolute;width:24px;height:24px;border:2px solid #546588}
 
 /*Blue = #546588*/
 .w3-theme {color:#fff !important;background-color:#607d8b !important}

@@ -11,7 +11,7 @@
 </header>
 
 <div class="w3-container w3-row">
-  <div class="w3-third">
+  <div class="w3-col m4 l3">
     <p>
       <i class="fa fa-bug fa-rotate-90"></i> Well, phsit. <i class="fa fa-bug fa-rotate-270"></i><br>
       &#x202e;Not quite sure what happened here!
@@ -20,20 +20,33 @@
       <strong>Oooops :)</strong>
     </p>
   </div>
-  <div class="w3-third">
-    <p>
-      <form class="w3-padding-top w3-padding-bottom">
-        <input type="button" value="Abort">
-        <input type="button" value="Retry">
-        <input type="button" value="Ignore">
-        <input type="button" value="Fail">
-      </form>
-    </p>
+
+  <div class="w3-col m4 l4">
+    <form class="inform" action="https://en.wikipedia.org/wiki/Abort,_Retry,_Fail%3F">
+      <input type="submit" value="Abort" style="display: inline;">
+    </form>
+    <form class="inform" action="http://pata.physics.wtf">
+      <input type="submit" value="Retry" style="display: inline;">
+    </form>
+    <form class="inform" action="">
+      <input type="submit" value="Ignore" style="display: inline;">
+    </form>
+    <form class="inform" action="http://cdn.sstatic.net/stackoverflow/img/polyglot-404.png">
+      <input type="submit" value="Fail" style="display: inline;">
+    </form>
+    <br><br>
+    <a href="http://xkcd.com/1024/" class="iconlink"><i class="fa fa-bug fa-5x"></i></a>
   </div>
-  <div class="w3-third">
-    <p>
-      <a href="http://xkcd.com/1024/" class="iconlink"><i class="fa fa-bug fa-5x"></i></a>
-    </p>
+
+  <div class="w3-col m4 l4">
+    <code>
+      #define v putchar
+
+      #define print(x)    main(){ v(4+v(v(52)-4));return 0; }/*
+      #>+++++++4+[>++++++<-]>++++.----.++++.*/
+      print(202*2);exit();
+      #define/*>.@/exit()
+    </code>
   </div>
 </div>
 

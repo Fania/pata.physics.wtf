@@ -32,6 +32,8 @@ if (DYN_WEB.Scroll_Div.isSupported() ) {
     var wndo14 = new DYN_WEB.Scroll_Div('wn14', 'lyr14');
     wndo14.addGlideControls('scrollLinks14', 'h', 635, 300);
 	});
+}else{
+  alert("no DYN_WEB");
 }
 
 // LOADING ICON
@@ -40,16 +42,16 @@ function loading() {
 }
 
 // FACEBOOK
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-// TWITTER
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+// (function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = '//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4';
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
+//
+// // TWITTER
+// !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 // POEM EMAIL
 function Mailto_url(){
@@ -98,9 +100,10 @@ function Mailto_url(){
 	};
 }
 
+// Queneau Email
 function getContent(link) {
-
   var query = document.getElementById('querydiv').innerHTML;
+  var corpus = document.getElementById('corpusdiv').innerHTML;
   var lollength = document.getElementById('lollength').innerHTML;
 
   var lineitem1 = document.getElementById('clicks1').innerHTML;
@@ -121,8 +124,9 @@ function getContent(link) {
   var linearray = [];
   var poemsarray = [];
 
-  var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
-  var re2 = new RegExp('\" onclick=\"loading', "g");
+  var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"", "g");
+  var re1A = new RegExp("\" checked=\"\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+  var re2 = new RegExp('\" onclick=\"loading()', "g");
   var re3 = new RegExp(';"></form>', "g");
   var re4 = /\(\)/g;
 
@@ -133,7 +137,9 @@ function getContent(link) {
     poemsarray[i] = linearray[i].innerHTML;
     var tmp = poemsarray[i];
     var tmp1 = tmp.replace(re1, '');
-    var tmp2 = tmp1.replace(re2, '');
+    var tmp1A = tmp1.replace(re1A, '');
+    var tmp1B = tmp1A.replace(corpus, '');
+    var tmp2 = tmp1B.replace(re2, '');
     var tmp3 = tmp2.replace(re3, '');
     var tmp4 = tmp3.replace(re4, '');
     poemsarray[i] = tmp4;
@@ -152,20 +158,23 @@ function getContent(link) {
   var poems = poemsarray.join('\n');
 
   var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+  var mid = "\r\nCorpus: ";
   var post = "\r\n------------------------------------------------------------\r\n\n";
-  var poemail = pre + query + post + poems;
+  var poemail = pre + query + mid + corpus + post + poems;
 
   var mailTo = new Mailto_url();
-	mailTo.setSubject("Patahpysical Poetry");
+	mailTo.setSubject("Pataphysical Poetry");
 	mailTo.setBody(poemail);
 	link.href = mailTo.getURL(true);
 
 	return true;
 }
 
+// Random Email
 function getRandContent(link) {
 
   var query = document.getElementById('querydiv').innerHTML;
+  var corpus = document.getElementById('corpusdiv').innerHTML;
   var count = document.getElementById('clickcount').innerHTML;
 
   if (count == 0) {
@@ -188,21 +197,26 @@ function getRandContent(link) {
 
       poems = line0 +'\r\n'+ line1 +'\r\n'+ line2 +'\r\n'+ line3 +'\r\n\n'+ line4 +'\r\n'+ line5 +'\r\n'+ line6 +'\r\n'+ line7 +'\r\n\n'+ line8 +'\r\n'+ line9 +'\r\n'+ line10 +'\r\n\n'+ line11 +'\r\n'+ line12 +'\r\n'+ line13;
 
-      var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+      var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"", "g");
+      var re1A = new RegExp("\" checked=\"\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+      var re1B = new RegExp(corpus, "g");
       var re2 = new RegExp('\" onclick=\"loading', "g");
       var re3 = new RegExp(';"></form>', "g");
       var re4 = /\(\)/g;
       var poems1 = poems.replace(re1, '');
-      var poems2 = poems1.replace(re2, '');
+      var poems1A = poems1.replace(re1A, '');
+      var poems1B = poems1A.replace(re1B, '');
+      var poems2 = poems1B.replace(re2, '');
       var poems3 = poems2.replace(re3, '');
       var poems4 = poems3.replace(re4, '');
 
       var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+      var mid = "\r\nCorpus: ";
       var post = "\r\n------------------------------------------------------------\r\n\n";
-      var poemail = pre + query + post + poems4;
+      var poemail = pre + query + mid + corpus + post + poems4;
 
       var mailTo = new Mailto_url();
-  		mailTo.setSubject("Patahpysical Poetry");
+  		mailTo.setSubject("Pataphysical Poetry");
   		mailTo.setBody(poemail);
   		link.href = mailTo.getURL(true);
   		return true;
@@ -212,15 +226,21 @@ function getRandContent(link) {
   } else {
       var inner = document.getElementById('random_poem').innerHTML;
 
-      var re1 = new RegExp("<form class=\"inform\" action=\"../textresults\" method=\"post\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
-      var re2 = new RegExp("\" onclick=\"loading", "g");
-      var re3 = /\(\)/g;
-      var re4 = new RegExp(";\"></form>", "g");
+      // CONTINUE FIXING HERE
+
+      var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"", "g");
+      var re1A = new RegExp("\" checked=\"\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
+      var re1B = new RegExp(corpus, "g");
+      var re2 = new RegExp('\" onclick=\"loading', "g");
+      var re3 = new RegExp(';"></form>', "g");
+      var re4 = /\(\)/g;
       var re5 = new RegExp("<br>", "g");
       var re6 = /<span title=\"((\w)+(\,)?(\-)?(\')?(\.)?(\s)*)+(\:\s)?((\w)+(\,)?(\-)?(\')?(\.)?(\s)*)+\">/g;
       var re7 = new RegExp("</span>", "g");
       var poems1 = inner.replace(re1, '');
-      var poems2 = poems1.replace(re2, '');
+      var poems1A = poems1.replace(re1A, '');
+      var poems1B = poems1A.replace(re1B, '');
+      var poems2 = poems1B.replace(re2, '');
       var poems3 = poems2.replace(re3, '');
       var poems4 = poems3.replace(re4, '');
       var poems5 = poems4.replace(re5, '');
@@ -234,15 +254,34 @@ function getRandContent(link) {
       var comp = sp.join('\n');
 
       var pre = "Poem generated using http://pata.physics.wtf\r\n------------------------------------------------------------\r\nKeyword: ";
+      var mid = "\r\nCorpus: ";
       var post = "\r\n------------------------------------------------------------\r\n\n";
-      var poemail = pre + query + post + comp;
+      var poemail = pre + query + mid + corpus + post + comp;
 
       var mailTo1 = new Mailto_url();
-  		mailTo1.setSubject("Patahpysical Poetry");
+  		mailTo1.setSubject("Pataphysical Poetry");
   		mailTo1.setBody(poemail);
   		link.href = mailTo1.getURL(true);
   		return true;
   } // count > 0
 
 	return false;
+}
+
+// GETTY
+var apiKey = '5kt5jxty5vvb8zxev3yzd4dz';
+
+var appendApiKeyHeader = function( xhr ) {
+  xhr.setRequestHeader('Api-Key', apiKey)
+}
+
+function GetSearchResults(words) {
+  var searchRequest = { "phrase": words }
+  $.ajax({
+    type: "GET",
+    beforeSend: appendApiKeyHeader,
+    url: "https://api.gettyimages.com/v3/search/creative",
+    data: searchRequest})
+    .success(function (data, textStatus, jqXHR) { /* use search results */ })
+    .fail(function (data, err) { /* handle errors */ });
 }
