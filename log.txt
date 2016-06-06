@@ -1,3 +1,6 @@
 textresults post: tree faustroll
 textresults post: fania faustroll
 textresults post: dave faustroll
+textresults post: live shakespeare
+textresults post: clear faustroll
+textresults post: hello faustroll
