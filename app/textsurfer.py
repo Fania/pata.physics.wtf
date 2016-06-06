@@ -321,7 +321,7 @@ def get_title(file):
 
 
 def pp_sent(w, f, p):  # gets w as lower case
-    out, pos = [], p[0]. # FIRST OCCURENCE
+    out, pos = [], p[0] # FIRST OCCURENCE
     ff = eval(f)
     pos_b, pos_a = pos, pos
     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
