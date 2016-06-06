@@ -10,14 +10,23 @@ Fania Raczinski + De Montfort University + 2015
 ## HOW TO
 
 ## OVH VPS SETUP
+
+IP: 92.222.73.21
+
 Test for errors:
 
 ```nginx -t```
-
 ```service nginx reload```
 
+Run on Ubuntu:
+
+```screen```
+```. venv/bin/activate```
+```gunicorn -c guni.py live:app```
+```ctrl+a+d```
 
 
+---
 
 git log --graph --full-history --all --date=format:"%a %d %b %Y" --pretty=format:"%h%x20%x20%ad%x09%d%x20%s" > prettyprint.txt
 
