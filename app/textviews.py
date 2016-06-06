@@ -20,6 +20,12 @@ def textresults():
     else:
         # request was a POST
         print 'textresults post: ', query, corpus  # data['query']
+
+        t = 'textresults post: ' + query +' '+ corpus + '\n'
+
+        with open("log.txt", "a") as mylog:
+            mylog.write(t)
+
         # qx = getResults(q)
 
         # all_sens structure:

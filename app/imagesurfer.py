@@ -36,16 +36,16 @@ import itertools
 
 
 def pataphysicalise(words):
-    print('inside pata: query words: ', words)
+    # print('inside pata: query words: ', words)
     sys_ws = []
     for word in words:
         o, _, _, _ = syzygy(word, 'faustroll')
-        print('syzygy result: ', o)
+        # print('syzygy result: ', o)
         if len(o) > 0:
             sys_ws.append(list(o))
-            print('created sys_ws')
+            # print('created sys_ws')
     # print('start itertools')
-    print(sys_ws)
+    # print(sys_ws)
     # out = itertools.product(*sys_ws)
     # print('end itertools')
     # print(words, sys_ws, list(out))

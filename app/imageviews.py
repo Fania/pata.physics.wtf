@@ -12,18 +12,18 @@ def images():
 def imageresults():
 
     oldquery = request.form['query']
-    print('oldquery ', oldquery)
+    # print('oldquery ', oldquery)
     choice = request.form['img_choice']
-    print('choice ', choice)
+    # print('choice ', choice)
 
     trans = transent(oldquery)
-    print('trans ', trans)
+    # print('trans ', trans)
 
     pata = pataphysicalise(trans[2])
-    print('pata ', pata)
+    # print('pata ', pata)
 
     query = pata[0][0]
-    print('query ', query)
+    # print('query ', query)
 
     if request.method == 'GET':
         print 'imageresults get: ', query, choice
