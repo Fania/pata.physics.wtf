@@ -1,7 +1,7 @@
 from flask import render_template, request
 from app import app
 from textsurfer import clinamen, syzygy, antinomy, calc_all
-import datetime
+import time
 
 
 @app.route('/text')
@@ -23,7 +23,10 @@ def textresults():
         print 'textresults post: ', query, corpus  # data['query']
         # qx = getResults(q)
 
-        t = 'textresults post: '+ datetime.today() +' '+ query +' '+ corpus + '\n'
+        date = time.strftime("%c")
+        print date
+
+        t = 'textresults post: '+ date +' '+ query +' '+ corpus + '\n'
 
         with open("log.txt", "a") as mylog:
             mylog.write(t)
