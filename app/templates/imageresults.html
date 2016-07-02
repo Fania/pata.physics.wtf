@@ -44,6 +44,8 @@
   var q = $('#iquery').data();
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
+  console.log(q)
+  console.log(q.query)
   function checkradio(){
     ch.checked = true;
   }
@@ -69,7 +71,7 @@
 <!-- SPIRAL -->
 <div id="tab1" class="tab_content">
   <header class="w3-container w3-theme-l4">
-    <h2>Spiral <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div></h2>
+    <h2>Spiral <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div> * {{ query }}</h2>
   </header>
   <div class="w3-container">
     <p>

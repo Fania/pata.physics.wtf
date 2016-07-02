@@ -79,6 +79,13 @@ def transent(sent):
     return translations
 
 
+
+
+##################################################
+#          NOT USED AT THE MOMENT                #
+################################################## 
+
+
 def getimages(pata, choice):
     for query in pata:
         if choice == 'flickr':
