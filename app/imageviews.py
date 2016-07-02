@@ -12,29 +12,27 @@ def images():
 def imageresults():
 
     oldquery = request.form['query']
-    print('oldquery ', oldquery)
+    # print('oldquery ', oldquery)
     choice = request.form['img_choice']
-    print('choice ', choice)
+    # print('choice ', choice)
 
-    trans = transent(oldquery)
-    print('trans ', trans)
+    translations = transent(oldquery)
+    print('trans ', translations)
 
-    pata = pataphysicalise(trans[2])
+    transplit = translations[2].split(' ')
+    pata = pataphysicalise(transplit)
     print('pata ', pata)
 
-    query = pata[0][0]
-    print('query ', query)
-
     if request.method == 'GET':
-        print 'imageresults get: ', query, choice
+        print 'imageresults get: ', 'test', choice
     else:
-        print 'imageresults post: ', query, choice
+        print 'imageresults post: ', 'test', choice
 
-        # images_imgs, translations = getimages(query, choice)
+        # images_imgs, trans = getimages(pata, choice)
         # images_len = len(images_imgs)
 
         # Javascript Img works but only with translations
-        images_imgs, translations = [], trans
+        images_imgs, trans = [], translations
         images_len = len(images_imgs)
 
         # Javascript with full pataphysicalisation

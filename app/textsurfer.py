@@ -231,7 +231,7 @@ def syzygy(w, c):
         words.update(get_nym('hypo', ws))
         words.update(get_nym('hyper', ws))
         words.update(get_nym('holo', ws))
-    # print('inside syzygy function: ', words)
+    print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
 
