@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
 from imagesurfer import getimages, transent, pataphysicalise
+import random
 
 
 @app.route('/images')
@@ -24,19 +25,17 @@ def imageresults():
     print('pata ', pata)
 
     if request.method == 'GET':
-        print 'imageresults get: ', 'test', choice
+        print 'imageresults get: ', random.sample(pata, 1), choice
     else:
-        print 'imageresults post: ', 'test', choice
+        print 'imageresults post: ', random.sample(pata, 1), choice
 
+        # Using Python API code
         # images_imgs, trans = getimages(pata, choice)
         # images_len = len(images_imgs)
 
-        # Javascript Img works but only with translations
+        # Using Javascript API code
         images_imgs, trans = [], translations
         images_len = len(images_imgs)
 
-        # Javascript with full pataphysicalisation
-        # images_imgs, translations = [], trans
-        # images_len = len(images_imgs)
 
         return render_template('imageresults.html', **locals())
