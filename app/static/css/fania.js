@@ -92,8 +92,9 @@ function gettysearch(query){
   }
   var searchRequest = {
     "phrase": query,
-    "page_size": 10,
+    "page_size": 10
   }
+  console.log('query ' + searchRequest.phrase)
   function GetSearchResults(callback) {
     $.ajax({
       type: "GET",
@@ -101,11 +102,13 @@ function gettysearch(query){
       url: "https://api.gettyimages.com/v3/search/images/creative",
       data: searchRequest})
       .success(function (data, textStatus, jqXHR) {
-        var imglist = []
+        console.log('data ' + data.images);
+        var imglist = [];
         $.each(data.images, function(i,item){
           imglist.push([item.title, item.display_sizes[0].uri, ""]);
         });
-        if (imglist.length === 10){
+        console.log('imglist ' + imglist);
+        if (imglist.length >= 10){
           var spiral_code = ' \
           <div class="spouter"> \
             <div class="spleft"> \

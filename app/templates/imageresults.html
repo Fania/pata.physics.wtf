@@ -34,7 +34,7 @@
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ oldquery }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> == {{ query }}
 </div>
 
 <!-- JAVASCRIPT -->
@@ -44,8 +44,6 @@
   var q = $('#iquery').data();
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
-  console.log(q)
-  console.log(q.query)
   function checkradio(){
     ch.checked = true;
   }
@@ -71,7 +69,7 @@
 <!-- SPIRAL -->
 <div id="tab1" class="tab_content">
   <header class="w3-container w3-theme-l4">
-    <h2>Spiral <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div> * {{ query }}</h2>
+    <h2>Spiral <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div></h2>
   </header>
   <div class="w3-container">
     <p>
