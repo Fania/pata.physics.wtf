@@ -189,7 +189,7 @@ color: #cfd8dc !important;
 .spright { float: right; width: 550px; height: 550px; }
 .spltrbltrbleft img { position: absolute; }
 .spltrbltrbright img { position: absolute; }
-a.spimg, a.spimg:hover { border: 0; }
+a.spimg, a.spimg:hover { border: 0;}
 
 /*Scroll Glide Bar Stuff*/
 div.wn {

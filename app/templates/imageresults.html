@@ -39,23 +39,37 @@
 </div>
 
 <!-- JAVASCRIPT -->
-<meta id="iquery" data-query="{{ query }}">
+<meta id="iquery0" data-query="{{ queries.0 }}">
+<meta id="iquery1" data-query="{{ queries.1 }}">
+<meta id="iquery2" data-query="{{ queries.2 }}">
+<meta id="iquery3" data-query="{{ queries.3 }}">
+<meta id="iquery4" data-query="{{ queries.4 }}">
+<meta id="iquery5" data-query="{{ queries.5 }}">
+<meta id="iquery6" data-query="{{ queries.6 }}">
+<meta id="iquery7" data-query="{{ queries.7 }}">
+<meta id="iquery8" data-query="{{ queries.8 }}">
+<meta id="iquery9" data-query="{{ queries.9 }}">
 <meta id="ichoice" data-choice="{{ choice }}">
 <script>(function(){
-  var q = $('#iquery').data();
+  var qs = [];
+  for (var x=0; x<10; x++){
+    tmp = "#iquery" + x;
+    qs[x] = $(tmp).data();
+    console.log(qs[x]);
+  }
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
   function checkradio(){
     ch.checked = true;
   }
   if (c.choice === 'flickr'){
-    flickrsearch(q.query);
+    flickrsearch(qs);
   }
   if (c.choice === 'getty'){
-    gettysearch(q.query);
+    gettysearch(q.queries);
   }
   if (c.choice === 'bing'){
-    bingsearch(q.query);
+    bingsearch(q.queries);
   }
   // if (c.choice === 'google'){
   //   googlesearch(q.query);

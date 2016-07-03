@@ -25,12 +25,14 @@ def imageresults():
     print('pata ', pata)
 
     # Get 1 random item from the list of pataphysicalised query terms to run the API call with
-    query = random.sample(pata, 1)[0]
+    # query = random.sample(pata, 1)[0]
+    queries = random.sample(pata, 10)
+    print queries
 
     if request.method == 'GET':
-        print 'imageresults get: ', query, choice
+        print 'imageresults get: ', queries, choice
     else:
-        print 'imageresults post: ', query, choice
+        print 'imageresults post: ', queries, choice
 
         # Using Python API code
         # images_imgs, trans = getimages(pata, choice)
