@@ -1,6 +1,7 @@
 from flask import render_template, url_for, request
 from app import app
 from videosurfer import *
+from imagesurfer import transent, pataphysicalise
 
 
 @app.route('/videos')
@@ -22,6 +23,13 @@ def videoresults():
         # qx = getResults(q)
 
         # VIDEOS
+        # translations = transent(query)
+        # print('trans ', translations)
+
+        # transplit = translations[2].split(' ')
+        # pata = pataphysicalise(transplit)
+
+
         videos_vids, translations = getvideos(query)
         videos_len = len(videos_vids)
 
