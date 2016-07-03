@@ -27,6 +27,7 @@ def imageresults():
     # Get 1 random item from the list of pataphysicalised query terms to run the API call with
     # query = random.sample(pata, 1)[0]
     queries = random.sample(pata, 10)
+    # queries = pata
     print queries
 
     if request.method == 'GET':
