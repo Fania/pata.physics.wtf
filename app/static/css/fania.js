@@ -1,21 +1,42 @@
 // FLICKR
 function flickrsearch(queries){
-  var imglist = []
+  var imglist = [];
+  // console.log(queries);
+  // console.log(queries[0].query);
+  // console.log(queries[9].query);
   for(var x=0; x<10; x++){
+    console.log("query " + x + " " + queries[x].query);
     $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
       {
-        tags: queries[x],
+        tags: queries[x].query,
         tagmode: "all",
         format: "json"
       },
       function(data) {
-        // console.log(data.items);
-        imglist.push([data.items[x].title, data.items[x].media.m, data.items[x].link]);
-        // console.log("inside flickrsearch function" + imglist);
+        var title = "";
+        var media = "";
+        var link = "";
+        if (data.items[0] != undefined) {
+          title = data.items[0].title;
+          media = data.items[0].media.m;
+          link = data.items[0].link;
+        }
+
+        console.log("title " + title);
+        console.log("media.m " + media);
+        console.log("link " + link);
+        imglist.push([title, media, link]);
+
+
+
+        // console.log("inside function " + imglist);
+        // var tmp = [data.items[0].title, data.items[0].media.m, data.items[0].link];
+        // imglist.push(tmp);
+        // console.log("inside flickrsearch function loop " + x + " " + imglist);
       } // end function data
     ); // end getJSON
-  }
-
+  } // end of for loop
+  // console.log("inside flickrsearch but outside of for loop " + imglist);
   if (imglist.length === 10){
     console.log("inside if");
     var spiral_code = ' \
