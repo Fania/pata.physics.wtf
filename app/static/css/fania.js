@@ -27,30 +27,40 @@ function flickrsearch(queries){
         // console.log("link " + link);
         imglist.push([title, media, link]);
 
+        // call a function outside to build the fucking list!
+        //ImgListVessel("HELLOOOO");
+        //yep, now try to build the list:
+        ImgListVessel([title, media, link]);
 
-        console.log("imglist length " + imglist.length);
-        // console.log("imglist in " + imglist);
         // return imglist;
         // console.log("inside function " + imglist);
-        // var tmp = [data.items[0].title, data.items[0].media.m, data.items[0].link];
-        // imglist.push(tmp);
         // console.log("inside flickrsearch function loop " + x + " " + imglist);
+        // if(imglist.length > 0) {
+        //     console.log("imglist length " + imglist.length);
+        //     console.log("imglist length is not zero " + (imglist.length>0));
+        // }
+
       } // end function data
     ); // end getJSON
 
-    if(x===9) {
-      console.log("x===9");
-      // console.log("imglist at end of loop " + imglist);
-    //   createSpiral(imglist);
-      console.log(imglist);
-   }
-
+ 
   } // end of for loop
-  console.log("imglist out " + imglist);
+  console.log("imglist.length at end of for loop: " + imglist.length);
 
   // console.log("inside flickrsearch but outside of for loop " + imglist);
   // createSpiral(imglist);
- 
+ function ImgListVessel(flickrImgItem){
+    var flickrImage = [];
+    var allFlickrImages = [];
+    flickrImage[0] = flickrImgItem;
+    allFlickrImages.push(flickrImage[0]);
+    if (allFlickrImages[0] != "") {
+      console.log(flickrImgItem);
+    }
+    // if (flickrImages > 0) {
+    //   console.log(flickrImages);
+    // }
+ }
 
 }; // end flickrsearch
 
