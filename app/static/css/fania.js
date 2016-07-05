@@ -49,17 +49,19 @@ function flickrsearch(queries){
 
   // console.log("inside flickrsearch but outside of for loop " + imglist);
   // createSpiral(imglist);
+  var allFlickrImages = [];
  function ImgListVessel(flickrImgItem){
-    var flickrImage = [];
-    var allFlickrImages = [];
-    flickrImage[0] = flickrImgItem;
-    allFlickrImages.push(flickrImage[0]);
+
+    // allFlickrImages.push(flickrImgItem);
+    // console.log("all " + allFlickrImages);
     if (allFlickrImages[0] != "") {
-      console.log(flickrImgItem);
+      allFlickrImages.push(flickrImgItem);
+      // console.log("all " + allFlickrImages.length);
     }
-    // if (flickrImages > 0) {
-    //   console.log(flickrImages);
-    // }
+    // create(allFlickrImages);
+    if (allFlickrImages.length === 10) {
+      createSpiral(allFlickrImages);
+    }
  }
 
 }; // end flickrsearch
