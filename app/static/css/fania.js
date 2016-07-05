@@ -29,9 +29,8 @@ function flickrsearch(queries){
 
 
         console.log("imglist length " + imglist.length);
-        return function(data){
-          createSpiral(imglist);
-        }
+        // console.log("imglist in " + imglist);
+        // return imglist;
         // console.log("inside function " + imglist);
         // var tmp = [data.items[0].title, data.items[0].media.m, data.items[0].link];
         // imglist.push(tmp);
@@ -39,13 +38,15 @@ function flickrsearch(queries){
       } // end function data
     ); // end getJSON
 
-    // if(x===9) {
-    //   console.log("x===9");
-    //   console.log("imglist at end of loop " + imglist);
+    if(x===9) {
+      console.log("x===9");
+      // console.log("imglist at end of loop " + imglist);
     //   createSpiral(imglist);
-    // }
+      console.log(imglist);
+   }
 
   } // end of for loop
+  console.log("imglist out " + imglist);
 
   // console.log("inside flickrsearch but outside of for loop " + imglist);
   // createSpiral(imglist);
