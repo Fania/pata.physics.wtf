@@ -33,7 +33,7 @@ function imgList(img){
   if (allImages.length === 10) {
     createSpiral(allImages);
   }
-} // end ImgListVessel
+} // end imgList
 
 function createSpiral(imglist){
   // console.log("inside createSpiral function");
