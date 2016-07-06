@@ -16,26 +16,24 @@ function flickrsearch(queries){
           media = data.items[0].media.m;
           link = data.items[0].link;
         }
-
-        ImgListVessel([title, media, link]);
-
+        // call external function with current first result
+        imgList([title, media, link]);
       } // end function data
     ); // end getJSON
- 
   } // end of for loop
-
-  var allFlickrImages = [];
-  function ImgListVessel(flickrImgItem){
-    if (allFlickrImages[0] != "") {
-      allFlickrImages.push(flickrImgItem);
-    }
-    if (allFlickrImages.length === 10) {
-      createSpiral(allFlickrImages);
-    }
-  }
-
 }; // end flickrsearch
 
+var allImages = [];
+// functio to accumulate images until 10 are reached and then
+// calls the createSpiral function to display them all
+function imgList(img){
+  if (allImages[0] != "") {
+    allImages.push(img);
+  }
+  if (allImages.length === 10) {
+    createSpiral(allImages);
+  }
+} // end ImgListVessel
 
 function createSpiral(imglist){
   // console.log("inside createSpiral function");
