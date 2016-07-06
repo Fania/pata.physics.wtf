@@ -9,7 +9,7 @@ yt_key = 'AIzaSyDPZlMpFVZUBfhD4ycjfUZzCR_mVDP59jY'
 def getvideos(query):
     out = []
     translations = transent(query)
-    print('trans ', translations)
+    # print('trans ', translations)
     transplit = translations[2].split(' ')
     tmp = pataphysicalise(transplit)
 
@@ -20,12 +20,10 @@ def getvideos(query):
 
     for x in tmp:
         y = ' '.join(x)
-        # z = transent(y)
         b2 = "q=%s" % translations[2]
         yturl = ''.join([b0, b1, b2, b3, b4])
         vids = requests.get(yturl)
         if vids.json()['items']:
-            # trans = z
             for i in vids.json()['items']:
                 vidtitle = i['snippet']['title']
                 vidthumb = i['snippet']['thumbnails']['default']['url']

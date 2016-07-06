@@ -24,7 +24,7 @@ def textresults():
         # qx = getResults(q)
 
         date = time.strftime("%c")
-        t = 'textresults post: '+ date +' '+ query +' '+ corpus + '\n'
+        t = 'textresults post: '+ date +' ['+ query +'] '+ corpus + '\n'
         with open("log.txt", "a") as mylog:
             mylog.write(t)
 
