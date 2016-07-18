@@ -22,7 +22,7 @@ def videoresults():
         #request was a POST
         print 'videoresults post: ', query  # data['query']
         date = time.strftime("%c")
-        t = 'videoresults post: '+ date +' ['+ query +']' +'\n'
+        t = 'videoresults post: '+ date+' '+oldquery+' ['+ query +']' +'\n'
         with open("log.txt", "a") as mylog:
             mylog.write(t)
 

@@ -35,7 +35,7 @@ def imageresults():
     else:
         print 'imageresults post: ', queries, choice
         date = time.strftime("%c")
-        t = 'imageresults post: '+ date +' ['+ ', '.join(queries) +'] '+ choice +'\n'
+        t = 'imageresults post: '+date+' '+oldquery+' ['+ ', '.join(queries) +'] '+ choice +'\n'
         with open("log.txt", "a") as mylog:
             mylog.write(t)
 

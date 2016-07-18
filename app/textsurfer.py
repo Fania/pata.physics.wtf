@@ -202,6 +202,7 @@ def get_results(words, algo, dic):
 
 def get_nym(nym, wset):
     out = []
+    # what is happening here? why do i have hyponyms as default?
     hhh = wset.hyponyms()
     if nym == 'hypo':
         hhh = wset.hyponyms()

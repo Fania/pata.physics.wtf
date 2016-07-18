@@ -7,19 +7,28 @@ function flickrsearch(queries){
         tagmode: "all",
         format: "json"
       },
-      function(data) {
+      function(data,status,ajax) {
+        console.log("status " + status);
+        console.log("ajax" + ajax);
         var title = "";
         var media = "";
         var link = "";
+        var queryx = "TEST";
         if (data.items[0] != undefined) {
           title = data.items[0].title;
           media = data.items[0].media.m;
           link = data.items[0].link;
+          console.log("test");
+          // HOW DO I GET THE X NUMBER?????
+          console.log(x);
+          console.log(queries);
+          // queryx = queries[x].query;
         }
         // call external function with current first result
-        imgList([title, media, link]);
+        imgList([title, media, link, queryx]);
       } // end function data
     ); // end getJSON
+    // imgList([title, media, link, queryx]);
   } // end of for loop
 }; // end flickrsearch
 
@@ -36,15 +45,14 @@ function imgList(img){
 } // end imgList
 
 function createSpiral(imglist){
-  // console.log("inside createSpiral function");
+  // ' -*- '+imglist[3][3]
   if (imglist.length === 10){
-    // console.log("inside if");
     var spiral_code = ' \
     <div class="spouter"> \
       <div class="spleft"> \
         <div class="spltop"> \
           <div class="spltleft"> \
-            <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+'" height="210" width="210"/></a> \
+            <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+' --- '+imglist[3][3]+'" height="210" width="210"/></a> \
           </div> \
           <div class="spltright"> \
             <div class="spltrtop"> \
@@ -121,7 +129,7 @@ function gettysearch(query){
     "phrase": query,
     "page_size": 10
   }
-  console.log('query ' + searchRequest.phrase)
+  // console.log('query ' + searchRequest.phrase)
   function GetSearchResults(callback) {
     $.ajax({
       type: "GET",
@@ -129,81 +137,13 @@ function gettysearch(query){
       url: "https://api.gettyimages.com/v3/search/images/creative",
       data: searchRequest})
       .success(function (data, textStatus, jqXHR) {
-        console.log('data ' + data.images);
-        var imglist = [];
+        // console.log('data ' + data.images);
+        var imgs = [];
         $.each(data.images, function(i,item){
-          imglist.push([item.title, item.display_sizes[0].uri, ""]);
+          imgs.push([item.title, item.display_sizes[0].uri, ""]);
         });
-        console.log('imglist ' + imglist);
-        if (imglist.length >= 10){
-          var spiral_code = ' \
-          <div class="spouter"> \
-            <div class="spleft"> \
-              <div class="spltop"> \
-                <div class="spltleft"> \
-                  <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+'" height="210" width="210"/></a> \
-                </div> \
-                <div class="spltright"> \
-                  <div class="spltrtop"> \
-                    <a id="a8" class="spimg" href="'+imglist[8][2]+'" ><img id="img8" src="'+imglist[8][1]+'" title="'+imglist[8][0]+'" height="130" width="130"/></a> \
-                  </div> \
-                  <div class="spltrbottom"> \
-                    <div class="spltrbleft"> \
-                      <div class="spltrbltop"> \
-                        <div class="spltrbltleft"> \
-                          <a id="a0" class="spimg" href="'+imglist[0][2]+'" ><img id="img0" src="'+imglist[0][1]+'" title="'+imglist[0][0]+'" height="30" width="30"/></a> \
-                        </div> \
-                        <div class="spltrbltright"> \
-                          <div class="spltrbltrtop"> \
-                            <a id="a1" class="spimg" href="'+imglist[1][2]+'" ><img id="img1" src="'+imglist[1][1]+'" title="'+imglist[1][0]+'" height="20" width="20"/></a> \
-                          </div> \
-                          <div class="spltrbltrbottom"> \
-                            <div class="spltrbltrbleft"> \
-                              <a id="a5" class="spimg" href="'+imglist[5][2]+'" ><img id="img5" src="'+imglist[5][1]+'" title="'+imglist[5][0]+'" height="10" width="10"/></a> \
-                            </div> \
-                            <div class="spltrbltrbright"> \
-                              <a id="a6" class="spimg" href="'+imglist[6][2]+'" ><img id="img6" src="'+imglist[6][1]+'" title="'+imglist[6][0]+'" height="10" width="10"/></a> \
-                            </div> \
-                          </div> \
-                        </div> \
-                      </div> \
-                      <div class="spltrblbottom"> \
-                        <a id="a7" class="spimg" href="'+imglist[7][2]+'" ><img id="img7" src="'+imglist[7][1]+'" title="'+imglist[7][0]+'" height="50" width="50"/></a> \
-                      </div> \
-                    </div> \
-                    <div class="spltrbright"> \
-                      <a id="a2" class="spimg" href="'+imglist[2][2]+'" ><img id="img2" src="'+imglist[2][1]+'" title="'+imglist[2][0]+'" height="80" width="80"/></a> \
-                    </div> \
-                  </div> \
-                </div> \
-              </div> \
-              <div class="splbottom"> \
-                <a id="a9" class="spimg" href="'+imglist[9][2]+'" ><img id="img9" src="'+imglist[9][1]+'" title="'+imglist[9][0]+'" height="340" width="340"/></a> \
-              </div> \
-            </div> \
-            <div class="spright"> \
-              <a id="a4" class="spimg" href="'+imglist[4][2]+'" ><img id="img4" src="'+imglist[4][1]+'" title="'+imglist[4][0]+'" height="550" width="550"/></a> \
-            </div> \
-          </div> \
-          ';
-          var list_code = [];
-          for (i in imglist) {
-            var img = ' \
-              <div class="w3-col s12 m6 l3 w3-padding"> \
-                <a href="'+imglist[i][2]+'"> \
-                  <img src="'+imglist[i][1]+'" \
-                  title="'+imglist[i][0]+'" style="width:100%"> \
-                </a> \
-              </div> \
-            ';
-            list_code.push(img);
-          }
-          $('#img_spiral_div').html(spiral_code);
-          $('#img_list_div').html(list_code);
-        }
-        else{
-          $('.img_empty').wrap("<div>Not enough results found.</div>");
-        } // end else
+        // console.log('imglist ' + imgs);
+        createSpiral(imgs)
       }) // end of success
       .fail(function (data, err) {
         console.log('API error');
@@ -211,6 +151,8 @@ function gettysearch(query){
   } // end GetSearchResults
   GetSearchResults();
 }; // end of gettysearch
+
+
 
 // BING
 function bingsearch(query){
@@ -227,75 +169,7 @@ function bingsearch(query){
         $.each(data.d.results, function(i,item){
           imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
         });
-        if (imglist.length === 10){
-          var spiral_code = ' \
-          <div class="spouter"> \
-            <div class="spleft"> \
-              <div class="spltop"> \
-                <div class="spltleft"> \
-                  <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+'" height="210" width="210"/></a> \
-                </div> \
-                <div class="spltright"> \
-                  <div class="spltrtop"> \
-                    <a id="a8" class="spimg" href="'+imglist[8][2]+'" ><img id="img8" src="'+imglist[8][1]+'" title="'+imglist[8][0]+'" height="130" width="130"/></a> \
-                  </div> \
-                  <div class="spltrbottom"> \
-                    <div class="spltrbleft"> \
-                      <div class="spltrbltop"> \
-                        <div class="spltrbltleft"> \
-                          <a id="a0" class="spimg" href="'+imglist[0][2]+'" ><img id="img0" src="'+imglist[0][1]+'" title="'+imglist[0][0]+'" height="30" width="30"/></a> \
-                        </div> \
-                        <div class="spltrbltright"> \
-                          <div class="spltrbltrtop"> \
-                            <a id="a1" class="spimg" href="'+imglist[1][2]+'" ><img id="img1" src="'+imglist[1][1]+'" title="'+imglist[1][0]+'" height="20" width="20"/></a> \
-                          </div> \
-                          <div class="spltrbltrbottom"> \
-                            <div class="spltrbltrbleft"> \
-                              <a id="a5" class="spimg" href="'+imglist[5][2]+'" ><img id="img5" src="'+imglist[5][1]+'" title="'+imglist[5][0]+'" height="10" width="10"/></a> \
-                            </div> \
-                            <div class="spltrbltrbright"> \
-                              <a id="a6" class="spimg" href="'+imglist[6][2]+'" ><img id="img6" src="'+imglist[6][1]+'" title="'+imglist[6][0]+'" height="10" width="10"/></a> \
-                            </div> \
-                          </div> \
-                        </div> \
-                      </div> \
-                      <div class="spltrblbottom"> \
-                        <a id="a7" class="spimg" href="'+imglist[7][2]+'" ><img id="img7" src="'+imglist[7][1]+'" title="'+imglist[7][0]+'" height="50" width="50"/></a> \
-                      </div> \
-                    </div> \
-                    <div class="spltrbright"> \
-                      <a id="a2" class="spimg" href="'+imglist[2][2]+'" ><img id="img2" src="'+imglist[2][1]+'" title="'+imglist[2][0]+'" height="80" width="80"/></a> \
-                    </div> \
-                  </div> \
-                </div> \
-              </div> \
-              <div class="splbottom"> \
-                <a id="a9" class="spimg" href="'+imglist[9][2]+'" ><img id="img9" src="'+imglist[9][1]+'" title="'+imglist[9][0]+'" height="340" width="340"/></a> \
-              </div> \
-            </div> \
-            <div class="spright"> \
-              <a id="a4" class="spimg" href="'+imglist[4][2]+'" ><img id="img4" src="'+imglist[4][1]+'" title="'+imglist[4][0]+'" height="550" width="550"/></a> \
-            </div> \
-          </div> \
-          ';
-          var list_code = [];
-          for (i in imglist) {
-            var img = ' \
-              <div class="w3-col s12 m6 l3 w3-padding"> \
-                <a href="'+imglist[i][2]+'"> \
-                  <img src="'+imglist[i][1]+'" \
-                  title="'+imglist[i][0]+'" style="width:100%"> \
-                </a> \
-              </div> \
-            ';
-            list_code.push(img);
-          }
-          $('#img_spiral_div').html(spiral_code);
-          $('#img_list_div').html(list_code);
-        }
-        else{
-          $('.img_empty').wrap("<div>Not enough results found.</div>");
-        } // end else
+        createSpiral(imglist)
       }, // end of success
       failure: function (err) {
         console.log('API error');
