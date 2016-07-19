@@ -193,11 +193,12 @@ def get_results(words, algo, dic):
         for e, p in files.items():
             f = get_title(e)
             sources.add(f)
-            sent = pp_sent(r.lower(), e, p)
-            o = (f, sent, algo)
-            if sent != [] and o not in out:
-                total += 1
-                out.add(o)
+            sents = pp_sent(r.lower(), e, p)
+            for s in sents:
+                o = (f, s, algo)
+                if s != [] and o not in out:
+                    total += 1
+                    out.add(o)
     return out, sources, total
 
 
@@ -375,46 +376,47 @@ def get_title(file):
 
 def pp_sent(w, f, p):  # gets w as lower case
     # w = word, f = file, p = [positions]
-    print('pp_sent', w, f, p)
+    # print('pp_sent', w, f, p)
+    oout = []
 
-    
-
-    out, pos = [], p[0] # FIRST OCCURENCE
-    ff = eval(f)
-    pos_b, pos_a = pos, pos
-    punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
-    for i in range(1, 10):
-        if ff[pos - i] in punct:
-            pos_b = pos - (i - 1)
-            break
-        else:
-            if ff[pos - 5]:
-                pos_b = pos - 5
+    for x in p:
+        out, pos = [], x # FIRST OCCURENCE
+        ff = eval(f)
+        pos_b, pos_a = pos, pos
+        punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
+        for i in range(1, 10):
+            if ff[pos - i] in punct:
+                pos_b = pos - (i - 1)
+                break
             else:
-                pos_b = pos
-    for j in range(1, 10):
-        if ff[pos + j] in punct:
-            pos_a = pos + j
-            break
-        else:
-            if ff[pos + 5]:
-                pos_a = pos + 5
+                if ff[pos - 5]:
+                    pos_b = pos - 5
+                else:
+                    pos_b = pos
+        for j in range(1, 10):
+            if ff[pos + j] in punct:
+                pos_a = pos + j
+                break
             else:
-                pos_a = pos
-    if pos_b >= 0 and pos_a <= len(ff):
-        pre = ' '.join(ff[pos_b:pos])
-        post = ' '.join(ff[pos+1:pos_a])
-        out = (pre, w, post)
-        print("pp_sent", out)
+                if ff[pos + 5]:
+                    pos_a = pos + 5
+                else:
+                    pos_a = pos
+        if pos_b >= 0 and pos_a <= len(ff):
+            pre = ' '.join(ff[pos_b:pos])
+            post = ' '.join(ff[pos+1:pos_a])
+            out = (pre, w, post)
+            # print("pp_sent", out)
+            oout.append(out)
 
 
     one = "pp_sent "
     two = (w,f,p)
     three = "sentence "
-    four = one + str(two) + three + str(out) + "\n"
+    four = one + str(two) + three + str(oout) + "\n"
     with open("ppsent2.txt", "a") as mylog:
         mylog.write(four)
-    return out
+    return oout
 
 
 # http://mwh.geek.nz/2009/04/26/python-damerau-levenshtein-distance/
