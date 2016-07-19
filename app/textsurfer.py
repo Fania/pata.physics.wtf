@@ -8,6 +8,7 @@ from collections import defaultdict
 
 import os
 import re
+import time
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -113,72 +114,72 @@ def setupcorpus(f, lang, dic, d):
 
 
 setupcorpus(l_00, en_stop, l_dict, 'l'), print('added 00 - FT')
-# setupcorpus(l_01, en_stop, l_dict, 'l'), print('added 01 - FT')
-# setupcorpus(l_02, en_stop, l_dict, 'l'), print('added 02 - FT')
-# setupcorpus(l_03, en_stop, l_dict, 'l'), print('added 03 - FT')
-# setupcorpus(l_04, fr_stop, l_dict, 'l'), print('added 04 - FT')
-# setupcorpus(l_05, en_stop, l_dict, 'l'), print('added 05 - FT')
-# setupcorpus(l_06, fr_stop, l_dict, 'l'), print('added 06 - FT')
-# setupcorpus(l_07, en_stop, l_dict, 'l'), print('added 07 - FT')
-# setupcorpus(l_08, fr_stop, l_dict, 'l'), print('added 08 - FT')
-# setupcorpus(l_09, fr_stop, l_dict, 'l'), print('added 09 - FT')
-# setupcorpus(l_10, en_stop, l_dict, 'l'), print('added 10 - FT')
-# setupcorpus(l_11, en_stop, l_dict, 'l'), print('added 11 - FT')
-# setupcorpus(l_12, fr_stop, l_dict, 'l'), print('added 12 - FT')
-# setupcorpus(l_13, fr_stop, l_dict, 'l'), print('added 13 - FT')
-# setupcorpus(l_14, en_stop, l_dict, 'l'), print('added 14 - FT')
-# setupcorpus(l_15, fr_stop, l_dict, 'l'), print('added 15 - FT')
-# setupcorpus(l_16, en_stop, l_dict, 'l'), print('added 16 - FT')
-# setupcorpus(l_17, en_stop, l_dict, 'l'), print('added 17 - FT')
-# setupcorpus(l_18, en_stop, l_dict, 'l'), print('added 18 - FT')
-# setupcorpus(l_19, en_stop, l_dict, 'l'), print('added 19 - FT')
-# setupcorpus(l_20, en_stop, l_dict, 'l'), print('added 20 - FT')
-# setupcorpus(l_21, en_stop, l_dict, 'l'), print('added 21 - FT')
-# setupcorpus(l_22, fr_stop, l_dict, 'l'), print('added 22 - FT')
-# setupcorpus(l_23, de_stop, l_dict, 'l'), print('added 23 - FT')
-# setupcorpus(l_24, fr_stop, l_dict, 'l'), print('added 24 - FT')
-# setupcorpus(l_25, en_stop, l_dict, 'l'), print('added 25 - FT')
-# setupcorpus(l_26, en_stop, l_dict, 'l'), print('added 26 - FT')
-# setupcorpus(l_27, en_stop, l_dict, 'l'), print('added 27 - FT')
+setupcorpus(l_01, en_stop, l_dict, 'l'), print('added 01 - FT')
+setupcorpus(l_02, en_stop, l_dict, 'l'), print('added 02 - FT')
+setupcorpus(l_03, en_stop, l_dict, 'l'), print('added 03 - FT')
+setupcorpus(l_04, fr_stop, l_dict, 'l'), print('added 04 - FT')
+setupcorpus(l_05, en_stop, l_dict, 'l'), print('added 05 - FT')
+setupcorpus(l_06, fr_stop, l_dict, 'l'), print('added 06 - FT')
+setupcorpus(l_07, en_stop, l_dict, 'l'), print('added 07 - FT')
+setupcorpus(l_08, fr_stop, l_dict, 'l'), print('added 08 - FT')
+setupcorpus(l_09, fr_stop, l_dict, 'l'), print('added 09 - FT')
+setupcorpus(l_10, en_stop, l_dict, 'l'), print('added 10 - FT')
+setupcorpus(l_11, en_stop, l_dict, 'l'), print('added 11 - FT')
+setupcorpus(l_12, fr_stop, l_dict, 'l'), print('added 12 - FT')
+setupcorpus(l_13, fr_stop, l_dict, 'l'), print('added 13 - FT')
+setupcorpus(l_14, en_stop, l_dict, 'l'), print('added 14 - FT')
+setupcorpus(l_15, fr_stop, l_dict, 'l'), print('added 15 - FT')
+setupcorpus(l_16, en_stop, l_dict, 'l'), print('added 16 - FT')
+setupcorpus(l_17, en_stop, l_dict, 'l'), print('added 17 - FT')
+setupcorpus(l_18, en_stop, l_dict, 'l'), print('added 18 - FT')
+setupcorpus(l_19, en_stop, l_dict, 'l'), print('added 19 - FT')
+setupcorpus(l_20, en_stop, l_dict, 'l'), print('added 20 - FT')
+setupcorpus(l_21, en_stop, l_dict, 'l'), print('added 21 - FT')
+setupcorpus(l_22, fr_stop, l_dict, 'l'), print('added 22 - FT')
+setupcorpus(l_23, de_stop, l_dict, 'l'), print('added 23 - FT')
+setupcorpus(l_24, fr_stop, l_dict, 'l'), print('added 24 - FT')
+setupcorpus(l_25, en_stop, l_dict, 'l'), print('added 25 - FT')
+setupcorpus(l_26, en_stop, l_dict, 'l'), print('added 26 - FT')
+setupcorpus(l_27, en_stop, l_dict, 'l'), print('added 27 - FT')
 
 setupcorpus(s_00, en_stop, s_dict, 's'), print('added 00 - SH')
-# setupcorpus(s_01, en_stop, s_dict, 's'), print('added 01 - SH')
-# setupcorpus(s_02, en_stop, s_dict, 's'), print('added 02 - SH')
-# setupcorpus(s_03, en_stop, s_dict, 's'), print('added 03 - SH')
-# setupcorpus(s_04, en_stop, s_dict, 's'), print('added 04 - SH')
-# setupcorpus(s_05, en_stop, s_dict, 's'), print('added 05 - SH')
-# setupcorpus(s_06, en_stop, s_dict, 's'), print('added 06 - SH')
-# setupcorpus(s_07, en_stop, s_dict, 's'), print('added 07 - SH')
-# setupcorpus(s_08, en_stop, s_dict, 's'), print('added 08 - SH')
-# setupcorpus(s_09, en_stop, s_dict, 's'), print('added 09 - SH')
-# setupcorpus(s_10, en_stop, s_dict, 's'), print('added 10 - SH')
-# setupcorpus(s_11, en_stop, s_dict, 's'), print('added 11 - SH')
-# setupcorpus(s_12, en_stop, s_dict, 's'), print('added 12 - SH')
-# setupcorpus(s_13, en_stop, s_dict, 's'), print('added 13 - SH')
-# setupcorpus(s_14, en_stop, s_dict, 's'), print('added 14 - SH')
-# setupcorpus(s_15, en_stop, s_dict, 's'), print('added 15 - SH')
-# setupcorpus(s_16, en_stop, s_dict, 's'), print('added 16 - SH')
-# setupcorpus(s_17, en_stop, s_dict, 's'), print('added 17 - SH')
-# setupcorpus(s_18, en_stop, s_dict, 's'), print('added 18 - SH')
-# setupcorpus(s_19, en_stop, s_dict, 's'), print('added 19 - SH')
-# setupcorpus(s_20, en_stop, s_dict, 's'), print('added 20 - SH')
-# setupcorpus(s_21, en_stop, s_dict, 's'), print('added 21 - SH')
-# setupcorpus(s_22, en_stop, s_dict, 's'), print('added 22 - SH')
-# setupcorpus(s_23, en_stop, s_dict, 's'), print('added 23 - SH')
-# setupcorpus(s_24, en_stop, s_dict, 's'), print('added 24 - SH')
-# setupcorpus(s_25, en_stop, s_dict, 's'), print('added 25 - SH')
-# setupcorpus(s_26, en_stop, s_dict, 's'), print('added 26 - SH')
-# setupcorpus(s_27, en_stop, s_dict, 's'), print('added 27 - SH')
-# setupcorpus(s_28, en_stop, s_dict, 's'), print('added 28 - SH')
-# setupcorpus(s_29, en_stop, s_dict, 's'), print('added 29 - SH')
-# setupcorpus(s_30, en_stop, s_dict, 's'), print('added 30 - SH')
-# setupcorpus(s_31, en_stop, s_dict, 's'), print('added 31 - SH')
-# setupcorpus(s_32, en_stop, s_dict, 's'), print('added 32 - SH')
-# setupcorpus(s_33, en_stop, s_dict, 's'), print('added 33 - SH')
-# setupcorpus(s_34, en_stop, s_dict, 's'), print('added 34 - SH')
-# setupcorpus(s_35, en_stop, s_dict, 's'), print('added 35 - SH')
-# setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
-# setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
+setupcorpus(s_01, en_stop, s_dict, 's'), print('added 01 - SH')
+setupcorpus(s_02, en_stop, s_dict, 's'), print('added 02 - SH')
+setupcorpus(s_03, en_stop, s_dict, 's'), print('added 03 - SH')
+setupcorpus(s_04, en_stop, s_dict, 's'), print('added 04 - SH')
+setupcorpus(s_05, en_stop, s_dict, 's'), print('added 05 - SH')
+setupcorpus(s_06, en_stop, s_dict, 's'), print('added 06 - SH')
+setupcorpus(s_07, en_stop, s_dict, 's'), print('added 07 - SH')
+setupcorpus(s_08, en_stop, s_dict, 's'), print('added 08 - SH')
+setupcorpus(s_09, en_stop, s_dict, 's'), print('added 09 - SH')
+setupcorpus(s_10, en_stop, s_dict, 's'), print('added 10 - SH')
+setupcorpus(s_11, en_stop, s_dict, 's'), print('added 11 - SH')
+setupcorpus(s_12, en_stop, s_dict, 's'), print('added 12 - SH')
+setupcorpus(s_13, en_stop, s_dict, 's'), print('added 13 - SH')
+setupcorpus(s_14, en_stop, s_dict, 's'), print('added 14 - SH')
+setupcorpus(s_15, en_stop, s_dict, 's'), print('added 15 - SH')
+setupcorpus(s_16, en_stop, s_dict, 's'), print('added 16 - SH')
+setupcorpus(s_17, en_stop, s_dict, 's'), print('added 17 - SH')
+setupcorpus(s_18, en_stop, s_dict, 's'), print('added 18 - SH')
+setupcorpus(s_19, en_stop, s_dict, 's'), print('added 19 - SH')
+setupcorpus(s_20, en_stop, s_dict, 's'), print('added 20 - SH')
+setupcorpus(s_21, en_stop, s_dict, 's'), print('added 21 - SH')
+setupcorpus(s_22, en_stop, s_dict, 's'), print('added 22 - SH')
+setupcorpus(s_23, en_stop, s_dict, 's'), print('added 23 - SH')
+setupcorpus(s_24, en_stop, s_dict, 's'), print('added 24 - SH')
+setupcorpus(s_25, en_stop, s_dict, 's'), print('added 25 - SH')
+setupcorpus(s_26, en_stop, s_dict, 's'), print('added 26 - SH')
+setupcorpus(s_27, en_stop, s_dict, 's'), print('added 27 - SH')
+setupcorpus(s_28, en_stop, s_dict, 's'), print('added 28 - SH')
+setupcorpus(s_29, en_stop, s_dict, 's'), print('added 29 - SH')
+setupcorpus(s_30, en_stop, s_dict, 's'), print('added 30 - SH')
+setupcorpus(s_31, en_stop, s_dict, 's'), print('added 31 - SH')
+setupcorpus(s_32, en_stop, s_dict, 's'), print('added 32 - SH')
+setupcorpus(s_33, en_stop, s_dict, 's'), print('added 33 - SH')
+setupcorpus(s_34, en_stop, s_dict, 's'), print('added 34 - SH')
+setupcorpus(s_35, en_stop, s_dict, 's'), print('added 35 - SH')
+setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
+setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
 
@@ -219,9 +220,29 @@ def get_nym(nym, wset):
 
 
 def clinamen(w, c, i):
+    # l_00 is the faustroll text
+    # l_10 is arabian nights
+    # s_23 is midsummer nights dream
+    # words = set([item for item in l_00
+    # wordsMND = set([item for item in s_23
+    #             if dameraulevenshtein(w, item) <= i])
+    # wordsAN = set([item for item in l_10
+    #             if dameraulevenshtein(w, item) <= i])
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
     out, sources, total = get_results(words, 'Clinamen', c)
+    
+    # t = 'clinamen: MND = %s' % wordsMND
+    # s = 'clinamen: AN = %s' %wordsAN
+    # f = 'clinamen: F = %s' % words
+    # with open("thesis.txt", "a") as mylog:
+        # mylog.write(t)
+        # mylog.write('\n')
+        # mylog.write(s)
+        # mylog.write('\n')
+        # mylog.write(f)
+        # mylog.write('\n')
+
     return out, words, sources, total
 
 
@@ -232,7 +253,7 @@ def syzygy(w, c):
         words.update(get_nym('hypo', ws))
         words.update(get_nym('hyper', ws))
         words.update(get_nym('holo', ws))
-    print('inside syzygy function: ', words)
+    # print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
 
@@ -321,7 +342,43 @@ def get_title(file):
     }.get(file, 'Unknown')  # 'Unknown' is default if file not found
 
 
+
+
+    # out, pos = [], p[0] # FIRST OCCURENCE
+    # ff = eval(f)
+    # pos_b, pos_a = pos, pos
+    # punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
+    # for i in range(1, 10):
+    #     if ff[pos - i] in punct:
+    #         pos_b = pos - (i - 1)
+    #         break
+    #     else:
+    #         if ff[pos - 5]:
+    #             pos_b = pos - 5
+    #         else:
+    #             pos_b = pos
+    # for j in range(1, 10):
+    #     if ff[pos + j] in punct:
+    #         pos_a = pos + j
+    #         break
+    #     else:
+    #         if ff[pos + 5]:
+    #             pos_a = pos + 5
+    #         else:
+    #             pos_a = pos
+    # if pos_b >= 0 and pos_a <= len(ff):
+    #     pre = ' '.join(ff[pos_b:pos])
+    #     post = ' '.join(ff[pos+1:pos_a])
+    #     out = (pre, w, post)
+    #     print("pp_sent", out)
+
+
 def pp_sent(w, f, p):  # gets w as lower case
+    # w = word, f = file, p = [positions]
+    print('pp_sent', w, f, p)
+
+    
+
     out, pos = [], p[0] # FIRST OCCURENCE
     ff = eval(f)
     pos_b, pos_a = pos, pos
@@ -348,6 +405,15 @@ def pp_sent(w, f, p):  # gets w as lower case
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
         out = (pre, w, post)
+        print("pp_sent", out)
+
+
+    one = "pp_sent "
+    two = (w,f,p)
+    three = "sentence "
+    four = one + str(two) + three + str(out) + "\n"
+    with open("ppsent2.txt", "a") as mylog:
+        mylog.write(four)
     return out
 
 
