@@ -182,7 +182,10 @@ setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
 setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
-
+# with open("dict.txt", "a") as mylog:
+#     mylog.write(str(l_dict))
+#     mylog.write('\n')
+#     mylog.write(str(s_dict))
 
 def get_results(words, algo, dic):
     total = 0
