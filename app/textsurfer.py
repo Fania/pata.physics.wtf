@@ -349,11 +349,20 @@ def get_title(file):
 
 
 
+    
+
+
+def pp_sent(w, f, p):  # gets w as lower case
+    # w = word, f = file, p = [positions]
+    # print('pp_sent', w, f, p)
+
+    # FIRST OCCURENCE
     # out, pos = [], p[0] # FIRST OCCURENCE
     # ff = eval(f)
     # pos_b, pos_a = pos, pos
     # punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
     # for i in range(1, 10):
+    #     if pos > i:
     #     if ff[pos - i] in punct:
     #         pos_b = pos - (i - 1)
     #         break
@@ -362,7 +371,10 @@ def get_title(file):
     #             pos_b = pos - 5
     #         else:
     #             pos_b = pos
+    #     else:
+    #         pos_b = pos
     # for j in range(1, 10):
+    #     if (pos + j) < len(ff):
     #     if ff[pos + j] in punct:
     #         pos_a = pos + j
     #         break
@@ -371,20 +383,18 @@ def get_title(file):
     #             pos_a = pos + 5
     #         else:
     #             pos_a = pos
+    #     else:
+    #       pos_a = pos
     # if pos_b >= 0 and pos_a <= len(ff):
     #     pre = ' '.join(ff[pos_b:pos])
     #     post = ' '.join(ff[pos+1:pos_a])
     #     out = (pre, w, post)
     #     print("pp_sent", out)
 
-
-def pp_sent(w, f, p):  # gets w as lower case
-    # w = word, f = file, p = [positions]
-    # print('pp_sent', w, f, p)
+    # EACH OCCURANCE
     oout = []
-
     for x in p:
-        out, pos = [], x # FIRST OCCURENCE
+        out, pos = [], x # EACH OCCURANCE
         ff = eval(f)
         pos_b, pos_a = pos, pos
         punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
