@@ -182,6 +182,7 @@ setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
 setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
+# print(len(l_dict), len(s_dict))
 # with open("dict.txt", "a") as mylog:
 #     mylog.write(str(l_dict))
 #     mylog.write('\n')
@@ -388,23 +389,29 @@ def pp_sent(w, f, p):  # gets w as lower case
         pos_b, pos_a = pos, pos
         punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
         for i in range(1, 10):
-            if ff[pos - i] in punct:
-                pos_b = pos - (i - 1)
-                break
-            else:
-                if ff[pos - 5]:
-                    pos_b = pos - 5
+            if pos > i:
+                if ff[pos - i] in punct:
+                    pos_b = pos - (i - 1)
+                    break
                 else:
-                    pos_b = pos
+                    if ff[pos - 5]:
+                        pos_b = pos - 5
+                    else:
+                        pos_b = pos
+            else:
+                pos_b = pos
         for j in range(1, 10):
-            if ff[pos + j] in punct:
-                pos_a = pos + j
-                break
-            else:
-                if ff[pos + 5]:
-                    pos_a = pos + 5
+            if (pos + j) < len(ff):
+                if ff[pos + j] in punct:
+                    pos_a = pos + j
+                    break
                 else:
-                    pos_a = pos
+                    if ff[pos + 5]:
+                        pos_a = pos + 5
+                    else:
+                        pos_a = pos
+            else:
+                pos_a = pos
         if pos_b >= 0 and pos_a <= len(ff):
             pre = ' '.join(ff[pos_b:pos])
             post = ' '.join(ff[pos+1:pos_a])
@@ -417,7 +424,7 @@ def pp_sent(w, f, p):  # gets w as lower case
     two = (w,f,p)
     three = "sentence "
     four = one + str(two) + three + str(oout) + "\n"
-    with open("ppsent2.txt", "a") as mylog:
+    with open("ppsent3.txt", "a") as mylog:
         mylog.write(four)
     return oout
 
@@ -456,3 +463,4 @@ def calc_all(sens):
         b += part
         out.append(v)
     return out, part, (mx - 1)
+# all_poems = part ** mx  # no of options ^ no of lines
