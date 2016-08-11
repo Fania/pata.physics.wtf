@@ -34,6 +34,8 @@ def textresults():
         # clin_words = ['hello', 'world', 'fania', 'loves', 'dave']
 
         clin_sens, clin_words, clin_files, clin_tot = clinamen(query, corpus, 2)
+        # clin_sens, clin_words, clin_files, clin_tot = clinamen(query, corpus, 2)
+    
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query, corpus)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query, corpus)
 
@@ -41,7 +43,8 @@ def textresults():
         all_tot = clin_tot + sys_tot + anti_tot
 
         all_files = set([f[0] for f in all_sens])
-        all_words = set([f[1][1] for f in all_sens])
+        all_words = set([f[1] for f in all_sens])  # first occurance
+        # all_words = set([f[1][1] for f in all_sens])  # each occurance
 
         lol, part, mx = calc_all(all_sens)
 
