@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
 from imagesurfer import getimages, transent, pataphysicalise
+import random, time
 
 
 @app.route('/images')
@@ -12,33 +13,40 @@ def images():
 def imageresults():
 
     oldquery = request.form['query']
-    print('oldquery ', oldquery)
     choice = request.form['img_choice']
-    print('choice ', choice)
 
-    trans = transent(oldquery)
-    print('trans ', trans)
+    translations = transent(oldquery)
+    # print('trans ', translations)
 
-    pata = pataphysicalise(trans[2])
-    print('pata ', pata)
+    transplit = translations[2].split(' ')
+    pata = pataphysicalise(transplit)
+    # print('pata ', pata)
 
-    query = pata[0][0]
-    print('query ', query)
+    # Get 1 random item from the list of pataphysicalised query terms to run the API call with
+    # query = random.sample(pata, 1)[0]
+    if len(pata) >= 10:
+        queries = random.sample(pata, 10)
+        # print queries
+    else:
+        queries = ["error","error","error","error","error","error","error","error","error","error"]
 
     if request.method == 'GET':
-        print 'imageresults get: ', query, choice
+        print 'imageresults get: ', queries, choice
     else:
-        print 'imageresults post: ', query, choice
+        print 'imageresults post: ', queries, choice
+        date = time.strftime("%c")
+        t = 'imageresults post: '+date+' '+oldquery+' ['+ ', '.join(queries) +'] '+ choice +'\n'
+        with open("log.txt", "a") as mylog:
+            mylog.write(t)
 
-        # images_imgs, translations = getimages(query, choice)
+
+        # Using Python API code
+        # images_imgs, trans = getimages(pata, choice)
         # images_len = len(images_imgs)
 
-        # Javascript Img works but only with translations
-        images_imgs, translations = [], trans
+        # Using Javascript API code
+        images_imgs, trans = [], translations
         images_len = len(images_imgs)
 
-        # Javascript with full pataphysicalisation
-        # images_imgs, translations = [], trans
-        # images_len = len(images_imgs)
 
         return render_template('imageresults.html', **locals())

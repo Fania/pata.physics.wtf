@@ -8,10 +8,10 @@ yt_key = 'AIzaSyDPZlMpFVZUBfhD4ycjfUZzCR_mVDP59jY'
 
 def getvideos(query):
     out = []
-    trans = ''
-    words = query.split()
-
-    tmp = pataphysicalise(words)
+    translations = transent(query)
+    # print('trans ', translations)
+    transplit = translations[2].split(' ')
+    tmp = pataphysicalise(transplit)
 
     b0 = "https://www.googleapis.com/youtube/v3/search?"
     b1 = "&order=viewCount&part=snippet&"
@@ -20,12 +20,10 @@ def getvideos(query):
 
     for x in tmp:
         y = ' '.join(x)
-        z = transent(y)
-        b2 = "q=%s" % z[2]
+        b2 = "q=%s" % translations[2]
         yturl = ''.join([b0, b1, b2, b3, b4])
         vids = requests.get(yturl)
         if vids.json()['items']:
-            trans = z
             for i in vids.json()['items']:
                 vidtitle = i['snippet']['title']
                 vidthumb = i['snippet']['thumbnails']['default']['url']
@@ -34,4 +32,4 @@ def getvideos(query):
             break
         else:
             out = []
-    return out, trans
+    return out, translations
