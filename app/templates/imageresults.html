@@ -8,7 +8,7 @@
 
 <form class="w3-container" action="../imageresults" method="post">
   <p class="w3-center">
-    <input id="flickr" class="w3-radio" type="radio" name="img_choice" value="flickr" checked><label class="w3-validate">Flickr</label>
+    <input id="flickr" class="w3-radio" type="radio" name="img_choice" value="flickr"><label class="w3-validate">Flickr</label>
     <input id="getty" class="w3-radio" type="radio" name="img_choice" value="getty"><label class="w3-validate">Getty</label>
     <input id="bing" class="w3-radio" type="radio" name="img_choice" value="bing"><label class="w3-validate">Bing</label>
     <!-- <input id="google" class="w3-radio" type="radio" name="img_choice" value="google"><label class="w3-validate">Google</label> -->
@@ -34,27 +34,52 @@
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ oldquery }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
   <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
+  [<form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.0 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.1 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.3 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.4 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.5 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.6 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.7 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.8 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
+  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.9 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>]
 </div>
 
 <!-- JAVASCRIPT -->
-<meta id="iquery" data-query="{{ query }}">
+<meta id="iquery0" data-query="{{ queries.0 }}">
+<meta id="iquery1" data-query="{{ queries.1 }}">
+<meta id="iquery2" data-query="{{ queries.2 }}">
+<meta id="iquery3" data-query="{{ queries.3 }}">
+<meta id="iquery4" data-query="{{ queries.4 }}">
+<meta id="iquery5" data-query="{{ queries.5 }}">
+<meta id="iquery6" data-query="{{ queries.6 }}">
+<meta id="iquery7" data-query="{{ queries.7 }}">
+<meta id="iquery8" data-query="{{ queries.8 }}">
+<meta id="iquery9" data-query="{{ queries.9 }}">
 <meta id="ichoice" data-choice="{{ choice }}">
 <script>(function(){
-  var q = $('#iquery').data();
+  var qs = [];
+  for (var x=0; x<10; x++){
+    tmp = "#iquery" + x;
+    qs[x] = $(tmp).data();
+    // console.log(qs[x]);
+  }
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
   function checkradio(){
     ch.checked = true;
+    console.log("checked the radio button")
   }
   if (c.choice === 'flickr'){
-    flickrsearch(q.query);
+    flickrsearch(qs);
   }
   if (c.choice === 'getty'){
-    gettysearch(q.query);
+    gettysearch(qs[0].query);
   }
   if (c.choice === 'bing'){
-    bingsearch(q.query);
+    bingsearch(qs);
   }
   // if (c.choice === 'google'){
   //   googlesearch(q.query);
@@ -62,6 +87,7 @@
   checkradio();
 })();
 </script>
+
 
 <!-- TABS -->
 <div class="w3-container tab_container w3-padding-0">

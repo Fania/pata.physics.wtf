@@ -8,6 +8,7 @@ from collections import defaultdict
 
 import os
 import re
+import time, datetime
 #############################################
 
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -182,6 +183,11 @@ setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
 
+# print(len(l_dict), len(s_dict))
+# with open("dict.txt", "a") as mylog:
+#     mylog.write(str(l_dict))
+#     mylog.write('\n')
+#     mylog.write(str(s_dict))
 
 def get_results(words, algo, dic):
     total = 0
@@ -192,11 +198,17 @@ def get_results(words, algo, dic):
         for e, p in files.items():
             f = get_title(e)
             sources.add(f)
-            sent = pp_sent(r.lower(), e, p)
-            o = (f, sent, algo)
-            if sent != [] and o not in out:
-                total += 1
-                out.add(o)
+            # first occurance
+            o = (f, pp_sent(r.lower(), e, p), algo)
+            total += 1
+            out.add(o)
+            # each occurance
+            # sents = pp_sent(r.lower(), e, p)
+            # for s in sents:
+            #     o = (f, s, algo)
+            #     if s != [] and o not in out:
+            #         total += 1
+            #         out.add(o)
     return out, sources, total
 
 
@@ -209,18 +221,44 @@ def get_nym(nym, wset):
         hhh = wset.hypernyms()
     if nym == 'holo':
         hhh = wset.member_holonyms()
+    if nym == 'mero':
+        hhh = wset.part_meronyms()
     if len(hhh) > 0:
         for h in hhh:
             for l in h.lemmas():
                 out.append(str(l.name()))
-                # print(l.name())
+                # ts = time.time()
+                # st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+                # p = nym + ", " + str(wset) + ", " + l.name() + "\n"
+                # f = "thesis" + st + ".txt"
+                # with open(f, "a") as mylog:
+                #     mylog.write(p)
     return out
 
 
 def clinamen(w, c, i):
+    # l_00 is the faustroll text
+    # l_10 is arabian nights
+    # s_23 is midsummer nights dream
+    # words = set([item for item in l_00
+    # wordsMND = set([item for item in s_23
+    #             if dameraulevenshtein(w, item) <= i])
+    # wordsAN = set([item for item in l_10
+    #             if dameraulevenshtein(w, item) <= i])
     words = set([item for item in l_00
                 if dameraulevenshtein(w, item) <= i])
     out, sources, total = get_results(words, 'Clinamen', c)
+    
+    # t = 'clinamen: MND = %s' % wordsMND
+    # s = 'clinamen: AN = %s' %wordsAN
+    # f = 'clinamen: F = %s' % words
+    # with open("thesis.txt", "a") as mylog:
+        # mylog.write(t)
+        # mylog.write('\n')
+        # mylog.write(s)
+        # mylog.write('\n')
+        # mylog.write(f)
+        # mylog.write('\n')
     return out, words, sources, total
 
 
@@ -231,6 +269,7 @@ def syzygy(w, c):
         words.update(get_nym('hypo', ws))
         words.update(get_nym('hyper', ws))
         words.update(get_nym('holo', ws))
+        words.update(get_nym('mero', ws))
     # print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
@@ -321,32 +360,89 @@ def get_title(file):
 
 
 def pp_sent(w, f, p):  # gets w as lower case
+    # w = word, f = file, p = [positions]
+    # print('pp_sent', w, f, p)
+
+    # FIRST OCCURENCE
     out, pos = [], p[0] # FIRST OCCURENCE
     ff = eval(f)
     pos_b, pos_a = pos, pos
     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
     for i in range(1, 10):
-        if ff[pos - i] in punct:
-            pos_b = pos - (i - 1)
-            break
-        else:
-            if ff[pos - 5]:
-                pos_b = pos - 5
+        if pos > i:
+            if ff[pos - i] in punct:
+                pos_b = pos - (i - 1)
+                break
             else:
-                pos_b = pos
+                if ff[pos - 5]:
+                    pos_b = pos - 5
+                else:
+                    pos_b = pos
+        else:
+            pos_b = pos
     for j in range(1, 10):
-        if ff[pos + j] in punct:
-            pos_a = pos + j
-            break
-        else:
-            if ff[pos + 5]:
-                pos_a = pos + 5
+        if (pos + j) < len(ff):
+            if ff[pos + j] in punct:
+                pos_a = pos + j
+                break
             else:
-                pos_a = pos
+                if ff[pos + j]:
+                    pos_a = pos + j
+                else:
+                    pos_a = pos
+        else:
+          pos_a = pos
     if pos_b >= 0 and pos_a <= len(ff):
         pre = ' '.join(ff[pos_b:pos])
         post = ' '.join(ff[pos+1:pos_a])
         out = (pre, w, post)
+        # print("pp_sent", out)
+
+    # EACH OCCURANCE
+    # oout = []
+    # for x in p:
+    #     out, pos = [], x # EACH OCCURANCE
+    #     ff = eval(f)
+    #     pos_b, pos_a = pos, pos
+    #     punct = [',', '.', '!', '?', '(', ')', ':', ';', '\n', '-', '_']
+    #     for i in range(1, 10):
+    #         if pos > i:
+    #             if ff[pos - i] in punct:
+    #                 pos_b = pos - (i - 1)
+    #                 break
+    #             else:
+    #                 if ff[pos - 5]:
+    #                     pos_b = pos - 5
+    #                 else:
+    #                     pos_b = pos
+    #         else:
+    #             pos_b = pos
+    #     for j in range(1, 10):
+    #         if (pos + j) < len(ff):
+    #             if ff[pos + j] in punct:
+    #                 pos_a = pos + j
+    #                 break
+    #             else:
+    #                 # print(len(ff), pos+5)
+    #                 if ff[pos + j]:
+    #                     pos_a = pos + j
+    #                 else:
+    #                     pos_a = pos
+    #         else:
+    #             pos_a = pos
+    #     if pos_b >= 0 and pos_a <= len(ff):
+    #         pre = ' '.join(ff[pos_b:pos])
+    #         post = ' '.join(ff[pos+1:pos_a])
+    #         out = (pre, w, post)
+    #         # print("pp_sent", out)
+    #         oout.append(out)
+
+    # one = "pp_sent "
+    # two = (w,f,p)
+    # three = "sentence "
+    # four = one + str(two) + three + str(out) + "\n"
+    # with open("ppsent3.txt", "a") as mylog:
+    #     mylog.write(four)
     return out
 
 
@@ -384,3 +480,5 @@ def calc_all(sens):
         b += part
         out.append(v)
     return out, part, (mx - 1)
+
+# all_poems = part ** mx  # no of options ^ no of lines
