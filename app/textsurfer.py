@@ -182,6 +182,7 @@ setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
 setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
+
 # print(len(l_dict), len(s_dict))
 # with open("dict.txt", "a") as mylog:
 #     mylog.write(str(l_dict))
@@ -213,7 +214,6 @@ def get_results(words, algo, dic):
 
 def get_nym(nym, wset):
     out = []
-    # what is happening here? why do i have hyponyms as default?
     hhh = wset.hyponyms()
     if nym == 'hypo':
         hhh = wset.hyponyms()
@@ -259,7 +259,6 @@ def clinamen(w, c, i):
         # mylog.write('\n')
         # mylog.write(f)
         # mylog.write('\n')
-
     return out, words, sources, total
 
 
@@ -358,11 +357,6 @@ def get_title(file):
         's_36': "William Shakespeare, 1611: The Winter's Tale",
         's_37': "William Shakespeare, 1609: A Lover's Complaint"
     }.get(file, 'Unknown')  # 'Unknown' is default if file not found
-
-
-
-
-    
 
 
 def pp_sent(w, f, p):  # gets w as lower case
@@ -486,4 +480,5 @@ def calc_all(sens):
         b += part
         out.append(v)
     return out, part, (mx - 1)
+
 # all_poems = part ** mx  # no of options ^ no of lines

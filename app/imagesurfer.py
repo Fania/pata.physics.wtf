@@ -7,9 +7,11 @@ import requests  # BING IMG
 # import urllib2
 # import urllib
 from requests.auth import HTTPBasicAuth  # BING IMG
+
 # from textsurfer import syzygy
 import itertools
 from nltk.corpus import wordnet as wn
+
 #############################################
 
 # MICROSOFT TRANSLATE API
@@ -77,8 +79,6 @@ def transent(sent):
     patawords = translator.translate(japanese, "en")
     translations = (french, japanese, patawords)
     return translations
-
-
 
 
 ##################################################

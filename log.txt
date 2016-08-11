@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 textresults post: 06/07/16 11:18:46 hello faustroll
 textresults post: 06/07/16 11:24:19 fania faustroll
 imageresults post: 07/06/16 12:18:17 [hi, creation, hello, public, populace, macrocosm, global, howdy, humanity, universe] getty
@@ -158,3 +159,11 @@ imageresults post: 08/11/16 15:58:21 clear sky [exculpate, unmortgaged, take in,
 imageresults post: 08/11/16 15:58:28 clear sky [realize, shed light on, sack up, top, pass, light up, make, earn, bring in, unclouded] getty
 imageresults post: 08/11/16 15:58:34 clear sky [open, absolved, enlighten, discharge, pull in, clearly, crystalise, readable, realise, acquit] bing
 videoresults post: 08/11/16 15:58:38 [clear sky]
+=======
+textresults post: tree faustroll
+textresults post: fania faustroll
+textresults post: dave faustroll
+textresults post: live shakespeare
+textresults post: clear faustroll
+textresults post: hello faustroll
+>>>>>>> live
