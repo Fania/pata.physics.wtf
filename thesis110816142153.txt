@@ -1,8 +1,0 @@
-hyper, Synset('shin.n.01'), body_part
-hyper, Synset('shin.n.02'), cut
-hyper, Synset('shin.n.02'), cut_of_meat
-hyper, Synset('shin.n.03'), letter
-hyper, Synset('shin.n.03'), letter_of_the_alphabet
-hyper, Synset('shin.n.03'), alphabetic_character
-hyper, Synset('tibia.n.01'), leg_bone
-hyper, Synset('clamber.v.01'), climb

@@ -167,3 +167,5 @@ textresults post: live shakespeare
 textresults post: clear faustroll
 textresults post: hello faustroll
 >>>>>>> live
+imageresults post: 08/11/16 16:27:35 blue kitten [low-spirited, gamy, bluish, dark, profane, dreary, blueing, puritanic, gloomy, blue-blooded] flickr
+textresults post: 08/11/16 16:27:42 [clear] faustroll
