@@ -129,3 +129,37 @@ textresults post: peg faustroll
 textresults post: Thu Aug 11 17:47:04 2016 [clear] faustroll
 textresults post: Thu Aug 11 17:47:35 2016 [pronounce] faustroll
 textresults post: Thu Aug 11 17:47:45 2016 [fania] shakespeare
+textresults post: 08/12/16 13:36:14 [clear] faustroll
+textresults post: 08/12/16 13:37:43 [clear] faustroll
+textresults post: 08/12/16 13:40:25 [clear] faustroll
+textresults post: 08/12/16 13:49:46 [clear] faustroll
+textresults post: 08/12/16 13:51:07 [clear] faustroll
+textresults post: 08/12/16 13:54:32 [clear] faustroll
+textresults post: 08/12/16 13:54:54 [feather] faustroll
+textresults post: 08/12/16 13:55:19 [death] faustroll
+textresults post: 08/12/16 13:55:41 [flight] faustroll
+textresults post: 08/12/16 13:55:59 [page] faustroll
+textresults post: 08/12/16 13:56:11 [book] faustroll
+textresults post: 08/12/16 13:56:30 [seed] faustroll
+textresults post: 08/12/16 13:56:37 [web] faustroll
+textresults post: 08/12/16 14:16:45 [clear] faustroll
+textresults post: 08/12/16 14:17:50 [feather] faustroll
+textresults post: 08/12/16 14:18:32 [death] faustroll
+textresults post: 08/12/16 14:18:41 [page] faustroll
+textresults post: 08/12/16 14:18:45 [book] faustroll
+textresults post: 08/12/16 14:18:48 [seed] faustroll
+textresults post: 08/12/16 14:18:53 [web] faustroll
+textresults post: 08/12/16 14:22:56 [clear] faustroll
+textresults post: 08/12/16 14:24:43 [feather] faustroll
+textresults post: 08/12/16 14:25:40 [feather] faustroll
+textresults post: 08/12/16 14:27:30 [page] faustroll
+textresults post: 08/12/16 14:32:35 [seed] faustroll
+textresults post: 08/12/16 14:33:32 [seed] faustroll
+textresults post: 08/12/16 14:34:28 [clear] faustroll
+textresults post: 08/12/16 14:34:33 [feather] faustroll
+textresults post: 08/12/16 14:34:36 [death] faustroll
+textresults post: 08/12/16 14:34:40 [page] faustroll
+textresults post: 08/12/16 14:34:44 [book] faustroll
+textresults post: 08/12/16 14:34:47 [web] faustroll
+textresults post: 08/12/16 14:34:58 [feather] shakespeare
+textresults post: 08/12/16 15:06:20 [flower] faustroll

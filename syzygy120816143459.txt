@@ -1,0 +1,5 @@
+feather - synos: [Synset('feather.n.01'), Synset('feather.n.02'), Synset('feather.v.01'), Synset('feather.v.02'), Synset('feather.v.03'), Synset('feather.v.04'), Synset('fledge.v.03')]
+feather - hypos: set(['down_feather', 'quill_feather', 'aftershaft', 'bastard_wing', 'scapular', 'alula', 'spurious_wing', 'flight_feather', 'down', 'marabou', 'contour_feather', 'hackle', 'quill', 'pinion'])
+feather - hypers: set(['body_covering', 'acquire', 'join', 'get', 'conjoin', 'cover', 'paddle', 'grow', 'produce', 'animal_material', 'develop', 'rotation', 'rotary_motion', 'row'])
+feather - holos: set(['rowing', 'bird', 'row'])
+feather - meros: set(['shaft', 'calamus', 'web', 'ceratin', 'vane', 'melanin', 'keratin', 'quill'])

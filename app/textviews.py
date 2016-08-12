@@ -34,8 +34,6 @@ def textresults():
         # clin_words = ['hello', 'world', 'fania', 'loves', 'dave']
 
         clin_sens, clin_words, clin_files, clin_tot = clinamen(query, corpus, 2)
-        # clin_sens, clin_words, clin_files, clin_tot = clinamen(query, corpus, 2)
-    
         sys_sens, sys_words, sys_files, sys_tot = syzygy(query, corpus)
         anti_sens, anti_words, anti_files, anti_tot = antinomy(query, corpus)
 

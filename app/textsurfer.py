@@ -220,9 +220,15 @@ def get_nym(nym, wset):
     if nym == 'hyper':
         hhh = wset.hypernyms()
     if nym == 'holo':
-        hhh = wset.member_holonyms()
+        hhhm = wset.member_holonyms()
+        hhhs = wset.substance_holonyms()
+        hhhp = wset.part_holonyms()
+        hhh = hhhm + hhhs + hhhp
     if nym == 'mero':
-        hhh = wset.part_meronyms()
+        hhhm = wset.member_meronyms()
+        hhhs = wset.substance_meronyms()
+        hhhp = wset.part_meronyms()
+        hhh = hhhm + hhhs + hhhp
     if len(hhh) > 0:
         for h in hhh:
             for l in h.lemmas():
@@ -233,6 +239,12 @@ def get_nym(nym, wset):
                 # f = "thesis" + st + ".txt"
                 # with open(f, "a") as mylog:
                 #     mylog.write(p)
+    # ts = time.time()
+    # st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+    # p = nym + ", " + str(wset) + ", " + str(len(hhh)) + "\n"
+    # f = "syzygy" + st + ".txt"
+    # with open(f, "a") as mylog:
+    #     mylog.write(p)
     return out
 
 
@@ -264,12 +276,40 @@ def clinamen(w, c, i):
 
 def syzygy(w, c):
     words = set()
+    hypos = set()
+    hypers = set()
+    holos = set()
+    meros = set()
     wordsets = wn.synsets(w)
+    hypo_len, hyper_len, holo_len, mero_len, syno_len = 0,0,0,0,0
     for ws in wordsets:
-        words.update(get_nym('hypo', ws))
-        words.update(get_nym('hyper', ws))
-        words.update(get_nym('holo', ws))
-        words.update(get_nym('mero', ws))
+        hypos.update(get_nym('hypo', ws))
+        hypo_len += len(hypos)
+        words.update(hypos)
+        hypers.update(get_nym('hyper', ws))
+        hyper_len += len(hypers)
+        words.update(hypers)
+        holos.update(get_nym('holo', ws))
+        holo_len += len(holos)
+        words.update(holos)
+        meros.update(get_nym('mero', ws))
+        mero_len += len(meros)
+        words.update(meros)
+        syno_len += 1
+    ts = time.time()
+    st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+    p0 = w + " - synos: " + str(wordsets) + "\n"
+    p1 = w + " - hypos: " + str(hypos) + "\n"
+    p2 = w + " - hypers: " + str(hypers) + "\n"
+    p3 = w + " - holos: " + str(holos) + "\n"
+    p4 = w + " - meros: " + str(meros) + "\n"
+    f = "syzygy" + st + ".txt"
+    with open(f, "a") as mylog:
+        mylog.write(p0)
+        mylog.write(p1)
+        mylog.write(p2)
+        mylog.write(p3)
+        mylog.write(p4)
     # print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
