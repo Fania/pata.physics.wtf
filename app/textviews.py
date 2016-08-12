@@ -41,8 +41,7 @@ def textresults():
         all_tot = clin_tot + sys_tot + anti_tot
 
         all_files = set([f[0] for f in all_sens])
-        all_words = set([f[1] for f in all_sens])  # first occurance
-        # all_words = set([f[1][1] for f in all_sens])  # each occurance
+        all_words = set([f[1][1] for f in all_sens])
 
         lol, part, mx = calc_all(all_sens)
 

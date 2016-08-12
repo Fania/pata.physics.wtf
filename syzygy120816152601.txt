@@ -1,0 +1,5 @@
+shine - synos: [Synset('radiance.n.02'), Synset('reflect.v.04'), Synset('shine.v.02'), Synset('glitter.v.01'), Synset('shine.v.04'), Synset('shine.v.05'), Synset('glow.v.02'), Synset('shine.v.07'), Synset('fall.v.08'), Synset('glow.v.05'), Synset('polish.v.01')]
+shine - hypos: set(['flick', 'Simonise', 'glare', 'lustre', 'furbish', 'flicker', 'shininess', 'sleek', 'glossiness', 'outshine', 'burnish', 'gleaming', 'polish', 'luminesce', 'opalesce', 'twinkle', 'gleam', 'gloss', 'slick', 'shimmer', 'sparkle', 'blaze', 'spangle', 'sheen', 'luster', 'lambency', 'burn', 'Simonize', 'resplend', 'beacon', 'coruscate', 'scintillate', 'glow', 'flare', 'beat_down', 'flame', 'winkle', 'buff'])
+shine - hypers: set(['feel', 'come_about', 'pass', 'happen', 'occur', 'take_place', 'appear', 'fall_out', 'beautify', 'seem', 'hap', 'go_on', 'be', 'give_off', 'embellish', 'fancify', 'prettify', 'look', 'brightness', 'give_out', 'experience', 'emit', 'pass_off'])
+shine - holos: set([])
+shine - meros: set([])
