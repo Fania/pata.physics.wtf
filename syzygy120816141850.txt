@@ -1,0 +1,5 @@
+seed - synos: 13
+seed - hypos: 39
+seed - hypers: 35
+seed - holos: 0
+seed - meros: 12
