@@ -179,3 +179,5 @@ textresults post: 08/12/16 15:30:07 [clear] shakespeare
 textresults post: 08/12/16 15:30:33 [shine] shakespeare
 textresults post: 08/12/16 15:30:58 [disorder] shakespeare
 textresults post: 08/12/16 15:31:04 [stuck] shakespeare
+textresults post: 08/12/16 15:34:22 [feather] shakespeare
+textresults post: 08/12/16 15:36:36 [feather] faustroll
