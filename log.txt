@@ -1,169 +1,131 @@
-<<<<<<< HEAD
-textresults post: 06/07/16 11:18:46 hello faustroll
-textresults post: 06/07/16 11:24:19 fania faustroll
-imageresults post: 07/06/16 12:18:17 [hi, creation, hello, public, populace, macrocosm, global, howdy, humanity, universe] getty
-videoresults post: 07/06/16 12:21:27 [hello]
-textresults post: 07/06/16 12:22:38 [hello first] faustroll
-textresults post: 07/06/16 12:22:55 [hello second] shakespeare
-imageresults post: 07/06/16 12:23:16 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 12:23:37 [howdy, Aloha State, hello, tetrad, IV, quaternion, HI, quatern, hi, Hawaii] getty
-imageresults post: 07/06/16 12:24:06 [error, error, error, error, error, error, error, error, error, error] bing
-videoresults post: 07/06/16 12:24:17 [hello sisth]
-imageresults post: 07/06/16 12:32:45 [blueing, pitch, patrician, Amytal, blasphemous, gentle, downhearted, profane, aristocratical, sky] flickr
-imageresults post: 07/06/16 12:34:47 [down in the mouth, dingy, puritanic, dismal, blueness, dreary, aristocratic, dispirited, gamy, blue sky] flickr
-imageresults post: 07/06/16 14:34:04 [trial, trial run, mental test, mental testing, essay, quiz, exam, run, try, screen] bing
-imageresults post: 07/06/16 14:49:54 [shadowy, blind, faint, dense, subdued, dull, vague, dip, dim, black] getty
-imageresults post: 07/06/16 14:59:21 [blue devil, puritanical, Amytal, spicy, dark, aristocratical, blue-blooded, blueish, wild blue yonder, blueing] getty
-imageresults post: 07/06/16 15:01:11 [dispirited, puritanical, blue air, down in the mouth, blue-blooded, aristocratic, patrician, naughty, Amytal, profane] getty
-imageresults post: 07/06/16 15:02:38 [gentle, dismal, downhearted, aristocratic, blue devil, racy, bluing, bluish, amobarbital sodium, blue angel] getty
-imageresults post: 07/06/16 15:05:00 [titillation, vibrate, play, sport, merriment, tickling, vellicate, playfulness, tickle, fun] flickr
-imageresults post: 07/06/16 15:05:46 [play, fun, vibrate, tickling, playfulness, titillation, thrill, titillate, sport, vellicate] flickr
-imageresults post: 07/06/16 15:10:12 [titillate, tickle, sport, vibrate, play, tickling, vellicate, merriment, playfulness, titillation] flickr
-imageresults post: 07/06/16 15:11:17 [mental testing, trial, exam, examine, run, try, test, examination, prove, screen] flickr
-imageresults post: 07/06/16 15:12:22 [mental test, trial run, try, screen, examination, test, run, essay, trial, tryout] getty
-imageresults post: 07/06/16 15:18:24 [essay, screen, examine, test, trial, mental test, run, exam, examination, prove] flickr
-imageresults post: 07/06/16 15:19:45 [exam, test, screen, prove, mental test, run, mental testing, examine, quiz, psychometric test] flickr
-imageresults post: 07/06/16 15:20:45 [leafy vegetable, special K, greens, unripe, viridity, gullible, cat valium, light-green, putting surface, putting green] flickr
-imageresults post: 07/06/16 15:22:06 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:24:09 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:26:35 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:29:10 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:38:56 [examination, trial, quiz, test, exam, examine, essay, trial run, try, tryout] flickr
-imageresults post: 07/06/16 15:40:10 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:41:09 [humans, mankind, creation, existence, worldly concern, universe, populace, globe, man, macrocosm] flickr
-imageresults post: 07/06/16 15:42:01 [worldly concern, worldwide, Earth, macrocosm, world-wide, humankind, human beings, populace, mankind, planetary] flickr
-imageresults post: 07/06/16 15:43:34 [human race, cosmos, human beings, man, humankind, public, humanity, domain, earthly concern, earth] flickr
-imageresults post: 07/06/16 15:45:05 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:45:40 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 15:52:15 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/06/16 16:02:31 [jet, bloom, super C, blossom, light-green, heyday, fleeceable, greenish, unripe, flower] flickr
-imageresults post: 07/06/16 16:06:31 [efflorescence, blooming, flower, bloom, rosiness, blossom, prime, heyday, bloom of youth, salad days] flickr
-imageresults post: 07/06/16 16:12:46 [prime, bloom of youth, blooming, flush, rosiness, bloom, heyday, salad days, efflorescence, flower] flickr
-imageresults post: 07/06/16 16:16:35 [blooming, efflorescence, blush, salad days, bloom, blossom, bloom of youth, peak, prime, heyday] flickr
-imageresults post: 07/06/16 16:17:44 [blooming, efflorescence, flower, flush, blossom, salad days, bloom of youth, blush, bloom, prime] flickr
-imageresults post: 07/06/16 16:27:59 [error, error, error, error, error, error, error, error, error, error] getty
-imageresults post: 07/10/16 13:47:57 [sky, crystallise, bring in, authorise, take in, cleared, net, percipient, clearly, brighten] flickr
-imageresults post: 07/10/16 13:48:20 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/10/16 13:48:55 [tree diagram, Sir Herbert Beerbohm Tree, shoetree, small, humble, pocket-size, modest, pocket-sized, minuscule, belittled] flickr
-imageresults post: 07/10/16 13:50:13 [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 07/10/16 13:50:28 [aristocratical, depressed, blueing, drab, puritanic, wild blue yonder, kitty, dingy, blueness, blue air] flickr
-imageresults post: 07/10/16 13:56:44 [patrician, kitten, blue air, racy, dreary, low-spirited, blue angel, drear, dingy, sorry] getty
-imageresults post: 07/10/16 13:57:38 [dismal, blueish, dispirited, risque, gentle, blue, puritanical, aristocratical, gamey, low] bing
-imageresults post: 07/10/16 13:58:37 [gamy, puritanic, blueness, blue sky, grim, profane, blue, aristocratical, blue-blooded, puritanical] getty
-imageresults post: 07/10/16 13:58:50 [blueness, bluish, puritanical, blue sky, kitten, racy, low, blue angel, puritanic, down in the mouth] getty
-imageresults post: 07/10/16 13:59:04 [Amytal, dispirited, kitty, sorry, depressed, low, puritanical, wild blue yonder, down, bluing] getty
-imageresults post: 07/10/16 13:59:16 [racy, down, blue, blasphemous, bluish, down in the mouth, blue sky, blueish, puritanic, blue air] getty
-textresults post: 07/10/16 17:48:37 [flower] faustroll
-textresults post: 07/10/16 17:49:27 [love] faustroll
-textresults post: 07/19/16 15:00:50 [clear] faustroll
-textresults post: 07/19/16 15:04:24 [clear] faustroll
-textresults post: 07/19/16 15:10:47 [clear] faustroll
-textresults post: 07/19/16 15:24:34 [clear] faustroll
-textresults post: 07/19/16 15:28:42 [clear] faustroll
-textresults post: 07/19/16 15:38:38 [fania] faustroll
-textresults post: 07/19/16 15:41:03 [combination] faustroll
-textresults post: 07/19/16 15:43:40 [moss] faustroll
-textresults post: 07/19/16 16:52:15 [tree] faustroll
-textresults post: 07/19/16 16:59:27 [clear] faustroll
-textresults post: 07/19/16 17:02:02 [moss] faustroll
-textresults post: 07/19/16 17:02:46 [fania] faustroll
-textresults post: 07/19/16 17:05:04 [clear] faustroll
-textresults post: 07/19/16 17:08:38 [fania] faustroll
-textresults post: 07/19/16 17:09:34 [moss] faustroll
-textresults post: 07/19/16 17:14:52 [clear] faustroll
-textresults post: 07/19/16 17:15:45 [fania] faustroll
-textresults post: 07/19/16 17:16:13 [moss] faustroll
-textresults post: 07/19/16 17:31:45 [clear] faustroll
-textresults post: 07/19/16 17:34:54 [clear] faustroll
-textresults post: 07/19/16 17:35:48 [clear] faustroll
-textresults post: 07/19/16 17:38:20 [clear] faustroll
-textresults post: 07/19/16 17:42:56 [clear] faustroll
-textresults post: 07/19/16 17:46:09 [clear] faustroll
-textresults post: 07/19/16 17:48:43 [clear] faustroll
-textresults post: 07/19/16 17:54:39 [clear] faustroll
-textresults post: 07/19/16 18:09:28 [clear] faustroll
-textresults post: 07/19/16 18:15:55 [clear] faustroll
-textresults post: 08/02/16 12:18:17 [clear] faustroll
-textresults post: 08/02/16 12:21:46 [solution] faustroll
-textresults post: 08/02/16 12:22:57 [field] faustroll
-textresults post: 08/02/16 12:23:34 [form] faustroll
-textresults post: 08/02/16 12:25:58 [record] faustroll
-textresults post: 08/04/16 09:58:10 [clear] shakespeare
-textresults post: 08/04/16 10:01:24 [solution] shakespeare
-textresults post: 08/04/16 10:02:10 [form] shakespeare
-textresults post: 08/04/16 10:09:04 [form] shakespeare
-textresults post: 08/04/16 10:09:55 [form] shakespeare
-textresults post: 08/04/16 10:12:23 [form] shakespeare
-textresults post: 08/04/16 10:13:13 [form] shakespeare
-textresults post: 08/04/16 10:15:08 [form] shakespeare
-textresults post: 08/04/16 10:17:35 [form] shakespeare
-textresults post: 08/04/16 10:18:32 [form] shakespeare
-textresults post: 08/04/16 10:20:58 [record] shakespeare
-textresults post: 08/04/16 10:47:53 [clear] faustroll
-textresults post: 08/04/16 10:49:17 [clear] shakespeare
-textresults post: 08/04/16 10:50:48 [solution] faustroll
-textresults post: 08/04/16 10:51:19 [solution] shakespeare
-textresults post: 08/04/16 10:52:24 [form] faustroll
-textresults post: 08/04/16 10:55:03 [form] shakespeare
-textresults post: 08/04/16 10:56:49 [record] shakespeare
-textresults post: 08/04/16 10:58:23 [record] faustroll
-textresults post: 08/04/16 11:05:51 [clear] faustroll
-textresults post: 08/04/16 11:15:37 [clear] faustroll
-textresults post: 08/04/16 11:17:37 [clear] shakespeare
-textresults post: 08/04/16 11:19:20 [solution] faustroll
-textresults post: 08/04/16 11:19:58 [solution] shakespeare
-textresults post: 08/04/16 11:20:22 [form] faustroll
-textresults post: 08/04/16 11:23:26 [form] shakespeare
-textresults post: 08/04/16 11:25:41 [record] faustroll
-textresults post: 08/04/16 11:26:45 [record] shakespeare
-textresults post: 08/11/16 13:08:56 [clear] faustroll
-textresults post: 08/11/16 13:13:26 [clear] faustroll
-textresults post: 08/11/16 13:25:47 [clear] faustroll
-textresults post: 08/11/16 13:27:05 [clear] faustroll
-textresults post: 08/11/16 13:28:51 [clear] faustroll
-textresults post: 08/11/16 13:29:51 [clear] faustroll
-textresults post: 08/11/16 13:31:55 [clear] faustroll
-textresults post: 08/11/16 13:33:09 [bark] faustroll
-textresults post: 08/11/16 13:35:00 [bark] faustroll
-textresults post: 08/11/16 13:35:33 [free] faustroll
-textresults post: 08/11/16 13:36:32 [feather] faustroll
-textresults post: 08/11/16 14:15:50 [feather] faustroll
-textresults post: 08/11/16 14:18:06 [feather] faustroll
-textresults post: 08/11/16 14:21:40 [shin] faustroll
-textresults post: 08/11/16 14:22:19 [vein] faustroll
-textresults post: 08/11/16 14:22:58 [leg] faustroll
-textresults post: 08/11/16 14:24:57 [foot] faustroll
-textresults post: 08/11/16 14:27:32 [peg] faustroll
-imageresults post: 08/11/16 14:30:45 clear consciousness [illuminate, antiophthalmic factor, brighten, clear-cut, deoxyadenosine monophosphate, adenine, acquit, angstrom, scruples, light] flickr
-imageresults post: 08/11/16 14:31:06 light [brightness, igniter, lighter, brightness level, twinkle, abstemious, unhorse, wakeful, visible light, lightsome] flickr
-imageresults post: 08/11/16 14:31:30 twinkle [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 08/11/16 14:31:55 glitter [error, error, error, error, error, error, error, error, error, error] getty
-imageresults post: 08/11/16 14:32:25 glitter [error, error, error, error, error, error, error, error, error, error] bing
-videoresults post: 08/11/16 14:50:07 [living large]
-imageresults post: 08/11/16 14:50:34 hello [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 08/11/16 14:50:42 clear [error, error, error, error, error, error, error, error, error, error] flickr
-imageresults post: 08/11/16 14:51:08 green tree [Sir Herbert Beerbohm Tree, green, commons, jet, greens, immature, leafy vegetable, K, greenness, Green] flickr
-textresults post: 08/11/16 14:54:51 [clear] faustroll
-textresults post: 08/11/16 14:56:59 [clear] faustroll
-textresults post: 08/11/16 15:02:06 [clear] faustroll
-textresults post: 08/11/16 15:10:22 [clear] faustroll
-textresults post: 08/11/16 15:33:39 [clear] faustroll
-textresults post: 08/11/16 15:34:13 [feather] faustroll
-imageresults post: 08/11/16 15:35:48 blue sky [Amytal, aristocratic, dispirited, depressed, dark, juicy, grim, sky, gamey, gamy] flickr
-imageresults post: 08/11/16 15:35:55 blue sky [naughty, puritanic, amobarbital sodium, drab, aristocratical, gamy, disconsolate, low-spirited, down, flip] getty
-imageresults post: 08/11/16 15:36:18 blue sky [blue devil, aristocratical, puritanical, gamey, blue angel, dispirited, blueish, sorry, bluing, juicy] bing
-videoresults post: 08/11/16 15:36:25 [blue sky]
-textresults post: 08/11/16 15:57:50 [clear] faustroll
-textresults post: 08/11/16 15:58:04 [clear] shakespeare
-imageresults post: 08/11/16 15:58:21 clear sky [exculpate, unmortgaged, take in, realise, net, sky, clean, clean-cut, enlighten, exculpated] flickr
-imageresults post: 08/11/16 15:58:28 clear sky [realize, shed light on, sack up, top, pass, light up, make, earn, bring in, unclouded] getty
-imageresults post: 08/11/16 15:58:34 clear sky [open, absolved, enlighten, discharge, pull in, clearly, crystalise, readable, realise, acquit] bing
-videoresults post: 08/11/16 15:58:38 [clear sky]
-=======
 textresults post: tree faustroll
 textresults post: fania faustroll
 textresults post: dave faustroll
 textresults post: live shakespeare
 textresults post: clear faustroll
 textresults post: hello faustroll
->>>>>>> live
+textresults post: mathematics faustroll
+textresults post: howl faustroll
+textresults post: sex faustroll
+textresults post: love faustroll
+textresults post: troll shakespeare
+textresults post: sky faustroll
+textresults post: tea faustroll
+textresults post: feather shakespeare
+textresults post: sky faustroll
+textresults post: clear faustroll
+textresults post: test faustroll
+textresults post: clear faustroll
+textresults post: clear faustroll
+textresults post: pronounce faustroll
+textresults post: sky faustroll
+textresults post: Dave Everitt faustroll
+textresults post: Dave faustroll
+textresults post: Dave shakespeare
+textresults post: Dave shakespeare
+textresults post: Dell shakespeare
+textresults post: dave faustroll
+textresults post: dave faustroll
+textresults post: dave shakespeare
+textresults post: dave shakespeare
+textresults post: Dave faustroll
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: clear faustroll
+textresults post: flower faustroll
+textresults post: flower faustroll
+textresults post: love shakespeare
+textresults post: flower shakespeare
+textresults post: flower faustroll
+textresults post: flower shakespeare
+textresults post: flower faustroll
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: troll faustroll
+textresults post: troll shakespeare
+textresults post: fania shakespeare
+textresults post: fania faustroll
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: flower faustroll
+textresults post: flower faustroll
+textresults post: flower shakespeare
+textresults post: fania faustroll
+textresults post: fania shakespeare
+textresults post: troll faustroll
+textresults post: troll shakespeare
+textresults post: house faustroll
+textresults post: house shakespeare
+textresults post: clear faustroll
+textresults post: clear faustroll
+textresults post: troll faustroll
+textresults post: fania faustroll
+textresults post: moss faustroll
+textresults post: fania faustroll
+textresults post: clear faustroll
+textresults post: sunshine faustroll
+textresults post: shine faustroll
+textresults post: clear shakespeare
+textresults post: shine shakespeare
+textresults post: moss shakespeare
+textresults post: disorder shakespeare
+textresults post: chaos shakespeare
+textresults post: chaos faustroll
+textresults post: disorder faustroll
+textresults post: disorder shakespeare
+textresults post: stuck shakespeare
+textresults post: stuck faustroll
+textresults post: slime faustroll
+textresults post: slime shakespeare
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: beau faustroll
+textresults post: belle faustroll
+textresults post: kreuzzug faustroll
+textresults post: belle shakespeare
+textresults post: hi shakespeare
+textresults post: thy shakespeare
+textresults post: clear faustroll
+textresults post: solution faustroll
+textresults post: form faustroll
+textresults post: record faustroll
+textresults post: clear shakespeare
+textresults post: solution shakespeare
+textresults post: form shakespeare
+textresults post: record shakespeare
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: solution faustroll
+textresults post: solution faustroll
+textresults post: solution shakespeare
+textresults post: form faustroll
+textresults post: form faustroll
+textresults post: form shakespeare
+textresults post: record shakespeare
+textresults post: record faustroll
+textresults post: clear faustroll
+textresults post: clear shakespeare
+textresults post: solution faustroll
+textresults post: solution faustroll
+textresults post: clear shakespeare
+textresults post: clear faustroll
+textresults post: solution shakespeare
+textresults post: clear shakespeare
+textresults post: solution faustroll
+textresults post: solution faustroll
+textresults post: solution shakespeare
+textresults post: form faustroll
+textresults post: form shakespeare
+textresults post: record faustroll
+textresults post: record shakespeare
+textresults post: clear faustroll
+textresults post: tree shakespeare
+textresults post: tree shakespeare
+textresults post: amour faustroll
+textresults post: amour shakespeare
+textresults post: amour faustroll
+textresults post: large faustroll
+textresults post: peg faustroll
+textresults post: Thu Aug 11 17:47:04 2016 [clear] faustroll
+textresults post: Thu Aug 11 17:47:35 2016 [pronounce] faustroll
+textresults post: Thu Aug 11 17:47:45 2016 [fania] shakespeare
