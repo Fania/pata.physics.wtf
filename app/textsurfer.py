@@ -296,20 +296,20 @@ def syzygy(w, c):
         mero_len += len(meros)
         words.update(meros)
         syno_len += 1
-    ts = time.time()
-    st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
-    p0 = w + " - synos: " + str(wordsets) + "\n"
-    p1 = w + " - hypos: " + str(hypos) + "\n"
-    p2 = w + " - hypers: " + str(hypers) + "\n"
-    p3 = w + " - holos: " + str(holos) + "\n"
-    p4 = w + " - meros: " + str(meros) + "\n"
-    f = "syzygy" + st + ".txt"
-    with open(f, "a") as mylog:
-        mylog.write(p0)
-        mylog.write(p1)
-        mylog.write(p2)
-        mylog.write(p3)
-        mylog.write(p4)
+    # ts = time.time()
+    # st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+    # p0 = w + " - synos: " + str(wordsets) + "\n"
+    # p1 = w + " - hypos: " + str(hypos) + "\n"
+    # p2 = w + " - hypers: " + str(hypers) + "\n"
+    # p3 = w + " - holos: " + str(holos) + "\n"
+    # p4 = w + " - meros: " + str(meros) + "\n"
+    # f = "syzygy" + st + ".txt"
+    # with open(f, "a") as mylog:
+    #     mylog.write(p0)
+    #     mylog.write(p1)
+    #     mylog.write(p2)
+    #     mylog.write(p3)
+    #     mylog.write(p4)
     # print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
