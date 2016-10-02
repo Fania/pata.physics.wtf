@@ -1,0 +1,5 @@
+death - synos: [Synset('death.n.01'), Synset('death.n.02'), Synset('death.n.03'), Synset('death.n.04'), Synset('death.n.05'), Synset('death.n.06'), Synset('end.n.06'), Synset('death.n.08')]
+death - hypos: set(['wrongful_death', 'SIDS', 'martyrdom', 'cell_death', 'eternal_rest', 'rest', 'eternal_sleep', 'sleep', 'extinction', 'brain_death', 'neonatal_death', 'mortification', 'infant_death', 'going', 'exit', 'gangrene', 'defunctness', 'cot_death', 'quietus', 'fatality', 'cerebral_death', 'grave', 'sphacelus', 'loss', 'megadeath', 'sudden_infant_death_syndrome', 'necrosis', 'necrobiosis', 'departure', 'expiration', 'crib_death', 'release', 'passing', 'human_death'])
+death - hypers: set(['end', 'alteration', 'killing', 'ending', 'state', 'kill', 'putting_to_death', 'modification', 'organic_phenomenon', 'change'])
+death - holos: set(['lifetime', 'life', 'life-time', 'lifespan'])
+death - meros: set([])

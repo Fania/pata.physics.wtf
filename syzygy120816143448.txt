@@ -1,0 +1,5 @@
+web - synos: [Synset('web.n.01'), Synset('web.n.02'), Synset('vane.n.04'), Synset('network.n.01'), Synset('world_wide_web.n.01'), Synset('web.n.06'), Synset('web.n.07'), Synset('web.v.01')]
+web - hypos: set(['webbing', "spider's_web", 'support_system', 'spider_web', 'reticulum', 'espionage_network', 'old_boy_network', 'tent'])
+web - hypers: set(['textile', 'material', 'blade', 'fabric', 'computer_network', 'object', 'system', 'tissue_layer', 'physical_object', 'cloth', 'tissue', 'trap', 'membrane', 'scheme', 'weave'])
+web - holos: set(['plumage', 'feather', 'plume', 'webfoot'])
+web - meros: set(['barb'])
