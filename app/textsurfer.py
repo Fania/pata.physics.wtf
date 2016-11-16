@@ -504,7 +504,9 @@ def dameraulevenshtein(seq1, seq2):
     return thisrow[len(seq2) - 1]
 
 
+# sens = all_sens
 def calc_all(sens):
+    # not needed all these all_x variables
     all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8, all_9, \
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
     out, b, part, mx = [], 0, 0, 15
@@ -515,10 +517,12 @@ def calc_all(sens):
         mx = len(sens) + 1
     for i in range(1, mx):
         n = b + part
-        v = eval('all_' + str(i))
+        v = eval('all_' + str(i)) # not needed
         v = sens[b:n]
         b += part
         out.append(v)
     return out, part, (mx - 1)
 
+# out (lol) = all_sens divided into 14 lists
 # all_poems = part ** mx  # no of options ^ no of lines
+# all_sens = [(f, pp_sent(r.lower(), e, p), algo),...]
