@@ -22,6 +22,22 @@ Run on Ubuntu:
 ```ctrl+a+d```
 
 
+## screen
+
+list all screens
+```screen -ls```
+
+reconnect to screen
+```screen -r```
+
+reconnect to screen XYZ
+```screen -r XYZ```
+
+
+
+
+
+
 ---
 
 git log --graph --full-history --all --date=format:"%a %d %b %Y" --pretty=format:"%h%x20%x20%ad%x09%d%x20%s" > prettyprint.txt
