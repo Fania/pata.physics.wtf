@@ -1,0 +1,17 @@
+Flask==0.10.1
+flask-paginate==0.3.2
+flickrapi==2.0
+gdata==2.0.18
+itsdangerous==0.24
+Jinja2==2.7.3
+MarkupSafe==0.23
+microsofttranslator==0.7
+nltk==3.2
+oauthlib==0.7.2
+pyparsing==2.0.3
+requests==2.7.0
+requests-oauthlib==0.5.0
+requests-toolbelt==0.4.0
+six==1.9.0
+Werkzeug==0.10.4
+auth==0.5.3

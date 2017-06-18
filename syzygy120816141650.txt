@@ -1,5 +1,0 @@
-clear - synos: 45
-clear - hypos: 41
-clear - hypers: 65
-clear - holos: 0
-clear - meros: 0

@@ -1,5 +1,0 @@
-page - synos: [Synset('page.n.01'), Synset('page.n.02'), Synset('page.n.03'), Synset('page.n.04'), Synset('page.n.05'), Synset('page.n.06'), Synset('page.v.01'), Synset('page.v.02'), Synset('foliate.v.04')]
-page - hypos: set(['facing_pages', 'gatefold', 'sports_page', 'half_title', 'title_page', 'spread_head', 'spreadhead', 'spread', 'verso', 'recto', 'half_page', 'foldout', 'full_page', 'bastard_title'])
-page - hypers: set(['folio', 'leaf', 'work', 'errand_boy', 'summon', 'attender', 'messenger_boy', 'tender', 'number', 'attendant'])
-page - holos: set([])
-page - meros: set(['pagination', 'dog-ear', 'folio', 'paging', 'paper', 'page_number', 'margin'])

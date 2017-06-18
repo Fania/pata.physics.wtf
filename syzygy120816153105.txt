@@ -1,5 +1,0 @@
-stuck - synos: [Synset('lodge.v.02'), Synset('stay.v.02'), Synset('adhere.v.06'), Synset('stick.v.04'), Synset('stick.v.05'), Synset('adhere.v.04'), Synset('stand_by.v.03'), Synset('stick.v.08'), Synset('stick.v.09'), Synset('stick.v.10'), Synset('stick.v.11'), Synset('stick.v.12'), Synset('stick.v.13'), Synset('cling.v.01'), Synset('stick.v.15'), Synset('perplex.v.01'), Synset('stuck.a.01'), Synset('stuck.s.02')]
-stuck - hypos: set(['riddle', 'stump', 'mix_up', 'bind', 'agglutinate', 'elude', 'redeposit', 'conglutinate', 'escape', 'mold'])
-stuck - hypers: set(['force', 'secure', 'fox', 'confuse', 'confound', 'touch', 'follow', 'fix', 'ornament', 'throw', 'attach', 'beautify', 'adjoin', 'stay_in_place', 'persist', 'be', 'discombobulate', 'embellish', 'stay', 'meet', 'thrust', 'grace', 'bedevil', 'pierce', 'befuddle', 'adopt', 'remain', 'contact', 'decorate', 'espouse', 'fuddle', 'fasten', 'adorn'])
-stuck - holos: set([])
-stuck - meros: set([])

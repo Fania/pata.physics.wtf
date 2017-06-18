@@ -7,16 +7,27 @@ import requests  # BING IMG
 # import urllib2
 # import urllib
 from requests.auth import HTTPBasicAuth  # BING IMG
+from auth import AzureAuthClient  # Translator
+from xml.etree import ElementTree  # Translator
 
 # from textsurfer import syzygy
 import itertools
 from nltk.corpus import wordnet as wn
 
+
+import sys
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 #############################################
 
 # MICROSOFT TRANSLATE API
 # microsoft_id = 'patalator'
 # microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
+# new details
+# key 1 = 'c1e02f3572ad4280bef1fce290a7323f'
+
+
 
 # FLICKR API
 # application = 'plickr'
@@ -26,6 +37,7 @@ from nltk.corpus import wordnet as wn
 # BING IMAGE SEARCH API
 # username fania@web.de pw = key
 # bing_key = 'UC5GBf1nozBOxJImxv9HS9Qb1aNzXuWDCPDy5D/4NlY='
+
 
 # GETTY API
 # GET  https://api.gettyimages.com/v3/search/
@@ -81,6 +93,46 @@ def transent(sent):
     return translations
 
 
+def transent2(sent):
+
+    print sent 
+
+    # Call to Microsoft Translator Service
+
+    client_secret = 'c1e02f3572ad4280bef1fce290a7323f'
+    auth_client = AzureAuthClient(client_secret)
+    bearer_token = 'Bearer ' + auth_client.get_access_token()
+    headers = {"Authorization ": bearer_token}
+
+    frurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(sent, 'en', 'fr')
+    frtranslationData = requests.get(frurl, headers = headers)
+    # parse xml return values
+    frtranslation = ElementTree.fromstring(frtranslationData.text.encode('utf-8'))
+    # display translation
+    print "The translation is---> ", frtranslation.text.encode('utf-8')
+
+    japurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(frtranslation.text.encode('utf-8'), 'fr', 'ja')
+    jatranslationData = requests.get(japurl, headers = headers)
+    # parse xml return values
+    # print jatranslationData.text
+    jatranslation = ElementTree.fromstring(jatranslationData.text.encode('utf-8'))
+    # display translation
+    print "The translation is---> ", jatranslation.text.encode('utf-8')
+
+    engurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(jatranslation.text.encode('utf-8'), 'ja', 'en')
+    entranslationData = requests.get(engurl, headers = headers)
+    # parse xml return values
+    entranslation = ElementTree.fromstring(entranslationData.text.encode('utf-8'))
+    # display translation
+    print "The translation is---> ", entranslation.text.encode('utf-8')
+
+    translations = (frtranslation.text.encode('utf-8'), jatranslation.text.encode('utf-8'), entranslation.text.encode('utf-8'))
+    # print translations
+    return translations
+
+transent2("cat")
+
+
 ##################################################
 #          NOT USED AT THE MOMENT                #
 ################################################## 
@@ -90,8 +142,8 @@ def getimages(pata, choice):
     for query in pata:
         if choice == 'flickr':
             return get_Flickr(query)
-        if choice == 'bing':
-            return get_Bing(query)
+        # if choice == 'bing':
+        #     return get_Bing(query)
         if choice == 'getty':
             return get_Getty(query)
         # if choice == 'google':
