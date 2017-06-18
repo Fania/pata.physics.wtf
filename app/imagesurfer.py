@@ -82,21 +82,18 @@ def pataphysicalise(words):
 # print(pataphysicalise('fluffy cats'))
 
 
-def transent(sent):
-    microsoft_id = 'patalator'
-    microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
-    translator = Translator(microsoft_id, microsoft_secret)
-    french = translator.translate(sent, "fr")
-    japanese = translator.translate(french, "ja")
-    patawords = translator.translate(japanese, "en")
-    translations = (french, japanese, patawords)
-    return translations
+# def transent(sent):
+#     microsoft_id = 'patalator'
+#     microsoft_secret = 'IXfoWZgfMnQ6JFe9UmWcbGxoum+kr6DwFefNh1bFhcM='
+#     translator = Translator(microsoft_id, microsoft_secret)
+#     french = translator.translate(sent, "fr")
+#     japanese = translator.translate(french, "ja")
+#     patawords = translator.translate(japanese, "en")
+#     translations = (french, japanese, patawords)
+#     return translations
 
 
 def transent2(sent):
-
-    print sent 
-
     # Call to Microsoft Translator Service
 
     client_secret = 'c1e02f3572ad4280bef1fce290a7323f'
@@ -106,31 +103,22 @@ def transent2(sent):
 
     frurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(sent, 'en', 'fr')
     frtranslationData = requests.get(frurl, headers = headers)
-    # parse xml return values
     frtranslation = ElementTree.fromstring(frtranslationData.text.encode('utf-8'))
-    # display translation
-    print "The translation is---> ", frtranslation.text.encode('utf-8')
+    french = frtranslation.text.encode('utf-8')
 
-    japurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(frtranslation.text.encode('utf-8'), 'fr', 'ja')
+    japurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(french, 'fr', 'ja')
     jatranslationData = requests.get(japurl, headers = headers)
-    # parse xml return values
-    # print jatranslationData.text
     jatranslation = ElementTree.fromstring(jatranslationData.text.encode('utf-8'))
-    # display translation
-    print "The translation is---> ", jatranslation.text.encode('utf-8')
+    japanese = jatranslation.text.encode('utf-8')
 
-    engurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(jatranslation.text.encode('utf-8'), 'ja', 'en')
+    engurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(japanese, 'ja', 'en')
     entranslationData = requests.get(engurl, headers = headers)
-    # parse xml return values
     entranslation = ElementTree.fromstring(entranslationData.text.encode('utf-8'))
-    # display translation
-    print "The translation is---> ", entranslation.text.encode('utf-8')
+    english = entranslation.text.encode('utf-8')
 
-    translations = (frtranslation.text.encode('utf-8'), jatranslation.text.encode('utf-8'), entranslation.text.encode('utf-8'))
-    # print translations
+    translations = (french, japanese, english)
     return translations
 
-transent2("cat")
 
 
 ##################################################

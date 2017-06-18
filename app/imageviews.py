@@ -16,9 +16,9 @@ def imageresults():
     oldquery = request.form['query']
     choice = request.form['img_choice']
 
-    print oldquery, choice
+    # print oldquery, choice
     translations = transent2(oldquery)
-    print 'trans ', translations
+    # print 'trans ', translations
 
     transplit = translations[2].split(' ')
     pata = pataphysicalise(transplit)

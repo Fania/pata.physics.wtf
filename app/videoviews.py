@@ -1,7 +1,7 @@
 from flask import render_template, url_for, request
 from app import app
 from videosurfer import *
-from imagesurfer import transent, pataphysicalise
+from imagesurfer import transent2, pataphysicalise
 import time
 
 
