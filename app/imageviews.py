@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
 from imagesurfer import getimages, transent, pataphysicalise
+
 import random, time
 
 
@@ -47,6 +48,5 @@ def imageresults():
         # Using Javascript API code
         images_imgs, trans = [], translations
         images_len = len(images_imgs)
-
 
         return render_template('imageresults.html', **locals())

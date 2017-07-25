@@ -1,0 +1,5 @@
+web - synos: 8
+web - hypos: 10
+web - hypers: 15
+web - holos: 4
+web - meros: 1

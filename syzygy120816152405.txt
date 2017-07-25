@@ -1,0 +1,5 @@
+fania - synos: []
+fania - hypos: set([])
+fania - hypers: set([])
+fania - holos: set([])
+fania - meros: set([])

@@ -1,0 +1,5 @@
+book - synos: 15
+book - hypos: 85
+book - hypers: 32
+book - holos: 2
+book - meros: 22

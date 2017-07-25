@@ -1,0 +1,5 @@
+death - synos: 8
+death - hypos: 34
+death - hypers: 13
+death - holos: 4
+death - meros: 0
