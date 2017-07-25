@@ -1,5 +1,0 @@
-troll - synos: [Synset('troll.n.01'), Synset('round.n.11'), Synset('troll.n.03'), Synset('troll.n.04'), Synset('troll.v.01'), Synset('troll.v.02'), Synset('troll.v.03'), Synset('troll.v.04'), Synset('troll.v.05'), Synset('troll.v.06'), Synset('troll.v.07')]
-troll - hypos: set([])
-troll - hypers: set(['wheel', 'angle', 'verbalise', 'mythical_monster', 'fish_lure', 'verbalize', 'speak', 'partsong', 'talk', 'praise', 'utter', "fisherman's_lure", 'sing', 'circle', 'angling', 'mouth', 'roll', 'mythical_creature', 'circulate'])
-troll - holos: set([])
-troll - meros: set([])

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include "header.html" %}
+
+<article class="w3-text-theme">
+
+<header class="w3-container w3-theme-l4">
+  <h2><i class="fa fa-music"></i> <strong>Audio</strong> S<span class="mirror">e</span>arch
+  </h2>
+</header>
+
+<div class="w3-container">
+  <p>
+    <audio controls autoplay loop>
+      <source src="{{ url_for('static', filename='audio/433.mp3') }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio><div id="audioinfo"><i class="fa fa-info-circle fa-3x"></i><p>John Cage - 3'44''</p></div>
+  </p>
+  <p>
+    Full Audio Search to come Soon&trade;!
+  </p>
+</div>
+
+<br>
+
+</article>
+
+{% endblock %}

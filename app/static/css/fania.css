@@ -118,6 +118,16 @@ input[type=radio].w3-radio+.w3-validate{padding-right:1em; padding-left:4px;}
   height: 1.6em;
 }
 
+#audioinfo p{
+  visibility: hidden;
+  display: inline;
+  margin-left: 10px;
+}
+
+#audioinfo:hover p{
+  visibility: visible;
+}
+
 .fanbtn {
   margin-left: 2px;
   padding: 5.5px 10px;
