@@ -1,9 +1,10 @@
 import requests
 from imagesurfer import pataphysicalise, transent
+import keys
 #############################################
 
 # YOUTUBE SEARCH API
-yt_key = 'AIzaSyDPZlMpFVZUBfhD4ycjfUZzCR_mVDP59jY'
+yt_key = keys.youtube_k
 
 
 def getvideos(query):

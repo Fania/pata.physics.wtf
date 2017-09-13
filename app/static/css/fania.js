@@ -1,3 +1,13 @@
+var microsoft_secret = keyconfig.microsoft_s;
+var flickr_key = keyconfig.flickr_k;
+var flick_secret = keyconfig.flick_s;
+var bing_key = keyconfig.bing_k;
+var bing_auth = keyconfig.bing_a;
+var getty_key = keyconfig.getty_k;
+var getty_key2 = keyconfig.getty_k2;
+var youtube_key = keyconfig.youtube_k;
+
+
 // FLICKR
 function flickrsearch(queries){
   for(var x=0; x<10; x++){
@@ -123,7 +133,7 @@ function createSpiral(imglist){
 // GETTY
 function gettysearch(query){
   var appendApiKeyHeader = function( xhr ) {
-    xhr.setRequestHeader('Api-Key', '992thepbk9a25nu7sefeqncz')
+    xhr.setRequestHeader('Api-Key', getty_key2)
   }
   var searchRequest = {
     "phrase": query,
@@ -163,7 +173,7 @@ function bingsearch(query){
     $.ajax({
       method: "post",
       url: furl,
-      headers: {'Authorization': 'Basic OlVDNUdCZjFub3pCT3hKSW14djlIUzlRYjFhTnpYdVdEQ1BEeTVELzRObFk9'},
+      headers: {'Authorization': bing_auth},
       success: function (data) {
         var imglist = []
         $.each(data.d.results, function(i,item){
@@ -454,10 +464,9 @@ function getRandContent(link) {
 }
 
 // GETTY
-var apiKey = '5kt5jxty5vvb8zxev3yzd4dz';
 
 var appendApiKeyHeader = function( xhr ) {
-  xhr.setRequestHeader('Api-Key', apiKey)
+  xhr.setRequestHeader('Api-Key', getty_key)
 }
 
 function GetSearchResults(words) {
