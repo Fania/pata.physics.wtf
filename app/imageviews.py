@@ -17,7 +17,7 @@ def imageresults():
     choice = request.form['img_choice']
 
     # print oldquery, choice
-    translations = transent2(oldquery)
+    translations = transent(oldquery)
     # print 'trans ', translations
 
     transplit = translations[2].split(' ')
