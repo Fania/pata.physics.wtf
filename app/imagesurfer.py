@@ -6,6 +6,17 @@ from requests.auth import HTTPBasicAuth  # BING IMG
 import itertools
 from nltk.corpus import wordnet as wn
 import keys
+from auth import AzureAuthClient  # Translator
+from xml.etree import ElementTree  # Translator
+
+# from textsurfer import syzygy
+import itertools
+from nltk.corpus import wordnet as wn
+
+import sys
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 
 
 def pataphysicalise(words):
