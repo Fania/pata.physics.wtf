@@ -1,5 +1,0 @@
-feather - synos: 7
-feather - hypos: 14
-feather - hypers: 14
-feather - holos: 3
-feather - meros: 8

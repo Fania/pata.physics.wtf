@@ -22,6 +22,22 @@ Run on Ubuntu:
 ```ctrl+a+d```
 
 
+## screen
+
+list all screens
+```screen -ls```
+
+reconnect to screen
+```screen -r```
+
+reconnect to screen XYZ
+```screen -r XYZ```
+
+
+
+
+
+
 ---
 
 git log --graph --full-history --all --date=format:"%a %d %b %Y" --pretty=format:"%h%x20%x20%ad%x09%d%x20%s" > prettyprint.txt
@@ -45,16 +61,6 @@ app is the name of the folder that contains the __init__.py and all the views.
 ```gunicorn -c guni.py wsgi:app```
 
 
-## IOCT SERVER
-- ```ssh fraczinski@mnemosyne.ioct.dmu.ac.uk```
-- mnemosyne.ioct.dmu.ac.uk
-- username fraczinski
-- password Green+99
-- config: /etc/apache2/sites/pata.conf
-
-http://mnemosyne.ioct.dmu.ac.uk/
-/Library/WebServer/share/pata/pata3
-
 
 ## SCREEN
 start screen: ```screen```
@@ -62,18 +68,6 @@ reconnect: ```screen -R```
 detach:	```ctrl+a d```
 list screens: ```screen -list```
 kill screen: ```exit```
-
-
-### IOCT setup
-
-1. ```ssh fraczinski@mnemosyne.ioct.dmu.ac.uk```
-2. ```Green+99```
-3. cd root /Library/WebServer/share/pata/pata3
-4. ```screen```
-5. ```. venv/bin/activate```
-6. ```python run.py```
-7. ```ctrl+a d```
-8. ```exit```
 
 
 ## REQUIREMENTS

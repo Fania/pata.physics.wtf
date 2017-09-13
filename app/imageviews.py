@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from imagesurfer import getimages, transent, pataphysicalise
+from imagesurfer import getimages, transent2, pataphysicalise
 
 import random, time
 
@@ -16,8 +16,9 @@ def imageresults():
     oldquery = request.form['query']
     choice = request.form['img_choice']
 
-    translations = transent(oldquery)
-    # print('trans ', translations)
+    # print oldquery, choice
+    translations = transent2(oldquery)
+    # print 'trans ', translations
 
     transplit = translations[2].split(' ')
     pata = pataphysicalise(transplit)
