@@ -1,6 +1,9 @@
 # Fania #
 #########
 venv
+.vscode
+keys.js
+keys.py
 
 # Compiled source #
 ###################

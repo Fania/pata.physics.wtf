@@ -1,14 +1,15 @@
 import requests
-from imagesurfer import pataphysicalise, transent2
+from imagesurfer import pataphysicalise, transent
+import keys
 #############################################
 
 # YOUTUBE SEARCH API
-yt_key = 'AIzaSyDPZlMpFVZUBfhD4ycjfUZzCR_mVDP59jY'
+yt_key = keys.youtube_k
 
 
 def getvideos(query):
     out = []
-    translations = transent2(query)
+    translations = transent(query)
     # print('trans ', translations)
     transplit = translations[2].split(' ')
     tmp = pataphysicalise(transplit)

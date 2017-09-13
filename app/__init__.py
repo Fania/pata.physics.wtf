@@ -5,7 +5,7 @@ import codecs
 
 app = Flask(__name__)
 
-from app import views, textviews, imageviews, videoviews
+from app import views, textviews, imageviews, videoviews, audioviews
 
 
 def getrandquote():
