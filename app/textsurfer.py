@@ -182,6 +182,7 @@ setupcorpus(s_36, en_stop, s_dict, 's'), print('added 36 - SH')
 setupcorpus(s_37, en_stop, s_dict, 's'), print('added 37 - SH')
 
 # print(s_dict)
+
 # print(len(l_dict), len(s_dict))
 # with open("dict.txt", "a") as mylog:
 #     mylog.write(str(l_dict))
@@ -213,16 +214,21 @@ def get_results(words, algo, dic):
 
 def get_nym(nym, wset):
     out = []
-    # what is happening here? why do i have hyponyms as default?
     hhh = wset.hyponyms()
     if nym == 'hypo':
         hhh = wset.hyponyms()
     if nym == 'hyper':
         hhh = wset.hypernyms()
     if nym == 'holo':
-        hhh = wset.member_holonyms()
+        hhhm = wset.member_holonyms()
+        hhhs = wset.substance_holonyms()
+        hhhp = wset.part_holonyms()
+        hhh = hhhm + hhhs + hhhp
     if nym == 'mero':
-        hhh = wset.part_meronyms()
+        hhhm = wset.member_meronyms()
+        hhhs = wset.substance_meronyms()
+        hhhp = wset.part_meronyms()
+        hhh = hhhm + hhhs + hhhp
     if len(hhh) > 0:
         for h in hhh:
             for l in h.lemmas():
@@ -233,6 +239,12 @@ def get_nym(nym, wset):
                 # f = "thesis" + st + ".txt"
                 # with open(f, "a") as mylog:
                 #     mylog.write(p)
+    # ts = time.time()
+    # st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+    # p = nym + ", " + str(wset) + ", " + str(len(hhh)) + "\n"
+    # f = "syzygy" + st + ".txt"
+    # with open(f, "a") as mylog:
+    #     mylog.write(p)
     return out
 
 
@@ -259,18 +271,45 @@ def clinamen(w, c, i):
         # mylog.write('\n')
         # mylog.write(f)
         # mylog.write('\n')
-
     return out, words, sources, total
 
 
 def syzygy(w, c):
     words = set()
+    hypos = set()
+    hypers = set()
+    holos = set()
+    meros = set()
     wordsets = wn.synsets(w)
+    hypo_len, hyper_len, holo_len, mero_len, syno_len = 0,0,0,0,0
     for ws in wordsets:
-        words.update(get_nym('hypo', ws))
-        words.update(get_nym('hyper', ws))
-        words.update(get_nym('holo', ws))
-        words.update(get_nym('mero', ws))
+        hypos.update(get_nym('hypo', ws))
+        hypo_len += len(hypos)
+        words.update(hypos)
+        hypers.update(get_nym('hyper', ws))
+        hyper_len += len(hypers)
+        words.update(hypers)
+        holos.update(get_nym('holo', ws))
+        holo_len += len(holos)
+        words.update(holos)
+        meros.update(get_nym('mero', ws))
+        mero_len += len(meros)
+        words.update(meros)
+        syno_len += 1
+    # ts = time.time()
+    # st = datetime.datetime.fromtimestamp(ts).strftime('%d%m%y%H%M%S')
+    # p0 = w + " - synos: " + str(wordsets) + "\n"
+    # p1 = w + " - hypos: " + str(hypos) + "\n"
+    # p2 = w + " - hypers: " + str(hypers) + "\n"
+    # p3 = w + " - holos: " + str(holos) + "\n"
+    # p4 = w + " - meros: " + str(meros) + "\n"
+    # f = "syzygy" + st + ".txt"
+    # with open(f, "a") as mylog:
+    #     mylog.write(p0)
+    #     mylog.write(p1)
+    #     mylog.write(p2)
+    #     mylog.write(p3)
+    #     mylog.write(p4)
     # print('inside syzygy function: ', words)
     out, sources, total = get_results(words, 'Syzygy', c)
     return out, words, sources, total
@@ -358,11 +397,6 @@ def get_title(file):
         's_36': "William Shakespeare, 1611: The Winter's Tale",
         's_37': "William Shakespeare, 1609: A Lover's Complaint"
     }.get(file, 'Unknown')  # 'Unknown' is default if file not found
-
-
-
-
-    
 
 
 def pp_sent(w, f, p):  # gets w as lower case
@@ -470,7 +504,9 @@ def dameraulevenshtein(seq1, seq2):
     return thisrow[len(seq2) - 1]
 
 
+# sens = all_sens
 def calc_all(sens):
+    # not needed all these all_x variables
     all_1, all_2, all_3, all_4, all_5, all_6, all_7, all_8, all_9, \
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
     out, b, part, mx = [], 0, 0, 15
@@ -481,9 +517,12 @@ def calc_all(sens):
         mx = len(sens) + 1
     for i in range(1, mx):
         n = b + part
-        v = eval('all_' + str(i))
+        v = eval('all_' + str(i)) # not needed
         v = sens[b:n]
         b += part
         out.append(v)
     return out, part, (mx - 1)
+
+# out (lol) = all_sens divided into 14 lists
 # all_poems = part ** mx  # no of options ^ no of lines
+# all_sens = [(f, pp_sent(r.lower(), e, p), algo),...]

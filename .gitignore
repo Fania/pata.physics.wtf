@@ -1,6 +1,7 @@
 # Fania #
 #########
 venv
+.vscode
 
 # Compiled source #
 ###################
