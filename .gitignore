@@ -1,7 +1,7 @@
 # Fania #
 #########
 venv
-.vscode
+.vscode/**
 keys.js
 keys.py
 

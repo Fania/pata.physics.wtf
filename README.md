@@ -16,13 +16,15 @@
 
 ### Academic Background
 
-The system described and shown on this site is part of a PhD project entitled **Algorithmic Meta-Creativity** by Fania Raczinski. Her doctoral thesis describing this project can be found at [dr.physics.wtf](http://dr.physics.wtf).
+The system described and shown on this site is part of a PhD project entitled **Algorithmic Meta-Creativity** by Fania Raczinski. The doctoral thesis describing this project can be found at [dr.physics.wtf](http://dr.physics.wtf).
 
-Fania's research involves studying human and computer creativity and how they are evaluated, the absurd pseudo philosophy pataphysics and its applications, and the development of creative exploratory search algorithms inspired by pataphysical concepts.
+This research involves studying human and computer creativity and how they are evaluated, the absurd pseudo philosophy pataphysics and its applications, and the development of creative exploratory search algorithms inspired by pataphysical concepts.
 
-Part of this research has been described in a [paper](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7473036) for the International Symposium on Creative Computing 2016 in Oxford, an [article](http://www.tandfonline.com/doi/full/10.1080/14626268.2013.813377#.U6li4_ldV8E) for the Digital Creativity journal in 2013, and a [paper](http://dl.acm.org/citation.cfm?id=2466648&CFID=824433372&CFTOKEN=80216159) for the Creativity & Cognition conference 2013 in Sydney.
-
-There is a talk about [*The Pataphysics of the Future*](https://www.youtube.com/watch?v=UxYUZMyPE0o) given at the TDC at DMU in 2013 on Youtube and a more recent talk about the poetry aspect of the project at the Phoenix in Leicester as part of a Computer Arts Society [talk](https://vimeo.com/142947457) from 2015.
+- [Creative Zombie Apocalypse: A Critique of Computer Creativity Evaluation](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7473036), International Symposium on Creative Computing 2016 in Oxford
+- [The pataphysics of creativity: developing a tool for creative search](http://www.tandfonline.com/doi/full/10.1080/14626268.2013.813377#.U6li4_ldV8E), Digital Creativity journal 2013
+- [Creative search using pataphysics](http://dl.acm.org/citation.cfm?id=2466648&CFID=824433372&CFTOKEN=80216159), Creativity & Cognition conference 2013 in Sydney
+- [The Pataphysics of the Future](https://www.youtube.com/watch?v=UxYUZMyPE0o), talk at the TDC at DMU in 2013
+- [Pata-computed Poetry](https://vimeo.com/142947457), talk at the Phoenix in Leicester as part of a Computer Arts Society 2015
 
 A previous version of this prototype was used in the creation of an online opera entitled [*The Imaginary Voyage*](http://andrewhugill.com/theimaginaryvoyage/) and created in collaboration with The Opera Group, an award-winning, nationally and internationally renowned opera company. In particular, it was used to create the libretto for one of the virtual islands whose navigation provides the central storyline for the opera.
 
