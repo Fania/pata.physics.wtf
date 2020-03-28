@@ -1,7 +1,7 @@
 from flask import render_template, url_for, request
 from app import app
-from videosurfer import *
-from imagesurfer import transent, pataphysicalise
+from .videosurfer import *
+from .imagesurfer import transent, pataphysicalise
 import time
 
 
@@ -16,11 +16,11 @@ def videoresults():
     query = request.form['query']
 
     if request.method == 'GET':
-        print 'videoresults get: ', query  # data['query']
+        print('videoresults get: ', query)  # data['query']
         # return render_template('p01results.html', q)
     else:
         #request was a POST
-        print 'videoresults post: ', query  # data['query']
+        print('videoresults post: ', query)  # data['query']
         date = time.strftime("%c")
         t = 'videoresults post: '+ date+' ['+ query +']' +'\n'
         with open("log.txt", "a") as mylog:

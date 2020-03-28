@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from textsurfer import clinamen, syzygy, antinomy, calc_all
+from .textsurfer import clinamen, syzygy, antinomy, calc_all
 import time
 
 
@@ -16,11 +16,11 @@ def textresults():
     corpus = request.form['corpus']
 
     if request.method == 'GET':
-        print 'textresults get: ', query, corpus  # data['query']
+        print('textresults get: ', query, corpus)  # data['query']
         # return render_template('p01results.html', q)
     else:
         # request was a POST
-        print 'textresults post: ', query, corpus  # data['query']
+        print('textresults post: ', query, corpus)  # data['query']
         # qx = getResults(q)
 
         date = time.strftime("%c")

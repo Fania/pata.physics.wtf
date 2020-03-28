@@ -4,6 +4,7 @@ venv
 .vscode/**
 keys.js
 keys.py
+test
 
 # Compiled source #
 ###################

@@ -1,33 +1,37 @@
 from microsofttranslator import Translator
 import flickrapi as fapi
 import json
-import requests  # BING IMG
+import requests  # BING IMG Translator
+import uuid # Translator
 from requests.auth import HTTPBasicAuth  # BING IMG
 import itertools
 from nltk.corpus import wordnet as wn
-import keys
-from auth import AzureAuthClient  # Translator
+from .keys import *
+from .auth import AzureAuthClient  # Translator
 from xml.etree import ElementTree  # Translator
 
 # from textsurfer import syzygy
 import itertools
 from nltk.corpus import wordnet as wn
 
-import sys
-
-reload(sys)  
-sys.setdefaultencoding('utf8')
+# import sys
+# from importlib import reload
+# reload(sys)  
+# sys.setdefaultencoding('utf8')
 
 
 def pataphysicalise(words):
     # print('inside pata: query words: ', words)
     sys_ws = set()
     for word in words:
+        # print(word)
         synonyms = wn.synsets(word)
+        # print(word, synonyms)
         if len(synonyms) > 0:
             for s in synonyms:
                 for l in s.lemmas():
                     x = str(l.name())
+                    # print(x)
                     o = x.replace('_', ' ')
                     sys_ws.add(o)
     # print('synonyms ', sys_ws)
@@ -39,25 +43,39 @@ def pataphysicalise(words):
 def transent(sent):
     # Call to Microsoft Translator Service
 
-    client_secret = keys.translator_s
-    auth_client = AzureAuthClient(client_secret)
-    bearer_token = 'Bearer ' + auth_client.get_access_token()
-    headers = {"Authorization ": bearer_token}
+    # https://docs.microsoft.com/en-gb/azure/cognitive-services/translator/reference/v3-0-reference
+    # see also https://github.com/MicrosoftTranslator/Text-Translation-API-V3-Python/blob/master/Translate.py
 
-    frurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(sent, 'en', 'fr')
-    frtranslationData = requests.get(frurl, headers = headers)
-    frtranslation = ElementTree.fromstring(frtranslationData.text.encode('utf-8'))
-    french = frtranslation.text.encode('utf-8')
+    # print("Inside translator function: ", sent)
 
-    japurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(french, 'fr', 'ja')
-    jatranslationData = requests.get(japurl, headers = headers)
-    jatranslation = ElementTree.fromstring(jatranslationData.text.encode('utf-8'))
-    japanese = jatranslation.text.encode('utf-8')
+    subscription_key = translator_s
+    endpoint = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0'
+    headers = {
+        'Ocp-Apim-Subscription-Key': subscription_key,
+        'Content-type': 'application/json',
+        'X-ClientTraceId': str(uuid.uuid4())
+    }
 
-    engurl = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text={}&from={}&to={}".format(japanese, 'ja', 'en')
-    entranslationData = requests.get(engurl, headers = headers)
-    entranslation = ElementTree.fromstring(entranslationData.text.encode('utf-8'))
-    english = entranslation.text.encode('utf-8')
+    frbody = [{'text': sent}]
+    frurl = endpoint + "&from=en&to=fr"
+    frtranslationData = requests.post(frurl, headers=headers, json=frbody)
+    frresponse = frtranslationData.json()
+    french = frresponse[0]['translations'][0]['text']
+    # print(french)
+
+    jabody = [{'text': french}]
+    jaurl = endpoint + "&from=fr&to=ja"
+    jatranslationData = requests.post(jaurl, headers=headers, json=jabody)
+    jaresponse = jatranslationData.json()
+    japanese = jaresponse[0]['translations'][0]['text']
+    # print(japanese)
+
+    enbody = [{'text': japanese}]
+    enurl = endpoint + "&from=ja&to=en"
+    entranslationData = requests.post(enurl, headers=headers, json=enbody)
+    enresponse = entranslationData.json()
+    english = enresponse[0]['translations'][0]['text']
+    # print(english)
 
     translations = (french, japanese, english)
     return translations

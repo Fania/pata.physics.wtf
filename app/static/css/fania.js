@@ -1,8 +1,9 @@
+// console.log(keyconfig);
 var microsoft_secret = keyconfig.microsoft_s;
 var flickr_key = keyconfig.flickr_k;
 var flick_secret = keyconfig.flick_s;
 var bing_key = keyconfig.bing_k;
-var bing_auth = keyconfig.bing_a;
+// var bing_auth = keyconfig.bing_a;
 var getty_key = keyconfig.getty_k;
 var getty_key2 = keyconfig.getty_k2;
 var youtube_key = keyconfig.youtube_k;
@@ -10,51 +11,36 @@ var youtube_key = keyconfig.youtube_k;
 
 // FLICKR
 function flickrsearch(queries){
-  for(var x=0; x<10; x++){
-    $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
-      {
-        tags: queries[x].query,
-        tagmode: "all",
-        format: "json"
-      },
-      function(data,status,ajax) {
-        console.log("status " + status);
-        console.log("ajax" + ajax);
-        var title = "";
-        var media = "";
-        var link = "";
-        var queryx = "TEST";
-        if (data.items[0] != undefined) {
-          title = data.items[0].title;
-          media = data.items[0].media.m;
-          link = data.items[0].link;
-          console.log("test");
-          // HOW DO I GET THE X NUMBER?????
-          console.log(x);
-          console.log(queries);
-          // queryx = queries[x].query;
+  // console.log("flickr", queries);
+  let results = [];
+  let queryTerms = [];
+  queries.forEach(q => {
+    queryTerms.push(q.query);
+  });
+  const tags = queryTerms.join(",");
+  const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${flickr_key}&format=json&per_page=10&nojsoncallback=1&sort=interestingness-desc&tags=`;
+  const url = baseURL + tags;
+  const request = new Request(url);
+  fetch(request)
+    .then(response => response.json())
+    .then(data => {
+      (data.photos.photo).forEach(d => {
+        const tmp = d;
+        if (tmp != undefined) {
+          const img_url = `https://farm${tmp.farm}.staticflickr.com/${tmp.server}/${tmp.id}_${tmp.secret}_q.jpg`;
+          const page_url = `https://www.flickr.com/photos/${tmp.owner}/${tmp.id}`;
+          results.push([tmp.title, img_url, page_url]);
         }
-        // call external function with current first result
-        imgList([title, media, link, queryx]);
-      } // end function data
-    ); // end getJSON
-    // imgList([title, media, link, queryx]);
-  } // end of for loop
+      });
+      createSpiral(results);
+    });
 }; // end flickrsearch
 
-var allImages = [];
-// functio to accumulate images until 10 are reached and then
-// calls the createSpiral function to display them all
-function imgList(img){
-  if (allImages[0] != "") {
-    allImages.push(img);
-  }
-  if (allImages.length === 10) {
-    createSpiral(allImages);
-  }
-} // end imgList
+
+
 
 function createSpiral(imglist){
+  // console.log(imglist);
   // ' -*- '+imglist[3][3]
   if (imglist.length === 10){
     var spiral_code = ' \
@@ -131,50 +117,73 @@ function createSpiral(imglist){
 
 
 // GETTY
-function gettysearch(query){
-  var appendApiKeyHeader = function( xhr ) {
-    xhr.setRequestHeader('Api-Key', getty_key2)
-  }
-  var searchRequest = {
-    "phrase": query,
-    "page_size": 10
-  }
-  // console.log('query ' + searchRequest.phrase)
-  function GetSearchResults(callback) {
-    $.ajax({
-      type: "GET",
-      beforeSend: appendApiKeyHeader,
-      url: "https://api.gettyimages.com/v3/search/images/creative",
-      data: searchRequest})
-      .success(function (data, textStatus, jqXHR) {
-        // console.log('data ' + data.images);
-        var imgs = [];
-        $.each(data.images, function(i,item){
-          imgs.push([item.title, item.display_sizes[0].uri, ""]);
-        });
-        // console.log('imglist ' + imgs);
-        createSpiral(imgs)
-      }) // end of success
-      .fail(function (data, err) {
-        console.log('API error');
-      }); // end of fail
-  } // end GetSearchResults
-  GetSearchResults();
-}; // end of gettysearch
+// Getty is dead. Long live Flickr.
+// function gettysearch(query){
+//   var appendApiKeyHeader = function( xhr ) {
+//     xhr.setRequestHeader('Api-Key', getty_key2)
+//   }
+//   var searchRequest = {
+//     "phrase": query,
+//     "page_size": 10
+//   }
+//   // console.log('query ' + searchRequest.phrase)
+//   function GetSearchResults(callback) {
+//     $.ajax({
+//       type: "GET",
+//       beforeSend: appendApiKeyHeader,
+//       url: "https://api.gettyimages.com/v3/search/images/creative",
+//       data: searchRequest})
+//       .success(function (data, textStatus, jqXHR) {
+//         // console.log('data ' + data.images);
+//         var imgs = [];
+//         $.each(data.images, function(i,item){
+//           imgs.push([item.title, item.display_sizes[0].uri, ""]);
+//         });
+//         // console.log('imglist ' + imgs);
+//         createSpiral(imgs)
+//       }) // end of success
+//       .fail(function (data, err) {
+//         console.log('API error');
+//       }); // end of fail
+//   } // end GetSearchResults
+//   GetSearchResults();
+// }; // end of gettysearch
 
 
 
 // BING
-function bingsearch(query){
-  var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
-  var myurl2 = "Query=" + "'" + query + "'" + "&$top=10&$format=json";
+function bingsearch(queries){
+  console.log("inside bing", queries);
+  // const base_url = "https://pata-img.cognitiveservices.azure.com/bing/v7.0/images/search";
+
+  // let headers = {
+  //     'Ocp-Apim-Subscription-Key': bing_key,
+  //     'Content-type': 'application/json'
+  // }
+
+  // let body = [{'text': sent}]
+  // let fullurl = base_url + ""
+  // frtranslationData = requests.post(frurl, headers=headers, json=frbody)
+  // frresponse = frtranslationData.json()
+  // french = frresponse[0]['translations'][0]['text']
+  let qs = [];
+  queries.forEach( q => qs.push(q.query) );
+  let queryString = `"${qs.join(" or ")}"`;
+  console.log(queryString);
+
+  // var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
+  // var myurl2 = "Query=" + "'" + queryString + "'" + "&$top=10&$format=json";
+  var myurl1 = "https://pata-img.cognitiveservices.azure.com/bing/v7.0/images/search";
+  var myurl2 = `?$count=10&&q=${queryString}`;
   var furl = myurl1 + myurl2;
   function GetSearchResults() {
     $.ajax({
-      method: "post",
+      // method: "post",
+      method: "get",
       url: furl,
-      headers: {'Authorization': bing_auth},
+      headers: {'Ocp-Apim-Subscription-Key': bing_key},
       success: function (data) {
+        console.log(data);
         var imglist = []
         $.each(data.d.results, function(i,item){
           imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
@@ -188,6 +197,36 @@ function bingsearch(query){
   } // end GetSearchResults
   GetSearchResults();
 }; // end of bingsearch
+// function bingsearch(query){
+//   console.log("inside bing", query);
+//   var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
+//   var myurl2 = "Query=" + "'" + query + "'" + "&$top=10&$format=json";
+//   var furl = myurl1 + myurl2;
+//   function GetSearchResults() {
+//     $.ajax({
+//       method: "post",
+//       url: furl,
+//       headers: {'Authorization': bing_auth},
+//       success: function (data) {
+//         var imglist = []
+//         $.each(data.d.results, function(i,item){
+//           imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
+//         });
+//         createSpiral(imglist)
+//       }, // end of success
+//       failure: function (err) {
+//         console.log('API error');
+//       } // end of fail
+//     });
+//   } // end GetSearchResults
+//   GetSearchResults();
+// }; // end of bingsearch
+
+
+
+
+
+
 
 /////////////////////////////////////////////////////////////////////
 
@@ -463,19 +502,22 @@ function getRandContent(link) {
 	return false;
 }
 
+
+
+
 // GETTY
 
-var appendApiKeyHeader = function( xhr ) {
-  xhr.setRequestHeader('Api-Key', getty_key)
-}
+// var appendApiKeyHeader = function( xhr ) {
+//   xhr.setRequestHeader('Api-Key', getty_key)
+// }
 
-function GetSearchResults(words) {
-  var searchRequest = { "phrase": words }
-  $.ajax({
-    type: "GET",
-    beforeSend: appendApiKeyHeader,
-    url: "https://api.gettyimages.com/v3/search/creative",
-    data: searchRequest})
-    .success(function (data, textStatus, jqXHR) { /* use search results */ })
-    .fail(function (data, err) { /* handle errors */ });
-}
+// function GetSearchResults(words) {
+//   var searchRequest = { "phrase": words }
+//   $.ajax({
+//     type: "GET",
+//     beforeSend: appendApiKeyHeader,
+//     url: "https://api.gettyimages.com/v3/search/creative",
+//     data: searchRequest})
+//     .success(function (data, textStatus, jqXHR) { /* use search results */ })
+//     .fail(function (data, err) { /* handle errors */ });
+// }

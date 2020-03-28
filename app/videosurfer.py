@@ -1,22 +1,19 @@
 import requests
-from imagesurfer import pataphysicalise, transent
-import keys
+from .imagesurfer import pataphysicalise, transent
+from .keys import *
 #############################################
-
-# YOUTUBE SEARCH API
-yt_key = keys.youtube_k
 
 
 def getvideos(query):
     out = []
     translations = transent(query)
     # print('trans ', translations)
-    transplit = translations[2].split(' ')
+    transplit = str(translations[2]).split(' ')
     tmp = pataphysicalise(transplit)
 
     b0 = "https://www.googleapis.com/youtube/v3/search?"
     b1 = "&order=viewCount&part=snippet&"
-    b3 = "&type=video&key=%s" % yt_key
+    b3 = "&type=video&key=%s" % youtube_k
     b4 = "&maxResults=10&safeSearch=strict"
 
     for x in tmp:
