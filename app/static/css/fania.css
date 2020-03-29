@@ -101,6 +101,8 @@ input[type=radio].w3-radio+.w3-validate{padding-right:1em; padding-left:4px;}
 }
 .poetry {
   padding: 2em 1em;
+}
+#tab1 .poetry {
   display: flex;
   justify-content: center;
 }
@@ -175,6 +177,33 @@ color: #cfd8dc !important;
   filter: FlipH !important;
 }
 
+
+
+
+
+.spouter { margin: 20px 0; padding: 0; width: 890px; height: 550px; }
+.spleft { float: left; width: 340px; height: 550px; }
+.spltop { width: 340px; height: 210px; }
+.spltleft { float: left; width: 210px; height: 210px; }
+.spltright { float: right; width: 130px; height: 210px; }
+.spltrtop { width: 130px; height: 130px; }
+.spltrbottom { width: 130px; height: 80px; }
+.spltrbleft { float: left; width: 50px; height: 80px; }
+.spltrbltop { width: 50px; height: 30px; }
+.spltrbltleft { float: left; width: 30px; height: 30px; }
+.spltrbltright { float: right; width: 20px; height: 30px; }
+.spltrbltrtop { width: 20px; height: 20px; }
+.spltrbltrtop img { margin: 0 }
+.spltrbltrbottom { width: 20px; height: 10px; }
+.spltrbltrbleft { float: left; width: 10px; height: 10px; }
+.spltrbltrbright { float: right; width: 10px; height: 10px; }
+.spltrblbottom { width: 50px; height: 50px; }
+.spltrbright { float: right; width: 80px; height: 80px; }
+.splbottom { width: 340px; height: 340px; }
+.spright { float: right; width: 550px; height: 550px; }
+.spltrbltrbleft img { position: absolute; }
+.spltrbltrbright img { position: absolute; }
+a.spimg, a.spimg:hover { border: 0;}
 
 
 

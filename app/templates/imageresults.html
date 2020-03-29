@@ -69,22 +69,14 @@
   }
   var c = $('#ichoice').data();
   var ch = document.getElementById(c.choice);
-  function checkradio(){
-    ch.checked = true;
-    // console.log("checked the radio button")
+  function checkradio() { 
+    ch.checked = true; 
+    console.log("checked the radio button")
   }
-  if (c.choice === 'flickr'){
-    flickrsearch(qs);
-  }
-  // if (c.choice === 'getty'){
-  //   gettysearch(qs[0].query);
-  // }
-  if (c.choice === 'bing'){
-    bingsearch(qs);
-  }
-  // if (c.choice === 'google'){
-  //   googlesearch(q.query);
-  // }
+  if (c.choice === 'flickr') flickrsearch(qs);
+  if (c.choice === 'bing') bingsearch(qs); 
+  // if (c.choice === 'getty') gettysearch(qs[0].query); 
+  // if (c.choice === 'google') googlesearch(q.query); 
   checkradio();
 })();
 </script>

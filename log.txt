@@ -290,3 +290,18 @@ imageresults post: Sun Mar 29 17:26:39 2020 flowers [peak, heyday, blossom, prim
 imageresults post: Sun Mar 29 17:29:05 2020 flowers [peak, heyday, blossom, prime, flower, bloom, efflorescence, flush, useless, nix] bing
 imageresults post: Sun Mar 29 17:29:46 2020 flowers [peak, heyday, blossom, prime, flower, bloom, efflorescence, flush, null, incorrect] bing
 imageresults post: Sun Mar 29 17:30:24 2020 flowers [peak, heyday, blossom, prime, flower, bloom, efflorescence, flush, mistake, useless] bing
+imageresults post: Sun Mar 29 17:31:10 2020 peak [picture, photograph, pic, exposure, photo, null, empty, incorrect, zero, mistake] bing
+imageresults post: Sun Mar 29 17:31:15 2020 picture [paradigm, picture, visualize, double, image, range, visualise, range of a function, look-alike, fancy] bing
+imageresults post: Sun Mar 29 17:33:09 2020 picture [visualize, see, simulacrum, visualise, envision, effigy, range, epitome, figure of speech, icon] bing
+textresults post: Sun Mar 29 17:33:14 2020 [love] faustroll
+textresults post: Sun Mar 29 17:36:18 2020 [love] faustroll
+imageresults post: Sun Mar 29 17:36:33 2020 solid foundations [creation, whole, foundation garment, amp, deoxyadenosine monophosphate, axerophthol, angstrom, type A, vitamin A, substantial] flickr
+imageresults post: Sun Mar 29 17:36:55 2020 solid foundations [solidness, solid state, hearty, vitamin A, self-coloured, origination, ampere, understructure, foot, a] flickr
+textresults post: Sun Mar 29 17:37:05 2020 [tree] faustroll
+videoresults post: Sun Mar 29 17:37:26 2020 [tree]
+videoresults post: Sun Mar 29 17:43:40 2020 [tree]
+videoresults post: Sun Mar 29 17:44:44 2020 [tree]
+imageresults post: Sun Mar 29 17:45:26 2020 love [love life, make out, be intimate, lie with, sexual love, sleep together, eff, making love, get laid, roll in the hay] flickr
+imageresults post: Sun Mar 29 17:45:37 2020 tree [tree diagram, Tree, tree, Sir Herbert Beerbohm Tree, corner, shoetree, empty, zero, useless, null] bing
+textresults post: Sun Mar 29 17:45:48 2020 [music] faustroll
+textresults post: Sun Mar 29 17:46:04 2020 [cats] shakespeare
