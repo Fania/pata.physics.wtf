@@ -27,7 +27,7 @@ def imageresults():
     if len(pata) >= 10:
         queries = random.sample(pata, 10)
     else:
-        errorList = ['empty','error','null','nothing','zero','nix']
+        errorList = ['empty','error','null','nothing','zero','nix','mistake','incorrect','invalid','useless']
         errors = random.sample(errorList, 10 - len(pata))
         queries = pata + errors
 

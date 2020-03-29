@@ -55,6 +55,10 @@
 - [ ] currently only using translations for image search
 - [ ] check lemma names in syzygy function?
 
+- [ ] refactor code
+- [ ] create responsive image spiral
+
+
 
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
 http://www.bevrowe.info/Queneau/QueneauRandom_v4.html

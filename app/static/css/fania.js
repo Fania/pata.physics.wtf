@@ -39,6 +39,85 @@ function flickrsearch(queries){
 
 
 
+
+
+// BING
+function bingsearch(queries){
+  // console.log("inside bing", queries);
+  let results = [];
+  const headers = new Headers({
+    'Ocp-Apim-Subscription-Key': bing_key
+  });
+  const init = { 
+    method: 'GET',
+    headers: headers,
+    mode: 'cors',
+    cache: 'default' 
+  };
+  let qs = [];
+  queries.forEach( q => qs.push(q.query) );
+  const queryString = `${qs.join(" | ")}`;
+  const base_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
+  const params = `?q=${queryString}&count=10`;
+  const fullurl = base_url + params;
+  const request = new Request(fullurl, init);
+  fetch(request)
+    .then(response => response.json())
+    .then(data => {
+      (data.value).forEach(d => {
+        // console.log(d);
+        results.push([d.name, d.thumbnailUrl, d.hostPageUrl]);
+      });
+      createSpiral(results);
+    });
+}; // end of bingsearch
+
+
+
+
+
+
+// GETTY
+// Getty is dead. Long live Flickr/Bing.
+// function gettysearch(query){
+//   var appendApiKeyHeader = function( xhr ) {
+//     xhr.setRequestHeader('Api-Key', getty_key2)
+//   }
+//   var searchRequest = {
+//     "phrase": query,
+//     "page_size": 10
+//   }
+//   // console.log('query ' + searchRequest.phrase)
+//   function GetSearchResults(callback) {
+//     $.ajax({
+//       type: "GET",
+//       beforeSend: appendApiKeyHeader,
+//       url: "https://api.gettyimages.com/v3/search/images/creative",
+//       data: searchRequest})
+//       .success(function (data, textStatus, jqXHR) {
+//         // console.log('data ' + data.images);
+//         var imgs = [];
+//         $.each(data.images, function(i,item){
+//           imgs.push([item.title, item.display_sizes[0].uri, ""]);
+//         });
+//         // console.log('imglist ' + imgs);
+//         createSpiral(imgs)
+//       }) // end of success
+//       .fail(function (data, err) {
+//         console.log('API error');
+//       }); // end of fail
+//   } // end GetSearchResults
+//   GetSearchResults();
+// }; // end of gettysearch
+
+
+
+
+
+
+
+
+
 function createSpiral(imglist){
   // console.log(imglist);
   // ' -*- '+imglist[3][3]
@@ -113,114 +192,6 @@ function createSpiral(imglist){
     $('.img_empty').wrap("<div>Not enough results found.</div>");
   } // end else
 }
-
-
-
-// GETTY
-// Getty is dead. Long live Flickr.
-// function gettysearch(query){
-//   var appendApiKeyHeader = function( xhr ) {
-//     xhr.setRequestHeader('Api-Key', getty_key2)
-//   }
-//   var searchRequest = {
-//     "phrase": query,
-//     "page_size": 10
-//   }
-//   // console.log('query ' + searchRequest.phrase)
-//   function GetSearchResults(callback) {
-//     $.ajax({
-//       type: "GET",
-//       beforeSend: appendApiKeyHeader,
-//       url: "https://api.gettyimages.com/v3/search/images/creative",
-//       data: searchRequest})
-//       .success(function (data, textStatus, jqXHR) {
-//         // console.log('data ' + data.images);
-//         var imgs = [];
-//         $.each(data.images, function(i,item){
-//           imgs.push([item.title, item.display_sizes[0].uri, ""]);
-//         });
-//         // console.log('imglist ' + imgs);
-//         createSpiral(imgs)
-//       }) // end of success
-//       .fail(function (data, err) {
-//         console.log('API error');
-//       }); // end of fail
-//   } // end GetSearchResults
-//   GetSearchResults();
-// }; // end of gettysearch
-
-
-
-// BING
-function bingsearch(queries){
-  console.log("inside bing", queries);
-  // const base_url = "https://pata-img.cognitiveservices.azure.com/bing/v7.0/images/search";
-
-  // let headers = {
-  //     'Ocp-Apim-Subscription-Key': bing_key,
-  //     'Content-type': 'application/json'
-  // }
-
-  // let body = [{'text': sent}]
-  // let fullurl = base_url + ""
-  // frtranslationData = requests.post(frurl, headers=headers, json=frbody)
-  // frresponse = frtranslationData.json()
-  // french = frresponse[0]['translations'][0]['text']
-  let qs = [];
-  queries.forEach( q => qs.push(q.query) );
-  let queryString = `"${qs.join(" or ")}"`;
-  console.log(queryString);
-
-  // var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
-  // var myurl2 = "Query=" + "'" + queryString + "'" + "&$top=10&$format=json";
-  var myurl1 = "https://pata-img.cognitiveservices.azure.com/bing/v7.0/images/search";
-  var myurl2 = `?$count=10&&q=${queryString}`;
-  var furl = myurl1 + myurl2;
-  function GetSearchResults() {
-    $.ajax({
-      // method: "post",
-      method: "get",
-      url: furl,
-      headers: {'Ocp-Apim-Subscription-Key': bing_key},
-      success: function (data) {
-        console.log(data);
-        var imglist = []
-        $.each(data.d.results, function(i,item){
-          imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
-        });
-        createSpiral(imglist)
-      }, // end of success
-      failure: function (err) {
-        console.log('API error');
-      } // end of fail
-    });
-  } // end GetSearchResults
-  GetSearchResults();
-}; // end of bingsearch
-// function bingsearch(query){
-//   console.log("inside bing", query);
-//   var myurl1 = "https://api.datamarket.azure.com/Bing/Search/Image?";
-//   var myurl2 = "Query=" + "'" + query + "'" + "&$top=10&$format=json";
-//   var furl = myurl1 + myurl2;
-//   function GetSearchResults() {
-//     $.ajax({
-//       method: "post",
-//       url: furl,
-//       headers: {'Authorization': bing_auth},
-//       success: function (data) {
-//         var imglist = []
-//         $.each(data.d.results, function(i,item){
-//           imglist.push([item.Title, item.Thumbnail.MediaUrl, item.SourceUrl]);
-//         });
-//         createSpiral(imglist)
-//       }, // end of success
-//       failure: function (err) {
-//         console.log('API error');
-//       } // end of fail
-//     });
-//   } // end GetSearchResults
-//   GetSearchResults();
-// }; // end of bingsearch
 
 
 
