@@ -1,13 +1,4 @@
-// console.log(keyconfig);
-var microsoft_secret = keyconfig.microsoft_s;
-var flickr_key = keyconfig.flickr_k;
-var flick_secret = keyconfig.flick_s;
-var bing_key = keyconfig.bing_k;
-// var bing_auth = keyconfig.bing_a;
-var getty_key = keyconfig.getty_k;
-var getty_key2 = keyconfig.getty_k2;
-var youtube_key = keyconfig.youtube_k;
-
+// APIs
 
 // FLICKR
 function flickrsearch(queries){
@@ -18,18 +9,17 @@ function flickrsearch(queries){
     queryTerms.push(q.query);
   });
   const tags = queryTerms.join(",");
-  const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${flickr_key}&format=json&per_page=10&nojsoncallback=1&sort=interestingness-desc&tags=`;
+  const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${keyconfig.flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags=`;
   const url = baseURL + tags;
   const request = new Request(url);
   fetch(request)
     .then(response => response.json())
     .then(data => {
       (data.photos.photo).forEach(d => {
-        const tmp = d;
-        if (tmp != undefined) {
-          const img_url = `https://farm${tmp.farm}.staticflickr.com/${tmp.server}/${tmp.id}_${tmp.secret}_q.jpg`;
-          const page_url = `https://www.flickr.com/photos/${tmp.owner}/${tmp.id}`;
-          results.push([tmp.title, img_url, page_url]);
+        if (d != undefined) {
+          const img_url = `https://farm${d.farm}.staticflickr.com/${d.server}/${d.id}_${d.secret}_q.jpg`;
+          const page_url = `https://www.flickr.com/photos/${d.owner}/${d.id}`;
+          results.push([d.title, img_url, page_url]);
         }
       });
       createSpiral(results);
@@ -45,27 +35,23 @@ function flickrsearch(queries){
 function bingsearch(queries){
   // console.log("inside bing", queries);
   let results = [];
-  const headers = new Headers({
-    'Ocp-Apim-Subscription-Key': bing_key
-  });
-  const init = { 
+  const options = { 
     method: 'GET',
-    headers: headers,
+    headers: new Headers({'Ocp-Apim-Subscription-Key':keyconfig.bing_k}),
     mode: 'cors',
     cache: 'default' 
   };
-  let qs = [];
-  queries.forEach( q => qs.push(q.query) );
-  const queryString = `${qs.join(" | ")}`;
+  let queryArray = [];
+  queries.forEach( q => queryArray.push(q.query) );
+  const queryString = `${queryArray.join(" | ")}`;
   const base_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
   const params = `?q=${queryString}&count=10`;
-  const fullurl = base_url + params;
-  const request = new Request(fullurl, init);
+  const fullUrl = base_url + params;
+  const request = new Request(fullUrl, options);
   fetch(request)
     .then(response => response.json())
     .then(data => {
       (data.value).forEach(d => {
-        // console.log(d);
         results.push([d.name, d.thumbnailUrl, d.hostPageUrl]);
       });
       createSpiral(results);
@@ -115,83 +101,39 @@ function bingsearch(queries){
 
 
 
-
-
-
-function createSpiral(imglist){
+function createSpiral(imglist) {
   // console.log(imglist);
-  // ' -*- '+imglist[3][3]
   if (imglist.length === 10){
-    var spiral_code = ' \
-    <div class="spouter"> \
-      <div class="spleft"> \
-        <div class="spltop"> \
-          <div class="spltleft"> \
-            <a id="a3" class="spimg" href="'+imglist[3][2]+'" ><img id="img3" src="'+imglist[3][1]+'" title="'+imglist[3][0]+' --- '+imglist[3][3]+'" height="210" width="210"/></a> \
-          </div> \
-          <div class="spltright"> \
-            <div class="spltrtop"> \
-              <a id="a8" class="spimg" href="'+imglist[8][2]+'" ><img id="img8" src="'+imglist[8][1]+'" title="'+imglist[8][0]+'" height="130" width="130"/></a> \
-            </div> \
-            <div class="spltrbottom"> \
-              <div class="spltrbleft"> \
-                <div class="spltrbltop"> \
-                  <div class="spltrbltleft"> \
-                    <a id="a0" class="spimg" href="'+imglist[0][2]+'" ><img id="img0" src="'+imglist[0][1]+'" title="'+imglist[0][0]+'" height="30" width="30"/></a> \
-                  </div> \
-                  <div class="spltrbltright"> \
-                    <div class="spltrbltrtop"> \
-                      <a id="a1" class="spimg" href="'+imglist[1][2]+'" ><img id="img1" src="'+imglist[1][1]+'" title="'+imglist[1][0]+'" height="20" width="20"/></a> \
-                    </div> \
-                    <div class="spltrbltrbottom"> \
-                      <div class="spltrbltrbleft"> \
-                        <a id="a5" class="spimg" href="'+imglist[5][2]+'" ><img id="img5" src="'+imglist[5][1]+'" title="'+imglist[5][0]+'" height="10" width="10"/></a> \
-                      </div> \
-                      <div class="spltrbltrbright"> \
-                        <a id="a6" class="spimg" href="'+imglist[6][2]+'" ><img id="img6" src="'+imglist[6][1]+'" title="'+imglist[6][0]+'" height="10" width="10"/></a> \
-                      </div> \
-                    </div> \
-                  </div> \
-                </div> \
-                <div class="spltrblbottom"> \
-                  <a id="a7" class="spimg" href="'+imglist[7][2]+'" ><img id="img7" src="'+imglist[7][1]+'" title="'+imglist[7][0]+'" height="50" width="50"/></a> \
-                </div> \
-              </div> \
-              <div class="spltrbright"> \
-                <a id="a2" class="spimg" href="'+imglist[2][2]+'" ><img id="img2" src="'+imglist[2][1]+'" title="'+imglist[2][0]+'" height="80" width="80"/></a> \
-              </div> \
-            </div> \
-          </div> \
-        </div> \
-        <div class="splbottom"> \
-          <a id="a9" class="spimg" href="'+imglist[9][2]+'" ><img id="img9" src="'+imglist[9][1]+'" title="'+imglist[9][0]+'" height="340" width="340"/></a> \
-        </div> \
-      </div> \
-      <div class="spright"> \
-        <a id="a4" class="spimg" href="'+imglist[4][2]+'" ><img id="img4" src="'+imglist[4][1]+'" title="'+imglist[4][0]+'" height="550" width="550"/></a> \
-      </div> \
-    </div> \
-    ';
-    var list_code = [];
-    for (i in imglist) {
-      var img = ' \
-        <div class="w3-col s12 m6 l3 w3-padding"> \
-          <a href="'+imglist[i][2]+'"> \
-            <img src="'+imglist[i][1]+'" \
-            title="'+imglist[i][0]+'" style="width:100%"> \
-          </a> \
-        </div> \
-      ';
-      list_code.push(img);
-    } // end for
-    $('#img_spiral_div').html(spiral_code);
-    $('#img_list_div').html(list_code);
-  } // end if
-  else{
-    // console.log("inside else");
-    $('.img_empty').wrap("<div>Not enough results found.</div>");
-  } // end else
+    const sizes = [10,10,20,30,50,80,130,210,340,550];
+    const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
+    for ( i in imglist ) {
+      let link = document.createElement("a");
+      let img = document.createElement("img");
+      link.href = imglist[i][2];
+      link.classList.add(nums[i]);
+      img.src = imglist[i][1];
+      img.alt = imglist[i][0];
+      img.title = imglist[i][0];
+      img.style.width = `${sizes[i]}px`;
+      img.style.height = `${sizes[i]}px`;
+      link.appendChild(img);
+      img_spiral_div.appendChild(link);
+      let listimg = `
+        <div class="w3-col s12 m6 l3 w3-padding">
+          <a href="${imglist[i][2]}">
+            <img src="${imglist[i][1]}" alt="${imglist[i][0]}"
+            title="${imglist[i][0]}" style="width:100%">
+          </a>
+        </div>`;
+      img_list_div.insertAdjacentHTML("beforeend", listimg);
+    };
+  } else {
+    const placeholders = document.querySelectorAll(".img_empty");
+    placeholders.forEach( p => 
+      p.innerHTML = "<div>Not enough results found.</div>");
+  }
 }
+
 
 
 
