@@ -17,5 +17,24 @@
 - [ ] add more APIs?
 - [ ] replace spiral logo with svg
 
+
+
+- [x] index, header, text, base
+- [ ] textresults
+- [ ] errors
+- [ ] about
+- [ ] images
+- [ ] imageresults
+- [ ] videos
+- [ ] audio ?
+
+- [ ] purge css
+- [ ] purge jquery
+
+
+
+
+
+
 http://www.bevrowe.info/Queneau/QueneauRandom_v4.html
 http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html

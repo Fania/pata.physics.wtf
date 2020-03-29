@@ -51,6 +51,7 @@ header {
   color:#455a64; background:#ECEFF1; 
   padding: .1em 16px; text-align: center }
 header.subheader { background:#cfd8dc; text-align: left }
+header.subsubheader { text-align: left }
 
 
 /* UTILITIES */
@@ -82,16 +83,48 @@ header.subheader { background:#cfd8dc; text-align: left }
   padding: 2em 0;
 }
 .cover img {
-  width: 75%;
-  margin: 1em .5em;
+  width: 75%; margin: 1em .5em;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 
-main {
-  /* padding: 1em; */
-}
 main > p { margin: 1em }
+main > h4 { margin: .5em 16px }
+
+/* SEARCH FORM */
+form.mainsearch { padding: 0 1em }
+form.mainsearch fieldset { border: none; text-align: center }
+form.mainsearch label { padding: 0 1em 0 5px }
+form.mainsearch input[type=radio] { 
+  width: 24px; height: 24px; position: relative; top: 7px;
+}
+form.mainsearch input[type=text] { 
+  width: 90%; border: solid 1px #90A4AE; border-radius: 5px;
+}
+form.mainsearch button { 
+  background:#90A4AE; width: 26px; height: 26px; 
+  border: 0; border-radius: 5px; margin: 0;
+}
+form.mainsearch button:hover { 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.inlineforms { margin: 1em }
+.inlineforms form { display: inline-block }
+.inlineforms input[type=radio] { display: none }
+.inlineforms input[type=submit] { text-decoration: underline }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -150,8 +183,6 @@ main > p { margin: 1em }
   left: 5px;
   color: #607d8b;
   transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all
 }
 
 .w3-input:focus ~ .w3-label,.w3-input:valid ~ .w3-label,.w3-textarea:focus ~ .w3-label,.w3-textarea:valid ~ .w3-label{
