@@ -119,12 +119,9 @@ function createSpiral(imglist) {
       link.appendChild(img);
       img_spiral_div.appendChild(link);
       let listimg = `
-        <div class="w3-col s12 m6 l3 w3-padding">
-          <a href="${imglist[i][2]}">
-            <img src="${imglist[i][1]}" alt="${imglist[i][0]}"
-            title="${imglist[i][0]}" style="width:100%">
-          </a>
-        </div>`;
+        <a href="${imglist[i][2]}">
+          <img src="${imglist[i][1]}" alt="${imglist[i][0]}" title="${imglist[i][0]}">
+        </a>`;
       img_list_div.insertAdjacentHTML("beforeend", listimg);
     };
   } else {
