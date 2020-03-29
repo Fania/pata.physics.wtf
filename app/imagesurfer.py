@@ -1,24 +1,8 @@
-from microsofttranslator import Translator
-import flickrapi as fapi
 import json
-import requests  # BING IMG Translator
-import uuid # Translator
-from requests.auth import HTTPBasicAuth  # BING IMG
+import requests
 import itertools
 from nltk.corpus import wordnet as wn
 from .keys import *
-from .auth import AzureAuthClient  # Translator
-from xml.etree import ElementTree  # Translator
-
-# from textsurfer import syzygy
-import itertools
-from nltk.corpus import wordnet as wn
-
-# import sys
-# from importlib import reload
-# reload(sys)  
-# sys.setdefaultencoding('utf8')
-
 
 def pataphysicalise(words):
     # print('inside pata: query words: ', words)
@@ -51,9 +35,8 @@ def transent(sent):
     subscription_key = translator_s
     endpoint = 'https://api.cognitive.microsofttranslator.com/translate?api-version=3.0'
     headers = {
-        'Ocp-Apim-Subscription-Key': subscription_key,
-        'Content-type': 'application/json',
-        'X-ClientTraceId': str(uuid.uuid4())
+      'Ocp-Apim-Subscription-Key': subscription_key,
+      'Content-type': 'application/json'
     }
 
     frbody = [{'text': sent}]

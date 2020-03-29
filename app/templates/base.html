@@ -1,20 +1,20 @@
 <!doctype html>
 
-<html>
+<html lang="en-GB">
 
 <head>
 <title>PataSearch</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="description" content="An absurd and useless pataphysical search tool." />
+
+<meta charset="utf-8">
+<meta name="author" content="Fania Raczinski">
+<meta name="description" content="An absurd and useless pataphysical search tool.">
+<meta name="keywords" content="pataphysics, poetry, art, research, search">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/w3.css') }}" />
-<!-- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"> -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fania.css') }}" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel="stylesheet" type="text/css">
-<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"> -->
-
-
 
 <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
@@ -29,25 +29,19 @@
 <meta name="theme-color" content="#ffffff">
 
 <script type="text/javascript" src="{{ url_for('static', filename='css/jquery-1.11.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='css/keys.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='css/scramble.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='css/tab_handler.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='css/poemscroll.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='css/keys.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='css/fania.js') }}"></script>
-
-
 </head>
 
 <body>
 
 <div class="loading"></div>
-<div id="fb-root"></div>
 
-<div>
-
-<nav class="w3-topnav w3-theme-l2 w3-center w3-padding w-card-4">
+<nav>
   <a href="{{ url_for('index') }}">
-    <!-- <i class="spicon"></i> -->
     <i class="fa fa-home fa-inverse"></i>
     <span class="navtext"> Home</span>
   </a>
@@ -71,42 +65,30 @@
 
 {% block content %}{% endblock %}
 
-<section class="w3-card-2 w3-center w3-theme-d3 banner">
-  <i class="fa fa-quote-left"></i> {{ getrandquote() }}
-    <i class="fa fa-quote-right"></i>
-</section>
+<div class="banner">
+  <i class="fa fa-quote-left"></i> {{ getrandquote() }} <i class="fa fa-quote-right"></i>
+</div>
 
-</div> <!-- main -->
 
-<footer class="w3-container w3-theme-l5 w3-text-white-opacity w3-center">
+
+<footer>
   <p>
     <i class="fa fa-copyright"></i>
-    <a href="mailto:pata@physics.wtf?Subject=PataSearch">Fania Raczinski</a> - Absolu 145 (September 2017 vulg.) -
+    <a href="mailto:pata@physics.wtf?Subject=PataSearch">Fania Raczinski</a> - Clinamen 147 (March 2020 vulg.) -
     <i class="fa fa-hand-spock-o"></i>
   </p>
-  <p>
-    <!-- <div class="fb-share-button" data-href="http://pata.physics.wtf" data-layout="button_count"></div> -->
-    <img src="{{ url_for('static', filename='images/dmu.png') }}">
-    <!-- <a href="https://twitter.com/share" class="twitter-div twitter-share-button" data-url="http://pata.physics.wtf" data-hashtags="pataphysics" data-dnt="true">Tweet</a> -->
-  </p>
+  <p><img src="{{ url_for('static', filename='images/dmu.png') }}"></p>
 </footer>
 
-
-
-
-
-
 <!-- GOOGLE ANALYTICS -->
-<script>
+<!-- <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-66113860-1', 'auto');
   ga('send', 'pageview');
-</script>
-
+</script> -->
 
 </body>
-
 </html>

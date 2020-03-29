@@ -4,24 +4,18 @@
 
 {% include "header.html" %}
 
-<article class="w3-text-theme">
+<main>
 
-<header class="w3-container w3-theme-l4">
-    <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch
-    </h2>
+<header class="subheader">
+  <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch</h2>
 </header>
 
-<div class="w3-container">
-<p>
-  This text search tool uses three patalgorithms - clinamen, syzygy and antinomy and it operates on two corpora. The Faustroll corpus contains 28 books and the Shakespeare corpus contains 38 files (37 plays and 1 collection of sonnets). See the full list for both corpora over <a href="{{ url_for('about') }}#technical">here</a>.
-</p>
-</div>
-
+<p>This text search tool uses three patalgorithms - clinamen, syzygy and antinomy and it operates on two corpora. The Faustroll corpus contains 28 books and the Shakespeare corpus contains 38 files (37 plays and 1 collection of sonnets). See the full list for both corpora over <a href="{{ url_for('about') }}#technical">here</a>.</p>
 
 <form class="w3-container" action="../textresults" method="post">
   <p class="w3-center">
-    <input class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label class="w3-validate">Faustroll</label>
-    <input class="w3-radio" type="radio" name="corpus" value="shakespeare"><label class="w3-validate">Shakespeare</label>
+    <input id="faustrollInput" class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label for="faustrollInput" class="w3-validate">Faustroll</label>
+    <input id="shakespeareInput" class="w3-radio" type="radio" name="corpus" value="shakespeare"><label for="shakespeareInput" class="w3-validate">Shakespeare</label>
   </p>
   <div class="w3-group">
     <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
@@ -30,6 +24,9 @@
   </div>
 </form>
 
+
+
+
 <header class="w3-container w3-theme-l5">
   <h3>How to use</h3>
 </header>
@@ -37,16 +34,16 @@
   <p>Text search is currently supported for single search terms only.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="clear" onclick="loading();"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="troll" onclick="loading();"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="large"onclick="loading();"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="live"onclick="loading();"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="solid"onclick="loading();"></input></form>,
-    <form class="inform" action="../textresults" method="post"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="books"onclick="loading();"></input></form>
+    <form class="inform" action="../textresults" method="post" title="clear - faustroll"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="clear" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post" title="troll - shakespeare"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="troll" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post" title="large - faustroll"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post" title="live - shakespeare"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="live" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post" title="solid - faustroll"><input class="w3-hide" type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="solid" onclick="loading();"></input></form>,
+    <form class="inform" action="../textresults" method="post" title="books - shakespeare"><input class="w3-hide" type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="books" onclick="loading();"></input></form>
 </div>
 
 <br>
 
-</article>
+</main>
 
 {% endblock %}

@@ -5,6 +5,7 @@ venv
 keys.js
 keys.py
 test
+app/__pycache__
 
 # Compiled source #
 ###################
