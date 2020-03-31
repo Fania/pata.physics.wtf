@@ -20,9 +20,9 @@
 
 
 - [x] index, header, text, base
+- [x] errors
+- [x] about
 - [ ] textresults
-- [ ] errors
-- [ ] about
 - [ ] images
 - [ ] imageresults
 - [ ] videos

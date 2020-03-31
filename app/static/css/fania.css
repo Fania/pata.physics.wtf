@@ -1,13 +1,14 @@
 /* FANIA SPECIFIC STYLES*/
 
 * { box-sizing: border-box }
-
-html { color: #455a64; font-family: 'Source Sans Pro', sans-serif }
+html { color: #455A64; scroll-behavior: smooth; 
+  font-family: 'Source Sans Pro', sans-serif }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-	text-transform: uppercase;
-  font-family: 'Arvo', serif;
-}
+  font-weight: 600; text-transform: uppercase; font-family: 'Arvo', serif }
+h2 { color: #455A64; background: #cfd8dc; padding: 16px; margin: 0 }
+h3 { color:#455A64; background:#ECEFF1; padding: 16px }
+h4 { margin: 16px 0 }
+
 
 
 /* MAIN NAVIGATION */
@@ -50,9 +51,7 @@ header a:link, header a:visited { text-decoration: none }
 header { 
   color:#455a64; background:#ECEFF1; 
   padding: .1em 16px; text-align: center }
-header.subheader { background:#cfd8dc; text-align: left }
-header.subsubheader { text-align: left }
-
+  
 
 /* UTILITIES */
 .mirror { display: inline-block; transform: scaleX(-1) }
@@ -65,6 +64,8 @@ header.subsubheader { text-align: left }
 }
 .mobile { display: block }
 .desktop { display: none }
+.twoHalfs { display: flex }
+.twoHalfs * { width: 49% }
 
 
 /* RANDOM QUOTE BANNERS */
@@ -74,7 +75,9 @@ header.subsubheader { text-align: left }
   background: #37474F;
   padding: 8px;
   text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
+
 
 /* COVER IMAGES */
 .cover { 
@@ -90,6 +93,7 @@ header.subsubheader { text-align: left }
 
 main > p { margin: 1em }
 main > h4 { margin: .5em 16px }
+
 
 /* SEARCH FORM */
 form.mainsearch { padding: 0 1em }
@@ -114,16 +118,42 @@ form.mainsearch button:hover {
 .inlineforms input[type=submit] { text-decoration: underline }
 
 
+/* ERRORS PAGE */
+.errors {
+  padding: 2em 1em;
+  display: flex; flex-wrap: wrap;
+  align-items: center; justify-content: space-around;
+}
+.errors div { width: 100% }
+.errors .errorCode { width: 100%; overflow: scroll; }
+.errors .errorButtons a:not(:nth-of-type(5)) { 
+  text-decoration: none;
+  padding: 3px 6px;
+  border: 2px outset #CCCCCC; border-radius: 5px;
+}
+.errors .errorButtons a:nth-of-type(5):hover .fa { color: #37474F }
+/* h2#msg { margin: 0 } */
 
-
-
-
-
-
-
-
-
-
+/* ABOUT */
+nav.subnav { 
+  color: #455A64; background:#FFFFFF;
+  padding: 1em; margin-top: 1em;
+  text-align: center; 
+}
+nav.subnav a { 
+  text-transform: uppercase; text-decoration: none;
+  padding: 0 8px;
+  transition: all 0.3s ease;
+}
+nav.subnav a:hover { color: #37474F; text-decoration: underline }
+h4#definitions { padding-left: 16px; padding-top: 16px }
+.twoColumns { column-count: 2; margin: 16px }
+code.pseudo {
+  display: block; padding: 8px; margin: 8px 0;
+  background-color: #ECEFF1; border-left: 4px solid #607D8B;
+  word-wrap: normal; page-break-inside: avoid;
+}
+h2#contact + div { padding: 0 16px }
 
 
 
@@ -460,6 +490,8 @@ footer {
 
 @media all and (min-width:600px) {
 
+  .errors div { width: 25% }
+  .errors .errorCode { width: 40%; min-width: 500px; overflow: visible }
   nav .navtext { display: inline-block }
   .mobile { display: none }
   .desktop { display: block }
@@ -467,6 +499,7 @@ footer {
   .cover img { width: 22% }
 
   #img_spiral_div { transform: scale(0.6) }
+
 
 }
 
