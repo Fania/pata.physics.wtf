@@ -95,18 +95,18 @@ main > h4 { margin: .5em 16px }
 
 
 /* SEARCH FORM */
-form.mainsearch { padding: 0 1em }
+form.mainsearch { padding: 0 1em; margin-top: 2em }
 form.mainsearch fieldset { border: none; text-align: center }
 form.mainsearch label { padding: 0 1em 0 5px }
 form.mainsearch input[type=radio] { 
-  width: 24px; height: 24px; position: relative; top: 7px;
+  width: 24px; height: 24px; position: relative; top: 7px
 }
 form.mainsearch input[type=text] { 
-  width: 90%; border: solid 1px #90A4AE; border-radius: 5px;
+  width: 90%; border: solid 1px #90A4AE; border-radius: 5px
 }
 form.mainsearch button { 
-  background:#90A4AE; width: 26px; height: 26px; 
-  border: 0; border-radius: 5px; margin: 0;
+  background:#90A4AE; width: 26px; height: 26px;
+  border: 0; border-radius: 5px; margin: 0
 }
 form.mainsearch button:hover { 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
@@ -121,10 +121,10 @@ form.mainsearch button:hover {
 .errors {
   padding: 2em 1em;
   display: flex; flex-wrap: wrap;
-  align-items: center; justify-content: space-around;
+  align-items: center; justify-content: space-around
 }
 .errors div { width: 100% }
-.errors .errorCode { width: 100%; overflow: scroll; }
+.errors .errorCode { width: 100%; overflow: scroll }
 .errors .errorButtons a:not(:nth-of-type(5)) { 
   text-decoration: none;
   padding: 3px 6px;
@@ -137,7 +137,7 @@ form.mainsearch button:hover {
 nav.subnav { 
   color: #455A64; background:#FFFFFF;
   padding: 1em; margin-top: 1em;
-  text-align: center; 
+  text-align: center
 }
 nav.subnav a { 
   text-transform: uppercase; text-decoration: none;

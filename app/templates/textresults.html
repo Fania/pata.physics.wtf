@@ -4,27 +4,29 @@
 
 {% include "header.html" %}
 
-<article class="w3-text-theme">
+<main>
 
-<div class="w3-container w3-padding">
-  <form class="w3-container" action="../textresults" method="post">
-    <p class="w3-center">
-      <input id="faustroll" class="w3-radio" type="radio" name="corpus" value="faustroll" checked><label for="faustroll" class="w3-validate">Faustroll</label>
-      <input id="shakespeare" class="w3-radio" type="radio" name="corpus" value="shakespeare"><label for="shakespeare" class="w3-validate">Shakespeare</label>
-    </p>
-    <div class="w3-group">
-      <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-      <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
-        <i class="fa fa-search"></i></button>
-    </div>
+<div>
+
+  <form class="mainsearch" action="../textresults" method="post">
+    <fieldset>
+      <input id="faustrollInput" type="radio" name="corpus" value="faustroll" checked><label for="faustrollInput">Faustroll</label>
+      <input id="shakespeareInput" type="radio" name="corpus" value="shakespeare"><label for="shakespeareInput">Shakespeare</label>
+    </fieldset>
+    <fieldset>
+      <input name="query" autofocus="autofocus" type="text" placeholder=" Search" required>
+      <button type="submit" onclick="loading();"><i class="fa fa-search"></i></button>
+    </fieldset>
   </form>
+
   <hr>
-  <nav class="tabs w3-topnav w3-center w3-margin">
+  <nav class="subnav">
     <a class="active" href="#poetry_tab">Poetry</a>
     <a href="#sources_tab">Sources</a>
     <a href="#algo_tab">Algorithms</a>
   </nav>
   <hr>
+
 </div>
 
 <!-- JAVASCRIPT -->
@@ -257,7 +259,7 @@
 <!-- </div> -->
 <!-- end main container -->
 
-</article>
+</main>
 
 <script>
   var cnt = 0; // counter
