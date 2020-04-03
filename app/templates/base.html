@@ -11,10 +11,10 @@
 <meta name="keywords" content="pataphysics, poetry, art, research, search">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/w3.css') }}" />
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/w3.css') }}" /> -->
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fania.css') }}" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel="stylesheet" type="text/css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900" rel="stylesheet" type="text/css"> -->
 
 <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
@@ -42,24 +42,19 @@
 
 <nav>
   <a href="{{ url_for('index') }}">
-    <i class="fa fa-home fa-inverse"></i>
-    <span class="navtext"> Home</span>
+    <i class="fa fa-home"></i><span class="navtext"> Home</span>
   </a>
   <a href="{{ url_for('text') }}" >
-    <i class="fa fa-book fa-inverse"></i>
-    <span class="navtext"> Text</span>
+    <i class="fa fa-book"></i><span class="navtext"> Text</span>
   </a>
   <a href="{{ url_for('images') }}">
-    <i class="fa fa-camera fa-inverse"></i>
-    <span class="navtext"> Images</span>
+    <i class="fa fa-camera"></i><span class="navtext"> Images</span>
   </a>
   <a href="{{ url_for('videos') }}">
-    <i class="fa fa-video-camera fa-inverse"></i>
-    <span class="navtext"> Video</span>
+    <i class="fa fa-video-camera"></i><span class="navtext"> Video</span>
   </a>
   <a href="{{ url_for('about') }}">
-    <i class="fa fa-info fa-inverse"></i>
-    <span class="navtext"> About</span>
+    <i class="fa fa-info"></i><span class="navtext"> About</span>
   </a>
 </nav>
 

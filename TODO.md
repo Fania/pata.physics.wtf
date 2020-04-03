@@ -36,5 +36,10 @@
 
 
 
-http://www.bevrowe.info/Queneau/QueneauRandom_v4.html
-http://www.growndodo.com/wordplay/oulipo/10%5E14sonnets.html
+# BUGS
+
+- [ ] textresults, email poem broken when changing line
+- [ ] textresults, randomise poem broken
+
+
+

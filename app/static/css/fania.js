@@ -276,6 +276,8 @@ function Mailto_url(){
 
 // Queneau Email
 function getContent(link) {
+  console.log(link);
+
   var query = document.getElementById('querydiv').innerHTML;
   var corpus = document.getElementById('corpusdiv').innerHTML;
   var lollength = document.getElementById('lollength').innerHTML;
@@ -298,10 +300,10 @@ function getContent(link) {
   var linearray = [];
   var poemsarray = [];
 
-  var re1 = new RegExp("<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"", "g");
-  var re1A = new RegExp("\" checked=\"\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"", "g");
-  var re2 = new RegExp('\" onclick=\"loading()', "g");
-  var re3 = new RegExp(';"></form>', "g");
+  var re1 = new RegExp(`<form class=\"inform\" action=\"..\/textresults\" method=\"post\"><input class=\"w3-hide\" type=\"radio\" name=\"corpus\" value=\"`, "g");
+  var re1A = new RegExp(`\" checked=\"\"><input class=\"inlink\" type=\"submit\" name=\"query\" value=\"`, "g");
+  var re2 = new RegExp(`\" onclick=\"loading()`, "g");
+  var re3 = new RegExp(`;"></form>`, "g");
   var re4 = /\(\)/g;
 
   for (var i = 0; i < lollength; i++) {
@@ -346,6 +348,7 @@ function getContent(link) {
 
 // Random Email
 function getRandContent(link) {
+  console.log(link);
 
   var query = document.getElementById('querydiv').innerHTML;
   var corpus = document.getElementById('corpusdiv').innerHTML;

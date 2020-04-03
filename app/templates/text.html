@@ -10,26 +10,26 @@
 
   <p>This text search tool uses three patalgorithms - clinamen, syzygy and antinomy and it operates on two corpora. The Faustroll corpus contains 28 books and the Shakespeare corpus contains 38 files (37 plays and 1 collection of sonnets). See the full list for both corpora over <a href="{{ url_for('about') }}#technical">here</a>.</p>
 
+  <!-- MAIN SEARCH -->
   <form class="mainsearch" action="../textresults" method="post">
     <fieldset>
-      <input id="faustrollInput" type="radio" name="corpus" value="faustroll" checked><label for="faustrollInput">Faustroll</label>
-      <input id="shakespeareInput" type="radio" name="corpus" value="shakespeare"><label for="shakespeareInput">Shakespeare</label>
+      <input id="faustroll" type="radio" name="corpus" value="faustroll" checked><label for="faustroll">Faustroll</label>
+      <input id="shakespeare" type="radio" name="corpus" value="shakespeare"><label for="shakespeare">Shakespeare</label>
     </fieldset>
     <fieldset>
-      <input name="query" autofocus="autofocus" type="text" placeholder=" Search" required>
-      <button type="submit" onclick="loading();"><i class="fa fa-search"></i></button>
+      <input name="query" type="text" placeholder=" Search" autofocus required>
+      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
     </fieldset>
   </form>
 
-  <!-- <header class="subsubheader"> -->
-    <h3>How to use</h3>
-  <!-- </header> -->
+
+  <h3>How to use</h3>
 
   <p>Text search is currently supported for single search terms only.</p>
 
   <h4>Search suggestions:</h4>
 
-  <div class="inlineforms">
+  <div class="inlineform">
     <form action="../textresults" method="post" title="clear - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="clear" onclick="loading()"></input></form>,
     <form action="../textresults" method="post" title="troll - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="troll" onclick="loading()"></input></form>,
     <form action="../textresults" method="post" title="large - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="large" onclick="loading()"></input></form>,
