@@ -8,7 +8,7 @@
 
   <h2><i class="fa fa-book"></i> <strong>Text</strong> S<span class="mirror">e</span>arch</h2>
 
-  <p>This text search tool uses three patalgorithms - clinamen, syzygy and antinomy and it operates on two corpora. The Faustroll corpus contains 28 books and the Shakespeare corpus contains 38 files (37 plays and 1 collection of sonnets). See the full list for both corpora over <a href="{{ url_for('about') }}#technical">here</a>.</p>
+  <p>This text search tool uses three patalgorithms - clinamen, syzygy and antinomy and it operates on two corpora. The Faustroll corpus contains 28 books and the Shakespeare corpus contains 38 files (37 plays and 1 collection of sonnets). See the <a href="{{ url_for('about') }}#technical">full list for both corpora</a>.</p>
 
   <!-- MAIN SEARCH -->
   <form class="mainsearch" action="../textresults" method="post">
@@ -29,13 +29,13 @@
 
   <h4>Search suggestions:</h4>
 
-  <div class="inlineform">
-    <form action="../textresults" method="post" title="clear - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="clear" onclick="loading()"></input></form>,
-    <form action="../textresults" method="post" title="troll - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="troll" onclick="loading()"></input></form>,
-    <form action="../textresults" method="post" title="large - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="large" onclick="loading()"></input></form>,
-    <form action="../textresults" method="post" title="live - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="live" onclick="loading()"></input></form>,
-    <form action="../textresults" method="post" title="solid - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="solid" onclick="loading()"></input></form>,
-    <form action="../textresults" method="post" title="books - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="books" onclick="loading()"></input></form>
+  <div class="indent">
+    <form class="inlineform" action="../textresults" method="post" title="clear - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="clear" onclick="loading()"></input></form>,
+    <form class="inlineform" action="../textresults" method="post" title="troll - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="troll" onclick="loading()"></input></form>,
+    <form class="inlineform" action="../textresults" method="post" title="large - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="large" onclick="loading()"></input></form>,
+    <form class="inlineform" action="../textresults" method="post" title="live - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="live" onclick="loading()"></input></form>,
+    <form class="inlineform" action="../textresults" method="post" title="solid - faustroll"><input type="radio" name="corpus" value="faustroll" checked><input class="inlink" type="submit" name="query" value="solid" onclick="loading()"></input></form>,
+    <form class="inlineform" action="../textresults" method="post" title="books - shakespeare"><input type="radio" name="corpus" value="shakespeare" checked><input class="inlink" type="submit" name="query" value="books" onclick="loading()"></input></form>
   </div>
 
 </main>

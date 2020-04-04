@@ -6,7 +6,7 @@ from nltk.corpus import PlaintextCorpusReader
 from nltk.corpus import stopwords
 
 from collections import defaultdict
-
+from math import floor
 import os
 import re
 import time, datetime
@@ -514,7 +514,7 @@ def calc_all(sens):
         all_10, all_11, all_12, all_13, all_14 = [[] for _ in range(14)]
     out, b, part, mx = [], 0, 0, 15
     if len(sens) / 14 >= 1:
-        part = len(sens) / 14
+        part = floor( len(sens) / 14 )
     else:
         part = 1
         mx = len(sens) + 1
