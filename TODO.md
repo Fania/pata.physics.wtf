@@ -22,8 +22,8 @@
 - [x] index, header, text, base
 - [x] errors
 - [x] about
-- [ ] textresults
-- [ ] images
+- [x] textresults
+- [x] images
 - [ ] imageresults
 - [ ] videos
 - [ ] audio ?
@@ -38,8 +38,8 @@
 
 # BUGS
 
-- [ ] textresults, email poem broken when changing line
-- [ ] textresults, randomise poem broken
+- [x] textresults, email poem broken when changing line
+- [x] textresults, randomise poem broken
 
 
 

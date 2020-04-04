@@ -4,50 +4,39 @@
 
 {% include "header.html" %}
 
-<article class="w3-text-theme">
+<main>
 
-<header class="w3-container w3-theme-l4">
-  <h2><i class="fa fa-camera"></i> <strong>Image</strong> S<span class="mirror">e</span>arch
-  </h2>
-</header>
+  <h2><i class="fa fa-camera"></i> <strong>Image</strong> S<span class="mirror">e</span>arch</h2>
 
-<div class="w3-container">
-  <p>
-    The image search uses the Search API of your choice. Results can be displayed in golden spiral form or in list form.
-  </p>
-</div>
+  <p>The image search uses the Search API of your choice. Results can be displayed in golden spiral form or in list form.</p>
 
-<form class="w3-container" action="../imageresults" method="post">
-  <p class="w3-center">
-    <input id="flickr" class="w3-radio" type="radio" name="img_choice" value="flickr" checked><label for="flickr" class="w3-validate">Flickr</label>
-    <!-- <input id="getty" class="w3-radio" type="radio" name="img_choice" value="getty"><label for="getty" class="w3-validate">Getty</label> -->
-    <input id="bing" class="w3-radio" type="radio" name="img_choice" value="bing"><label for="bing" class="w3-validate">Bing</label>
-    <!-- <input id="google" class="w3-radio" type="radio" name="img_choice" value="google"><label for="google" class="w3-validate">Google</label> -->
-  </p>
-  <div class="w3-group">
-    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
-      <i class="fa fa-search"></i></button>
-  </div>
-</form>
+  <!-- MAIN SEARCH -->
+  <form class="mainsearch" action="../imageresults" method="post">
+    <fieldset>
+      <input id="flickr" type="radio" name="corpus" value="flickr" checked><label for="flickr">Flickr</label>
+      <input id="bing" type="radio" name="corpus" value="bing"><label for="bing">Bing</label>
+    </fieldset>
+    <fieldset>
+      <input name="query" type="text" placeholder=" Search" autofocus required>
+      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+    </fieldset>
+  </form>
 
-<header class="w3-container w3-theme-l5">
+
   <h3>How to use</h3>
-</header>
-<div class="w3-container">
+
   <p>Image search supports multiple keywords.</p>
 
   <h4>Search suggestions:</h4>
-    <form class="inform" action="../imageresults" method="post" title="clear consciousness - Flickr"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="flickr"></input></form>,
-    <form class="inform" action="../imageresults" method="post" title="internet troll - Flickr"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="flickr"></input></form>,
-    <form class="inform" action="../imageresults" method="post" title="large - Bing"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="bing"></input></form>,
-    <form class="inform" action="../imageresults" method="post" title="living large - Flickr"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="flickr"></input></form>,
-    <form class="inform" action="../imageresults" method="post" title="solid foundations - Flickr"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="flickr"></input></form>,
-    <form class="inform" action="../imageresults" method="post" title="off the books - Bing"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="bing"></input></form>
-</div>
+  <div class="indent">
+    <form class="inlineform" action="../imageresults" method="post" title="clear consciousness - Flickr"><input type="submit" name="query" value="clear consciousness" onclick="loading()"><input class="hide" name="img_choice" value="flickr"></form>,
+    <form class="inlineform" action="../imageresults" method="post" title="internet troll - Flickr"><input type="submit" name="query" value="internet troll" onclick="loading()"><input class="hide" name="img_choice" value="flickr"></form>,
+    <form class="inlineform" action="../imageresults" method="post" title="large - Bing"><input type="submit" name="query" value="large" onclick="loading()"><input class="hide" name="img_choice" value="bing"></form>,
+    <form class="inlineform" action="../imageresults" method="post" title="living large - Flickr"><input type="submit" name="query" value="living large" onclick="loading()"><input class="hide" name="img_choice" value="flickr"></form>,
+    <form class="inlineform" action="../imageresults" method="post" title="solid foundations - Flickr"><input type="submit" name="query" value="solid foundations" onclick="loading()"><input class="hide" name="img_choice" value="flickr"></form>,
+    <form class="inlineform" action="../imageresults" method="post" title="off the books - Bing"><input type="submit" name="query" value="off the books" onclick="loading()"><input class="hide" name="img_choice" value="bing"></form>
+  </div>
 
-<br>
-
-</article>
+</main>
 
 {% endblock %}

@@ -370,6 +370,7 @@ DYN_WEB.Scroll_Div = (function() {
 // END FANIA
 
       Ev.add(start_el, 'click', function(e) {
+        // console.log(start_el, clickcount);
         self.initScrollByVals(dx, dy, dur);
 
 // FANIA
@@ -377,6 +378,10 @@ DYN_WEB.Scroll_Div = (function() {
           clickcount -= 1;
         }
         document.getElementById(clicktext).innerHTML = clickcount;
+
+        // (clickcount === 1) ? start_el.style.display = "none" 
+        //                    : start_el.style.display = "block";
+
         // document.getElementById('alert').innerHTML = id;
 // END FANIA
 
@@ -386,6 +391,7 @@ DYN_WEB.Scroll_Div = (function() {
         return false;
       });
       Ev.add(end_el, 'click', function(e) {
+        // console.log(end_el, clickcount);
         self.initScrollByVals(-dx, -dy, dur);
 
 // FANIA
@@ -393,6 +399,11 @@ DYN_WEB.Scroll_Div = (function() {
           clickcount += 1;
         }
         document.getElementById(clicktext).innerHTML = clickcount;
+
+        // (clickcount === part) ? end_el.style.display = "none" 
+        //                       : end_el.style.display = "block";
+
+
         // document.getElementById('alert').innerHTML = id;
 // END FANIA
 

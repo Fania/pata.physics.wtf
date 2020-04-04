@@ -153,6 +153,10 @@ code.pseudo {
 
 
 
+/* OKAY TO HERE */
+
+
+
 
 
 
@@ -169,6 +173,7 @@ code.pseudo {
   display: flex;
   justify-content: center;
 }
+
 .fa {
   color: #455a64;
 }

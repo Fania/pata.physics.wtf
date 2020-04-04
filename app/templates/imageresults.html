@@ -4,30 +4,27 @@
 
 {% include "header.html" %}
 
-<article class="w3-text-theme">
+<main>
 
-<form class="w3-container" action="../imageresults" method="post">
-  <p class="w3-center">
-    <input id="flickr" class="w3-radio" type="radio" name="img_choice" value="flickr"><label for="flickr" class="w3-validate">Flickr</label>
-    <!-- <input id="getty" class="w3-radio" type="radio" name="img_choice" value="getty"><label for="getty" class="w3-validate">Getty</label> -->
-    <input id="bing" class="w3-radio" type="radio" name="img_choice" value="bing"><label for="bing" class="w3-validate">Bing</label>
-    <!-- <input id="google" class="w3-radio" type="radio" name="img_choice" value="google"><label for="google" class="w3-validate">Google</label> -->
-  </p>
-  <div class="w3-group">
-    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
-      <i class="fa fa-search"></i></button>
-  </div>
-</form>
+  <!-- MAIN SEARCH -->
+  <form class="mainsearch" action="../imageresults" method="post">
+    <fieldset>
+      <input id="flickr" type="radio" name="corpus" value="flickr" checked><label for="flickr">Flickr</label>
+      <input id="bing" type="radio" name="corpus" value="bing"><label for="bing">Bing</label>
+    </fieldset>
+    <fieldset>
+      <input name="query" type="text" placeholder=" Search" autofocus required>
+      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+    </fieldset>
+  </form>
 
-<div class="w3-container">
-  <hr>
-  <nav class="tabs w3-topnav w3-center w3-margin">
+  <nav class="subnav tabs">
+    <hr>
     <a class="active" href="#tab1">Spiral</a>
     <a href="#tab2">List</a>
+    <hr>
   </nav>
-  <hr>
-</div>
+
 
 <div class="w3-container w3-padding">
   <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
@@ -125,6 +122,6 @@
 
 </div> <!-- end tabs -->
 
-</article>
+</main>
 
 {% endblock %}
