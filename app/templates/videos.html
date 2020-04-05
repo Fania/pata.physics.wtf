@@ -4,46 +4,39 @@
 
 {% include "header.html" %}
 
-<article class="w3-text-theme">
+<main>
 
-<header class="w3-container w3-theme-l4">
-  <h2><i class="fa fa-video-camera"></i> <strong>Video</strong> S<span class="mirror">e</span>arch
-  </h2>
-</header>
+  <h2><i class="fa fa-video-camera"></i> <strong>Video</strong> S<span class="mirror">e</span>arch</h2>
 
-<div class="w3-container">
-  <p>
-    Video search works in the same way that image search does.. It uses the Youtube API.
-  </p>
-</div>
+  <p>Video search works in the same way that image search does.. It uses the Youtube API.</p>
 
-<form class="w3-container" action="../videoresults" method="post">
-  <div class="w3-group">
-    <input class="w3-input" name="query" autofocus="autofocus" type="text" required><label class="w3-label">Search</label>
-    <button type="submit" class="w3-btn w3-theme-l2 fanbtn" onclick="loading();">
-      <i class="fa fa-search"></i></button>
-  </div>
-</form>
+  <!-- MAIN SEARCH -->
+  <form class="mainsearch" action="../videoresults" method="post">
+    <fieldset>
+      <input id="youtube" type="radio" name="vid_choice" value="youtube" checked><label for="youtube">Youtube</label>
+    </fieldset>
+    <fieldset>
+      <input name="query" type="text" placeholder=" Search" autofocus required>
+      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+    </fieldset>
+  </form>
 
-<header class="w3-container w3-theme-l5">
   <h3>How to use</h3>
-</header>
-<div class="w3-container">
-  <p>Video search supports multiple keywords.</p>
-  <p>The video search can sometimes take a long time to produce a result (or none at all).</p>
 
-  <h4>Search suggestions:</h4>
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="clear consciousness" onclick="loading();"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="internet troll" onclick="loading();"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="large" onclick="loading();"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="living large" onclick="loading();"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="solid foundations" onclick="loading();"></input></form>,
-    <form class="inform" action="../videoresults" method="post"><input class="inlink" type="submit" name="query" value="off the books" onclick="loading();"></input></form>
-</div>
+  <div class="indent">
+    <p>Video search supports multiple keywords.</p>
+    <p>The video search can sometimes take a long time to produce a result (or none at all).</p>
 
-<br>
+    <h4>Search suggestions:</h4>
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="clear consciousness" onclick="loading()"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="internet troll" onclick="loading()"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="large" onclick="loading()"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="living large" onclick="loading()"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="solid foundations" onclick="loading()"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="off the books" onclick="loading()"></form>
+  </div>
 
-</article>
+</main>
 
 {% endblock %}
 

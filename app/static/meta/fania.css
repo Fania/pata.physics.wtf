@@ -10,16 +10,6 @@ html { color: #455A64; scroll-behavior: smooth }
 body { margin: 0; font-family: Verdana, sans-serif; font-size: 16px }
 a { color: #546588 }
 a:hover { color: #37474f }
-
-
-/* HEADERS & LOGO */
-header a:link, header a:visited { text-decoration: none }
-.spiral { width: 90px; height: 90px; margin-top: 1em }
-.spiral:hover { animation: spin 4s linear infinite reverse }
-@keyframes spin { 100% { transform: rotate(360deg) } }
-header { 
-  color:#455a64; background:#ECEFF1; 
-  padding: .1em 16px; text-align: center }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; text-transform: uppercase; font-family: 'Arvo', serif }
 h1 { font-size: 36px; margin: 16px }
@@ -30,7 +20,20 @@ h2:not(#msg) span:not(.mirror) { color: #F1F1F1 }
 h3 { font-size: 24px; color:#455A64; background:#ECEFF1; padding: 16px }
 h4 { margin: 16px 0 }
 h4#definitions { padding-left: 16px; padding-top: 16px }
+main > p { margin: 1em }
+main > h3 { margin: 1em 0 0 0 }
+main h4 { margin: 2em 16px .5em 0 }
 .fa-camera:before, .fa-video-camera:before { font-size: 0.9em }
+
+
+/* HEADERS & LOGO */
+header a:link, header a:visited { text-decoration: none }
+.spiral { width: 90px; height: 90px; margin-top: 1em }
+.spiral:hover { animation: spin 4s linear infinite reverse }
+@keyframes spin { 100% { transform: rotate(360deg) } }
+header { 
+  color:#455a64; background:#ECEFF1; 
+  padding: .1em 16px; text-align: center }
 
 
 /* UTILITIES */
@@ -40,7 +43,7 @@ hr { border-top: 1px solid #EEEEEE }
   display: none; position: fixed; left: 0; top: 0;
 	width: 100%; height: 100%; z-index: 9999;
 	background: url(../images/loadspiral.gif) center no-repeat #FFFFFF80 }
-.mobile { display: block }
+.mobile, .show { display: block }
 .desktop { display: none }
 .twoHalfs { display: flex }
 .twoHalfs * { width: 49% }
@@ -97,10 +100,6 @@ nav.subnav hr:last-child { margin-top: 2em }
   box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030 }
 
 
-main > p { margin: 1em }
-main > h4 { margin: .5em 16px }
-
-
 /* SEARCH FORM */
 form.mainsearch { padding: 0 1em; margin-top: 1em }
 form.mainsearch fieldset { border: none; text-align: center }
@@ -134,7 +133,6 @@ form.mainsearch button {
   text-decoration: none; padding: 3px 6px;
   border: 2px outset #CCCCCC; border-radius: 5px }
 .errors .errorButtons a:nth-of-type(5):hover .fa { color: #37474F }
-/* h2#msg { margin: 0 } */
 
 
 /* ABOUT */
@@ -187,10 +185,25 @@ code.pseudo {
 
 
 
+/* VIDEO SEARCH */
+#vid_spiral_div { width: var(--width); line-height: 1; display: grid;
+  grid-template: repeat(89, var(--unit)) / repeat(55, var(--unit)) }
+#vid_spiral_div img,
+#vid_spiral_div iframe { display: block; object-fit: cover;
+  width: 100%; height: 100% }
+#vid_spiral_div .one   { grid-column:  1/56; grid-row:  1/56 }
+#vid_spiral_div .two   { grid-column: 22/56; grid-row: 56/90 }
+#vid_spiral_div .three { grid-column:  1/22; grid-row: 69/90 }
+#vid_spiral_div .four  { grid-column:  1/14; grid-row: 56/69 }
+#vid_spiral_div .five  { grid-column: 14/22; grid-row: 56/64 }
+#vid_spiral_div .six   { grid-column: 17/22; grid-row: 64/69 }
+#vid_spiral_div .seven { grid-column: 14/17; grid-row: 66/69 }
+#vid_spiral_div .eight { grid-column: 14/16; grid-row: 64/66 }
+#vid_spiral_div .nine  { grid-column: 16/17; grid-row: 64/65 }
+#vid_spiral_div .ten   { grid-column: 16/17; grid-row: 65/66 }
 
-
-
-
+.vid_list { display: flex; flex-wrap: wrap; }
+.vid_list div { margin: 1em; }
 
 
 
@@ -211,36 +224,6 @@ code.pseudo {
 
 /* #audioinfo p { visibility: hidden; display: inline; margin-left: 10px } */
 /* #audioinfo:hover p { visibility: visible } */
-
-
-
-
-
-/* NEEEDED FOR VIDEO SPIRAL */
-.spouter { margin: 20px 0; padding: 0; width: 890px; height: 550px; }
-.spleft { float: left; width: 340px; height: 550px; }
-.spltop { width: 340px; height: 210px; }
-.spltleft { float: left; width: 210px; height: 210px; }
-.spltright { float: right; width: 130px; height: 210px; }
-.spltrtop { width: 130px; height: 130px; }
-.spltrbottom { width: 130px; height: 80px; }
-.spltrbleft { float: left; width: 50px; height: 80px; }
-.spltrbltop { width: 50px; height: 30px; }
-.spltrbltleft { float: left; width: 30px; height: 30px; }
-.spltrbltright { float: right; width: 20px; height: 30px; }
-.spltrbltrtop { width: 20px; height: 20px; }
-.spltrbltrtop img { margin: 0 }
-.spltrbltrbottom { width: 20px; height: 10px; }
-.spltrbltrbleft { float: left; width: 10px; height: 10px; }
-.spltrbltrbright { float: right; width: 10px; height: 10px; }
-.spltrblbottom { width: 50px; height: 50px; }
-.spltrbright { float: right; width: 80px; height: 80px; }
-.splbottom { width: 340px; height: 340px; }
-.spright { float: right; width: 550px; height: 550px; }
-.spltrbltrbleft img { position: absolute; }
-.spltrbltrbright img { position: absolute; }
-a.spimg, a.spimg:hover { border: 0;}
-
 
 
 
@@ -326,6 +309,21 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
   #img_spiral_div a.nine img  { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
   #img_spiral_div a.ten img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
   #img_spiral_div a img:hover { filter: invert(75%) }
+
+  #vid_spiral_div { grid-template: repeat(55, var(--unit)) / repeat(89, var(--unit)) }
+  #vid_spiral_div .one   { grid-column:  1/56; grid-row:  1/56 }
+  #vid_spiral_div .two   { grid-column: 56/90; grid-row:  1/35 }
+  #vid_spiral_div .three { grid-column: 69/90; grid-row: 35/56 }
+  #vid_spiral_div .four  { grid-column: 56/69; grid-row: 43/56 }
+  #vid_spiral_div .five  { grid-column: 56/64; grid-row: 35/43 }
+  #vid_spiral_div .six   { grid-column: 64/69; grid-row: 35/40 }
+  #vid_spiral_div .seven { grid-column: 66/69; grid-row: 40/43 }
+  #vid_spiral_div .eight { grid-column: 64/66; grid-row: 41/43 }
+  #vid_spiral_div .nine  { grid-column: 64/65; grid-row: 40/41 }
+  #vid_spiral_div .ten   { grid-column: 65/66; grid-row: 40/41 }
+
+
+
 
 }
 

@@ -126,35 +126,19 @@ function createSpiral(imglist) {
 
 
 
-// function createVideoSpiral(videolist) {
-//   // console.log(videolist);
-//   if (videolist.length === 10){
-//     const sizes = [10,10,20,30,50,80,130,210,340,550];
-//     const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
-//     for ( i in videolist ) {
-//       let link = document.createElement("a");
-//       let img = document.createElement("img");
-//       link.href = videolist[i][2];
-//       link.classList.add(nums[i]);
-//       img.src = videolist[i][1];
-//       img.alt = videolist[i][0];
-//       img.title = videolist[i][0];
-//       link.appendChild(img);
-//       img_spiral_div.insertAdjacentHTML("beforeend", 
-//         `<iframe width="${sizes[i]}" height="${sizes[i]}" src="https://www.youtube.com/embed/{{ videos_vids.3.2 }}?controls=0&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" ></iframe>`);
-
-//       let listimg = `
-//         <a href="${videolist[i][2]}">
-//           <img src="${videolist[i][1]}" alt="${videolist[i][0]}" title="${videolist[i][0]}">
-//         </a>`;
-//       img_list_div.insertAdjacentHTML("beforeend", listimg);
-//     };
-//   } else {
-//     const placeholders = document.querySelectorAll(".img_empty");
-//     placeholders.forEach( p => 
-//       p.innerHTML = "<div>Not enough results found.</div>");
-//   }
-// }
+function createVideoSpiral(videolist) {
+  // console.log("videos");
+  const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
+  for ( i in videolist ) {
+    if (i < 4) {
+      vid_spiral_div.insertAdjacentHTML("beforeend", 
+        `<iframe class="${nums[i]}" title="${videolist[i][0]}" alt="${videolist[i][2]}" src="https://www.youtube.com/embed/${videolist[i][2]}?controls=0&rel=0&showinfo=0&modestbranding=0&controls=0" frameborder="0"></iframe>`);
+    } else {
+      vid_spiral_div.insertAdjacentHTML("beforeend", 
+        `<a class="${nums[i]}" href="https://www.youtube.com/embed/${videolist[i][2]}"><img src="${videolist[i][1]}" alt="${videolist[i][0]}" title="${videolist[i][0]}"></a>`);
+    }
+  }
+}
 
 
 
@@ -211,6 +195,8 @@ if(window.location.pathname === '/textresults') {
 // LOADING ICON
 function loading() {
   $('.loading').show();
+  // const loadDiv = document.getElementById("loading");
+  // loadDiv.classList.
 }
 
 

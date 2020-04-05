@@ -24,8 +24,9 @@
 - [x] about
 - [x] textresults
 - [x] images
-- [ ] imageresults
+- [x] imageresults
 - [ ] videos
+- [ ] videoresults
 - [ ] audio ?
 
 - [ ] purge css

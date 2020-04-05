@@ -26,7 +26,7 @@ def getvideos(query):
                 vidtitle = i['snippet']['title']
                 vidthumb = i['snippet']['thumbnails']['default']['url']
                 vidid = i['id']['videoId']
-                out.append((vidtitle, vidthumb, vidid))
+                out.append([vidtitle, vidthumb, vidid])
             break
         else:
             out = []
