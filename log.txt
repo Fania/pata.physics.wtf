@@ -770,3 +770,18 @@ videoresults post: Sun Apr  5 20:16:57 2020 [chickens]
 textresults post: Sun Apr  5 20:18:52 2020 [clear] faustroll
 textresults post: Sun Apr  5 20:19:27 2020 [clear] shakespeare
 imageresults post: Sun Apr  5 20:19:44 2020 clear [realise, clear-cut, unclouded, brighten, crystalize, light up, pull in, absolved, illuminate, vindicated] flickr
+imageresults post: Sun Apr  5 20:21:49 2020 clear [acquit, authorise, readable, realize, straighten out, vindicated, sort out, absolved, pull in, crystallise] flickr
+imageresults post: Sun Apr  5 20:22:13 2020 readable [readable, clear, decipherable, incorrect, useless, nix, error, zero, mistake, empty] flickr
+imageresults post: Sun Apr  5 20:22:26 2020 clear sky [all the way, readable, authorise, sack up, straighten out, unmortgaged, crystallize, clean-cut, crystallise, sky] bing
+imageresults post: Sun Apr  5 20:32:26 2020 clear sky [clean, exculpated, well-defined, unclouded, enlighten, percipient, crystalize, discharge, bring in, authorize] bing
+imageresults post: Sun Apr  5 20:33:18 2020 clear sky [percipient, pass, crystalize, gain, straighten out, light up, absolved, crystallize, decipherable, exculpate] bing
+imageresults post: Sun Apr  5 20:34:03 2020 clear sky [exonerated, clear up, realize, crystalize, crystallize, authorise, pull in, open, pitch, light] bing
+imageresults post: Sun Apr  5 20:35:23 2020 clear sky [acquit, percipient, exculpate, decipherable, authorize, clearly, bring in, light, discharge, clean] bing
+imageresults post: Sun Apr  5 20:36:18 2020 clear sky [exonerated, vindicated, illuminate, make, crystalise, straighten out, realize, sky, clear, assoil] bing
+imageresults post: Sun Apr  5 20:37:05 2020 clear sky [unclutter, bring in, clear, crystalize, clean-cut, pull in, percipient, illuminate, unmortgaged, sky] bing
+imageresults post: Sun Apr  5 20:37:36 2020 clear sky [cleared, illuminate, crystallise, clean-cut, top, pitch, assoil, open, light up, clean] bing
+imageresults post: Sun Apr  5 20:38:04 2020 clear sky [exonerated, percipient, net, crystallize, exculpated, clean, exonerate, realise, discharge, clear-cut] bing
+imageresults post: Sun Apr  5 20:38:25 2020 clear sky [illuminate, straighten out, exculpate, unmortgaged, exonerated, crystallize, sort out, gain, toss, clear up] bing
+imageresults post: Sun Apr  5 20:39:13 2020 clear sky [clear-cut, pull in, discharge, exculpate, illuminate, authorize, shed light on, sort out, sack up, exculpated] bing
+videoresults post: Sun Apr  5 20:39:54 2020 [clear sky]
+imageresults post: Sun Apr  5 20:40:39 2020 off the books [let, draw, make, fix, contract, convey, pay back, commence, scram, have] bing

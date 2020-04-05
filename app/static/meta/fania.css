@@ -182,7 +182,9 @@ code.pseudo {
 #img_spiral_div a.eight img { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
 #img_spiral_div a.nine img  { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
 #img_spiral_div a.ten img   { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
-
+#img_list_div { column-count: 1 }
+#img_list_div a { margin: 1em; text-decoration: none }
+#img_list_div a img { width: 90% }
 
 
 /* VIDEO SEARCH */
@@ -201,33 +203,12 @@ code.pseudo {
 #vid_spiral_div .eight { grid-column: 14/16; grid-row: 64/66 }
 #vid_spiral_div .nine  { grid-column: 16/17; grid-row: 64/65 }
 #vid_spiral_div .ten   { grid-column: 16/17; grid-row: 65/66 }
-
 .vid_list { display: flex; flex-wrap: wrap; }
 .vid_list div { margin: 1em; }
 
 
-
-
-
-/* OKAY TO HERE */
-
-
-
-.spicon {
-  background-image: url("../images/mini_spiral_white.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 5px 5px;
-  display: inline-block;
-  height: 1.6em;
-}
-
 /* #audioinfo p { visibility: hidden; display: inline; margin-left: 10px } */
 /* #audioinfo:hover p { visibility: visible } */
-
-
-
-
 
 
 /*Scroll Glide Bar Stuff*/
@@ -253,18 +234,10 @@ div.scrollLinks .left:before {
 #poems:nth-of-type(4) { padding-bottom: 1em }
 #poems:nth-of-type(8) { padding-bottom: 1em }
 #poems:nth-of-type(11) { padding-bottom: 1em }
-#subpoem3 { padding-bottom: 1em }
-#subpoem7 { padding-bottom: 1em }
-#subpoem10 { padding-bottom: 1em }
-
-
 
 
 /* FOOTER */
 footer { background: #ECEFF1; padding: .1em; text-align: center }
-
-
-
 
 
 
@@ -278,8 +251,8 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
   .desktop { display: block }
   .cover { padding: 2em 1em; flex-direction: row }
   .cover img { width: 22% }
-
-
+  #img_list_div { column-count: 2 }
+  #img_list_div a img { width:40vw }
 
 }
 
@@ -309,6 +282,8 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
   #img_spiral_div a.nine img  { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
   #img_spiral_div a.ten img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
   #img_spiral_div a img:hover { filter: invert(75%) }
+  #img_list_div { column-count: 3 }
+  #img_list_div a img { width: 25vw }
 
   #vid_spiral_div { grid-template: repeat(55, var(--unit)) / repeat(89, var(--unit)) }
   #vid_spiral_div .one   { grid-column:  1/56; grid-row:  1/56 }
@@ -322,14 +297,12 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
   #vid_spiral_div .nine  { grid-column: 64/65; grid-row: 40/41 }
   #vid_spiral_div .ten   { grid-column: 65/66; grid-row: 40/41 }
 
-
-
-
 }
 
 @media all and (min-width:900px) {
 
-
+  #img_list_div { column-count: 4 }
+  #img_list_div a img { width: 20vw }
 
 }
 
