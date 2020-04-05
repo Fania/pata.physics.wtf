@@ -1,7 +1,7 @@
 from flask import render_template, request
 from app import app
-from .imagesurfer import transent, pataphysicalise
-# from imagesurfer import getimages, transent, pataphysicalise
+# from .imagesurfer import transent, pataphysicalise
+from .imagesurfer import getFlickrImages, transent, pataphysicalise
 import random, time
 
 
@@ -40,6 +40,7 @@ def imageresults():
         with open("log.txt", "a") as mylog:
             mylog.write(t)
 
+        print( getFlickrImages(queries,choice) )
 
         # Using Python API code
         # images_imgs, trans = getimages(pata, choice)

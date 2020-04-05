@@ -1,21 +1,23 @@
 # TODOs
 
-- [ ] clean css
+- [x] clean css
+- [x] purge css
+- [x] Spiral percentages
+- [x] create responsive image spiral
+- [x] get rid of w3css
 - [ ] mendes, english and spanish? stopwords?
 - [ ] AUDIO ??
 - [ ] Update pip reqs to minimum
 - [ ] Like poems and display them on page
 - [ ] WEB SEARCH?
-- [ ] Spiral percentages
 - [ ] update wording of website
 - [ ] loop scroll links?
 - [ ] hide scroll links on first or last item
 - [ ] refactor code
-- [ ] create responsive image spiral
 - [ ] get rid of jquery
-- [ ] get rid of w3css
 - [ ] add more APIs?
 - [ ] replace spiral logo with svg
+- [ ] purge jquery
 
 
 
@@ -25,12 +27,10 @@
 - [x] textresults
 - [x] images
 - [x] imageresults
-- [ ] videos
-- [ ] videoresults
+- [x] videos
+- [x] videoresults
 - [ ] audio ?
 
-- [ ] purge css
-- [ ] purge jquery
 
 
 
