@@ -2,13 +2,9 @@
 
 // FLICKR
 function flickrsearch(queries){
-  // console.log("flickr", queries);
+  console.log("flickr");
   let results = [];
-  let queryTerms = [];
-  queries.forEach(q => {
-    queryTerms.push(q.query);
-  });
-  const tags = queryTerms.join(",");
+  const tags = queries.join(",");
   const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${keyconfig.flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags=`;
   const url = baseURL + tags;
   const request = new Request(url);
@@ -33,7 +29,7 @@ function flickrsearch(queries){
 
 // BING
 function bingsearch(queries){
-  // console.log("inside bing", queries);
+  console.log("bing");
   let results = [];
   const options = { 
     method: 'GET',
@@ -41,9 +37,7 @@ function bingsearch(queries){
     mode: 'cors',
     cache: 'default' 
   };
-  let queryArray = [];
-  queries.forEach( q => queryArray.push(q.query) );
-  const queryString = `${queryArray.join(" | ")}`;
+  const queryString = `${queries.join(" | ")}`;
   const base_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
   const params = `?q=${queryString}&count=10`;
   const fullUrl = base_url + params;
@@ -102,9 +96,9 @@ function bingsearch(queries){
 
 
 function createSpiral(imglist) {
-  // console.log(imglist);
+  console.log(imglist);
   if (imglist.length === 10){
-    const sizes = [10,10,20,30,50,80,130,210,340,550];
+    // const fib = [10,10,20,30,50,80,130,210,340,550];
     const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
     for ( i in imglist ) {
       let link = document.createElement("a");
@@ -114,8 +108,6 @@ function createSpiral(imglist) {
       img.src = imglist[i][1];
       img.alt = imglist[i][0];
       img.title = imglist[i][0];
-      img.style.width = `${sizes[i]}px`;
-      img.style.height = `${sizes[i]}px`;
       link.appendChild(img);
       img_spiral_div.appendChild(link);
       let listimg = `

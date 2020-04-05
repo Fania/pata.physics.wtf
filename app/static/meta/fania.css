@@ -1,8 +1,15 @@
 /* FANIA SPECIFIC STYLES*/
+:root {
+  --width: 75vw;
+  --unit: calc(var(--width)/55);
+}
+
 
 * { box-sizing: border-box }
 html { color: #455A64; scroll-behavior: smooth }
 body { margin: 0; font-family: Verdana, sans-serif; font-size: 16px }
+a { color: #546588 }
+a:hover { color: #37474f }
 
 
 /* HEADERS & LOGO */
@@ -16,12 +23,14 @@ header {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; text-transform: uppercase; font-family: 'Arvo', serif }
 h1 { font-size: 36px; margin: 16px }
-h2 { color: #455A64; background: #cfd8dc; padding: 16px; margin: 0 }
+h2 { font-size: 30px; color:#455A64; background:#cfd8dc; 
+  padding: 16px; margin: 0 }
 h2#contact + div { padding: 0 16px }
-h2 span:not(.mirror) { color: #F1F1F1 }
-h3 { color:#455A64; background:#ECEFF1; padding: 16px }
+h2:not(#msg) span:not(.mirror) { color: #F1F1F1 }
+h3 { font-size: 24px; color:#455A64; background:#ECEFF1; padding: 16px }
 h4 { margin: 16px 0 }
 h4#definitions { padding-left: 16px; padding-top: 16px }
+.fa-camera:before, .fa-video-camera:before { font-size: 0.9em }
 
 
 /* UTILITIES */
@@ -98,7 +107,7 @@ form.mainsearch fieldset { border: none; text-align: center }
 form.mainsearch label { padding: 0 1em 0 5px }
 form.mainsearch input[type=radio] { 
   width: 24px; height: 24px; position: relative; top: 7px }
-form.mainsearch input[type=text] { 
+form.mainsearch input[type=text] { padding-left: .5em;
   width: 90%; border: solid 1px #90A4AE; border-radius: 5px; height: 26px }
 form.mainsearch button .fa { color: #ECEFF1 }
 form.mainsearch button { 
@@ -120,6 +129,7 @@ form.mainsearch button {
   align-items: center; justify-content: space-around }
 .errors div { width: 100% }
 .errors .errorCode { width: 100%; overflow: scroll }
+.errors .errorButtons { line-height: 2 } 
 .errors .errorButtons a:not(:nth-of-type(5)) { 
   text-decoration: none; padding: 3px 6px;
   border: 2px outset #CCCCCC; border-radius: 5px }
@@ -136,7 +146,7 @@ code.pseudo {
 
 /* TEXT SEARCH */
 .poetry { background: #ECEFF1; display: flex; flex-direction: column;
-  justify-content: center; align-items: center; line-height: 1.5em }
+  justify-content: center; align-items: center; line-height: 1.5em; padding: 2em }
 .poetryButtons { text-align: center; padding-bottom: 2em; margin: 0 }
 .poetryButtons a, 
 .poetryButtons button { 
@@ -148,6 +158,39 @@ code.pseudo {
 .algos li, .sources li { line-height: 1.5em }
 
 
+/* IMAGE SEARCH */
+#img_spiral_div { width: var(--width); line-height: 1; display: grid;
+  grid-template: repeat(89, var(--unit)) / repeat(55, var(--unit)) }
+#img_spiral_div img { display: block; object-fit: cover;
+  width: 100%; height: 100%; 
+  border-style: solid; border-color: #37474F }
+#img_spiral_div a.one   { grid-column:  1/56; grid-row:  1/56 }
+#img_spiral_div a.two   { grid-column: 22/56; grid-row: 56/90 }
+#img_spiral_div a.three { grid-column:  1/22; grid-row: 69/90 }
+#img_spiral_div a.four  { grid-column:  1/14; grid-row: 56/69 }
+#img_spiral_div a.five  { grid-column: 14/22; grid-row: 56/64 }
+#img_spiral_div a.six   { grid-column: 17/22; grid-row: 64/69 }
+#img_spiral_div a.seven { grid-column: 14/17; grid-row: 66/69 }
+#img_spiral_div a.eight { grid-column: 14/16; grid-row: 64/66 }
+#img_spiral_div a.nine  { grid-column: 16/17; grid-row: 64/65 }
+#img_spiral_div a.ten   { grid-column: 16/17; grid-row: 65/66 }
+#img_spiral_div a.one img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+#img_spiral_div a.two img   { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
+#img_spiral_div a.three img { border-radius: 0 0 0 100%; border-width: 0 0 2px 2px }
+#img_spiral_div a.four img  { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
+#img_spiral_div a.five img  { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+#img_spiral_div a.six img   { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
+#img_spiral_div a.seven img { border-radius: 0 0 0 100%; border-width: 0 0 2px 2px }
+#img_spiral_div a.eight img { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
+#img_spiral_div a.nine img  { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+#img_spiral_div a.ten img   { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
+
+
+
+
+
+
+
 
 
 
@@ -156,31 +199,6 @@ code.pseudo {
 /* OKAY TO HERE */
 
 
-
-
-
-
-.inline { display: inline }
-
-
-
-
-.poetry {
-  padding: 2em 1em;
-}
-
-#tab1 .poetry {
-  display: flex;
-  justify-content: center;
-}
-
-.fa {
-  color: #455a64;
-}
-.fa-camera:before,
-.fa-video-camera:before {
-  font-size: 0.9em;
-}
 
 .spicon {
   background-image: url("../images/mini_spiral_white.svg");
@@ -191,37 +209,14 @@ code.pseudo {
   height: 1.6em;
 }
 
-#audioinfo p{
-  visibility: hidden;
-  display: inline;
-  margin-left: 10px;
-}
-
-#audioinfo:hover p{
-  visibility: visible;
-}
-
-.fanbtn {
-  margin-left: 2px;
-  padding: 5.5px 10px;
-  border-radius: 5px;
-}
-
-a {
-  text-decoration: underline;
-  color: #546588;
-  /*546588*/
-}
-a:hover {
-  color: #37474f;
-  /*37474f*/
-}
+/* #audioinfo p { visibility: hidden; display: inline; margin-left: 10px } */
+/* #audioinfo:hover p { visibility: visible } */
 
 
 
 
 
-
+/* NEEEDED FOR VIDEO SPIRAL */
 .spouter { margin: 20px 0; padding: 0; width: 890px; height: 550px; }
 .spleft { float: left; width: 340px; height: 550px; }
 .spltop { width: 340px; height: 210px; }
@@ -246,32 +241,6 @@ a:hover {
 .spltrbltrbright img { position: absolute; }
 a.spimg, a.spimg:hover { border: 0;}
 
-
-
-
-/* IMAGE RESULTS */
-
-#img_spiral_div { 
-  transform: scale(0.4);
-  display: grid; grid-template: repeat(55, 10px) / repeat(89, 10px) }
-#img_spiral_div img   { object-fit: cover; margin: 0 }
-#img_spiral_div a     { text-decoration: none; }
-#img_spiral_div a.one { 
-  grid-column:25/26; grid-row:16/17; position:relative; top:-7px }
-#img_spiral_div a.two { 
-  grid-column:26/27; grid-row:16/17; position:relative; top:-7px }
-#img_spiral_div a.three { grid-column: 25/27; grid-row: 14/16 }
-#img_spiral_div a.four  { grid-column: 22/25; grid-row: 14/17 }
-#img_spiral_div a.five  { grid-column: 22/27; grid-row: 17/22 }
-#img_spiral_div a.six   { grid-column: 27/35; grid-row: 14/22 }
-#img_spiral_div a.seven { grid-column: 22/34; grid-row:  1/14 }
-#img_spiral_div a.eight { grid-column:  1/22; grid-row:  1/22 }
-#img_spiral_div a.nine  { grid-column:  1/35; grid-row: 22/56 }
-#img_spiral_div a.ten   { grid-column: 35/90; grid-row:  1/56 }
-
-#img_list_div { display: flex; flex-wrap: wrap; justify-content: flex-start }
-#img_list_div a { padding: 1em }
-#img_list_div a img { width: 300px; height: 200px; object-fit: cover }
 
 
 
@@ -308,46 +277,8 @@ div.scrollLinks .left:before {
 
 
 
-
-
-
-
-.w3-checkbox input[type=checkbox]:checked + .w3-checkmark:before {background:#546588}
-.w3-checkbox input[type=radio]:checked + .w3-checkmark:after {opacity:1;background-color:#546588}
-.w3-checkmark:before {content:'';position:absolute;width:24px;height:24px;border:2px solid #546588}
-
-/*Blue = #546588*/
-.w3-theme {color:#fff !important;background-color:#607d8b !important}
-.w3-theme-light {color:#455a64 !important;background-color:#eceff1 !important}
-.w3-theme-dark {color:#fff !important;background-color:#263238 !important}
-.w3-text-theme {color:#455a64 !important}
-.w3-theme-l5 {color:#455a64 !important;background-color:#eceff1 !important}
-.w3-theme-l4 {color:#455a64 !important;background-color:#cfd8dc !important}
-.w3-theme-l3 {color:#455a64 !important;background-color:#b0bec5 !important}
-.w3-theme-l2 {color:#455a64 !important;background-color:#90a4ae !important}
-.w3-theme-l1 {color:#fff !important;background-color:#78909c !important}
-.w3-theme-d1 {color:#fff !important;background-color:#546e7a !important}
-.w3-theme-d2 {color:#fff !important;background-color:#455a64 !important}
-.w3-theme-d3 {color:#fff !important;background-color:#37474f !important}
-.w3-theme-d4 {color:#fff !important;background-color:#263238 !important}
-.w3-theme-action {color:#fff !important;background-color:#263238 !important}
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-  background: #eceff1;
-  padding: .1em;
-  text-align: center;
-}
+/* FOOTER */
+footer { background: #ECEFF1; padding: .1em; text-align: center }
 
 
 
@@ -365,20 +296,42 @@ footer {
   .cover { padding: 2em 1em; flex-direction: row }
   .cover img { width: 22% }
 
-  #img_spiral_div { transform: scale(0.6) }
 
 
 }
 
 @media all and (min-width:750px) {
 
-  #img_spiral_div { transform: scale(0.8) }
+  :root { --unit: calc(var(--width)/89) }
+  #img_spiral_div { 
+    grid-template: repeat(55, var(--unit)) / repeat(89, var(--unit)) }
+  #img_spiral_div a.one   { grid-column:  1/56; grid-row:  1/56 }
+  #img_spiral_div a.two   { grid-column: 56/90; grid-row:  1/35 }
+  #img_spiral_div a.three { grid-column: 69/90; grid-row: 35/56 }
+  #img_spiral_div a.four  { grid-column: 56/69; grid-row: 43/56 }
+  #img_spiral_div a.five  { grid-column: 56/64; grid-row: 35/43 }
+  #img_spiral_div a.six   { grid-column: 64/69; grid-row: 35/40 }
+  #img_spiral_div a.seven { grid-column: 66/69; grid-row: 40/43 }
+  #img_spiral_div a.eight { grid-column: 64/66; grid-row: 41/43 }
+  #img_spiral_div a.nine  { grid-column: 64/65; grid-row: 40/41 }
+  #img_spiral_div a.ten   { grid-column: 65/66; grid-row: 40/41 }
+  #img_spiral_div a.one img   { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
+  #img_spiral_div a.two img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+  #img_spiral_div a.three img { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
+  #img_spiral_div a.four img  { border-radius: 0 0 0 100%; border-width: 0 0 2px 2px }
+  #img_spiral_div a.five img  { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
+  #img_spiral_div a.six img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+  #img_spiral_div a.seven img { border-radius: 0 0 100% 0; border-width: 0 2px 2px 0 }
+  #img_spiral_div a.eight img { border-radius: 0 0 0 100%; border-width: 0 0 2px 2px }
+  #img_spiral_div a.nine img  { border-radius: 100% 0 0 0; border-width: 2px 0 0 2px }
+  #img_spiral_div a.ten img   { border-radius: 0 100% 0 0; border-width: 2px 2px 0 0 }
+  #img_spiral_div a img:hover { filter: invert(75%) }
 
 }
 
 @media all and (min-width:900px) {
 
-  #img_spiral_div { transform: scale(1) }
+
 
 }
 

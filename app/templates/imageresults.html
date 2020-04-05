@@ -9,39 +9,39 @@
   <!-- MAIN SEARCH -->
   <form class="mainsearch" action="../imageresults" method="post">
     <fieldset>
-      <input id="flickr" type="radio" name="corpus" value="flickr" checked><label for="flickr">Flickr</label>
-      <input id="bing" type="radio" name="corpus" value="bing"><label for="bing">Bing</label>
+      <input id="flickr" type="radio" name="img_choice" value="flickr" checked><label for="flickr">Flickr</label>
+      <input id="bing" type="radio" name="img_choice" value="bing"><label for="bing">Bing</label>
     </fieldset>
     <fieldset>
-      <input name="query" type="text" placeholder=" Search" autofocus required>
+      <input name="query" type="text" placeholder="Search" autofocus required>
       <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
     </fieldset>
   </form>
 
   <nav class="subnav tabs">
     <hr>
-    <a class="active" href="#tab1">Spiral</a>
-    <a href="#tab2">List</a>
+    <a class="active" href="#spiral_tab">Spiral</a>
+    <a href="#list_tab">List</a>
     <hr>
   </nav>
 
 
-<div class="w3-container w3-padding">
+<div class="indent">
   <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ oldquery }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.0 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.1 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ translations.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form> ==
-  [<form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.0 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.1 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.2 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.3 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.4 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.5 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.6 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.7 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.8 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>, 
-  <form class="inform" action="../imageresults" method="post"><input class="inlink" type="submit" name="query" value="{{ queries.9 }}" onclick="loading();"></input><input class="w3-hide" name="img_choice" value="{{ choice }}"></input></form>]
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ oldquery }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.0 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.1 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.2 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  [<form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.0 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.1 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.2 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.3 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.4 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.5 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.6 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.7 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.8 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.9 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>]
 </div>
 
 <!-- JAVASCRIPT -->
@@ -55,70 +55,49 @@
 <meta id="iquery7" data-query="{{ queries.7 }}">
 <meta id="iquery8" data-query="{{ queries.8 }}">
 <meta id="iquery9" data-query="{{ queries.9 }}">
+<!-- SET CURRENT RADIO BUTTON -->
 <meta id="ichoice" data-choice="{{ choice }}">
-
-<script>(function(){
-  var qs = [];
-  for (var x=0; x<10; x++){
-    tmp = "#iquery" + x;
-    qs[x] = $(tmp).data();
-    // console.log(qs[x]);
-  }
-  var c = $('#ichoice').data();
-  var ch = document.getElementById(c.choice);
-  function checkradio() { 
-    ch.checked = true; 
-    console.log("checked the radio button")
-  }
-  if (c.choice === 'flickr') flickrsearch(qs);
-  if (c.choice === 'bing') bingsearch(qs); 
-  // if (c.choice === 'getty') gettysearch(qs[0].query); 
-  // if (c.choice === 'google') googlesearch(q.query); 
-  checkradio();
-})();
+<script>
+  let qs = [];
+  const queryHolders = document.querySelectorAll("[id^='iquery']");
+  queryHolders.forEach(q => qs.push(q.dataset.query));
+  const imageRadio = document.getElementById(ichoice.dataset.choice);
+  imageRadio.checked = true;
+  (imageRadio.id === 'flickr') ? flickrsearch(qs) : bingsearch(qs);
 </script>
 
 
+
 <!-- TABS -->
-<div class="w3-container tab_container w3-padding-0">
+<div class="tab_container">
+
 
 <!-- SPIRAL -->
-<div id="tab1" class="tab_content">
-  <header class="w3-container w3-theme-l4">
-    <h2>Spiral <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div></h2>
-  </header>
-  <div class="w3-container">
-    <p>
-      The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for source.
-    </p>
+<section id="spiral_tab" class="tab_content">
+  <h2>Spiral <span>{{ choice }}</span></h2>
+  <div class="indent">
+    <p>The results are displayed in golden spiral form in pataphysical fashion. Hover for title, click for source.</p>
   </div>
-  <div class="w3-container w3-theme-l5 poetry">
-    <div class="img_empty" id="img_spiral_div">
+  <div class="poetry">
+    <div id="img_spiral_div" class="img_empty">
       <!-- Javascript puts spiral code here -->
     </div>
   </div>
-</div> <!-- end spiral -->
+</section> <!-- end spiral -->
 
 <!-- LIST -->
-<div id="tab2" class="tab_content">
-  <header class="w3-container w3-theme-l4">
-    <h2>List <div class="w3-text-light-grey" style="display:inline;">{{ choice }}</div></h2>
-  </header>
-  <div class="w3-container">
-    <p>
-      Images - Hover for title, click for source.
-    </p>
+<section id="list_tab" class="tab_content">
+  <h2>List <span>{{ choice }}</span></h2>
+  <div class="indent">
+    <p>Images - Hover for title, click for source.</p>
   </div>
-
-  <div class="w3-container w3-theme-l5 poetry">
-    <!-- title, img, link -->
-    <div class="w3-row" id="img_list_div">
+  <div class="poetry">
+    <div id="img_list_div" class="img_empty">
       <!-- Javascript puts list code here -->
     </div>
-    <div class="img_empty"></div>
   </div>
+</section> <!-- end list -->
 
-</div> <!-- end list -->
 
 </div> <!-- end tabs -->
 
