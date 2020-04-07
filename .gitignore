@@ -6,6 +6,7 @@ keys.js
 keys.py
 test
 app/__pycache__
+log.txt
 
 # Compiled source #
 ###################

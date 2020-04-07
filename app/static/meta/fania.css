@@ -1,4 +1,5 @@
-/* FANIA SPECIFIC STYLES*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&display=swap');
+
 :root {
   --width: 75vw;
   --unit: calc(var(--width)/55);
@@ -9,7 +10,6 @@
 html { color: #455A64; scroll-behavior: smooth }
 body { margin: 0; font-family: Verdana, sans-serif; font-size: 16px }
 a { color: #546588 }
-a:hover { color: #37474f }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600; text-transform: uppercase; font-family: 'Arvo', serif }
 h1 { font-size: 36px; margin: 16px }
@@ -29,10 +29,8 @@ main h4 { margin: 2em 16px .5em 0 }
 /* HEADERS & LOGO */
 header a:link, header a:visited { text-decoration: none }
 .spiral { width: 90px; height: 90px; margin-top: 1em }
-.spiral:hover { animation: spin 4s linear infinite reverse }
 @keyframes spin { 100% { transform: rotate(360deg) } }
-header { 
-  color:#455a64; background:#ECEFF1; 
+header { color:#455a64; background:#ECEFF1; 
   padding: .1em 16px; text-align: center }
 
 
@@ -45,17 +43,14 @@ hr { border-top: 1px solid #EEEEEE }
 	background: url(../images/loadspiral.gif) center no-repeat #FFFFFF80 }
 .mobile, .show { display: block }
 .desktop { display: none }
-.twoHalfs { display: flex }
-.twoHalfs * { width: 49% }
-.twoColumns { column-count: 2; margin: 16px }
+.twoHalfs { display: flex; flex-direction: column }
+.twoHalfs blockquote { width: 80% }
+.twoColumns { column-count: 1; margin: 16px }
 .indent { padding: 16px }
 .hide, .hiddenOnMobile { display: none }
 .button, .poetryButtons a, .poetryButtons button { 
   background:#607d8b; font-size: 16px; text-decoration: none;
   border: none; border-radius: 5px; margin: 0 }
-.button:hover, .poetryButtons a:hover, .poetryButtons button:hover { 
-  cursor: pointer; color:#FFFFFF; text-decoration: none;
-  box-shadow: 0 8px 16px 0 #00000033, 0 6px 20px 0 #00000030 }
 
 
 /* MAIN NAVIGATION */
@@ -64,7 +59,6 @@ nav {
 nav a { 
   text-transform: uppercase; text-decoration: none; 
   border: 0; padding: 0 8px; transition: all 0.3s ease }
-nav a:hover { border: 0; text-decoration: none }
 nav .fa {
   vertical-align: middle; text-align: center;
   font-size: 1.4em; line-height: 1.5em; 
@@ -72,12 +66,10 @@ nav .fa {
   width: 1.5em; border-radius: 50%; bottom: 0 }
 nav .navtext { padding-left: 10px; display: none;
   font-size: 1.2em; line-height: 1.8em }
-nav.subnav { 
-  color:#455A64; background:#FFFFFF; padding: 1em;  }
+nav.subnav { background:#FFFFFF; padding: 1em; line-height: 2 }
 nav.subnav a { 
-  text-transform: uppercase; text-decoration: none;
+  text-transform: uppercase; text-decoration: none; line-height: 1.5
   padding: 8px; transition: all 0.3s ease }
-nav.subnav a:hover { color:#37474F; text-decoration: underline }
 nav.subnav a.active { background:#ECEFF1; border-radius: 5px }
 nav.subnav hr:first-child { margin-bottom: 2em }
 nav.subnav hr:last-child { margin-top: 2em }
@@ -106,7 +98,7 @@ form.mainsearch fieldset { border: none; text-align: center }
 form.mainsearch label { padding: 0 1em 0 5px }
 form.mainsearch input[type=radio] { 
   width: 24px; height: 24px; position: relative; top: 7px }
-form.mainsearch input[type=text] { padding-left: .5em;
+form.mainsearch input[type=text] { padding-left: .5em; margin-bottom: 1em;
   width: 90%; border: solid 1px #90A4AE; border-radius: 5px; height: 26px }
 form.mainsearch button .fa { color: #ECEFF1 }
 form.mainsearch button { 
@@ -118,8 +110,7 @@ form.mainsearch button {
   cursor: pointer; text-decoration: underline; 
 	color: #7989A9; background: none; font-size: 10px;
 	border: 0; font-weight: 400; margin: 0; padding: 0 }
-.inlineform input[type=submit]:hover { color: #90A4AE } 
-
+.indent .inlineform input[type=submit] { font-size: 16px }
 
 /* ERRORS PAGE */
 .errors {
@@ -144,15 +135,19 @@ code.pseudo {
 
 /* TEXT SEARCH */
 .poetry { background: #ECEFF1; display: flex; flex-direction: column;
-  justify-content: center; align-items: center; line-height: 1.5em; padding: 2em }
-.poetryButtons { text-align: center; padding-bottom: 2em; margin: 0 }
+  justify-content: center; align-items: center; line-height: 1.5em; 
+  padding: 2em; font-family: 'Open Sans Condensed', sans-serif }
+.poetryButtons { text-align: center; padding-bottom: 2em; margin: 0;
+  display: flex; justify-content: center; 
+  flex-direction: column; align-items: center }
 .poetryButtons a, 
 .poetryButtons button { 
-  color: #FFFFFF; transition: all 0.3s ease;
-  padding: 10px 16px; margin-right: 1em }
+  color: #FFFFFF; transition: all 0.3s ease; width: 200px;
+  padding: 10px 16px; margin: .2em }
 .poetryButtons .fa { color: #FFFFFF; padding-right: 5px }
 .algos, .sources { background:#ECEFF1; padding: 16px }
-.algos ul, .sources ul { list-style-type: none; padding-left: 16px }
+.algos ul, .sources ul { list-style-type: none; padding-left: 16px;
+  font-size: 10px }
 .algos li, .sources li { line-height: 1.5em }
 #random_poem { font-size: 10px }
 html { --poemWidth: 100vw }
@@ -160,8 +155,6 @@ html { --poemWidth: 100vw }
 #poem .fullLine { position: relative }
 #poem img[id$="Left"], #poem img[id$="Right"] { z-index: 2;
   position: absolute; cursor: pointer; height: 27px; width: 27px; top: 0 }
-#poem img[id$="Left"]:hover, #poem img[id$="Right"]:hover { 
-  filter: hue-rotate(200deg) }
 #poem img[id$="Left"] { left: 0 } #poem img[id$="Right"] { right: 0 }
 .lines { white-space: nowrap; margin: 0; overflow-x: hidden }
 .line {
@@ -169,8 +162,6 @@ html { --poemWidth: 100vw }
   width: var(--poemWidth); padding: 0;
   line-height: 1.7; text-align: center; font-size: 10px }
 .disable { filter: blur(2px) opacity(25%) }
-#poem img.disable:hover { 
-  filter: blur(2px) opacity(25%) hue-rotate(200deg); cursor: default }
 #subpoem3, #subpoem7, #subpoem10,
 #poem .fullLine:nth-of-type(4), #poem .fullLine:nth-of-type(8),
 #poem .fullLine:nth-of-type(11) { padding-bottom: 1em }
@@ -234,30 +225,6 @@ html { --poemWidth: 100vw }
 /* #audioinfo:hover p { visibility: visible } */
 
 
-/*Scroll Glide Bar Stuff*/
-div.wn { position: relative; overflow: hidden; height: 1.5em }
-div.wn,
-div.lyr span { width: 635px }
-div.lyr { white-space: nowrap }
-div.lyr span { text-align: center; display: inline-block }
-div.scrollLinks,
-div.scrollLinks .left,
-div.scrollLinks .right { height: 0.2em }
-div.scrollLinks { width: 635px; position: relative }
-div.scrollLinks .left,
-div.scrollLinks .right { position: absolute; top: -1.5em; cursor: pointer }
-div.scrollLinks .right { right: 0 }
-div.scrollLinks .left { left: 0 }
-div.scrollLinks .right:before {
-  font-family: FontAwesome; content: "\f054";
-  font-style: normal; font-weight: normal; color: #C0C0C0 }
-div.scrollLinks .left:before {
-  font-family: FontAwesome; content: "\f053";
-  font-style: normal; font-weight: normal; color: #C0C0C0 }
-#poems:nth-of-type(4) { padding-bottom: 1em }
-#poems:nth-of-type(8) { padding-bottom: 1em }
-#poems:nth-of-type(11) { padding-bottom: 1em }
-
 
 /* FOOTER */
 footer { background: #ECEFF1; padding: .1em; text-align: center }
@@ -281,6 +248,23 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
   .line { font-size: 16px }
   .inlineform input[type="submit"] { font-size: 16px }
   #random_poem { font-size: 16px }
+  .twoHalfs { flex-direction: row }
+  .twoColumns { column-count: 2 }
+  .poetryButtons { flex-direction: row }
+  #poem img[id$="Left"]:hover, #poem img[id$="Right"]:hover { 
+    filter: hue-rotate(200deg) }
+  .algos ul, .sources ul { font-size: 16px }
+  a:hover { color: #37474f }
+  .spiral:hover { animation: spin 4s linear infinite reverse }
+  .button:hover, .poetryButtons a:hover, .poetryButtons button:hover { 
+    cursor: pointer; color:#FFFFFF; text-decoration: none;
+    box-shadow: 0 8px 16px 0 #00000033, 0 6px 20px 0 #00000030 }
+  nav a:hover { border: 0; text-decoration: none }
+  nav.subnav a:hover { color:#37474F; text-decoration: underline }
+  .inlineform input[type=submit]:hover { color: #90A4AE } 
+  #poem img.disable:hover { 
+    filter: blur(2px) opacity(25%) hue-rotate(200deg); cursor: default }
+
 }
 
 @media all and (min-width:750px) {
