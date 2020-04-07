@@ -7,20 +7,9 @@
 - [x] get rid of w3css
 - [x] loop scroll links?
 - [x] hide scroll links on first or last item
-- [ ] mendes, english and spanish? stopwords?
-- [ ] AUDIO ??
-- [ ] Update pip reqs to minimum
-- [ ] Like poems and display them on page
-- [ ] WEB SEARCH?
-- [ ] update wording of website
-- [ ] refactor code
-- [ ] get rid of jquery
-- [ ] add more APIs?
-- [ ] replace spiral logo with svg
-- [ ] purge jquery
-- [ ] fix mobile styles
-
-
+- [x] Update pip reqs to minimum
+- [x] update wording of website
+- [x] fix mobile styles
 - [x] index, header, text, base
 - [x] errors
 - [x] about
@@ -29,11 +18,14 @@
 - [x] imageresults
 - [x] videos
 - [x] videoresults
-- [ ] audio ?
-
-
-
-
+- [ ] mendes, english and spanish? stopwords?
+- [ ] AUDIO ??
+- [ ] Like poems and display them on page
+- [ ] WEB SEARCH?
+- [ ] add more APIs?
+- [ ] replace spiral logo with svg
+- [ ] purge jquery
+- [ ] refactor code
 
 
 

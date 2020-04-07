@@ -61,12 +61,22 @@ Results are presented in one of three ways. The default is the poetry view. It d
 
 I highly recommend experiencing the project on [pata.physics.wtf](http:pata.physics.wtf) rather than installing from the source.
 
+
+### Quarantine 2020 Updates
+
+**Python 3.8 update --- March 2020**
+
+- assumes you have python 3.8 installed
+- create virtualenv with `python -m venv NAME` see [venv doc](https://docs.python.org/3/library/venv.html)
+- get newest versions of reqs `pip install -r requirements.txt`
+
+
 ### Prerequisites
 
 Virtualenv is recommended but not required. If you don't want to use it, skip steps 1, 2 and 3.
 
 1. install [Virtualenv](https://virtualenv.pypa.io/en/stable/)
-2. create a virtual environment ```virtualenv venv```
+2. create a virtual environment ```python -m venv venv```
 3. activate virtual environment ```venv\scripts\activate```
 4. install [Python 2.7](https://www.python.org/downloads/)
 5. install dependencies ```pip install -r requirements.txt```

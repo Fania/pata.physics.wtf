@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed&display=swap');
-
 :root {
   --width: 75vw;
   --unit: calc(var(--width)/55);
@@ -67,9 +65,8 @@ nav .fa {
 nav .navtext { padding-left: 10px; display: none;
   font-size: 1.2em; line-height: 1.8em }
 nav.subnav { background:#FFFFFF; padding: 1em; line-height: 2 }
-nav.subnav a { 
-  text-transform: uppercase; text-decoration: none; line-height: 1.5
-  padding: 8px; transition: all 0.3s ease }
+nav.subnav a { text-transform: uppercase; text-decoration: none; 
+  line-height: 1.5; padding: 8px; transition: all 0.3s ease }
 nav.subnav a.active { background:#ECEFF1; border-radius: 5px }
 nav.subnav hr:first-child { margin-bottom: 2em }
 nav.subnav hr:last-child { margin-top: 2em }
@@ -136,7 +133,7 @@ code.pseudo {
 /* TEXT SEARCH */
 .poetry { background: #ECEFF1; display: flex; flex-direction: column;
   justify-content: center; align-items: center; line-height: 1.5em; 
-  padding: 2em; font-family: 'Open Sans Condensed', sans-serif }
+  padding: 2em }
 .poetryButtons { text-align: center; padding-bottom: 2em; margin: 0;
   display: flex; justify-content: center; 
   flex-direction: column; align-items: center }
