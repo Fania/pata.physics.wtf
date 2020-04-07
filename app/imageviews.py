@@ -1,7 +1,7 @@
 from flask import render_template, request
 from app import app
 # from .imagesurfer import transent, pataphysicalise
-from .imagesurfer import getFlickrImages, transent, pataphysicalise
+from .imagesurfer import getFlickrImages, getBingImages, transent, pataphysicalise
 import random, time
 
 
@@ -36,18 +36,16 @@ def imageresults():
     else:
         print('imageresults post: ', queries, choice)
         date = time.strftime("%c")
-        t = 'imageresults post: '+date+' '+oldquery+' ['+ ', '.join(queries) +'] '+ choice +'\n'
+        t = f'imageresults post: {date} {oldquery} [{", ".join(queries)}] {choice}\n'
         with open("log.txt", "a") as mylog:
             mylog.write(t)
 
-        print( getFlickrImages(queries,choice) )
-
-        # Using Python API code
-        # images_imgs, trans = getimages(pata, choice)
-        # images_len = len(images_imgs)
-
-        # Using Javascript API code
-        images_imgs, trans = [], translations
+        # Using Python API code  
+        if choice == 'flickr':
+            images_imgs = getFlickrImages(queries)
+        else:
+            images_imgs = getBingImages(queries)
+        trans = translations
         images_len = len(images_imgs)
 
         return render_template('imageresults.html', **locals())

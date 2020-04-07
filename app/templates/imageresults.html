@@ -57,14 +57,6 @@
 <meta id="iquery9" data-query="{{ queries.9 }}">
 <!-- SET CURRENT RADIO BUTTON -->
 <meta id="ichoice" data-choice="{{ choice }}">
-<script>
-  let qs = [];
-  const queryHolders = document.querySelectorAll("[id^='iquery']");
-  queryHolders.forEach(q => qs.push(q.dataset.query));
-  const imageRadio = document.getElementById(ichoice.dataset.choice);
-  imageRadio.checked = true;
-  (imageRadio.id === 'flickr') ? flickrsearch(qs) : bingsearch(qs);
-</script>
 
 
 
@@ -102,5 +94,21 @@
 </div> <!-- end tabs -->
 
 </main>
+
+<script>
+  // used by Python API calls
+  const singleQuote = /&#39;/g;
+  const doubleQuote = /&#34;/g;
+  const ampersand = /&amp;/g;
+  const imageString1 = "{{ images_imgs }}".replace(singleQuote, "'");
+  const imageString2 = imageString1.replace(doubleQuote, '"');
+  const imageString3 = imageString2.replace(ampersand, '&');
+  const imageArray = eval( imageString3 );
+  createSpiral( imageArray );
+
+  //update radio buttons for main search
+  const imageRadio = document.getElementById(ichoice.dataset.choice);
+  imageRadio.checked = true;
+</script>
 
 {% endblock %}

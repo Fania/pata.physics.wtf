@@ -65,48 +65,33 @@ def transent(sent):
 
 
 
-def getFlickrImages(queries, choice):
-  # output = queries + [choice]
+def getFlickrImages(queries):
   tags = ",".join(queries)
-  print(tags)
-  endpoint = 'https://www.flickr.com/services/feeds/photos_public.gne'
-  params = '?format=json&jsoncallback&tagsmode=any&tags='
-  # headers = {
-  #   'api_key': flickr_k
-  # }
-
-  fullUrl = endpoint + params + tags
-  responseJson = requests.post(fullUrl)
-  # response = json.dumps(responseJson)
-  # response = responseJson.json()
-  response = responseJson.text
-  print(responseJson)
-  print(response)
-  # print(response)
-
-
-  return responseJson
+  endpoint = f'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key={flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags={tags}'
+  responseJson = requests.post(endpoint)
+  response = responseJson.json()
+  output = []
+  for item in response['photos']['photo']:
+    imgUrl = f'https://farm{item["farm"]}.staticflickr.com/{item["server"]}/{item["id"]}_{item["secret"]}_q.jpg'
+    url = f'https://www.flickr.com/photos/{item["owner"]}/{item["id"]}'
+    op = [item['title'], imgUrl, url]
+    output.append(op)
+  return output
 
 
 
-# // FLICKR
-# function flickrsearch(queries){
-#   console.log("flickr");
-#   let results = [];
-#   const tags = queries.join(",");
-#   const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${keyconfig.flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags=`;
-#   const url = baseURL + tags;
-#   const request = new Request(url);
-#   fetch(request)
-#     .then(response => response.json())
-#     .then(data => {
-#       (data.photos.photo).forEach(d => {
-#         if (d != undefined) {
-#           const img_url = `https://farm${d.farm}.staticflickr.com/${d.server}/${d.id}_${d.secret}_q.jpg`;
-#           const page_url = `https://www.flickr.com/photos/${d.owner}/${d.id}`;
-#           results.push([d.title, img_url, page_url]);
-#         }
-#       });
-#       createSpiral(results);
-#     });
-# }; // end flickrsearch
+
+
+def getBingImages(queries):
+  queryString = " | ".join(queries)
+  endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
+  headers = { "Ocp-Apim-Subscription-Key": bing_k }
+  params = { "q": queryString, "count": 10 }
+  response = requests.get(endpoint, headers=headers, params=params)
+  response.raise_for_status()
+  search_results = response.json()
+  output = []
+  for item in search_results['value']:
+    op = [item['name'], item['thumbnailUrl'], item['hostPageUrl']]
+    output.append(op)
+  return output

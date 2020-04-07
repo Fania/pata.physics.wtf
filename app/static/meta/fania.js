@@ -1,26 +1,27 @@
 // APIs
 
 // FLICKR
-function flickrsearch(queries){
-  console.log("flickr");
-  let results = [];
-  const tags = queries.join(",");
-  const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${keyconfig.flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags=`;
-  const url = baseURL + tags;
-  const request = new Request(url);
-  fetch(request)
-    .then(response => response.json())
-    .then(data => {
-      (data.photos.photo).forEach(d => {
-        if (d != undefined) {
-          const img_url = `https://farm${d.farm}.staticflickr.com/${d.server}/${d.id}_${d.secret}_q.jpg`;
-          const page_url = `https://www.flickr.com/photos/${d.owner}/${d.id}`;
-          results.push([d.title, img_url, page_url]);
-        }
-      });
-      createSpiral(results);
-    });
-}; // end flickrsearch
+// works but not used
+// function flickrsearch(queries){
+//   console.log("flickrsearch, flickr");
+//   let results = [];
+//   const tags = queries.join(",");
+//   const baseURL = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${keyconfig.flickr_k}&format=json&per_page=10&nojsoncallback=1&sort=date-taken-desc&safe_search=1&tags=`;
+//   const url = baseURL + tags;
+//   const request = new Request(url);
+//   fetch(request)
+//     .then(response => response.json())
+//     .then(data => {
+//       (data.photos.photo).forEach(d => {
+//         if (d != undefined) {
+//           const img_url = `https://farm${d.farm}.staticflickr.com/${d.server}/${d.id}_${d.secret}_q.jpg`;
+//           const page_url = `https://www.flickr.com/photos/${d.owner}/${d.id}`;
+//           results.push([d.title, img_url, page_url]);
+//         }
+//       });
+//       createSpiral(results);
+//     });
+// }; // end flickrsearch
 
 
 
@@ -28,29 +29,30 @@ function flickrsearch(queries){
 
 
 // BING
-function bingsearch(queries){
-  console.log("bing");
-  let results = [];
-  const options = { 
-    method: 'GET',
-    headers: new Headers({'Ocp-Apim-Subscription-Key':keyconfig.bing_k}),
-    mode: 'cors',
-    cache: 'default' 
-  };
-  const queryString = `${queries.join(" | ")}`;
-  const base_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
-  const params = `?q=${queryString}&count=10`;
-  const fullUrl = base_url + params;
-  const request = new Request(fullUrl, options);
-  fetch(request)
-    .then(response => response.json())
-    .then(data => {
-      (data.value).forEach(d => {
-        results.push([d.name, d.thumbnailUrl, d.hostPageUrl]);
-      });
-      createSpiral(results);
-    });
-}; // end of bingsearch
+// works but not used
+// function bingsearch(queries){
+//   console.log("bingsearch, bing");
+//   let results = [];
+//   const options = { 
+//     method: 'GET',
+//     headers: new Headers({'Ocp-Apim-Subscription-Key':keyconfig.bing_k}),
+//     mode: 'cors',
+//     cache: 'default' 
+//   };
+//   const queryString = `${queries.join(" | ")}`;
+//   const base_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
+//   const params = `?q=${queryString}&count=10`;
+//   const fullUrl = base_url + params;
+//   const request = new Request(fullUrl, options);
+//   fetch(request)
+//     .then(response => response.json())
+//     .then(data => {
+//       (data.value).forEach(d => {
+//         results.push([d.name, d.thumbnailUrl, d.hostPageUrl]);
+//       });
+//       createSpiral(results);
+//     });
+// }; // end of bingsearch
 
 
 
@@ -96,7 +98,7 @@ function bingsearch(queries){
 
 
 function createSpiral(imglist) {
-  console.log(imglist);
+  // console.log('createSpiral', imglist);
   if (imglist.length === 10){
     // const fib = [10,10,20,30,50,80,130,210,340,550];
     const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];

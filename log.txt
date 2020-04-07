@@ -811,3 +811,73 @@ textresults post: Tue Apr  7 14:15:14 2020 [clear] faustroll
 textresults post: Tue Apr  7 14:15:54 2020 [clear] faustroll
 textresults post: Tue Apr  7 14:18:11 2020 [love] faustroll
 textresults post: Tue Apr  7 14:21:55 2020 [clear] faustroll
+imageresults post: Tue Apr  7 14:24:34 2020 cats [CAT, computerized tomography, throw up, bozo, purge, retch, sick, regorge, qat, vomit up] flickr
+imageresults post: Tue Apr  7 14:28:01 2020 cats [big cat, regurgitate, hombre, computed axial tomography, be sick, computed tomography, retch, quat, guy, sick] flickr
+imageresults post: Tue Apr  7 14:31:21 2020 cats [big cat, bozo, puke, cat-o'-nine-tails, computed axial tomography, African tea, computerized axial tomography, Arabian tea, throw up, computerized tomography] flickr
+imageresults post: Tue Apr  7 14:42:56 2020 cats [chuck, barf, khat, throw up, African tea, spew, be sick, CAT, hombre, vomit up] flickr
+imageresults post: Tue Apr  7 14:44:01 2020 cats [disgorge, guy, CT, computerized axial tomography, CAT, throw up, computerized tomography, khat, qat, bozo] flickr
+imageresults post: Tue Apr  7 14:44:48 2020 cats [cat, barf, spue, computed tomography, Caterpillar, chuck, Arabian tea, spew, computed axial tomography, CAT] flickr
+imageresults post: Tue Apr  7 14:45:37 2020 cats [cat, barf, retch, cast, throw up, true cat, spew, vomit up, disgorge, computed tomography] flickr
+imageresults post: Tue Apr  7 14:50:48 2020 cats [computed axial tomography, kat, spue, barf, Caterpillar, bozo, quat, CT, CAT, spew] flickr
+imageresults post: Tue Apr  7 14:53:14 2020 cats [hombre, throw up, regorge, khat, guy, African tea, cat-o'-nine-tails, barf, computed axial tomography, puke] flickr
+imageresults post: Tue Apr  7 14:53:52 2020 cats [retch, computed axial tomography, sick, honk, Arabian tea, CT, guy, qat, bozo, chuck] flickr
+imageresults post: Tue Apr  7 15:07:28 2020 cats [regurgitate, vomit, sick, guy, vomit up, regorge, retch, spue, cat, big cat] flickr
+imageresults post: Tue Apr  7 15:08:12 2020 cats [spew, barf, computed tomography, regorge, retch, Caterpillar, puke, throw up, big cat, spue] flickr
+imageresults post: Tue Apr  7 15:09:37 2020 cats [barf, CAT, spew, Arabian tea, honk, computed tomography, cat-o'-nine-tails, quat, sick, Caterpillar] flickr
+imageresults post: Tue Apr  7 15:15:14 2020 cats [barf, hombre, khat, computerized axial tomography, cat-o'-nine-tails, spue, purge, honk, upchuck, qat] flickr
+imageresults post: Tue Apr  7 15:17:36 2020 cats [Caterpillar, sick, vomit up, barf, vomit, regorge, retch, computed tomography, be sick, throw up] flickr
+imageresults post: Tue Apr  7 15:21:49 2020 cats [CT, kat, hombre, Arabian tea, cat-o'-nine-tails, guy, khat, sick, vomit up, computerized axial tomography] flickr
+imageresults post: Tue Apr  7 15:22:05 2020 clear [unclouded, discharge, unmortgaged, clear-cut, open, realize, gain, all the way, bring in, earn] bing
+imageresults post: Tue Apr  7 15:28:02 2020 clear [all the way, absolved, exculpated, illuminate, crystallise, straighten out, clean-cut, clear-cut, assoil, solve] bing
+imageresults post: Tue Apr  7 15:28:16 2020 clear [acquit, shed light on, crystallize, elucidate, unclouded, authorise, pass, clean-cut, crystalise, percipient] bing
+imageresults post: Tue Apr  7 15:29:03 2020 clear [realize, authorise, all the way, pull in, clear, cleared, absolved, exonerate, exonerated, bring in] bing
+imageresults post: Tue Apr  7 15:33:38 2020 clear [unmortgaged, take in, vindicated, enlighten, elucidate, assoil, earn, sack, well-defined, clear-cut] bing
+imageresults post: Tue Apr  7 15:35:11 2020 clear [acquit, sort out, crystalise, clean, top, readable, assoil, exonerate, shed light on, authorise] bing
+imageresults post: Tue Apr  7 15:35:59 2020 clear [vindicated, light up, absolved, authorize, illuminate, exonerate, elucidate, gain, realise, all the way] bing
+imageresults post: Tue Apr  7 15:36:30 2020 clear [take in, vindicated, brighten, all the way, gain, exonerated, open, sort out, clear, unclouded] bing
+imageresults post: Tue Apr  7 15:43:11 2020 clear [cleared, elucidate, clear, decipherable, brighten, realise, all the way, assoil, illuminate, take in] bing
+imageresults post: Tue Apr  7 15:44:22 2020 clear [gain, clean-cut, pull in, acquit, assoil, light, exculpate, brighten, light up, cleared] bing
+imageresults post: Tue Apr  7 15:44:52 2020 clear [clear up, all the way, top, crystalise, solve, authorize, straighten out, acquit, light, bring in] bing
+imageresults post: Tue Apr  7 15:46:14 2020 clear [brighten, top, clear, clear-cut, light up, sack up, shed light on, sack, exonerated, light] bing
+imageresults post: Tue Apr  7 15:47:11 2020 clear [acquit, net, unclouded, unmortgaged, all the way, take in, elucidate, exculpated, cleared, clear-cut] bing
+imageresults post: Tue Apr  7 15:48:24 2020 clear [clear-cut, discharge, pass, elucidate, bring in, open, clean, brighten, authorise, clean-cut] bing
+imageresults post: Tue Apr  7 15:48:36 2020 clear [crystallise, shed light on, unmortgaged, authorise, exculpated, brighten, top, readable, decipherable, straighten out] bing
+imageresults post: Tue Apr  7 15:48:54 2020 clear [solve, realize, straighten out, exculpated, absolved, gain, clear up, exonerate, brighten, elucidate] bing
+imageresults post: Tue Apr  7 15:49:12 2020 wings [annexe, fly, annex, fender, wing, offstage, wings, extension, backstage, flank] bing
+imageresults post: Tue Apr  7 15:49:52 2020 wings [wing, backstage, offstage, wings, fly, annex, extension, annexe, fender, flank] bing
+imageresults post: Tue Apr  7 15:50:13 2020 wings [annex, fly, wing, backstage, annexe, fender, wings, flank, offstage, extension] flickr
+imageresults post: Tue Apr  7 15:51:29 2020 wings [wing, wings, offstage, fender, annexe, extension, flank, annex, backstage, fly] flickr
+imageresults post: Tue Apr  7 15:51:37 2020 clouds [mottle, taint, haze over, fog, corrupt, overcast, cloud, becloud, mist, obnubilate] bing
+imageresults post: Tue Apr  7 15:51:46 2020 clouds [dapple, swarm, fog, sully, haze over, obscure, becloud, cloud, befog, taint] flickr
+imageresults post: Tue Apr  7 15:52:05 2020 wings [wing, annexe, offstage, backstage, fender, wings, fly, flank, extension, annex] flickr
+imageresults post: Tue Apr  7 15:52:38 2020 wings [flank, annexe, fly, wing, fender, wings, backstage, annex, offstage, extension] flickr
+imageresults post: Tue Apr  7 15:55:34 2020 wings [backstage, offstage, extension, fly, annexe, wing, wings, flank, annex, fender] flickr
+imageresults post: Tue Apr  7 15:57:24 2020 wings [wings, annexe, annex, offstage, flank, backstage, wing, extension, fender, fly] flickr
+imageresults post: Tue Apr  7 15:57:36 2020 wings [wings, flank, annex, fly, offstage, extension, fender, backstage, wing, annexe] bing
+imageresults post: Tue Apr  7 15:59:34 2020 wings [wings, offstage, flank, fly, annexe, extension, backstage, fender, wing, annex] bing
+imageresults post: Tue Apr  7 16:00:34 2020 wings [offstage, annexe, extension, backstage, wing, wings, fender, annex, fly, flank] bing
+imageresults post: Tue Apr  7 16:00:45 2020 clear [all the way, take in, discharge, gain, exonerate, earn, shed light on, acquit, crystalize, realise] flickr
+imageresults post: Tue Apr  7 16:00:55 2020 test [trial, essay, tryout, exam, prove, run, psychometric test, try out, trial run, mental testing] bing
+imageresults post: Tue Apr  7 16:02:27 2020 test [try, trial run, run, psychometric test, test, mental testing, mental test, try out, examination, exam] bing
+imageresults post: Tue Apr  7 16:08:56 2020 test [screen, trial, test, mental test, trial run, examination, mental testing, run, tryout, examine] bing
+imageresults post: Tue Apr  7 16:10:55 2020 test [mental test, trial run, try, examination, screen, test, run, try out, trial, prove] bing
+imageresults post: Tue Apr  7 16:11:44 2020 test [trial run, quiz, examination, psychometric test, essay, try, test, trial, screen, prove] bing
+imageresults post: Tue Apr  7 16:16:32 2020 test [test, try out, try, psychometric test, run, quiz, mental test, trial run, essay, examination] bing
+imageresults post: Tue Apr  7 16:17:11 2020 test [try, tryout, quiz, screen, trial run, psychometric test, test, mental testing, essay, trial] bing
+imageresults post: Tue Apr  7 16:18:16 2020 test [tryout, examine, try, try out, test, trial, mental testing, exam, run, psychometric test] bing
+imageresults post: Tue Apr  7 16:22:09 2020 test [psychometric test, essay, trial run, try, quiz, prove, try out, examine, examination, mental test] bing
+imageresults post: Tue Apr  7 16:22:32 2020 test [examine, try out, screen, test, trial, trial run, quiz, exam, try, tryout] bing
+imageresults post: Tue Apr  7 16:22:58 2020 test [try, tryout, prove, run, trial, mental test, test, exam, examine, quiz] bing
+imageresults post: Tue Apr  7 16:23:22 2020 test [essay, quiz, trial run, screen, run, test, psychometric test, exam, prove, examination] bing
+imageresults post: Tue Apr  7 16:24:24 2020 test [test, quiz, psychometric test, exam, run, trial run, trial, tryout, examine, mental test] bing
+imageresults post: Tue Apr  7 16:24:35 2020 sleep [kip, eternal sleep, log Z's, quietus, eternal rest, nap, rest, slumber, sleep, catch some Z's] bing
+imageresults post: Tue Apr  7 16:24:52 2020 sleep [sleep, slumber, quietus, eternal rest, log Z's, catch some Z's, kip, rest, nap, sopor] flickr
+imageresults post: Tue Apr  7 16:25:00 2020 wings [extension, offstage, fly, wings, annexe, wing, fender, backstage, annex, flank] flickr
+imageresults post: Tue Apr  7 16:25:04 2020 love [dear, make out, sexual love, sleep with, bang, know, sleep together, hump, eff, make love] flickr
+imageresults post: Tue Apr  7 16:25:08 2020 clear [unmortgaged, decipherable, cleared, acquit, clean-cut, crystalize, clear, crystallize, discharge, earn] flickr
+imageresults post: Tue Apr  7 16:25:15 2020 garden [garden, nix, zero, incorrect, invalid, mistake, empty, error, null, useless] bing
+imageresults post: Tue Apr  7 16:27:26 2020 garden [garden, null, mistake, empty, zero, invalid, nothing, incorrect, nix, error] bing
+imageresults post: Tue Apr  7 16:28:33 2020 garden [garden, nothing, error, invalid, null, nix, zero, useless, incorrect, mistake] bing
+imageresults post: Tue Apr  7 16:28:37 2020 garden [garden, mistake, incorrect, error, invalid, null, useless, empty, nix, nothing] bing
+videoresults post: Tue Apr  7 16:28:47 2020 [garden]
+textresults post: Tue Apr  7 16:29:03 2020 [clear] faustroll
