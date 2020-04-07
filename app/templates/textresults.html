@@ -87,26 +87,54 @@
 
   <div class="subtab_content" id="q_tab">
     <p class="poetryButtons"><a href="" onclick="getContent(this)"><i class="fa fa-envelope"></i> Email this poem!</a></p>
+
     <div class="poetry">
       {% if (lol|length) != 0 %}
+        <div id="poem">
         {% for n in range(1, lol|length + 1) %}
-          {% set wid = ['wn', n|string]|join %}
-          {% set lid = ['lyr', n|string]|join %}
-          {% set sid = ['scrollLinks', n|string]|join %}
-          {% set aid = lol[n-1] %}
-          <div id="poems">
-            <div id="{{wid}}" class="wn">
-              <div id="{{lid}}" class="lyr">
-                {% for sens in aid %}<span title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inlineform" action="../textresults" method="post"><input type="radio" name="corpus" value="{{ corpus }}" checked><input type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading()"></form> {{ sens[1][2] }}</span>{% endfor %}
-              </div>
+          <div class="fullLine">
+            <img id="line{{ n }}Left" class="disable" src="{{ url_for('static', filename='images/basheau/cheveron-left.svg') }}">
+            <div class="lines">
+              {% for sens in lol[n-1] %}<span class="line" title="{{ sens[0] }}, {{ sens[2] }}">{{ sens[1][0] }} <form class="inlineform" action="../textresults" method="post"><input type="radio" name="corpus" value="{{ corpus }}" checked><input type="submit" name="query" value="{{ sens[1][1] }}" onclick="loading()"></form> {{ sens[1][2] }}</span>{% endfor %}
             </div>
-            <div id="{{sid}}" class="scrollLinks"></div>
+            <img id="line{{ n }}Right" src="{{ url_for('static', filename='images/basheau/cheveron-right.svg') }}">
           </div>
         {% endfor %}
+        </div>
       {% else %}
         <p>Not enough results found.</p>
       {% endif %}
     </div>
+
+<script>
+  const lefties = document.querySelectorAll("[id$=Left]");
+  lefties.forEach(l => l.addEventListener("click", () => {
+    const num = l.id.slice(4,5);
+    let clickCounter = document.getElementById(`clicks${num}`);
+    let clickNum = parseInt(clickCounter.innerHTML);
+    if (clickNum > 1) clickCounter.innerHTML = clickNum - 1;
+    const sib = l.nextElementSibling;
+    const righty = sib.nextElementSibling;
+    if ( sib.scrollLeft === sib.clientWidth ) { l.classList.add("disable") }
+    sib.scrollBy({ top: 0, left: -sib.clientWidth, behavior: 'smooth' });
+    righty.classList.remove("disable");
+  }));
+  const righties = document.querySelectorAll("[id$=Right]");
+  righties.forEach(r => r.addEventListener("click", () => {
+    const partSize = parseInt(document.getElementById("partsize").innerHTML);
+    const num = r.id.slice(4,5);
+    let clickCounter = document.getElementById(`clicks${num}`);
+    let clickNum = parseInt(clickCounter.innerHTML);
+    if (clickNum < partSize) clickCounter.innerHTML = clickNum + 1;
+    const sib = r.previousElementSibling;
+    const lefty = sib.previousElementSibling;
+    if ( sib.scrollLeft + sib.clientWidth === 
+         sib.scrollWidth - sib.clientWidth ) { r.classList.add("disable") }
+    sib.scrollBy({ top: 0, left: sib.clientWidth, behavior: 'smooth' });
+    lefty.classList.remove("disable");
+  }));
+</script>
+
   </div>
   <!-- end q_tabs -->
 

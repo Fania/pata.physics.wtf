@@ -146,50 +146,6 @@ function createVideoSpiral(videolist) {
 
 
 
-/////////////////////////////////////////////////////////////////////
-
-// SCROLL BUTTONS
-if(window.location.pathname === '/textresults') {
-  if (DYN_WEB.Scroll_Div.isSupported() ) {
-      DYN_WEB.Event.add( window, 'load', function() {
-  		// wndo args(id of scroll area div, id of content div)
-      // addGlideControls args(id, axis('v'|'h'), distance, duration)
-      let wndo1 = new DYN_WEB.Scroll_Div('wn1', 'lyr1');
-  		wndo1.addGlideControls('scrollLinks1', 'h', 635, 300);
-      let wndo2 = new DYN_WEB.Scroll_Div('wn2', 'lyr2');
-      wndo2.addGlideControls('scrollLinks2', 'h', 635, 300);
-      let wndo3 = new DYN_WEB.Scroll_Div('wn3', 'lyr3');
-      wndo3.addGlideControls('scrollLinks3', 'h', 635, 300);
-      let wndo4 = new DYN_WEB.Scroll_Div('wn4', 'lyr4');
-      wndo4.addGlideControls('scrollLinks4', 'h', 635, 300);
-      let wndo5 = new DYN_WEB.Scroll_Div('wn5', 'lyr5');
-      wndo5.addGlideControls('scrollLinks5', 'h', 635, 300);
-      let wndo6 = new DYN_WEB.Scroll_Div('wn6', 'lyr6');
-      wndo6.addGlideControls('scrollLinks6', 'h', 635, 300);
-      let wndo7 = new DYN_WEB.Scroll_Div('wn7', 'lyr7');
-      wndo7.addGlideControls('scrollLinks7', 'h', 635, 300);
-      let wndo8 = new DYN_WEB.Scroll_Div('wn8', 'lyr8');
-      wndo8.addGlideControls('scrollLinks8', 'h', 635, 300);
-      let wndo9 = new DYN_WEB.Scroll_Div('wn9', 'lyr9');
-      wndo9.addGlideControls('scrollLinks9', 'h', 635, 300);
-      let wndo10 = new DYN_WEB.Scroll_Div('wn10', 'lyr10');
-      wndo10.addGlideControls('scrollLinks10', 'h', 635, 300);
-      let wndo11 = new DYN_WEB.Scroll_Div('wn11', 'lyr11');
-      wndo11.addGlideControls('scrollLinks11', 'h', 635, 300);
-      let wndo12 = new DYN_WEB.Scroll_Div('wn12', 'lyr12');
-      wndo12.addGlideControls('scrollLinks12', 'h', 635, 300);
-      let wndo13 = new DYN_WEB.Scroll_Div('wn13', 'lyr13');
-      wndo13.addGlideControls('scrollLinks13', 'h', 635, 300);
-      let wndo14 = new DYN_WEB.Scroll_Div('wn14', 'lyr14');
-      wndo14.addGlideControls('scrollLinks14', 'h', 635, 300);
-  	});
-  } else {
-    console.log("no DYN_WEB");
-  }
-} // end scrolldiv poems
-
-
-
 
 
 
@@ -277,10 +233,10 @@ function getContent(link) {
   let linearray = [];
   let poemsarray = [];
   const re = /<form class="inlineform" action="\.\.\/textresults" method="post"><input type="radio" name="corpus" value="(?:faustroll|shakespeare)|" checked=""><input type="submit" name="query" value="|" onclick="loading\(\)|"><\/form>/g;
+  const allLines = document.getElementsByClassName('lines');
   for (let i = 0; i < lollength; i++) {
-    let lid = 'lyr' + (i + 1);
-    let lineitem = eval('lineitem' + (i + 1));
-    linearray[i] = document.getElementById(lid).children[lineitem - 1];
+    let lineitem = eval(`lineitem${i + 1}`);
+    linearray[i] = allLines[i].children[lineitem - 1];
     poemsarray[i] = linearray[i].innerHTML;
     poemsarray[i] = poemsarray[i].replace(re, '');
   }

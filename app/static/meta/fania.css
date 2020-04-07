@@ -49,7 +49,7 @@ hr { border-top: 1px solid #EEEEEE }
 .twoHalfs * { width: 49% }
 .twoColumns { column-count: 2; margin: 16px }
 .indent { padding: 16px }
-.hide { display: none }
+.hide, .hiddenOnMobile { display: none }
 .button, .poetryButtons a, .poetryButtons button { 
   background:#607d8b; font-size: 16px; text-decoration: none;
   border: none; border-radius: 5px; margin: 0 }
@@ -115,8 +115,8 @@ form.mainsearch button {
 .inlineform { display: inline-block }
 .inlineform input[type=radio] { display: none }
 .inlineform input[type=submit] { 
-  font-size: 16px; cursor: pointer; text-decoration: underline; 
-	color: #7989A9; background: none;
+  cursor: pointer; text-decoration: underline; 
+	color: #7989A9; background: none; font-size: 10px;
 	border: 0; font-weight: 400; margin: 0; padding: 0 }
 .inlineform input[type=submit]:hover { color: #90A4AE } 
 
@@ -154,6 +154,29 @@ code.pseudo {
 .algos, .sources { background:#ECEFF1; padding: 16px }
 .algos ul, .sources ul { list-style-type: none; padding-left: 16px }
 .algos li, .sources li { line-height: 1.5em }
+#random_poem { font-size: 10px }
+html { --poemWidth: 100vw }
+#poem { width: var(--poemWidth); align-self: center }
+#poem .fullLine { position: relative }
+#poem img[id$="Left"], #poem img[id$="Right"] { z-index: 2;
+  position: absolute; cursor: pointer; height: 27px; width: 27px; top: 0 }
+#poem img[id$="Left"]:hover, #poem img[id$="Right"]:hover { 
+  filter: hue-rotate(200deg) }
+#poem img[id$="Left"] { left: 0 } #poem img[id$="Right"] { right: 0 }
+.lines { white-space: nowrap; margin: 0; overflow-x: hidden }
+.line {
+  display: inline-block;
+  width: var(--poemWidth); padding: 0;
+  line-height: 1.7; text-align: center; font-size: 10px }
+.disable { filter: blur(2px) opacity(25%) }
+#poem img.disable:hover { 
+  filter: blur(2px) opacity(25%) hue-rotate(200deg); cursor: default }
+#subpoem3, #subpoem7, #subpoem10,
+#poem .fullLine:nth-of-type(4), #poem .fullLine:nth-of-type(8),
+#poem .fullLine:nth-of-type(11) { padding-bottom: 1em }
+
+
+
 
 
 /* IMAGE SEARCH */
@@ -244,20 +267,25 @@ footer { background: #ECEFF1; padding: .1em; text-align: center }
 
 @media all and (min-width:600px) {
 
+  html { --poemWidth: 600px }
   .errors div { width: 25% }
   .errors .errorCode { width: 40%; min-width: 500px; overflow: visible }
   nav .navtext { display: inline-block }
   .mobile { display: none }
+  .hiddenOnMobile { display: inline-block }
   .desktop { display: block }
   .cover { padding: 2em 1em; flex-direction: row }
   .cover img { width: 22% }
   #img_list_div { column-count: 2 }
   #img_list_div a img { width:40vw }
-
+  .line { font-size: 16px }
+  .inlineform input[type="submit"] { font-size: 16px }
+  #random_poem { font-size: 16px }
 }
 
 @media all and (min-width:750px) {
 
+  html { --poemWidth: 700px }
   :root { --unit: calc(var(--width)/89) }
   #img_spiral_div { 
     grid-template: repeat(55, var(--unit)) / repeat(89, var(--unit)) }

@@ -5,20 +5,20 @@
 - [x] Spiral percentages
 - [x] create responsive image spiral
 - [x] get rid of w3css
+- [x] loop scroll links?
+- [x] hide scroll links on first or last item
 - [ ] mendes, english and spanish? stopwords?
 - [ ] AUDIO ??
 - [ ] Update pip reqs to minimum
 - [ ] Like poems and display them on page
 - [ ] WEB SEARCH?
 - [ ] update wording of website
-- [ ] loop scroll links?
-- [ ] hide scroll links on first or last item
 - [ ] refactor code
 - [ ] get rid of jquery
 - [ ] add more APIs?
 - [ ] replace spiral logo with svg
 - [ ] purge jquery
-
+- [ ] fix mobile styles
 
 
 - [x] index, header, text, base
