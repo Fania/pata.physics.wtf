@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basheau Poems</title>
+  <meta name="author" content="Fania Raczinski">
+  <meta name="description" content="A mashup of Basho and Queneau poetry.">
+  <meta name="keywords" content="poetry, haiku, queneau, basho, pataphysics, art">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Basheau Poems"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="{{ url_for('static', filename='images/basheau/basheau_screenshot.png') }}"/>
+  <meta property="og:image:alt" content="Basheau haiku"/>
+  <meta property="og:url" content="https://pata.physics.wtf/basheau"/>
+  <meta property="og:description" content="A mashup of Basho and Queneau poetry."/>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/basheau/favicons/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/basheau/favicons/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/basheau/favicons/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/basheau/favicons/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/basheau/favicons/safari-pinned-tab.svg') }}" color="#2d2d2a">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/basheau/favicons/favicon.ico') }}">
+  <meta name="msapplication-TileColor" content="#2d2d2a">
+  <meta name="msapplication-config" content="{{ url_for('static', filename='images/basheau/favicons/browserconfig.xml') }}">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Julee&family=Liu+Jian+Mao+Cao&display=swap');
+
+html { --width: 100vw }
+* { box-sizing: border-box }
+body { color: #FFFFFF; background: #38423B; margin: 0; padding: 10px 0 }
+h1 { font-family: 'Julee', cursive;  position: relative }
+h1, p { margin: 16px; text-align: center }
+p { font-family: Helvetica, Arial, sans-serif }
+a { color: #FFFFFF }
+
+.macron { 
+  border-top: 2px solid #FFFFFF; opacity: .3;
+  position: absolute; top: 8px; left: calc(50% - 37px); width: 45px }
+
+main { position: relative }
+
+.waves { 
+  display: flex; align-items: center; justify-content: center; 
+  padding: 48px 0; margin: 32px 0;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="%239C92AC" fill-opacity="0.4" d="M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z"%3E%3C/path%3E%3C/svg%3E') }
+
+#basho, #queneau { 
+  max-height: 90px; object-fit: cover; 
+  filter: grayscale(80%); z-index: 1;
+  position: absolute; top: -22px;
+}
+#basho { transform: scale(-1,1); left: 0 }
+#queneau { right: 0 }
+
+#poem { 
+  color: #2D2D2A; background: #FFFFFF; 
+  padding: 30px; 
+  width: var(--width);
+  align-self: center;
+  position: relative
+}
+
+#poem img[id$="Left"], #poem img[id$="Right"] { z-index: 2;
+  position: absolute; cursor: pointer; height: 40px; width: 40px }
+#poem img[id$="Left"]:hover, #poem img[id$="Right"]:hover { 
+  filter: hue-rotate(200deg) }
+#topLinesLeft { top: 45px; left: 20px }
+#topLinesRight { top: 45px; right: 20px }
+#midLinesLeft { top: 100px; left: 20px }
+#midLinesRight { top: 100px; right: 20px }
+#botLinesLeft { top: 155px; left: 20px }
+#botLinesRight { top: 155px; right: 20px }
+.disable { filter: blur(2px) opacity(25%) }
+#poem img.disable:hover { 
+  filter: blur(2px) opacity(25%) hue-rotate(200deg); cursor: default }
+
+.lines { white-space: nowrap; margin: 16px 0; overflow-x: hidden }
+
+.line {
+  display: inline-block;
+  --lineWidth: calc( var(--width) - 80px);
+  width: var(--lineWidth);
+  margin: 0 calc( ( var(--width) - var(--lineWidth) - 60px ) / 2 );
+  padding: 8px 0;
+  text-align: center;
+  font-size: 16px;
+  /* font-family: Helvetica, Arial, sans-serif */
+}
+
+.smallprint { font-size: 12px; opacity: .3 }
+
+@media (min-width: 500px) {
+  html { --width: 400px }
+  body { margin: 0; padding: 10px 30px }
+  .waves { padding: 48px; margin: 32px 0 }
+  #poem { padding: 30px }
+  .line { font-size: 20px }
+}
+
+@media (min-width: 650px) {
+  #basho, #queneau { max-height: 200px }
+  #basho { top: 190px; left: 20px }
+  #queneau { top: 190px; right: 20px }
+}
+
+@media (min-width: 850px) {
+  .waves { padding-bottom: 120px }
+  #basho, #queneau { max-height: 400px }
+  #basho { top: 135px; left: 20px }
+  #queneau { top: 135px; right: 20px }
+}
+
+@media (min-width: 1050px) {
+  main { max-width: 1000px; margin: 0 auto }
+  .waves { padding-bottom: 170px }
+  #basho, #queneau { height: 500px }
+  #basho { top: 100px; left: 30px }
+  #queneau { top: 100px; right: 30px }
+}
+
+  </style>
+</head>
+<body>
+  
+
+  <main>
+    <h1>Basheau<span class="macron"></span> Poems</h1>
+
+    <div class="waves">
+      <div id="poem">
+        <div id="topLines" class="lines"></div>
+        <div id="midLines" class="lines"></div>
+        <div id="botLines" class="lines"></div>
+      </div>
+    </div>
+
+    <img id="basho" alt="Mastuo Basho" src="{{ url_for('static', filename='images/basheau/basho.png') }}">
+    <img id="queneau" alt="Raymond Queneau" src="{{ url_for('static', filename='images/basheau/queneau.png') }}">
+
+    <p>A mashup of <a href="https://en.wikipedia.org/wiki/Matsuo_Bash%C5%8D">Matsuo Basho</a> & <a href="https://en.wikipedia.org/wiki/Raymond_Queneau">Raymond Queneau</a> poetry.</p>
+    <p>There are a total of <strong id="sum">X</strong> possible haiku here.</p>
+    
+    <br>
+    <p class="smallprint">Haiku corpus taken from: Basho - <em>Lips too chilled</em>, translated by Lucien Stryk (<a href="https://www.penguin.co.uk/books/279268/lips-too-chilled/9780141398457.html">Penguin Classics N° 62</a>). Developed for <a href="../">pata.physics.wtf</a> by <a href="https://fania.eu">Fania Raczinski</a>.</p>
+  </main>
+
+
+
+<script src="{{ url_for('static', filename='corpus/basho.js') }}"></script>
+<script>
+
+const topChoices = basho.map( poem => poem.split("/")[0] );
+const midChoices = basho.map( poem => poem.split("/")[1] );
+const botChoices = basho.map( poem => poem.split("/")[2] );
+
+const tops = document.getElementById("topLines");
+const mids = document.getElementById("midLines");
+const bots = document.getElementById("botLines");
+
+const possibleLines = basho.length;
+const sumHolder = document.getElementById("sum");
+sumHolder.innerText = Math.pow(possibleLines, 3);
+
+topChoices.forEach( t => {
+  let line = document.createElement("span");
+  let text = document.createTextNode(t);
+  line.classList.add("line");
+  line.appendChild(text);
+  tops.appendChild(line);
+});
+midChoices.forEach( m => {
+  let line = document.createElement("span");
+  let text = document.createTextNode(m);
+  line.classList.add("line");
+  line.appendChild(text);
+  mids.appendChild(line);
+});
+botChoices.forEach( b => {
+  let line = document.createElement("span");
+  let text = document.createTextNode(b);
+  line.classList.add("line");
+  line.appendChild(text);
+  bots.appendChild(line);
+});
+
+[tops,mids,bots].forEach( row => {
+  row.insertAdjacentHTML("beforebegin", 
+    `<img id="${row.id + "Left"}" class="disable" src="{{ url_for('static', filename='images/basheau/cheveron-left.svg') }}" width="40" height="40">`);
+  row.insertAdjacentHTML("afterend", 
+    `<img id="${row.id + "Right"}" src="{{ url_for('static', filename='images/basheau/cheveron-right.svg') }}" width="40" height="40">`);
+});
+
+const lefties = document.querySelectorAll("[id$=Left]");
+lefties.forEach(l => l.addEventListener("click", () => {
+  const sib = l.nextElementSibling;
+  const righty = sib.nextElementSibling;
+  if ( sib.scrollLeft === sib.clientWidth ) l.classList.add("disable");
+  sib.scrollBy({ top: 0, left: -sib.clientWidth, behavior: 'smooth' });
+  righty.classList.remove("disable");
+}));
+const righties = document.querySelectorAll("[id$=Right]");
+righties.forEach(r => r.addEventListener("click", () => {
+  const sib = r.previousElementSibling;
+  const lefty = sib.previousElementSibling;
+  if ( sib.scrollLeft === (sib.scrollWidth - (sib.clientWidth * 2)) ) r.classList.add("disable");
+  sib.scrollBy({ top: 0, left: sib.clientWidth, behavior: 'smooth' });
+  lefty.classList.remove("disable");
+}));
+
+</script>
+
+</body>
+</html>

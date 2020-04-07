@@ -14,6 +14,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/basheau')
+def basheau():
+    return render_template('basheau.html')
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('errors.html'), 404
