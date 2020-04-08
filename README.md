@@ -90,7 +90,7 @@ Virtualenv is recommended but not required. If you don't want to use it, skip st
 4. stop project server ```Ctrl + c```
 5. deactivate virtual env ```deactivate```
 
-You can also start a Gunicorn production server with ```gunicorn -c guni.py wsgi:app```, which starts the site on 127.0.0.1:8000.
+You can also start a Gunicorn production server with ```gunicorn -c guni.py live:app```, which starts the site on 127.0.0.1:8001. Check config with ```gunicorn --check-config live:app```
 
 ## Usage
 

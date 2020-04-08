@@ -118,10 +118,12 @@ function createSpiral(imglist) {
         </a>`;
       img_list_div.insertAdjacentHTML("beforeend", listimg);
     };
+    // event.preventDefault();
   } else {
     const placeholders = document.querySelectorAll(".img_empty");
     placeholders.forEach( p => 
       p.innerHTML = "<div>Not enough results found.</div>");
+    // event.preventDefault();
   }
 }
 

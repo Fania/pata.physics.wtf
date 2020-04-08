@@ -1,4 +1,4 @@
-bind = '127.0.0.1:8000'
+bind = '127.0.0.1:8001'
 backlog = 2048
 
 workers = 2
@@ -7,7 +7,7 @@ worker_connections = 1000
 timeout = 120
 keepalive = 2
 
-spew = False
+# spew = True
 
 daemon = False
 pidfile = None
@@ -18,9 +18,11 @@ tmp_upload_dir = None
 
 debug = True
 errorlog = 'logs/errors.log'
-loglevel = 'info'
-lolfile = 'logs/debug.log'
+loglevel = 'debug'
+logfile = 'logs/debug.log'
 accesslog = 'logs/access.log'
+# captureoutput = True
+
 
 proc_name = None
 
