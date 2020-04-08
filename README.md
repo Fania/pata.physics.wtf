@@ -85,12 +85,13 @@ Virtualenv is recommended but not required. If you don't want to use it, skip st
 
 0. activate virtual environment ```venv\scripts\activate```
 1. start project server ```python live.py```
-2. open browser on 127.0.0.1:5000
+2. open browser on 127.0.0.1:8001
 3. enjoy the site
 4. stop project server ```Ctrl + c```
 5. deactivate virtual env ```deactivate```
 
-You can also start a Gunicorn production server with ```gunicorn -c guni.py live:app```, which starts the site on 127.0.0.1:8001. Check config with ```gunicorn --check-config live:app```
+You can also start a Waitress **production server** with ```python wsgi.py```, which starts the site on 127.0.0.1:8001.
+
 
 ## Usage
 
