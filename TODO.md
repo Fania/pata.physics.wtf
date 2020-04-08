@@ -28,7 +28,12 @@
 - [ ] replace spiral logo with svg
 - [ ] purge jquery
 - [ ] refactor code
+- [ ] rewrite email code
+- [ ] rewrite loading icon
 - [ ] bring back transition for tab changes
+- [ ] basheau change of screen rotation problem
+- [ ] add more haiku basheau
+
 
 
 # URGENT BUGS
