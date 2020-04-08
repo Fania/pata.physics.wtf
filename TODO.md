@@ -18,6 +18,8 @@
 - [x] imageresults
 - [x] videos
 - [x] videoresults
+- [x] textresults, email poem broken when changing line
+- [x] textresults, randomise poem broken
 - [ ] mendes, english and spanish? stopwords?
 - [ ] AUDIO ??
 - [ ] Like poems and display them on page
@@ -26,13 +28,11 @@
 - [ ] replace spiral logo with svg
 - [ ] purge jquery
 - [ ] refactor code
+- [ ] bring back transition for tab changes
 
 
+# URGENT BUGS
 
-# BUGS
-
-- [x] textresults, email poem broken when changing line
-- [x] textresults, randomise poem broken
 
 
 
