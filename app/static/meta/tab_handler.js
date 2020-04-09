@@ -1,4 +1,3 @@
-
 const poetry_tab = document.querySelector("#poetry_tab");
 const sources_tab = document.querySelector("#sources_tab");
 const algo_tab = document.querySelector("#algo_tab");
