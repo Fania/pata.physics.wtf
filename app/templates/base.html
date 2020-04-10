@@ -3,30 +3,28 @@
 <html lang="en-GB">
 
 <head>
-<title>PataSearch</title>
+  <title>PataSearch</title>
 
-<meta charset="utf-8">
-<meta name="author" content="Fania Raczinski">
-<meta name="description" content="An absurd and useless pataphysical search tool.">
-<meta name="keywords" content="pataphysics, poetry, art, research, search">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="author" content="Fania Raczinski">
+  <meta name="description" content="An absurd and useless pataphysical search tool.">
+  <meta name="keywords" content="pataphysics, poetry, art, research, search">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='meta/fania.css') }}" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='meta/fania.css') }}" />
 
-<link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}">
-<link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}">
-<link rel="mask-icon" href="{{ url_for('static', filename='images/favicons/safari-pinned-tab.svg') }}" color="#b91d47">
-<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}">
-<meta name="apple-mobile-web-app-title" content="PataSearch">
-<meta name="application-name" content="PataSearch">
-<meta name="msapplication-TileColor" content="#b91d47">
-<meta name="msapplication-config" content="{{ url_for('static', filename='images/favicons/browserconfig.xml') }}">
-<meta name="theme-color" content="#ffffff">
-
-<script type="text/javascript" src="{{ url_for('static', filename='meta/jquery-1.11.1.min.js') }}"></script>
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ url_for('static', filename='images/favicons/site.webmanifest') }}">
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicons/safari-pinned-tab.svg') }}" color="#b91d47">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}">
+  <meta name="apple-mobile-web-app-title" content="PataSearch">
+  <meta name="application-name" content="PataSearch">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="msapplication-config" content="{{ url_for('static', filename='images/favicons/browserconfig.xml') }}">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -66,6 +64,6 @@
   <p><img src="{{ url_for('static', filename='images/dmu.png') }}"></p>
 </footer>
 
-<script type="text/javascript" src="{{ url_for('static', filename='meta/fania.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='meta/shared.js') }}"></script>
 </body>
 </html>

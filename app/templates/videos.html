@@ -17,7 +17,7 @@
     </fieldset>
     <fieldset>
       <input name="query" type="text" placeholder=" Search" autofocus required>
-      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+      <button type="submit" class="button"><i class="fa fa-search"></i></button>
     </fieldset>
   </form>
 
@@ -28,84 +28,14 @@
     <p>The video search can sometimes take a long time to produce a result (or none at all).</p>
 
     <h4>Search suggestions:</h4>
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="clear consciousness" onclick="loading()"></form>,
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="internet troll" onclick="loading()"></form>,
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="large" onclick="loading()"></form>,
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="living large" onclick="loading()"></form>,
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="solid foundations" onclick="loading()"></form>,
-      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="off the books" onclick="loading()"></form>
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="clear consciousness"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="internet troll"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="large"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="living large"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="solid foundations"></form>,
+      <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="off the books"></form>
   </div>
 
 </main>
 
 {% endblock %}
-
-<!-- <div class="spouter">
-    <div class="spleft">
-        <div class="spltop">
-            <div class="spltleft">
-                <img src="{{ url_for('static', filename='images/pic04.jpg') }}" height="210" width="210"/>
-            </div>
-            <div class="spltright">
-                <div class="spltrtop">
-                    <img src="{{ url_for('static', filename='images/pic01.jpg') }}" height="130" width="130"/>
-                </div>
-                <div class="spltrbottom">
-                    <div class="spltrbleft">
-                        <div class="spltrbltop">
-                            <div class="spltrbltleft">
-                                <img src="{{ url_for('static', filename='images/pic01.jpg') }}" height="30" width="30"/>
-                            </div>
-                            <div class="spltrbltright">
-                                <div class="spltrbltrtop">
-                                    <img src="{{ url_for('static', filename='images/pic02.jpg') }}" height="20" width="20"/>
-                                </div>
-                                <div class="spltrbltrbottom">
-                                    <div class="spltrbltrbleft"><img src="{{ url_for('static', filename='images/pic06.jpg') }}" height="10" width="10"/>
-                                    </div>
-                                    <div class="spltrbltrbright"><img src="{{ url_for('static', filename='images/pic07.jpg') }}" height="10" width="10"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="spltrblbottom">
-                            <img src="{{ url_for('static', filename='images/pic08.jpg') }}" height="50" width="50"/>
-                        </div>
-                    </div>
-                    <div class="spltrbright">
-                        <img src="{{ url_for('static', filename='images/pic03.jpg') }}" height="80" width="80"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="splbottom">
-            <img src="{{ url_for('static', filename='images/pic02.jpg') }}" height="340" width="340"/>
-        </div>
-    </div>
-    <div class="spright">
-        <img src="{{ url_for('static', filename='images/pic05.jpg') }}" height="550" width="550"/>
-    </div>
-</div> -->
-
-<!-- <table>
-    <tr>
-        <td rowspan="4" colspan="1"><img  src="{{ url_for('static', filename='images/pic04.jpg') }}" title="" height="210" width="210"/></td>
-        <td rowspan="1" colspan="4"><img  src="{{ url_for('static', filename='images/pic01.jpg') }}" title="" height="130" width="130"/></td>
-        <td rowspan="5" colspan="1"><img  src="{{ url_for('static', filename='images/pic05.jpg') }}" title="" height="550" width="550"/></td>
-    </tr>
-    <tr>
-        <td rowspan="2" colspan="1"><img  src="{{ url_for('static', filename='images/pic01.jpg') }}" title="" height="30" width="30"/></td>
-        <td rowspan="1" colspan="2"><img  src="{{ url_for('static', filename='images/pic02.jpg') }}" title="" height="20" width="20"/></td>
-        <td rowspan="3" colspan="1"><img  src="{{ url_for('static', filename='images/pic03.jpg') }}" title="" height="80" width="80"/></td>
-    </tr>
-    <tr>
-        <td rowspan="1" colspan="1"><img  src="{{ url_for('static', filename='images/pic06.jpg') }}" title="" height="10" width="10"/></td>
-        <td rowspan="1" colspan="1"><img  src="{{ url_for('static', filename='images/pic07.jpg') }}" title="" height="10" width="10"/></td>
-    </tr>
-    <tr>
-        <td rowspan="1" colspan="3"><img  src="{{ url_for('static', filename='images/pic08.jpg') }}" title="" height="50" width="50"/></td>
-    </tr>
-    <tr>
-        <td rowspan="1" colspan="5"><img  src="{{ url_for('static', filename='images/pic02.jpg') }}" title="" height="340" width="340"/></td>
-    </tr>
-</table> -->

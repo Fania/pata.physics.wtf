@@ -13,7 +13,7 @@
   </fieldset>
   <fieldset>
     <input name="query" type="text" placeholder=" Search" autofocus required>
-    <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+    <button type="submit" class="button"><i class="fa fa-search"></i></button>
   </fieldset>
 </form>
 
@@ -26,10 +26,10 @@
 
 <div class="indent">
   <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
-  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ query }}" onclick="loading()"></form> ==
-  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.0 }}" onclick="loading()"></form> ==
-  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.1 }}" onclick="loading()"></form> ==
-  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.2 }}" onclick="loading()"></form>
+  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ query }}"></form> ==
+  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.0 }}"></form> ==
+  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.1 }}"></form> ==
+  <form class="inlineform" action="../videoresults" method="post"><input type="submit" name="query" value="{{ translations.2 }}"></form>
 </div>
 
 
@@ -68,16 +68,15 @@
   </div>
 </section> <!-- end list -->
 
+</div> <!-- end tabs -->
+
+</main>
+
+<script type="text/javascript" src="{{ url_for('static', filename='meta/video.js') }}"></script>
 <script>
   const vidsString = "{{ videos_vids }}";
   const vidsStringRE = vidsString.replace(/&#39;/g, `"`);
   createVideoSpiral( JSON.parse(vidsStringRE) );
 </script>
-
-</div> <!-- end tabs -->
-
-</main>
-
-<script type="text/javascript" src="{{ url_for('static', filename='meta/tab_handler.js') }}"></script>
 
 {% endblock %}

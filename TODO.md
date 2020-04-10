@@ -20,16 +20,16 @@
 - [x] videoresults
 - [x] textresults, email poem broken when changing line
 - [x] textresults, randomise poem broken
+- [x] purge jquery
+- [x] refactor code
+- [x] rewrite email code
+- [x] rewrite loading icon
 - [ ] mendes, english and spanish? stopwords?
 - [ ] AUDIO ??
 - [ ] Like poems and display them on page
 - [ ] WEB SEARCH?
 - [ ] add more APIs?
 - [ ] replace spiral logo with svg
-- [ ] purge jquery
-- [ ] refactor code
-- [ ] rewrite email code
-- [ ] rewrite loading icon
 - [ ] bring back transition for tab changes
 - [ ] basheau change of screen rotation problem
 - [ ] add more haiku basheau

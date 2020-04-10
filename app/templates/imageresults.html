@@ -14,7 +14,7 @@
     </fieldset>
     <fieldset>
       <input name="query" type="text" placeholder="Search" autofocus required>
-      <button type="submit" class="button" onclick="loading()"><i class="fa fa-search"></i></button>
+      <button type="submit" class="button"><i class="fa fa-search"></i></button>
     </fieldset>
   </form>
 
@@ -28,20 +28,20 @@
 
 <div class="indent">
   <strong>Pataphysicalisation: &nbsp;&nbsp; </strong>
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ oldquery }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.0 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.1 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.2 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
-  [<form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.0 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.1 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.2 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.3 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.4 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.5 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.6 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.7 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.8 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
-  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.9 }}" onclick="loading()"><input class="hide" name="img_choice" value="{{ choice }}"></form>]
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ oldquery }}"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.0 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.1 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ translations.2 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form> ==
+  [<form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.0 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.1 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.2 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.3 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.4 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.5 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.6 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.7 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.8 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>, 
+  <form class="inlineform" action="../imageresults" method="post"><input type="submit" name="query" value="{{ queries.9 }}"><input class="hide" name="img_choice" value="{{ choice }}"></form>]
 </div>
 
 <!-- JAVASCRIPT -->
@@ -95,6 +95,7 @@
 
 </main>
 
+<script type="text/javascript" src="{{ url_for('static', filename='meta/image.js') }}"></script>
 <script>
   // used by Python API calls
   const singleQuote = /&#39;/g;
@@ -105,12 +106,9 @@
   const imageString3 = imageString2.replace(ampersand, '&');
   const imageArray = eval( imageString3 );
   createSpiral( imageArray );
-
   //update radio buttons for main search
   const imageRadio = document.getElementById(ichoice.dataset.choice);
   imageRadio.checked = true;
 </script>
-
-<script type="text/javascript" src="{{ url_for('static', filename='meta/tab_handler.js') }}"></script>
 
 {% endblock %}
