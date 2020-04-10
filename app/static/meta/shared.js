@@ -2,10 +2,10 @@
 
 // LOADING ICON
 const loadDiv = document.getElementById("loading");
-function loading() { loadDiv.classList.add("show") }
 window.addEventListener('load', () => loadDiv.classList.remove("show") );
 const loadTriggers = document.querySelectorAll("[type='submit']");
-loadTriggers.forEach(lt => lt.addEventListener("click", loading));
+loadTriggers.forEach(lt => 
+  lt.addEventListener("click", () => loadDiv.classList.add("show")));
 
 
 
