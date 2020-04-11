@@ -95,6 +95,7 @@
 
 </main>
 
+<script type="text/javascript" src="{{ url_for('static', filename='meta/shared.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='meta/image.js') }}"></script>
 <script>
   // used by Python API calls
@@ -105,6 +106,7 @@
   const imageString2 = imageString1.replace(doubleQuote, '"');
   const imageString3 = imageString2.replace(ampersand, '&');
   const imageArray = eval( imageString3 );
+  console.log(imageArray);
   createSpiral( imageArray );
   //update radio buttons for main search
   const imageRadio = document.getElementById(ichoice.dataset.choice);

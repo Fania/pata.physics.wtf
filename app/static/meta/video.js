@@ -4,7 +4,7 @@
 function createVideoSpiral(videolist) {
   // console.log("videos");
   const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
-  for ( i in videolist ) {
+  for ( let i in videolist ) {
     if (i < 4) {
       vid_spiral_div.insertAdjacentHTML("beforeend", 
         `<iframe class="${nums[i]}" title="${videolist[i][0]}" alt="${videolist[i][2]}" src="https://www.youtube.com/embed/${videolist[i][2]}?controls=0&rel=0&showinfo=0&modestbranding=0&controls=0" frameborder="0"></iframe>`);

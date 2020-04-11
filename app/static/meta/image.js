@@ -6,7 +6,7 @@ function createSpiral(imglist) {
   if (imglist.length === 10){
     // const fib = [10,10,20,30,50,80,130,210,340,550];
     const nums = ["one","two","three","four","five","six","seven","eight","nine","ten"];
-    for ( i in imglist ) {
+    for (let i in imglist ) {
       let link = document.createElement("a");
       let img = document.createElement("img");
       link.href = imglist[i][2];

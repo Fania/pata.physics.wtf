@@ -260,6 +260,7 @@
   const n = {{ all_sens|length }};
   const sentences = {{ all_sens|tojson }};
 </script>
+<script type="text/javascript" src="{{ url_for('static', filename='meta/shared.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='meta/text.js') }}"></script>
 
 {% endblock %}
